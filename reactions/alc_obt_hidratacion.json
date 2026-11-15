@@ -1,4 +1,4 @@
-﻿{
+{
   "category": "obtencion",
   "title": "1) Hidratación Ácida de Alquenos (Adición Electrofílica de H₂O)",
   "natureBadge": "Adición Electrofílica (Regla de Markovnikov) • Alqueno + H₂O ──(H⁺)──► Alcohol",
@@ -46,8 +46,8 @@
       "catalyst": "H⁺ (Medio ácido: H₂SO₄ / H₂O)"
     },
     {
-      "id": "hidr_1metilciclopenteno_terc",
-      "name": "Hidratación de los demás alquenos sustituidos dan alcohol terciario: 1-Metilciclopenteno → 1-Metilciclopentanol",
+      "id": "hidr_1metilciclohexeno_terc",
+      "name": "Hidratación de los demás alquenos sustituidos dan alcohol terciario: 1-Metilciclohexeno → 1-Metilciclohexanol",
       "catalyst": "H⁺ (Medio ácido: H₂SO₄ / H₂O)"
     }
   ],
@@ -756,23 +756,29 @@
         "title": "Paso 1 — Hidratación de los demás alquenos no sustituidos dan alcohol secundario: Ciclohexeno + H⁺",
         "semiStep": "C₆H₁₀  +  H—O—H  +  H⁺",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
-        "desc": "El ciclohexeno presenta un doble enlace endocíclico frente al catalizador H⁺ y agua.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace formado.", "movement": "Aproximación de H⁺ al doble enlace cíclico." },
+        "desc": "El ciclohexeno muestra su anillo hexagonal de 6 carbonos con el doble enlace C1=C2 a la derecha frente al protón catalítico H⁺.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace formado.", "movement": "Aproximación de H⁺ al doble enlace C1=C2 del anillo." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 215 },
-            { "id": "H1", "el": "H", "x": 275, "y": 310 },
-            { "id": "C1", "el": "C", "x": 275, "y": 215 },
-            { "id": "C2", "el": "C", "x": 425, "y": 215 },
-            { "id": "H2", "el": "H", "x": 425, "y": 310 },
-            { "id": "Hcat", "el": "H", "x": 350, "y": 90, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺", "labelPos": "top" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "H1", "el": "H", "x": 455, "y": 315 },
+            { "id": "Hcat", "el": "H", "x": 495, "y": 205, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 2, "state": "normal" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal" }
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 2, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
           ]
         }
       },
@@ -780,26 +786,32 @@
         "title": "Paso 2 — Protonación del Doble Enlace Cíclico (Ruptura en Rojo del Enlace π)",
         "semiStep": "C₆H₁₀  +  H⁺  ──►  C₆H₁₁⁺",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
-        "desc": "El enlace π del ciclohexeno captura el protón H⁺ rompiéndose en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace π del ciclohexeno.", "forming": "Adición de H⁺.", "movement": "Desplazamiento del par π hacia H⁺." },
+        "desc": "El enlace π del anillo hexagonal captura el protón H⁺ en C2, rompiéndose el doble enlace en rojo punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π del ciclohexeno.", "forming": "Adición de H⁺ en C2.", "movement": "Desplazamiento del par π hacia H⁺." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 215 },
-            { "id": "H1", "el": "H", "x": 275, "y": 310 },
-            { "id": "C1", "el": "C", "x": 275, "y": 215 },
-            { "id": "C2", "el": "C", "x": 425, "y": 215 },
-            { "id": "H2", "el": "H", "x": 425, "y": 310 },
-            { "id": "Hcat", "el": "H", "x": 425, "y": 105, "charge": "+", "highlight": "#38bdf8" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 85 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "H1", "el": "H", "x": 455, "y": 315 },
+            { "id": "Hcat", "el": "H", "x": 470, "y": 165, "charge": "+", "highlight": "#38bdf8" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 2, "state": "breaking-pi" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal" }
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 2, "state": "breaking-pi" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 350, "y1": 205, "cx": 395, "cy": 155, "x2": 412, "y2": 128, "type": "full", "label": "Par π ataca H⁺" }
+            { "x1": 370, "y1": 205, "cx": 415, "cy": 185, "x2": 448, "y2": 170, "type": "full", "label": "Par π ataca H⁺" }
           ]
         }
       },
@@ -807,27 +819,33 @@
         "title": "Paso 3 — Carbocatión Ciclohexilo (2°) + Entrada del Agua (H₂O)",
         "semiStep": "C₆H₁₁⁺  +  H—O—H",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
-        "desc": "Se forma el carbocatión secundario ciclohexilo mientras entra la molécula de agua angular por arriba.",
-        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C—H formado.", "movement": "Aproximación del agua al carbocatión cíclico." },
+        "desc": "Se consolida el segundo hidrógeno en C2 y queda el carbocatión secundario en C1 mientras entra la molécula de agua angular desde la derecha.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: nuevo enlace C2—H formado.", "movement": "Aproximación del agua al carbocatión cíclico." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 2°" },
-            { "id": "H1", "el": "H", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140, "border": "#10b981" },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 105, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 275, "enterFromY": 25 },
-            { "id": "Hw1", "el": "H", "x": 205, "y": 55, "enterFromX": 205, "enterFromY": 10 },
-            { "id": "Hw2", "el": "H", "x": 345, "y": 55, "enterFromX": 345, "enterFromY": 10 }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165, "border": "#10b981" },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 2°" },
+            { "id": "H1", "el": "H", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 545, "y": 265, "label": "Agua (H₂O)", "enterFromX": 680, "enterFromY": 265 },
+            { "id": "Hw1", "el": "H", "x": 635, "y": 215, "enterFromX": 770, "enterFromY": 215 },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 315, "enterFromX": 770, "enterFromY": 315 }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "Hcat", "order": 1, "state": "new" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Hcat", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ]
@@ -837,33 +855,39 @@
         "title": "Paso 4 — Ataque Nucleofílico del Agua y Formación en Verde de C—O",
         "semiStep": "C₆H₁₁—OH₂⁺",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
-        "desc": "El oxígeno del agua forma en verde punteado el enlace C—O sobre el anillo.",
-        "legend": { "breaking": "Sin ruptura en esta etapa.", "forming": "En VERDE punteado: enlace C—O.", "movement": "Ataque nucleofílico del agua." },
+        "desc": "El oxígeno del agua forma en verde punteado el enlace C—O sobre el vértice C1 del anillo hexagonal.",
+        "legend": { "breaking": "Sin ruptura en esta etapa.", "forming": "En VERDE punteado: enlace C1—O.", "movement": "Ataque nucleofílico del agua." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "highlight": "#10b981" },
-            { "id": "H1", "el": "H", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "charge": "+", "highlight": "#38bdf8", "label": "Ion oxonio", "labelPos": "top" },
-            { "id": "Hw1", "el": "H", "x": 195, "y": 65 },
-            { "id": "Hw2", "el": "H", "x": 355, "y": 65 }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "charge": "+", "highlight": "#38bdf8", "label": "Ion oxonio" },
+            { "id": "Hw1", "el": "H", "x": 595, "y": 215 },
+            { "id": "Hw2", "el": "H", "x": 595, "y": 315 }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "forming" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 300, "y1": 142, "cx": 335, "cy": 178, "x2": 300, "y2": 215, "type": "full", "label": "Ataque O → C⁺" }
+            { "x1": 480, "y1": 245, "cx": 432, "cy": 215, "x2": 385, "y2": 245, "type": "full", "label": "Ataque O → C⁺" }
           ]
         }
       },
@@ -872,32 +896,38 @@
         "semiStep": "C₆H₁₁—OH ┆—┆ H⁺  ──►  C₆H₁₁—OH + H⁺",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
         "desc": "Se rompe en rojo punteado el enlace O—H liberándose el protón catalítico H⁺.",
-        "legend": { "breaking": "En ROJO punteado: enlace O—H.", "forming": "En VERDE sólido: enlace C—O.", "movement": "Salida del protón H⁺." },
+        "legend": { "breaking": "En ROJO punteado: enlace O—H.", "forming": "En VERDE sólido: enlace C1—O.", "movement": "Salida del protón H⁺." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235 },
-            { "id": "H1", "el": "H", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "highlight": "#10b981" },
-            { "id": "Hw1", "el": "H", "x": 180, "y": 120 },
-            { "id": "Hw2", "el": "H", "x": 385, "y": 65, "charge": "+", "border": "#ef4444", "label": "Sale H⁺", "labelPos": "top" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "H1", "el": "H", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 610, "y": 265 },
+            { "id": "Hw2", "el": "H", "x": 575, "y": 175, "charge": "+", "border": "#ef4444", "label": "Sale H⁺", "labelPos": "top" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "new" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 345, "y1": 82, "cx": 340, "cy": 122, "x2": 302, "y2": 120, "type": "full", "label": "Par al O" }
+            { "x1": 552, "y1": 212, "cx": 525, "cy": 215, "x2": 512, "y2": 242, "type": "full", "label": "Par al O" }
           ]
         }
       },
@@ -905,31 +935,37 @@
         "title": "Paso 6 — Producto Final Desarrollado: Ciclohexanol + H⁺ Regenerado",
         "semiStep": "C₆H₁₁—OH  +  H⁺",
         "semiGlobal": "C₆H₁₀ + H₂O ──(H⁺)──► C₆H₁₁—OH",
-        "desc": "Se obtiene el ciclohexanol y el catalizador H⁺ regenerado.",
+        "desc": "Se obtiene el ciclohexanol con su anillo hexagonal completo y el catalizador H⁺ regenerado.",
         "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: grupo –OH en el anillo.", "movement": "Producto secundario cíclico estable." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₄H₈", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "highlight": "#10b981", "label": "Ciclohexanol" },
-            { "id": "H1", "el": "H", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "highlight": "#10b981" },
-            { "id": "Hw1", "el": "H", "x": 180, "y": 120 },
-            { "id": "Hw2", "el": "H", "x": 575, "y": 235, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "highlight": "#10b981", "label": "Ciclohexanol" },
+            { "id": "H1", "el": "H", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 610, "y": 265 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 265, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "new" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 505, "y": 242, "text": "+" }]
+          "texts": [{ "x": 685, "y": 272, "text": "+" }]
         }
       }
     ],
@@ -1417,83 +1453,101 @@
         }
       }
     ],
-    "hidr_1metilciclopenteno_terc": [
+    "hidr_1metilciclohexeno_terc": [
       {
-        "title": "Paso 1 — Hidratación de los demás alquenos sustituidos dan alcohol terciario: 1-Metilciclopenteno + H⁺",
-        "semiStep": "C₅H₇(CH₃)  +  H—O—H  +  H⁺",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
-        "desc": "El 1-metilciclopenteno posee un carbono sp² unido al grupo metilo y otro carbono sp² unido a un hidrógeno frente al catalizador H⁺.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace formado.", "movement": "Aproximación de H⁺ al doble enlace cíclico." },
+        "title": "Paso 1 — Hidratación de los demás alquenos sustituidos dan alcohol terciario: 1-Metilciclohexeno + H⁺",
+        "semiStep": "C₆H₉(CH₃)  +  H—O—H  +  H⁺",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
+        "desc": "El 1-metilciclohexeno muestra su anillo hexagonal de 6 carbonos con un grupo metilo (—CH₃) en C1 y un hidrógeno en C2 frente al catalizador H⁺.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace formado.", "movement": "Aproximación de H⁺ al doble enlace C1=C2 del anillo." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 215 },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 310 },
-            { "id": "C1", "el": "C", "x": 275, "y": 215 },
-            { "id": "C2", "el": "C", "x": 425, "y": 215 },
-            { "id": "H1", "el": "H", "x": 425, "y": 310 },
-            { "id": "Hcat", "el": "H", "x": 350, "y": 90, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺", "labelPos": "top" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "R1", "el": "CH₃", "x": 455, "y": 315 },
+            { "id": "Hcat", "el": "H", "x": 495, "y": 205, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 2, "state": "normal" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" }
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 2, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ]
         }
       },
       {
         "title": "Paso 2 — Protonación Markovnikov hacia Carbocatión Terciario Cíclico (Ruptura en Rojo)",
-        "semiStep": "C₅H₇(CH₃)  +  H⁺  ──►  C₅H₈⁺(CH₃)",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
-        "desc": "El enlace π captura al protón H⁺ en el carbono menos sustituido (C2), formando el carbocatión terciario en C1.",
+        "semiStep": "C₆H₉(CH₃)  +  H⁺  ──►  C₆H₁₀⁺(CH₃)",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
+        "desc": "El enlace π captura al protón H⁺ en el carbono menos sustituido (C2), formando el carbocatión terciario en el carbono C1 unido al metilo.",
         "legend": { "breaking": "En ROJO punteado: enlace π cíclico.", "forming": "Adición de H⁺ en C2.", "movement": "Par π ataca al protón H⁺." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 215 },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 310 },
-            { "id": "C1", "el": "C", "x": 275, "y": 215 },
-            { "id": "C2", "el": "C", "x": 425, "y": 215 },
-            { "id": "H1", "el": "H", "x": 425, "y": 310 },
-            { "id": "Hcat", "el": "H", "x": 425, "y": 105, "charge": "+", "highlight": "#38bdf8" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 85 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "R1", "el": "CH₃", "x": 455, "y": 315 },
+            { "id": "Hcat", "el": "H", "x": 470, "y": 165, "charge": "+", "highlight": "#38bdf8" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 2, "state": "breaking-pi" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" }
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 2, "state": "breaking-pi" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 350, "y1": 205, "cx": 395, "cy": 155, "x2": 412, "y2": 128, "type": "full", "label": "Markovnikov: H⁺ a C2" }
+            { "x1": 370, "y1": 205, "cx": 415, "cy": 185, "x2": 448, "y2": 170, "type": "full", "label": "Markovnikov: H⁺ a C2" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Carbocatión Terciario (1-Metilciclopentilo) + Entrada del Agua (H₂O)",
-        "semiStep": "C₅H₈⁺(CH₃)  +  H—O—H",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
-        "desc": "Se consolida el carbocatión terciario en C1 mientras entra la molécula de agua angular por arriba.",
-        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C—H en C2.", "movement": "Aproximación del agua angular al carbocatión terciario." },
+        "title": "Paso 3 — Carbocatión Terciario (1-Metilciclohexilo) + Entrada del Agua (H₂O)",
+        "semiStep": "C₆H₁₀⁺(CH₃)  +  H—O—H",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
+        "desc": "Se consolida el carbocatión terciario en C1 mientras entra la molécula de agua angular desde la derecha.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C2—H formado.", "movement": "Aproximación del agua angular al carbocatión terciario." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 3°" },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140, "border": "#10b981" },
-            { "id": "H1", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 105, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 275, "enterFromY": 25 },
-            { "id": "Hw1", "el": "H", "x": 205, "y": 55, "enterFromX": 205, "enterFromY": 10 },
-            { "id": "Hw2", "el": "H", "x": 345, "y": 55, "enterFromX": 345, "enterFromY": 10 }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165, "border": "#10b981" },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 3°" },
+            { "id": "R1", "el": "CH₃", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 545, "y": 265, "label": "Agua (H₂O)", "enterFromX": 680, "enterFromY": 265 },
+            { "id": "Hw1", "el": "H", "x": 635, "y": 215, "enterFromX": 770, "enterFromY": 215 },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 315, "enterFromX": 770, "enterFromY": 315 }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hcat", "order": 1, "state": "new" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ]
@@ -1501,101 +1555,119 @@
       },
       {
         "title": "Paso 4 — Ataque Nucleofílico del Agua y Formación en Verde de C—O",
-        "semiStep": "C₅H₈(CH₃)—OH₂⁺",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
-        "desc": "El oxígeno del agua forma en verde punteado el enlace C—O en el carbono terciario del anillo.",
-        "legend": { "breaking": "Sin ruptura en esta etapa.", "forming": "En VERDE punteado: enlace C—O.", "movement": "Ataque nucleofílico del oxígeno al C⁺ terciario." },
+        "semiStep": "C₆H₁₀(CH₃)—OH₂⁺",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
+        "desc": "El oxígeno del agua forma en verde punteado el enlace C—O en el carbono terciario C1 del anillo hexagonal.",
+        "legend": { "breaking": "Sin ruptura en esta etapa.", "forming": "En VERDE punteado: enlace C1—O.", "movement": "Ataque nucleofílico del oxígeno al C⁺ terciario." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "highlight": "#10b981" },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H1", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "charge": "+", "highlight": "#38bdf8", "label": "Ion oxonio", "labelPos": "top" },
-            { "id": "Hw1", "el": "H", "x": 195, "y": 65 },
-            { "id": "Hw2", "el": "H", "x": 355, "y": 65 }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₃", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "charge": "+", "highlight": "#38bdf8", "label": "Ion oxonio" },
+            { "id": "Hw1", "el": "H", "x": 595, "y": 215 },
+            { "id": "Hw2", "el": "H", "x": 595, "y": 315 }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "forming" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 300, "y1": 142, "cx": 335, "cy": 178, "x2": 300, "y2": 215, "type": "full", "label": "Ataque O → C⁺" }
+            { "x1": 480, "y1": 245, "cx": 432, "cy": 215, "x2": 385, "y2": 245, "type": "full", "label": "Ataque O → C⁺" }
           ]
         }
       },
       {
         "title": "Paso 5 — Desprotonación en Rojo y Regeneración del Catalizador H⁺",
-        "semiStep": "C₅H₈(CH₃)—OH ┆—┆ H⁺  ──►  C₅H₈(CH₃)—OH + H⁺",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
+        "semiStep": "C₆H₁₀(CH₃)—OH ┆—┆ H⁺  ──►  C₆H₁₀(CH₃)—OH + H⁺",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
         "desc": "Se rompe en rojo punteado el enlace O—H liberándose el protón catalítico H⁺.",
-        "legend": { "breaking": "En ROJO punteado: enlace O—H.", "forming": "En VERDE sólido: enlace C—O.", "movement": "Salida de H⁺." },
+        "legend": { "breaking": "En ROJO punteado: enlace O—H.", "forming": "En VERDE sólido: enlace C1—O.", "movement": "Salida de H⁺." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235 },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H1", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "highlight": "#10b981" },
-            { "id": "Hw1", "el": "H", "x": 180, "y": 120 },
-            { "id": "Hw2", "el": "H", "x": 385, "y": 65, "charge": "+", "border": "#ef4444", "label": "Sale H⁺", "labelPos": "top" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265 },
+            { "id": "R1", "el": "CH₃", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 610, "y": 265 },
+            { "id": "Hw2", "el": "H", "x": 575, "y": 175, "charge": "+", "border": "#ef4444", "label": "Sale H⁺", "labelPos": "top" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "new" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 345, "y1": 82, "cx": 340, "cy": 122, "x2": 302, "y2": 120, "type": "full", "label": "Par al O" }
+            { "x1": 552, "y1": 212, "cx": 525, "cy": 215, "x2": 512, "y2": 242, "type": "full", "label": "Par al O" }
           ]
         }
       },
       {
-        "title": "Paso 6 — Producto Final Desarrollado: 1-Metilciclopentanol + H⁺ Regenerado",
-        "semiStep": "C₅H₈(CH₃)—OH  +  H⁺",
-        "semiGlobal": "C₅H₇(CH₃) + H₂O ──(H⁺)──► C₅H₈(CH₃)—OH",
-        "desc": "Se obtiene el 1-metilciclopentanol y el catalizador H⁺ regenerado.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: grupo –OH en carbono terciario.", "movement": "Producto terciario estable." },
+        "title": "Paso 6 — Producto Final Desarrollado: 1-Metilciclohexanol + H⁺ Regenerado",
+        "semiStep": "C₆H₁₀(CH₃)—OH  +  H⁺",
+        "semiGlobal": "C₆H₉(CH₃) + H₂O ──(H⁺)──► C₆H₁₀(CH₃)—OH",
+        "desc": "Se obtiene el 1-metilciclohexanol con su anillo hexagonal completo y el catalizador H⁺ regenerado.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: grupo –OH en carbono terciario.", "movement": "Producto terciario cíclico estable." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₃H₆", "x": 145, "y": 235 },
-            { "id": "C1", "el": "C", "x": 275, "y": 235, "highlight": "#10b981", "label": "1-Metilciclopentanol" },
-            { "id": "R2", "el": "CH₃", "x": 275, "y": 325 },
-            { "id": "C2", "el": "C", "x": 415, "y": 235 },
-            { "id": "Hcat", "el": "H", "x": 415, "y": 140 },
-            { "id": "H1", "el": "H", "x": 415, "y": 325 },
-            { "id": "Ow", "el": "O", "x": 275, "y": 120, "highlight": "#10b981" },
-            { "id": "Hw1", "el": "H", "x": 180, "y": 120 },
-            { "id": "Hw2", "el": "H", "x": 575, "y": 235, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
+            { "id": "C4", "el": "C", "x": 150, "y": 145 },
+            { "id": "C5", "el": "C", "x": 150, "y": 265 },
+            { "id": "C6", "el": "C", "x": 255, "y": 325 },
+            { "id": "C3", "el": "C", "x": 255, "y": 85 },
+            { "id": "C2", "el": "C", "x": 360, "y": 145 },
+            { "id": "H2", "el": "H", "x": 455, "y": 95 },
+            { "id": "Hcat", "el": "H", "x": 465, "y": 165 },
+            { "id": "C1", "el": "C", "x": 360, "y": 265, "highlight": "#10b981", "label": "1-Metilciclohexanol" },
+            { "id": "R1", "el": "CH₃", "x": 440, "y": 325 },
+            { "id": "Ow", "el": "O", "x": 505, "y": 265, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 610, "y": 265 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 265, "charge": "+", "highlight": "#38bdf8", "label": "Catalizador H⁺" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hcat", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Ow", "order": 1, "state": "new" },
             { "from": "Ow", "to": "Hw1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 505, "y": 242, "text": "+" }]
+          "texts": [{ "x": 685, "y": 272, "text": "+" }]
         }
       }
     ]
