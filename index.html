@@ -560,36 +560,31 @@
         }
 
         async function requestMandatoryFullscreenAndLandscape(targetEl) {
-            const docEl = document.documentElement;
-            const fsCandidates = [targetEl, docEl];
-            for (const el of fsCandidates) {
-                if (!el) continue;
-                try {
-                    if (el.requestFullscreen && !document.fullscreenElement) {
-                        await el.requestFullscreen({ navigationUI: 'hide' });
-                        break;
-                    } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
-                        await el.webkitRequestFullscreen();
-                        break;
-                    } else if (el.msRequestFullscreen && !document.msFullscreenElement) {
-                        await el.msRequestFullscreen();
-                        break;
-                    }
-                } catch (e) {}
-            }
+    const isTouchMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 900;
 
+    // En móviles evitamos requestFullscreen() para que Android no muestre el cartel gris sobre los botones
+    if (!isTouchMobile) {
+        const docEl = document.documentElement;
+        for (const el of [targetEl, docEl]) {
+            if (!el) continue;
             try {
-                if (screen.orientation && screen.orientation.lock) {
-                    await screen.orientation.lock('landscape');
-                } else if (screen.lockOrientation) {
-                    screen.lockOrientation('landscape');
-                } else if (screen.mozLockOrientation) {
-                    screen.mozLockOrientation('landscape');
-                } else if (screen.msLockOrientation) {
-                    screen.msLockOrientation('landscape');
+                if (el.requestFullscreen && !document.fullscreenElement) {
+                    await el.requestFullscreen({ navigationUI: 'hide' });
+                    break;
+                } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
+                    await el.webkitRequestFullscreen();
+                    break;
                 }
             } catch (e) {}
         }
+    }
+
+    try {
+        if (screen.orientation && screen.orientation.lock) {
+            await screen.orientation.lock('landscape');
+        }
+    } catch (e) {}
+}
 
         async function openFullscreenPlayer() {
             wizardStage = 5;
