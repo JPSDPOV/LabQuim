@@ -562,7 +562,6 @@
         async function requestMandatoryFullscreenAndLandscape(targetEl) {
             const isTouchMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 900;
 
-            // En móviles evitamos requestFullscreen() para que Android no muestre el cartel gris sobre los botones
             if (!isTouchMobile) {
                 const docEl = document.documentElement;
                 for (const el of [targetEl, docEl]) {
@@ -697,7 +696,107 @@
             return scene;
         }
 
-        function parseFormulaAndCompoundName(rawItem) {
+        // =========================================================================
+        // DICCIONARIO DE NOMBRES QUÍMICOS POR FÓRMULA (PARA ETIQUETAR SEMIDESARROLLADAS)
+        // =========================================================================
+        const FORMULA_TO_NAME_MAP = {
+            'CH4': 'Metano',
+            'CH3-CH3': 'Etano',
+            'C2H6': 'Etano',
+            'CH2=CH2': 'Eteno',
+            'C2H4': 'Eteno',
+            'CH≡CH': 'Etino',
+            'C2H2': 'Etino',
+            'CH3-CH2-CH3': 'Propano',
+            'C3H8': 'Propano',
+            'CH3-CH=CH2': 'Propeno',
+            'C3H6': 'Propeno',
+            'CH3-CH2-CH2-CH3': 'Butano',
+            'C4H10': 'Butano',
+            'CH3-CH=CH-CH3': '2-Buteno',
+            'CH2=CH-CH2-CH3': '1-Buteno',
+            '(CH3)3CH': '2-Metilpropano',
+            '(CH3)3C-H': '2-Metilpropano',
+            'C6H12': 'Ciclohexano',
+            'C6H10': 'Ciclohexeno',
+            'C6H6': 'Benceno',
+            'CH3-Cl': 'Clorometano',
+            'CH3-Br': 'Bromometano',
+            'CH3-I': 'Yodometano',
+            'CH3-CH2-Cl': 'Cloroetano',
+            'CH3-CH2-Br': 'Bromoetano',
+            'CH3-CH2-I': 'Yodoetano',
+            'CH3CH2-CH2-Br': '1-Bromopropano',
+            'CH3-CH2-CH2-Br': '1-Bromopropano',
+            '(CH3)2CH-Cl': '2-Cloropropano',
+            '(CH3)2CH-Br': '2-Bromopropano',
+            '(CH3)3C-Br': '2-Bromo-2-metilpropano',
+            '(CH3)3C-Cl': '2-Cloro-2-metilpropano',
+            'C6H11-Br': 'Bromociclohexano',
+            'Mg0': 'Magnesio metálico',
+            'Mg': 'Magnesio metálico',
+            'Na0': 'Sodio metálico',
+            'Na': 'Sodio metálico',
+            'Zn0': 'Zinc metálico',
+            'Zn': 'Zinc metálico',
+            'H2': 'Hidrógeno molecular',
+            'Cl2': 'Cloro molecular',
+            'Br2': 'Bromo molecular',
+            'O2': 'Oxígeno molecular',
+            'H2O': 'Agua',
+            'H-O-H': 'Agua',
+            'H-OH': 'Agua',
+            'HCl': 'Cloruro de hidrógeno',
+            'HBr': 'Bromuro de hidrógeno',
+            'HI': 'Yoduro de hidrógeno',
+            'NaCl': 'Cloruro de sodio',
+            'NaBr': 'Bromuro de sodio',
+            'NaI': 'Yoduro de sodio',
+            'Na2CO3': 'Carbonato de sodio',
+            'CO2': 'Dióxido de carbono',
+            'HO-Mg-Br': 'Bromuro básico de magnesio',
+            'Mg(OH)Br': 'Bromuro básico de magnesio',
+            'HO-Mg-I': 'Yoduro básico de magnesio',
+            'Mg(OH)I': 'Yoduro básico de magnesio',
+            'HO-Mg-Cl': 'Cloruro básico de magnesio',
+            'Mg(OH)Cl': 'Cloruro básico de magnesio',
+            'ZnBrCl': 'Cloruro-bromuro de zinc',
+            'ZnCl2': 'Cloruro de zinc'
+        };
+
+        function normalizeFormulaLookupKey(f) {
+            const subToDigit = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '⁰': '0' };
+            return String(f || '')
+                .replace(/[₀-₉⁰]/g, ch => subToDigit[ch] || ch)
+                .replace(/[—–]/g, '-')
+                .replace(/\s+/g, '')
+                .trim();
+        }
+
+        function inferNameFromContext(formulaStr, contextHints = []) {
+            const normKey = normalizeFormulaLookupKey(formulaStr);
+            if (FORMULA_TO_NAME_MAP[normKey]) return FORMULA_TO_NAME_MAP[normKey];
+
+            // Buscar en las pistas de texto del ejemplo (ej. título del sustrato o labels de átomos)
+            const compactFormula = normKey.replace(/-/g, '');
+            for (const hint of contextHints) {
+                const h = String(hint || '').trim();
+                if (!h) continue;
+                // Ej: "Bromoetano (CH₃CH₂Br) + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► Etano (C₂H₆)"
+                const rxNameParen = /([A-ZÁÉÍÓÚÑa-záéíóúñ0-9,\-\s]{3,32})\s*\(([^()]+)\)/g;
+                let m;
+                while ((m = rxNameParen.exec(h)) !== null) {
+                    const candidateName = m[1].replace(/^(?:2\s+|Paso\s+\d+\s*[—\-:]\s*)/i, '').trim();
+                    const candidateForm = normalizeFormulaLookupKey(m[2]).replace(/-/g, '');
+                    if (candidateForm === compactFormula && candidateName && !/^(H2O|H3O|THF|Eter|Éter)/i.test(candidateName)) {
+                        return candidateName.charAt(0).toUpperCase() + candidateName.slice(1);
+                    }
+                }
+            }
+            return '';
+        }
+
+        function parseFormulaAndCompoundName(rawItem, contextHints = []) {
             let txt = String(rawItem || '').trim();
             txt = txt.replace(/^PRODUCTO OBTENIDO:\s*/i, '').trim();
 
@@ -715,6 +814,10 @@
                 }
             }
 
+            if (!compoundName) {
+                compoundName = inferNameFromContext(formula, contextHints);
+            }
+
             formula = formula.replace(/([A-Za-z\)])(\d+)/g, (_, p1, digits) => {
                 const subMap = { '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉' };
                 return p1 + digits.split('').map(d => subMap[d] || d).join('');
@@ -723,7 +826,7 @@
             return { formula, compoundName };
         }
 
-        function buildSemidevelopedBannerScene(semiText, accentColor) {
+        function buildSemidevelopedBannerScene(semiText, accentColor, contextHints = []) {
             const raw = String(semiText || '').trim();
             const clean = raw
                 .replace(/^PRODUCTO OBTENIDO:\s*/i, '')
@@ -734,12 +837,13 @@
             const sides = clean.split(/──►|→|⇄/);
             const expr = (sides.length > 1 && sides[1].trim()) ? sides[1].trim() : sides[0].trim();
             const rawParts = expr.split(/\s+\+\s+/).map(s => s.trim()).filter(Boolean);
-            const parsedParts = rawParts.map(parseFormulaAndCompoundName);
+            const parsedParts = rawParts.map(p => parseFormulaAndCompoundName(p, contextHints));
 
             const atoms = [];
             const texts = [];
             const n = parsedParts.length;
 
+            // Centro exacto del escenario en coordenadas lógicas: x = 460 (que mapStageX(460) = 520, mitad exacta de 1040)
             if (n === 1) {
                 atoms.push({
                     id: 'Semi_Node_0',
@@ -790,7 +894,7 @@
                 });
             }
 
-            return { atoms, bonds: [], texts };
+            return { atoms, bonds: [], texts, forceCentered: true };
         }
 
         function wrapWithSemidevelopedEndpoints(stepsArray) {
@@ -799,6 +903,13 @@
             const firstStep = stepsArray[0];
             const lastStep = stepsArray[stepsArray.length - 1];
 
+            // Recolectar pistas de nombres desde títulos y escenas del ejemplo actual
+            const contextHints = [];
+            stepsArray.forEach(st => {
+                if (st.title) contextHints.push(st.title);
+                if (st.semiGlobal) contextHints.push(st.semiGlobal);
+            });
+
             const cleanOldNumbering = (t) => String(t || '').replace(/^Paso \d+\s*[—\-:]\s*/i, '').trim();
 
             const introSemiText = firstStep.semiStep || firstStep.semiGlobal || '';
@@ -806,7 +917,7 @@
                 .replace(/\s*──\([^)]+\)──►.*$/, '')
                 .replace(/\s*──►\s*$/, '')
                 .split(/\s+\+\s+/)
-                .map(s => parseFormulaAndCompoundName(s).formula)
+                .map(s => parseFormulaAndCompoundName(s, contextHints).formula)
                 .filter(Boolean)
                 .join(' + ');
 
@@ -820,7 +931,7 @@
                     forming: 'Ningún enlace formado todavía.',
                     movement: 'En el siguiente paso se despliegan los enlaces desarrollados.'
                 },
-                scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8')
+                scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints)
             };
 
             const middleSteps = stepsArray.map((st, idx) => ({
@@ -834,7 +945,7 @@
             const outroExpr = (outroSides.length > 1 && outroSides[1].trim()) ? outroSides[1].trim() : outroSides[0].trim();
             const outroParts = outroExpr
                 .split(/\s+\+\s+/)
-                .map(s => parseFormulaAndCompoundName(s).formula)
+                .map(s => parseFormulaAndCompoundName(s, contextHints).formula)
                 .filter(Boolean)
                 .join(' + ');
 
@@ -849,7 +960,7 @@
                     forming: 'Productos finales expresados en fórmula semidesarrollada.',
                     movement: 'Reacción finalizada.'
                 },
-                scene: () => buildSemidevelopedBannerScene(outroSemiText, '#10b981')
+                scene: () => buildSemidevelopedBannerScene(outroSemiText, '#10b981', contextHints)
             };
 
             return [introStep, ...middleSteps, outroStep];
@@ -1113,6 +1224,83 @@
             return { isPill: true, r: 16, pillW, pillH, halfW: pillW / 2, halfH: pillH / 2, cfg };
         }
 
+        // =========================================================================
+        // CÁLCULO AUTOMÁTICO DE ELECTRONES DE VALENCIA (LEWIS) PARA TODOS LOS ÁTOMOS
+        // Mg⁰ -> 2 e⁻, Na⁰ -> 1 e⁻, Br (1 enlace) -> 3 pares (6 e⁻), Br libre -> 7 e⁻, etc.
+        // =========================================================================
+        function computeAutomaticValenceDots(atom, connectedBonds) {
+            // Si el JSON ya trae lonePairs o radical definidos explícitamente, respetarlos y complementar si falta
+            const explicitPairs = Array.isArray(atom.lonePairs) ? [...atom.lonePairs] : null;
+            const elRaw = String(atom.el || '').trim();
+            const chargeRaw = String(atom.charge || '').trim();
+
+            // Solo aplicar a átomos individuales (no a grupos poliatómicos como CH₃, OH, NH₂)
+            const cleanSymbol = elRaw.replace(/[⁰-₉⁺⁻°•]/g, '').trim();
+            const isNeutralZero = elRaw.includes('⁰') || elRaw.includes('°');
+            const bondOrderSum = (connectedBonds || []).reduce((acc, b) => acc + (b.order || 1), 0);
+
+            const VALENCE_TABLE = {
+                'Li': 1, 'Na': 1, 'K': 1,
+                'Be': 2, 'Mg': 2, 'Ca': 2, 'Zn': 2,
+                'B': 3, 'Al': 3,
+                'C': 4, 'Si': 4,
+                'N': 5, 'P': 5,
+                'O': 6, 'S': 6,
+                'F': 7, 'Cl': 7, 'Br': 7, 'I': 7
+            };
+
+            if (!(cleanSymbol in VALENCE_TABLE)) {
+                return { pairs: explicitPairs || [], singleDot: null };
+            }
+
+            let valence = VALENCE_TABLE[cleanSymbol];
+            if (!isNeutralZero) {
+                if (chargeRaw === '+' || chargeRaw === '+1') valence -= 1;
+                else if (chargeRaw === '2+' || chargeRaw === '+2') valence -= 2;
+                else if (chargeRaw === '-' || chargeRaw === '-1') valence += 1;
+                else if (chargeRaw === '2-' || chargeRaw === '-2') valence += 2;
+            }
+
+            // Electrones no enlazantes = electrones de valencia - electrones compartidos en enlaces
+            const nonBonding = Math.max(0, valence - bondOrderSum);
+
+            // Direcciones ocupadas por los enlaces actuales para no superponer puntos sobre las líneas de enlace
+            const occupiedAngles = (connectedBonds || []).map(b => b.angle);
+            const CANDIDATE_DIRS = [
+                { name: 'top', ang: -Math.PI / 2 },
+                { name: 'bottom', ang: Math.PI / 2 },
+                { name: 'right', ang: 0 },
+                { name: 'left', ang: Math.PI },
+                { name: 'top-left', ang: -(3 * Math.PI) / 4 },
+                { name: 'top-right', ang: -Math.PI / 4 },
+                { name: 'bottom-left', ang: (3 * Math.PI) / 4 },
+                { name: 'bottom-right', ang: Math.PI / 4 }
+            ];
+
+            const isDirFree = (ang) => {
+                return !occupiedAngles.some(occ => {
+                    let diff = Math.abs(ang - occ);
+                    while (diff > Math.PI) diff = Math.abs(diff - 2 * Math.PI);
+                    return diff < 0.42; // ~24 grados de margen alrededor de cada enlace
+                });
+            };
+
+            const freeDirs = CANDIDATE_DIRS.filter(d => isDirFree(d.ang)).map(d => d.name);
+
+            if (explicitPairs && explicitPairs.length > 0) {
+                return { pairs: explicitPairs, singleDot: null };
+            }
+
+            const numPairs = Math.floor(nonBonding / 2);
+            const hasSingle = (nonBonding % 2) === 1;
+
+            // Metales alcalinotérreos neutros (Mg⁰, Ca⁰, Zn⁰) tienen 2 electrones de valencia (1 par o 2 puntos visibles)
+            const chosenPairs = freeDirs.slice(0, numPairs);
+            const singleDir = (hasSingle && !atom.radical) ? (freeDirs[numPairs] || 'right') : null;
+
+            return { pairs: chosenPairs, singleDot: singleDir };
+        }
+
         function renderInterpolatedFrame(prevScene, targetScene, rawT) {
             const mobile = isCompactMobile();
             const clampedRaw = Math.min(1, Math.max(0, rawT));
@@ -1229,6 +1417,7 @@
                 });
             }
             const targetBondKeys = new Set();
+            const bondsByAtomId = {};
 
             (targetScene.bonds || []).forEach(b => {
                 const key = [b.from, b.to].sort().join('--');
@@ -1236,6 +1425,11 @@
                 const a1 = currentAtoms[b.from];
                 const a2 = currentAtoms[b.to];
                 if (!a1 || !a2) return;
+
+                if (!bondsByAtomId[b.from]) bondsByAtomId[b.from] = [];
+                if (!bondsByAtomId[b.to]) bondsByAtomId[b.to] = [];
+                bondsByAtomId[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
+                bondsByAtomId[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
 
                 const existedBefore = !!prevBondMap[key];
                 const prevOrder = existedBefore ? (prevBondMap[key].order || 1) : 0;
@@ -1351,9 +1545,10 @@
 
             visibleAtoms.forEach(a => {
                 const geom = getNodeGeometry(a);
-                const extraRad = (a.radical || (a.lonePairs && a.lonePairs.length)) ? (mobile ? 20 : 15) : 4;
+                const valenceInfo = computeAutomaticValenceDots(a, bondsByAtomId[a.id] || []);
+                const extraRad = (a.radical || valenceInfo.pairs.length > 0 || valenceInfo.singleDot) ? (mobile ? 20 : 15) : 4;
                 expandBounds(a.x - geom.halfW - extraRad, a.y - geom.halfH - extraRad, a.x + geom.halfW + extraRad, a.y + geom.halfH + extraRad);
-                svgOut += renderSingleAtomNode(a, geom);
+                svgOut += renderSingleAtomNode(a, geom, valenceInfo);
                 if (a.label) {
                     const isTop = a.labelPos === 'top';
                     const rawLy = isTop ? (a.y - geom.halfH - (mobile ? 17 : 12)) : (a.y + geom.halfH + (mobile ? 21 : 15));
@@ -1403,23 +1598,34 @@
             stageGroup.innerHTML = svgOut;
 
             if (svgEl && isFinite(minX) && isFinite(maxX)) {
-                const padX = mobile ? 14 : 26;
-                const padY = mobile ? 14 : 20;
-                const targetVbX = Math.max(0, minX - padX);
-                const targetVbY = Math.max(0, minY - padY);
-                const targetVbW = Math.max(320, Math.min(1040 - targetVbX, (maxX - minX) + padX * 2));
-                const targetVbH = Math.max(190, Math.min(380 - targetVbY, (maxY - minY) + padY * 2));
-
-                if (!currentViewBox.initialized || clampedRaw >= 0.99) {
-                    currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
+                if (targetScene.forceCentered) {
+                    // Centrado geométrico simétrico alrededor del centro del lienzo (520, 185)
+                    const halfSpanX = Math.max(260, Math.abs(520 - minX) + 40, Math.abs(maxX - 520) + 40);
+                    const vbW = Math.min(1040, halfSpanX * 2);
+                    const vbX = Math.max(0, 520 - vbW / 2);
+                    const vbH = Math.min(360, Math.max(240, (maxY - minY) + 90));
+                    const vbY = Math.max(0, 185 - vbH / 2);
+                    currentViewBox = { x: vbX, y: vbY, w: vbW, h: vbH, initialized: true };
+                    svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${vbW.toFixed(1)} ${vbH.toFixed(1)}`);
                 } else {
-                    const camEase = 0.22;
-                    currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
-                    currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
-                    currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
-                    currentViewBox.h = lerp(currentViewBox.h, targetVbH, camEase);
+                    const padX = mobile ? 14 : 26;
+                    const padY = mobile ? 14 : 20;
+                    const targetVbX = Math.max(0, minX - padX);
+                    const targetVbY = Math.max(0, minY - padY);
+                    const targetVbW = Math.max(320, Math.min(1040 - targetVbX, (maxX - minX) + padX * 2));
+                    const targetVbH = Math.max(190, Math.min(380 - targetVbY, (maxY - minY) + padY * 2));
+
+                    if (!currentViewBox.initialized || clampedRaw >= 0.99) {
+                        currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
+                    } else {
+                        const camEase = 0.22;
+                        currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
+                        currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
+                        currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
+                        currentViewBox.h = lerp(currentViewBox.h, targetVbH, camEase);
+                    }
+                    svgEl.setAttribute('viewBox', `${currentViewBox.x.toFixed(1)} ${currentViewBox.y.toFixed(1)} ${currentViewBox.w.toFixed(1)} ${currentViewBox.h.toFixed(1)}`);
                 }
-                svgEl.setAttribute('viewBox', `${currentViewBox.x.toFixed(1)} ${currentViewBox.y.toFixed(1)} ${currentViewBox.w.toFixed(1)} ${currentViewBox.h.toFixed(1)}`);
             }
         }
 
@@ -1506,7 +1712,7 @@
             return html;
         }
 
-        function renderSingleAtomNode(a, geom) {
+        function renderSingleAtomNode(a, geom, valenceInfo) {
             const mobile = isCompactMobile();
             const g = geom || getNodeGeometry(a);
             const cfg = g.cfg;
@@ -1566,21 +1772,25 @@
                 html += `</g>`;
             }
 
-            if (Array.isArray(a.lonePairs) && a.lonePairs.length > 0) {
-                const lpDist = mobile ? 10 : 7.5;
-                const dotSep = mobile ? 5.2 : 3.8;
-                const dotR = mobile ? 3.6 : 2.6;
-                const DIR_ANGLES = {
-                    'right': 0,
-                    'bottom-right': Math.PI / 4,
-                    'bottom': Math.PI / 2,
-                    'bottom-left': (3 * Math.PI) / 4,
-                    'left': Math.PI,
-                    'top-left': -(3 * Math.PI) / 4,
-                    'top': -Math.PI / 2,
-                    'top-right': -Math.PI / 4
-                };
-                a.lonePairs.forEach(lp => {
+            const pairsToDraw = valenceInfo ? valenceInfo.pairs : (Array.isArray(a.lonePairs) ? a.lonePairs : []);
+            const singleDotDir = valenceInfo ? valenceInfo.singleDot : null;
+
+            const DIR_ANGLES = {
+                'right': 0,
+                'bottom-right': Math.PI / 4,
+                'bottom': Math.PI / 2,
+                'bottom-left': (3 * Math.PI) / 4,
+                'left': Math.PI,
+                'top-left': -(3 * Math.PI) / 4,
+                'top': -Math.PI / 2,
+                'top-right': -Math.PI / 4
+            };
+            const lpDist = mobile ? 10 : 7.5;
+            const dotSep = mobile ? 5.2 : 3.8;
+            const dotR = mobile ? 3.6 : 2.6;
+
+            if (pairsToDraw.length > 0) {
+                pairsToDraw.forEach(lp => {
                     const ang = (typeof lp === 'number') ? (lp * Math.PI / 180) : (DIR_ANGLES[lp] !== undefined ? DIR_ANGLES[lp] : -Math.PI / 2);
                     const cx = Math.cos(ang) * (g.halfW + lpDist);
                     const cy = Math.sin(ang) * (g.halfH + lpDist);
@@ -1593,6 +1803,13 @@
                         </g>
                     `;
                 });
+            }
+
+            if (singleDotDir) {
+                const ang = DIR_ANGLES[singleDotDir] !== undefined ? DIR_ANGLES[singleDotDir] : 0;
+                const cx = Math.cos(ang) * (g.halfW + lpDist);
+                const cy = Math.sin(ang) * (g.halfH + lpDist);
+                html += `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${(dotR + 0.4).toFixed(1)}" fill="#38bdf8" stroke="#0f172a" stroke-width="0.9"/>`;
             }
 
             html += `</g>`;
