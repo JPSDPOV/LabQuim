@@ -3,15 +3,15 @@
   "title": "2) Síntesis e Hidrólisis del Reactivo de Grignard (R–MgX)",
   "natureBadge": "Organometálicos • Inserción de Mg⁰ e Hidrólisis Carbaniónica (R–X → R–MgX → R–H)",
   "deltaH": "ΔH° < 0 (Exotérmica en dos etapas: formación del haluro de alquilmagnesio e hidrólisis prótica)",
-  "description": "Obtención de alcanos en dos etapas a partir de un haluro de alquilo (R–X):\n1) Formación del reactivo de Grignard (R–MgX): el magnesio metálico (Mg⁰) se inserta en el enlace C–X en éter dietílico o THF anhidro, invirtiendo la polaridad del carbono (de electrófilo δ⁺ a nucleófilo carbaniónico δ⁻).\n2) Hidrólisis ácida o acuosa (H₂O / H₃O⁺): el carbono nucleofílico del reactivo de Grignard abstrae un protón del agua angular (H–O–H) o de un ácido diluido para generar el alcano puro (R–H) junto con el subproducto básico Mg(OH)X.",
+  "description": "Obtención de alcanos en dos etapas a partir de un haluro de alquilo (R–X):\n1) Formación del reactivo de Grignard (R–MgX): el magnesio metálico (Mg⁰) se inserta en el enlace C–X en éter dietílico o THF anhidro, invirtiendo la polaridad del carbono (de electrófilo δ⁺ a nucleófilo carbaniónico δ⁻).\n2) Hidrólisis ácida o acuosa (H₂O / H₃O⁺): la molécula de agua angular (H–O–H) se aproxima desde la parte superior hacia el enlace polarizado C–Mg; el carbono nucleofílico abstrae el protón formando el alcano puro (R–H) mientras el grupo hidroxilo (–OH) queda enlazado al magnesio generando el subproducto básico HO–Mg–X.",
   "meta": {
     "grupoFuncional": "Alcanos (R–H) a partir de Haluros de Alquilo (R–X) vía Organomagnesianos",
     "reaccionMecanismo": "Inserción oxidativa de Mg⁰ (Transferencia monoelectrónica) seguida de Protonación ácido-base (Hidrólisis)",
     "naturaleza": "Por Etapas (2 fases bien definidas): 1° Preparación del organometálico en medio anhidro → 2° Hidrólisis con fuente de protones.",
-    "rupturaIntermediarios": "Ruptura inicial C–X con inversión de polaridad (Umpolung) formando Rδ⁻–Mgδ⁺X y posterior ruptura heterolítica del enlace O–H del agua.",
-    "detalleMecanismo": "El magnesio cede dos electrones al haluro de alquilo formando R–MgX solvatado por el éter. Al añadir H₂O en geometría angular, el par electrónico del enlace C–Mg ataca al protón ácido liberando el alcano R–H y formando Mg(OH)X.",
+    "rupturaIntermediarios": "Ruptura inicial C–X con inversión de polaridad (Umpolung) formando Rδ⁻–Mgδ⁺X y posterior ruptura heterolítica del enlace O–H del agua al aproximarse sobre el enlace C–Mg.",
+    "detalleMecanismo": "El magnesio cede dos electrones al haluro de alquilo formando R–MgX solvatado por el éter. Al añadir H₂O desde la parte superior, el par electrónico del enlace C–Mg ataca al protón ácido liberando el alcano R–H y formando HO–Mg–X.",
     "reactivosCondiciones": "Etapa 1: Mg⁰ (virutas) / Éter dietílico (Et₂O) o THF estrictamente anhidro | Etapa 2: H₂O o H₃O⁺ diluido",
-    "rolReactivos": "• Haluro de alquilo (R–X): Sustrato carbonado inicial (I > Br > Cl).\n• Magnesio metálico (Mg⁰): Agente reductor que se inserta entre C y X.\n• Éter anhidro: Disolvente coordinador indispensable para estabilizar el complejo de Grignard.\n• Agua (H–O–H) / H₃O⁺: Fuente de protones (H⁺) que libera el alcano.",
+    "rolReactivos": "• Haluro de alquilo (R–X): Sustrato carbonado inicial (I > Br > Cl).\n• Magnesio metálico (Mg⁰): Agente reductor que se inserta entre C y X.\n• Éter anhidro: Disolvente coordinador indispensable para estabilizar el complejo de Grignard.\n• Agua (H–O–H) / H₃O⁺: Fuente de protones (H⁺) que escinde el enlace C–Mg y libera el alcano.",
     "reglasObs": "• El medio de la Etapa 1 debe estar libre de humedad, alcoholes o grupos ácidos (–OH, –NH, –COOH), ya que destruyen prematuramente el reactivo de Grignard."
   },
   "substrates": [
@@ -56,7 +56,7 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: Bromoetano (CH₃CH₂Br) + Mg⁰",
         "semiStep": "CH₃—CH₂—Br + Mg⁰  ──(Éter anhidro)──►",
-        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + Mg(OH)Br",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
         "desc": "Observa el bromoetano con sus enlaces perpendiculares a 90° y pares libres en el bromo frente al magnesio metálico (Mg⁰) en éter anhidro.",
         "legend": {
           "breaking": "Ningún enlace roto todavía; sustrato intacto.",
@@ -65,15 +65,15 @@
         },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 115, "y": 185 },
-            { "id": "C1", "el": "C", "x": 235, "y": 185 },
-            { "id": "H2", "el": "H", "x": 235, "y": 85 },
-            { "id": "H3", "el": "H", "x": 235, "y": 285 },
-            { "id": "C2", "el": "C", "x": 365, "y": 185 },
-            { "id": "H4", "el": "H", "x": 365, "y": 85 },
-            { "id": "H5", "el": "H", "x": 365, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 510, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 680, "y": 185, "label": "Magnesio metálico" }
+            { "id": "H1", "el": "H", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 235, "y": 210 },
+            { "id": "H2", "el": "H", "x": 235, "y": 110 },
+            { "id": "H3", "el": "H", "x": 235, "y": 305 },
+            { "id": "C2", "el": "C", "x": 365, "y": 210 },
+            { "id": "H4", "el": "H", "x": 365, "y": 110 },
+            { "id": "H5", "el": "H", "x": 365, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 510, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 680, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -84,13 +84,13 @@
             { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 595, "y": 192, "text": "+" }]
+          "texts": [{ "x": 595, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Polarización y Ruptura en Rojo del Enlace C—Br",
         "semiStep": "CH₃—CH₂δ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + Mg(OH)Br",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
         "desc": "El magnesio transfiere electrones hacia el enlace C—Br, debilitándolo en rojo punteado para insertarse entre el carbono y el bromo.",
         "legend": {
           "breaking": "En ROJO punteado: ruptura del enlace C—Br.",
@@ -99,15 +99,15 @@
         },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 115, "y": 185 },
-            { "id": "C1", "el": "C", "x": 235, "y": 185 },
-            { "id": "H2", "el": "H", "x": 235, "y": 85 },
-            { "id": "H3", "el": "H", "x": 235, "y": 285 },
-            { "id": "C2", "el": "C", "x": 365, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "H4", "el": "H", "x": 365, "y": 85 },
-            { "id": "H5", "el": "H", "x": 365, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 525, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 445, "y": 115, "highlight": "#38bdf8", "label": "Inserción Mg" }
+            { "id": "H1", "el": "H", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 235, "y": 210 },
+            { "id": "H2", "el": "H", "x": 235, "y": 110 },
+            { "id": "H3", "el": "H", "x": 235, "y": 305 },
+            { "id": "C2", "el": "C", "x": 365, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H4", "el": "H", "x": 365, "y": 110 },
+            { "id": "H5", "el": "H", "x": 365, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 585, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 475, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -119,35 +119,35 @@
             { "from": "C2", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 445, "y1": 135, "cx": 420, "cy": 165, "x2": 385, "y2": 175, "type": "fishhook", "label": "1 e⁻" },
-            { "x1": 438, "y1": 180, "cx": 470, "cy": 152, "x2": 502, "y2": 172, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 465, "y1": 165, "cx": 430, "cy": 188, "x2": 388, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 488, "y1": 165, "cx": 525, "cy": 188, "x2": 562, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Reactivo de Grignard (CH₃CH₂MgBr) + Agua Angular (H₂O)",
-        "semiStep": "CH₃—CH₂δ⁻—Mgδ⁺—Br + H—O—H ──►",
-        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + Mg(OH)Br",
-        "desc": "Se consolida el bromuro de etilmagnesio (Cδ⁻—Mgδ⁺). Al añadir agua en geometría angular (104.5°), el carbono nucleófilo ataca al protón ácido rompiendo en rojo uno de los enlaces O—H.",
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "CH₃—CH₂δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
+        "desc": "El magnesio queda insertado en el eje horizontal (C—Mg—Br). La molécula de agua angular (H—O—H) desciende por arriba sobre el enlace C—Mg para protonar al carbono y transferir el grupo —OH al magnesio.",
         "legend": {
-          "breaking": "En ROJO punteado: enlace H—O del agua angular por romperse.",
-          "forming": "En VERDE punteado: enlace C—Mg ya insertado.",
-          "movement": "Ataque nucleofílico del carbono sobre el protón del agua."
+          "breaking": "En ROJO punteado: enlace C—Mg y enlace H—O del agua por romperse.",
+          "forming": "Aproximación superior del agua angular sobre C—Mg.",
+          "movement": "El carbono nucleófilo ataca al H⁺ superior mientras el oxígeno se coordina con el Mg."
         },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 95, "y": 185 },
-            { "id": "C1", "el": "C", "x": 200, "y": 185 },
-            { "id": "H2", "el": "H", "x": 200, "y": 85 },
-            { "id": "H3", "el": "H", "x": 200, "y": 285 },
-            { "id": "C2", "el": "C", "x": 315, "y": 185, "charge": "δ-", "highlight": "#38bdf8", "label": "Carbono nucleófilo" },
-            { "id": "H4", "el": "H", "x": 315, "y": 85 },
-            { "id": "H5", "el": "H", "x": 315, "y": 285 },
-            { "id": "Mg1", "el": "Mg", "x": 435, "y": 185, "charge": "δ+" },
-            { "id": "Br1", "el": "Br", "x": 540, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 665, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 755, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua angular (H₂O)" },
-            { "id": "Hw2", "el": "H", "x": 845, "y": 235 }
+            { "id": "H1", "el": "H", "x": 115, "y": 235 },
+            { "id": "C1", "el": "C", "x": 235, "y": 235 },
+            { "id": "H2", "el": "H", "x": 235, "y": 135 },
+            { "id": "H3", "el": "H", "x": 235, "y": 325 },
+            { "id": "C2", "el": "C", "x": 365, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "H4", "el": "H", "x": 365, "y": 135 },
+            { "id": "H5", "el": "H", "x": 365, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 495, "y": 235, "charge": "δ+" },
+            { "id": "Br1", "el": "Br", "x": 625, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 430, "y": 120, "charge": "δ+", "enterFromX": 430, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 510, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 510, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 590, "y": 120, "enterFromX": 590, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -156,42 +156,41 @@
             { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C2", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 375, "y1": 175, "cx": 510, "cy": 110, "x2": 655, "y2": 218, "type": "full", "label": "Captura H⁺ (2 e⁻)" },
-            { "x1": 710, "y1": 195, "cx": 725, "cy": 172, "x2": 742, "y2": 165, "type": "full", "label": "Par al O" }
-          ],
-          "texts": [{ "x": 605, "y": 192, "text": "+" }]
+            { "x1": 420, "y1": 225, "cx": 395, "cy": 175, "x2": 422, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 495, "y1": 85, "cx": 480, "cy": 145, "x2": 492, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Hidrólisis y Formación en Verde Punteado de C—H y Mg—OH",
-        "semiStep": "CH₃—CH₂ ··· H + Br—Mg ··· O—H",
-        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + Mg(OH)Br",
-        "desc": "Se trazan en verde punteado el nuevo enlace C—H del etano a la izquierda y el enlace Mg—OH del subproducto básico a la derecha.",
+        "title": "Paso 4 — Ruptura del Enlace C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "CH₃—CH₂ ··· H   +   HO ··· Mg—Br",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
+        "desc": "El enlace C—Mg se rompe por completo; el hidrógeno entra al carbono formando C—H en verde punteado y el grupo —OH queda unido por arriba al magnesio formando HO—Mg—Br.",
         "legend": {
-          "breaking": "Enlace C—Mg escindido por protonación.",
-          "forming": "En VERDE punteado: nuevos enlaces C—H y Mg—OH.",
-          "movement": "Separación del alcano y del hidróxido-bromuro de magnesio."
+          "breaking": "Enlace C—Mg escindido por completo.",
+          "forming": "En VERDE punteado: nuevos enlaces C—H (izquierda) y HO—Mg (derecha).",
+          "movement": "Separación limpia del alcano y del hidróxido-bromuro de magnesio."
         },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 210, "y": 185 },
-            { "id": "H2", "el": "H", "x": 210, "y": 85 },
-            { "id": "H3", "el": "H", "x": 210, "y": 285 },
-            { "id": "C2", "el": "C", "x": 330, "y": 185, "highlight": "#10b981" },
-            { "id": "H4", "el": "H", "x": 330, "y": 85 },
-            { "id": "H5", "el": "H", "x": 330, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 445, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 695, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 805, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 880, "y": 225 }
+            { "id": "H1", "el": "H", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 210, "y": 215 },
+            { "id": "H2", "el": "H", "x": 210, "y": 115 },
+            { "id": "H3", "el": "H", "x": 210, "y": 310 },
+            { "id": "C2", "el": "C", "x": 330, "y": 215, "highlight": "#10b981" },
+            { "id": "H4", "el": "H", "x": 330, "y": 115 },
+            { "id": "H5", "el": "H", "x": 330, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 445, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 625, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 725, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 625, "y": 215, "highlight": "#10b981" },
+            { "id": "Br1", "el": "Br", "x": 755, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -201,37 +200,37 @@
             { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 515, "y": 192, "text": "+" }]
+          "texts": [{ "x": 525, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Etano (C₂H₆) + Mg(OH)Br",
-        "semiStep": "CH₃—CH₃  +  Br—Mg—O—H",
-        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + Mg(OH)Br",
-        "desc": "Quedan consolidados en verde sólido el nuevo enlace C—H del etano (C₂H₆) a la izquierda y el enlace Mg—O del subproducto Mg(OH)Br a la derecha.",
+        "title": "Paso 5 — Producto Final Consolidado: Etano (C₂H₆) + HO—Mg—Br",
+        "semiStep": "CH₃—CH₃   +   HO—Mg—Br",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
+        "desc": "Quedan consolidados en verde sólido el nuevo enlace C—H del etano (C₂H₆) a la izquierda y el enlace HO—Mg del subproducto Mg(OH)Br a la derecha.",
         "legend": {
           "breaking": "Transformación completada.",
-          "forming": "En VERDE sólido: enlaces C—H y Mg—O consolidados.",
+          "forming": "En VERDE sólido: enlaces C—H y HO—Mg consolidados.",
           "movement": "Productos finales estables y separados."
         },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 210, "y": 185 },
-            { "id": "H2", "el": "H", "x": 210, "y": 85 },
-            { "id": "H3", "el": "H", "x": 210, "y": 285 },
-            { "id": "C2", "el": "C", "x": 330, "y": 185, "highlight": "#10b981", "label": "Etano (C₂H₆)" },
-            { "id": "H4", "el": "H", "x": 330, "y": 85 },
-            { "id": "H5", "el": "H", "x": 330, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 445, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 695, "y": 185, "highlight": "#10b981", "label": "Mg(OH)Br" },
-            { "id": "Ow", "el": "O", "x": 805, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 880, "y": 225 }
+            { "id": "H1", "el": "H", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 210, "y": 215 },
+            { "id": "H2", "el": "H", "x": 210, "y": 115 },
+            { "id": "H3", "el": "H", "x": 210, "y": 310 },
+            { "id": "C2", "el": "C", "x": 330, "y": 215, "highlight": "#10b981", "label": "Etano (C₂H₆)" },
+            { "id": "H4", "el": "H", "x": 330, "y": 115 },
+            { "id": "H5", "el": "H", "x": 330, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 445, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 625, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 725, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 625, "y": 215, "highlight": "#10b981", "label": "Mg(OH)Br" },
+            { "id": "Br1", "el": "Br", "x": 755, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -241,11 +240,11 @@
             { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
             { "from": "C2", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 515, "y": 192, "text": "+" }]
+          "texts": [{ "x": 525, "y": 222, "text": "+" }]
         }
       }
     ],
@@ -253,17 +252,17 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: Yodometano (CH₃I) + Mg⁰",
         "semiStep": "CH₃—I + Mg⁰  ──(Éter anhidro)──►",
-        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + Mg(OH)I",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
         "desc": "Yodometano intacto con enlaces a 90° y pares libres en el yodo frente al magnesio metálico en éter anhidro.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de Mg⁰." },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 145, "y": 185 },
-            { "id": "C1", "el": "C", "x": 275, "y": 185 },
-            { "id": "H2", "el": "H", "x": 275, "y": 85 },
-            { "id": "H3", "el": "H", "x": 275, "y": 285 },
-            { "id": "I1", "el": "I", "x": 420, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 620, "y": 185, "label": "Magnesio metálico" }
+            { "id": "H1", "el": "H", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 275, "y": 210 },
+            { "id": "H2", "el": "H", "x": 275, "y": 110 },
+            { "id": "H3", "el": "H", "x": 275, "y": 305 },
+            { "id": "I1", "el": "I", "x": 420, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 620, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -271,23 +270,23 @@
             { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "I1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 520, "y": 192, "text": "+" }]
+          "texts": [{ "x": 520, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—I e Inserción de Mg",
         "semiStep": "CH₃δ⁺ ┆—┆ Iδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + Mg(OH)I",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
         "desc": "Se debilita en rojo punteado el enlace C—I mientras el magnesio se inserta para formar yoduro de metilmagnesio.",
         "legend": { "breaking": "En ROJO punteado: enlace C—I.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 145, "y": 185 },
-            { "id": "C1", "el": "C", "x": 275, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "H2", "el": "H", "x": 275, "y": 85 },
-            { "id": "H3", "el": "H", "x": 275, "y": 285 },
-            { "id": "I1", "el": "I", "x": 445, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 360, "y": 115, "highlight": "#38bdf8" }
+            { "id": "H1", "el": "H", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 275, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H2", "el": "H", "x": 275, "y": 110 },
+            { "id": "H3", "el": "H", "x": 275, "y": 305 },
+            { "id": "I1", "el": "I", "x": 515, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 395, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -296,101 +295,102 @@
             { "from": "C1", "to": "I1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 360, "y1": 135, "cx": 330, "cy": 165, "x2": 295, "y2": 175, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 385, "y1": 165, "cx": 345, "cy": 188, "x2": 300, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 408, "y1": 165, "cx": 450, "cy": 188, "x2": 492, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Yoduro de Metilmagnesio (CH₃MgI) + Agua Angular (H₂O)",
-        "semiStep": "CH₃δ⁻—Mgδ⁺—I + H—O—H ──►",
-        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + Mg(OH)I",
-        "desc": "El carbono nucleófilo del CH₃MgI captura el protón del agua angular rompiendo en rojo el enlace H—O.",
-        "legend": { "breaking": "En ROJO: enlace H—O del agua.", "forming": "En VERDE punteado: enlace C—Mg.", "movement": "Protonación del carbanión metilo." },
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "CH₃δ⁻—Mgδ⁺—I + H—O—H (arriba) ──►",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
+        "desc": "El magnesio queda en el eje horizontal (C—Mg—I) y el agua angular desciende desde arriba sobre el enlace C—Mg.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Ataque al protón del agua por arriba." },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 115, "y": 185 },
-            { "id": "C1", "el": "C", "x": 235, "y": 185, "charge": "δ-", "highlight": "#38bdf8" },
-            { "id": "H2", "el": "H", "x": 235, "y": 85 },
-            { "id": "H3", "el": "H", "x": 235, "y": 285 },
-            { "id": "Mg1", "el": "Mg", "x": 365, "y": 185, "charge": "δ+" },
-            { "id": "I1", "el": "I", "x": 475, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 610, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 700, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "H₂O angular" },
-            { "id": "Hw2", "el": "H", "x": 790, "y": 235 }
+            { "id": "H1", "el": "H", "x": 145, "y": 235 },
+            { "id": "C1", "el": "C", "x": 275, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "H2", "el": "H", "x": 275, "y": 135 },
+            { "id": "H3", "el": "H", "x": 275, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 410, "y": 235, "charge": "δ+" },
+            { "id": "I1", "el": "I", "x": 545, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 120, "charge": "δ+", "enterFromX": 345, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 425, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 425, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 505, "y": 120, "enterFromX": 505, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "I1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 300, "y1": 175, "cx": 455, "cy": 110, "x2": 600, "y2": 218, "type": "full", "label": "Captura H⁺" }
-          ],
-          "texts": [{ "x": 545, "y": 192, "text": "+" }]
+            { "x1": 335, "y1": 225, "cx": 310, "cy": 175, "x2": 338, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 410, "y1": 85, "cx": 395, "cy": 145, "x2": 408, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Formación en Verde Punteado de C—H y Mg—OH",
-        "semiStep": "CH₃ ··· H + I—Mg ··· O—H",
-        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + Mg(OH)I",
-        "desc": "Se trazan en verde punteado el cuarto enlace C—H del metano y el enlace Mg—OH del subproducto.",
-        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y Mg—OH.", "movement": "Acercamiento de los enlaces nuevos." },
+        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "CH₃ ··· H   +   HO ··· Mg—I",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
+        "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el cuarto enlace C—H del metano y el enlace HO—Mg del subproducto.",
+        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 125, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185, "highlight": "#10b981" },
-            { "id": "H2", "el": "H", "x": 245, "y": 85 },
-            { "id": "H3", "el": "H", "x": 245, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 365, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "I1", "el": "I", "x": 525, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 635, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 745, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 820, "y": 225 }
+            { "id": "H1", "el": "H", "x": 125, "y": 215 },
+            { "id": "C1", "el": "C", "x": 245, "y": 215, "highlight": "#10b981" },
+            { "id": "H2", "el": "H", "x": 245, "y": 115 },
+            { "id": "H3", "el": "H", "x": 245, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 365, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 555, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 655, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 555, "y": 215, "highlight": "#10b981" },
+            { "id": "I1", "el": "I", "x": 690, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "I1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "I1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 445, "y": 192, "text": "+" }]
+          "texts": [{ "x": 455, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Metano (CH₄) + Mg(OH)I",
-        "semiStep": "CH₄  +  I—Mg—O—H",
-        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + Mg(OH)I",
-        "desc": "Quedan consolidados en verde sólido el metano (CH₄) a la izquierda y Mg(OH)I a la derecha.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y Mg—O.", "movement": "Productos finales estables." },
+        "title": "Paso 5 — Producto Final Consolidado: Metano (CH₄) + HO—Mg—I",
+        "semiStep": "CH₄   +   HO—Mg—I",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
+        "desc": "Quedan consolidados en verde sólido el metano (CH₄) a la izquierda y HO—Mg—I a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
           "atoms": [
-            { "id": "H1", "el": "H", "x": 125, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185, "highlight": "#10b981", "label": "Metano (CH₄)" },
-            { "id": "H2", "el": "H", "x": 245, "y": 85 },
-            { "id": "H3", "el": "H", "x": 245, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 365, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "I1", "el": "I", "x": 525, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 635, "y": 185, "highlight": "#10b981", "label": "Mg(OH)I" },
-            { "id": "Ow", "el": "O", "x": 745, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 820, "y": 225 }
+            { "id": "H1", "el": "H", "x": 125, "y": 215 },
+            { "id": "C1", "el": "C", "x": 245, "y": 215, "highlight": "#10b981", "label": "Metano (CH₄)" },
+            { "id": "H2", "el": "H", "x": 245, "y": 115 },
+            { "id": "H3", "el": "H", "x": 245, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 365, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 555, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 655, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 555, "y": 215, "highlight": "#10b981", "label": "Mg(OH)I" },
+            { "id": "I1", "el": "I", "x": 690, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "I1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "I1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 445, "y": 192, "text": "+" }]
+          "texts": [{ "x": 455, "y": 222, "text": "+" }]
         }
       }
     ],
@@ -398,17 +398,17 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: 1-Bromopropano + Mg⁰",
         "semiStep": "CH₃CH₂—CH₂—Br + Mg⁰  ──(THF anhidro)──►",
-        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + Mg(OH)Br",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
         "desc": "1-Bromopropano intacto con enlaces perpendiculares y pares libres en el bromo frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 185 },
-            { "id": "C1", "el": "C", "x": 250, "y": 185 },
-            { "id": "H1", "el": "H", "x": 250, "y": 85 },
-            { "id": "H2", "el": "H", "x": 250, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 395, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 600, "y": 185, "label": "Magnesio metálico" }
+            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 250, "y": 210 },
+            { "id": "H1", "el": "H", "x": 250, "y": 110 },
+            { "id": "H2", "el": "H", "x": 250, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 395, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 600, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -416,23 +416,23 @@
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 500, "y": 192, "text": "+" }]
+          "texts": [{ "x": 500, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—Br",
         "semiStep": "CH₃CH₂—CH₂δ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + Mg(OH)Br",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
         "desc": "Ruptura en rojo punteado del enlace C—Br para permitir la inserción de magnesio.",
         "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 185 },
-            { "id": "C1", "el": "C", "x": 250, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "H1", "el": "H", "x": 250, "y": 85 },
-            { "id": "H2", "el": "H", "x": 250, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 420, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 335, "y": 115, "highlight": "#38bdf8" }
+            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 250, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 250, "y": 110 },
+            { "id": "H2", "el": "H", "x": 250, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 490, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 370, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -441,101 +441,102 @@
             { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 335, "y1": 135, "cx": 305, "cy": 165, "x2": 270, "y2": 175, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 360, "y1": 165, "cx": 320, "cy": 188, "x2": 275, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 383, "y1": 165, "cx": 425, "cy": 188, "x2": 468, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Bromuro de Propilmagnesio (C₃H₇MgBr) + Agua Angular (H₂O)",
-        "semiStep": "CH₃CH₂—CH₂δ⁻—Mgδ⁺—Br + H—O—H ──►",
-        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + Mg(OH)Br",
-        "desc": "El carbono terminal nucleofílico ataca al protón del agua angular rompiendo en rojo el enlace H—O.",
-        "legend": { "breaking": "En ROJO: enlace H—O del agua.", "forming": "En VERDE punteado: enlace C—Mg.", "movement": "Protonación del organomagnesiano." },
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "CH₃CH₂—CH₂δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
+        "desc": "El magnesio permanece estable entre el carbono y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del carbono terminal por arriba." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 230, "y": 185, "charge": "δ-", "highlight": "#38bdf8" },
-            { "id": "H1", "el": "H", "x": 230, "y": 85 },
-            { "id": "H2", "el": "H", "x": 230, "y": 285 },
-            { "id": "Mg1", "el": "Mg", "x": 355, "y": 185, "charge": "δ+" },
-            { "id": "Br1", "el": "Br", "x": 465, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 600, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 690, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "H₂O angular" },
-            { "id": "Hw2", "el": "H", "x": 780, "y": 235 }
+            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 235 },
+            { "id": "C1", "el": "C", "x": 250, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "H1", "el": "H", "x": 250, "y": 135 },
+            { "id": "H2", "el": "H", "x": 250, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 385, "y": 235, "charge": "δ+" },
+            { "id": "Br1", "el": "Br", "x": 520, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 320, "y": 120, "charge": "δ+", "enterFromX": 320, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 400, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 400, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 480, "y": 120, "enterFromX": 480, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 295, "y1": 175, "cx": 445, "cy": 110, "x2": 590, "y2": 218, "type": "full", "label": "Captura H⁺" }
-          ],
-          "texts": [{ "x": 535, "y": 192, "text": "+" }]
+            { "x1": 310, "y1": 225, "cx": 285, "cy": 175, "x2": 313, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 385, "y1": 85, "cx": 370, "cy": 145, "x2": 383, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Formación en Verde Punteado de C—H y Mg—OH (Propano)",
-        "semiStep": "CH₃CH₂—CH₂ ··· H + Br—Mg ··· O—H",
-        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + Mg(OH)Br",
-        "desc": "Se trazan en verde punteado el nuevo enlace C—H del propano y el enlace Mg—OH del subproducto.",
-        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y Mg—OH.", "movement": "Acercamiento final." },
+        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "CH₃CH₂—CH₂ ··· H   +   HO ··· Mg—Br",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
+        "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del propano y el enlace HO—Mg del subproducto.",
+        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 230, "y": 185, "highlight": "#10b981" },
-            { "id": "H1", "el": "H", "x": 230, "y": 85 },
-            { "id": "H2", "el": "H", "x": 230, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 350, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 510, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 620, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 730, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 805, "y": 225 }
+            { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 230, "y": 215, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 230, "y": 115 },
+            { "id": "H2", "el": "H", "x": 230, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 350, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 540, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 640, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 540, "y": 215, "highlight": "#10b981" },
+            { "id": "Br1", "el": "Br", "x": 675, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 430, "y": 192, "text": "+" }]
+          "texts": [{ "x": 440, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + Mg(OH)Br",
-        "semiStep": "CH₃—CH₂—CH₃  +  Br—Mg—O—H",
-        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + Mg(OH)Br",
-        "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y Mg(OH)Br a la derecha.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y Mg—O.", "movement": "Productos finales estables." },
+        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Br",
+        "semiStep": "CH₃—CH₂—CH₃   +   HO—Mg—Br",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
+        "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y HO—Mg—Br a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 230, "y": 185, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
-            { "id": "H1", "el": "H", "x": 230, "y": 85 },
-            { "id": "H2", "el": "H", "x": 230, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 350, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 510, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 620, "y": 185, "highlight": "#10b981", "label": "Mg(OH)Br" },
-            { "id": "Ow", "el": "O", "x": 730, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 805, "y": 225 }
+            { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 230, "y": 215, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
+            { "id": "H1", "el": "H", "x": 230, "y": 115 },
+            { "id": "H2", "el": "H", "x": 230, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 350, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 540, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 640, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 540, "y": 215, "highlight": "#10b981", "label": "Mg(OH)Br" },
+            { "id": "Br1", "el": "Br", "x": 675, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 430, "y": 192, "text": "+" }]
+          "texts": [{ "x": 440, "y": 222, "text": "+" }]
         }
       }
     ],
@@ -543,17 +544,17 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: 2-Cloropropano + Mg⁰",
         "semiStep": "(CH₃)₂CH—Cl + Mg⁰  ──(THF anhidro)──►",
-        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + Mg(OH)Cl",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
         "desc": "2-Cloropropano secundario intacto con enlaces perpendiculares y pares libres en el cloro frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185 },
-            { "id": "H1", "el": "H", "x": 245, "y": 85 },
-            { "id": "R2", "el": "CH₃", "x": 245, "y": 285 },
-            { "id": "Cl1", "el": "Cl", "x": 385, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 185, "label": "Magnesio metálico" }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210 },
+            { "id": "H1", "el": "H", "x": 245, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 385, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -561,23 +562,23 @@
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 490, "y": 192, "text": "+" }]
+          "texts": [{ "x": 490, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—Cl",
         "semiStep": "(CH₃)₂CHδ⁺ ┆—┆ Clδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + Mg(OH)Cl",
-        "desc": "Ruptura en rojo punteado del enlace C—Cl secundario.",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
+        "desc": "Ruptura en rojo punteado del enlace C—Cl secundario para insertar el átomo de magnesio.",
         "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "H1", "el": "H", "x": 245, "y": 85 },
-            { "id": "R2", "el": "CH₃", "x": 245, "y": 285 },
-            { "id": "Cl1", "el": "Cl", "x": 410, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 328, "y": 115, "highlight": "#38bdf8" }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 245, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 485, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 365, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -586,101 +587,102 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 328, "y1": 135, "cx": 298, "cy": 165, "x2": 265, "y2": 175, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 355, "y1": 165, "cx": 315, "cy": 188, "x2": 270, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 378, "y1": 165, "cx": 420, "cy": 188, "x2": 462, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Cloruro de Isopropilmagnesio + Agua Angular (H₂O)",
-        "semiStep": "(CH₃)₂CHδ⁻—Mgδ⁺—Cl + H—O—H ──►",
-        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + Mg(OH)Cl",
-        "desc": "El carbono secundario carbaniónico captura el protón del agua angular rompiendo en rojo el enlace H—O.",
-        "legend": { "breaking": "En ROJO: enlace H—O del agua.", "forming": "En VERDE punteado: enlace C—Mg.", "movement": "Protonación en carbono secundario." },
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "(CH₃)₂CHδ⁻—Mgδ⁺—Cl + H—O—H (arriba) ──►",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
+        "desc": "El magnesio permanece fijo entre el carbono y el cloro mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación en carbono secundario." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "charge": "δ-", "highlight": "#38bdf8" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Mg1", "el": "Mg", "x": 350, "y": 185, "charge": "δ+" },
-            { "id": "Cl1", "el": "Cl", "x": 460, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 595, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 685, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "H₂O angular" },
-            { "id": "Hw2", "el": "H", "x": 775, "y": 235 }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "H1", "el": "H", "x": 245, "y": 135 },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
+            { "id": "Cl1", "el": "Cl", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "Cl1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 290, "y1": 175, "cx": 440, "cy": 110, "x2": 585, "y2": 218, "type": "full", "label": "Captura H⁺" }
-          ],
-          "texts": [{ "x": 530, "y": 192, "text": "+" }]
+            { "x1": 305, "y1": 225, "cx": 280, "cy": 175, "x2": 308, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 380, "y1": 85, "cx": 365, "cy": 145, "x2": 378, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Formación en Verde Punteado de C—H y Mg—OH (Propano)",
-        "semiStep": "(CH₃)₂CH ··· H + Cl—Mg ··· O—H",
-        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + Mg(OH)Cl",
-        "desc": "Se trazan en verde punteado el nuevo enlace C—H del propano y el enlace Mg—OH del subproducto.",
-        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y Mg—OH.", "movement": "Acercamiento final." },
+        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "(CH₃)₂CH ··· H   +   HO ··· Mg—Cl",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
+        "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del propano y el enlace HO—Mg del subproducto.",
+        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "CH₃", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 225, "y": 115 },
+            { "id": "R2", "el": "CH₃", "x": 225, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981" },
+            { "id": "Cl1", "el": "Cl", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "Cl1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + Mg(OH)Cl",
-        "semiStep": "CH₃—CH₂—CH₃  +  Cl—Mg—O—H",
-        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + Mg(OH)Cl",
-        "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y Mg(OH)Cl a la derecha.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y Mg—O.", "movement": "Productos finales estables." },
+        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Cl",
+        "semiStep": "CH₃—CH₂—CH₃   +   HO—Mg—Cl",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
+        "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y HO—Mg—Cl a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981", "label": "Mg(OH)Cl" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "CH₃", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
+            { "id": "H1", "el": "H", "x": 225, "y": 115 },
+            { "id": "R2", "el": "CH₃", "x": 225, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981", "label": "Mg(OH)Cl" },
+            { "id": "Cl1", "el": "Cl", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "Cl1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       }
     ],
@@ -688,17 +690,17 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: 2-Bromo-2-metilpropano + Mg⁰",
         "semiStep": "(CH₃)₃C—Br + Mg⁰  ──(Éter anhidro)──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + Mg(OH)Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
         "desc": "Haluro terciario intacto con tres grupos metilo perpendiculares y pares libres en el bromo frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185 },
-            { "id": "R2", "el": "CH₃", "x": 245, "y": 85 },
-            { "id": "R3", "el": "CH₃", "x": 245, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 385, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 185, "label": "Magnesio metálico" }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210 },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 110 },
+            { "id": "R3", "el": "CH₃", "x": 245, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 385, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -706,23 +708,23 @@
             { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 490, "y": 192, "text": "+" }]
+          "texts": [{ "x": 490, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—Br Terciario",
         "semiStep": "(CH₃)₃Cδ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + Mg(OH)Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
         "desc": "Ruptura en rojo punteado del enlace C—Br terciario para insertar el átomo de magnesio.",
         "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R2", "el": "CH₃", "x": 245, "y": 85 },
-            { "id": "R3", "el": "CH₃", "x": 245, "y": 285 },
-            { "id": "Br1", "el": "Br", "x": 410, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 328, "y": 115, "highlight": "#38bdf8" }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 110 },
+            { "id": "R3", "el": "CH₃", "x": 245, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 485, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 365, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -731,101 +733,102 @@
             { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 328, "y1": 135, "cx": 298, "cy": 165, "x2": 265, "y2": 175, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 355, "y1": 165, "cx": 315, "cy": 188, "x2": 270, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 378, "y1": 165, "cx": 420, "cy": 188, "x2": 462, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Bromuro de terc-Butilmagnesio + Agua Angular (H₂O)",
-        "semiStep": "(CH₃)₃Cδ⁻—Mgδ⁺—Br + H—O—H ──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + Mg(OH)Br",
-        "desc": "El carbono terciario altamente básico abstrae el protón del agua angular rompiendo en rojo el enlace H—O.",
-        "legend": { "breaking": "En ROJO: enlace H—O del agua.", "forming": "En VERDE punteado: enlace C—Mg.", "movement": "Protonación del carbanión terciario." },
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "(CH₃)₃Cδ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "desc": "El magnesio permanece estable entre el carbono terciario y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del carbanión terciario." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "charge": "δ-", "highlight": "#38bdf8" },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 85 },
-            { "id": "R3", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Mg1", "el": "Mg", "x": 350, "y": 185, "charge": "δ+" },
-            { "id": "Br1", "el": "Br", "x": 460, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 595, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 685, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "H₂O angular" },
-            { "id": "Hw2", "el": "H", "x": 775, "y": 235 }
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 135 },
+            { "id": "R3", "el": "CH₃", "x": 245, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
+            { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 290, "y1": 175, "cx": 440, "cy": 110, "x2": 585, "y2": 218, "type": "full", "label": "Captura H⁺" }
-          ],
-          "texts": [{ "x": 530, "y": 192, "text": "+" }]
+            { "x1": 305, "y1": 225, "cx": 280, "cy": 175, "x2": 308, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 380, "y1": 85, "cx": 365, "cy": 145, "x2": 378, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Formación en Verde Punteado de C—H y Mg—OH (2-Metilpropano)",
-        "semiStep": "(CH₃)₃C ··· H + Br—Mg ··· O—H",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + Mg(OH)Br",
-        "desc": "Se trazan en verde punteado el enlace C—H del 2-metilpropano y el enlace Mg—OH del subproducto.",
-        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y Mg—OH.", "movement": "Acercamiento final." },
+        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "(CH₃)₃C ··· H   +   HO ··· Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del 2-metilpropano y el enlace HO—Mg del subproducto.",
+        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981" },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 85 },
-            { "id": "R3", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "CH₃", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 225, "y": 115 },
+            { "id": "R3", "el": "CH₃", "x": 225, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981" },
+            { "id": "Br1", "el": "Br", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: 2-Metilpropano + Mg(OH)Br",
-        "semiStep": "(CH₃)₃C—H  +  Br—Mg—O—H",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + Mg(OH)Br",
-        "desc": "Quedan consolidados en verde sólido el 2-metilpropano a la izquierda y Mg(OH)Br a la derecha.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y Mg—O.", "movement": "Productos finales estables." },
+        "title": "Paso 5 — Producto Final Consolidado: 2-Metilpropano + HO—Mg—Br",
+        "semiStep": "(CH₃)₃C—H   +   HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "desc": "Quedan consolidados en verde sólido el 2-metilpropano a la izquierda y HO—Mg—Br a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981", "label": "2-Metilpropano" },
-            { "id": "R2", "el": "CH₃", "x": 225, "y": 85 },
-            { "id": "R3", "el": "CH₃", "x": 225, "y": 285 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981", "label": "Mg(OH)Br" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "CH₃", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "2-Metilpropano" },
+            { "id": "R2", "el": "CH₃", "x": 225, "y": 115 },
+            { "id": "R3", "el": "CH₃", "x": 225, "y": 310 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981", "label": "Mg(OH)Br" },
+            { "id": "Br1", "el": "Br", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       }
     ],
@@ -833,38 +836,38 @@
       {
         "title": "Paso 1 — Estado Inicial Intacto: Bromociclohexano + Mg⁰",
         "semiStep": "C₆H₁₁—Br + Mg⁰  ──(Éter anhidro)──►",
-        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + Mg(OH)Br",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
         "desc": "Bromociclohexano intacto con pares libres en el bromo frente al magnesio metálico en éter anhidro.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185 },
-            { "id": "H1", "el": "H", "x": 245, "y": 85 },
-            { "id": "Br1", "el": "Br", "x": 385, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 185, "label": "Magnesio metálico" }
+            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210 },
+            { "id": "H1", "el": "H", "x": 245, "y": 110 },
+            { "id": "Br1", "el": "Br", "x": 385, "y": 210, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg⁰", "x": 590, "y": 210, "label": "Magnesio metálico" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 490, "y": 192, "text": "+" }]
+          "texts": [{ "x": 490, "y": 217, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—Br Cíclico",
         "semiStep": "C₆H₁₁δ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + Mg(OH)Br",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
         "desc": "Ruptura en rojo punteado del enlace C—Br del anillo ciclohexílico.",
         "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 185 },
-            { "id": "C1", "el": "C", "x": 245, "y": 185, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "H1", "el": "H", "x": 245, "y": 85 },
-            { "id": "Br1", "el": "Br", "x": 410, "y": 185, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 328, "y": 115, "highlight": "#38bdf8" }
+            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 210 },
+            { "id": "C1", "el": "C", "x": 245, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 245, "y": 110 },
+            { "id": "Br1", "el": "Br", "x": 485, "y": 210, "charge": "δ-", "border": "#ef4444", "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Mg1", "el": "Mg", "x": 365, "y": 145, "highlight": "#38bdf8", "label": "Inserción Mg" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -872,95 +875,96 @@
             { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 328, "y1": 135, "cx": 298, "cy": 165, "x2": 265, "y2": 175, "type": "fishhook", "label": "1 e⁻" }
+            { "x1": 355, "y1": 165, "cx": 315, "cy": 188, "x2": 270, "y2": 198, "type": "fishhook", "label": "1 e⁻" },
+            { "x1": 378, "y1": 165, "cx": 420, "cy": 188, "x2": 462, "y2": 198, "type": "fishhook", "label": "1 e⁻" }
           ]
         }
       },
       {
-        "title": "Paso 3 — Bromuro de Ciclohexilmagnesio + Agua Angular (H₂O)",
-        "semiStep": "C₆H₁₁δ⁻—Mgδ⁺—Br + H—O—H ──►",
-        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + Mg(OH)Br",
-        "desc": "El carbono ciclohexílico nucleofílico abstrae el protón del agua angular rompiendo en rojo el enlace H—O.",
-        "legend": { "breaking": "En ROJO: enlace H—O del agua.", "forming": "En VERDE punteado: enlace C—Mg.", "movement": "Protonación del anillo." },
+        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
+        "semiStep": "C₆H₁₁δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
+        "desc": "El magnesio permanece estable entre el carbono ciclohexílico y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del anillo." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "charge": "δ-", "highlight": "#38bdf8" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "Mg1", "el": "Mg", "x": 350, "y": 185, "charge": "δ+" },
-            { "id": "Br1", "el": "Br", "x": 460, "y": 185, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 595, "y": 235, "charge": "δ+" },
-            { "id": "Ow", "el": "O", "x": 685, "y": 155, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "H₂O angular" },
-            { "id": "Hw2", "el": "H", "x": 775, "y": 235 }
+            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "charge": "δ-", "highlight": "#38bdf8" },
+            { "id": "H1", "el": "H", "x": 245, "y": 135 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
+            { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "breaking" },
             { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" },
             { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
             { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 290, "y1": 175, "cx": 440, "cy": 110, "x2": 585, "y2": 218, "type": "full", "label": "Captura H⁺" }
-          ],
-          "texts": [{ "x": 530, "y": 192, "text": "+" }]
+            { "x1": 305, "y1": 225, "cx": 280, "cy": 175, "x2": 308, "y2": 138, "type": "full", "label": "Ataque al H⁺" },
+            { "x1": 380, "y1": 85, "cx": 365, "cy": 145, "x2": 378, "y2": 212, "type": "full", "label": "Enlace O→Mg" }
+          ]
         }
       },
       {
-        "title": "Paso 4 — Formación en Verde Punteado de C—H y Mg—OH (Ciclohexano)",
-        "semiStep": "C₆H₁₁ ··· H + Br—Mg ··· O—H",
-        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + Mg(OH)Br",
-        "desc": "Se trazan en verde punteado el nuevo enlace C—H del ciclohexano y el enlace Mg—OH del subproducto.",
-        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y Mg—OH.", "movement": "Acercamiento final." },
+        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "semiStep": "C₆H₁₁ ··· H   +   HO ··· Mg—Br",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
+        "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del ciclohexano y el enlace HO—Mg del subproducto.",
+        "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 225, "y": 115 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981" },
+            { "id": "Br1", "el": "Br", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "forming" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "forming" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "forming" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Ciclohexano (C₆H₁₂) + Mg(OH)Br",
-        "semiStep": "C₆H₁₂  +  Br—Mg—O—H",
-        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + Mg(OH)Br",
-        "desc": "Quedan consolidados en verde sólido el ciclohexano (C₆H₁₂) a la izquierda y Mg(OH)Br a la derecha.",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y Mg—O.", "movement": "Productos finales estables." },
+        "title": "Paso 5 — Producto Final Consolidado: Ciclohexano (C₆H₁₂) + HO—Mg—Br",
+        "semiStep": "C₆H₁₂   +   HO—Mg—Br",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
+        "desc": "Quedan consolidados en verde sólido el ciclohexano (C₆H₁₂) a la izquierda y HO—Mg—Br a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 185 },
-            { "id": "C1", "el": "C", "x": 225, "y": 185, "highlight": "#10b981", "label": "Ciclohexano (C₆H₁₂)" },
-            { "id": "H1", "el": "H", "x": 225, "y": 85 },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 185, "border": "#10b981", "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 505, "y": 185, "lonePairs": ["top", "left", "bottom"] },
-            { "id": "Mg1", "el": "Mg", "x": 615, "y": 185, "highlight": "#10b981", "label": "Mg(OH)Br" },
-            { "id": "Ow", "el": "O", "x": 725, "y": 165, "border": "#10b981", "lonePairs": ["top-left", "top-right"] },
-            { "id": "Hw2", "el": "H", "x": 800, "y": 225 }
+            { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 215 },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Ciclohexano (C₆H₁₂)" },
+            { "id": "H1", "el": "H", "x": 225, "y": 115 },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
+            { "id": "Hw2", "el": "H", "x": 635, "y": 75 },
+            { "id": "Mg1", "el": "Mg", "x": 535, "y": 215, "highlight": "#10b981", "label": "Mg(OH)Br" },
+            { "id": "Br1", "el": "Br", "x": 670, "y": 215, "lonePairs": ["top", "right", "bottom"] }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Hw1", "order": 1, "state": "new" },
-            { "from": "Br1", "to": "Mg1", "order": 1, "state": "normal" },
-            { "from": "Mg1", "to": "Ow", "order": 1, "state": "new" },
-            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 425, "y": 192, "text": "+" }]
+          "texts": [{ "x": 435, "y": 222, "text": "+" }]
         }
       }
     ]
