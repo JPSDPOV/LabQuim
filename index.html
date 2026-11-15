@@ -560,31 +560,31 @@
         }
 
         async function requestMandatoryFullscreenAndLandscape(targetEl) {
-    const isTouchMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 900;
+            const isTouchMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 900;
 
-    // En móviles evitamos requestFullscreen() para que Android no muestre el cartel gris sobre los botones
-    if (!isTouchMobile) {
-        const docEl = document.documentElement;
-        for (const el of [targetEl, docEl]) {
-            if (!el) continue;
+            // En móviles evitamos requestFullscreen() para que Android no muestre el cartel gris sobre los botones
+            if (!isTouchMobile) {
+                const docEl = document.documentElement;
+                for (const el of [targetEl, docEl]) {
+                    if (!el) continue;
+                    try {
+                        if (el.requestFullscreen && !document.fullscreenElement) {
+                            await el.requestFullscreen({ navigationUI: 'hide' });
+                            break;
+                        } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
+                            await el.webkitRequestFullscreen();
+                            break;
+                        }
+                    } catch (e) {}
+                }
+            }
+
             try {
-                if (el.requestFullscreen && !document.fullscreenElement) {
-                    await el.requestFullscreen({ navigationUI: 'hide' });
-                    break;
-                } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
-                    await el.webkitRequestFullscreen();
-                    break;
+                if (screen.orientation && screen.orientation.lock) {
+                    await screen.orientation.lock('landscape');
                 }
             } catch (e) {}
         }
-    }
-
-    try {
-        if (screen.orientation && screen.orientation.lock) {
-            await screen.orientation.lock('landscape');
-        }
-    } catch (e) {}
-}
 
         async function openFullscreenPlayer() {
             wizardStage = 5;
@@ -600,7 +600,6 @@
             }
             document.body.style.overflow = 'hidden';
 
-            // Forzar pantalla completa y horizontal sí o sí bajo el gesto del usuario
             await requestMandatoryFullscreenAndLandscape(playerScreen);
 
             updateOrientationNotice();
@@ -698,10 +697,35 @@
             return scene;
         }
 
-        function buildSemidevelopedBannerScene(semiText, badgeLabel, accentColor) {
+        function parseFormulaAndCompoundName(rawItem) {
+            let txt = String(rawItem || '').trim();
+            txt = txt.replace(/^PRODUCTO OBTENIDO:\s*/i, '').trim();
+
+            let formula = txt;
+            let compoundName = '';
+
+            const parenMatch = txt.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
+            if (parenMatch) {
+                formula = parenMatch[1].trim();
+                let inside = parenMatch[2].trim();
+                inside = inside.split(',')[0].trim();
+                inside = inside.replace(/\s+(?:desarrollado|intacto|en ausencia|en presencia|como|con|sin|mayor|minoritario|mayoritario|principal|secundario|terciario|primario|puro|anhidro|diluido)\b.*$/i, '').trim();
+                if (inside && !/^(arriba|abajo|exceso|calor|luz|hv|hν)$/i.test(inside)) {
+                    compoundName = inside.charAt(0).toUpperCase() + inside.slice(1);
+                }
+            }
+
+            formula = formula.replace(/([A-Za-z\)])(\d+)/g, (_, p1, digits) => {
+                const subMap = { '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄', '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉' };
+                return p1 + digits.split('').map(d => subMap[d] || d).join('');
+            });
+
+            return { formula, compoundName };
+        }
+
+        function buildSemidevelopedBannerScene(semiText, accentColor) {
             const raw = String(semiText || '').trim();
             const clean = raw
-                .replace(/\s*\([^)]*intactos[^)]*\)\s*/gi, '')
                 .replace(/^PRODUCTO OBTENIDO:\s*/i, '')
                 .replace(/\s*──\([^)]+\)──►.*$/, '')
                 .replace(/\s*──►\s*$/, '')
@@ -709,54 +733,56 @@
 
             const sides = clean.split(/──►|→|⇄/);
             const expr = (sides.length > 1 && sides[1].trim()) ? sides[1].trim() : sides[0].trim();
-            const parts = expr.split(/\s+\+\s+/).map(s => s.trim()).filter(Boolean);
+            const rawParts = expr.split(/\s+\+\s+/).map(s => s.trim()).filter(Boolean);
+            const parsedParts = rawParts.map(parseFormulaAndCompoundName);
 
             const atoms = [];
             const texts = [];
-            const n = parts.length;
+            const n = parsedParts.length;
 
             if (n === 1) {
                 atoms.push({
                     id: 'Semi_Node_0',
-                    el: parts[0],
+                    el: parsedParts[0].formula,
                     x: 460,
                     y: 185,
                     highlight: accentColor,
                     border: accentColor,
-                    label: badgeLabel
+                    label: parsedParts[0].compoundName || undefined
                 });
             } else if (n === 2) {
                 atoms.push({
                     id: 'Semi_Node_0',
-                    el: parts[0],
-                    x: 275,
+                    el: parsedParts[0].formula,
+                    x: 270,
                     y: 185,
                     highlight: accentColor,
                     border: accentColor,
-                    label: badgeLabel
+                    label: parsedParts[0].compoundName || undefined
                 });
                 texts.push({ x: 460, y: 193, text: '+', size: 24, color: accentColor });
                 atoms.push({
                     id: 'Semi_Node_1',
-                    el: parts[1],
-                    x: 645,
+                    el: parsedParts[1].formula,
+                    x: 650,
                     y: 185,
                     highlight: accentColor,
-                    border: accentColor
+                    border: accentColor,
+                    label: parsedParts[1].compoundName || undefined
                 });
             } else if (n >= 3) {
-                const startX = 180;
-                const stepX = Math.floor(560 / (n - 1));
-                parts.forEach((p, idx) => {
+                const startX = 175;
+                const stepX = Math.floor(570 / (n - 1));
+                parsedParts.forEach((item, idx) => {
                     const cx = startX + idx * stepX;
                     atoms.push({
                         id: `Semi_Node_${idx}`,
-                        el: p,
+                        el: item.formula,
                         x: cx,
                         y: 185,
                         highlight: accentColor,
                         border: accentColor,
-                        label: idx === 0 ? badgeLabel : undefined
+                        label: item.compoundName || undefined
                     });
                     if (idx < n - 1) {
                         texts.push({ x: cx + Math.round(stepX / 2), y: 193, text: '+', size: 22, color: accentColor });
@@ -775,18 +801,26 @@
 
             const cleanOldNumbering = (t) => String(t || '').replace(/^Paso \d+\s*[—\-:]\s*/i, '').trim();
 
-            const introSemiText = firstStep.semiStep || firstStep.semiGlobal || 'Reactivos iniciales';
+            const introSemiText = firstStep.semiStep || firstStep.semiGlobal || '';
+            const introParts = introSemiText
+                .replace(/\s*──\([^)]+\)──►.*$/, '')
+                .replace(/\s*──►\s*$/, '')
+                .split(/\s+\+\s+/)
+                .map(s => parseFormulaAndCompoundName(s).formula)
+                .filter(Boolean)
+                .join(' + ');
+
             const introStep = {
-                title: `Paso 1 — Fórmula Semidesarrollada Inicial: ${introSemiText.replace(/\s*──►\s*$/, '')}`,
+                title: `Paso 1 — Fórmula Semidesarrollada Inicial: ${introParts}`,
                 semiStep: firstStep.semiStep || '',
                 semiGlobal: firstStep.semiGlobal || '',
-                desc: 'Vista condensada inicial mediante fórmulas semidesarrolladas antes de desplegar todos los enlaces átomo por átomo.',
+                desc: 'Fórmula semidesarrollada de los reactivos iniciales antes de desplegar sus enlaces desarrollados.',
                 legend: {
                     breaking: 'Ningún enlace roto todavía; representación semidesarrollada inicial.',
                     forming: 'Ningún enlace formado todavía.',
                     movement: 'En el siguiente paso se despliegan los enlaces desarrollados.'
                 },
-                scene: () => buildSemidevelopedBannerScene(introSemiText, 'Fórmula Semidesarrollada (Reactivos)', '#38bdf8')
+                scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8')
             };
 
             const middleSteps = stepsArray.map((st, idx) => ({
@@ -794,19 +828,28 @@
                 title: `Paso ${idx + 2} — ${cleanOldNumbering(st.title)}`
             }));
 
-            const outroSemiText = lastStep.semiStep || lastStep.semiGlobal || 'Productos finales';
+            const outroSemiText = lastStep.semiStep || lastStep.semiGlobal || '';
+            const outroClean = outroSemiText.replace(/^PRODUCTO OBTENIDO:\s*/i, '').trim();
+            const outroSides = outroClean.split(/──►|→|⇄/);
+            const outroExpr = (outroSides.length > 1 && outroSides[1].trim()) ? outroSides[1].trim() : outroSides[0].trim();
+            const outroParts = outroExpr
+                .split(/\s+\+\s+/)
+                .map(s => parseFormulaAndCompoundName(s).formula)
+                .filter(Boolean)
+                .join(' + ');
+
             const outroNum = middleSteps.length + 2;
             const outroStep = {
-                title: `Paso ${outroNum} — Fórmula Semidesarrollada Final: ${outroSemiText}`,
+                title: `Paso ${outroNum} — Fórmula Semidesarrollada Final: ${outroParts}`,
                 semiStep: lastStep.semiStep || '',
                 semiGlobal: lastStep.semiGlobal || '',
-                desc: 'Resumen final de los productos obtenidos expresados en su fórmula semidesarrollada.',
+                desc: 'Fórmula semidesarrollada de los productos obtenidos al finalizar la reacción.',
                 legend: {
                     breaking: 'Ruptura de enlaces reactivos completada.',
-                    forming: 'Productos finales consolidados en fórmula semidesarrollada.',
+                    forming: 'Productos finales expresados en fórmula semidesarrollada.',
                     movement: 'Reacción finalizada.'
                 },
-                scene: () => buildSemidevelopedBannerScene(outroSemiText, 'Fórmula Semidesarrollada (Productos)', '#10b981')
+                scene: () => buildSemidevelopedBannerScene(outroSemiText, '#10b981')
             };
 
             return [introStep, ...middleSteps, outroStep];
@@ -1064,9 +1107,9 @@
                 const r = mobile ? Math.round(baseR * 1.38) : baseR;
                 return { isPill: false, r, halfW: r, halfH: r, cfg };
             }
-            const charW = mobile ? 11.5 : 7.8;
-            const pillW = Math.max(mobile ? 64 : 46, Math.min(310, rawText.length * charW + (mobile ? 28 : 18)));
-            const pillH = mobile ? 42 : 30;
+            const charW = mobile ? 11.5 : 8.2;
+            const pillW = Math.max(mobile ? 64 : 46, Math.min(480, rawText.length * charW + (mobile ? 28 : 22)));
+            const pillH = mobile ? 42 : 32;
             return { isPill: true, r: 16, pillW, pillH, halfW: pillW / 2, halfH: pillH / 2, cfg };
         }
 
@@ -2084,8 +2127,7 @@
                     rupturaIntermediarios: 'Ruptura del enlace reactivo en el sustrato e incorporación del grupo atacante.',
                     detalleMecanismo: `${leftSide} ──► ${rightSide}`,
                     reactivosCondiciones: leftSide,
-                    rolReactivos: `• Sustrato y reactivo: ${leftSide}.
-• Producto principal: ${rightSide}.`,
+                    rolReactivos: `• Sustrato y reactivo: ${leftSide}.\n• Producto principal: ${rightSide}.`,
                     reglasObs: `Sube el archivo reactions/${key}.json a GitHub para activar la animación átomo por átomo.`
                 },
                 deltaH: `${leftSide} → ${rightSide}`,
