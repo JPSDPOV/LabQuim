@@ -847,6 +847,131 @@
             return { formula, compoundName };
         }
 
+        function expandBranchedSemidevelopedNodes(parsedItem, centerX, centerY, accentColor, prefixId) {
+            const f = String(parsedItem.formula || '').trim();
+            const norm = normalizeFormulaLookupKey(f);
+            const atoms = [];
+            const bonds = [];
+            const lbl = parsedItem.compoundName || undefined;
+
+            // Caso 1: (CH3)3C-X  (ej. (CH₃)₃C—OH, (CH₃)₃C—Br, (CH₃)₃C—H) -> CH3 izquierda, CH3 arriba, CH3 abajo, X derecha
+            const mTert = norm.match(/^\(CH3\)3C-?(.+)$/);
+            if (mTert) {
+                const rightGrp = mTert[1]
+                    .replace(/CH3/g, 'CH₃')
+                    .replace(/CH2/g, 'CH₂');
+                atoms.push(
+                    { id: `${prefixId}_C`, el: 'C', x: centerX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: 'CH₃', x: centerX - 95, y: centerY },
+                    { id: `${prefixId}_T`, el: 'CH₃', x: centerX, y: centerY - 82 },
+                    { id: `${prefixId}_B`, el: 'CH₃', x: centerX, y: centerY + 82 },
+                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 95, y: centerY, highlight: accentColor, border: accentColor }
+                );
+                bonds.push(
+                    { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_T`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 1, state: 'normal' }
+                );
+                return { atoms, bonds, spanHalfW: 135 };
+            }
+
+            // Caso 2: (CH3)2C=CH2 o (CH3)2C=CH-CH3 (alquenos ramificados) -> CH3 izquierda, CH3 abajo, =CH2 o =CH-CH3 derecha
+            const mAlkeneBranch = norm.match(/^\(CH3\)2C=(.+)$/);
+            if (mAlkeneBranch) {
+                const rightGrp = mAlkeneBranch[1]
+                    .replace(/CH3/g, 'CH₃')
+                    .replace(/CH2/g, 'CH₂')
+                    .replace(/-/g, '—');
+                atoms.push(
+                    { id: `${prefixId}_C`, el: 'C', x: centerX - 25, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: 'CH₃', x: centerX - 115, y: centerY },
+                    { id: `${prefixId}_B`, el: 'CH₃', x: centerX - 25, y: centerY + 82 },
+                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 85, y: centerY, highlight: accentColor, border: accentColor }
+                );
+                bonds.push(
+                    { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 2, state: 'normal' }
+                );
+                return { atoms, bonds, spanHalfW: 155 };
+            }
+
+            // Caso 3: (CH3)2C(OH)-R (ej. (CH₃)₂C(OH)—CH₂—CH₃) -> CH3 izquierda, OH arriba, CH3 abajo, R derecha
+            const mTertAlc = norm.match(/^\(CH3\)2C\(OH\)-?(.+)$/);
+            if (mTertAlc) {
+                const rightGrp = mTertAlc[1]
+                    .replace(/CH3/g, 'CH₃')
+                    .replace(/CH2/g, 'CH₂')
+                    .replace(/-/g, '—');
+                atoms.push(
+                    { id: `${prefixId}_C`, el: 'C', x: centerX - 25, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: 'CH₃', x: centerX - 115, y: centerY },
+                    { id: `${prefixId}_T`, el: 'OH', x: centerX - 25, y: centerY - 82, highlight: accentColor, border: accentColor },
+                    { id: `${prefixId}_B`, el: 'CH₃', x: centerX - 25, y: centerY + 82 },
+                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 95, y: centerY }
+                );
+                bonds.push(
+                    { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_T`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 1, state: 'normal' }
+                );
+                return { atoms, bonds, spanHalfW: 165 };
+            }
+
+            // Caso 4: (CH3)2CH-X (ej. (CH₃)₂CH—Cl, (CH₃)₂CH—Br) -> CH3 izquierda, CH3 abajo, X derecha
+            const mIso = norm.match(/^\(CH3\)2CH-?(.+)$/);
+            if (mIso) {
+                const rightGrp = mIso[1]
+                    .replace(/CH3/g, 'CH₃')
+                    .replace(/CH2/g, 'CH₂');
+                atoms.push(
+                    { id: `${prefixId}_C`, el: 'CH', x: centerX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: 'CH₃', x: centerX - 95, y: centerY },
+                    { id: `${prefixId}_B`, el: 'CH₃', x: centerX, y: centerY + 82 },
+                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 95, y: centerY, highlight: accentColor, border: accentColor }
+                );
+                bonds.push(
+                    { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 1, state: 'normal' }
+                );
+                return { atoms, bonds, spanHalfW: 135 };
+            }
+
+            // Caso 5: R-CH(OH)-R' (alcoholes secundarios ramificados en OH, ej. CH₃—CH(OH)—CH₃ o CH₃—CH₂—CH(OH)—CH₃)
+            const mSecAlc = norm.match(/^(.+?)-?CH\(OH\)-?(.+)$/);
+            if (mSecAlc) {
+                const leftGrp = mSecAlc[1].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/-/g, '—');
+                const rightGrp = mSecAlc[2].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/-/g, '—');
+                atoms.push(
+                    { id: `${prefixId}_C`, el: 'CH', x: centerX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: leftGrp, x: centerX - 105, y: centerY },
+                    { id: `${prefixId}_T`, el: 'OH', x: centerX, y: centerY - 82, highlight: accentColor, border: accentColor },
+                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 95, y: centerY }
+                );
+                bonds.push(
+                    { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_T`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 1, state: 'normal' }
+                );
+                return { atoms, bonds, spanHalfW: 155 };
+            }
+
+            // Caso lineal / estándar sin ramificaciones: cápsula única centrada
+            atoms.push({
+                id: `${prefixId}_0`,
+                el: f,
+                x: centerX,
+                y: centerY,
+                highlight: accentColor,
+                border: accentColor,
+                label: lbl
+            });
+            return { atoms, bonds, spanHalfW: Math.max(55, f.length * 6.5) };
+        }
+
         function buildSemidevelopedBannerScene(semiText, accentColor, contextHints = []) {
             const raw = String(semiText || '').trim();
             const clean = raw
@@ -861,60 +986,36 @@
             const parsedParts = rawParts.map(p => parseFormulaAndCompoundName(p, contextHints));
 
             const atoms = [];
+            const bonds = [];
             const texts = [];
             const n = parsedParts.length;
 
             if (n === 1) {
-                atoms.push({
-                    id: 'Semi_Node_0',
-                    el: parsedParts[0].formula,
-                    x: 460,
-                    y: 185,
-                    highlight: accentColor,
-                    border: accentColor,
-                    label: parsedParts[0].compoundName || undefined
-                });
+                const built = expandBranchedSemidevelopedNodes(parsedParts[0], 460, 185, accentColor, 'Semi_0');
+                atoms.push(...built.atoms);
+                bonds.push(...built.bonds);
             } else if (n === 2) {
-                atoms.push({
-                    id: 'Semi_Node_0',
-                    el: parsedParts[0].formula,
-                    x: 270,
-                    y: 185,
-                    highlight: accentColor,
-                    border: accentColor,
-                    label: parsedParts[0].compoundName || undefined
-                });
-                texts.push({ x: 460, y: 193, text: '+', size: 24, color: accentColor });
-                atoms.push({
-                    id: 'Semi_Node_1',
-                    el: parsedParts[1].formula,
-                    x: 650,
-                    y: 185,
-                    highlight: accentColor,
-                    border: accentColor,
-                    label: parsedParts[1].compoundName || undefined
-                });
+                const built0 = expandBranchedSemidevelopedNodes(parsedParts[0], 255, 185, accentColor, 'Semi_0');
+                const built1 = expandBranchedSemidevelopedNodes(parsedParts[1], 675, 185, accentColor, 'Semi_1');
+                atoms.push(...built0.atoms, ...built1.atoms);
+                bonds.push(...built0.bonds, ...built1.bonds);
+                const plusX = Math.round(((255 + built0.spanHalfW) + (675 - built1.spanHalfW)) / 2);
+                texts.push({ x: plusX, y: 193, text: '+', size: 24, color: accentColor });
             } else if (n >= 3) {
                 const startX = 175;
                 const stepX = Math.floor(570 / (n - 1));
                 parsedParts.forEach((item, idx) => {
                     const cx = startX + idx * stepX;
-                    atoms.push({
-                        id: `Semi_Node_${idx}`,
-                        el: item.formula,
-                        x: cx,
-                        y: 185,
-                        highlight: accentColor,
-                        border: accentColor,
-                        label: item.compoundName || undefined
-                    });
+                    const built = expandBranchedSemidevelopedNodes(item, cx, 185, accentColor, `Semi_${idx}`);
+                    atoms.push(...built.atoms);
+                    bonds.push(...built.bonds);
                     if (idx < n - 1) {
                         texts.push({ x: cx + Math.round(stepX / 2), y: 193, text: '+', size: 22, color: accentColor });
                     }
                 });
             }
 
-            return { atoms, bonds: [], texts, forceCentered: true };
+            return { atoms, bonds, texts, forceCentered: true };
         }
 
         function wrapWithSemidevelopedEndpoints(stepsArray) {
