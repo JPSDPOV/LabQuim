@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Virtual de Química Orgánica — Univ. Juan Pablo Stumpfs Díaz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        @keyframes dashFlow {
+            to { stroke-dashoffset: -24; }
+        }
+        @keyframes radicalBlink {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.45); opacity: 0.7; }
+        }
+        @keyframes flashBurst {
+            0% { r: 4px; opacity: 0.95; stroke-width: 4px; }
+            100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
+        }
+        @keyframes wizardSlideIn {
+            0% { opacity: 0; transform: translateY(10px) scale(0.99); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes rotatePhoneHint {
+            0%, 100% { transform: rotate(0deg); }
+            45%, 65% { transform: rotate(-90deg); }
+        }
+        .wizard-enter {
+            animation: wizardSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .rotate-phone-icon {
+            display: inline-block;
+            animation: rotatePhoneHint 2.2s ease-in-out infinite;
+        }
+        .arrow-flow {
+            stroke-dasharray: 7, 5;
+            animation: dashFlow 0.85s linear infinite;
+        }
+        .radical-dot {
+            animation: radicalBlink 0.9s infinite ease-in-out;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+        .rupture-burst {
+            animation: flashBurst 0.9s ease-out infinite;
+        }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.4); }
+        ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+        /* PESTAÑAS LATERALES DESPLEGABLES EN PANTALLA COMPLETA */
+        .side-tab-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .side-tab-left {
+            transform: rotate(180deg);
+        }
+
+        /* MODO HORIZONTAL OBLIGATORIO EN PANTALLA COMPLETA (INCLUSO SI EL NAVEGADOR NO BLOQUEA ORIENTACIÓN) */
+        @media screen and (orientation: portrait) {
+            #fullscreenPlayerScreen.force-landscape-fallback {
+                position: fixed !important;
+                top: 50% !important;
+                left: 50% !important;
+                width: 100dvh !important;
+                height: 100vw !important;
+                transform: translate(-50%, -50%) rotate(90deg) !important;
+                transform-origin: center center !important;
+            }
+            #fullscreenPlayerScreen.force-landscape-fallback #drawerLeftParams,
+            #fullscreenPlayerScreen.force-landscape-fallback #drawerRightExplain {
+                position: absolute !important;
+                top: 0 !important;
+                bottom: 0 !important;
+                height: 100% !important;
+                max-width: 72dvh !important;
+                width: 72dvh !important;
+            }
+            #fullscreenPlayerScreen.force-landscape-fallback #tabLeftParams,
+            #fullscreenPlayerScreen.force-landscape-fallback #tabRightExplain,
+            #fullscreenPlayerScreen.force-landscape-fallback #drawerBackdrop {
+                position: absolute !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-violet-500/30">
+
+    <!-- ===================================================================== -->
+    <!-- PANTALLA 1: ASISTENTE GUIADO PASO A PASO (ÚNICA VISTA INICIAL)         -->
+    <!-- ===================================================================== -->
+    <div id="wizardScreen" class="min-h-screen flex flex-col justify-between bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-slate-950">
+
+        <!-- Cabecera minimalista del asistente -->
+        <header class="border-b border-slate-800/80 bg-slate-900/75 backdrop-blur-md sticky top-0 z-30">
+            <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5 min-w-0">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-600 to-cyan-500 flex items-center justify-center shadow-md shadow-violet-500/20 text-lg shrink-0">
+                        ⚗️
+                    </div>
+                    <h1 id="appMainTitle" class="text-sm sm:text-lg font-extrabold tracking-tight bg-gradient-to-r from-violet-300 via-cyan-200 to-emerald-300 bg-clip-text text-transparent truncate">
+                        Laboratorio de Química Orgánica
+                    </h1>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <span id="jsonStatusPill" class="px-2.5 py-1 rounded-lg bg-cyan-500/15 border border-cyan-500/40 text-[11px] font-bold text-cyan-300">
+                        🔄 Conectando...
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenedor Central del Asistente de Selección -->
+        <main class="max-w-3xl w-full mx-auto px-4 py-6 sm:py-10 flex-1 flex flex-col justify-center gap-5">
+
+            <!-- Aviso diagnóstico si falla la carga de GitHub -->
+            <div id="jsonDiagnosticBanner" class="hidden bg-rose-950/85 border border-rose-500/60 text-rose-100 px-4 py-3 rounded-2xl shadow-lg text-xs flex flex-col gap-1">
+                <div class="font-extrabold text-rose-300">⚠️ No se pudo leer el archivo JSON maestro desde GitHub</div>
+                <p id="jsonDiagnosticDetail" class="text-rose-100/90 leading-relaxed"></p>
+            </div>
+
+            <!-- Barra de progreso del Asistente (4 pasos) + Botón Volver -->
+            <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900/80 border border-slate-800 px-4 py-2.5 rounded-2xl">
+                <div id="wizardBreadcrumb" class="flex flex-wrap items-center gap-1.5 text-xs font-semibold text-slate-400">
+                    <span class="text-violet-300 font-bold">Paso 1 de 4</span>
+                </div>
+                <button id="btnWizardBack" onclick="wizardGoBack()" class="hidden px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1 transition active:scale-95">
+                    <span>⬅</span> <span>Volver atrás</span>
+                </button>
+            </div>
+
+            <!-- ETAPA 1 DEL ASISTENTE: ELEGIR FUNCIÓN QUÍMICA -->
+            <section id="wizardStep1" class="wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="text-center flex flex-col gap-1.5">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-violet-400">Paso 1 • Selección de Unidad</span>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-white">Elige la Función Química</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Selecciona la familia orgánica que deseas estudiar</p>
+                </div>
+
+                <div id="functionCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="col-span-full text-center py-8 text-sm text-slate-400 animate-pulse">
+                        Cargando funciones químicas desde GitHub...
+                    </div>
+                </div>
+            </section>
+
+            <!-- ETAPA 2 DEL ASISTENTE: ELEGIR MÉTODO DE OBTENCIÓN O REACCIONES QUÍMICAS -->
+            <section id="wizardStep2" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-6">
+                <div class="text-center flex flex-col gap-1.5">
+                    <span id="wiz2FuncBadge" class="inline-block mx-auto px-3 py-1 rounded-full bg-violet-500/15 border border-violet-500/30 text-xs font-bold text-violet-300">
+                        Función Química
+                    </span>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-1">¿Qué deseas explorar?</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Elige una de las dos ramas principales de estudio</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <button type="button" onclick="wizardSelectCategory('obtencion')" class="group text-left p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-emerald-950/70 to-slate-950 border-2 border-emerald-600/50 hover:border-emerald-400 transition-all shadow-lg hover:shadow-emerald-500/15 active:scale-[0.99] flex flex-col justify-between gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-2xl">📥</span>
+                            <span id="wizCountObtencion" class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold">0 métodos</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-emerald-200 group-hover:text-white transition">Métodos de Obtención</h3>
+                            <p class="text-xs text-slate-400 mt-1">Síntesis y rutas de preparación del grupo funcional.</p>
+                        </div>
+                    </button>
+
+                    <button type="button" onclick="wizardSelectCategory('reacciones')" class="group text-left p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-amber-950/70 to-slate-950 border-2 border-amber-600/50 hover:border-amber-400 transition-all shadow-lg hover:shadow-amber-500/15 active:scale-[0.99] flex flex-col justify-between gap-4">
+                        <div class="flex items-center justify-between">
+                            <span class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-2xl">⚡</span>
+                            <span id="wizCountReacciones" class="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-extrabold">0 reacciones</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-extrabold text-amber-200 group-hover:text-white transition">Reacciones Químicas</h3>
+                            <p class="text-xs text-slate-400 mt-1">Transformaciones, mecanismos y comportamiento químico.</p>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ETAPA 3 DEL ASISTENTE: ELEGIR EL MÉTODO O REACCIÓN ESPECÍFICA -->
+            <section id="wizardStep3" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="text-center flex flex-col gap-1.5">
+                    <span id="wiz3CatBadge" class="inline-block mx-auto px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-300">
+                        📥 Métodos de Obtención
+                    </span>
+                    <h2 id="wiz3Heading" class="text-xl sm:text-2xl font-extrabold text-white mt-1">Selecciona el Método de Obtención</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Toca una opción para ver sus reacciones disponibles y catalizadores</p>
+                </div>
+
+                <div id="reactionListGrid" class="flex flex-col gap-2.5 max-h-[55vh] overflow-y-auto pr-1"></div>
+            </section>
+
+            <!-- ETAPA 4 DEL ASISTENTE: LISTA DE POSIBLES REACCIONES / SUSTRATOS Y SU CATALIZADOR -->
+            <section id="wizardStep4" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="text-center flex flex-col gap-1.5">
+                    <span class="inline-block mx-auto px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-xs font-bold text-cyan-300">
+                        Paso 4 • Descripción, Ejemplos y Catalizador
+                    </span>
+                    <h2 id="wiz4Title" class="text-lg sm:text-2xl font-extrabold text-white mt-1 leading-snug">
+                        Cargando reacciones disponibles...
+                    </h2>
+                    <div id="wiz4DescriptionBox" class="mt-1.5 text-left bg-slate-950/85 border border-violet-500/35 rounded-2xl p-3.5 sm:p-4 text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-line max-h-[36vh] overflow-y-auto">
+                        Cargando explicación del método o reacción...
+                    </div>
+                    <p class="text-xs text-slate-400 mt-1">
+                        Elige la reacción específica que deseas visualizar en pantalla completa
+                    </p>
+                </div>
+
+                <!-- Lista de posibles reacciones / sustratos para ver -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">
+                        🎯 Posibles Reacciones para Visualizar (toca una para iniciar):
+                    </span>
+                    <div id="wiz4SubstratesList" class="flex flex-col gap-2.5"></div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="appFooterText" class="border-t border-slate-900 bg-slate-950/80 py-3.5 px-4 text-center text-xs text-slate-500">
+            Laboratorio Virtual Interactivo de Química Orgánica • <strong class="text-slate-300">Univ. Juan Pablo Stumpfs Díaz</strong>
+        </footer>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- PANTALLA 2: ESCENARIO DE ANIMACIÓN EN PANTALLA COMPLETA + PESTAÑAS    -->
+    <!-- ===================================================================== -->
+    <section id="fullscreenPlayerScreen" class="hidden fixed inset-0 z-50 w-screen h-[100dvh] bg-slate-950 flex flex-col justify-between overflow-hidden">
+
+        <!-- BARRA SUPERIOR COMPACTA -->
+        <header class="px-3 sm:px-5 py-2 bg-slate-900/95 border-b border-slate-800 flex items-center justify-between gap-2 shrink-0 z-20">
+            <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-2">
+                    <span id="stepNumberBadge" class="text-[11px] font-extrabold uppercase tracking-wider text-cyan-400 shrink-0">
+                        PASO 1 DE 8
+                    </span>
+                    <span class="text-slate-600">•</span>
+                    <span id="playerCatalystBadge" class="text-[11px] font-semibold text-amber-300 truncate">
+                        ⚙️ Catalizador
+                    </span>
+                </div>
+                <h3 id="stepTitleText" class="text-xs sm:text-base font-extrabold text-white truncate mt-0.5">
+                    Cargando reacción...
+                </h3>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <button type="button" onclick="returnToReactionExamples()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1 transition active:scale-95" title="Cambiar reacción o volver al menú">
+                    <span>⬅</span> <span class="hidden sm:inline">Cambiar</span>
+                </button>
+                <button type="button" onclick="returnToWizardHome()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-rose-600/25 hover:bg-rose-600/40 border border-rose-500/40 text-xs font-extrabold text-rose-200 flex items-center gap-1 transition active:scale-95" title="Volver al inicio">
+                    <span>✕</span> <span>Inicio</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ÁREA CENTRAL DEL LIENZO SVG + PESTAÑAS LATERALES DESPLEGABLES -->
+        <div id="svgScrollWrapper" class="relative flex-1 min-h-0 w-full bg-slate-950 flex items-center justify-center overflow-hidden">
+
+            <!-- Aviso flotante si el celular está en vertical -->
+            <div id="rotateDeviceBanner" class="hidden absolute top-2.5 left-1/2 -translate-x-1/2 z-20 px-3.5 py-1.5 rounded-full bg-amber-500/95 text-slate-950 text-[11px] font-extrabold shadow-xl flex items-center gap-1.5 pointer-events-none whitespace-nowrap">
+                <span class="rotate-phone-icon text-sm">📱</span>
+                <span>Modo horizontal activo</span>
+            </div>
+
+            <!-- PESTAÑA LATERAL IZQUIERDA: FICHA DE LOS 8 PARÁMETROS -->
+            <button type="button" id="tabLeftParams" onclick="toggleSideDrawer('left')" class="fixed left-0 top-1/2 -translate-y-1/2 z-30 bg-cyan-600/95 hover:bg-cyan-500 text-white border-y border-r border-cyan-300/50 rounded-r-xl py-3.5 px-1.5 shadow-xl shadow-cyan-950/60 flex items-center gap-1 transition active:scale-95 cursor-pointer" title="Ver Ficha de 8 Parámetros">
+                <span class="side-tab-vertical side-tab-left text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                    📋 8 Parámetros
+                </span>
+            </button>
+
+            <!-- PANEL DESPLEGABLE IZQUIERDO (8 PARÁMETROS) -->
+            <aside id="drawerLeftParams" class="fixed top-0 left-0 bottom-0 z-40 w-[86vw] max-w-md bg-slate-900/98 backdrop-blur-md border-r border-cyan-500/40 shadow-2xl transform -translate-x-full transition-transform duration-300 ease-out flex flex-col">
+                <div class="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-2 shrink-0">
+                    <div class="flex items-center gap-2">
+                        <span class="text-base">📋</span>
+                        <h4 class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-cyan-300">
+                            Ficha Técnica (8 Parámetros)
+                        </h4>
+                    </div>
+                    <button type="button" onclick="closeAllDrawers()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-slate-700">
+                        ✕ Cerrar
+                    </button>
+                </div>
+
+                <div class="p-4 overflow-y-auto flex-1 flex flex-col gap-2.5 text-xs">
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-400 block">1. Grupo Funcional a Obtener</span>
+                        <p id="metaGrupoFuncional" class="font-bold text-slate-100 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-violet-400 block">2. Reacción y Mecanismo (SN1/SN2/E1/E2/Adición/SR)</span>
+                        <p id="metaReaccionMecanismo" class="font-bold text-slate-100 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-cyan-400 block">3. Naturaleza (Concertada vs. Por Etapas)</span>
+                        <p id="metaNaturaleza" class="font-bold text-slate-100 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">4. Ruptura e Intermediarios (Homolítica / Heterolítica)</span>
+                        <p id="metaRupturaIntermediarios" class="font-bold text-slate-100 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-pink-400 block">5. Detalle del Mecanismo</span>
+                        <p id="metaDetalleMecanismo" class="font-medium text-slate-200 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-sky-400 block">6. Reactivos, Medios y Condiciones</span>
+                        <p id="metaReactivosCondiciones" class="font-medium text-slate-200 mt-1 leading-snug"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-indigo-400 block">7. Rol de los Reactivos (Sustrato / Atacante / Catalizador)</span>
+                        <p id="metaRolReactivos" class="font-medium text-slate-200 mt-1 leading-snug whitespace-pre-line"></p>
+                    </div>
+                    <div class="bg-slate-950/90 border border-slate-800 p-3 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-orange-400 block">8. Reglas y Observaciones Clave</span>
+                        <p id="metaReglasObs" class="font-medium text-slate-200 mt-1 leading-snug"></p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PESTAÑA LATERAL DERECHA: EXPLICACIÓN EXACTA DEL PASO ACTUAL -->
+            <button type="button" id="tabRightExplain" onclick="toggleSideDrawer('right')" class="fixed right-0 top-1/2 -translate-y-1/2 z-30 bg-violet-600/95 hover:bg-violet-500 text-white border-y border-l border-violet-300/50 rounded-l-xl py-3.5 px-1.5 shadow-xl shadow-violet-950/60 flex items-center gap-1 transition active:scale-95 cursor-pointer" title="¿Qué ocurre en este paso?">
+                <span class="side-tab-vertical text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                    📖 Explicación
+                </span>
+            </button>
+
+            <!-- PANEL DESPLEGABLE DERECHO (EXPLICACIÓN DETALLADA DEL PASO) -->
+            <aside id="drawerRightExplain" class="fixed top-0 right-0 bottom-0 z-40 w-[86vw] max-w-md bg-slate-900/98 backdrop-blur-md border-l border-violet-500/40 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col">
+                <div class="px-4 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between gap-2 shrink-0">
+                    <div class="flex items-center gap-2">
+                        <span class="text-base">📖</span>
+                        <h4 class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-violet-300">
+                            ¿Qué ocurre en este paso?
+                        </h4>
+                    </div>
+                    <button type="button" onclick="closeAllDrawers()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 border border-slate-700">
+                        ✕ Cerrar
+                    </button>
+                </div>
+
+                <div class="p-4 overflow-y-auto flex-1 flex flex-col gap-3.5 text-xs">
+                    <div class="bg-slate-950/90 border border-violet-500/30 p-3.5 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-violet-400 block mb-1">Explicación Detallada</span>
+                        <p id="stepExplanationText" class="text-xs sm:text-sm text-slate-100 leading-relaxed"></p>
+                    </div>
+
+                    <div class="bg-slate-950/90 border border-emerald-500/30 p-3.5 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-400 block mb-1">📝 Fórmula Semidesarrollada de esta Etapa</span>
+                        <div id="semiStepBox" class="mono text-xs bg-slate-900 border border-slate-800 p-2.5 rounded-lg text-emerald-200 font-semibold overflow-x-auto whitespace-pre-wrap"></div>
+                    </div>
+
+                    <div class="bg-slate-950/90 border border-slate-800 p-3.5 rounded-xl">
+                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">🌐 Ecuación Global de la Reacción</span>
+                        <div id="semiGlobalBox" class="mono text-xs bg-slate-900/70 border border-slate-800 p-2.5 rounded-lg text-slate-300 overflow-x-auto whitespace-pre-wrap"></div>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <div class="bg-red-950/40 border border-red-500/30 rounded-xl px-3 py-2">
+                            <span class="font-extrabold uppercase text-red-300 block text-[10px]">🔴 Enlaces que se rompen:</span>
+                            <p id="legendBreakingText" class="text-slate-200 mt-0.5"></p>
+                        </div>
+                        <div class="bg-emerald-950/40 border border-emerald-500/30 rounded-xl px-3 py-2">
+                            <span class="font-extrabold uppercase text-emerald-300 block text-[10px]">🟢 Enlaces que se forman:</span>
+                            <p id="legendFormingText" class="text-slate-200 mt-0.5"></p>
+                        </div>
+                        <div class="bg-amber-950/40 border border-amber-500/30 rounded-xl px-3 py-2">
+                            <span class="font-extrabold uppercase text-amber-300 block text-[10px]">🟡 Movimiento de Átomos / Electrones:</span>
+                            <p id="legendMovementText" class="text-slate-200 mt-0.5"></p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Backdrop oscuro al abrir cualquiera de las dos pestañas laterales -->
+            <div id="drawerBackdrop" onclick="closeAllDrawers()" class="hidden fixed inset-0 z-30 bg-black/60 backdrop-blur-[1px]"></div>
+
+            <!-- LIENZO SVG CENTRAL -->
+            <svg id="chemSvgCanvas" viewBox="0 0 1040 360" preserveAspectRatio="xMidYMid meet" class="w-full h-full select-none">
+                <defs>
+                    <marker id="arrowFull" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                        <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#38bdf8" />
+                    </marker>
+                    <marker id="arrowFishhook" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
+                        <path d="M 0 6 L 10 6 L 4 1.5" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </marker>
+                    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#334155"/>
+                        <stop offset="50%" stop-color="#64748b"/>
+                        <stop offset="100%" stop-color="#334155"/>
+                    </linearGradient>
+                </defs>
+                <pattern id="labGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(148, 163, 184, 0.06)" stroke-width="1"/>
+                </pattern>
+                <rect id="svgBgGrid" x="-500" y="-500" width="2500" height="1500" fill="url(#labGrid)" />
+                <g id="svgDynamicStage"></g>
+            </svg>
+        </div>
+
+        <!-- BARRA INFERIOR DE CONTROLES COMPACTOS -->
+        <footer class="bg-slate-900/95 border-t border-slate-800 px-3 sm:px-5 py-2 flex flex-col gap-1.5 shrink-0 z-20">
+            <!-- Fila 1: Botones de navegación + Velocidad -->
+            <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
+                <button id="btnPrev" onclick="prevStep()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-40 disabled:pointer-events-none text-white border border-slate-700 text-xs sm:text-sm font-bold flex items-center gap-1 transition active:scale-95">
+                    ⬅ Anterior
+                </button>
+                <button onclick="replayCurrentTransition()" class="px-3 py-1.5 rounded-xl bg-amber-600/25 hover:bg-amber-600/40 text-amber-200 border border-amber-500/40 text-xs sm:text-sm font-bold flex items-center gap-1 transition active:scale-95">
+                    🔄 Repetir
+                </button>
+                <button id="btnPlayPause" onclick="toggleAutoPlay()" class="px-3.5 py-1.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white text-xs sm:text-sm font-bold flex items-center gap-1 shadow-md shadow-cyan-600/25 transition active:scale-95">
+                    <span id="playIcon">▶</span> <span id="playText">Auto-Play</span>
+                </button>
+                <button id="btnNext" onclick="nextStep()" class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 disabled:opacity-40 disabled:pointer-events-none text-white text-xs sm:text-sm font-extrabold flex items-center gap-1 shadow-md shadow-violet-600/30 transition active:scale-95">
+                    Siguiente ➡
+                </button>
+
+                <div class="relative inline-flex items-center">
+                    <select id="selectAnimSpeed" onchange="setAnimSpeed(this.value)" aria-label="Vel" class="appearance-none bg-slate-800 hover:bg-slate-700 border border-slate-600 focus:border-violet-400 text-slate-100 rounded-xl pl-2.5 pr-6 py-1.5 text-xs sm:text-sm font-bold outline-none transition cursor-pointer">
+                        <option value="5500">Vel 0.25x</option>
+                        <option value="3500" selected>Vel 0.5x</option>
+                        <option value="2200">Vel 1x</option>
+                        <option value="1200">Vel 1.5x</option>
+                    </select>
+                    <span class="pointer-events-none absolute right-2 text-[10px] text-slate-300">▼</span>
+                </div>
+            </div>
+
+            <!-- Fila 2: Control Manual de la Transición -->
+            <div class="max-w-2xl w-full mx-auto flex items-center gap-2.5 bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-xl">
+                <span class="text-[11px] font-bold text-cyan-300 whitespace-nowrap">Control Manual:</span>
+                <span id="scrubberPercentText" class="mono text-[11px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-700/50 px-1.5 py-0.5 rounded">0%</span>
+                <input id="transitionScrubber" type="range" min="0" max="100" value="0" oninput="scrubTransitionManually(this.value)" class="w-full accent-violet-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg"/>
+                <span id="stepCounterText" class="mono text-[11px] text-slate-400 whitespace-nowrap">1/8</span>
+            </div>
+        </footer>
+
+        <!-- Contenedor oculto de compatibilidad para pills -->
+        <div id="stepPillsContainer" class="hidden"></div>
+    </section>
+
+    <script>
+        // =========================================================================
+        // 1. ENLACE RAW DE TU ÍNDICE MAESTRO EN GITHUB Y CARPETA DE REACCIONES
+        // =========================================================================
+        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/JPSDPOV/LabQuim/refs/heads/main/labquim.json";
+        let REACTIONS_BASE_URL = "https://raw.githubusercontent.com/JPSDPOV/LabQuim/refs/heads/main/reactions/";
+
+        let ATOM_COLORS = {
+            'C': { bg: '#1e293b', border: '#94a3b8', text: '#f8fafc', r: 19 }
+        };
+
+        let ANIM_DURATION = 3500;
+        let animFrameId = null;
+        let lastSceneState = null;
+        let currentPrevSceneForScrub = null;
+        let currentTargetSceneForScrub = null;
+
+        let FUNCTION_CATALOG = [];
+        let FUNCTION_MENUS = {};
+        let UNIT_FILES = {};
+        const LOADED_UNIT_URLS = new Set();
+        const LOADED_REACTIONS = new Set();
+        const LAB_DATA = {};
+
+        let currentFunction = '';
+        let currentCategory = '';
+        let currentKey = '';
+        let currentSubIdx = 0;
+        let currentCatIdx = 0;
+        let currentStepIdx = 0;
+        let autoPlayTimer = null;
+        let isStageFullscreen = false;
+        let wizardStage = 1;
+
+        function isCompactMobile() {
+            return window.innerWidth < 640 && !isStageFullscreen;
+        }
+
+        function isForcedRotatedLandscape() {
+            const playerScreen = document.getElementById('fullscreenPlayerScreen');
+            return !!(
+                isStageFullscreen &&
+                playerScreen &&
+                playerScreen.classList.contains('force-landscape-fallback') &&
+                window.innerHeight > window.innerWidth
+            );
+        }
+
+        function updateOrientationNotice() {
+            const notice = document.getElementById('rotateDeviceBanner');
+            const playerScreen = document.getElementById('fullscreenPlayerScreen');
+            if (!playerScreen) return;
+            const isPortrait = window.innerHeight > window.innerWidth;
+            if (isStageFullscreen && isPortrait) {
+                playerScreen.classList.add('force-landscape-fallback');
+                if (notice) notice.classList.add('hidden');
+            } else {
+                playerScreen.classList.remove('force-landscape-fallback');
+                if (notice) notice.classList.add('hidden');
+            }
+        }
+
+        let resizeDebounceTimer = null;
+        window.addEventListener('resize', () => {
+            updateOrientationNotice();
+            clearTimeout(resizeDebounceTimer);
+            resizeDebounceTimer = setTimeout(() => {
+                if (isStageFullscreen && currentTargetSceneForScrub && !animFrameId) {
+                    renderInterpolatedFrame(currentPrevSceneForScrub || currentTargetSceneForScrub, currentTargetSceneForScrub, 1);
+                }
+            }, 120);
+        });
+
+        function toggleSideDrawer(side) {
+            const leftDrawer = document.getElementById('drawerLeftParams');
+            const rightDrawer = document.getElementById('drawerRightExplain');
+            const backdrop = document.getElementById('drawerBackdrop');
+
+            if (side === 'left') {
+                const isOpen = !leftDrawer.classList.contains('-translate-x-full');
+                closeAllDrawers();
+                if (!isOpen) {
+                    leftDrawer.classList.remove('-translate-x-full');
+                    backdrop.classList.remove('hidden');
+                }
+            } else if (side === 'right') {
+                const isOpen = !rightDrawer.classList.contains('translate-x-full');
+                closeAllDrawers();
+                if (!isOpen) {
+                    rightDrawer.classList.remove('translate-x-full');
+                    backdrop.classList.remove('hidden');
+                }
+            }
+        }
+
+        function closeAllDrawers() {
+            const leftDrawer = document.getElementById('drawerLeftParams');
+            const rightDrawer = document.getElementById('drawerRightExplain');
+            const backdrop = document.getElementById('drawerBackdrop');
+            if (leftDrawer) leftDrawer.classList.add('-translate-x-full');
+            if (rightDrawer) rightDrawer.classList.add('translate-x-full');
+            if (backdrop) backdrop.classList.add('hidden');
+        }
+
+        async function requestMandatoryFullscreenAndLandscape(targetEl) {
+            const docEl = document.documentElement;
+            const fsCandidates = [targetEl, docEl];
+            for (const el of fsCandidates) {
+                if (!el) continue;
+                try {
+                    if (el.requestFullscreen && !document.fullscreenElement) {
+                        await el.requestFullscreen({ navigationUI: 'hide' });
+                        break;
+                    } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
+                        await el.webkitRequestFullscreen();
+                        break;
+                    } else if (el.msRequestFullscreen && !document.msFullscreenElement) {
+                        await el.msRequestFullscreen();
+                        break;
+                    }
+                } catch (e) {}
+            }
+
+            try {
+                if (screen.orientation && screen.orientation.lock) {
+                    await screen.orientation.lock('landscape');
+                } else if (screen.lockOrientation) {
+                    screen.lockOrientation('landscape');
+                } else if (screen.mozLockOrientation) {
+                    screen.mozLockOrientation('landscape');
+                } else if (screen.msLockOrientation) {
+                    screen.msLockOrientation('landscape');
+                }
+            } catch (e) {}
+        }
+
+        async function openFullscreenPlayer() {
+            wizardStage = 5;
+            isStageFullscreen = true;
+            closeAllDrawers();
+
+            const wizScreen = document.getElementById('wizardScreen');
+            const playerScreen = document.getElementById('fullscreenPlayerScreen');
+            if (wizScreen) wizScreen.classList.add('hidden');
+            if (playerScreen) {
+                playerScreen.classList.remove('hidden');
+                playerScreen.classList.add('force-landscape-fallback');
+            }
+            document.body.style.overflow = 'hidden';
+
+            // Forzar pantalla completa y horizontal sí o sí bajo el gesto del usuario
+            await requestMandatoryFullscreenAndLandscape(playerScreen);
+
+            updateOrientationNotice();
+            renderFullLab(true);
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            if (isStageFullscreen) {
+                updateOrientationNotice();
+                if (currentTargetSceneForScrub && !animFrameId) {
+                    renderInterpolatedFrame(currentPrevSceneForScrub || currentTargetSceneForScrub, currentTargetSceneForScrub, 1);
+                }
+            }
+        });
+
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                updateOrientationNotice();
+                if (isStageFullscreen && currentTargetSceneForScrub && !animFrameId) {
+                    renderInterpolatedFrame(currentPrevSceneForScrub || currentTargetSceneForScrub, currentTargetSceneForScrub, 1);
+                }
+            }, 140);
+        });
+
+        async function exitFullscreenPlayerToWizard(targetStage = 4) {
+            stopAutoPlay();
+            closeAllDrawers();
+            isStageFullscreen = false;
+
+            const wizScreen = document.getElementById('wizardScreen');
+            const playerScreen = document.getElementById('fullscreenPlayerScreen');
+            if (playerScreen) {
+                playerScreen.classList.add('hidden');
+                playerScreen.classList.remove('force-landscape-fallback');
+            }
+            if (wizScreen) wizScreen.classList.remove('hidden');
+            document.body.style.overflow = '';
+
+            try {
+                if (screen.orientation && screen.orientation.unlock) {
+                    screen.orientation.unlock();
+                }
+            } catch (e) {}
+
+            try {
+                if (document.fullscreenElement) {
+                    await document.exitFullscreen();
+                } else if (document.webkitFullscreenElement) {
+                    await document.webkitExitFullscreen();
+                }
+            } catch (e) {}
+
+            showWizardStage(targetStage);
+        }
+
+        function returnToReactionExamples() {
+            exitFullscreenPlayerToWizard(4);
+        }
+
+        function returnToWizardHome() {
+            currentFunction = '';
+            currentCategory = '';
+            currentKey = '';
+            exitFullscreenPlayerToWizard(1);
+        }
+
+        function sanitizeInitialScene(rawScene) {
+            if (!rawScene || typeof rawScene !== 'object') return { atoms: [], bonds: [] };
+            const scene = JSON.parse(JSON.stringify(rawScene));
+
+            if (Array.isArray(scene.bonds)) {
+                scene.bonds = scene.bonds
+                    .filter(b => b.state !== 'forming' && b.state !== 'forming-pi')
+                    .map(b => ({
+                        ...b,
+                        state: 'normal'
+                    }));
+            }
+
+            delete scene.arrows;
+
+            if (Array.isArray(scene.atoms)) {
+                scene.atoms = scene.atoms.map(a => {
+                    const cleanAtom = { ...a };
+                    delete cleanAtom.radical;
+                    if (cleanAtom.border === '#ef4444') delete cleanAtom.border;
+                    if (cleanAtom.highlight === '#ef4444') delete cleanAtom.highlight;
+                    if (cleanAtom.label && /^(sale|saldrá|se rompe|se parte|ataca|pasa a|pasará|reemplazado|desplazado|eliminado|cortar)/i.test(cleanAtom.label.trim())) {
+                        delete cleanAtom.label;
+                    }
+                    return cleanAtom;
+                });
+            }
+
+            return scene;
+        }
+
+        function expandStepsToVisualMicroSteps(rawSteps) {
+            if (!Array.isArray(rawSteps) || rawSteps.length === 0) return [];
+            if (rawSteps.length >= 5) {
+                return rawSteps.map((st, idx) => ({
+                    title: st.title || '',
+                    semiStep: st.semiStep || '',
+                    semiGlobal: st.semiGlobal || '',
+                    desc: st.desc || '',
+                    legend: st.legend || {
+                        breaking: 'Ruptura de enlaces reactivos.',
+                        forming: 'Formación de nuevos enlaces en el producto.',
+                        movement: 'Reorganización molecular.'
+                    },
+                    initialScene: st.initialScene ? () => sanitizeInitialScene(st.initialScene) : undefined,
+                    scene: () => {
+                        const sc = st.scene || { atoms: [], bonds: [] };
+                        return (idx === 0 && !st.initialScene)
+                            ? sanitizeInitialScene(sc)
+                            : JSON.parse(JSON.stringify(sc));
+                    }
+                }));
+            }
+
+            const expanded = [];
+            const first = rawSteps[0];
+            const last = rawSteps[rawSteps.length - 1];
+            const rawScene0 = first.initialScene || first.scene || { atoms: [], bonds: [] };
+            const cleanInitScene = sanitizeInitialScene(rawScene0);
+            const finalScene = JSON.parse(JSON.stringify(last.scene || { atoms: [], bonds: [] }));
+
+            expanded.push({
+                title: first.title.replace(/^Paso \d+[^:]*:\s*/i, 'Paso 1 (Estado Inicial Intacto): '),
+                semiStep: first.semiStep || '',
+                semiGlobal: first.semiGlobal || '',
+                desc: 'Observa los reactivos en su estado inicial intacto antes de que comience la ruptura de enlaces.',
+                legend: {
+                    breaking: 'Ningún enlace roto todavía; sustratos intactos.',
+                    forming: 'Ningún enlace formado todavía.',
+                    movement: 'Reactivos listos antes de iniciar la reacción.'
+                },
+                scene: () => JSON.parse(JSON.stringify(cleanInitScene))
+            });
+
+            const finalBondKeys = new Set((finalScene.bonds || []).map(b => [b.from, b.to].sort().join('--')));
+            const breakingScene = JSON.parse(JSON.stringify(first.scene || rawScene0));
+            if (Array.isArray(breakingScene.bonds)) {
+                breakingScene.bonds = breakingScene.bonds
+                    .filter(b => b.state !== 'forming' && b.state !== 'forming-pi')
+                    .map(b => {
+                        const k = [b.from, b.to].sort().join('--');
+                        const willBreak = b.state === 'breaking' || b.state === 'breaking-pi' || !finalBondKeys.has(k);
+                        return {
+                            ...b,
+                            state: willBreak ? (b.order >= 2 ? 'breaking-pi' : 'breaking') : 'normal'
+                        };
+                    });
+            }
+            expanded.push({
+                title: 'Paso 2 (Ruptura en Rojo): Se resaltan en ROJO los enlaces que se van a romper',
+                semiStep: first.semiStep || '',
+                semiGlobal: first.semiGlobal || '',
+                desc: first.desc || 'Observa en rojo punteado los enlaces específicos que comienzan a debilitarse y romperse en los reactivos.',
+                legend: {
+                    breaking: (first.legend && first.legend.breaking) || 'En rojo punteado: enlaces que se van a romper.',
+                    forming: 'Los enlaces rompibles se debilitan antes de separarse los fragmentos.',
+                    movement: (first.legend && first.legend.movement) || 'Activación electrónica de los enlaces reactivos.'
+                },
+                scene: () => JSON.parse(JSON.stringify(breakingScene))
+            });
+
+            if (rawSteps.length === 3) {
+                const mid = rawSteps[1];
+                expanded.push({
+                    title: mid.title.replace(/^Paso \d+[^:]*:\s*/i, 'Paso 3 (Intermediario Reactivo): '),
+                    semiStep: mid.semiStep || '',
+                    semiGlobal: mid.semiGlobal || '',
+                    desc: mid.desc || '',
+                    legend: mid.legend || {
+                        breaking: 'Enlaces iniciales rotos; especie intermedia formada.',
+                        forming: 'Preparación para el ataque hacia el producto.',
+                        movement: 'Formación del intermediario de reacción.'
+                    },
+                    scene: () => JSON.parse(JSON.stringify(mid.scene || { atoms: [], bonds: [] }))
+                });
+            } else {
+                const severedScene = JSON.parse(JSON.stringify(breakingScene));
+                severedScene.bonds = (severedScene.bonds || []).filter(b => b.state !== 'breaking');
+                delete severedScene.arrows;
+                severedScene.atoms = (severedScene.atoms || []).map(a => ({
+                    ...a,
+                    highlight: a.highlight || '#fbbf24'
+                }));
+                expanded.push({
+                    title: 'Paso 3 (Ruptura Consumada): Los enlaces se han roto dejando los fragmentos reactivos listos',
+                    semiStep: first.semiStep || '',
+                    semiGlobal: first.semiGlobal || '',
+                    desc: 'Los enlaces marcados en rojo se han roto por completo, dejando los fragmentos reactivos listos para reorganizarse y formar los nuevos enlaces.',
+                    legend: {
+                        breaking: 'Ruptura completada de los enlaces marcados en rojo.',
+                        forming: 'Fragmentos reactivos listos para enlazarse.',
+                        movement: 'Separación de los grupos salientes y aproximación de los fragmentos.'
+                    },
+                    scene: () => JSON.parse(JSON.stringify(severedScene))
+                });
+            }
+
+            const formingScene = JSON.parse(JSON.stringify(finalScene));
+            formingScene.bonds = (formingScene.bonds || []).map(b => ({
+                ...b,
+                state: (b.state === 'new' || b.state === 'forming') ? 'forming' : (b.state === 'new-pi' ? 'forming-pi' : b.state)
+            }));
+            const stepFormNum = expanded.length + 1;
+            expanded.push({
+                title: `Paso ${stepFormNum} (Formación en Verde): Se trazan en VERDE punteado los nuevos enlaces`,
+                semiStep: last.semiStep || '',
+                semiGlobal: last.semiGlobal || '',
+                desc: 'Observa en verde punteado cómo se están formando los nuevos enlaces covalentes en el producto.',
+                legend: {
+                    breaking: 'Enlaces antiguos ya separados.',
+                    forming: (last.legend && last.legend.forming) || 'En verde punteado: nuevos enlaces en formación.',
+                    movement: 'Acercamiento final a la distancia de enlace covalente.'
+                },
+                scene: () => JSON.parse(JSON.stringify(formingScene))
+            });
+
+            const stepFinalNum = expanded.length + 1;
+            expanded.push({
+                title: last.title.replace(/^Paso \d+[^:]*:\s*/i, `Paso ${stepFinalNum} (Producto Consolidado): `),
+                semiStep: last.semiStep || '',
+                semiGlobal: last.semiGlobal || '',
+                desc: last.desc || 'Queda consolidado en verde sólido el producto final de la reacción.',
+                legend: {
+                    breaking: 'Ruptura completada.',
+                    forming: 'Nuevos enlaces consolidados en verde sólido.',
+                    movement: 'Producto estable obtenido.'
+                },
+                scene: () => JSON.parse(JSON.stringify(finalScene))
+            });
+
+            return expanded;
+        }
+
+        function parseFlexibleJson(rawText) {
+            let cleaned = String(rawText || '').trim();
+            cleaned = cleaned.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+            cleaned = cleaned.replace(/(:\s*"[^"
+]*?)<([a-zA-Z0-9]+)\s+([a-zA-Z-]+)="([^"
+]*)"([^"
+]*")/g, "$1<$2 $3='$4'$5");
+            cleaned = cleaned.replace(/,\s*([}\]])/g, '$1');
+            return JSON.parse(cleaned);
+        }
+
+        function applyJsonPayload(payload) {
+            if (!payload || typeof payload !== 'object') return;
+
+            if (payload.appConfig && typeof payload.appConfig === 'object') {
+                if (payload.appConfig.title) {
+                    const titleEl = document.getElementById('appMainTitle');
+                    if (titleEl) titleEl.innerText = payload.appConfig.title;
+                    document.title = payload.appConfig.title;
+                }
+                if (payload.appConfig.footerText || payload.appConfig.footerAuthor) {
+                    const footerEl = document.getElementById('appFooterText');
+                    if (footerEl) {
+                        const cleanBase = String(payload.appConfig.footerText || 'Laboratorio Virtual Interactivo de Química Orgánica')
+                            .replace(/\s*•?\s*Compendio Definitivo Unidades 13 a 17\s*/gi, '')
+                            .trim();
+                        const authorTxt = payload.appConfig.footerAuthor || 'Univ. Juan Pablo Stumpfs Díaz';
+                        footerEl.innerHTML = `${cleanBase} • <strong class="text-slate-300">${authorTxt}</strong>`;
+                    }
+                } else if (payload.appConfig.footerHtml) {
+                    const footerEl = document.getElementById('appFooterText');
+                    if (footerEl) footerEl.innerHTML = String(payload.appConfig.footerHtml).replace(/\s*•?\s*Compendio Definitivo Unidades 13 a 17\s*/gi, '');
+                }
+                if (payload.appConfig.defaultFunction) currentFunction = payload.appConfig.defaultFunction;
+                if (payload.appConfig.defaultReaction) currentKey = payload.appConfig.defaultReaction;
+                if (payload.appConfig.reactionsPath) {
+                    const baseRepo = GITHUB_RAW_URL.substring(0, GITHUB_RAW_URL.lastIndexOf('/') + 1);
+                    const relPath = payload.appConfig.reactionsPath.replace(/^\/+/, '');
+                    REACTIONS_BASE_URL = relPath.startsWith('http') ? relPath : (baseRepo + relPath);
+                    if (!REACTIONS_BASE_URL.endsWith('/')) REACTIONS_BASE_URL += '/';
+                }
+            }
+
+            if (payload.atomColors && typeof payload.atomColors === 'object') {
+                ATOM_COLORS = { ...ATOM_COLORS, ...payload.atomColors };
+            }
+
+            if (Array.isArray(payload.functionCatalog) && payload.functionCatalog.length > 0) {
+                FUNCTION_CATALOG = payload.functionCatalog;
+            }
+
+            if (payload.functionMenus && typeof payload.functionMenus === 'object') {
+                FUNCTION_MENUS = { ...FUNCTION_MENUS, ...payload.functionMenus };
+            }
+
+            if (payload.unitFiles && typeof payload.unitFiles === 'object') {
+                UNIT_FILES = { ...UNIT_FILES, ...payload.unitFiles };
+            }
+
+            if (payload.reactions && typeof payload.reactions === 'object') {
+                Object.entries(payload.reactions).forEach(([rxnKey, rxnData]) => {
+                    hydrateReactionFromJson(rxnKey, rxnData);
+                    LOADED_REACTIONS.add(rxnKey);
+                });
+            }
+        }
+
+        function setAnimSpeed(ms) {
+            ANIM_DURATION = Number(ms) || 3500;
+            const sel = document.getElementById('selectAnimSpeed');
+            if (sel && String(sel.value) !== String(ANIM_DURATION)) {
+                sel.value = String(ANIM_DURATION);
+            }
+            if (autoPlayTimer) {
+                stopAutoPlay();
+                toggleAutoPlay();
+            }
+        }
+
+        function easeInOutQuint(t) {
+            return t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
+        }
+
+        function easeOutQuart(t) {
+            return 1 - Math.pow(1 - t, 4);
+        }
+
+        let currentViewBox = { x: 0, y: 0, w: 1040, h: 360, initialized: false };
+
+        function lerp(a, b, t) {
+            return a + (b - a) * t;
+        }
+
+        function mapStageX(x) {
+            return 34 + (x / 920) * 972;
+        }
+
+        function mapStageY(y) {
+            return 18 + (y / 340) * 324;
+        }
+
+        function getNodeGeometry(a) {
+            const mobile = isCompactMobile();
+            const rawText = String(a.el || '');
+            const compactLen = rawText.replace(/[₀-₉⁰-⁹⁺⁻°•]/g, '').length;
+            const isCompactAtom = rawText.length <= 3 && compactLen <= 2;
+            const baseKey = rawText === 'CH₃' ? 'CH3' : (rawText.replace(/[^A-Za-z]/g, '') || 'C');
+            const cfg = ATOM_COLORS[baseKey] || ATOM_COLORS['C'] || { bg: '#1e293b', border: '#94a3b8', text: '#f8fafc', r: 19 };
+            if (isCompactAtom) {
+                const baseR = a.r || cfg.r || 19;
+                const r = mobile ? Math.round(baseR * 1.38) : baseR;
+                return { isPill: false, r, halfW: r, halfH: r, cfg };
+            }
+            const charW = mobile ? 11.5 : 7.8;
+            const pillW = Math.max(mobile ? 64 : 46, Math.min(310, rawText.length * charW + (mobile ? 28 : 18)));
+            const pillH = mobile ? 42 : 30;
+            return { isPill: true, r: 16, pillW, pillH, halfW: pillW / 2, halfH: pillH / 2, cfg };
+        }
+
+        function renderInterpolatedFrame(prevScene, targetScene, rawT) {
+            const mobile = isCompactMobile();
+            const clampedRaw = Math.min(1, Math.max(0, rawT));
+            const t = easeInOutQuint(clampedRaw);
+            const fadeT = easeOutQuart(clampedRaw);
+            const stageGroup = document.getElementById('svgDynamicStage');
+            const svgEl = document.getElementById('chemSvgCanvas');
+            if (!stageGroup || !targetScene) return;
+
+            let svgOut = '';
+            let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+            const expandBounds = (x1, y1, x2, y2) => {
+                if (x1 < minX) minX = x1;
+                if (x2 > maxX) maxX = x2;
+                if (y1 < minY) minY = y1;
+                if (y2 > maxY) maxY = y2;
+            };
+
+            if (targetScene.plates) {
+                const plateFont = mobile ? 17 : 11.8;
+                targetScene.plates.forEach(p => {
+                    const op = p.fadeIn ? t : 1;
+                    const px = mapStageX(p.x);
+                    const py = mapStageY(p.y);
+                    const pw = (p.w / 920) * 972;
+                    const ph = mobile ? Math.max(p.h, 32) : p.h;
+                    expandBounds(px, py, px + pw, py + ph);
+                    svgOut += `
+                        <g opacity="${op}">
+                            <rect x="${px}" y="${py}" width="${pw}" height="${ph}" rx="8" fill="url(#metalGrad)" stroke="${p.stroke || '#94a3b8'}" stroke-width="2.2"/>
+                            <text x="${px + pw / 2}" y="${py + ph / 2 + (mobile ? 6 : 4)}" text-anchor="middle" fill="#f8fafc" font-size="${plateFont}" font-weight="800" font-family="JetBrains Mono">${p.text}</text>
+                        </g>
+                    `;
+                });
+            }
+
+            const prevAtomMap = {};
+            if (prevScene && prevScene.atoms) {
+                prevScene.atoms.forEach(a => { prevAtomMap[a.id] = a; });
+            }
+            const targetAtomMap = {};
+            (targetScene.atoms || []).forEach(a => { targetAtomMap[a.id] = a; });
+
+            const currentAtoms = {};
+            const RAD_ANGLE = { right: 0, bottom: Math.PI / 2, left: -Math.PI, top: -Math.PI / 2 };
+
+            (targetScene.atoms || []).forEach(ta => {
+                const pa = prevAtomMap[ta.id];
+                if (pa) {
+                    let radicalAngle = undefined;
+                    let radicalDraw = ta.radical;
+                    let radicalOpacity = 1;
+
+                    if (pa.radical && ta.radical) {
+                        const a1 = RAD_ANGLE[pa.radical] ?? 0;
+                        const a2 = RAD_ANGLE[ta.radical] ?? 0;
+                        let diff = a2 - a1;
+                        if (diff > Math.PI) diff -= 2 * Math.PI;
+                        if (diff < -Math.PI) diff += 2 * Math.PI;
+                        if (Math.abs(Math.abs(diff) - Math.PI) < 0.01) {
+                            diff = (pa.radical === 'left' && ta.radical === 'right') ? Math.PI : -Math.PI;
+                        }
+                        radicalAngle = a1 + diff * t;
+                    } else if (pa.radical && !ta.radical && t < 0.85) {
+                        radicalDraw = pa.radical;
+                        radicalAngle = RAD_ANGLE[pa.radical] ?? 0;
+                        radicalOpacity = Math.max(0, 1 - t * 1.35);
+                    } else if (!pa.radical && ta.radical) {
+                        radicalAngle = RAD_ANGLE[ta.radical] ?? 0;
+                        radicalOpacity = Math.min(1, t * 1.4);
+                    }
+
+                    currentAtoms[ta.id] = {
+                        ...ta,
+                        x: mapStageX(lerp(pa.x, ta.x, t)),
+                        y: mapStageY(lerp(pa.y, ta.y, t)),
+                        opacity: lerp(pa.opacity !== undefined ? pa.opacity : 1, ta.opacity !== undefined ? ta.opacity : 1, t),
+                        radical: radicalDraw,
+                        radicalAngle,
+                        radicalOpacity
+                    };
+                } else {
+                    const startX = ta.enterFromX !== undefined ? ta.enterFromX : ta.x;
+                    const startY = ta.enterFromY !== undefined ? ta.enterFromY : ta.y - 35;
+                    currentAtoms[ta.id] = {
+                        ...ta,
+                        x: mapStageX(lerp(startX, ta.x, t)),
+                        y: mapStageY(lerp(startY, ta.y, t)),
+                        opacity: t
+                    };
+                }
+            });
+
+            if (prevScene && prevScene.atoms) {
+                prevScene.atoms.forEach(pa => {
+                    if (!targetAtomMap[pa.id]) {
+                        const exitX = pa.exitToX !== undefined ? pa.exitToX : pa.x;
+                        const exitY = pa.exitToY !== undefined ? pa.exitToY : pa.y + 40;
+                        currentAtoms[pa.id] = {
+                            ...pa,
+                            x: mapStageX(lerp(pa.x, exitX, t)),
+                            y: mapStageY(lerp(pa.y, exitY, t)),
+                            opacity: 1 - t
+                        };
+                    }
+                });
+            }
+
+            const prevBondMap = {};
+            if (prevScene && prevScene.bonds) {
+                prevScene.bonds.forEach(b => {
+                    const key = [b.from, b.to].sort().join('--');
+                    prevBondMap[key] = b;
+                });
+            }
+            const targetBondKeys = new Set();
+
+            (targetScene.bonds || []).forEach(b => {
+                const key = [b.from, b.to].sort().join('--');
+                targetBondKeys.add(key);
+                const a1 = currentAtoms[b.from];
+                const a2 = currentAtoms[b.to];
+                if (!a1 || !a2) return;
+
+                const existedBefore = !!prevBondMap[key];
+                const prevOrder = existedBefore ? (prevBondMap[key].order || 1) : 0;
+                const targetOrder = b.order || 1;
+
+                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity));
+            });
+
+            if (prevScene && prevScene.bonds) {
+                prevScene.bonds.forEach(pb => {
+                    const key = [pb.from, pb.to].sort().join('--');
+                    if (!targetBondKeys.has(key)) {
+                        const a1 = currentAtoms[pb.from];
+                        const a2 = currentAtoms[pb.to];
+                        if (a1 && a2 && t < 0.88) {
+                            const fadeOp = Math.max(0, 1 - (t / 0.85));
+                            const midX = (a1.x + a2.x) / 2;
+                            const midY = (a1.y + a2.y) / 2;
+                            svgOut += `<line x1="${a1.x}" y1="${a1.y}" x2="${a2.x}" y2="${a2.y}" stroke="#ef4444" stroke-width="${3.8 * fadeOp}" stroke-dasharray="6,6" opacity="${fadeOp}" stroke-linecap="round"/>`;
+                            if (t < 0.65) {
+                                svgOut += `<circle cx="${midX}" cy="${midY}" r="${6 + t * 22}" fill="none" stroke="#f87171" stroke-width="2" opacity="${1 - t * 1.4}"/>`;
+                            }
+                        }
+                    }
+                });
+            }
+
+            if (targetScene.arrows) {
+                const arrFont = mobile ? 16.5 : 11;
+                const arrBoxH = mobile ? 23 : 16;
+                const arrCharW = mobile ? 9.5 : 6.8;
+                const op = fadeT;
+                const pendingArrowLabels = [];
+
+                targetScene.arrows.forEach(arr => {
+                    const marker = arr.type === 'fishhook' ? 'url(#arrowFishhook)' : 'url(#arrowFull)';
+                    const col = arr.type === 'fishhook' ? '#fbbf24' : '#38bdf8';
+                    const x1 = mapStageX(arr.x1), y1 = mapStageY(arr.y1);
+                    const cx = mapStageX(arr.cx), cy = mapStageY(arr.cy);
+                    const x2 = mapStageX(arr.x2), y2 = mapStageY(arr.y2);
+                    expandBounds(Math.min(x1, cx, x2) - 10, Math.min(y1, cy, y2) - 10, Math.max(x1, cx, x2) + 10, Math.max(y1, cy, y2) + 10);
+                    svgOut += `
+                        <g opacity="${op}">
+                            <path d="M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}" fill="none" stroke="${col}" stroke-width="${mobile ? 3.2 : 2.5}" marker-end="${marker}" class="arrow-flow"/>
+                        </g>
+                    `;
+                    if (arr.label) {
+                        const bw = arr.label.length * arrCharW + 14;
+                        pendingArrowLabels.push({
+                            text: arr.label,
+                            col,
+                            lx: cx,
+                            ly: cy - arrBoxH - 5,
+                            bw,
+                            bh: arrBoxH
+                        });
+                    }
+                });
+
+                for (let pass = 0; pass < 4; pass++) {
+                    for (let i = 0; i < pendingArrowLabels.length; i++) {
+                        for (let j = i + 1; j < pendingArrowLabels.length; j++) {
+                            const A = pendingArrowLabels[i];
+                            const B = pendingArrowLabels[j];
+                            const minSepX = (A.bw + B.bw) / 2 + 10;
+                            const overlapX = Math.abs(A.lx - B.lx) < minSepX;
+                            const overlapY = Math.abs(A.ly - B.ly) < (A.bh + 4);
+                            if (overlapX && overlapY) {
+                                const push = (minSepX - Math.abs(A.lx - B.lx)) / 2 + 2;
+                                if (A.lx <= B.lx) {
+                                    A.lx -= push;
+                                    B.lx += push;
+                                } else {
+                                    A.lx += push;
+                                    B.lx -= push;
+                                }
+                            }
+                        }
+                        const L = pendingArrowLabels[i];
+                        if (L.lx - L.bw / 2 < 6) L.lx = L.bw / 2 + 6;
+                        if (L.lx + L.bw / 2 > 1034) L.lx = 1034 - L.bw / 2;
+                    }
+                }
+
+                pendingArrowLabels.forEach(L => {
+                    expandBounds(L.lx - L.bw / 2, L.ly - 2, L.lx + L.bw / 2, L.ly + L.bh + 2);
+                    svgOut += `
+                        <g opacity="${op}">
+                            <rect x="${L.lx - L.bw / 2}" y="${L.ly}" width="${L.bw}" height="${L.bh}" rx="5" fill="rgba(15,23,42,0.94)" stroke="${L.col}" stroke-width="1"/>
+                            <text x="${L.lx}" y="${L.ly + L.bh * 0.72}" text-anchor="middle" fill="${L.col}" font-size="${arrFont}" font-weight="800">${L.text}</text>
+                        </g>
+                    `;
+                });
+            }
+
+            if (targetScene.texts) {
+                targetScene.texts.forEach(tx => {
+                    const txX = mapStageX(tx.x);
+                    const txY = mapStageY(tx.y);
+                    const baseSize = tx.size || 20;
+                    const finalSize = mobile ? Math.round(baseSize * 1.45) : baseSize;
+                    expandBounds(txX - 15, txY - finalSize, txX + 15, txY + 8);
+                    svgOut += `<text x="${txX}" y="${txY}" text-anchor="middle" fill="${tx.color || '#cbd5e1'}" font-size="${finalSize}" font-weight="800" opacity="${fadeT}">${tx.text}</text>`;
+                });
+            }
+
+            const visibleAtoms = Object.values(currentAtoms).filter(a => a.opacity > 0.02);
+            const pendingLabels = [];
+            const lblFont = mobile ? 17.5 : 11;
+            const lblBoxH = mobile ? 24 : 17;
+            const lblCharW = mobile ? 9.8 : 6.4;
+            const lblStepY = mobile ? 25 : 18;
+
+            visibleAtoms.forEach(a => {
+                const geom = getNodeGeometry(a);
+                const extraRad = (a.radical || (a.lonePairs && a.lonePairs.length)) ? (mobile ? 20 : 15) : 4;
+                expandBounds(a.x - geom.halfW - extraRad, a.y - geom.halfH - extraRad, a.x + geom.halfW + extraRad, a.y + geom.halfH + extraRad);
+                svgOut += renderSingleAtomNode(a, geom);
+                if (a.label) {
+                    const isTop = a.labelPos === 'top';
+                    const rawLy = isTop ? (a.y - geom.halfH - (mobile ? 17 : 12)) : (a.y + geom.halfH + (mobile ? 21 : 15));
+                    const lw = a.label.length * lblCharW + 16;
+                    pendingLabels.push({
+                        text: a.label,
+                        lx: a.x,
+                        ly: rawLy,
+                        lw,
+                        lh: lblBoxH,
+                        isTop,
+                        opacity: a.opacity !== undefined ? a.opacity : 1
+                    });
+                }
+            });
+
+            for (let pass = 0; pass < 3; pass++) {
+                for (let i = 0; i < pendingLabels.length; i++) {
+                    for (let j = i + 1; j < pendingLabels.length; j++) {
+                        const L1 = pendingLabels[i];
+                        const L2 = pendingLabels[j];
+                        const overlapX = Math.abs(L1.lx - L2.lx) < (L1.lw + L2.lw) / 2 + 6;
+                        const overlapY = Math.abs(L1.ly - L2.ly) < lblStepY;
+                        if (overlapX && overlapY) {
+                            if (L2.isTop) L2.ly -= lblStepY;
+                            else L2.ly += lblStepY;
+                        }
+                    }
+                    const L = pendingLabels[i];
+                    if (L.lx - L.lw / 2 < 6) L.lx = L.lw / 2 + 6;
+                    if (L.lx + L.lw / 2 > 1034) L.lx = 1034 - L.lw / 2;
+                    if (L.ly < 18) L.ly = 18;
+                    if (L.ly > 365) L.ly = 365;
+                }
+            }
+
+            pendingLabels.forEach(L => {
+                expandBounds(L.lx - L.lw / 2, L.ly - lblBoxH * 0.68, L.lx + L.lw / 2, L.ly + lblBoxH * 0.35);
+                svgOut += `
+                    <g opacity="${L.opacity}">
+                        <rect x="${L.lx - L.lw / 2}" y="${L.ly - lblBoxH * 0.68}" width="${L.lw}" height="${lblBoxH}" rx="5" fill="rgba(15, 23, 42, 0.94)" stroke="rgba(148, 163, 184, 0.4)" stroke-width="1"/>
+                        <text x="${L.lx}" y="${L.ly + (mobile ? 2.5 : 0.5)}" text-anchor="middle" fill="#e2e8f0" font-size="${lblFont}" font-weight="700">${L.text}</text>
+                    </g>
+                `;
+            });
+
+            stageGroup.innerHTML = svgOut;
+
+            if (svgEl && isFinite(minX) && isFinite(maxX)) {
+                const padX = mobile ? 14 : 26;
+                const padY = mobile ? 14 : 20;
+                const targetVbX = Math.max(0, minX - padX);
+                const targetVbY = Math.max(0, minY - padY);
+                const targetVbW = Math.max(320, Math.min(1040 - targetVbX, (maxX - minX) + padX * 2));
+                const targetVbH = Math.max(190, Math.min(380 - targetVbY, (maxY - minY) + padY * 2));
+
+                if (!currentViewBox.initialized || clampedRaw >= 0.99) {
+                    currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
+                } else {
+                    const camEase = 0.22;
+                    currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
+                    currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
+                    currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
+                    currentViewBox.h = lerp(currentViewBox.h, targetVbH, camEase);
+                }
+                svgEl.setAttribute('viewBox', `${currentViewBox.x.toFixed(1)} ${currentViewBox.y.toFixed(1)} ${currentViewBox.w.toFixed(1)} ${currentViewBox.h.toFixed(1)}`);
+            }
+        }
+
+        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity) {
+            const mobile = isCompactMobile();
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const len = Math.sqrt(dx * dx + dy * dy) || 1;
+            const nx = -dy / len;
+            const ny = dx / len;
+
+            let stroke = '#cbd5e1';
+            let width = mobile ? 4.2 : 3.2;
+            let dash = '';
+            let glow = '';
+
+            if (state === 'breaking') {
+                stroke = '#ef4444';
+                width = mobile ? 5.0 : 4.0;
+                dash = 'stroke-dasharray="7,5"';
+                glow = 'filter="drop-shadow(0 0 6px rgba(239,68,68,0.8))"';
+            } else if (state === 'forming') {
+                stroke = '#10b981';
+                width = mobile ? 5.0 : 4.0;
+                dash = 'stroke-dasharray="6,4"';
+                glow = 'filter="drop-shadow(0 0 6px rgba(16,185,129,0.85))"';
+            } else if (state === 'new') {
+                stroke = '#10b981';
+                width = mobile ? 5.4 : 4.4;
+                glow = 'filter="drop-shadow(0 0 7px rgba(16,185,129,0.75))"';
+            }
+
+            let drawX2 = x2;
+            let drawY2 = y2;
+            let bondFadeOp = baseOpacity;
+            if (!existedBefore && t < 1) {
+                const growT = easeOutQuart(Math.min(1, t * 1.1));
+                drawX2 = lerp(x1, x2, growT);
+                drawY2 = lerp(y1, y2, growT);
+                bondFadeOp = baseOpacity * Math.min(1, t * 1.6);
+            }
+
+            let html = `<g opacity="${bondFadeOp}" ${glow}>`;
+
+            if (order === 1) {
+                html += `<line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${stroke}" stroke-width="${width}" ${dash} stroke-linecap="round"/>`;
+                if (existedBefore && prevOrder >= 2 && t < 0.85) {
+                    const piOp = Math.max(0, 1 - t * 1.25);
+                    const off = mobile ? 6.8 : 5.5;
+                    html += `<line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${x2 - nx * off}" y2="${y2 - ny * off}" stroke="#ef4444" stroke-width="3.4" stroke-dasharray="5,5" opacity="${piOp}" stroke-linecap="round"/>`;
+                }
+            } else if (order === 2) {
+                const off = mobile ? 6.0 : 4.8;
+                let piStroke = '#a78bfa';
+                let piDash = '';
+                let piGlow = '';
+                if (state === 'breaking-pi' || state === 'breaking') {
+                    piStroke = '#ef4444';
+                    piDash = 'stroke-dasharray="6,5"';
+                } else if (state === 'forming-pi' || state === 'forming') {
+                    piStroke = '#10b981';
+                    piDash = 'stroke-dasharray="6,4"';
+                    piGlow = 'filter="drop-shadow(0 0 6px rgba(16,185,129,0.85))"';
+                } else if (state === 'new-pi' || state === 'new') {
+                    piStroke = '#10b981';
+                    piGlow = 'filter="drop-shadow(0 0 7px rgba(16,185,129,0.8))"';
+                }
+                html += `
+                    <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="#cbd5e1" stroke-width="${mobile ? 4.2 : 3.2}" stroke-linecap="round"/>
+                    <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 4.6 : 3.6}" ${piDash} ${piGlow} stroke-linecap="round"/>
+                `;
+            } else if (order === 3) {
+                const off = mobile ? 7.6 : 6.2;
+                const piStroke = (state === 'breaking-pi' || state === 'breaking') ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : '#38bdf8');
+                const piDash = (state === 'breaking-pi' || state === 'breaking') ? 'stroke-dasharray="6,5"' : '';
+                html += `
+                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="#cbd5e1" stroke-width="${mobile ? 4.0 : 3.2}" stroke-linecap="round"/>
+                    <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 3.5 : 2.8}" ${piDash} stroke-linecap="round"/>
+                    <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 3.5 : 2.8}" ${piDash} stroke-linecap="round"/>
+                `;
+            }
+
+            html += `</g>`;
+            return html;
+        }
+
+        function renderSingleAtomNode(a, geom) {
+            const mobile = isCompactMobile();
+            const g = geom || getNodeGeometry(a);
+            const cfg = g.cfg;
+            const bg = a.bg || cfg.bg;
+            const border = a.border || cfg.border;
+            const textCol = a.text || cfg.text;
+
+            let html = `<g transform="translate(${a.x}, ${a.y})" opacity="${a.opacity !== undefined ? a.opacity : 1}">`;
+
+            if (g.isPill) {
+                const w = g.pillW;
+                const h = g.pillH;
+                const pillFont = mobile ? 18.5 : 12;
+                if (a.highlight) {
+                    html += `<rect x="${-w / 2 - 4}" y="${-h / 2 - 4}" width="${w + 8}" height="${h + 8}" rx="14" fill="none" stroke="${a.highlight}" stroke-width="2.2" opacity="0.65"/>`;
+                }
+                html += `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="11" fill="${bg}" stroke="${border}" stroke-width="2.6"/>`;
+                html += `<text x="0" y="${mobile ? 6.5 : 4.5}" text-anchor="middle" fill="${textCol}" font-size="${pillFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+            } else {
+                const r = g.r;
+                const atomFont = mobile
+                    ? (a.el === 'CH₃' ? 17.5 : (r > 20 ? 22 : 19))
+                    : (a.el === 'CH₃' ? 11.5 : (r > 15 ? 14 : 12));
+                if (a.highlight) {
+                    html += `<circle cx="0" cy="0" r="${r + 6}" fill="none" stroke="${a.highlight}" stroke-width="2.4" opacity="0.65"/>`;
+                }
+                html += `<circle cx="0" cy="0" r="${r}" fill="${bg}" stroke="${border}" stroke-width="2.8" />`;
+                html += `<text x="0" y="${mobile ? 7 : (a.el === 'CH₃' ? 4 : 5)}" text-anchor="middle" fill="${textCol}" font-size="${atomFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+            }
+
+            if (a.charge) {
+                const chargeCol = a.charge.includes('+') ? '#38bdf8' : '#f87171';
+                const cFont = mobile ? 15.5 : 10.5;
+                const cw = a.charge.length * (mobile ? 10 : 7) + (mobile ? 14 : 8);
+                const ch = mobile ? 23 : 16;
+                const cxOff = g.halfW - 4;
+                const cyOff = -g.halfH - (mobile ? 15 : 11);
+                html += `<rect x="${cxOff}" y="${cyOff}" width="${cw}" height="${ch}" rx="6" fill="#0f172a" stroke="${chargeCol}" stroke-width="1.6"/>`;
+                html += `<text x="${cxOff + cw / 2}" y="${cyOff + (mobile ? 16.5 : 11.5)}" text-anchor="middle" fill="${chargeCol}" font-size="${cFont}" font-weight="800">${a.charge}</text>`;
+            }
+
+            if (a.radical) {
+                const radDist = mobile ? 11 : 8;
+                let rx = g.halfW + radDist, ry = 0;
+                if (typeof a.radicalAngle === 'number') {
+                    rx = Math.cos(a.radicalAngle) * (g.halfW + radDist);
+                    ry = Math.sin(a.radicalAngle) * (g.halfH + radDist);
+                } else {
+                    if (a.radical === 'left') { rx = -g.halfW - radDist; ry = 0; }
+                    if (a.radical === 'top') { rx = 0; ry = -g.halfH - radDist; }
+                    if (a.radical === 'bottom') { rx = 0; ry = g.halfH + radDist; }
+                }
+                const radOp = a.radicalOpacity !== undefined ? a.radicalOpacity : 1;
+                html += `<g opacity="${radOp}">`;
+                html += `<circle cx="${rx}" cy="${ry}" r="${mobile ? 15 : 11}" fill="rgba(251, 191, 36, 0.3)"/>`;
+                html += `<circle class="radical-dot" cx="${rx}" cy="${ry}" r="${mobile ? 8 : 5.5}" fill="#fbbf24" stroke="#fef08a" stroke-width="1.8"/>`;
+                html += `</g>`;
+            }
+
+            if (Array.isArray(a.lonePairs) && a.lonePairs.length > 0) {
+                const lpDist = mobile ? 10 : 7.5;
+                const dotSep = mobile ? 5.2 : 3.8;
+                const dotR = mobile ? 3.6 : 2.6;
+                const DIR_ANGLES = {
+                    'right': 0,
+                    'bottom-right': Math.PI / 4,
+                    'bottom': Math.PI / 2,
+                    'bottom-left': (3 * Math.PI) / 4,
+                    'left': Math.PI,
+                    'top-left': -(3 * Math.PI) / 4,
+                    'top': -Math.PI / 2,
+                    'top-right': -Math.PI / 4
+                };
+                a.lonePairs.forEach(lp => {
+                    const ang = (typeof lp === 'number') ? (lp * Math.PI / 180) : (DIR_ANGLES[lp] !== undefined ? DIR_ANGLES[lp] : -Math.PI / 2);
+                    const cx = Math.cos(ang) * (g.halfW + lpDist);
+                    const cy = Math.sin(ang) * (g.halfH + lpDist);
+                    const tx = -Math.sin(ang) * dotSep;
+                    const ty = Math.cos(ang) * dotSep;
+                    html += `
+                        <g>
+                            <circle cx="${(cx + tx).toFixed(1)}" cy="${(cy + ty).toFixed(1)}" r="${dotR}" fill="#38bdf8" stroke="#0f172a" stroke-width="0.9"/>
+                            <circle cx="${(cx - tx).toFixed(1)}" cy="${(cy - ty).toFixed(1)}" r="${dotR}" fill="#38bdf8" stroke="#0f172a" stroke-width="0.9"/>
+                        </g>
+                    `;
+                });
+            }
+
+            html += `</g>`;
+            return html;
+        }
+
+        function updateGlobalScrubberUI(stepProgressT) {
+            const scrubber = document.getElementById('transitionScrubber');
+            const pctText = document.getElementById('scrubberPercentText');
+            if (!scrubber || !pctText) return;
+            const steps = getActiveSteps();
+            const totalSteps = steps.length;
+            if (totalSteps <= 1) {
+                const pct = Math.round(stepProgressT * 100);
+                scrubber.value = pct;
+                pctText.innerText = pct + '%';
+                return;
+            }
+            let globalProgress = 0;
+            if (steps[0].initialScene) {
+                globalProgress = ((currentStepIdx + stepProgressT) / totalSteps) * 100;
+            } else if (currentStepIdx === 0) {
+                globalProgress = 0;
+            } else {
+                const totalTransitions = totalSteps - 1;
+                const completedBefore = currentStepIdx - 1;
+                globalProgress = ((completedBefore + stepProgressT) / totalTransitions) * 100;
+            }
+            const pct = Math.min(100, Math.max(0, Math.round(globalProgress)));
+            scrubber.value = pct;
+            pctText.innerText = pct + '%';
+        }
+
+        function animateToScene(prevScene, targetScene, instant = false) {
+            if (animFrameId) {
+                cancelAnimationFrame(animFrameId);
+                animFrameId = null;
+            }
+            currentPrevSceneForScrub = prevScene || targetScene;
+            currentTargetSceneForScrub = targetScene;
+
+            if (instant || !prevScene) {
+                renderInterpolatedFrame(targetScene, targetScene, 1);
+                lastSceneState = targetScene;
+                updateGlobalScrubberUI(1);
+                return;
+            }
+            const startTime = performance.now();
+            function tick(now) {
+                const elapsed = now - startTime;
+                const rawT = Math.min(1, elapsed / ANIM_DURATION);
+                renderInterpolatedFrame(prevScene, targetScene, rawT);
+                updateGlobalScrubberUI(rawT);
+                if (rawT < 1) {
+                    animFrameId = requestAnimationFrame(tick);
+                } else {
+                    lastSceneState = targetScene;
+                    animFrameId = null;
+                }
+            }
+            animFrameId = requestAnimationFrame(tick);
+        }
+
+        function scrubTransitionManually(val) {
+            stopAutoPlay();
+            if (animFrameId) {
+                cancelAnimationFrame(animFrameId);
+                animFrameId = null;
+            }
+            const globalT = Number(val) / 100;
+            const pctText = document.getElementById('scrubberPercentText');
+            if (pctText) pctText.innerText = Math.round(globalT * 100) + '%';
+
+            const steps = getActiveSteps();
+            const n = steps.length;
+            const hasInit0 = !!steps[0].initialScene;
+            const totalTransitions = hasInit0 ? n : Math.max(1, n - 1);
+
+            const scaled = globalT * totalTransitions;
+            let transIdx = Math.floor(scaled);
+            let localT = scaled - transIdx;
+            if (transIdx >= totalTransitions) {
+                transIdx = totalTransitions - 1;
+                localT = 1;
+            }
+
+            let targetIdx = hasInit0 ? transIdx : (transIdx + 1);
+            if (n === 1) targetIdx = 0;
+
+            currentStepIdx = targetIdx;
+            const step = steps[currentStepIdx];
+
+            const pillsHtml = steps.map((st, idx) => `
+                <button onclick="goToStep(${idx})" class="px-3 py-1 rounded-lg text-xs font-extrabold transition border ${
+                    idx === currentStepIdx
+                        ? 'bg-violet-600 text-white border-violet-400 shadow-sm'
+                        : (idx < currentStepIdx ? 'bg-emerald-950/60 text-emerald-300 border-emerald-600/40' : 'bg-slate-900 text-slate-400 border-slate-800 hover:border-slate-700')
+                }">
+                    ${idx < currentStepIdx ? '✓ ' : ''}Paso ${idx + 1}
+                </button>
+            `).join('');
+            document.getElementById('stepPillsContainer').innerHTML = pillsHtml;
+            document.getElementById('stepCounterText').innerText = `Paso ${currentStepIdx + 1} de ${steps.length}`;
+            document.getElementById('stepNumberBadge').innerText = `PASO ${currentStepIdx + 1} DE ${steps.length}`;
+            document.getElementById('stepTitleText').innerText = step.title;
+            if (step.legend) {
+                document.getElementById('legendBreakingText').innerText = step.legend.breaking;
+                document.getElementById('legendFormingText').innerText = step.legend.forming;
+                document.getElementById('legendMovementText').innerText = step.legend.movement;
+            }
+            document.getElementById('semiStepBox').innerText = step.semiStep;
+            document.getElementById('semiGlobalBox').innerText = step.semiGlobal;
+            document.getElementById('stepExplanationText').innerText = step.desc;
+            document.getElementById('btnPrev').disabled = (currentStepIdx === 0);
+            document.getElementById('btnNext').disabled = (currentStepIdx === steps.length - 1);
+
+            const targetScene = step.scene();
+            const prevScene = currentStepIdx > 0
+                ? steps[currentStepIdx - 1].scene()
+                : (step.initialScene ? step.initialScene() : targetScene);
+
+            renderInterpolatedFrame(prevScene, targetScene, localT);
+            lastSceneState = targetScene;
+        }
+
+        function replayCurrentTransition() {
+            stopAutoPlay();
+            const steps = getActiveSteps();
+            const stepObj = steps[currentStepIdx];
+            const currentScene = stepObj.scene();
+            if (currentStepIdx > 0) {
+                const prevScene = steps[currentStepIdx - 1].scene();
+                animateToScene(prevScene, currentScene, false);
+            } else if (stepObj.initialScene) {
+                animateToScene(stepObj.initialScene(), currentScene, false);
+            } else {
+                animateToScene({ atoms: [], bonds: [] }, currentScene, false);
+            }
+        }
+
+        function hydrateReactionFromJson(rxnKey, rawRxn) {
+            LAB_DATA[rxnKey] = {
+                category: rawRxn.category || 'reacciones',
+                title: rawRxn.title || rxnKey,
+                natureBadge: rawRxn.natureBadge || 'Mecanismo Interactivo Paso a Paso',
+                description: rawRxn.description || (rawRxn.meta && rawRxn.meta.detalleMecanismo) || '',
+                meta: rawRxn.meta || {},
+                deltaH: rawRxn.deltaH || '',
+                substrates: Array.isArray(rawRxn.substrates) && rawRxn.substrates.length > 0
+                    ? rawRxn.substrates
+                    : [{ id: 'default', name: rawRxn.title || rxnKey }],
+                catalysts: Array.isArray(rawRxn.catalysts) && rawRxn.catalysts.length > 0
+                    ? rawRxn.catalysts
+                    : ['Condiciones Estándar'],
+                getSteps: (subId, catName) => {
+                    if (rawRxn.delegateTo && LAB_DATA[rawRxn.delegateTo]) {
+                        return LAB_DATA[rawRxn.delegateTo].getSteps(rawRxn.delegateSubId || subId, catName);
+                    }
+                    const mapBySub = rawRxn.stepsBySubstrate || {};
+                    const chosenSteps = mapBySub[subId] || mapBySub['default'] || Object.values(mapBySub)[0] || rawRxn.steps || [];
+                    return expandStepsToVisualMicroSteps(chosenSteps);
+                }
+            };
+        }
+
+        function setJsonStatus(status, pillText, diagnosticHtml = '') {
+            const pill = document.getElementById('jsonStatusPill');
+            const banner = document.getElementById('jsonDiagnosticBanner');
+            const detail = document.getElementById('jsonDiagnosticDetail');
+
+            if (pill) {
+                if (status === 'ok') {
+                    pill.className = 'px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-bold text-emerald-300';
+                } else if (status === 'warn') {
+                    pill.className = 'px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-bold text-amber-300';
+                } else if (status === 'error') {
+                    pill.className = 'px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-xs font-bold text-rose-300';
+                } else {
+                    pill.className = 'px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-xs font-bold text-cyan-300';
+                }
+                pill.innerText = pillText;
+            }
+
+            if (banner && detail) {
+                if (diagnosticHtml) {
+                    detail.innerHTML = diagnosticHtml;
+                    banner.classList.remove('hidden');
+                } else {
+                    banner.classList.add('hidden');
+                }
+            }
+        }
+
+        function buildCandidateRawUrls(primaryUrl) {
+            const urls = [];
+            const clean = (primaryUrl || '').trim();
+            if (clean) {
+                urls.push(clean);
+                if (clean.includes('/refs/heads/')) {
+                    urls.push(clean.replace('/refs/heads/', '/'));
+                }
+                const ghMatch = clean.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
+                if (ghMatch) {
+                    const [, user, repo, branch, filePath] = ghMatch;
+                    urls.push(`https://cdn.jsdelivr.net/gh/${user}/${repo}@${branch}/${filePath}`);
+                }
+            }
+            urls.push('./labquim.json');
+            return [...new Set(urls)];
+        }
+
+        function buildCandidateReactionUrls(rxnKey) {
+            const urls = [];
+            const base = REACTIONS_BASE_URL.endsWith('/') ? REACTIONS_BASE_URL : `${REACTIONS_BASE_URL}/`;
+            const primary = `${base}${rxnKey}.json`;
+            urls.push(primary);
+            if (primary.includes('/refs/heads/')) {
+                urls.push(primary.replace('/refs/heads/', '/'));
+            }
+            const ghMatch = primary.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/(?:refs\/heads\/)?([^/]+)\/(.+)$/);
+            if (ghMatch) {
+                const [, user, repo, branch, filePath] = ghMatch;
+                urls.push(`https://cdn.jsdelivr.net/gh/${user}/${repo}@${branch}/${filePath}`);
+            }
+            urls.push(`./reactions/${rxnKey}.json`);
+            return [...new Set(urls)];
+        }
+
+        async function loadDatabaseFromJson() {
+            const candidateUrls = buildCandidateRawUrls(GITHUB_RAW_URL);
+            let lastError = null;
+
+            for (const url of candidateUrls) {
+                try {
+                    const response = await fetch(url, { cache: 'no-store' });
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status} al consultar ${url}`);
+                    }
+                    const rawText = await response.text();
+                    const payload = parseFlexibleJson(rawText);
+                    applyJsonPayload(payload);
+
+                    const unitsCount = FUNCTION_CATALOG.length || Object.keys(FUNCTION_MENUS).length;
+                    setJsonStatus('ok', `🟢 Índice Activo (${unitsCount} unidades)`);
+                    return true;
+                } catch (err) {
+                    lastError = err;
+                }
+            }
+
+            const errMsg = lastError ? String(lastError.message || lastError) : 'Error desconocido';
+            setJsonStatus(
+                'error',
+                '🔴 Error al leer labquim.json',
+                `<strong>Detalle técnico:</strong> <code class="font-mono text-rose-200">${errMsg}</code><br/>
+                 • Verifica que el repositorio <code class="font-mono">JPSDPOV/LabQuim</code> sea <strong>Public</strong> y que el archivo maestro <code class="font-mono">labquim.json</code> tenga formato JSON válido.`
+            );
+            return false;
+        }
+
+        async function ensureReactionLoaded(rxnKey) {
+            if (!rxnKey) return false;
+            if (LOADED_REACTIONS.has(rxnKey)) {
+                setJsonStatus('ok', `🟢 reactions/${rxnKey}.json (${LOADED_REACTIONS.size} en caché)`);
+                return true;
+            }
+
+            setJsonStatus('loading', `🔄 Cargando reactions/${rxnKey}.json...`);
+            const candidateUrls = buildCandidateReactionUrls(rxnKey);
+
+            for (const url of candidateUrls) {
+                try {
+                    const response = await fetch(url, { cache: 'no-store' });
+                    if (!response.ok) continue;
+
+                    const rawText = await response.text();
+                    let payload = parseFlexibleJson(rawText);
+
+                    if (payload && typeof payload === 'object') {
+                        if (payload.reactions && payload.reactions[rxnKey]) {
+                            payload = payload.reactions[rxnKey];
+                        } else if (!payload.stepsBySubstrate && !payload.steps && !payload.title && payload[rxnKey]) {
+                            payload = payload[rxnKey];
+                        }
+                    }
+
+                    if (payload && typeof payload === 'object' && (payload.stepsBySubstrate || payload.steps || payload.title || payload.delegateTo)) {
+                        hydrateReactionFromJson(rxnKey, payload);
+                        LOADED_REACTIONS.add(rxnKey);
+
+                        if (payload.delegateTo && !LOADED_REACTIONS.has(payload.delegateTo)) {
+                            await ensureReactionLoaded(payload.delegateTo);
+                        }
+
+                        setJsonStatus('ok', `🟢 reactions/${rxnKey}.json (${LOADED_REACTIONS.size} cargadas)`);
+                        return true;
+                    }
+                } catch (err) {
+                    console.warn(`Error leyendo ${url}:`, err);
+                }
+            }
+
+            setJsonStatus('warn', `🟡 Pendiente: reactions/${rxnKey}.json (vista previa)`);
+            return false;
+        }
+
+        async function ensureUnitLoaded(funcKey) {
+            const unitUrl = (UNIT_FILES[funcKey] || '').trim();
+            if (!unitUrl || LOADED_UNIT_URLS.has(unitUrl)) return;
+            try {
+                const response = await fetch(unitUrl, { cache: 'no-store' });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const rawText = await response.text();
+                const unitPayload = parseFlexibleJson(rawText);
+                applyJsonPayload(unitPayload);
+                LOADED_UNIT_URLS.add(unitUrl);
+            } catch (err) {
+                console.warn(`No se pudo cargar el módulo JSON de la unidad ${funcKey}:`, err);
+            }
+        }
+
+        function getFunctionLabel(funcKey) {
+            const found = FUNCTION_CATALOG.find(f => f.value === funcKey);
+            return found ? found.label : (funcKey || '').toUpperCase();
+        }
+
+        function renderFunctionCards() {
+            const grid = document.getElementById('functionCardsGrid');
+            if (!grid) return;
+            const list = FUNCTION_CATALOG.length > 0
+                ? FUNCTION_CATALOG
+                : Object.keys(FUNCTION_MENUS).map(k => ({ value: k, label: k.toUpperCase() }));
+
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-6 text-sm text-rose-300">No se encontraron unidades en labquim.json.</div>`;
+                return;
+            }
+
+            grid.innerHTML = list.map(f => `
+                <button type="button" onclick="wizardSelectFunction('${f.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/85 hover:bg-violet-950/40 border border-slate-800 hover:border-violet-400 transition-all shadow-md flex items-center justify-between gap-3 active:scale-[0.99]">
+                    <span class="text-sm sm:text-base font-extrabold text-slate-100 group-hover:text-violet-200 transition">${f.label}</span>
+                    <span class="text-slate-500 group-hover:text-violet-300 text-sm font-bold shrink-0">➡</span>
+                </button>
+            `).join('');
+        }
+
+        function showWizardStage(stageNum) {
+            wizardStage = stageNum;
+            const s1 = document.getElementById('wizardStep1');
+            const s2 = document.getElementById('wizardStep2');
+            const s3 = document.getElementById('wizardStep3');
+            const s4 = document.getElementById('wizardStep4');
+            const btnBack = document.getElementById('btnWizardBack');
+            const breadcrumb = document.getElementById('wizardBreadcrumb');
+
+            [s1, s2, s3, s4].forEach(el => { if (el) el.classList.add('hidden'); });
+            if (stageNum === 1 && s1) s1.classList.remove('hidden');
+            if (stageNum === 2 && s2) s2.classList.remove('hidden');
+            if (stageNum === 3 && s3) s3.classList.remove('hidden');
+            if (stageNum === 4 && s4) s4.classList.remove('hidden');
+
+            if (btnBack) {
+                btnBack.classList.toggle('hidden', stageNum <= 1);
+            }
+
+            if (breadcrumb) {
+                const fnLabel = currentFunction ? getFunctionLabel(currentFunction) : '';
+                const catLabel = currentCategory === 'obtencion' ? '📥 Métodos de Obtención' : (currentCategory === 'reacciones' ? '⚡ Reacciones Químicas' : '');
+                let parts = [];
+
+                if (stageNum === 1) {
+                    parts.push(`<span class="text-violet-300 font-bold">Paso 1 de 4: Función Química</span>`);
+                } else {
+                    parts.push(`<button type="button" onclick="showWizardStage(1)" class="text-violet-300 hover:underline font-bold">${fnLabel}</button>`);
+                    if (stageNum === 2) {
+                        parts.push(`<span class="text-slate-600">›</span> <span class="text-cyan-300 font-bold">Paso 2 de 4</span>`);
+                    } else if (stageNum >= 3) {
+                        parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(2)" class="text-cyan-300 hover:underline font-bold">${catLabel}</button>`);
+                        if (stageNum === 3) {
+                            parts.push(`<span class="text-slate-600">›</span> <span class="text-emerald-300 font-bold">Paso 3 de 4</span>`);
+                        } else if (stageNum === 4) {
+                            const itemTitle = (LAB_DATA[currentKey] && LAB_DATA[currentKey].title) || currentKey;
+                            parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(3)" class="text-emerald-300 hover:underline font-bold truncate max-w-[180px] sm:max-w-xs inline-block align-bottom">${itemTitle}</button>`);
+                        }
+                    }
+                }
+                breadcrumb.innerHTML = parts.join(' ');
+            }
+        }
+
+        function wizardGoBack() {
+            if (wizardStage > 1) {
+                showWizardStage(wizardStage - 1);
+            }
+        }
+
+        async function wizardSelectFunction(funcKey) {
+            currentFunction = funcKey;
+            currentCategory = '';
+            currentKey = '';
+            await ensureUnitLoaded(funcKey);
+
+            const cfg = FUNCTION_MENUS[funcKey] || { obtencion: [], reacciones: [] };
+            const obtCount = (cfg.obtencion || []).length;
+            const rxnCount = (cfg.reacciones || []).length;
+
+            document.getElementById('wiz2FuncBadge').innerText = getFunctionLabel(funcKey);
+            document.getElementById('wizCountObtencion').innerText = `${obtCount} ${obtCount === 1 ? 'método' : 'métodos'}`;
+            document.getElementById('wizCountReacciones').innerText = `${rxnCount} ${rxnCount === 1 ? 'reacción' : 'reacciones'}`;
+
+            showWizardStage(2);
+        }
+
+        function wizardSelectCategory(catType) {
+            currentCategory = catType;
+            const cfg = FUNCTION_MENUS[currentFunction] || { obtencion: [], reacciones: [] };
+            const items = cfg[catType] || [];
+            const isObt = catType === 'obtencion';
+
+            const badge = document.getElementById('wiz3CatBadge');
+            badge.className = isObt
+                ? 'inline-block mx-auto px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-xs font-bold text-emerald-300'
+                : 'inline-block mx-auto px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-bold text-amber-300';
+            badge.innerText = isObt ? '📥 Métodos de Obtención' : '⚡ Reacciones Químicas';
+
+            document.getElementById('wiz3Heading').innerText = isObt
+                ? 'Elige un Método de Obtención'
+                : 'Elige una Reacción Química';
+
+            const listEl = document.getElementById('reactionListGrid');
+            if (items.length === 0) {
+                listEl.innerHTML = `<div class="text-center py-6 text-sm text-slate-400">No hay elementos registrados en esta categoría todavía.</div>`;
+            } else {
+                listEl.innerHTML = items.map(it => `
+                    <button type="button" onclick="wizardSelectReactionItem('${it.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/90 hover:bg-slate-800/90 border border-slate-800 ${isObt ? 'hover:border-emerald-400/70' : 'hover:border-amber-400/70'} transition-all flex items-center justify-between gap-3 active:scale-[0.99]">
+                        <span class="text-sm sm:text-base font-bold text-slate-100 ${isObt ? 'group-hover:text-emerald-200' : 'group-hover:text-amber-200'}">${it.label}</span>
+                        <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-700 text-slate-300 shrink-0">Ver ➡</span>
+                    </button>
+                `).join('');
+            }
+
+            showWizardStage(3);
+        }
+
+        async function wizardSelectReactionItem(rxnKey) {
+            currentKey = rxnKey;
+            currentSubIdx = 0;
+            currentCatIdx = 0;
+            currentStepIdx = 0;
+            lastSceneState = null;
+            currentViewBox.initialized = false;
+
+            document.getElementById('wiz4Title').innerText = 'Cargando reacciones y catalizadores...';
+            const descEl = document.getElementById('wiz4DescriptionBox');
+            if (descEl) descEl.innerText = 'Cargando explicación del método o reacción...';
+            document.getElementById('wiz4SubstratesList').innerHTML = `<div class="text-center py-6 text-xs text-slate-400 animate-pulse">Descargando datos de la reacción...</div>`;
+            showWizardStage(4);
+
+            await ensureReactionLoaded(rxnKey);
+            const item = ensureReactionExists(rxnKey, currentFunction || 'alcanos');
+
+            document.getElementById('wiz4Title').innerText = item.title;
+            if (descEl) {
+                const explanationText = item.description
+                    || (item.meta && (item.meta.detalleMecanismo || item.meta.reaccionMecanismo))
+                    || 'Selecciona una reacción de la lista inferior para iniciar la visualización interactiva.';
+                descEl.innerText = explanationText;
+            }
+
+            const subBox = document.getElementById('wiz4SubstratesList');
+            const defaultCatText = item.catalysts[0] || 'Condiciones Estándar';
+
+            subBox.innerHTML = item.substrates.map((s, idx) => {
+                const subCat = s.catalyst || (item.catalysts.length === item.substrates.length ? item.catalysts[idx] : defaultCatText);
+                return `
+                <button type="button" onclick="wizardLaunchReaction(${idx})" class="group text-left p-4 rounded-2xl bg-gradient-to-r from-slate-950 to-slate-900 hover:from-violet-950/60 hover:to-slate-900 border border-slate-800 hover:border-violet-400 transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 active:scale-[0.99]">
+                    <div class="flex flex-col gap-1">
+                        <span class="text-sm sm:text-base font-extrabold text-white group-hover:text-violet-200 transition">${s.name}</span>
+                        <span class="text-xs font-semibold text-cyan-300/90">⚙️ Catalizador: ${subCat}</span>
+                    </div>
+                    <span class="self-start sm:self-center px-3.5 py-2 rounded-xl bg-violet-600 group-hover:bg-violet-500 text-white text-xs font-extrabold shadow-md shadow-violet-600/25 shrink-0 flex items-center gap-1.5">
+                        <span>▶</span> <span>Animar Reacción</span>
+                    </span>
+                </button>
+            `;
+            }).join('');
+        }
+
+        function wizardSelectCatalyst(catIdx) {
+            currentCatIdx = catIdx;
+            wizardSelectReactionItem(currentKey);
+        }
+
+        function wizardLaunchReaction(subIdx) {
+            currentSubIdx = subIdx;
+            const item = ensureReactionExists(currentKey || 'cracking', currentFunction || 'alcanos');
+            currentCatIdx = (item.catalysts && item.catalysts.length === item.substrates.length) ? subIdx : 0;
+            currentStepIdx = 0;
+            lastSceneState = null;
+            currentViewBox.initialized = false;
+            openFullscreenPlayer();
+        }
+
+        function ensureReactionExists(key, funcKey) {
+            if (LAB_DATA[key]) return LAB_DATA[key];
+            const cfg = FUNCTION_MENUS[funcKey] || FUNCTION_MENUS.alcanos || { obtencion: [], reacciones: [] };
+            let foundLabel = key;
+            let catType = 'obtencion';
+            const inObt = (cfg.obtencion || []).find(o => o.value === key);
+            if (inObt) {
+                foundLabel = inObt.label;
+                catType = 'obtencion';
+            } else {
+                const inRxn = (cfg.reacciones || []).find(r => r.value === key);
+                if (inRxn) {
+                    foundLabel = inRxn.label;
+                    catType = 'reacciones';
+                }
+            }
+            const parts = foundLabel.split(/→|⇄/);
+            const leftSide = (parts[0] || foundLabel).replace(/^[A-Z0-9\.\-\)\s]+/, '').trim();
+            const rightSide = (parts[1] || 'Producto Principal Desarrollado').replace(/\)$/, '').trim();
+
+            LAB_DATA[key] = {
+                category: catType,
+                title: foundLabel,
+                natureBadge: 'Vista Previa (Pendiente reactions/' + key + '.json)',
+                meta: {
+                    grupoFuncional: rightSide,
+                    reaccionMecanismo: foundLabel,
+                    naturaleza: `Archivo reactions/${key}.json pendiente de subir al repositorio.`,
+                    rupturaIntermediarios: 'Ruptura del enlace reactivo en el sustrato e incorporación del grupo atacante.',
+                    detalleMecanismo: `${leftSide} ──► ${rightSide}`,
+                    reactivosCondiciones: leftSide,
+                    rolReactivos: `• Sustrato y reactivo: ${leftSide}.
+• Producto principal: ${rightSide}.`,
+                    reglasObs: `Sube el archivo reactions/${key}.json a GitHub para activar la animación átomo por átomo.`
+                },
+                deltaH: `${leftSide} → ${rightSide}`,
+                substrates: [{ id: `${key}_sub1`, name: foundLabel }],
+                catalysts: ['Condiciones Estándar del Programa Oficial'],
+                getSteps: () => expandStepsToVisualMicroSteps([
+                    {
+                        title: `Paso 1 — Estado Inicial Intacto: ${leftSide}`,
+                        semiStep: `${leftSide}  (Sustratos iniciales intactos antes de reaccionar)`,
+                        semiGlobal: `${leftSide}  ──►  ${rightSide}`,
+                        desc: `Observa en el pizarrón el estado inicial intacto de los reactivos: ${leftSide}.`,
+                        legend: {
+                            breaking: 'Ningún enlace roto todavía; estado inicial intacto.',
+                            forming: 'Ningún enlace formado todavía.',
+                            movement: 'Aproximación inicial de los reactivos.'
+                        },
+                        scene: () => ({
+                            atoms: [
+                                { id: 'Sub_A', el: leftSide.substring(0, 32), x: 310, y: 180, label: 'Reactivos iniciales' },
+                                { id: 'Act_B', el: 'Medio / Catalizador', x: 650, y: 180, label: 'Condiciones del medio' }
+                            ],
+                            bonds: [{ from: 'Sub_A', to: 'Act_B', order: 1, state: 'normal' }]
+                        })
+                    },
+                    {
+                        title: `Paso 2 — Producto Mayoritario Desarrollado: ${rightSide}`,
+                        semiStep: `PRODUCTO OBTENIDO: ${rightSide}`,
+                        semiGlobal: `${leftSide}  ──►  ${rightSide}`,
+                        desc: `Se completó la transformación química obteniéndose como producto principal: ${rightSide}.`,
+                        legend: {
+                            breaking: 'Ruptura de los enlaces iniciales completada.',
+                            forming: 'Nuevos enlaces consolidados en ' + rightSide + ' (en verde sólido).',
+                            movement: 'Producto final estabilizado en el centro del pizarrón.'
+                        },
+                        scene: () => ({
+                            atoms: [
+                                { id: 'Sub_A', el: rightSide.substring(0, 36), x: 460, y: 180, highlight: '#10b981', label: rightSide }
+                            ],
+                            bonds: []
+                        })
+                    }
+                ])
+            };
+            return LAB_DATA[key];
+        }
+
+        function goToStep(idx) {
+            stopAutoPlay();
+            const steps = getActiveSteps();
+            if (idx >= 0 && idx < steps.length) {
+                const prevScene = idx === 0 && steps[0].initialScene
+                    ? steps[0].initialScene()
+                    : steps[currentStepIdx].scene();
+                currentStepIdx = idx;
+                renderStepStage(prevScene, false);
+            }
+        }
+
+        function nextStep() {
+            const steps = getActiveSteps();
+            if (currentStepIdx < steps.length - 1) {
+                const prevScene = steps[currentStepIdx].scene();
+                currentStepIdx++;
+                renderStepStage(prevScene, false);
+            } else {
+                stopAutoPlay();
+            }
+        }
+
+        function prevStep() {
+            stopAutoPlay();
+            if (currentStepIdx > 0) {
+                const steps = getActiveSteps();
+                currentStepIdx--;
+                const prevScene = currentStepIdx === 0 && steps[0].initialScene
+                    ? steps[0].initialScene()
+                    : steps[currentStepIdx].scene();
+                renderStepStage(prevScene, false);
+            }
+        }
+
+        function toggleAutoPlay() {
+            if (autoPlayTimer) {
+                stopAutoPlay();
+            } else {
+                const steps = getActiveSteps();
+                if (currentStepIdx >= steps.length - 1) {
+                    currentStepIdx = 0;
+                    renderStepStage(null, true);
+                }
+                document.getElementById('playIcon').innerText = '⏸';
+                document.getElementById('playText').innerText = 'Pausar';
+                autoPlayTimer = setInterval(() => {
+                    const st = getActiveSteps();
+                    if (currentStepIdx < st.length - 1) {
+                        const prevScene = st[currentStepIdx].scene();
+                        currentStepIdx++;
+                        renderStepStage(prevScene, false);
+                    } else {
+                        stopAutoPlay();
+                    }
+                }, ANIM_DURATION + 1800);
+            }
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayTimer) {
+                clearInterval(autoPlayTimer);
+                autoPlayTimer = null;
+            }
+            const icon = document.getElementById('playIcon');
+            const txt = document.getElementById('playText');
+            if (icon) icon.innerText = '▶';
+            if (txt) txt.innerText = 'Auto-Play';
+        }
+
+        function getActiveSteps() {
+            const item = ensureReactionExists(currentKey || 'cracking', currentFunction || 'alcanos');
+            const sub = item.substrates[currentSubIdx] || item.substrates[0];
+            const cat = item.catalysts[currentCatIdx] || item.catalysts[0];
+            return item.getSteps(sub.id, cat);
+        }
+
+        function renderFullLab(instant = false) {
+            const item = ensureReactionExists(currentKey || 'cracking', currentFunction || 'alcanos');
+            const activeSub = item.substrates[currentSubIdx] || {};
+            const activeCat = activeSub.catalyst || item.catalysts[currentCatIdx] || item.catalysts[0] || '';
+            const catBadge = document.getElementById('playerCatalystBadge');
+            if (catBadge) catBadge.innerText = `⚙️ ${activeCat}`;
+
+            if (item.meta) {
+                document.getElementById('metaGrupoFuncional').innerText = item.meta.grupoFuncional || '';
+                document.getElementById('metaReaccionMecanismo').innerText = item.meta.reaccionMecanismo || '';
+                document.getElementById('metaNaturaleza').innerText = item.meta.naturaleza || '';
+                document.getElementById('metaRupturaIntermediarios').innerText = item.meta.rupturaIntermediarios || '';
+                document.getElementById('metaDetalleMecanismo').innerText = item.meta.detalleMecanismo || '';
+                document.getElementById('metaReactivosCondiciones').innerText = item.meta.reactivosCondiciones || '';
+                document.getElementById('metaRolReactivos').innerText = item.meta.rolReactivos || '';
+                document.getElementById('metaReglasObs').innerText = item.meta.reglasObs || '';
+            }
+
+            renderStepStage(lastSceneState, instant);
+        }
+
+        function renderStepStage(prevScene, instant = false) {
+            const steps = getActiveSteps();
+            const step = steps[currentStepIdx];
+
+            document.getElementById('stepCounterText').innerText = `${currentStepIdx + 1}/${steps.length}`;
+            document.getElementById('stepNumberBadge').innerText = `PASO ${currentStepIdx + 1} DE ${steps.length}`;
+            document.getElementById('stepTitleText').innerText = step.title;
+
+            if (step.legend) {
+                document.getElementById('legendBreakingText').innerText = step.legend.breaking;
+                document.getElementById('legendFormingText').innerText = step.legend.forming;
+                document.getElementById('legendMovementText').innerText = step.legend.movement;
+            }
+
+            const targetScene = step.scene();
+            const startSceneForTransition = (currentStepIdx === 0 && step.initialScene)
+                ? step.initialScene()
+                : (prevScene || lastSceneState);
+            const shouldBeInstant = instant && !(currentStepIdx === 0 && step.initialScene);
+            animateToScene(startSceneForTransition, targetScene, shouldBeInstant);
+
+            document.getElementById('semiStepBox').innerText = step.semiStep;
+            document.getElementById('semiGlobalBox').innerText = step.semiGlobal;
+            document.getElementById('stepExplanationText').innerText = step.desc;
+
+            document.getElementById('btnPrev').disabled = (currentStepIdx === 0);
+            document.getElementById('btnNext').disabled = (currentStepIdx === steps.length - 1);
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+            if (isStageFullscreen) {
+                if (e.key === 'ArrowRight') nextStep();
+                if (e.key === 'ArrowLeft') prevStep();
+                if (e.key === 'Escape') {
+                    const leftOpen = !document.getElementById('drawerLeftParams').classList.contains('-translate-x-full');
+                    const rightOpen = !document.getElementById('drawerRightExplain').classList.contains('translate-x-full');
+                    if (leftOpen || rightOpen) closeAllDrawers();
+                    else returnToReactionExamples();
+                }
+            }
+        });
+
+        window.onload = async () => {
+            await loadDatabaseFromJson();
+            renderFunctionCards();
+            showWizardStage(1);
+        };
+    </script>
+</body>
+</html>
