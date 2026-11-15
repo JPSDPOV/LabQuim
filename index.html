@@ -848,10 +848,6 @@
         function parseFlexibleJson(rawText) {
             let cleaned = String(rawText || '').trim();
             cleaned = cleaned.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
-            cleaned = cleaned.replace(/(:\s*"[^"
-]*?)<([a-zA-Z0-9]+)\s+([a-zA-Z-]+)="([^"
-]*)"([^"
-]*")/g, "$1<$2 $3='$4'$5");
             cleaned = cleaned.replace(/,\s*([}\]])/g, '$1');
             return JSON.parse(cleaned);
         }
