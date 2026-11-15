@@ -698,10 +698,124 @@
             return scene;
         }
 
+        function buildSemidevelopedBannerScene(semiText, badgeLabel, accentColor) {
+            const raw = String(semiText || '').trim();
+            const clean = raw
+                .replace(/\s*\([^)]*intactos[^)]*\)\s*/gi, '')
+                .replace(/^PRODUCTO OBTENIDO:\s*/i, '')
+                .replace(/\s*──\([^)]+\)──►.*$/, '')
+                .replace(/\s*──►\s*$/, '')
+                .trim();
+
+            const sides = clean.split(/──►|→|⇄/);
+            const expr = (sides.length > 1 && sides[1].trim()) ? sides[1].trim() : sides[0].trim();
+            const parts = expr.split(/\s+\+\s+/).map(s => s.trim()).filter(Boolean);
+
+            const atoms = [];
+            const texts = [];
+            const n = parts.length;
+
+            if (n === 1) {
+                atoms.push({
+                    id: 'Semi_Node_0',
+                    el: parts[0],
+                    x: 460,
+                    y: 185,
+                    highlight: accentColor,
+                    border: accentColor,
+                    label: badgeLabel
+                });
+            } else if (n === 2) {
+                atoms.push({
+                    id: 'Semi_Node_0',
+                    el: parts[0],
+                    x: 275,
+                    y: 185,
+                    highlight: accentColor,
+                    border: accentColor,
+                    label: badgeLabel
+                });
+                texts.push({ x: 460, y: 193, text: '+', size: 24, color: accentColor });
+                atoms.push({
+                    id: 'Semi_Node_1',
+                    el: parts[1],
+                    x: 645,
+                    y: 185,
+                    highlight: accentColor,
+                    border: accentColor
+                });
+            } else if (n >= 3) {
+                const startX = 180;
+                const stepX = Math.floor(560 / (n - 1));
+                parts.forEach((p, idx) => {
+                    const cx = startX + idx * stepX;
+                    atoms.push({
+                        id: `Semi_Node_${idx}`,
+                        el: p,
+                        x: cx,
+                        y: 185,
+                        highlight: accentColor,
+                        border: accentColor,
+                        label: idx === 0 ? badgeLabel : undefined
+                    });
+                    if (idx < n - 1) {
+                        texts.push({ x: cx + Math.round(stepX / 2), y: 193, text: '+', size: 22, color: accentColor });
+                    }
+                });
+            }
+
+            return { atoms, bonds: [], texts };
+        }
+
+        function wrapWithSemidevelopedEndpoints(stepsArray) {
+            if (!Array.isArray(stepsArray) || stepsArray.length === 0) return stepsArray;
+
+            const firstStep = stepsArray[0];
+            const lastStep = stepsArray[stepsArray.length - 1];
+
+            const cleanOldNumbering = (t) => String(t || '').replace(/^Paso \d+\s*[—\-:]\s*/i, '').trim();
+
+            const introSemiText = firstStep.semiStep || firstStep.semiGlobal || 'Reactivos iniciales';
+            const introStep = {
+                title: `Paso 1 — Fórmula Semidesarrollada Inicial: ${introSemiText.replace(/\s*──►\s*$/, '')}`,
+                semiStep: firstStep.semiStep || '',
+                semiGlobal: firstStep.semiGlobal || '',
+                desc: 'Vista condensada inicial mediante fórmulas semidesarrolladas antes de desplegar todos los enlaces átomo por átomo.',
+                legend: {
+                    breaking: 'Ningún enlace roto todavía; representación semidesarrollada inicial.',
+                    forming: 'Ningún enlace formado todavía.',
+                    movement: 'En el siguiente paso se despliegan los enlaces desarrollados.'
+                },
+                scene: () => buildSemidevelopedBannerScene(introSemiText, 'Fórmula Semidesarrollada (Reactivos)', '#38bdf8')
+            };
+
+            const middleSteps = stepsArray.map((st, idx) => ({
+                ...st,
+                title: `Paso ${idx + 2} — ${cleanOldNumbering(st.title)}`
+            }));
+
+            const outroSemiText = lastStep.semiStep || lastStep.semiGlobal || 'Productos finales';
+            const outroNum = middleSteps.length + 2;
+            const outroStep = {
+                title: `Paso ${outroNum} — Fórmula Semidesarrollada Final: ${outroSemiText}`,
+                semiStep: lastStep.semiStep || '',
+                semiGlobal: lastStep.semiGlobal || '',
+                desc: 'Resumen final de los productos obtenidos expresados en su fórmula semidesarrollada.',
+                legend: {
+                    breaking: 'Ruptura de enlaces reactivos completada.',
+                    forming: 'Productos finales consolidados en fórmula semidesarrollada.',
+                    movement: 'Reacción finalizada.'
+                },
+                scene: () => buildSemidevelopedBannerScene(outroSemiText, 'Fórmula Semidesarrollada (Productos)', '#10b981')
+            };
+
+            return [introStep, ...middleSteps, outroStep];
+        }
+
         function expandStepsToVisualMicroSteps(rawSteps) {
             if (!Array.isArray(rawSteps) || rawSteps.length === 0) return [];
             if (rawSteps.length >= 5) {
-                return rawSteps.map((st, idx) => ({
+                const baseSteps = rawSteps.map((st, idx) => ({
                     title: st.title || '',
                     semiStep: st.semiStep || '',
                     semiGlobal: st.semiGlobal || '',
@@ -719,6 +833,7 @@
                             : JSON.parse(JSON.stringify(sc));
                     }
                 }));
+                return wrapWithSemidevelopedEndpoints(baseSteps);
             }
 
             const expanded = [];
@@ -837,7 +952,7 @@
                 scene: () => JSON.parse(JSON.stringify(finalScene))
             });
 
-            return expanded;
+            return wrapWithSemidevelopedEndpoints(expanded);
         }
 
         function parseFlexibleJson(rawText) {
