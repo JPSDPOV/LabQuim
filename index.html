@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
     <meta charset="UTF-8">
@@ -715,11 +715,24 @@
             'C4H10': 'Butano',
             'CH3-CH=CH-CH3': '2-Buteno',
             'CH2=CH-CH2-CH3': '1-Buteno',
+            'CH3CH2-CH=CH2': '1-Buteno',
+            '(CH3)2C=CH2': '2-Metilpropeno',
+            '(CH3)2C=CH-CH3': '2-Metil-2-buteno',
             '(CH3)3CH': '2-Metilpropano',
             '(CH3)3C-H': '2-Metilpropano',
             'C6H12': 'Ciclohexano',
             'C6H10': 'Ciclohexeno',
             'C6H6': 'Benceno',
+            'C5H7(CH3)': '1-Metilciclopenteno',
+            'CH3-CH2-OH': 'Etanol',
+            'CH3CH2OH': 'Etanol',
+            'CH3-CH(OH)-CH3': '2-Propanol',
+            'CH3-CH2-CH(OH)-CH3': '2-Butanol',
+            'CH3CH2-CH(OH)-CH3': '2-Butanol',
+            'C6H11-OH': 'Ciclohexanol',
+            '(CH3)3C-OH': '2-Metil-2-propanol',
+            '(CH3)2C(OH)-CH2-CH3': '2-Metil-2-butanol',
+            'C5H8(CH3)-OH': '1-Metilciclopentanol',
             'CH3-Cl': 'Clorometano',
             'CH3-Br': 'Bromometano',
             'CH3-I': 'Yodometano',
@@ -739,6 +752,7 @@
             'Na': 'Sodio metálico',
             'Zn0': 'Zinc metálico',
             'Zn': 'Zinc metálico',
+            'H+': 'Catalizador ácido (H⁺)',
             'H2': 'Hidrógeno molecular',
             'Cl2': 'Cloro molecular',
             'Br2': 'Bromo molecular',
@@ -765,9 +779,9 @@
         };
 
         function normalizeFormulaLookupKey(f) {
-            const subToDigit = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '⁰': '0' };
+            const subToDigit = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '⁰': '0', '⁺': '+' };
             return String(f || '')
-                .replace(/[₀-₉⁰]/g, ch => subToDigit[ch] || ch)
+                .replace(/[₀-₉⁰⁺]/g, ch => subToDigit[ch] || ch)
                 .replace(/[—–]/g, '-')
                 .replace(/\s+/g, '')
                 .trim();
@@ -777,18 +791,16 @@
             const normKey = normalizeFormulaLookupKey(formulaStr);
             if (FORMULA_TO_NAME_MAP[normKey]) return FORMULA_TO_NAME_MAP[normKey];
 
-            // Buscar en las pistas de texto del ejemplo (ej. título del sustrato o labels de átomos)
             const compactFormula = normKey.replace(/-/g, '');
             for (const hint of contextHints) {
                 const h = String(hint || '').trim();
                 if (!h) continue;
-                // Ej: "Bromoetano (CH₃CH₂Br) + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► Etano (C₂H₆)"
-                const rxNameParen = /([A-ZÁÉÍÓÚÑa-záéíóúñ0-9,\-\s]{3,32})\s*\(([^()]+)\)/g;
+                const rxNameParen = /([A-ZÁÉÍÓÚÑa-záéíóúñ0-9,\-\s]{3,35})\s*\(([^()]+)\)/g;
                 let m;
                 while ((m = rxNameParen.exec(h)) !== null) {
                     const candidateName = m[1].replace(/^(?:2\s+|Paso\s+\d+\s*[—\-:]\s*)/i, '').trim();
                     const candidateForm = normalizeFormulaLookupKey(m[2]).replace(/-/g, '');
-                    if (candidateForm === compactFormula && candidateName && !/^(H2O|H3O|THF|Eter|Éter)/i.test(candidateName)) {
+                    if (candidateForm === compactFormula && candidateName && !/^(H2O|H3O|THF|Eter|Éter|Alcohol|Medio)/i.test(candidateName)) {
                         return candidateName.charAt(0).toUpperCase() + candidateName.slice(1);
                     }
                 }
@@ -803,14 +815,23 @@
             let formula = txt;
             let compoundName = '';
 
-            const parenMatch = txt.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
-            if (parenMatch) {
-                formula = parenMatch[1].trim();
-                let inside = parenMatch[2].trim();
-                inside = inside.split(',')[0].trim();
-                inside = inside.replace(/\s+(?:desarrollado|intacto|en ausencia|en presencia|como|con|sin|mayor|minoritario|mayoritario|principal|secundario|terciario|primario|puro|anhidro|diluido)\b.*$/i, '').trim();
-                if (inside && !/^(arriba|abajo|exceso|calor|luz|hv|hν)$/i.test(inside)) {
-                    compoundName = inside.charAt(0).toUpperCase() + inside.slice(1);
+            // Primero verificar si la fórmula completa ya está en el diccionario (ej: "CH₃—CH(OH)—CH₃")
+            const directLookup = inferNameFromContext(txt, contextHints);
+            if (directLookup) {
+                compoundName = directLookup;
+            } else {
+                const parenMatch = txt.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
+                if (parenMatch) {
+                    const inside = parenMatch[2].trim();
+                    // Solo tratar el paréntesis como nombre si NO es un grupo químico como (OH) o (CH3)
+                    if (!/^(OH|CH3|CH2CH3|NH2|NO2|H2O|H\+)$/i.test(normalizeFormulaLookupKey(inside))) {
+                        formula = parenMatch[1].trim();
+                        let cleanInside = inside.split(',')[0].trim();
+                        cleanInside = cleanInside.replace(/\s+(?:desarrollado|intacto|en ausencia|en presencia|como|con|sin|mayor|minoritario|mayoritario|principal|secundario|terciario|primario|puro|anhidro|diluido)\b.*$/i, '').trim();
+                        if (cleanInside && !/^(arriba|abajo|exceso|calor|luz|hv|hν)$/i.test(cleanInside)) {
+                            compoundName = cleanInside.charAt(0).toUpperCase() + cleanInside.slice(1);
+                        }
+                    }
                 }
             }
 
@@ -843,7 +864,6 @@
             const texts = [];
             const n = parsedParts.length;
 
-            // Centro exacto del escenario en coordenadas lógicas: x = 460 (que mapStageX(460) = 520, mitad exacta de 1040)
             if (n === 1) {
                 atoms.push({
                     id: 'Semi_Node_0',
@@ -903,11 +923,16 @@
             const firstStep = stepsArray[0];
             const lastStep = stepsArray[stepsArray.length - 1];
 
-            // Recolectar pistas de nombres desde títulos y escenas del ejemplo actual
             const contextHints = [];
             stepsArray.forEach(st => {
                 if (st.title) contextHints.push(st.title);
                 if (st.semiGlobal) contextHints.push(st.semiGlobal);
+                try {
+                    const sc = typeof st.scene === 'function' ? st.scene() : st.scene;
+                    if (sc && Array.isArray(sc.atoms)) {
+                        sc.atoms.forEach(a => { if (a.label) contextHints.push(a.label); });
+                    }
+                } catch (e) {}
             });
 
             const cleanOldNumbering = (t) => String(t || '').replace(/^Paso \d+\s*[—\-:]\s*/i, '').trim();
@@ -1489,7 +1514,7 @@
                     }
                 });
 
-                for (let pass = 0; pass < 4; pass++) {
+                for (let pass = 0; pass < 5; pass++) {
                     for (let i = 0; i < pendingArrowLabels.length; i++) {
                         for (let j = i + 1; j < pendingArrowLabels.length; j++) {
                             const A = pendingArrowLabels[i];
@@ -1499,16 +1524,20 @@
                             const overlapY = Math.abs(A.ly - B.ly) < (A.bh + 4);
                             if (overlapX && overlapY) {
                                 const push = (minSepX - Math.abs(A.lx - B.lx)) / 2 + 2;
-                                if (A.lx <= B.lx) {
-                                    A.lx -= push;
-                                    B.lx += push;
-                                } else {
-                                    A.lx += push;
-                                    B.lx -= push;
-                                }
+                                if (A.lx <= B.lx) { A.lx -= push; B.lx += push; }
+                                else { A.lx += push; B.lx -= push; }
                             }
                         }
+                        // Apartar el cartel de la flecha si pisa algún círculo de átomo
                         const L = pendingArrowLabels[i];
+                        Object.values(currentAtoms).forEach(at => {
+                            if (at.opacity <= 0.1) return;
+                            const dx = L.lx - at.x;
+                            const dy = (L.ly + L.bh / 2) - at.y;
+                            if (Math.abs(dx) < (L.bw / 2 + 26) && Math.abs(dy) < (L.bh / 2 + 24)) {
+                                L.lx += dx >= 0 ? 32 : -32;
+                            }
+                        });
                         if (L.lx - L.bw / 2 < 6) L.lx = L.bw / 2 + 6;
                         if (L.lx + L.bw / 2 > 1034) L.lx = 1034 - L.bw / 2;
                     }
