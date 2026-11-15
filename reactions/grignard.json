@@ -91,7 +91,7 @@
         "title": "Paso 2 — Polarización y Ruptura en Rojo del Enlace C—Br",
         "semiStep": "CH₃—CH₂δ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
         "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
-        "desc": "El magnesio transfiere electrones hacia el enlace C—Br, debilitándolo en rojo punteado para insertarse entre el carbono y el bromo.",
+        "desc": "El magnesio transfiere sus dos electrones de valencia hacia el enlace C—Br, debilitándolo en rojo punteado para insertarse entre el carbono y el bromo.",
         "legend": {
           "breaking": "En ROJO punteado: ruptura del enlace C—Br.",
           "forming": "Inserción oxidativa del átomo de magnesio.",
@@ -125,14 +125,53 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "CH₃—CH₂δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Reactivo de Grignard Formado (CH₃CH₂MgBr) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—Mg—Br  +  H—O—H",
         "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
-        "desc": "El magnesio queda insertado en el eje horizontal (C—Mg—Br). La molécula de agua angular (H—O—H) desciende por arriba sobre el enlace C—Mg para protonar al carbono y transferir el grupo —OH al magnesio.",
+        "desc": "El magnesio queda consolidado en verde entre el carbono y el bromo formando bromuro de etilmagnesio, mientras aparece la molécula de agua angular (H₂O) en la parte superior lista para iniciar la hidrólisis.",
         "legend": {
-          "breaking": "En ROJO punteado: enlace C—Mg y enlace H—O del agua por romperse.",
-          "forming": "Aproximación superior del agua angular sobre C—Mg.",
-          "movement": "El carbono nucleófilo ataca al H⁺ superior mientras el oxígeno se coordina con el Mg."
+          "breaking": "Ningún enlace roto en este instante; especies posicionadas.",
+          "forming": "En VERDE sólido: reactivo de Grignard (C—Mg—Br) consolidado.",
+          "movement": "Aproximación superior del agua angular (H—O—H)."
+        },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 115, "y": 235 },
+            { "id": "C1", "el": "C", "x": 235, "y": 235 },
+            { "id": "H2", "el": "H", "x": 235, "y": 135 },
+            { "id": "H3", "el": "H", "x": 235, "y": 325 },
+            { "id": "C2", "el": "C", "x": 365, "y": 235, "highlight": "#10b981" },
+            { "id": "H4", "el": "H", "x": 365, "y": 135 },
+            { "id": "H5", "el": "H", "x": 365, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 495, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "Br1", "el": "Br", "x": 625, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 430, "y": 120, "enterFromX": 430, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 510, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 510, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 590, "y": 120, "enterFromX": 590, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "CH₃—CH₂δ⁻ ┆—┆ Mgδ⁺—Br + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
+        "desc": "Se polarizan los centros reactivos: el carbono nucleófilo (δ⁻) ataca al protón ácido del agua (δ⁺) mientras el oxígeno se coordina con el magnesio (δ⁺), debilitando en rojo punteado ambos enlaces.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—Mg y enlace H—O del agua rompiéndose.",
+          "forming": "Transferencia concertada de protón y grupo hidroxilo.",
+          "movement": "El par C—Mg captura el H⁺ superior y el par del oxígeno ataca al Mg."
         },
         "scene": {
           "atoms": [
@@ -145,9 +184,9 @@
             { "id": "H5", "el": "H", "x": 365, "y": 325 },
             { "id": "Mg1", "el": "Mg", "x": 495, "y": 235, "charge": "δ+" },
             { "id": "Br1", "el": "Br", "x": 625, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 430, "y": 120, "charge": "δ+", "enterFromX": 430, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 510, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 510, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 590, "y": 120, "enterFromX": 590, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 430, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 510, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 590, "y": 120 }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -168,7 +207,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura del Enlace C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg",
         "semiStep": "CH₃—CH₂ ··· H   +   HO ··· Mg—Br",
         "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
         "desc": "El enlace C—Mg se rompe por completo; el hidrógeno entra al carbono formando C—H en verde punteado y el grupo —OH queda unido por arriba al magnesio formando HO—Mg—Br.",
@@ -208,7 +247,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Etano (C₂H₆) + HO—Mg—Br",
+        "title": "Paso 6 — Producto Final Consolidado: Etano (C₂H₆) + HO—Mg—Br",
         "semiStep": "CH₃—CH₃   +   HO—Mg—Br",
         "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
         "desc": "Quedan consolidados en verde sólido el nuevo enlace C—H del etano (C₂H₆) a la izquierda y el enlace HO—Mg del subproducto Mg(OH)Br a la derecha.",
@@ -301,11 +340,40 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "CH₃δ⁻—Mgδ⁺—I + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Yoduro de Metilmagnesio (CH₃MgI) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—Mg—I  +  H—O—H",
         "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
-        "desc": "El magnesio queda en el eje horizontal (C—Mg—I) y el agua angular desciende desde arriba sobre el enlace C—Mg.",
-        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Ataque al protón del agua por arriba." },
+        "desc": "El magnesio queda consolidado entre el carbono y el yodo mientras la molécula de agua angular aparece en la parte superior.",
+        "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: CH₃—Mg—I formado.", "movement": "Aproximación superior del agua angular." },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 145, "y": 235 },
+            { "id": "C1", "el": "C", "x": 275, "y": 235, "highlight": "#10b981" },
+            { "id": "H2", "el": "H", "x": 275, "y": 135 },
+            { "id": "H3", "el": "H", "x": 275, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 410, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "I1", "el": "I", "x": 545, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 345, "y": 120, "enterFromX": 345, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 425, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 425, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 505, "y": 120, "enterFromX": 505, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "I1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "CH₃δ⁻ ┆—┆ Mgδ⁺—I + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
+        "desc": "Se polarizan los centros reactivos: el carbono captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Ataque al protón del agua por arriba." },
         "scene": {
           "atoms": [
             { "id": "H1", "el": "H", "x": 145, "y": 235 },
@@ -314,9 +382,9 @@
             { "id": "H3", "el": "H", "x": 275, "y": 325 },
             { "id": "Mg1", "el": "Mg", "x": 410, "y": 235, "charge": "δ+" },
             { "id": "I1", "el": "I", "x": 545, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 345, "y": 120, "charge": "δ+", "enterFromX": 345, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 425, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 425, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 505, "y": 120, "enterFromX": 505, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 345, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 425, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 505, "y": 120 }
           ],
           "bonds": [
             { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
@@ -334,7 +402,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg",
         "semiStep": "CH₃ ··· H   +   HO ··· Mg—I",
         "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el cuarto enlace C—H del metano y el enlace HO—Mg del subproducto.",
@@ -364,7 +432,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Metano (CH₄) + HO—Mg—I",
+        "title": "Paso 6 — Producto Final Consolidado: Metano (CH₄) + HO—Mg—I",
         "semiStep": "CH₄   +   HO—Mg—I",
         "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
         "desc": "Quedan consolidados en verde sólido el metano (CH₄) a la izquierda y HO—Mg—I a la derecha.",
@@ -447,11 +515,40 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "CH₃CH₂—CH₂δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Bromuro de Propilmagnesio (C₃H₇MgBr) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃CH₂—CH₂—Mg—Br  +  H—O—H",
         "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
-        "desc": "El magnesio permanece estable entre el carbono y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
-        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del carbono terminal por arriba." },
+        "desc": "El magnesio queda consolidado entre el carbono y el bromo mientras la molécula de agua angular aparece en la parte superior.",
+        "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: C₃H₇—Mg—Br formado.", "movement": "Aproximación superior del agua angular." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 235 },
+            { "id": "C1", "el": "C", "x": 250, "y": 235, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 250, "y": 135 },
+            { "id": "H2", "el": "H", "x": 250, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 385, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "Br1", "el": "Br", "x": 520, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 320, "y": 120, "enterFromX": 320, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 400, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 400, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 480, "y": 120, "enterFromX": 480, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "CH₃CH₂—CH₂δ⁻ ┆—┆ Mgδ⁺—Br + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
+        "desc": "Se polarizan los centros reactivos: el carbono captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Protonación del carbono terminal por arriba." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃CH₂", "x": 115, "y": 235 },
@@ -460,9 +557,9 @@
             { "id": "H2", "el": "H", "x": 250, "y": 325 },
             { "id": "Mg1", "el": "Mg", "x": 385, "y": 235, "charge": "δ+" },
             { "id": "Br1", "el": "Br", "x": 520, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 320, "y": 120, "charge": "δ+", "enterFromX": 320, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 400, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 400, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 480, "y": 120, "enterFromX": 480, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 320, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 400, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 480, "y": 120 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -480,7 +577,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg (Propano)",
         "semiStep": "CH₃CH₂—CH₂ ··· H   +   HO ··· Mg—Br",
         "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del propano y el enlace HO—Mg del subproducto.",
@@ -510,7 +607,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Br",
+        "title": "Paso 6 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Br",
         "semiStep": "CH₃—CH₂—CH₃   +   HO—Mg—Br",
         "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
         "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y HO—Mg—Br a la derecha.",
@@ -593,11 +690,40 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "(CH₃)₂CHδ⁻—Mgδ⁺—Cl + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Cloruro de Isopropilmagnesio + Entrada del Agua (H₂O)",
+        "semiStep": "(CH₃)₂CH—Mg—Cl  +  H—O—H",
         "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
-        "desc": "El magnesio permanece fijo entre el carbono y el cloro mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
-        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación en carbono secundario." },
+        "desc": "El magnesio queda consolidado entre el carbono secundario y el cloro mientras aparece el agua angular en la parte superior.",
+        "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: (CH₃)₂CH—Mg—Cl formado.", "movement": "Aproximación superior del agua angular." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 245, "y": 135 },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "Cl1", "el": "Cl", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "enterFromX": 315, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Cl1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "(CH₃)₂CHδ⁻ ┆—┆ Mgδ⁺—Cl + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
+        "desc": "Se polarizan los centros reactivos: el carbono secundario captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Protonación en carbono secundario." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
@@ -606,9 +732,9 @@
             { "id": "R2", "el": "CH₃", "x": 245, "y": 325 },
             { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
             { "id": "Cl1", "el": "Cl", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -626,7 +752,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg (Propano)",
         "semiStep": "(CH₃)₂CH ··· H   +   HO ··· Mg—Cl",
         "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del propano y el enlace HO—Mg del subproducto.",
@@ -656,7 +782,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Cl",
+        "title": "Paso 6 — Producto Final Consolidado: Propano (C₃H₈) + HO—Mg—Cl",
         "semiStep": "CH₃—CH₂—CH₃   +   HO—Mg—Cl",
         "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
         "desc": "Quedan consolidados en verde sólido el propano (C₃H₈) a la izquierda y HO—Mg—Cl a la derecha.",
@@ -739,11 +865,40 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "(CH₃)₃Cδ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Bromuro de terc-Butilmagnesio + Entrada del Agua (H₂O)",
+        "semiStep": "(CH₃)₃C—Mg—Br  +  H—O—H",
         "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
-        "desc": "El magnesio permanece estable entre el carbono terciario y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
-        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del carbanión terciario." },
+        "desc": "El magnesio queda consolidado entre el carbono terciario y el bromo mientras aparece el agua angular en la parte superior.",
+        "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: (CH₃)₃C—Mg—Br formado.", "movement": "Aproximación superior del agua angular." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 245, "y": 135 },
+            { "id": "R3", "el": "CH₃", "x": 245, "y": 325 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "enterFromX": 315, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "(CH₃)₃Cδ⁻ ┆—┆ Mgδ⁺—Br + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "desc": "Se polarizan los centros reactivos: el carbono terciario captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Protonación del carbanión terciario." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 120, "y": 235 },
@@ -752,9 +907,9 @@
             { "id": "R3", "el": "CH₃", "x": 245, "y": 325 },
             { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
             { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -772,7 +927,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg (2-Metilpropano)",
         "semiStep": "(CH₃)₃C ··· H   +   HO ··· Mg—Br",
         "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del 2-metilpropano y el enlace HO—Mg del subproducto.",
@@ -802,7 +957,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: 2-Metilpropano + HO—Mg—Br",
+        "title": "Paso 6 — Producto Final Consolidado: 2-Metilpropano + HO—Mg—Br",
         "semiStep": "(CH₃)₃C—H   +   HO—Mg—Br",
         "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
         "desc": "Quedan consolidados en verde sólido el 2-metilpropano a la izquierda y HO—Mg—Br a la derecha.",
@@ -881,11 +1036,38 @@
         }
       },
       {
-        "title": "Paso 3 — Entrada del Agua Angular (H₂O) por Arriba sobre el Enlace C—Mg",
-        "semiStep": "C₆H₁₁δ⁻—Mgδ⁺—Br + H—O—H (arriba) ──►",
+        "title": "Paso 3 — Bromuro de Ciclohexilmagnesio + Entrada del Agua (H₂O)",
+        "semiStep": "C₆H₁₁—Mg—Br  +  H—O—H",
         "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
-        "desc": "El magnesio permanece estable entre el carbono ciclohexílico y el bromo mientras el agua angular desciende por arriba sobre el enlace C—Mg.",
-        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Aproximación superior del agua.", "movement": "Protonación del anillo." },
+        "desc": "El magnesio queda consolidado entre el carbono ciclohexílico y el bromo mientras aparece el agua angular en la parte superior.",
+        "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: C₆H₁₁—Mg—Br formado.", "movement": "Aproximación superior del agua angular." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 235 },
+            { "id": "C1", "el": "C", "x": 245, "y": 235, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 245, "y": 135 },
+            { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "highlight": "#10b981", "label": "Reactivo de Grignard" },
+            { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "enterFromX": 315, "enterFromY": 35 },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 10 },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 35 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Mg1", "order": 1, "state": "new" },
+            { "from": "Mg1", "to": "Br1", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
+        "semiStep": "C₆H₁₁δ⁻ ┆—┆ Mgδ⁺—Br + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
+        "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
+        "desc": "Se polarizan los centros reactivos: el carbono ciclohexílico captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
+        "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Protonación del anillo." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "C₅H₁₀", "x": 120, "y": 235 },
@@ -893,9 +1075,9 @@
             { "id": "H1", "el": "H", "x": 245, "y": 135 },
             { "id": "Mg1", "el": "Mg", "x": 380, "y": 235, "charge": "δ+" },
             { "id": "Br1", "el": "Br", "x": 515, "y": 235, "lonePairs": ["top", "right", "bottom"] },
-            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+", "enterFromX": 315, "enterFromY": 40 },
-            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 395, "enterFromY": 15 },
-            { "id": "Hw2", "el": "H", "x": 475, "y": 120, "enterFromX": 475, "enterFromY": 40 }
+            { "id": "Hw1", "el": "H", "x": 315, "y": 120, "charge": "δ+" },
+            { "id": "Ow", "el": "O", "x": 395, "y": 65, "charge": "δ-", "lonePairs": ["top-left", "top-right"], "label": "Agua (H₂O)", "labelPos": "top" },
+            { "id": "Hw2", "el": "H", "x": 475, "y": 120 }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -912,7 +1094,7 @@
         }
       },
       {
-        "title": "Paso 4 — Ruptura de C—Mg y Formación en Verde Punteado de C—H y Mg—OH",
+        "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg (Ciclohexano)",
         "semiStep": "C₆H₁₁ ··· H   +   HO ··· Mg—Br",
         "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del ciclohexano y el enlace HO—Mg del subproducto.",
@@ -940,7 +1122,7 @@
         }
       },
       {
-        "title": "Paso 5 — Producto Final Consolidado: Ciclohexano (C₆H₁₂) + HO—Mg—Br",
+        "title": "Paso 6 — Producto Final Consolidado: Ciclohexano (C₆H₁₂) + HO—Mg—Br",
         "semiStep": "C₆H₁₂   +   HO—Mg—Br",
         "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
         "desc": "Quedan consolidados en verde sólido el ciclohexano (C₆H₁₂) a la izquierda y HO—Mg—Br a la derecha.",
