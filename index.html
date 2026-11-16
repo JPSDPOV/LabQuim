@@ -1110,6 +1110,89 @@
             const bonds = [];
             const lbl = parsedItem.compoundName || undefined;
 
+            // Caso 0: Compuestos quirales R-CH(X)-CH3 o R-CH(OH)-CH3 con prefijo (R)- o (S)-
+            // Dibuja la cadena R en nodos semidesarrollados (CH3 - CH2 - ...), C quiral central, H arriba (dash), CH3 abajo (wedge)
+            const mChiral = norm.match(/^\(([RS])\)-(.+?)-CH\((Cl|Br|I|OH)\)-CH3$/i);
+            if (mChiral) {
+                const subGroup = mChiral[3]; // Cl, Br, I, OH
+                const chainRaw = mChiral[2]; // ej: CH3-CH2-CH2, CH3-CH2, C6H5, (CH3)2CH
+                const isProductOH = subGroup.toUpperCase() === 'OH';
+
+                // Dividir la cadena R en segmentos semidesarrollados (ej. ["CH3", "CH2", "CH2"])
+                const segs = chainRaw.split('-').map(s =>
+                    s.replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/C6H5/g, 'C₆H₅')
+                );
+                const segStep = 74;
+
+                if (!isProductOH) {
+                    // Reactivo inicial: [cadena R a la izquierda] — C — X (derecha), H arriba (dash), CH3 abajo (wedge)
+                    const cX = centerX + 25;
+                    atoms.push(
+                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                        { id: `${prefixId}_H`, el: 'H', x: cX, y: centerY - 82 },
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: centerY + 82 },
+                        { id: `${prefixId}_X`, el: subGroup, x: cX + 82, y: centerY, highlight: accentColor, border: accentColor }
+                    );
+                    bonds.push(
+                        { from: `${prefixId}_C`, to: `${prefixId}_H`, order: 1, state: 'normal', stereo: 'dash' },
+                        { from: `${prefixId}_C`, to: `${prefixId}_Me`, order: 1, state: 'normal', stereo: 'wedge' },
+                        { from: `${prefixId}_C`, to: `${prefixId}_X`, order: 1, state: 'normal' }
+                    );
+
+                    // Colocar segmentos de la cadena R hacia la izquierda de C
+                    let prevId = `${prefixId}_C`;
+                    for (let idx = segs.length - 1; idx >= 0; idx--) {
+                        const distIdx = segs.length - idx;
+                        const sx = cX - distIdx * segStep;
+                        const sId = `${prefixId}_S${idx}`;
+                        const isRing = segs[idx] === 'C₆H₅';
+                        atoms.push({
+                            id: sId,
+                            el: isRing ? 'Ph' : segs[idx],
+                            ring: isRing ? 'phenyl' : undefined,
+                            x: sx,
+                            y: centerY
+                        });
+                        bonds.push({ from: sId, to: prevId, order: 1, state: 'normal' });
+                        prevId = sId;
+                    }
+                    return { atoms, bonds, spanHalfW: Math.max(130, segs.length * segStep + 40) };
+                } else {
+                    // Producto final invertido: OH (izquierda) — C — [cadena R invertida a la derecha], H arriba (dash), CH3 abajo (wedge)
+                    const cX = centerX - 35;
+                    atoms.push(
+                        { id: `${prefixId}_OH`, el: 'OH', x: cX - 82, y: centerY, highlight: accentColor, border: accentColor },
+                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                        { id: `${prefixId}_H`, el: 'H', x: cX, y: centerY - 82 },
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: centerY + 82 }
+                    );
+                    bonds.push(
+                        { from: `${prefixId}_OH`, to: `${prefixId}_C`, order: 1, state: 'normal' },
+                        { from: `${prefixId}_C`, to: `${prefixId}_H`, order: 1, state: 'normal', stereo: 'dash' },
+                        { from: `${prefixId}_C`, to: `${prefixId}_Me`, order: 1, state: 'normal', stereo: 'wedge' }
+                    );
+
+                    // Colocar segmentos de la cadena R invertidos hacia la derecha de C (desde el carbono unido a C hacia el extremo CH3)
+                    let prevId = `${prefixId}_C`;
+                    const revSegs = [...segs].reverse();
+                    for (let idx = 0; idx < revSegs.length; idx++) {
+                        const sx = cX + (idx + 1) * segStep;
+                        const sId = `${prefixId}_S${idx}`;
+                        const isRing = revSegs[idx] === 'C₆H₅';
+                        atoms.push({
+                            id: sId,
+                            el: isRing ? 'Ph' : revSegs[idx],
+                            ring: isRing ? 'phenyl' : undefined,
+                            x: sx,
+                            y: centerY
+                        });
+                        bonds.push({ from: prevId, to: sId, order: 1, state: 'normal' });
+                        prevId = sId;
+                    }
+                    return { atoms, bonds, spanHalfW: Math.max(130, revSegs.length * segStep + 45) };
+                }
+            }
+
             // Caso 1: (CH3)3C-X  (ej. (CH₃)₃C—OH, (CH₃)₃C—Br, (CH₃)₃C—H) -> CH3 izquierda, CH3 arriba, CH3 abajo, X derecha
             const mTert = norm.match(/^\(CH3\)3C-?(.+)$/);
             if (mTert) {
@@ -1196,7 +1279,7 @@
                 return { atoms, bonds, spanHalfW: 135 };
             }
 
-            // Caso 5: R-CH(OH)-R' (alcoholes secundarios ramificados en OH, ej. CH₃—CH(OH)—CH₃ o CH₃—CH₂—CH(OH)—CH₃)
+            // Caso 5: R-CH(OH)-R' (alcoholes secundarios aquirales, ej. CH₃—CH(OH)—CH₃ o CH₃—CH₂—CH(OH)—CH₃)
             const mSecAlc = norm.match(/^(.+?)-?CH\(OH\)-?(.+)$/);
             if (mSecAlc) {
                 const leftGrp = mSecAlc[1].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/-/g, '—');
