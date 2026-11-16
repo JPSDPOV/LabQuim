@@ -340,21 +340,21 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (S)-2-Cloropentano + OH⁻ (Dorsal)",
         "semiStep": "(S)-CH₃—CH₂—CH₂—CH(Cl)—CH₃  +  K—OH",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
-        "desc": "El (S)-2-cloropentano presenta sus tres grupos inclinados hacia la izquierda, dejando libre la cara dorsal para el ataque de OH⁻.",
+        "desc": "El (S)-2-cloropentano presenta el metilo en cuña sólida hacia arriba, el propilo hacia abajo a la izquierda y el hidrógeno en cuña rayada hacia abajo, cumpliendo con la configuración (S) frente al OH⁻ dorsal.",
         "legend": { "breaking": "Sin ruptura inicial; configuración inicial (S).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—Cl." },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 345, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 365, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
-            { "id": "C1", "el": "CH₃", "x": 355, "y": 295 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 335, "y": 295 },
             { "id": "H2", "el": "H", "x": 415, "y": 325 },
             { "id": "Cl1", "el": "Cl", "x": 585, "y": 205 },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "normal" }
           ],
@@ -370,16 +370,16 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 365, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 375, "y": 295 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 355, "y": 295 },
             { "id": "H2", "el": "H", "x": 425, "y": 325 },
             { "id": "Cl1", "el": "Cl", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
@@ -402,16 +402,16 @@
           ],
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 285, "y": 205, "charge": "δ-", "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 435, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 435, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 405, "y": 305 },
-            { "id": "H2", "el": "H", "x": 465, "y": 305 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 385, "y": 305 },
+            { "id": "H2", "el": "H", "x": 475, "y": 305 },
             { "id": "Cl1", "el": "Cl", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "breaking" }
@@ -427,17 +427,17 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
             { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 295 },
             { "id": "H2", "el": "H", "x": 445, "y": 325 },
             { "id": "Cl1", "el": "Cl", "x": 685, "y": 205, "charge": "-" },
             { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "Cl1", "to": "K1", "order": 1, "state": "forming" }
           ],
@@ -453,17 +453,17 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
             { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(R)-2-Pentanol" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 295 },
             { "id": "H2", "el": "H", "x": 445, "y": 325 },
             { "id": "Cl1", "el": "Cl", "x": 685, "y": 205, "label": "Cloruro de potasio" },
             { "id": "K1", "el": "K", "x": 805, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "new" },
-            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "Cl1", "to": "K1", "order": 1, "state": "new" }
           ],
@@ -612,21 +612,21 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (S)-2-Yodo-3-metilbutano + OH⁻ (Dorsal)",
         "semiStep": "(S)-(CH₃)₂CH—CH(I)—CH₃  +  K—OH",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
-        "desc": "El (S)-2-yodo-3-metilbutano presenta sus tres grupos inclinados hacia la izquierda, dejando libre la cara dorsal para el ataque de OH⁻.",
+        "desc": "El (S)-2-yodo-3-metilbutano presenta el metilo en cuña sólida hacia arriba, el grupo isopropilo hacia abajo a la izquierda y el hidrógeno en cuña rayada hacia abajo, cumpliendo con la configuración (S) frente al OH⁻ dorsal.",
         "legend": { "breaking": "Sin ruptura inicial; configuración inicial (S).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—I." },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 345, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 365, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
-            { "id": "C1", "el": "CH₃", "x": 355, "y": 295 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 340, "y": 295 },
             { "id": "H2", "el": "H", "x": 415, "y": 325 },
             { "id": "I1", "el": "I", "x": 585, "y": 205 },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "I1", "order": 1, "state": "normal" }
           ],
@@ -642,16 +642,16 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 365, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 375, "y": 295 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 360, "y": 295 },
             { "id": "H2", "el": "H", "x": 425, "y": 325 },
             { "id": "I1", "el": "I", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "I1", "order": 1, "state": "breaking" }
           ],
@@ -667,23 +667,23 @@
         "semiStep": "[ HOδ⁻ ··· C(CH(CH₃)₂)(CH₃)(H) ··· Iδ⁻ ]‡  +  K⁺",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
         "desc": "Estado de transición pentacoordinado entre corchetes: HO···C se forma en verde punteado, C···I se rompe en rojo punteado y los sustituyentes cruzan el plano medio.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···I rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados verticalmente en el punto medio de la inversión." },
+        "legend": { "breaking": "En ROJO punteado: enlace C···I rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados en el plano vertical de transición." },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
           ],
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 285, "y": 205, "charge": "δ-", "highlight": "#10b981" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 435, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 435, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 405, "y": 305 },
-            { "id": "H2", "el": "H", "x": 465, "y": 305 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 390, "y": 305 },
+            { "id": "H2", "el": "H", "x": 475, "y": 305 },
             { "id": "I1", "el": "I", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
             { "from": "C2", "to": "I1", "order": 1, "state": "breaking" }
@@ -699,17 +699,17 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 525, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
             { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 520, "y": 295 },
             { "id": "H2", "el": "H", "x": 445, "y": 325 },
             { "id": "I1", "el": "I", "x": 685, "y": 205, "charge": "-" },
             { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
-            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "I1", "to": "K1", "order": 1, "state": "forming" }
           ],
@@ -725,17 +725,17 @@
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 525, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
             { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(R)-3-Metil-2-butanol" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 520, "y": 295 },
             { "id": "H2", "el": "H", "x": 445, "y": 325 },
             { "id": "I1", "el": "I", "x": 685, "y": 205, "label": "Yoduro de potasio" },
             { "id": "K1", "el": "K", "x": 805, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "new" },
-            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
+            { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "I1", "to": "K1", "order": 1, "state": "new" }
           ],
