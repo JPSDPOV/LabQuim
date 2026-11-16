@@ -1,0 +1,789 @@
+{
+  "category": "obtencion",
+  "title": "4) Sustitución de Halogenuros de Alquilo con KOH Acuoso (SN2 / SN1)",
+  "natureBadge": "Sustitución Nucleofílica • R–X + KOH (acuoso) ──► R–OH + KX",
+  "deltaH": "ΔH° < 0 (Exotérmica; sustitución del halógeno por el grupo hidroxilo nucleofílico –OH)",
+  "description": "Obtención de alcoholes mediante sustitución nucleofílica de halogenuros de alquilo (R–X) utilizando hidróxido de potasio (KOH) o hidróxido de sodio (NaOH) en medio acuoso:\n1) Halogenuros de alquilo primarios (SN2): transcurre en una sola etapa concertada; el nucleófilo hidroxilo (–OH) ataca al carbono por el lado opuesto al halógeno saliente, generando alcoholes primarios.\n2) Halogenuros de alquilo secundarios (SN2): transcurre por ataque nucleofílico concertado en medio acuoso formando alcoholes secundarios (con inversión de configuración).\n3) Halogenuros de alquilo terciarios (SN1): transcurre en dos etapas; primero se rompe el enlace C–X formando un carbocatión terciario estable y luego el grupo –OH ataca al carbocatión formando alcoholes terciarios.",
+  "meta": {
+    "grupoFuncional": "Alcoholes (R–OH: primarios, secundarios y terciarios) a partir de Halogenuros de Alquilo (R–X)",
+    "reaccionMecanismo": "Sustitución Nucleofílica Bimolecular (SN2) en 1°/2° y Unimolecular (SN1) en 3°",
+    "naturaleza": "Haluros 1° y 2°: Concertada (SN2, 1 etapa) | Haluros 3°: Por Etapas (SN1, 2 etapas vía carbocatión terciario).",
+    "rupturaIntermediarios": "Ruptura heterolítica del enlace C–X (el halógeno se lleva el par electrónico como ion haluro X⁻). En SN1 se forma un intermediario carbocatión terciario plano (R₃C⁺).",
+    "detalleMecanismo": "En SN2, el grupo –OH del KOH acuoso ataca al carbono electrofílico simultáneamente a la salida del halógeno. En SN1, primero ioniza C–X generando el carbocatión terciario y luego entra el nucleófilo –OH.",
+    "reactivosCondiciones": "KOH (o NaOH) en medio acuoso (H₂O) / Temperatura moderada",
+    "rolReactivos": "• Halogenuro de alquilo (R–X): Sustrato electrófilo (reactividad del halógeno: R–I > R–Br > R–Cl).\n• Hidróxido de potasio acuoso (KOH / H₂O): Fuente del nucleófilo –OH y del catión K⁺ que forma la sal KX.",
+    "reglasObs": "• El medio debe ser ACUOSO (KOH acuoso) para favorecer la sustitución nucleofílica hacia alcoholes; en medio alcohólico concentrado y calor predomina la eliminación hacia alquenos."
+  },
+  "substrates": [
+    {
+      "id": "sust_cloroetano_etanol",
+      "name": "Haluro 1° (SN2): Cloroetano (CH₃CH₂Cl) + KOH (acuoso) ──► Etanol (CH₃CH₂OH) + KCl",
+      "catalyst": "KOH acuoso (SN2)"
+    },
+    {
+      "id": "sust_1bromopropano_1propanol",
+      "name": "Haluro 1° (SN2): 1-Bromopropano (CH₃CH₂CH₂Br) + KOH (acuoso) ──► 1-Propanol + KBr",
+      "catalyst": "KOH acuoso (SN2)"
+    },
+    {
+      "id": "sust_2cloropropano_2propanol",
+      "name": "Haluro 2° (SN2): 2-Cloropropano ((CH₃)₂CHCl) + KOH (acuoso) ──► 2-Propanol + KCl",
+      "catalyst": "KOH acuoso (SN2)"
+    },
+    {
+      "id": "sust_2bromobutano_2butanol",
+      "name": "Haluro 2° (SN2): 2-Bromobutano (CH₃CH₂CH(Br)CH₃) + KOH (acuoso) ──► 2-Butanol + KBr",
+      "catalyst": "KOH acuoso (SN2)"
+    },
+    {
+      "id": "sust_tercbutilcl_tercbutanol",
+      "name": "Haluro 3° (SN1): 2-Cloro-2-metilpropano ((CH₃)₃CCl) + KOH (acuoso) ──► 2-Metil-2-propanol + KCl",
+      "catalyst": "KOH acuoso (SN1)"
+    },
+    {
+      "id": "sust_tercpentilbr_tercpentanol",
+      "name": "Haluro 3° (SN1): 2-Bromo-2-metilbutano + KOH (acuoso) ──► 2-Metil-2-butanol + KBr",
+      "catalyst": "KOH acuoso (SN1)"
+    }
+  ],
+  "catalysts": [
+    "KOH acuoso (SN2)",
+    "KOH acuoso (SN1)"
+  ],
+  "stepsBySubstrate": {
+    "sust_cloroetano_etanol": [
+      {
+        "title": "Paso 1 — Sustitución SN2 en Haluro Primario: Cloroetano + KOH (Acuoso)",
+        "semiStep": "CH₃—CH₂—Cl  +  K—OH",
+        "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
+        "desc": "El cloroetano primario presenta un enlace polarizado Cδ⁺—Clδ⁻ frente al hidróxido de potasio en medio acuoso.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; sustrato intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del nucleófilo –OH al carbono primario."
+        },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 235, "y": 210 },
+            { "id": "H2", "el": "H", "x": 235, "y": 110 },
+            { "id": "H3", "el": "H", "x": 235, "y": 305 },
+            { "id": "C2", "el": "C", "x": 365, "y": 210 },
+            { "id": "H4", "el": "H", "x": 365, "y": 110 },
+            { "id": "H5", "el": "H", "x": 365, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 495, "y": 210 },
+            { "id": "K1", "el": "K", "x": 655, "y": 210 },
+            { "id": "OH1", "el": "OH", "x": 765, "y": 210 }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Cl1", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 575, "y": 217, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico Concertado (SN2) y Ruptura en Rojo de C—Cl",
+        "semiStep": "CH₃—CH₂δ⁺ ┆—┆ Clδ⁻  +  K⁺ ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
+        "desc": "En un paso concertado SN2, el grupo hidroxilo (–OH) ataca al carbono primario mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion cloruro.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.",
+          "forming": "Ataque nucleofílico concertado del grupo –OH.",
+          "movement": "El grupo –OH ataca al carbono electrofílico y sale Cl⁻."
+        },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 115, "y": 210 },
+            { "id": "C1", "el": "C", "x": 235, "y": 210 },
+            { "id": "H2", "el": "H", "x": 235, "y": 110 },
+            { "id": "H3", "el": "H", "x": 235, "y": 305 },
+            { "id": "C2", "el": "C", "x": 365, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H4", "el": "H", "x": 365, "y": 110 },
+            { "id": "H5", "el": "H", "x": 365, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 505, "y": 210, "charge": "δ-", "border": "#ef4444" },
+            { "id": "K1", "el": "K", "x": 655, "y": 210, "charge": "+" },
+            { "id": "OH1", "el": "OH", "x": 765, "y": 210, "charge": "-", "highlight": "#38bdf8" }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "Cl1", "order": 1, "state": "breaking" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 745, "y1": 235, "cx": 555, "cy": 335, "x2": 385, "y2": 235, "type": "full", "label": "Ataque SN2 (–OH)" },
+            { "x1": 435, "y1": 202, "cx": 460, "cy": 172, "x2": 485, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Formación en Verde Punteado de C—OH y K—Cl",
+        "semiStep": "CH₃—CH₂ ··· OH   +   K ··· Cl",
+        "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
+        "desc": "Se traza en verde punteado el nuevo enlace C—OH del etanol a la izquierda y el enlace iónico K—Cl a la derecha.",
+        "legend": {
+          "breaking": "Enlace C—Cl completamente escindido.",
+          "forming": "En VERDE punteado: nuevos enlaces C—OH y K—Cl.",
+          "movement": "Reorganización hacia los productos finales."
+        },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 115, "y": 225 },
+            { "id": "C1", "el": "C", "x": 235, "y": 225 },
+            { "id": "H2", "el": "H", "x": 235, "y": 125 },
+            { "id": "H3", "el": "H", "x": 235, "y": 320 },
+            { "id": "C2", "el": "C", "x": 365, "y": 225, "highlight": "#10b981" },
+            { "id": "H4", "el": "H", "x": 480, "y": 225 },
+            { "id": "H5", "el": "H", "x": 365, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 365, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 655, "y": 225 },
+            { "id": "Cl1", "el": "Cl", "x": 775, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 565, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Producto Final Consolidado: Etanol (Alcohol 1°) + KCl",
+        "semiStep": "CH₃—CH₂—OH   +   KCl",
+        "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
+        "desc": "Quedan consolidados en verde sólido el etanol (alcohol primario) a la izquierda y el cloruro de potasio (KCl) a la derecha.",
+        "legend": {
+          "breaking": "Sustitución completada.",
+          "forming": "En VERDE sólido: enlaces C—OH y K—Cl consolidados.",
+          "movement": "Productos finales estables."
+        },
+        "scene": {
+          "atoms": [
+            { "id": "H1", "el": "H", "x": 115, "y": 225 },
+            { "id": "C1", "el": "C", "x": 235, "y": 225 },
+            { "id": "H2", "el": "H", "x": 235, "y": 125 },
+            { "id": "H3", "el": "H", "x": 235, "y": 320 },
+            { "id": "C2", "el": "C", "x": 365, "y": 225, "highlight": "#10b981", "label": "Etanol" },
+            { "id": "H4", "el": "H", "x": 480, "y": 225 },
+            { "id": "H5", "el": "H", "x": 365, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 365, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 655, "y": 225, "label": "Cloruro de potasio" },
+            { "id": "Cl1", "el": "Cl", "x": 775, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "H1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H4", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "H5", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 565, "y": 232, "text": "+" }]
+        }
+      }
+    ],
+    "sust_1bromopropano_1propanol": [
+      {
+        "title": "Paso 1 — Sustitución SN2 en Haluro Primario: 1-Bromopropano + KOH (Acuoso)",
+        "semiStep": "CH₃—CH₂—CH₂—Br  +  K—OH",
+        "semiGlobal": "CH₃—CH₂—CH₂—Br + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH₂—OH + KBr",
+        "desc": "El 1-bromopropano primario intacto frente al hidróxido de potasio acuoso.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 300, "y": 210 },
+            { "id": "H1", "el": "H", "x": 300, "y": 110 },
+            { "id": "H2", "el": "H", "x": 300, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 445, "y": 210 },
+            { "id": "K1", "el": "K", "x": 625, "y": 210 },
+            { "id": "OH1", "el": "OH", "x": 745, "y": 210 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 535, "y": 217, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico Concertado (SN2) y Ruptura en Rojo de C—Br",
+        "semiStep": "CH₃CH₂—CH₂δ⁺ ┆—┆ Brδ⁻  +  K⁺ ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CH₂—CH₂—Br + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH₂—OH + KBr",
+        "desc": "El grupo –OH ataca al carbono C1 en un paso concertado mientras se rompe en rojo el enlace C—Br.",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Ataque SN2 del nucleófilo –OH.", "movement": "Desplazamiento del ion bromuro Br⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 300, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 300, "y": 110 },
+            { "id": "H2", "el": "H", "x": 300, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 455, "y": 210, "charge": "δ-", "border": "#ef4444" },
+            { "id": "K1", "el": "K", "x": 625, "y": 210, "charge": "+" },
+            { "id": "OH1", "el": "OH", "x": 745, "y": 210, "charge": "-", "highlight": "#38bdf8" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 725, "y1": 235, "cx": 520, "cy": 335, "x2": 320, "y2": 235, "type": "full", "label": "Ataque SN2 (–OH)" },
+            { "x1": 380, "y1": 202, "cx": 410, "cy": 172, "x2": 435, "y2": 195, "type": "full", "label": "Sale Br⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Formación en Verde Punteado de C—OH y K—Br",
+        "semiStep": "CH₃—CH₂—CH₂ ··· OH   +   K ··· Br",
+        "semiGlobal": "CH₃—CH₂—CH₂—Br + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH₂—OH + KBr",
+        "desc": "Se traza en verde punteado el nuevo enlace C—OH del 1-propanol y la sal KBr.",
+        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE punteado: C—OH y K—Br.", "movement": "Reorganización final." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 300, "y": 225, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 425, "y": 225 },
+            { "id": "H2", "el": "H", "x": 300, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 300, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 625, "y": 225 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 525, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Producto Final Consolidado: 1-Propanol (Alcohol 1°) + KBr",
+        "semiStep": "CH₃—CH₂—CH₂—OH   +   KBr",
+        "semiGlobal": "CH₃—CH₂—CH₂—Br + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH₂—OH + KBr",
+        "desc": "Queda consolidado el 1-propanol (alcohol primario) a la izquierda y el bromuro de potasio (KBr) a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—OH y K—Br.", "movement": "Productos finales estables." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 300, "y": 225, "highlight": "#10b981", "label": "1-Propanol" },
+            { "id": "H1", "el": "H", "x": 425, "y": 225 },
+            { "id": "H2", "el": "H", "x": 300, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 300, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 625, "y": 225, "label": "Bromuro de potasio" },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 525, "y": 232, "text": "+" }]
+        }
+      }
+    ],
+    "sust_2cloropropano_2propanol": [
+      {
+        "title": "Paso 1 — Sustitución SN2 en Haluro Secundario: 2-Cloropropano + KOH (Acuoso)",
+        "semiStep": "(CH₃)₂CH—Cl  +  K—OH",
+        "semiGlobal": "(CH₃)₂CH—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH(OH)—CH₃ + KCl",
+        "desc": "El 2-cloropropano secundario presenta el átomo de cloro unido al carbono central frente al KOH acuoso.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del nucleófilo –OH." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 285, "y": 210 },
+            { "id": "H1", "el": "H", "x": 285, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 425, "y": 210 },
+            { "id": "K1", "el": "K", "x": 615, "y": 210 },
+            { "id": "OH1", "el": "OH", "x": 735, "y": 210 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 520, "y": 217, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico Concertado (SN2) y Ruptura en Rojo de C—Cl",
+        "semiStep": "(CH₃)₂CHδ⁺ ┆—┆ Clδ⁻  +  K⁺ ┆—┆ OH⁻",
+        "semiGlobal": "(CH₃)₂CH—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH(OH)—CH₃ + KCl",
+        "desc": "El grupo –OH ataca al carbono secundario en un paso concertado mientras se rompe en rojo el enlace C—Cl.",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "Ataque SN2 del nucleófilo –OH.", "movement": "Salida concertada del ion cloruro Cl⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 210 },
+            { "id": "C1", "el": "C", "x": 285, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 285, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 435, "y": 210, "charge": "δ-", "border": "#ef4444" },
+            { "id": "K1", "el": "K", "x": 615, "y": 210, "charge": "+" },
+            { "id": "OH1", "el": "OH", "x": 735, "y": 210, "charge": "-", "highlight": "#38bdf8" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 715, "y1": 235, "cx": 505, "cy": 335, "x2": 305, "y2": 235, "type": "full", "label": "Ataque SN2 (–OH)" },
+            { "x1": 365, "y1": 202, "cx": 392, "cy": 172, "x2": 415, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Formación en Verde Punteado de C—OH (2-Propanol) y K—Cl",
+        "semiStep": "CH₃—CH(···OH)—CH₃   +   K ··· Cl",
+        "semiGlobal": "(CH₃)₂CH—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH(OH)—CH₃ + KCl",
+        "desc": "Se traza en verde punteado el enlace C—OH en el carbono secundario central y el enlace K—Cl.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE punteado: C—OH y K—Cl.", "movement": "Reorganización hacia el alcohol secundario." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 415, "y": 225 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225 },
+            { "id": "Cl1", "el": "Cl", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Producto Final Consolidado: 2-Propanol (Alcohol 2°) + KCl",
+        "semiStep": "CH₃—CH(OH)—CH₃   +   KCl",
+        "semiGlobal": "(CH₃)₂CH—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH(OH)—CH₃ + KCl",
+        "desc": "Queda consolidado en verde sólido el 2-propanol (alcohol secundario) a la izquierda y KCl a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—OH y K—Cl.", "movement": "Productos finales estables." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981", "label": "2-Propanol" },
+            { "id": "H1", "el": "H", "x": 415, "y": 225 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225, "label": "Cloruro de potasio" },
+            { "id": "Cl1", "el": "Cl", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      }
+    ],
+    "sust_2bromobutano_2butanol": [
+      {
+        "title": "Paso 1 — Sustitución SN2 en Haluro Secundario: 2-Bromobutano + KOH (Acuoso)",
+        "semiStep": "CH₃—CH₂—CH(Br)—CH₃  +  K—OH",
+        "semiGlobal": "CH₃CH₂CH(Br)CH₃ + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH(OH)—CH₃ + KBr",
+        "desc": "El 2-bromobutano secundario frente al hidróxido de potasio en medio acuoso.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 135, "y": 210 },
+            { "id": "C1", "el": "C", "x": 285, "y": 210 },
+            { "id": "H1", "el": "H", "x": 285, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 425, "y": 210 },
+            { "id": "K1", "el": "K", "x": 615, "y": 210 },
+            { "id": "OH1", "el": "OH", "x": 735, "y": 210 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 520, "y": 217, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico Concertado (SN2) y Ruptura en Rojo de C—Br",
+        "semiStep": "CH₃CH₂—CHδ⁺(CH₃) ┆—┆ Brδ⁻  +  K⁺ ┆—┆ OH⁻",
+        "semiGlobal": "CH₃CH₂CH(Br)CH₃ + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH(OH)—CH₃ + KBr",
+        "desc": "El grupo –OH ataca al carbono 2 en un paso concertado mientras sale el ion bromuro.",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Ataque SN2 del nucleófilo –OH.", "movement": "Desplazamiento concertado del Br⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 135, "y": 210 },
+            { "id": "C1", "el": "C", "x": 285, "y": 210, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H1", "el": "H", "x": 285, "y": 110 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 435, "y": 210, "charge": "δ-", "border": "#ef4444" },
+            { "id": "K1", "el": "K", "x": 615, "y": 210, "charge": "+" },
+            { "id": "OH1", "el": "OH", "x": 735, "y": 210, "charge": "-", "highlight": "#38bdf8" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 715, "y1": 235, "cx": 505, "cy": 335, "x2": 305, "y2": 235, "type": "full", "label": "Ataque SN2 (–OH)" },
+            { "x1": 365, "y1": 202, "cx": 392, "cy": 172, "x2": 415, "y2": 195, "type": "full", "label": "Sale Br⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Formación en Verde Punteado de C—OH (2-Butanol) y K—Br",
+        "semiStep": "CH₃—CH₂—CH(···OH)—CH₃   +   K ··· Br",
+        "semiGlobal": "CH₃CH₂CH(Br)CH₃ + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH(OH)—CH₃ + KBr",
+        "desc": "Se traza en verde punteado el enlace C—OH en el carbono 2 y el bromuro de potasio.",
+        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE punteado: C—OH y K—Br.", "movement": "Reorganización final." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 135, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 415, "y": 225 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225 },
+            { "id": "Br1", "el": "Br", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Producto Final Consolidado: 2-Butanol (Alcohol 2°) + KBr",
+        "semiStep": "CH₃—CH₂—CH(OH)—CH₃   +   KBr",
+        "semiGlobal": "CH₃CH₂CH(Br)CH₃ + KOH ──(Acuoso, SN2)──► CH₃—CH₂—CH(OH)—CH₃ + KBr",
+        "desc": "Queda consolidado en verde sólido el 2-butanol (alcohol secundario) a la izquierda y KBr a la derecha.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—OH y K—Br.", "movement": "Productos finales estables." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 135, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981", "label": "2-Butanol" },
+            { "id": "H1", "el": "H", "x": 415, "y": 225 },
+            { "id": "R2", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225, "label": "Bromuro de potasio" },
+            { "id": "Br1", "el": "Br", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      }
+    ],
+    "sust_tercbutilcl_tercbutanol": [
+      {
+        "title": "Paso 1 — Sustitución SN1 en Haluro Terciario: 2-Cloro-2-metilpropano + KOH (Acuoso)",
+        "semiStep": "(CH₃)₃C—Cl  +  K—OH",
+        "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
+        "desc": "El 2-cloro-2-metilpropano (cloruro de terc-butilo) tiene tres grupos metilo que impiden el ataque trasero SN2, por lo que reacciona vía SN1 en dos etapas.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Ionización inicial del haluro terciario." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "C1", "el": "C", "x": 285, "y": 215 },
+            { "id": "R2", "el": "CH₃", "x": 425, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 315 },
+            { "id": "Cl1", "el": "Cl", "x": 285, "y": 110 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Etapa 1 (SN1): Ionización Heterolítica en Rojo del Enlace C—Cl",
+        "semiStep": "(CH₃)₃C ┆—┆ Cl  ──►  (CH₃)₃C⁺ + Cl⁻",
+        "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
+        "desc": "En la primera etapa (lenta), se rompe heterolíticamente el enlace C—Cl en rojo punteado; el cloro se lleva el par electrónico como Cl⁻.",
+        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.", "forming": "Formación del carbocatión terciario.", "movement": "Salida espontánea del ion cloruro Cl⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "C1", "el": "C", "x": 285, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "R2", "el": "CH₃", "x": 425, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 315 },
+            { "id": "Cl1", "el": "Cl", "x": 285, "y": 95, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻", "labelPos": "top" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 285, "y1": 165, "cx": 260, "cy": 140, "x2": 272, "y2": 120, "type": "full", "label": "Par al Cl" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Carbocatión Terciario (terc-Butilo) + K—OH",
+        "semiStep": "(CH₃)₃C⁺  +  K—OH  (+ Cl⁻)",
+        "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
+        "desc": "Queda formado el carbocatión terciario estable (CH₃)₃C⁺ y entra el hidróxido de potasio (K—OH) para realizar el ataque nucleofílico.",
+        "legend": { "breaking": "Enlace C—Cl ya escindido.", "forming": "Carbocatión terciario intermediario formado.", "movement": "El nucleófilo –OH ataca al carbono positivo C⁺." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 135, "y": 215 },
+            { "id": "C1", "el": "C", "x": 275, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 3°" },
+            { "id": "R2", "el": "CH₃", "x": 415, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 275, "y": 315 },
+            { "id": "K1", "el": "K", "x": 585, "y": 140, "charge": "+", "enterFromX": 700, "enterFromY": 140 },
+            { "id": "OH1", "el": "OH", "x": 705, "y": 140, "charge": "-", "highlight": "#38bdf8", "enterFromX": 820, "enterFromY": 140 },
+            { "id": "Cl1", "el": "Cl", "x": 645, "y": 280, "charge": "-", "label": "Ion Cl⁻" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 680, "y1": 120, "cx": 480, "cy": 55, "x2": 295, "y2": 185, "type": "full", "label": "Ataque SN1 (–OH → C⁺)" }
+          ],
+          "texts": [{ "x": 500, "y": 180, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Etapa 2 (SN1): Formación en Verde Punteado de C—OH y K—Cl",
+        "semiStep": "(CH₃)₃C ··· OH   +   K ··· Cl",
+        "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
+        "desc": "Se traza en verde punteado el nuevo enlace C—OH en el carbono terciario y la unión iónica K—Cl.",
+        "legend": { "breaking": "Enlace K—OH disociado.", "forming": "En VERDE punteado: C—OH y K—Cl.", "movement": "Captura rápida del grupo –OH por el carbocatión." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 425, "y": 225 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225 },
+            { "id": "Cl1", "el": "Cl", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 2-Metil-2-propanol (Alcohol 3°) + KCl",
+        "semiStep": "(CH₃)₃C—OH   +   KCl",
+        "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
+        "desc": "Queda consolidado en verde sólido el 2-metil-2-propanol (alcohol terciario) a la izquierda y KCl a la derecha.",
+        "legend": { "breaking": "Sustitución SN1 completada.", "forming": "En VERDE sólido: enlaces C—OH y K—Cl.", "movement": "Productos finales estables." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
+            { "id": "C1", "el": "C", "x": 285, "y": 225, "highlight": "#10b981", "label": "2-Metil-2-propanol" },
+            { "id": "R2", "el": "CH₃", "x": 425, "y": 225 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 285, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 615, "y": 225, "label": "Cloruro de potasio" },
+            { "id": "Cl1", "el": "Cl", "x": 735, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Cl1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 515, "y": 232, "text": "+" }]
+        }
+      }
+    ],
+    "sust_tercpentilbr_tercpentanol": [
+      {
+        "title": "Paso 1 — Sustitución SN1 en Haluro Terciario: 2-Bromo-2-metilbutano + KOH (Acuoso)",
+        "semiStep": "(CH₃)₂C(Br)—CH₂—CH₃  +  K—OH",
+        "semiGlobal": "(CH₃)₂C(Br)—CH₂—CH₃ + KOH ──(Acuoso, SN1)──► (CH₃)₂C(OH)—CH₂—CH₃ + KBr",
+        "desc": "El 2-bromo-2-metilbutano terciario inicia la sustitución mediante ionización del enlace C—Br.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Ionización del haluro terciario." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "C1", "el": "C", "x": 285, "y": 215 },
+            { "id": "R2", "el": "CH₃CH₂", "x": 435, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 315 },
+            { "id": "Br1", "el": "Br", "x": 285, "y": 110 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Etapa 1 (SN1): Ionización Heterolítica en Rojo del Enlace C—Br",
+        "semiStep": "(CH₃)₂C(┆—┆ Br)—CH₂—CH₃  ──►  (CH₃)₂C⁺—CH₂—CH₃ + Br⁻",
+        "semiGlobal": "(CH₃)₂C(Br)—CH₂—CH₃ + KOH ──(Acuoso, SN1)──► (CH₃)₂C(OH)—CH₂—CH₃ + KBr",
+        "desc": "Se rompe heterolíticamente en rojo punteado el enlace C—Br saliendo el ion bromuro Br⁻.",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Formación del carbocatión terciario terc-pentilo.", "movement": "Salida de Br⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "C1", "el": "C", "x": 285, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 435, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 285, "y": 315 },
+            { "id": "Br1", "el": "Br", "x": 285, "y": 95, "charge": "-", "border": "#ef4444", "label": "Sale Br⁻", "labelPos": "top" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 285, "y1": 165, "cx": 260, "cy": 140, "x2": 272, "y2": 120, "type": "full", "label": "Par al Br" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Carbocatión Terciario (terc-Pentilo) + K—OH",
+        "semiStep": "(CH₃)₂C⁺—CH₂—CH₃  +  K—OH  (+ Br⁻)",
+        "semiGlobal": "(CH₃)₂C(Br)—CH₂—CH₃ + KOH ──(Acuoso, SN1)──► (CH₃)₂C(OH)—CH₂—CH₃ + KBr",
+        "desc": "Queda formado el carbocatión terciario estable y el grupo –OH ataca al carbono positivo.",
+        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "Carbocatión terciario formado.", "movement": "Ataque nucleofílico del grupo –OH." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 135, "y": 215 },
+            { "id": "C1", "el": "C", "x": 275, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Carbocatión 3°" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 425, "y": 215 },
+            { "id": "R3", "el": "CH₃", "x": 275, "y": 315 },
+            { "id": "K1", "el": "K", "x": 595, "y": 140, "charge": "+", "enterFromX": 710, "enterFromY": 140 },
+            { "id": "OH1", "el": "OH", "x": 715, "y": 140, "charge": "-", "highlight": "#38bdf8", "enterFromX": 830, "enterFromY": 140 },
+            { "id": "Br1", "el": "Br", "x": 655, "y": 280, "charge": "-", "label": "Ion Br⁻" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "K1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 690, "y1": 120, "cx": 490, "cy": 55, "x2": 295, "y2": 185, "type": "full", "label": "Ataque SN1 (–OH → C⁺)" }
+          ],
+          "texts": [{ "x": 510, "y": 180, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 4 — Etapa 2 (SN1): Formación en Verde Punteado de C—OH y K—Br",
+        "semiStep": "(CH₃)₂C(···OH)—CH₂—CH₃   +   K ··· Br",
+        "semiGlobal": "(CH₃)₂C(Br)—CH₂—CH₃ + KOH ──(Acuoso, SN1)──► (CH₃)₂C(OH)—CH₂—CH₃ + KBr",
+        "desc": "Se traza en verde punteado el enlace C—OH en el carbono terciario y la unión iónica K—Br.",
+        "legend": { "breaking": "Enlace K—OH disociado.", "forming": "En VERDE punteado: C—OH y K—Br.", "movement": "Captura rápida del grupo –OH." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 135, "y": 225 },
+            { "id": "C1", "el": "C", "x": 275, "y": 225, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 425, "y": 225 },
+            { "id": "R3", "el": "CH₃", "x": 275, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 275, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 625, "y": 225 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "forming" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "forming" }
+          ],
+          "texts": [{ "x": 525, "y": 232, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 2-Metil-2-butanol (Alcohol 3°) + KBr",
+        "semiStep": "(CH₃)₂C(OH)—CH₂—CH₃   +   KBr",
+        "semiGlobal": "(CH₃)₂C(Br)—CH₂—CH₃ + KOH ──(Acuoso, SN1)──► (CH₃)₂C(OH)—CH₂—CH₃ + KBr",
+        "desc": "Queda consolidado en verde sólido el 2-metil-2-butanol (alcohol terciario) a la izquierda y KBr a la derecha.",
+        "legend": { "breaking": "Sustitución SN1 completada.", "forming": "En VERDE sólido: enlaces C—OH y K—Br.", "movement": "Productos finales estables." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 135, "y": 225 },
+            { "id": "C1", "el": "C", "x": 275, "y": 225, "highlight": "#10b981", "label": "2-Metil-2-butanol" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 425, "y": 225 },
+            { "id": "R3", "el": "CH₃", "x": 275, "y": 320 },
+            { "id": "OH1", "el": "OH", "x": 275, "y": 115, "border": "#10b981", "highlight": "#10b981" },
+            { "id": "K1", "el": "K", "x": 625, "y": 225, "label": "Bromuro de potasio" },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 225 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R3", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "new" },
+            { "from": "K1", "to": "Br1", "order": 1, "state": "new" }
+          ],
+          "texts": [{ "x": 525, "y": 232, "text": "+" }]
+        }
+      }
+    ]
+  }
+}
