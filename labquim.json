@@ -1,12 +1,13 @@
 {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "appConfig": {
     "title": "Laboratorio de Química Orgánica",
     "footerText": "Laboratorio Virtual Interactivo de Química Orgánica • Compendio Definitivo Unidades 13 a 17",
     "footerAuthor": "Univ. Juan Pablo Stumpfs Díaz",
     "defaultFunction": "alcanos",
     "defaultReaction": "cracking",
-    "reactionsPath": "reactions/"
+    "reactionsPath": "reactions/",
+    "nomenclatureFile": "reactions/nomenclatura.json"
   },
   "atomColors": {
     "C": {
@@ -255,6 +256,24 @@
     "haluros_acido": "",
     "carbohidratos": "",
     "aminoacidos": ""
+  },
+  "nomenclatureConfig": {
+    "enabled": true,
+    "bankPath": "reactions/nomenclatura.json",
+    "groups": [
+      { "id": "alcanos", "label": "1. Alcanos (Lineales y Ramificados)" },
+      { "id": "cicloalcanos", "label": "2. Cicloalcanos (Anillos y cis/trans)" },
+      { "id": "alquenos", "label": "3. Alquenos y Dienos (cis/trans y E/Z)" },
+      { "id": "alquinos", "label": "4. Alquinos y Eninos" },
+      { "id": "aromaticos", "label": "5. Hidrocarburos Aromáticos (Benceno y Xilenos)" },
+      { "id": "haluros", "label": "6. Halogenuros de Alquilo y Quirales (R / S)" },
+      { "id": "alcoholes", "label": "7. Alcoholes, Dioles, Fenoles y Quirales (R / S)" },
+      { "id": "eteres", "label": "8. Éteres, Epóxidos, Tioles y Tioéteres" },
+      { "id": "aminas", "label": "9. Aminas (1°, 2°, 3° y Aromáticas)" },
+      { "id": "aldehidos_cetonas", "label": "10. Aldehídos, Cetonas y Quinonas" },
+      { "id": "acidos", "label": "11. Ácidos Carboxílicos, Hidroxiácidos y Cetoácidos" },
+      { "id": "derivados_acidos", "label": "12. Ésteres, Amidas, Anhídridos, Haluros y Nitrilos" }
+    ]
   },
   "functionMenus": {
     "alcanos": {
