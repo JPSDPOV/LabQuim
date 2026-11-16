@@ -55,9 +55,9 @@
     "grignard_c2h5br": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: Bromoetano (CH₃CH₂Br) + Mg⁰",
-        "semiStep": "CH₃—CH₂—Br + Mg⁰  ──(Éter anhidro)──►",
+        "semiStep": "CH₃—CH₂—Br  +  Mg⁰",
         "semiGlobal": "CH₃CH₂Br + Mg⁰ ──► CH₃CH₂MgBr ──(H₂O)──► CH₃—CH₃ + HO—Mg—Br",
-        "desc": "Observa el bromoetano con sus enlaces perpendiculares a 90° y pares libres en el bromo frente al magnesio metálico (Mg⁰) en éter anhidro.",
+        "desc": "Observa el bromoetano con sus enlaces perpendiculares a 90° frente al magnesio metálico (Mg⁰) en éter anhidro.",
         "legend": {
           "breaking": "Ningún enlace roto todavía; sustrato intacto.",
           "forming": "Ningún enlace formado todavía.",
@@ -262,7 +262,7 @@
             { "id": "C1", "el": "C", "x": 210, "y": 215 },
             { "id": "H2", "el": "H", "x": 210, "y": 115 },
             { "id": "H3", "el": "H", "x": 210, "y": 310 },
-            { "id": "C2", "el": "C", "x": 330, "y": 215, "highlight": "#10b981", "label": "Etano (C₂H₆)" },
+            { "id": "C2", "el": "C", "x": 330, "y": 215, "highlight": "#10b981", "label": "Etano" },
             { "id": "H4", "el": "H", "x": 330, "y": 115 },
             { "id": "H5", "el": "H", "x": 330, "y": 310 },
             { "id": "Hw1", "el": "H", "x": 445, "y": 215, "border": "#10b981", "highlight": "#10b981" },
@@ -290,9 +290,9 @@
     "grignard_ch3i": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: Yodometano (CH₃I) + Mg⁰",
-        "semiStep": "CH₃—I + Mg⁰  ──(Éter anhidro)──►",
+        "semiStep": "CH₃—I  +  Mg⁰",
         "semiGlobal": "CH₃I + Mg⁰ ──► CH₃MgI ──(H₂O)──► CH₄ + HO—Mg—I",
-        "desc": "Yodometano intacto con enlaces a 90° y pares libres en el yodo frente al magnesio metálico en éter anhidro.",
+        "desc": "Yodometano intacto con enlaces a 90° frente al magnesio metálico en éter anhidro.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de Mg⁰." },
         "scene": {
           "atoms": [
@@ -440,7 +440,7 @@
         "scene": {
           "atoms": [
             { "id": "H1", "el": "H", "x": 125, "y": 215 },
-            { "id": "C1", "el": "C", "x": 245, "y": 215, "highlight": "#10b981", "label": "Metano (CH₄)" },
+            { "id": "C1", "el": "C", "x": 245, "y": 215, "highlight": "#10b981", "label": "Metano" },
             { "id": "H2", "el": "H", "x": 245, "y": 115 },
             { "id": "H3", "el": "H", "x": 245, "y": 310 },
             { "id": "Hw1", "el": "H", "x": 365, "y": 215, "border": "#10b981", "highlight": "#10b981" },
@@ -465,9 +465,9 @@
     "grignard_c3h7br": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: 1-Bromopropano + Mg⁰",
-        "semiStep": "CH₃CH₂—CH₂—Br + Mg⁰  ──(THF anhidro)──►",
+        "semiStep": "CH₃—CH₂—CH₂—Br  +  Mg⁰",
         "semiGlobal": "C₃H₇Br + Mg⁰ ──► C₃H₇MgBr ──(H₂O)──► C₃H₈ + HO—Mg—Br",
-        "desc": "1-Bromopropano intacto con enlaces perpendiculares y pares libres en el bromo frente a Mg⁰.",
+        "desc": "1-Bromopropano intacto con enlaces perpendiculares frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
@@ -615,7 +615,7 @@
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃CH₂", "x": 100, "y": 215 },
-            { "id": "C1", "el": "C", "x": 230, "y": 215, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
+            { "id": "C1", "el": "C", "x": 230, "y": 215, "highlight": "#10b981", "label": "Propano" },
             { "id": "H1", "el": "H", "x": 230, "y": 115 },
             { "id": "H2", "el": "H", "x": 230, "y": 310 },
             { "id": "Hw1", "el": "H", "x": 350, "y": 215, "border": "#10b981", "highlight": "#10b981" },
@@ -640,9 +640,9 @@
     "grignard_isopropilcl": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: 2-Cloropropano + Mg⁰",
-        "semiStep": "(CH₃)₂CH—Cl + Mg⁰  ──(THF anhidro)──►",
+        "semiStep": "(CH₃)₂CH—Cl  +  Mg⁰",
         "semiGlobal": "(CH₃)₂CHCl + Mg⁰ ──► (CH₃)₂CHMgCl ──(H₃O⁺)──► C₃H₈ + HO—Mg—Cl",
-        "desc": "2-Cloropropano secundario intacto con enlaces perpendiculares y pares libres en el cloro frente a Mg⁰.",
+        "desc": "2-Cloropropano secundario intacto con enlaces perpendiculares frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
@@ -790,7 +790,7 @@
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 100, "y": 215 },
-            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Propano (C₃H₈)" },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Propano" },
             { "id": "H1", "el": "H", "x": 225, "y": 115 },
             { "id": "R2", "el": "CH₃", "x": 225, "y": 310 },
             { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
@@ -815,9 +815,9 @@
     "grignard_tercbutilbr": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: 2-Bromo-2-metilpropano + Mg⁰",
-        "semiStep": "(CH₃)₃C—Br + Mg⁰  ──(Éter anhidro)──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
-        "desc": "Haluro terciario intacto con tres grupos metilo perpendiculares y pares libres en el bromo frente a Mg⁰.",
+        "semiStep": "(CH₃)₃C—Br  +  Mg⁰",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
+        "desc": "Haluro terciario intacto con tres grupos metilo perpendiculares frente a Mg⁰.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
@@ -840,7 +840,7 @@
       {
         "title": "Paso 2 — Ruptura en Rojo del Enlace C—Br Terciario",
         "semiStep": "(CH₃)₃Cδ⁺ ┆—┆ Brδ⁻ + Mg⁰ ──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
         "desc": "Ruptura en rojo punteado del enlace C—Br terciario para insertar el átomo de magnesio.",
         "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "Inserción de Mg.", "movement": "Transferencia electrónica." },
         "scene": {
@@ -867,7 +867,7 @@
       {
         "title": "Paso 3 — Bromuro de terc-Butilmagnesio + Entrada del Agua (H₂O)",
         "semiStep": "(CH₃)₃C—Mg—Br  +  H—O—H",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
         "desc": "El magnesio queda consolidado entre el carbono terciario y el bromo mientras aparece el agua angular en la parte superior.",
         "legend": { "breaking": "Sin ruptura en este instante.", "forming": "En VERDE sólido: (CH₃)₃C—Mg—Br formado.", "movement": "Aproximación superior del agua angular." },
         "scene": {
@@ -896,7 +896,7 @@
       {
         "title": "Paso 4 — Ataque Nucleofílico y Ruptura en Rojo de C—Mg y H—O",
         "semiStep": "(CH₃)₃Cδ⁻ ┆—┆ Mgδ⁺—Br + Hδ⁺ ┆—┆ Oδ⁻—H ──►",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
         "desc": "Se polarizan los centros reactivos: el carbono terciario captura el H⁺ superior y el oxígeno se coordina con el magnesio, debilitando en rojo los enlaces C—Mg y H—O.",
         "legend": { "breaking": "En ROJO: enlace C—Mg y enlace H—O.", "forming": "Transferencia electrónica concertada.", "movement": "Protonación del carbanión terciario." },
         "scene": {
@@ -929,7 +929,7 @@
       {
         "title": "Paso 5 — Formación en Verde Punteado de C—H y HO—Mg (2-Metilpropano)",
         "semiStep": "(CH₃)₃C ··· H   +   HO ··· Mg—Br",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
         "desc": "Se rompe el enlace C—Mg; se trazan en verde punteado el enlace C—H del 2-metilpropano y el enlace HO—Mg del subproducto.",
         "legend": { "breaking": "Enlace C—Mg escindido.", "forming": "En VERDE punteado: enlaces C—H y HO—Mg.", "movement": "Separación de productos." },
         "scene": {
@@ -959,7 +959,7 @@
       {
         "title": "Paso 6 — Producto Final Consolidado: 2-Metilpropano + HO—Mg—Br",
         "semiStep": "(CH₃)₃C—H   +   HO—Mg—Br",
-        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃CH + HO—Mg—Br",
+        "semiGlobal": "(CH₃)₃CBr + Mg⁰ ──► (CH₃)₃CMgBr ──(H₂O)──► (CH₃)₃C—H + HO—Mg—Br",
         "desc": "Quedan consolidados en verde sólido el 2-metilpropano a la izquierda y HO—Mg—Br a la derecha.",
         "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: enlaces C—H y HO—Mg.", "movement": "Productos finales estables." },
         "scene": {
@@ -990,9 +990,9 @@
     "grignard_ciclohexilbr": [
       {
         "title": "Paso 1 — Estado Inicial Intacto: Bromociclohexano + Mg⁰",
-        "semiStep": "C₆H₁₁—Br + Mg⁰  ──(Éter anhidro)──►",
+        "semiStep": "C₆H₁₁—Br  +  Mg⁰",
         "semiGlobal": "C₆H₁₁Br + Mg⁰ ──► C₆H₁₁MgBr ──(H₂O)──► C₆H₁₂ + HO—Mg—Br",
-        "desc": "Bromociclohexano intacto con pares libres en el bromo frente al magnesio metálico en éter anhidro.",
+        "desc": "Bromociclohexano intacto frente al magnesio metálico en éter anhidro.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación inicial." },
         "scene": {
           "atoms": [
@@ -1130,7 +1130,7 @@
         "scene": {
           "atoms": [
             { "id": "R1", "el": "C₅H₁₀", "x": 100, "y": 215 },
-            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Ciclohexano (C₆H₁₂)" },
+            { "id": "C1", "el": "C", "x": 225, "y": 215, "highlight": "#10b981", "label": "Ciclohexano" },
             { "id": "H1", "el": "H", "x": 225, "y": 115 },
             { "id": "Hw1", "el": "H", "x": 345, "y": 215, "border": "#10b981", "highlight": "#10b981" },
             { "id": "Ow", "el": "O", "x": 535, "y": 115, "border": "#10b981", "lonePairs": ["top-left", "bottom-left"] },
