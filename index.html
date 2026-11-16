@@ -339,9 +339,7 @@
                         <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA -->
                         <div class="flashcard-face bg-slate-950 border-2 border-slate-700/90 hover:border-cyan-500/60 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
                             <div class="flex items-center justify-between text-[11px] font-bold text-slate-400">
-                                <span id="nomStereoHintBadge" class="px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-800 text-cyan-300">
-                                    Fórmula Semidesarrollada
-                                </span>
+                                <span id="nomStereoHintBadge" class="hidden"></span>
                                 <span class="text-amber-300 animate-pulse">👆 Toca la tarjeta para ver el nombre</span>
                             </div>
 
@@ -4572,7 +4570,33 @@
                 }
             }
 
-            // 5. Desglose estructural por enlaces ('—', '-', '=', '≡') respetando paréntesis de ramificaciones
+            // 5. Expansión previa de grupos condensados para dibujarlos con enlaces reales
+            const expandCondensedGroups = (rawStr) => {
+                let out = rawStr.replace(/—/g, '-');
+                // (CH3)3C- -> CH3-C(CH3)(CH3)-  y  -(CH3)3 -> -C(CH3)(CH3)-CH3
+                out = out.replace(/^\(CH₃\)₃C-/, 'CH₃-C(CH₃)(CH₃)-');
+                out = out.replace(/^\(CH₃\)₂CH-/, 'CH₃-CH(CH₃)-');
+                out = out.replace(/-\(CH₃\)₃$/, '-C(CH₃)(CH₃)-CH₃');
+                out = out.replace(/-\(CH₃\)₂$/, '-CH(CH₃)-CH₃');
+                // Expandir cadenas repetidas -(CH2)n- (hasta n=4 para mantener legibilidad)
+                out = out.replace(/-\(CH₂\)(\d+)-/g, (_, nStr) => {
+                    const n = Math.min(4, parseInt(nStr, 10));
+                    return '-' + Array(n).fill('CH₂').join('-') + '-';
+                });
+                // Desplegar grupos funcionales terminales e internos con sus enlaces O / OH / NH2 / Cl
+                out = out.replace(/^OHC-/, 'CHO-');
+                out = out.replace(/-COOH$/, '-C(=O)(OH)');
+                out = out.replace(/^HOOC-/, 'C(=O)(OH)-');
+                out = out.replace(/-CHO$/, '-C(=O)(H)');
+                out = out.replace(/^CHO-/, 'C(=O)(H)-');
+                out = out.replace(/-COCl$/, '-C(=O)(Cl)');
+                out = out.replace(/-CONH₂$/, '-C(=O)(NH₂)');
+                out = out.replace(/-CO-/, '-C(=O)-');
+                return out;
+            };
+
+            const expandedStr = expandCondensedGroups(s);
+
             const splitTopLevelBonds = (str) => {
                 const out = [];
                 let buf = '';
@@ -4594,8 +4618,8 @@
                 return out;
             };
 
-            const tokens = splitTopLevelBonds(s);
-            if (tokens.length >= 3) {
+            const tokens = splitTopLevelBonds(expandedStr);
+            if (tokens.length >= 2) {
                 const chainNodes = [];
                 const chainBonds = [];
                 let pendingOrder = 1;
@@ -4609,43 +4633,43 @@
                     }
                 });
 
-                const stepX = Math.min(115, Math.max(82, Math.floor(780 / Math.max(1, chainNodes.length - 1))));
+                const stepX = Math.min(115, Math.max(82, Math.floor(800 / Math.max(1, chainNodes.length - 1))));
                 const startX = Math.round(460 - ((chainNodes.length - 1) * stepX) / 2);
+
+                const parseBranchSpec = (rawGrp) => {
+                    if (rawGrp.startsWith('=')) return { el: rawGrp.slice(1), order: 2 };
+                    return { el: rawGrp, order: 1 };
+                };
 
                 chainNodes.forEach((nd, idx) => {
                     const nx = startX + idx * stepX;
                     const nid = `CN_${idx}`;
                     const txt = nd.text;
 
-                    // Caso A: Carbono con 2 sustituyentes entre paréntesis, ej: C(CH3)(OH) o C(CH3)2
-                    const mTwo = txt.match(/^(C|CH)\(([^()]+)\)\(([^()]+)\)$/);
-                    const mRep = txt.match(/^\(([^()]+)\)(\d+)(C|CH)?$/);
+                    // Carbono con 2 sustituyentes: ej. C(=O)(OH), C(CH3)(OH), C(CH3)(CH3)
+                    const mTwo = txt.match(/^(C|CH|N)\(([^()]+)\)\(([^()]+)\)$/);
+                    // Carbono con 1 sustituyente: ej. CH(CH3), C(=O), CH(OH)
                     const mOne = txt.match(/^(C|CH|N)\(([^()]+)\)$/);
 
                     if (mTwo) {
+                        const bTop = parseBranchSpec(mTwo[2]);
+                        const bBot = parseBranchSpec(mTwo[3]);
+                        // Si es carbonilo terminal (-COOH, -CHO, -COCl, -CONH2), desplegar O arriba-derecha y OH abajo-derecha como tu esquema
+                        const isTerminalCarbonyl = (idx === chainNodes.length - 1) && bTop.order === 2;
+                        const xOffset = isTerminalCarbonyl ? 58 : 0;
                         atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
-                        atoms.push({ id: `BRT_${idx}`, el: mTwo[2], x: nx, y: 92 });
-                        atoms.push({ id: `BRB_${idx}`, el: mTwo[3], x: nx, y: 278 });
-                        bonds.push({ from: nid, to: `BRT_${idx}`, order: 1 }, { from: nid, to: `BRB_${idx}`, order: 1 });
-                    } else if (mRep && mRep[3]) {
-                        // ej: (CH3)2C o (CH3)3C
-                        const count = parseInt(mRep[2], 10);
-                        atoms.push({ id: nid, el: mRep[3], x: nx, y: 185 });
-                        atoms.push({ id: `BRT_${idx}`, el: mRep[1], x: nx, y: 92 });
-                        bonds.push({ from: nid, to: `BRT_${idx}`, order: 1 });
-                        if (count >= 2) {
-                            atoms.push({ id: `BRB_${idx}`, el: mRep[1], x: nx, y: 278 });
-                            bonds.push({ from: nid, to: `BRB_${idx}`, order: 1 });
-                        }
-                        if (count >= 3) {
-                            atoms.push({ id: `BRL_${idx}`, el: mRep[1], x: nx - 85, y: 185 });
-                            bonds.push({ from: `BRL_${idx}`, to: nid, order: 1 });
-                        }
+                        atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
+                        atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
+                        bonds.push(
+                            { from: nid, to: `BRT_${idx}`, order: bTop.order },
+                            { from: nid, to: `BRB_${idx}`, order: bBot.order }
+                        );
                     } else if (mOne) {
+                        const bSingle = parseBranchSpec(mOne[2]);
                         atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
-                        const up = idx % 2 === 0;
-                        atoms.push({ id: `BR_${idx}`, el: mOne[2], x: nx, y: up ? 92 : 278 });
-                        bonds.push({ from: nid, to: `BR_${idx}`, order: 1 });
+                        const up = bSingle.order === 2 ? true : (idx % 2 === 1);
+                        atoms.push({ id: `BR_${idx}`, el: bSingle.el, x: nx, y: up ? 92 : 278 });
+                        bonds.push({ from: nid, to: `BR_${idx}`, order: bSingle.order });
                     } else {
                         atoms.push({ id: nid, el: txt, x: nx, y: 185 });
                     }
