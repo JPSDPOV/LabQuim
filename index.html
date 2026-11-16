@@ -1112,25 +1112,33 @@
 
             // Caso 0: Compuestos quirales R-CH(X)-CH3 o R-CH(OH)-CH3 con prefijo (R)- o (S)-
             // Dibuja la cadena R en nodos semidesarrollados (CH3 - CH2 - ...), C quiral central, H arriba (dash), CH3 abajo (wedge)
+            // Caso 0: Compuestos quirales R-CH(X)-CH3 o R-CH(OH)-CH3 con prefijo (R)- o (S)-
+            // Respeta estrictamente la configuración R / S según reglas Cahn-Ingold-Prelog y coloca el nombre debajo de toda la molécula
             const mChiral = norm.match(/^\(([RS])\)-(.+?)-CH\((Cl|Br|I|OH)\)-CH3$/i);
             if (mChiral) {
+                const config = mChiral[1].toUpperCase(); // 'R' o 'S'
                 const subGroup = mChiral[3]; // Cl, Br, I, OH
                 const chainRaw = mChiral[2]; // ej: CH3-CH2-CH2, CH3-CH2, C6H5, (CH3)2CH
                 const isProductOH = subGroup.toUpperCase() === 'OH';
 
-                // Dividir la cadena R en segmentos semidesarrollados (ej. ["CH3", "CH2", "CH2"])
                 const segs = chainRaw.split('-').map(s =>
                     s.replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/C6H5/g, 'C₆H₅')
                 );
                 const segStep = 74;
 
+                // Para que CIP coincida exactamente:
+                // En reactivo (X a derecha, R a izquierda): (R) lleva H arriba (dash) y CH3 abajo (wedge); (S) lleva CH3 arriba (wedge) y H abajo (dash)
+                // En producto (OH a izquierda, R a derecha): (S) lleva H arriba (dash) y CH3 abajo (wedge); (R) lleva CH3 arriba (wedge) y H abajo (dash)
+                const hOnTop = (!isProductOH && config === 'R') || (isProductOH && config === 'S');
+                const topY = centerY - 82;
+                const botY = centerY + 82;
+
                 if (!isProductOH) {
-                    // Reactivo inicial: [cadena R a la izquierda] — C — X (derecha), H arriba (dash), CH3 abajo (wedge)
                     const cX = centerX + 25;
                     atoms.push(
-                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
-                        { id: `${prefixId}_H`, el: 'H', x: cX, y: centerY - 82 },
-                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: centerY + 82 },
+                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
+                        { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined },
                         { id: `${prefixId}_X`, el: subGroup, x: cX + 82, y: centerY, highlight: accentColor, border: accentColor }
                     );
                     bonds.push(
@@ -1139,7 +1147,6 @@
                         { from: `${prefixId}_C`, to: `${prefixId}_X`, order: 1, state: 'normal' }
                     );
 
-                    // Colocar segmentos de la cadena R hacia la izquierda de C
                     let prevId = `${prefixId}_C`;
                     for (let idx = segs.length - 1; idx >= 0; idx--) {
                         const distIdx = segs.length - idx;
@@ -1158,13 +1165,12 @@
                     }
                     return { atoms, bonds, spanHalfW: Math.max(130, segs.length * segStep + 40) };
                 } else {
-                    // Producto final invertido: OH (izquierda) — C — [cadena R invertida a la derecha], H arriba (dash), CH3 abajo (wedge)
                     const cX = centerX - 35;
                     atoms.push(
                         { id: `${prefixId}_OH`, el: 'OH', x: cX - 82, y: centerY, highlight: accentColor, border: accentColor },
-                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
-                        { id: `${prefixId}_H`, el: 'H', x: cX, y: centerY - 82 },
-                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: centerY + 82 }
+                        { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
+                        { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined }
                     );
                     bonds.push(
                         { from: `${prefixId}_OH`, to: `${prefixId}_C`, order: 1, state: 'normal' },
@@ -1172,7 +1178,6 @@
                         { from: `${prefixId}_C`, to: `${prefixId}_Me`, order: 1, state: 'normal', stereo: 'wedge' }
                     );
 
-                    // Colocar segmentos de la cadena R invertidos hacia la derecha de C (desde el carbono unido a C hacia el extremo CH3)
                     let prevId = `${prefixId}_C`;
                     const revSegs = [...segs].reverse();
                     for (let idx = 0; idx < revSegs.length; idx++) {
