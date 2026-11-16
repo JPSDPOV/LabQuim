@@ -4589,9 +4589,9 @@
                 });
                 out = out.replace(/^OHC-/, 'CHO-');
                 out = out.replace(/-COOH$/, '-C(=O)(OH)');
-                out = out.replace(/^HOOC-/, 'C(=O)(OH)-');
+                out = out.replace(/^HOOC-/, 'C(HO)(=O)-');
                 out = out.replace(/-CHO$/, '-C(=O)(H)');
-                out = out.replace(/^CHO-/, 'C(=O)(H)-');
+                out = out.replace(/^CHO-/, 'C(H)(=O)-');
                 out = out.replace(/-COCl$/, '-C(=O)(Cl)');
                 out = out.replace(/-CONH₂$/, '-C(=O)(NH₂)');
                 out = out.replace(/-CO-/, '-C(=O)-');
@@ -4653,18 +4653,19 @@
                     const mOne = txt.match(/^(C|CH|N)\(([^()]+)\)$/);
 
                     if (mTwo) {
-                        const bTop = parseBranchSpec(mTwo[2]);
-                        const bBot = parseBranchSpec(mTwo[3]);
-                        const isTerminalCarbonyl = (idx === chainNodes.length - 1) && bTop.order === 2;
-                        const xOffset = isTerminalCarbonyl ? 58 : 0;
-                        atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
-                        atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
-                        atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
-                        bonds.push(
-                            { from: nid, to: `BRT_${idx}`, order: bTop.order },
-                            { from: nid, to: `BRB_${idx}`, order: bBot.order }
-                        );
-                    } else if (mOne) {
+                     const bTop = parseBranchSpec(mTwo[2]);
+                     const bBot = parseBranchSpec(mTwo[3]);
+                     const isLeftTerminal = (idx === 0) && (bTop.order === 2 || bBot.order === 2);
+                     const isRightTerminal = (idx === chainNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
+                     const xOffset = isLeftTerminal ? -58 : (isRightTerminal ? 58 : 0);
+                     atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
+                     atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
+                     atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
+                     bonds.push(
+                         { from: nid, to: `BRT_${idx}`, order: bTop.order },
+                         { from: nid, to: `BRB_${idx}`, order: bBot.order }
+                     );
+                 } else if (mOne) {
                         const bSingle = parseBranchSpec(mOne[2]);
                         atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
                         const up = bSingle.order === 2 ? true : (idx % 2 === 1);
