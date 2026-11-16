@@ -1129,7 +1129,7 @@
                 // Para que CIP coincida exactamente:
                 // En reactivo (X a derecha, R a izquierda): (R) lleva H arriba (dash) y CH3 abajo (wedge); (S) lleva CH3 arriba (wedge) y H abajo (dash)
                 // En producto (OH a izquierda, R a derecha): (S) lleva H arriba (dash) y CH3 abajo (wedge); (R) lleva CH3 arriba (wedge) y H abajo (dash)
-                const hOnTop = (!isProductOH && config === 'R') || (isProductOH && config === 'S');
+                const hOnTop = (!isProductOH && config === 'S') || (isProductOH && config === 'R');
                 const topY = centerY - 82;
                 const botY = centerY + 82;
 
