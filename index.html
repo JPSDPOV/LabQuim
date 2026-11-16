@@ -1334,6 +1334,10 @@
 
         function getNodeGeometry(a) {
             const mobile = isCompactMobile();
+            if (a.ring === 'phenyl') {
+             const rad = mobile ? 38 : 30;
+             return { isPill: false, isRing: 'phenyl', r: rad, halfW: rad + 6, halfH: rad + 6, cfg: { bg: '#1e293b', border: '#a78bfa', text: '#f8fafc', r: rad } };
+            }
             const rawText = String(a.el || '');
             const compactLen = rawText.replace(/[₀-₉⁰-⁹⁺⁻°•]/g, '').length;
             const isCompactAtom = rawText.length <= 3 && compactLen <= 2;
@@ -1902,6 +1906,24 @@
             const textCol = a.text || cfg.text;
 
             let html = `<g transform="translate(${a.x}, ${a.y})" opacity="${a.opacity !== undefined ? a.opacity : 1}">`;
+            if (g.isRing === 'phenyl') {
+             const R = g.r;
+             const rIn = R * 0.72;
+             const pts = [];
+             for (let k = 0; k < 6; k++) {
+                 const ang = (Math.PI / 3) * k;
+                 pts.push(`${(Math.cos(ang) * R).toFixed(1)},${(Math.sin(ang) * R).toFixed(1)}`);
+             }
+             if (a.highlight) {
+                 html += `<circle cx="0" cy="0" r="${R + 7}" fill="none" stroke="${a.highlight}" stroke-width="2.2" opacity="0.65"/>`;
+             }
+             html += `<polygon points="${pts.join(' ')}" fill="${bg}" stroke="${border}" stroke-width="2.6" stroke-linejoin="round"/>`;
+             for (const k of [0, 2, 4]) {
+                 const a1 = (Math.PI / 3) * k;
+                 const a2 = (Math.PI / 3) * (k + 1);
+                 html += `<line x1="${(Math.cos(a1) * rIn).toFixed(1)}" y1="${(Math.sin(a1) * rIn).toFixed(1)}" x2="${(Math.cos(a2) * rIn).toFixed(1)}" y2="${(Math.sin(a2) * rIn).toFixed(1)}" stroke="#a78bfa" stroke-width="2.3" stroke-linecap="round"/>`;
+             }
+            } else if (g.isPill) {
 
             if (g.isPill) {
                 const w = g.pillW;
