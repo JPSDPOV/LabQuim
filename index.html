@@ -92,6 +92,29 @@
                 position: absolute !important;
             }
         }
+        /* TARJETA FLIP 3D PARA PRÁCTICA DE NOMENCLATURA */
+        .flashcard-perspective {
+            perspective: 1400px;
+        }
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+            transform-style: preserve-3d;
+        }
+        .flashcard-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+        .flashcard-face {
+            position: absolute;
+            inset: 0;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .flashcard-back {
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-violet-500/30">
@@ -114,6 +137,9 @@
                 </div>
 
                 <div class="flex items-center gap-2 shrink-0">
+                    <button type="button" onclick="openNomenclatureSetup()" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-slate-950 text-xs font-extrabold shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition active:scale-95 cursor-pointer">
+                        <span>🧠</span> <span>Practicar Nomenclatura</span>
+                    </button>
                     <span id="jsonStatusPill" class="px-2.5 py-1 rounded-lg bg-cyan-500/15 border border-cyan-500/40 text-[11px] font-bold text-cyan-300">
                         🔄 Conectando...
                     </span>
@@ -226,6 +252,169 @@
                         🎯 Posibles Reacciones para Visualizar (toca una para iniciar):
                     </span>
                     <div id="wiz4SubstratesList" class="flex flex-col gap-2.5"></div>
+                </div>
+            </section>
+            <!-- MÓDULO NOMENCLATURA A: CONFIGURACIÓN (CHECKLIST DE GRUPOS + CANTIDAD) -->
+            <section id="nomenclatureSetupSection" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Entrenamiento Interactivo</span>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Práctica de Nomenclatura Orgánica</h2>
+                    </div>
+                    <button type="button" onclick="closeNomenclatureMode()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition">
+                        ⬅ Volver a Reacciones
+                    </button>
+                </div>
+
+                <!-- Checklist de Grupos Funcionales -->
+                <div class="flex flex-col gap-2.5">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <label class="text-xs font-extrabold uppercase tracking-wider text-slate-300">
+                            1. Selecciona los Grupos Funcionales a practicar:
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <button type="button" onclick="toggleAllNomenclatureGroups(true)" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-[11px] font-extrabold text-cyan-200 transition">
+                                ✓ Seleccionar Todos
+                            </button>
+                            <button type="button" onclick="toggleAllNomenclatureGroups(false)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-bold text-slate-300 transition">
+                                Limpiar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="nomGroupsChecklist" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[42vh] overflow-y-auto pr-1"></div>
+                </div>
+
+                <!-- Selector de Cantidad de Ejercicios -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-slate-300 block">
+                            2. Cantidad de compuestos a practicar:
+                        </span>
+                        <span id="nomAvailableCountHint" class="text-xs text-slate-400">0 compuestos disponibles</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <select id="nomQuestionCountSelect" class="bg-slate-900 border border-slate-700 focus:border-amber-400 text-white rounded-xl px-3.5 py-2 text-sm font-extrabold outline-none cursor-pointer">
+                            <option value="5">5 compuestos</option>
+                            <option value="10" selected>10 compuestos</option>
+                            <option value="15">15 compuestos</option>
+                            <option value="20">20 compuestos</option>
+                            <option value="30">30 compuestos</option>
+                            <option value="all">Todos los seleccionados</option>
+                        </select>
+
+                        <button type="button" onclick="startNomenclatureSession()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 text-sm font-extrabold shadow-lg shadow-emerald-600/25 transition active:scale-95 cursor-pointer">
+                            ▶ Comenzar
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MÓDULO NOMENCLATURA B: TARJETA INTERACTIVA DE PRÁCTICA -->
+            <section id="nomenclaturePracticeSection" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4">
+                <!-- Barra Superior de Progreso y Puntaje -->
+                <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-950/90 border border-slate-800 px-4 py-2.5 rounded-2xl">
+                    <div class="flex items-center gap-2.5">
+                        <span id="nomProgressBadge" class="px-2.5 py-1 rounded-lg bg-violet-500/20 border border-violet-500/40 text-xs font-extrabold text-violet-200">
+                            1 / 10
+                        </span>
+                        <span id="nomGroupTag" class="text-xs font-bold text-cyan-300 truncate max-w-[180px] sm:max-w-xs">
+                            Grupo Funcional
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-3 text-xs font-extrabold">
+                        <span class="text-emerald-400">✓ <span id="nomScoreCorrect">0</span></span>
+                        <span class="text-rose-400">✗ <span id="nomScoreWrong">0</span></span>
+                        <button type="button" onclick="openNomenclatureSetup()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-bold">
+                            ⚙ Configurar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TARJETA FLIP 3D (AL TOCAR SE DA LA VUELTA) -->
+                <div id="nomCardWrapper" class="flashcard-perspective w-full h-[330px] sm:h-[370px] cursor-pointer select-none" onclick="flipNomenclatureCard()">
+                    <div id="nomCardInner" class="flashcard-inner">
+                        <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA -->
+                        <div class="flashcard-face bg-slate-950 border-2 border-slate-700/90 hover:border-cyan-500/60 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
+                            <div class="flex items-center justify-between text-[11px] font-bold text-slate-400">
+                                <span id="nomStereoHintBadge" class="px-2.5 py-0.5 rounded-full bg-slate-900 border border-slate-800 text-cyan-300">
+                                    Fórmula Semidesarrollada
+                                </span>
+                                <span class="text-amber-300 animate-pulse">👆 Toca la tarjeta para ver el nombre</span>
+                            </div>
+
+                            <div class="flex-1 min-h-0 w-full flex items-center justify-center overflow-hidden">
+                                <svg id="nomSvgCanvas" viewBox="0 0 1040 360" preserveAspectRatio="xMidYMid meet" class="w-full h-full">
+                                    <g id="nomSvgStage"></g>
+                                </svg>
+                            </div>
+
+                            <div class="text-center text-xs text-slate-400 font-medium">
+                                Nombra el compuesto según las reglas IUPAC y toca la pantalla para comprobar
+                            </div>
+                        </div>
+
+                        <!-- CARA TRASERA: NOMBRE IUPAC, SINÓNIMOS Y EXPLICACIÓN -->
+                        <div class="flashcard-face flashcard-back bg-gradient-to-br from-slate-900 via-slate-950 to-violet-950/50 border-2 border-violet-500/60 rounded-3xl p-5 sm:p-7 flex flex-col justify-between shadow-xl text-center">
+                            <div class="flex items-center justify-between text-xs font-bold text-violet-300">
+                                <span>📖 Respuesta Correcta</span>
+                                <span class="text-slate-400">👆 Toca para volver a ver la fórmula</span>
+                            </div>
+
+                            <div class="my-auto flex flex-col items-center gap-3 px-2">
+                                <span class="text-[11px] font-extrabold uppercase tracking-widest text-emerald-400">Nombre Sistemático (IUPAC)</span>
+                                <h3 id="nomAnswerPrimary" class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                                    —
+                                </h3>
+                                <div id="nomAnswerSynonymsBox" class="hidden px-3.5 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/35 text-xs sm:text-sm font-bold text-amber-200">
+                                    También llamado: <span id="nomAnswerSynonyms"></span>
+                                </div>
+                                <p id="nomAnswerExplanation" class="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed mt-1">
+                                    —
+                                </p>
+                            </div>
+
+                            <div class="text-xs text-slate-400 font-semibold">
+                                ¿Acertaste el nombre? Evalúa tu respuesta abajo para avanzar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTROLES DE AUTOEVALUACIÓN -->
+                <div id="nomControlsFlipHint" class="flex justify-center">
+                    <button type="button" onclick="flipNomenclatureCard()" class="w-full sm:w-auto px-6 py-3 rounded-2xl bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-extrabold shadow-lg shadow-cyan-600/25 transition active:scale-95 cursor-pointer">
+                        🔄 Dar la vuelta para ver el nombre
+                    </button>
+                </div>
+
+                <div id="nomControlsGradeRow" class="hidden grid grid-cols-2 gap-3">
+                    <button type="button" onclick="gradeNomenclatureCard(false)" class="py-3.5 px-4 rounded-2xl bg-rose-600/25 hover:bg-rose-600/40 border-2 border-rose-500/60 text-rose-200 text-sm sm:text-base font-extrabold flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                        <span>✗</span> <span>Incorrecto (No lo sabía)</span>
+                    </button>
+                    <button type="button" onclick="gradeNomenclatureCard(true)" class="py-3.5 px-4 rounded-2xl bg-emerald-600/25 hover:bg-emerald-600/40 border-2 border-emerald-500/60 text-emerald-200 text-sm sm:text-base font-extrabold flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                        <span>✓</span> <span>Correcto (Lo sabía)</span>
+                    </button>
+                </div>
+
+                <!-- PANTALLA DE RESULTADOS FINALES -->
+                <div id="nomSummaryBox" class="hidden bg-slate-950 border border-slate-800 rounded-2xl p-5 text-center flex flex-col items-center gap-4">
+                    <div class="text-4xl">🏆</div>
+                    <h3 class="text-xl font-extrabold text-white">¡Sesión de Nomenclatura Completada!</h3>
+                    <div class="flex items-center gap-6 text-base font-extrabold">
+                        <span class="text-emerald-400">✓ Aciertos: <span id="nomFinalCorrect">0</span></span>
+                        <span class="text-rose-400">✗ Fallos: <span id="nomFinalWrong">0</span></span>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-2.5 mt-1">
+                        <button type="button" id="btnRetryMissed" onclick="retryMissedNomenclature()" class="hidden px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold transition">
+                            🔁 Repasar las falladas
+                        </button>
+                        <button type="button" onclick="openNomenclatureSetup()" class="px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs sm:text-sm font-extrabold transition">
+                            ⚙ Nueva práctica
+                        </button>
+                    </div>
                 </div>
             </section>
 
@@ -3076,6 +3265,781 @@
                 }
             }
         });
+        // =========================================================================
+        // MÓDULO DE PRÁCTICA DE NOMENCLATURA ORGÁNICA (FLASHCARDS + AUTOEVALUACIÓN)
+        // =========================================================================
+        const NOMENCLATURE_GROUPS = [
+            { id: 'alcanos', label: '1. Alcanos (Lineales y Ramificados)' },
+            { id: 'cicloalcanos', label: '2. Cicloalcanos (Anillos y cis/trans)' },
+            { id: 'alquenos', label: '3. Alquenos y Dienos (cis/trans y E/Z)' },
+            { id: 'alquinos', label: '4. Alquinos y Eninos' },
+            { id: 'aromaticos', label: '5. Hidrocarburos Aromáticos (Benceno y Xilenos)' },
+            { id: 'haluros', label: '6. Halogenuros de Alquilo y Quirales (R / S)' },
+            { id: 'alcoholes', label: '7. Alcoholes, Dioles, Fenoles y Quirales (R / S)' },
+            { id: 'eteres', label: '8. Éteres, Epóxidos, Tioles y Tioéteres' },
+            { id: 'aminas', label: '9. Aminas (1°, 2°, 3° y Aromáticas)' },
+            { id: 'aldehidos_cetonas', label: '10. Aldehídos, Cetonas y Quinonas' },
+            { id: 'acidos', label: '11. Ácidos Carboxílicos, Hidroxiácidos y Cetoácidos' },
+            { id: 'derivados_acidos', label: '12. Ésteres, Amidas, Anhídridos, Haluros y Nitrilos' }
+        ];
+
+        let NOMENCLATURE_BANK = [
+            // --- ALCANOS ---
+            {
+                group: 'alcanos',
+                badge: 'Alcano ramificado',
+                name: '2-Metilpropano',
+                synonyms: 'Isobutano / Trimetilmetano',
+                explanation: 'Cadena principal de 3 carbonos (propano) con un sustituyente metilo en C2.',
+                semiFormula: '(CH₃)₃C—H'
+            },
+            {
+                group: 'alcanos',
+                badge: 'Alcano ramificado',
+                name: '2,2-Dimetilpropano',
+                synonyms: 'Neopentano',
+                explanation: 'Carbono cuaternario central unido a cuatro grupos metilo.',
+                scene: {
+                    atoms: [
+                        { id: 'C', el: 'C', x: 460, y: 185 },
+                        { id: 'L', el: 'CH₃', x: 350, y: 185 },
+                        { id: 'R', el: 'CH₃', x: 570, y: 185 },
+                        { id: 'T', el: 'CH₃', x: 460, y: 90 },
+                        { id: 'B', el: 'CH₃', x: 460, y: 280 }
+                    ],
+                    bonds: [
+                        { from: 'L', to: 'C', order: 1 }, { from: 'C', to: 'R', order: 1 },
+                        { from: 'T', to: 'C', order: 1 }, { from: 'C', to: 'B', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'alcanos',
+                badge: 'Alcano ramificado',
+                name: '3-Etil-2-metilheptano',
+                synonyms: '',
+                explanation: 'Cadena más larga de 7 carbonos (heptano); numerando desde el extremo más cercano al primer sustituyente (C2 metilo, C3 etilo).',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'CH₃', x: 160, y: 185 },
+                        { id: 'C2', el: 'CH', x: 265, y: 185 },
+                        { id: 'M2', el: 'CH₃', x: 265, y: 90 },
+                        { id: 'C3', el: 'CH', x: 370, y: 185 },
+                        { id: 'E3', el: 'CH₂CH₃', x: 370, y: 280 },
+                        { id: 'C4', el: 'CH₂', x: 480, y: 185 },
+                        { id: 'C5', el: 'CH₂', x: 590, y: 185 },
+                        { id: 'C6', el: 'CH₂', x: 700, y: 185 },
+                        { id: 'C7', el: 'CH₃', x: 805, y: 185 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 1 }, { from: 'C2', to: 'M2', order: 1 },
+                        { from: 'C2', to: 'C3', order: 1 }, { from: 'C3', to: 'E3', order: 1 },
+                        { from: 'C3', to: 'C4', order: 1 }, { from: 'C4', to: 'C5', order: 1 },
+                        { from: 'C5', to: 'C6', order: 1 }, { from: 'C6', to: 'C7', order: 1 }
+                    ]
+                }
+            },
+
+            // --- CICLOALCANOS ---
+            {
+                group: 'cicloalcanos',
+                badge: 'Cicloalcano disustituido (Estereoquímica)',
+                name: 'cis-1,3-Dimetilciclohexano',
+                synonyms: '',
+                explanation: 'Anillo de ciclohexano con ambos grupos metilo orientados hacia la misma cara del plano (ambos en cuña sólida hacia adelante).',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'C', x: 460, y: 95 },
+                        { id: 'C2', el: 'CH₂', x: 565, y: 150 },
+                        { id: 'C3', el: 'C', x: 565, y: 255 },
+                        { id: 'C4', el: 'CH₂', x: 460, y: 310 },
+                        { id: 'C5', el: 'CH₂', x: 355, y: 255 },
+                        { id: 'C6', el: 'CH₂', x: 355, y: 150 },
+                        { id: 'M1', el: 'CH₃', x: 460, y: 25 },
+                        { id: 'M3', el: 'CH₃', x: 665, y: 295 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 1 }, { from: 'C2', to: 'C3', order: 1 },
+                        { from: 'C3', to: 'C4', order: 1 }, { from: 'C4', to: 'C5', order: 1 },
+                        { from: 'C5', to: 'C6', order: 1 }, { from: 'C6', to: 'C1', order: 1 },
+                        { from: 'C1', to: 'M1', order: 1, stereo: 'wedge' },
+                        { from: 'C3', to: 'M3', order: 1, stereo: 'wedge' }
+                    ]
+                }
+            },
+            {
+                group: 'cicloalcanos',
+                badge: 'Cicloalcano disustituido (Estereoquímica)',
+                name: 'trans-1-Etil-3-metilciclopentano',
+                synonyms: '',
+                explanation: 'Orden alfabético: etilo en C1 (cuña sólida hacia adelante) y metilo en C3 (cuña rayada hacia atrás) en lados opuestos del anillo.',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'C', x: 460, y: 95 },
+                        { id: 'C2', el: 'CH₂', x: 565, y: 165 },
+                        { id: 'C3', el: 'C', x: 525, y: 275 },
+                        { id: 'C4', el: 'CH₂', x: 395, y: 275 },
+                        { id: 'C5', el: 'CH₂', x: 355, y: 165 },
+                        { id: 'E1', el: 'CH₂CH₃', x: 460, y: 25 },
+                        { id: 'M3', el: 'CH₃', x: 635, y: 310 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 1 }, { from: 'C2', to: 'C3', order: 1 },
+                        { from: 'C3', to: 'C4', order: 1 }, { from: 'C4', to: 'C5', order: 1 },
+                        { from: 'C5', to: 'C1', order: 1 },
+                        { from: 'C1', to: 'E1', order: 1, stereo: 'wedge' },
+                        { from: 'C3', to: 'M3', order: 1, stereo: 'dash' }
+                    ]
+                }
+            },
+
+            // --- ALQUENOS (CIS/TRANS Y E/Z) ---
+            {
+                group: 'alquenos',
+                badge: 'Isomería Geométrica (cis / trans)',
+                name: 'cis-2-Buteno',
+                synonyms: '(Z)-2-Buteno',
+                explanation: 'Los dos grupos metilo (–CH₃) se encuentran del mismo lado respecto al doble enlace C=C.',
+                scene: {
+                    atoms: [
+                        { id: 'C2', el: 'C', x: 400, y: 195 },
+                        { id: 'C3', el: 'C', x: 520, y: 195 },
+                        { id: 'M1', el: 'CH₃', x: 315, y: 110 },
+                        { id: 'M4', el: 'CH₃', x: 605, y: 110 },
+                        { id: 'H2', el: 'H', x: 315, y: 280 },
+                        { id: 'H3', el: 'H', x: 605, y: 280 }
+                    ],
+                    bonds: [
+                        { from: 'C2', to: 'C3', order: 2 },
+                        { from: 'C2', to: 'M1', order: 1 }, { from: 'C3', to: 'M4', order: 1 },
+                        { from: 'C2', to: 'H2', order: 1 }, { from: 'C3', to: 'H3', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'alquenos',
+                badge: 'Isomería Geométrica (cis / trans)',
+                name: 'trans-3-Hepteno',
+                synonyms: '(E)-3-Hepteno',
+                explanation: 'Cadena de 7 carbonos con doble enlace en C3; los grupos etilo (–CH₂CH₃) y propilo (–CH₂CH₂CH₃) están en lados opuestos.',
+                scene: {
+                    atoms: [
+                        { id: 'C3', el: 'C', x: 400, y: 195 },
+                        { id: 'C4', el: 'C', x: 520, y: 195 },
+                        { id: 'R1', el: 'CH₃CH₂', x: 300, y: 110 },
+                        { id: 'H3', el: 'H', x: 315, y: 280 },
+                        { id: 'H4', el: 'H', x: 605, y: 110 },
+                        { id: 'R2', el: 'CH₂CH₂CH₃', x: 635, y: 280 }
+                    ],
+                    bonds: [
+                        { from: 'C3', to: 'C4', order: 2 },
+                        { from: 'C3', to: 'R1', order: 1 }, { from: 'C3', to: 'H3', order: 1 },
+                        { from: 'C4', to: 'H4', order: 1 }, { from: 'C4', to: 'R2', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'alquenos',
+                badge: 'Isomería Estereoquímica (E / Z)',
+                name: '(E)-4-Cloro-3-hepteno',
+                synonyms: 'trans-4-Cloro-3-hepteno',
+                explanation: 'En C3 gana prioridad –CH₂CH₃ sobre –H (arriba). En C4 gana –Cl (Z=17) sobre –CH₂CH₂CH₃ (abajo). Prioridades en lados opuestos = (E).',
+                scene: {
+                    atoms: [
+                        { id: 'C3', el: 'C', x: 400, y: 195 },
+                        { id: 'C4', el: 'C', x: 520, y: 195 },
+                        { id: 'E3', el: 'CH₃CH₂', x: 300, y: 110 },
+                        { id: 'H3', el: 'H', x: 315, y: 280 },
+                        { id: 'P4', el: 'CH₂CH₂CH₃', x: 635, y: 110 },
+                        { id: 'Cl4', el: 'Cl', x: 605, y: 280 }
+                    ],
+                    bonds: [
+                        { from: 'C3', to: 'C4', order: 2 },
+                        { from: 'C3', to: 'E3', order: 1 }, { from: 'C3', to: 'H3', order: 1 },
+                        { from: 'C4', to: 'P4', order: 1 }, { from: 'C4', to: 'Cl4', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'alquenos',
+                badge: 'Alcadieno conjugado',
+                name: '2-Metil-1,3-butadieno',
+                synonyms: 'Isopreno',
+                explanation: 'Dieno conjugado de 4 carbonos con un grupo metilo en C2; monómero natural del caucho y terpenos.',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'CH₂', x: 290, y: 205 },
+                        { id: 'C2', el: 'C', x: 410, y: 205 },
+                        { id: 'M2', el: 'CH₃', x: 410, y: 105 },
+                        { id: 'C3', el: 'CH', x: 530, y: 205 },
+                        { id: 'C4', el: 'CH₂', x: 650, y: 205 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 2 }, { from: 'C2', to: 'M2', order: 1 },
+                        { from: 'C2', to: 'C3', order: 1 }, { from: 'C3', to: 'C4', order: 2 }
+                    ]
+                }
+            },
+
+            // --- ALQUINOS ---
+            {
+                group: 'alquinos',
+                badge: 'Alquino ramificado',
+                name: '4-Metil-2-pentino',
+                synonyms: 'Isopropilmetilacetileno',
+                explanation: 'Cadena lineal de 5 carbonos con triple enlace en C2–C3 y grupo metilo en C4.',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'CH₃', x: 240, y: 195 },
+                        { id: 'C2', el: 'C', x: 360, y: 195 },
+                        { id: 'C3', el: 'C', x: 490, y: 195 },
+                        { id: 'C4', el: 'CH', x: 610, y: 195 },
+                        { id: 'M4', el: 'CH₃', x: 610, y: 290 },
+                        { id: 'C5', el: 'CH₃', x: 725, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 1 }, { from: 'C2', to: 'C3', order: 3 },
+                        { from: 'C3', to: 'C4', order: 1 }, { from: 'C4', to: 'M4', order: 1 },
+                        { from: 'C4', to: 'C5', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'alquinos',
+                badge: 'Alquenino (Enino)',
+                name: '1-Penten-3-ino',
+                synonyms: '',
+                explanation: 'Cuando doble y triple enlace equidistan de los extremos, el doble enlace recibe el localizador más bajo (C1=C2).',
+                scene: {
+                    atoms: [
+                        { id: 'C1', el: 'CH₂', x: 250, y: 195 },
+                        { id: 'C2', el: 'CH', x: 375, y: 195 },
+                        { id: 'C3', el: 'C', x: 495, y: 195 },
+                        { id: 'C4', el: 'C', x: 625, y: 195 },
+                        { id: 'C5', el: 'CH₃', x: 745, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'C1', to: 'C2', order: 2 }, { from: 'C2', to: 'C3', order: 1 },
+                        { from: 'C3', to: 'C4', order: 3 }, { from: 'C4', to: 'C5', order: 1 }
+                    ]
+                }
+            },
+
+            // --- AROMÁTICOS ---
+            {
+                group: 'aromaticos',
+                badge: 'Aromático disustituido',
+                name: '1,2-Dimetilbenceno',
+                synonyms: 'o-Xileno / orto-Xileno',
+                explanation: 'Anillo bencénico con dos sustituyentes metilo en posiciones contiguas (1,2 u orto).',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 430, y: 205 },
+                        { id: 'M1', el: 'CH₃', x: 430, y: 105 },
+                        { id: 'M2', el: 'CH₃', x: 540, y: 150 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'M1', order: 1 },
+                        { from: 'Ph', to: 'M2', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'aromaticos',
+                badge: 'Aromático monosustituido',
+                name: 'Isopropilbenceno',
+                synonyms: 'Cumeno / (1-Metiletil)benceno',
+                explanation: 'Anillo de benceno unido a un grupo isopropilo –CH(CH₃)₂.',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 360, y: 195 },
+                        { id: 'CH', el: 'CH', x: 490, y: 195 },
+                        { id: 'M1', el: 'CH₃', x: 490, y: 100 },
+                        { id: 'M2', el: 'CH₃', x: 605, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'CH', order: 1 },
+                        { from: 'CH', to: 'M1', order: 1 },
+                        { from: 'CH', to: 'M2', order: 1 }
+                    ]
+                }
+            },
+
+            // --- HALOGENUROS QUIRALES (R / S) ---
+            {
+                group: 'haluros',
+                badge: 'Halogenuro Quiral (Configuración R / S)',
+                name: '(R)-2-Bromobutano',
+                synonyms: 'Bromuro de (R)-sec-butilo',
+                explanation: 'Prioridades CIP: 1) –Br (derecha), 2) –CH₂CH₃ (izquierda), 3) –CH₃ (arriba, adelante), 4) –H (abajo, atrás). Sentido horario = (R).',
+                semiFormula: '(R)-CH₃—CH₂—CH(Br)—CH₃'
+            },
+            {
+                group: 'haluros',
+                badge: 'Halogenuro Quiral (Configuración R / S)',
+                name: '(S)-2-Cloropentano',
+                synonyms: '',
+                explanation: 'Prioridades CIP: 1) –Cl (derecha), 2) –CH₂CH₂CH₃ (izquierda), 3) –CH₃ (abajo, adelante), 4) –H (arriba, atrás). Sentido antihorario = (S).',
+                semiFormula: '(S)-CH₃—CH₂—CH₂—CH(Cl)—CH₃'
+            },
+            {
+                group: 'haluros',
+                badge: 'Halogenuro Terciario',
+                name: '2-Cloro-2-metilpropano',
+                synonyms: 'Cloruro de terc-butilo',
+                explanation: 'Átomo de cloro unido al carbono terciario central del grupo terc-butilo.',
+                semiFormula: '(CH₃)₃C—Cl'
+            },
+
+            // --- ALCOHOLES Y FENOLES (INCLUYENDO QUIRALES) ---
+            {
+                group: 'alcoholes',
+                badge: 'Alcohol Quiral (Configuración R / S)',
+                name: '(S)-2-Butanol',
+                synonyms: 'Alcohol (S)-sec-butílico',
+                explanation: 'Prioridades CIP: 1) –OH (izquierda), 2) –CH₂CH₃ (derecha), 3) –CH₃ (arriba, adelante), 4) –H (abajo, atrás). Sentido antihorario = (S).',
+                semiFormula: '(S)-CH₃—CH₂—CH(OH)—CH₃'
+            },
+            {
+                group: 'alcoholes',
+                badge: 'Alcohol Quiral (Configuración R / S)',
+                name: '(R)-1-Feniletanol',
+                synonyms: 'Alcohol (R)-α-metilbencílico',
+                explanation: 'Prioridades CIP: 1) –OH (izquierda), 2) –C₆H₅ (derecha), 3) –CH₃ (abajo, adelante), 4) –H (arriba, atrás). Sentido horario = (R).',
+                semiFormula: '(R)-C₆H₅—CH(OH)—CH₃'
+            },
+            {
+                group: 'alcoholes',
+                badge: 'Alcohol Terciario',
+                name: '2-Metil-2-propanol',
+                synonyms: 'Alcohol terc-butílico / terc-Butanol',
+                explanation: 'Grupo hidroxilo (–OH) unido a un carbono terciario rodeado de tres grupos metilo.',
+                semiFormula: '(CH₃)₃C—OH'
+            },
+            {
+                group: 'alcoholes',
+                badge: 'Difenol Aromático',
+                name: '1,4-Bencenodiol',
+                synonyms: 'Hidroquinona / p-Dihidroxibenceno',
+                explanation: 'Anillo bencénico con dos grupos hidroxilo en posiciones opuestas (1,4 o para).',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 460, y: 195 },
+                        { id: 'OH1', el: 'OH', x: 330, y: 195 },
+                        { id: 'OH4', el: 'OH', x: 590, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'OH1', to: 'Ph', order: 1 },
+                        { from: 'Ph', to: 'OH4', order: 1 }
+                    ]
+                }
+            },
+
+            // --- ÉTERES Y TIOLES ---
+            {
+                group: 'eteres',
+                badge: 'Éter Aromático',
+                name: 'Metoxibenceno',
+                synonyms: 'Anisol / Fenilmetiléter',
+                explanation: 'Grupo metoxi (–OCH₃) unido directamente a un anillo de benceno.',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 380, y: 195 },
+                        { id: 'O', el: 'O', x: 505, y: 195 },
+                        { id: 'Me', el: 'CH₃', x: 615, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'O', order: 1 },
+                        { from: 'O', to: 'Me', order: 1 }
+                    ]
+                }
+            },
+
+            // --- AMINAS ---
+            {
+                group: 'aminas',
+                badge: 'Amina Terciaria Mixta',
+                name: 'N-Etil-N-metilpropanamina',
+                synonyms: 'Etilmetilpropilamina',
+                explanation: 'Cadena principal más larga de 3 carbonos (propanamina) con sustituyentes etilo y metilo sobre el nitrógeno.',
+                scene: {
+                    atoms: [
+                        { id: 'Et', el: 'CH₃CH₂', x: 280, y: 195 },
+                        { id: 'N', el: 'N', x: 420, y: 195 },
+                        { id: 'Me', el: 'CH₃', x: 420, y: 95 },
+                        { id: 'Pr', el: 'CH₂CH₂CH₃', x: 580, y: 195 }
+                    ],
+                    bonds: [
+                        { from: 'Et', to: 'N', order: 1 },
+                        { from: 'N', to: 'Me', order: 1 },
+                        { from: 'N', to: 'Pr', order: 1 }
+                    ]
+                }
+            },
+
+            // --- ALDEHÍDOS Y CETONAS ---
+            {
+                group: 'aldehidos_cetonas',
+                badge: 'Aldehído Aromático',
+                name: 'Benzaldehído',
+                synonyms: 'Bencenocarbaldehído / Aldehído benzoico',
+                explanation: 'Grupo formilo (–CHO) unido directamente al anillo aromático.',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 370, y: 205 },
+                        { id: 'C', el: 'C', x: 500, y: 205 },
+                        { id: 'O', el: 'O', x: 500, y: 100 },
+                        { id: 'H', el: 'H', x: 615, y: 205 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'C', order: 1 },
+                        { from: 'C', to: 'O', order: 2 },
+                        { from: 'C', to: 'H', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'aldehidos_cetonas',
+                badge: 'Cetona Aromática',
+                name: '1-Feniletanona',
+                synonyms: 'Acetofenona / Fenilmetilcetona',
+                explanation: 'Grupo carbonilo unido a un anillo fenilo y a un grupo metilo.',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 370, y: 205 },
+                        { id: 'C', el: 'C', x: 500, y: 205 },
+                        { id: 'O', el: 'O', x: 500, y: 100 },
+                        { id: 'Me', el: 'CH₃', x: 615, y: 205 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'C', order: 1 },
+                        { from: 'C', to: 'O', order: 2 },
+                        { from: 'C', to: 'Me', order: 1 }
+                    ]
+                }
+            },
+
+            // --- ÁCIDOS CARBOXÍLICOS ---
+            {
+                group: 'acidos',
+                badge: 'Hidroxiácido Aromático',
+                name: 'Ácido 2-hidroxibenzoico',
+                synonyms: 'Ácido o-hidroxibenzoico / Ácido salicílico',
+                explanation: 'Ácido benzoico con un grupo hidroxilo en posición orto (C2).',
+                scene: {
+                    atoms: [
+                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 430, y: 215 },
+                        { id: 'COOH', el: 'COOH', x: 430, y: 105 },
+                        { id: 'OH', el: 'OH', x: 555, y: 155 }
+                    ],
+                    bonds: [
+                        { from: 'Ph', to: 'COOH', order: 1 },
+                        { from: 'Ph', to: 'OH', order: 1 }
+                    ]
+                }
+            },
+            {
+                group: 'acidos',
+                badge: 'Cetoácido Metabólico',
+                name: 'Ácido 2-oxopropanoico',
+                synonyms: 'Ácido pirúvico / Ácido α-cetopropiónico',
+                explanation: 'Ácido carboxílico de 3 carbonos con un grupo cetona (=O) en C2.',
+                scene: {
+                    atoms: [
+                        { id: 'C3', el: 'CH₃', x: 300, y: 215 },
+                        { id: 'C2', el: 'C', x: 430, y: 215 },
+                        { id: 'O2', el: 'O', x: 430, y: 110 },
+                        { id: 'C1', el: 'COOH', x: 575, y: 215 }
+                    ],
+                    bonds: [
+                        { from: 'C3', to: 'C2', order: 1 },
+                        { from: 'C2', to: 'O2', order: 2 },
+                        { from: 'C2', to: 'C1', order: 1 }
+                    ]
+                }
+            },
+
+            // --- DERIVADOS DE ÁCIDOS ---
+            {
+                group: 'derivados_acidos',
+                badge: 'Éster Alifático',
+                name: 'Propanoato de 1-metiletilo',
+                synonyms: 'Propanoato de isopropilo / Propionato de isopropilo',
+                explanation: 'Parte ácida de 3 carbonos (propanoato) unida al grupo alquilo isopropilo.',
+                scene: {
+                    atoms: [
+                        { id: 'Et', el: 'CH₃CH₂', x: 255, y: 205 },
+                        { id: 'C', el: 'C', x: 390, y: 205 },
+                        { id: 'O1', el: 'O', x: 390, y: 100 },
+                        { id: 'O2', el: 'O', x: 510, y: 205 },
+                        { id: 'CH', el: 'CH', x: 625, y: 205 },
+                        { id: 'M1', el: 'CH₃', x: 625, y: 100 },
+                        { id: 'M2', el: 'CH₃', x: 740, y: 205 }
+                    ],
+                    bonds: [
+                        { from: 'Et', to: 'C', order: 1 }, { from: 'C', to: 'O1', order: 2 },
+                        { from: 'C', to: 'O2', order: 1 }, { from: 'O2', to: 'CH', order: 1 },
+                        { from: 'CH', to: 'M1', order: 1 }, { from: 'CH', to: 'M2', order: 1 }
+                    ]
+                }
+            }
+        ];
+
+        let nomDeck = [];
+        let nomCurrentIndex = 0;
+        let nomIsFlipped = false;
+        let nomCorrectCount = 0;
+        let nomWrongCount = 0;
+        let nomMissedItems = [];
+        let nomJsonLoaded = false;
+
+        async function loadExternalNomenclatureBank() {
+            if (nomJsonLoaded) return;
+            const urls = [
+                `${REACTIONS_BASE_URL}nomenclatura.json`,
+                './reactions/nomenclatura.json',
+                './nomenclatura.json'
+            ];
+            for (const url of urls) {
+                try {
+                    const res = await fetch(url, { cache: 'no-store' });
+                    if (!res.ok) continue;
+                    const data = parseFlexibleJson(await res.text());
+                    if (Array.isArray(data.items) && data.items.length > 0) {
+                        NOMENCLATURE_BANK = data.items;
+                        nomJsonLoaded = true;
+                        break;
+                    }
+                } catch (e) {}
+            }
+        }
+
+        async function openNomenclatureSetup() {
+            await loadExternalNomenclatureBank();
+            const wizSections = ['wizardStep1', 'wizardStep2', 'wizardStep3', 'wizardStep4', 'nomenclaturePracticeSection'];
+            wizSections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.classList.add('hidden');
+            });
+            const bar = document.getElementById('wizardBreadcrumb')?.parentElement;
+            if (bar) bar.classList.add('hidden');
+
+            const setupSec = document.getElementById('nomenclatureSetupSection');
+            if (setupSec) setupSec.classList.remove('hidden');
+
+            renderNomenclatureChecklist();
+        }
+
+        function closeNomenclatureMode() {
+            const setupSec = document.getElementById('nomenclatureSetupSection');
+            const pracSec = document.getElementById('nomenclaturePracticeSection');
+            if (setupSec) setupSec.classList.add('hidden');
+            if (pracSec) pracSec.classList.add('hidden');
+
+            const bar = document.getElementById('wizardBreadcrumb')?.parentElement;
+            if (bar) bar.classList.remove('hidden');
+            showWizardStage(1);
+        }
+
+        function renderNomenclatureChecklist() {
+            const box = document.getElementById('nomGroupsChecklist');
+            if (!box) return;
+            box.innerHTML = NOMENCLATURE_GROUPS.map(g => {
+                const count = NOMENCLATURE_BANK.filter(it => it.group === g.id).length;
+                return `
+                    <label class="flex items-center justify-between gap-2.5 p-3 rounded-xl bg-slate-950/90 hover:bg-slate-800/80 border border-slate-800 cursor-pointer transition select-none">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <input type="checkbox" value="${g.id}" checked onchange="updateNomenclatureAvailableCount()" class="nom-group-cb w-4 h-4 accent-amber-500 rounded cursor-pointer shrink-0">
+                            <span class="text-xs sm:text-sm font-bold text-slate-100 truncate">${g.label}</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded-md bg-slate-900 border border-slate-700 text-[11px] font-extrabold text-cyan-300 shrink-0">${count}</span>
+                    </label>
+                `;
+            }).join('');
+            updateNomenclatureAvailableCount();
+        }
+
+        function toggleAllNomenclatureGroups(checkedState) {
+            document.querySelectorAll('.nom-group-cb').forEach(cb => { cb.checked = checkedState; });
+            updateNomenclatureAvailableCount();
+        }
+
+        function getSelectedNomenclatureGroups() {
+            return Array.from(document.querySelectorAll('.nom-group-cb:checked')).map(cb => cb.value);
+        }
+
+        function updateNomenclatureAvailableCount() {
+            const selected = new Set(getSelectedNomenclatureGroups());
+            const total = NOMENCLATURE_BANK.filter(it => selected.has(it.group)).length;
+            const hint = document.getElementById('nomAvailableCountHint');
+            if (hint) hint.innerText = `${total} compuesto${total === 1 ? '' : 's'} disponible${total === 1 ? '' : 's'}`;
+        }
+
+        function startNomenclatureSession(customItems = null) {
+            let pool = customItems;
+            if (!pool) {
+                const selectedGroups = new Set(getSelectedNomenclatureGroups());
+                if (selectedGroups.size === 0) {
+                    alert('Selecciona al menos un grupo funcional en el checklist.');
+                    return;
+                }
+                pool = NOMENCLATURE_BANK.filter(it => selectedGroups.has(it.group));
+            }
+            if (pool.length === 0) {
+                alert('No hay compuestos disponibles en los grupos seleccionados.');
+                return;
+            }
+
+            // Barajar aleatoriamente (Fisher-Yates)
+            const shuffled = [...pool];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+
+            const countVal = document.getElementById('nomQuestionCountSelect')?.value || '10';
+            nomDeck = (countVal === 'all' || customItems) ? shuffled : shuffled.slice(0, Number(countVal));
+            nomCurrentIndex = 0;
+            nomCorrectCount = 0;
+            nomWrongCount = 0;
+            nomMissedItems = [];
+
+            document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
+            document.getElementById('nomSummaryBox')?.classList.add('hidden');
+            document.getElementById('nomCardWrapper')?.classList.remove('hidden');
+            document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
+
+            renderCurrentNomenclatureCard();
+        }
+
+        function renderNomenclatureSceneToSvg(item) {
+            const stage = document.getElementById('nomSvgStage');
+            const svgEl = document.getElementById('nomSvgCanvas');
+            if (!stage || !svgEl) return;
+
+            let sc = item.scene;
+            if (!sc && item.semiFormula) {
+                const built = expandBranchedSemidevelopedNodes({ formula: item.semiFormula, compoundName: '' }, 460, 185, '#38bdf8', 'NomCard');
+                sc = { atoms: built.atoms, bonds: built.bonds };
+            }
+            if (!sc) sc = { atoms: [], bonds: [] };
+
+            let html = '';
+            let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+            const expand = (x1, y1, x2, y2) => {
+                if (x1 < minX) minX = x1;
+                if (x2 > maxX) maxX = x2;
+                if (y1 < minY) minY = y1;
+                if (y2 > maxY) maxY = y2;
+            };
+
+            const atomMap = {};
+            const bondsByAtom = {};
+            (sc.atoms || []).forEach(a => {
+                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y) };
+            });
+
+            (sc.bonds || []).forEach(b => {
+                const a1 = atomMap[b.from];
+                const a2 = atomMap[b.to];
+                if (!a1 || !a2) return;
+                if (!bondsByAtom[b.from]) bondsByAtom[b.from] = [];
+                if (!bondsByAtom[b.to]) bondsByAtom[b.to] = [];
+                bondsByAtom[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
+                bondsByAtom[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
+                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null);
+            });
+
+            Object.values(atomMap).forEach(a => {
+                const geom = getNodeGeometry(a);
+                const valInfo = computeAutomaticValenceDots(a, bondsByAtom[a.id] || []);
+                expand(a.x - geom.halfW - 14, a.y - geom.halfH - 14, a.x + geom.halfW + 14, a.y + geom.halfH + 14);
+                html += renderSingleAtomNode(a, geom, valInfo);
+            });
+
+            stage.innerHTML = html;
+            if (isFinite(minX) && isFinite(maxX)) {
+                const padX = 45, padY = 30;
+                const vbX = Math.max(0, minX - padX);
+                const vbY = Math.max(0, minY - padY);
+                const vbW = Math.min(1040 - vbX, Math.max(360, (maxX - minX) + padX * 2));
+                const vbH = Math.min(360 - vbY, Math.max(210, (maxY - minY) + padY * 2));
+                svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${vbW.toFixed(1)} ${vbH.toFixed(1)}`);
+            }
+        }
+
+        function renderCurrentNomenclatureCard() {
+            const item = nomDeck[nomCurrentIndex];
+            if (!item) return;
+
+            nomIsFlipped = false;
+            document.getElementById('nomCardInner')?.classList.remove('is-flipped');
+            document.getElementById('nomControlsFlipHint')?.classList.remove('hidden');
+            document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
+
+            document.getElementById('nomProgressBadge').innerText = `${nomCurrentIndex + 1} / ${nomDeck.length}`;
+            const grpObj = NOMENCLATURE_GROUPS.find(g => g.id === item.group);
+            document.getElementById('nomGroupTag').innerText = grpObj ? grpObj.label : item.group;
+            document.getElementById('nomStereoHintBadge').innerText = item.badge || 'Compuesto Orgánico';
+            document.getElementById('nomScoreCorrect').innerText = nomCorrectCount;
+            document.getElementById('nomScoreWrong').innerText = nomWrongCount;
+
+            document.getElementById('nomAnswerPrimary').innerText = item.name;
+            const synBox = document.getElementById('nomAnswerSynonymsBox');
+            if (item.synonyms) {
+                document.getElementById('nomAnswerSynonyms').innerText = item.synonyms;
+                synBox.classList.remove('hidden');
+            } else {
+                synBox.classList.add('hidden');
+            }
+            document.getElementById('nomAnswerExplanation').innerText = item.explanation || '';
+
+            renderNomenclatureSceneToSvg(item);
+        }
+
+        function flipNomenclatureCard() {
+            nomIsFlipped = !nomIsFlipped;
+            const inner = document.getElementById('nomCardInner');
+            if (inner) inner.classList.toggle('is-flipped', nomIsFlipped);
+            if (nomIsFlipped) {
+                document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
+                document.getElementById('nomControlsGradeRow')?.classList.remove('hidden');
+            }
+        }
+
+        function gradeNomenclatureCard(isCorrect) {
+            const currentItem = nomDeck[nomCurrentIndex];
+            if (isCorrect) {
+                nomCorrectCount++;
+            } else {
+                nomWrongCount++;
+                nomMissedItems.push(currentItem);
+            }
+
+            document.getElementById('nomScoreCorrect').innerText = nomCorrectCount;
+            document.getElementById('nomScoreWrong').innerText = nomWrongCount;
+
+            if (nomCurrentIndex < nomDeck.length - 1) {
+                nomCurrentIndex++;
+                renderCurrentNomenclatureCard();
+            } else {
+                document.getElementById('nomCardWrapper')?.classList.add('hidden');
+                document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
+                document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
+                document.getElementById('nomSummaryBox')?.classList.remove('hidden');
+                document.getElementById('nomFinalCorrect').innerText = nomCorrectCount;
+                document.getElementById('nomFinalWrong').innerText = nomWrongCount;
+
+                const retryBtn = document.getElementById('btnRetryMissed');
+                if (retryBtn) retryBtn.classList.toggle('hidden', nomMissedItems.length === 0);
+            }
+        }
+
+        function retryMissedNomenclature() {
+            if (nomMissedItems.length > 0) {
+                startNomenclatureSession([...nomMissedItems]);
+            }
+        }
 
         window.onload = async () => {
             await loadDatabaseFromJson();
