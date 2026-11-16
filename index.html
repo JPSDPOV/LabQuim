@@ -1445,6 +1445,28 @@
                 if (y2 > maxY) maxY = y2;
             };
 
+            if (targetScene.brackets) {
+                const brFont = mobile ? 16 : 11.5;
+                targetScene.brackets.forEach(br => {
+                    const op = fadeT;
+                    const x1 = mapStageX(br.x1);
+                    const y1 = mapStageY(br.y1);
+                    const x2 = mapStageX(br.x2);
+                    const y2 = mapStageY(br.y2);
+                    const hook = mobile ? 16 : 12;
+                    const col = br.color || '#94a3b8';
+                    expandBounds(x1 - 10, y1 - 10, x2 + 24, y2 + 28);
+                    svgOut += `
+                        <g opacity="${op}">
+                            <path d="M ${x1 + hook} ${y1} L ${x1} ${y1} L ${x1} ${y2} L ${x1 + hook} ${y2}" fill="none" stroke="${col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M ${x2 - hook} ${y1} L ${x2} ${y1} L ${x2} ${y2} L ${x2 - hook} ${y2}" fill="none" stroke="${col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="${x2 + 6}" y="${y1 + 10}" fill="#fbbf24" font-size="${mobile ? 18 : 13}" font-weight="800">‡</text>
+                            ${br.label ? `<text x="${(x1 + x2) / 2}" y="${y2 + (mobile ? 22 : 16)}" text-anchor="middle" fill="#e2e8f0" font-size="${brFont}" font-weight="800">${br.label}</text>` : ''}
+                        </g>
+                    `;
+                });
+            }
+
             if (targetScene.plates) {
                 const plateFont = mobile ? 17 : 11.8;
                 targetScene.plates.forEach(p => {
@@ -1561,7 +1583,7 @@
                 const prevOrder = existedBefore ? (prevBondMap[key].order || 1) : 0;
                 const targetOrder = b.order || 1;
 
-                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity));
+                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null);
             });
 
             if (prevScene && prevScene.bonds) {
@@ -1759,13 +1781,15 @@
             }
         }
 
-        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity) {
+        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null) {
             const mobile = isCompactMobile();
             const dx = x2 - x1;
             const dy = y2 - y1;
             const len = Math.sqrt(dx * dx + dy * dy) || 1;
-            const nx = -dy / len;
-            const ny = dx / len;
+            const ux = dx / len;
+            const uy = dy / len;
+            const nx = -uy;
+            const ny = ux;
 
             let stroke = '#cbd5e1';
             let width = mobile ? 4.2 : 3.2;
@@ -1800,7 +1824,34 @@
 
             let html = `<g opacity="${bondFadeOp}" ${glow}>`;
 
-            if (order === 1) {
+            if (order === 1 && stereo === 'wedge') {
+                const startOff = mobile ? 20 : 16;
+                const endOff = mobile ? 20 : 16;
+                const sx = x1 + ux * startOff;
+                const sy = y1 + uy * startOff;
+                const ex = drawX2 - ux * endOff;
+                const ey = drawY2 - uy * endOff;
+                const halfBase = mobile ? 9.5 : 7.5;
+                const fillCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : '#e2e8f0');
+                html += `<polygon points="${sx.toFixed(1)},${sy.toFixed(1)} ${(ex + nx * halfBase).toFixed(1)},${(ey + ny * halfBase).toFixed(1)} ${(ex - nx * halfBase).toFixed(1)},${(ey - ny * halfBase).toFixed(1)}" fill="${fillCol}" ${state === 'forming' || state === 'breaking' ? 'fill-opacity="0.45" stroke="' + fillCol + '" stroke-width="1.8" ' + dash : ''}/>`;
+            } else if (order === 1 && stereo === 'dash') {
+                const startOff = mobile ? 20 : 16;
+                const endOff = mobile ? 20 : 16;
+                const sx = x1 + ux * startOff;
+                const sy = y1 + uy * startOff;
+                const ex = drawX2 - ux * endOff;
+                const ey = drawY2 - uy * endOff;
+                const steps = 6;
+                const maxHalf = mobile ? 9.5 : 7.5;
+                const dashCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : '#cbd5e1');
+                for (let k = 1; k <= steps; k++) {
+                    const frac = k / (steps + 1);
+                    const px = lerp(sx, ex, frac);
+                    const py = lerp(sy, ey, frac);
+                    const hw = maxHalf * frac;
+                    html += `<line x1="${(px + nx * hw).toFixed(1)}" y1="${(py + ny * hw).toFixed(1)}" x2="${(px - nx * hw).toFixed(1)}" y2="${(py - ny * hw).toFixed(1)}" stroke="${dashCol}" stroke-width="${mobile ? 2.6 : 2.1}" stroke-linecap="round"/>`;
+                }
+            } else if (order === 1) {
                 html += `<line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${stroke}" stroke-width="${width}" ${dash} stroke-linecap="round"/>`;
                 if (existedBefore && prevOrder >= 2 && t < 0.85) {
                     const piOp = Math.max(0, 1 - t * 1.25);
