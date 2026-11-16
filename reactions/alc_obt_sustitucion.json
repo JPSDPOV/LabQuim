@@ -59,7 +59,11 @@
         "semiStep": "CH₃—CH₂—Cl  +  K—OH",
         "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
         "desc": "El nucleófilo hidroxilo (OH⁻) se posiciona por la cara dorsal (izquierda), exactamente a 180° opuesto al enlace C—Cl.",
-        "legend": { "breaking": "Sin ruptura inicial; sustrato tetraédrico intacto.", "forming": "Sin enlace nuevo.", "movement": "Posicionamiento dorsal del nucleófilo OH⁻." },
+        "legend": {
+          "breaking": "Sin ruptura inicial; sustrato tetraédrico intacto.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Posicionamiento dorsal del nucleófilo OH⁻."
+        },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 205, "y": 205, "charge": "-", "highlight": "#38bdf8" },
@@ -84,7 +88,11 @@
         "semiStep": "HO⁻ ──► CH₂(CH₃)δ⁺ ┆—┆ Clδ⁻  +  K⁺",
         "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
         "desc": "El par electrónico del oxígeno ataca al carbono electrofílico (δ⁺) mientras se polariza y debilita en rojo punteado el enlace C—Cl.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl debilitándose.", "forming": "Ataque nucleofílico dorsal del ion OH⁻.", "movement": "Flechas curvas de ataque dorsal y salida del par hacia el Cl." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—Cl debilitándose.",
+          "forming": "Ataque nucleofílico dorsal del ion OH⁻.",
+          "movement": "Flechas curvas de ataque dorsal y salida del par hacia el Cl."
+        },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 235, "y": 205, "charge": "-", "highlight": "#38bdf8" },
@@ -113,7 +121,11 @@
         "semiStep": "[ HOδ⁻ ··· CH₂(CH₃) ··· Clδ⁻ ]‡  +  K⁺",
         "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
         "desc": "En el estado de transición entre corchetes, el enlace HO···C se forma en verde punteado y el enlace C···Cl se rompe en rojo punteado simultáneamente, mientras los sustituyentes pasan por el plano vertical central.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···Cl rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados en el plano vertical de transición." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C···Cl rompiéndose.",
+          "forming": "En VERDE punteado: enlace HO···C formándose.",
+          "movement": "Sustituyentes alineados en el plano vertical de transición."
+        },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
@@ -141,7 +153,11 @@
         "semiStep": "HO—CH₂—CH₃  +  Cl⁻  +  K⁺",
         "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
         "desc": "Se rompe por completo el enlace C—Cl; el grupo –OH queda enlazado a la izquierda y los sustituyentes basculan hacia la derecha mientras el ion Cl⁻ se aleja hacia K⁺.",
-        "legend": { "breaking": "Enlace C—Cl escindido; sale Cl⁻.", "forming": "En VERDE punteado: enlace HO—C y K—Cl.", "movement": "Basculación completa hacia la derecha." },
+        "legend": {
+          "breaking": "Enlace C—Cl escindido; sale Cl⁻.",
+          "forming": "En VERDE punteado: enlace HO—C y K—Cl.",
+          "movement": "Basculación completa hacia la derecha."
+        },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
@@ -167,7 +183,11 @@
         "semiStep": "CH₃—CH₂—OH   +   KCl",
         "semiGlobal": "CH₃—CH₂—Cl + KOH ──(Acuoso, SN2)──► CH₃—CH₂—OH + KCl",
         "desc": "Quedan consolidados en verde sólido el etanol a la izquierda y el cloruro de potasio (KCl) a la derecha.",
-        "legend": { "breaking": "Sustitución completada.", "forming": "En VERDE sólido: etanol y KCl consolidados.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Sustitución completada.",
+          "forming": "En VERDE sólido: etanol y KCl consolidados.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
@@ -194,18 +214,22 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (R)-2-Bromobutano + OH⁻ (Dorsal)",
         "semiStep": "(R)-CH₃—CH₂—CH(Br)—CH₃  +  K—OH",
         "semiGlobal": "(R)-2-Bromobutano + KOH ──(Acuoso, SN2)──► (S)-2-Butanol + KBr",
-        "desc": "El (R)-2-bromobutano tiene sus tres sustituyentes (etilo, metilo en cuña y H en cuña rayada) inclinados hacia la izquierda, dejando libre la cara dorsal para el ataque de OH⁻.",
-        "legend": { "breaking": "Sin ruptura inicial; configuración inicial (R).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto al enlace C—Br." },
+        "desc": "El (R)-2-bromobutano presenta el etilo a la izquierda, metilo arriba en cuña sólida, hidrógeno abajo en cuña rayada (hacia atrás) y bromo a la derecha (recorrido horario = R), frente al OH⁻ dorsal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial; configuración inicial (R).",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Nucleófilo OH⁻ alineado a 180° respecto al enlace C—Br."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C4", "el": "CH₃", "x": 255, "y": 95 },
-            { "id": "C3", "el": "CH₂", "x": 365, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (R)" },
-            { "id": "C1", "el": "CH₃", "x": 355, "y": 295 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 205 },
-            { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 165, "y": 280, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "C4", "el": "CH₃", "x": 165, "y": 195 },
+            { "id": "C3", "el": "CH₂", "x": 285, "y": 195 },
+            { "id": "C2", "el": "C", "x": 415, "y": 195, "highlight": "#38bdf8", "label": "Centro quiral (R)" },
+            { "id": "C1", "el": "CH₃", "x": 415, "y": 95 },
+            { "id": "H2", "el": "H", "x": 415, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 555, "y": 195 },
+            { "id": "K1", "el": "K", "x": 745, "y": 195, "charge": "+" }
           ],
           "bonds": [
             { "from": "C4", "to": "C3", "order": 1, "state": "normal" },
@@ -214,24 +238,28 @@
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 650, "y": 202, "text": "+" }]
         }
       },
       {
         "title": "Paso 2 — Ataque Nucleofílico Dorsal (SN2) y Polarización de C—Br",
         "semiStep": "HO⁻ ──► (R)-C(CH₂CH₃)(CH₃)(H)δ⁺ ┆—┆ Brδ⁻  +  K⁺",
         "semiGlobal": "(R)-2-Bromobutano + KOH ──(Acuoso, SN2)──► (S)-2-Butanol + KBr",
-        "desc": "El par libre del oxígeno ataca por detrás al carbono quiral (δ⁺) mientras se debilita en rojo punteado el enlace C—Br.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Br debilitándose.", "forming": "Ataque nucleofílico dorsal del ion OH⁻.", "movement": "Flechas curvas de ataque dorsal y salida del par electrónico hacia Br." },
+        "desc": "El par libre del oxígeno ataca por la cara opuesta al bromo mientras se debilita en rojo punteado el enlace C—Br.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—Br debilitándose.",
+          "forming": "Ataque nucleofílico dorsal del ion OH⁻.",
+          "movement": "Flechas curvas de ataque dorsal y salida del par hacia Br."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C4", "el": "CH₃", "x": 275, "y": 95 },
-            { "id": "C3", "el": "CH₂", "x": 385, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 375, "y": 295 },
-            { "id": "H2", "el": "H", "x": 425, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
+            { "id": "OH1", "el": "OH", "x": 225, "y": 245, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "C4", "el": "CH₃", "x": 195, "y": 145 },
+            { "id": "C3", "el": "CH₂", "x": 310, "y": 145 },
+            { "id": "C2", "el": "C", "x": 425, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "C1", "el": "CH₃", "x": 425, "y": 95 },
+            { "id": "H2", "el": "H", "x": 425, "y": 310 },
+            { "id": "Br1", "el": "Br", "x": 575, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
@@ -242,18 +270,22 @@
             { "from": "C2", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 265, "y1": 195, "cx": 335, "cy": 165, "x2": 405, "y2": 195, "type": "full", "label": "Ataque dorsal" },
-            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 565, "y2": 192, "type": "full", "label": "Par al Br" }
+            { "x1": 265, "y1": 235, "cx": 335, "cy": 215, "x2": 395, "y2": 208, "type": "full", "label": "Ataque dorsal" },
+            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 560, "y2": 192, "type": "full", "label": "Par al Br" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 665, "y": 212, "text": "+" }]
         }
       },
       {
         "title": "Paso 3 — Estado de Transición [ ... ]‡ (Plano Trigonal e Inversión de Walden)",
         "semiStep": "[ HOδ⁻ ··· C(CH₂CH₃)(CH₃)(H) ··· Brδ⁻ ]‡  +  K⁺",
         "semiGlobal": "(R)-2-Bromobutano + KOH ──(Acuoso, SN2)──► (S)-2-Butanol + KBr",
-        "desc": "En el estado de transición entre corchetes, el carbono quiral pasa por una geometría trigonal plana pentacoordinada: HO···C se forma en verde punteado, C···Br se rompe en rojo punteado y los tres grupos pasan por el eje vertical central.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···Br rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados verticalmente en el punto medio de la inversión." },
+        "desc": "En el estado de transición entre corchetes, el carbono quiral pasa por una geometría trigonal plana pentacoordinada: HO···C se forma en verde punteado, C···Br se rompe en rojo punteado y los sustituyentes cruzan el plano medio.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C···Br rompiéndose.",
+          "forming": "En VERDE punteado: enlace HO···C formándose.",
+          "movement": "Sustituyentes alineados en el punto medio de la inversión."
+        },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
@@ -263,8 +295,8 @@
             { "id": "C4", "el": "CH₃", "x": 325, "y": 95 },
             { "id": "C3", "el": "CH₂", "x": 435, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "C1", "el": "CH₃", "x": 405, "y": 305 },
-            { "id": "H2", "el": "H", "x": 465, "y": 305 },
+            { "id": "C1", "el": "CH₃", "x": 495, "y": 115 },
+            { "id": "H2", "el": "H", "x": 435, "y": 310 },
             { "id": "Br1", "el": "Br", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
@@ -282,28 +314,32 @@
         "title": "Paso 4 — Ruptura Consumada de C—Br e Inversión del Tetraedro (R → S)",
         "semiStep": "(S)-HO—C(CH₂CH₃)(CH₃)(H)  +  Br⁻  +  K⁺",
         "semiGlobal": "(R)-2-Bromobutano + KOH ──(Acuoso, SN2)──► (S)-2-Butanol + KBr",
-        "desc": "Se rompe por completo el enlace C—Br; los tres sustituyentes terminan de bascular hacia la derecha como un paraguas invertido, convirtiendo el centro quiral en configuración (S).",
-        "legend": { "breaking": "Enlace C—Br escindido; sale Br⁻.", "forming": "En VERDE punteado: enlace HO—C y K—Br.", "movement": "Basculación completa hacia la derecha (inversión R → S)." },
+        "desc": "Se rompe por completo el enlace C—Br; el grupo etilo bascula hacia la derecha invirtiendo el centro quiral a configuración (S).",
+        "legend": {
+          "breaking": "Enlace C—Br escindido; sale Br⁻.",
+          "forming": "En VERDE punteado: enlace HO—C y K—Br.",
+          "movement": "Basculación completa hacia la derecha (inversión R → S)."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C4", "el": "CH₃", "x": 605, "y": 95 },
-            { "id": "C3", "el": "CH₂", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión R → S" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 685, "y": 205, "charge": "-" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "Inversión R → S" },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
+            { "id": "H2", "el": "H", "x": 385, "y": 310 },
+            { "id": "C3", "el": "CH₂", "x": 505, "y": 205 },
+            { "id": "C4", "el": "CH₃", "x": 615, "y": 205 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 205, "charge": "-" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
-            { "from": "C4", "to": "C3", "order": 1, "state": "normal" },
-            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C3", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
             { "from": "Br1", "to": "K1", "order": 1, "state": "forming" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       },
       {
@@ -311,27 +347,31 @@
         "semiStep": "(S)-CH₃—CH₂—CH(OH)—CH₃   +   KBr",
         "semiGlobal": "(R)-2-Bromobutano + KOH ──(Acuoso, SN2)──► (S)-2-Butanol + KBr",
         "desc": "Se obtiene el (S)-2-butanol con inversión total de configuración respecto al (R)-2-bromobutano inicial, junto con bromuro de potasio (KBr).",
-        "legend": { "breaking": "Sustitución SN2 con inversión completada.", "forming": "En VERDE sólido: (S)-2-butanol y KBr consolidados.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Sustitución SN2 con inversión completada.",
+          "forming": "En VERDE sólido: (S)-2-butanol y KBr consolidados.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C4", "el": "CH₃", "x": 605, "y": 95 },
-            { "id": "C3", "el": "CH₂", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(S)-2-Butanol" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 685, "y": 205, "label": "Bromuro de potasio" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205 }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "(S)-2-Butanol" },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
+            { "id": "H2", "el": "H", "x": 385, "y": 310 },
+            { "id": "C3", "el": "CH₂", "x": 505, "y": 205 },
+            { "id": "C4", "el": "CH₃", "x": 615, "y": 205 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 205, "label": "Bromuro de potasio" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "new" },
-            { "from": "C4", "to": "C3", "order": 1, "state": "normal" },
-            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C3", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
             { "from": "Br1", "to": "K1", "order": 1, "state": "new" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       }
     ],
@@ -340,25 +380,29 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (S)-2-Cloropentano + OH⁻ (Dorsal)",
         "semiStep": "(S)-CH₃—CH₂—CH₂—CH(Cl)—CH₃  +  K—OH",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
-        "desc": "El (S)-2-cloropentano presenta el metilo en cuña sólida hacia arriba, el propilo hacia abajo a la izquierda y el hidrógeno en cuña rayada hacia abajo, cumpliendo con la configuración (S) frente al OH⁻ dorsal.",
-        "legend": { "breaking": "Sin ruptura inicial; configuración inicial (S).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—Cl." },
+        "desc": "El (S)-2-cloropentano presenta el propilo a la izquierda, el hidrógeno arriba en cuña rayada (hacia atrás), el metilo abajo en cuña sólida (hacia adelante) y el cloro a la derecha (recorrido antihorario = S), frente al OH⁻ dorsal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial; configuración inicial (S).",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—Cl."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C1", "el": "CH₃", "x": 365, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 335, "y": 295 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "Cl1", "el": "Cl", "x": 585, "y": 205 },
-            { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 165, "y": 280, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 245, "y": 195 },
+            { "id": "C2", "el": "C", "x": 415, "y": 195, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
+            { "id": "H2", "el": "H", "x": 415, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 415, "y": 305 },
+            { "id": "Cl1", "el": "Cl", "x": 555, "y": 195 },
+            { "id": "K1", "el": "K", "x": 745, "y": 195, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 650, "y": 202, "text": "+" }]
         }
       },
       {
@@ -366,28 +410,32 @@
         "semiStep": "HO⁻ ──► (S)-C(C₃H₇)(CH₃)(H)δ⁺ ┆—┆ Clδ⁻  +  K⁺",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
         "desc": "El par libre del oxígeno ataca por detrás al carbono quiral (δ⁺) mientras se debilita en rojo punteado el enlace C—Cl.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl debilitándose.", "forming": "Ataque nucleofílico dorsal.", "movement": "Flechas curvas de ataque dorsal y salida del par hacia Cl." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—Cl debilitándose.",
+          "forming": "Ataque nucleofílico dorsal.",
+          "movement": "Flechas curvas de ataque dorsal y salida del par hacia Cl."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 355, "y": 295 },
-            { "id": "H2", "el": "H", "x": 425, "y": 325 },
-            { "id": "Cl1", "el": "Cl", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
+            { "id": "OH1", "el": "OH", "x": 225, "y": 245, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 265, "y": 145 },
+            { "id": "C2", "el": "C", "x": 425, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H2", "el": "H", "x": 425, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 425, "y": 310 },
+            { "id": "Cl1", "el": "Cl", "x": 575, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 265, "y1": 195, "cx": 335, "cy": 165, "x2": 405, "y2": 195, "type": "full", "label": "Ataque dorsal" },
-            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 565, "y2": 192, "type": "full", "label": "Par al Cl" }
+            { "x1": 265, "y1": 235, "cx": 335, "cy": 215, "x2": 395, "y2": 208, "type": "full", "label": "Ataque dorsal" },
+            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 560, "y2": 192, "type": "full", "label": "Par al Cl" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 665, "y": 212, "text": "+" }]
         }
       },
       {
@@ -395,24 +443,28 @@
         "semiStep": "[ HOδ⁻ ··· C(C₃H₇)(CH₃)(H) ··· Clδ⁻ ]‡  +  K⁺",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
         "desc": "Estado de transición pentacoordinado entre corchetes: HO···C se forma en verde punteado, C···Cl se rompe en rojo punteado y los sustituyentes cruzan el plano medio.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···Cl rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados en el plano vertical de transición." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C···Cl rompiéndose.",
+          "forming": "En VERDE punteado: enlace HO···C formándose.",
+          "movement": "Sustituyentes alineados en el punto medio de la inversión."
+        },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
           ],
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 285, "y": 205, "charge": "δ-", "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 435, "y": 95 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 435, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 385, "y": 305 },
-            { "id": "H2", "el": "H", "x": 475, "y": 305 },
+            { "id": "H2", "el": "H", "x": 395, "y": 305 },
+            { "id": "C1", "el": "CH₃", "x": 475, "y": 305 },
             { "id": "Cl1", "el": "Cl", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
             { "from": "C2", "to": "Cl1", "order": 1, "state": "breaking" }
           ]
@@ -422,26 +474,30 @@
         "title": "Paso 4 — Ruptura Consumada de C—Cl e Inversión del Tetraedro (S → R)",
         "semiStep": "(R)-HO—C(C₃H₇)(CH₃)(H)  +  Cl⁻  +  K⁺",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
-        "desc": "Se rompe por completo el enlace C—Cl; los sustituyentes basculan hacia la derecha invirtiendo el centro quiral a configuración (R).",
-        "legend": { "breaking": "Enlace C—Cl escindido; sale Cl⁻.", "forming": "En VERDE punteado: enlace HO—C y K—Cl.", "movement": "Basculación completa hacia la derecha (inversión S → R)." },
+        "desc": "Se rompe por completo el enlace C—Cl; el propilo bascula hacia la derecha invirtiendo el centro quiral a configuración (R).",
+        "legend": {
+          "breaking": "Enlace C—Cl escindido; sale Cl⁻.",
+          "forming": "En VERDE punteado: enlace HO—C y K—Cl.",
+          "movement": "Basculación completa hacia la derecha (inversión S → R)."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "Cl1", "el": "Cl", "x": 685, "y": 205, "charge": "-" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
+            { "id": "H2", "el": "H", "x": 385, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 310 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 555, "y": 205 },
+            { "id": "Cl1", "el": "Cl", "x": 745, "y": 205, "charge": "-" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "Cl1", "to": "K1", "order": 1, "state": "forming" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       },
       {
@@ -449,25 +505,29 @@
         "semiStep": "(R)-CH₃—CH₂—CH₂—CH(OH)—CH₃   +   KCl",
         "semiGlobal": "(S)-2-Cloropentano + KOH ──(Acuoso, SN2)──► (R)-2-Pentanol + KCl",
         "desc": "Se obtiene el (R)-2-pentanol con inversión total de configuración respecto al (S)-2-cloropentano inicial, junto con cloruro de potasio (KCl).",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: (R)-2-pentanol y KCl.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: (R)-2-pentanol y KCl.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(R)-2-Pentanol" },
-            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 525, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "Cl1", "el": "Cl", "x": 685, "y": 205, "label": "Cloruro de potasio" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205 }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "(R)-2-Pentanol" },
+            { "id": "H2", "el": "H", "x": 385, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 310 },
+            { "id": "R1", "el": "CH₃CH₂CH₂", "x": 555, "y": 205 },
+            { "id": "Cl1", "el": "Cl", "x": 745, "y": 205, "label": "Cloruro de potasio" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "new" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "R1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "Cl1", "to": "K1", "order": 1, "state": "new" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       }
     ],
@@ -476,17 +536,21 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (R)-1-Bromo-1-feniletano + OH⁻ (Dorsal)",
         "semiStep": "(R)-C₆H₅—CH(Br)—CH₃  +  K—OH",
         "semiGlobal": "(R)-1-Bromo-1-feniletano + KOH ──(Acuoso, SN2)──► (S)-1-Feniletanol + KBr",
-        "desc": "El (R)-1-bromo-1-feniletano presenta el anillo fenilo hexagonal arriba a la izquierda, el metilo en cuña sólida y el H en cuña rayada inclinados hacia la izquierda, frente al OH⁻ dorsal.",
-        "legend": { "breaking": "Sin ruptura inicial; configuración inicial (R).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—Br." },
+        "desc": "El (R)-1-bromo-1-feniletano presenta el fenilo hexagonal a la izquierda, metilo arriba en cuña sólida, hidrógeno abajo en cuña rayada (hacia atrás) y bromo a la derecha (recorrido horario = R), frente al OH⁻ dorsal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial; configuración inicial (R).",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—Br."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 345, "y": 90 },
-            { "id": "C1", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (R)" },
-            { "id": "Me1", "el": "CH₃", "x": 355, "y": 295 },
-            { "id": "H1", "el": "H", "x": 415, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 205 },
-            { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 165, "y": 280, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 265, "y": 195 },
+            { "id": "C1", "el": "C", "x": 415, "y": 195, "highlight": "#38bdf8", "label": "Centro quiral (R)" },
+            { "id": "Me1", "el": "CH₃", "x": 415, "y": 95 },
+            { "id": "H1", "el": "H", "x": 415, "y": 305 },
+            { "id": "Br1", "el": "Br", "x": 555, "y": 195 },
+            { "id": "K1", "el": "K", "x": 745, "y": 195, "charge": "+" }
           ],
           "bonds": [
             { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
@@ -494,7 +558,7 @@
             { "from": "C1", "to": "H1", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 650, "y": 202, "text": "+" }]
         }
       },
       {
@@ -502,15 +566,19 @@
         "semiStep": "HO⁻ ──► (R)-C(C₆H₅)(CH₃)(H)δ⁺ ┆—┆ Brδ⁻  +  K⁺",
         "semiGlobal": "(R)-1-Bromo-1-feniletano + KOH ──(Acuoso, SN2)──► (S)-1-Feniletanol + KBr",
         "desc": "El par libre del oxígeno ataca por detrás al carbono quiral (δ⁺) mientras se debilita en rojo punteado el enlace C—Br.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Br debilitándose.", "forming": "Ataque nucleofílico dorsal.", "movement": "Flechas curvas de ataque dorsal y salida del par hacia Br." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—Br debilitándose.",
+          "forming": "Ataque nucleofílico dorsal.",
+          "movement": "Flechas curvas de ataque dorsal y salida del par hacia Br."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 365, "y": 90 },
-            { "id": "C1", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "Me1", "el": "CH₃", "x": 375, "y": 295 },
-            { "id": "H1", "el": "H", "x": 425, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
+            { "id": "OH1", "el": "OH", "x": 225, "y": 245, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 285, "y": 140 },
+            { "id": "C1", "el": "C", "x": 425, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "Me1", "el": "CH₃", "x": 425, "y": 95 },
+            { "id": "H1", "el": "H", "x": 425, "y": 310 },
+            { "id": "Br1", "el": "Br", "x": 575, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
@@ -520,18 +588,22 @@
             { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 265, "y1": 195, "cx": 335, "cy": 165, "x2": 405, "y2": 195, "type": "full", "label": "Ataque dorsal" },
-            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 565, "y2": 192, "type": "full", "label": "Par al Br" }
+            { "x1": 265, "y1": 235, "cx": 335, "cy": 215, "x2": 395, "y2": 208, "type": "full", "label": "Ataque dorsal" },
+            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 560, "y2": 192, "type": "full", "label": "Par al Br" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 665, "y": 212, "text": "+" }]
         }
       },
       {
         "title": "Paso 3 — Estado de Transición [ ... ]‡ (Plano Trigonal e Inversión R → S)",
         "semiStep": "[ HOδ⁻ ··· C(C₆H₅)(CH₃)(H) ··· Brδ⁻ ]‡  +  K⁺",
         "semiGlobal": "(R)-1-Bromo-1-feniletano + KOH ──(Acuoso, SN2)──► (S)-1-Feniletanol + KBr",
-        "desc": "Estado de transición pentacoordinado entre corchetes: HO···C se forma en verde punteado, C···Br se rompe en rojo punteado y el anillo fenilo junto con el metilo e hidrógeno cruzan el plano vertical.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···Br rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados verticalmente en el punto medio de la inversión." },
+        "desc": "Estado de transición pentacoordinado entre corchetes: HO···C se forma en verde punteado, C···Br se rompe en rojo punteado y el anillo fenilo junto con el metilo e hidrógeno cruzan el plano medio.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C···Br rompiéndose.",
+          "forming": "En VERDE punteado: enlace HO···C formándose.",
+          "movement": "Sustituyentes alineados en el punto medio de la inversión."
+        },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
@@ -540,8 +612,8 @@
             { "id": "OH1", "el": "OH", "x": 285, "y": 205, "charge": "δ-", "highlight": "#10b981" },
             { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 435, "y": 90 },
             { "id": "C1", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "Me1", "el": "CH₃", "x": 405, "y": 305 },
-            { "id": "H1", "el": "H", "x": 465, "y": 305 },
+            { "id": "Me1", "el": "CH₃", "x": 495, "y": 115 },
+            { "id": "H1", "el": "H", "x": 435, "y": 310 },
             { "id": "Br1", "el": "Br", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
@@ -558,26 +630,30 @@
         "title": "Paso 4 — Ruptura Consumada de C—Br e Inversión del Tetraedro (R → S)",
         "semiStep": "(S)-HO—C(C₆H₅)(CH₃)(H)  +  Br⁻  +  K⁺",
         "semiGlobal": "(R)-1-Bromo-1-feniletano + KOH ──(Acuoso, SN2)──► (S)-1-Feniletanol + KBr",
-        "desc": "Se rompe por completo el enlace C—Br; el anillo fenilo hexagonal, el metilo y el hidrógeno basculan hacia la derecha invirtiendo el centro quiral a configuración (S).",
-        "legend": { "breaking": "Enlace C—Br escindido; sale Br⁻.", "forming": "En VERDE punteado: enlace HO—C y K—Br.", "movement": "Basculación completa hacia la derecha (inversión R → S)." },
+        "desc": "Se rompe por completo el enlace C—Br; el anillo fenilo hexagonal bascula hacia la derecha invirtiendo el centro quiral a configuración (S).",
+        "legend": {
+          "breaking": "Enlace C—Br escindido; sale Br⁻.",
+          "forming": "En VERDE punteado: enlace HO—C y K—Br.",
+          "movement": "Basculación completa hacia la derecha (inversión R → S)."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 515, "y": 90 },
-            { "id": "C1", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión R → S" },
-            { "id": "Me1", "el": "CH₃", "x": 495, "y": 295 },
-            { "id": "H1", "el": "H", "x": 445, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 685, "y": 205, "charge": "-" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C1", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "Inversión R → S" },
+            { "id": "Me1", "el": "CH₃", "x": 385, "y": 95 },
+            { "id": "H1", "el": "H", "x": 385, "y": 310 },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 535, "y": 205 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 205, "charge": "-" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C1", "order": 1, "state": "forming" },
-            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Me1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C1", "to": "Ph1", "order": 1, "state": "normal" },
             { "from": "Br1", "to": "K1", "order": 1, "state": "forming" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       },
       {
@@ -585,25 +661,29 @@
         "semiStep": "(S)-C₆H₅—CH(OH)—CH₃   +   KBr",
         "semiGlobal": "(R)-1-Bromo-1-feniletano + KOH ──(Acuoso, SN2)──► (S)-1-Feniletanol + KBr",
         "desc": "Se obtiene el (S)-1-feniletanol con inversión de configuración respecto al (R)-1-bromo-1-feniletano inicial, junto con bromuro de potasio (KBr).",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: (S)-1-feniletanol y KBr.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: (S)-1-feniletanol y KBr.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 515, "y": 90 },
-            { "id": "C1", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(S)-1-Feniletanol" },
-            { "id": "Me1", "el": "CH₃", "x": 495, "y": 295 },
-            { "id": "H1", "el": "H", "x": 445, "y": 325 },
-            { "id": "Br1", "el": "Br", "x": 685, "y": 205, "label": "Bromuro de potasio" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205 }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C1", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "(S)-1-Feniletanol" },
+            { "id": "Me1", "el": "CH₃", "x": 385, "y": 95 },
+            { "id": "H1", "el": "H", "x": 385, "y": 310 },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 535, "y": 205 },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 205, "label": "Bromuro de potasio" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C1", "order": 1, "state": "new" },
-            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Me1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C1", "to": "H1", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C1", "to": "Ph1", "order": 1, "state": "normal" },
             { "from": "Br1", "to": "K1", "order": 1, "state": "new" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       }
     ],
@@ -612,25 +692,29 @@
         "title": "Paso 1 — Reactivos Quirales Intactos: (S)-2-Yodo-3-metilbutano + OH⁻ (Dorsal)",
         "semiStep": "(S)-(CH₃)₂CH—CH(I)—CH₃  +  K—OH",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
-        "desc": "El (S)-2-yodo-3-metilbutano presenta el metilo en cuña sólida hacia arriba, el grupo isopropilo hacia abajo a la izquierda y el hidrógeno en cuña rayada hacia abajo, cumpliendo con la configuración (S) frente al OH⁻ dorsal.",
-        "legend": { "breaking": "Sin ruptura inicial; configuración inicial (S).", "forming": "Sin enlace nuevo.", "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—I." },
+        "desc": "El (S)-2-yodo-3-metilbutano presenta el isopropilo a la izquierda, el hidrógeno arriba en cuña rayada (hacia atrás), el metilo abajo en cuña sólida (hacia adelante) y el yodo a la derecha (recorrido antihorario = S), frente al OH⁻ dorsal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial; configuración inicial (S).",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Nucleófilo OH⁻ alineado a 180° respecto a C—I."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 195, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C1", "el": "CH₃", "x": 365, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 340, "y": 295 },
-            { "id": "H2", "el": "H", "x": 415, "y": 325 },
-            { "id": "I1", "el": "I", "x": 585, "y": 205 },
-            { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 165, "y": 280, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 245, "y": 195 },
+            { "id": "C2", "el": "C", "x": 415, "y": 195, "highlight": "#38bdf8", "label": "Centro quiral (S)" },
+            { "id": "H2", "el": "H", "x": 415, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 415, "y": 305 },
+            { "id": "I1", "el": "I", "x": 555, "y": 195 },
+            { "id": "K1", "el": "K", "x": 745, "y": 195, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "I1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 650, "y": 202, "text": "+" }]
         }
       },
       {
@@ -638,28 +722,32 @@
         "semiStep": "HO⁻ ──► (S)-C(CH(CH₃)₂)(CH₃)(H)δ⁺ ┆—┆ Iδ⁻  +  K⁺",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
         "desc": "El par libre del oxígeno ataca por detrás al carbono quiral (δ⁺) mientras se debilita en rojo punteado el enlace C—I.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—I debilitándose.", "forming": "Ataque nucleofílico dorsal.", "movement": "Flechas curvas de ataque dorsal y salida del par hacia I." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C—I debilitándose.",
+          "forming": "Ataque nucleofílico dorsal.",
+          "movement": "Flechas curvas de ataque dorsal y salida del par hacia I."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 230, "y": 205, "charge": "-", "highlight": "#38bdf8" },
-            { "id": "C1", "el": "CH₃", "x": 385, "y": 95 },
-            { "id": "C2", "el": "C", "x": 435, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 360, "y": 295 },
-            { "id": "H2", "el": "H", "x": 425, "y": 325 },
-            { "id": "I1", "el": "I", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
+            { "id": "OH1", "el": "OH", "x": 225, "y": 245, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 265, "y": 145 },
+            { "id": "C2", "el": "C", "x": 425, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "H2", "el": "H", "x": 425, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 425, "y": 310 },
+            { "id": "I1", "el": "I", "x": 575, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 755, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "C2", "to": "I1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 265, "y1": 195, "cx": 335, "cy": 165, "x2": 405, "y2": 195, "type": "full", "label": "Ataque dorsal" },
-            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 565, "y2": 192, "type": "full", "label": "Par al I" }
+            { "x1": 265, "y1": 235, "cx": 335, "cy": 215, "x2": 395, "y2": 208, "type": "full", "label": "Ataque dorsal" },
+            { "x1": 495, "y1": 195, "cx": 530, "cy": 168, "x2": 560, "y2": 192, "type": "full", "label": "Par al I" }
           ],
-          "texts": [{ "x": 670, "y": 212, "text": "+" }]
+          "texts": [{ "x": 665, "y": 212, "text": "+" }]
         }
       },
       {
@@ -667,24 +755,28 @@
         "semiStep": "[ HOδ⁻ ··· C(CH(CH₃)₂)(CH₃)(H) ··· Iδ⁻ ]‡  +  K⁺",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
         "desc": "Estado de transición pentacoordinado entre corchetes: HO···C se forma en verde punteado, C···I se rompe en rojo punteado y los sustituyentes cruzan el plano medio.",
-        "legend": { "breaking": "En ROJO punteado: enlace C···I rompiéndose.", "forming": "En VERDE punteado: enlace HO···C formándose.", "movement": "Sustituyentes alineados en el plano vertical de transición." },
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C···I rompiéndose.",
+          "forming": "En VERDE punteado: enlace HO···C formándose.",
+          "movement": "Sustituyentes alineados en el punto medio de la inversión."
+        },
         "scene": {
           "brackets": [
             { "x1": 215, "y1": 45, "x2": 655, "y2": 340, "label": "Estado de transición" }
           ],
           "atoms": [
             { "id": "OH1", "el": "OH", "x": 285, "y": 205, "charge": "δ-", "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 435, "y": 95 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 435, "y": 95 },
             { "id": "C2", "el": "C", "x": 435, "y": 205, "highlight": "#fbbf24" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 390, "y": 305 },
-            { "id": "H2", "el": "H", "x": 475, "y": 305 },
+            { "id": "H2", "el": "H", "x": 395, "y": 305 },
+            { "id": "C1", "el": "CH₃", "x": 475, "y": 305 },
             { "id": "I1", "el": "I", "x": 585, "y": 205, "charge": "δ-", "border": "#ef4444" },
             { "id": "K1", "el": "K", "x": 765, "y": 205, "charge": "+" }
           ],
           "bonds": [
-            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
             { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
             { "from": "C2", "to": "I1", "order": 1, "state": "breaking" }
           ]
@@ -694,26 +786,30 @@
         "title": "Paso 4 — Ruptura Consumada de C—I e Inversión del Tetraedro (S → R)",
         "semiStep": "(R)-HO—C(CH(CH₃)₂)(CH₃)(H)  +  I⁻  +  K⁺",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
-        "desc": "Se rompe por completo el enlace C—I; los sustituyentes basculan hacia la derecha invirtiendo el centro quiral a configuración (R).",
-        "legend": { "breaking": "Enlace C—I escindido; sale I⁻.", "forming": "En VERDE punteado: enlace HO—C y K—I.", "movement": "Basculación completa hacia la derecha (inversión S → R)." },
+        "desc": "Se rompe por completo el enlace C—I; el grupo isopropilo bascula hacia la derecha invirtiendo el centro quiral a configuración (R).",
+        "legend": {
+          "breaking": "Enlace C—I escindido; sale I⁻.",
+          "forming": "En VERDE punteado: enlace HO—C y K—I.",
+          "movement": "Basculación completa hacia la derecha (inversión S → R)."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 520, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "I1", "el": "I", "x": 685, "y": 205, "charge": "-" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205, "charge": "+" }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "Inversión S → R" },
+            { "id": "H2", "el": "H", "x": 385, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 310 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 555, "y": 205 },
+            { "id": "I1", "el": "I", "x": 745, "y": 205, "charge": "-" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205, "charge": "+" }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "forming" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "I1", "to": "K1", "order": 1, "state": "forming" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       },
       {
@@ -721,25 +817,29 @@
         "semiStep": "(R)-(CH₃)₂CH—CH(OH)—CH₃   +   KI",
         "semiGlobal": "(S)-2-Yodo-3-metilbutano + KOH ──(Acuoso, SN2)──► (R)-3-Metil-2-butanol + KI",
         "desc": "Se obtiene el (R)-3-metil-2-butanol con inversión total de configuración respecto al (S)-2-yodo-3-metilbutano inicial, junto con yoduro de potasio (KI).",
-        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: (R)-3-metil-2-butanol y KI.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: (R)-3-metil-2-butanol y KI.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
-            { "id": "OH1", "el": "OH", "x": 265, "y": 205, "highlight": "#10b981" },
-            { "id": "C1", "el": "CH₃", "x": 495, "y": 95 },
-            { "id": "C2", "el": "C", "x": 425, "y": 205, "highlight": "#10b981", "label": "(R)-3-Metil-2-butanol" },
-            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 520, "y": 295 },
-            { "id": "H2", "el": "H", "x": 445, "y": 325 },
-            { "id": "I1", "el": "I", "x": 685, "y": 205, "label": "Yoduro de potasio" },
-            { "id": "K1", "el": "K", "x": 805, "y": 205 }
+            { "id": "OH1", "el": "OH", "x": 245, "y": 205, "highlight": "#10b981" },
+            { "id": "C2", "el": "C", "x": 385, "y": 205, "highlight": "#10b981", "label": "(R)-3-Metil-2-butanol" },
+            { "id": "H2", "el": "H", "x": 385, "y": 95 },
+            { "id": "C1", "el": "CH₃", "x": 385, "y": 310 },
+            { "id": "Iso1", "el": "(CH₃)₂CH", "x": 555, "y": 205 },
+            { "id": "I1", "el": "I", "x": 745, "y": 205, "label": "Yoduro de potasio" },
+            { "id": "K1", "el": "K", "x": 855, "y": 205 }
           ],
           "bonds": [
             { "from": "OH1", "to": "C2", "order": 1, "state": "new" },
+            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "C2", "to": "C1", "order": 1, "state": "normal", "stereo": "wedge" },
             { "from": "Iso1", "to": "C2", "order": 1, "state": "normal" },
-            { "from": "C2", "to": "H2", "order": 1, "state": "normal", "stereo": "dash" },
             { "from": "I1", "to": "K1", "order": 1, "state": "new" }
           ],
-          "texts": [{ "x": 595, "y": 212, "text": "+" }]
+          "texts": [{ "x": 675, "y": 212, "text": "+" }]
         }
       }
     ],
@@ -749,7 +849,11 @@
         "semiStep": "(CH₃)₃C—Cl  +  K—OH",
         "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
         "desc": "El 2-cloro-2-metilpropano tiene tres grupos metilo que impiden el ataque trasero SN2, por lo que reacciona vía SN1 en dos etapas.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Ionización inicial del haluro terciario." },
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Ionización inicial del haluro terciario."
+        },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
@@ -771,7 +875,11 @@
         "semiStep": "(CH₃)₃C ┆—┆ Cl  ──►  (CH₃)₃C⁺ + Cl⁻",
         "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
         "desc": "En la primera etapa (lenta), se rompe heterolíticamente el enlace C—Cl en rojo punteado; el cloro se lleva el par electrónico como Cl⁻.",
-        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.", "forming": "Formación del carbocatión terciario.", "movement": "Salida espontánea del ion cloruro Cl⁻." },
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.",
+          "forming": "Formación del carbocatión terciario.",
+          "movement": "Salida espontánea del ion cloruro Cl⁻."
+        },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 145, "y": 215 },
@@ -796,7 +904,11 @@
         "semiStep": "(CH₃)₃C⁺  +  K—OH  (+ Cl⁻)",
         "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
         "desc": "Queda formado el carbocatión terciario estable (CH₃)₃C⁺ y entra el hidróxido de potasio (K—OH) para realizar el ataque nucleofílico.",
-        "legend": { "breaking": "Enlace C—Cl ya escindido.", "forming": "Carbocatión terciario intermediario formado.", "movement": "El nucleófilo –OH ataca al carbono positivo C⁺." },
+        "legend": {
+          "breaking": "Enlace C—Cl ya escindido.",
+          "forming": "Carbocatión terciario intermediario formado.",
+          "movement": "El nucleófilo –OH ataca al carbono positivo C⁺."
+        },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 135, "y": 215 },
@@ -824,7 +936,11 @@
         "semiStep": "(CH₃)₃C ··· OH   +   K ··· Cl",
         "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
         "desc": "Se traza en verde punteado el nuevo enlace C—OH en el carbono terciario y la unión iónica K—Cl.",
-        "legend": { "breaking": "Enlace K—OH disociado.", "forming": "En VERDE punteado: C—OH y K—Cl.", "movement": "Captura rápida del grupo –OH por el carbocatión." },
+        "legend": {
+          "breaking": "Enlace K—OH disociado.",
+          "forming": "En VERDE punteado: C—OH y K—Cl.",
+          "movement": "Captura rápida del grupo –OH por el carbocatión."
+        },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
@@ -850,7 +966,11 @@
         "semiStep": "(CH₃)₃C—OH   +   KCl",
         "semiGlobal": "(CH₃)₃C—Cl + KOH ──(Acuoso, SN1)──► (CH₃)₃C—OH + KCl",
         "desc": "Queda consolidado en verde sólido el 2-metil-2-propanol (alcohol terciario) a la izquierda y KCl a la derecha.",
-        "legend": { "breaking": "Sustitución SN1 completada.", "forming": "En VERDE sólido: enlaces C—OH y K—Cl.", "movement": "Productos finales estables." },
+        "legend": {
+          "breaking": "Sustitución SN1 completada.",
+          "forming": "En VERDE sólido: enlaces C—OH y K—Cl.",
+          "movement": "Productos finales estables."
+        },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 145, "y": 225 },
