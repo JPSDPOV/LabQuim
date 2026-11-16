@@ -889,7 +889,9 @@
         // DICCIONARIO DE NOMBRES QUÍMICOS POR FÓRMULA (PARA ETIQUETAR SEMIDESARROLLADAS)
         // =========================================================================
         const FORMULA_TO_NAME_MAP = {
-            // Alcanos
+            // =====================================================================
+            // NIVEL 1: ALCANOS LINEALES, RAMIFICADOS Y RADICALES ALQUILO
+            // =====================================================================
             'CH4': 'Metano',
             'CH3-CH3': 'Etano',
             'C2H6': 'Etano',
@@ -897,220 +899,684 @@
             'C3H8': 'Propano',
             'CH3-CH2-CH2-CH3': 'Butano',
             'C4H10': 'Butano',
-            '(CH3)3CH': '2-Metilpropano',
-            '(CH3)3C-H': '2-Metilpropano',
+            '(CH3)3CH': '2-Metilpropano (Isobutano)',
+            '(CH3)3C-H': '2-Metilpropano (Isobutano)',
+            'CH3-CH(CH3)-CH3': '2-Metilpropano (Isobutano)',
             'CH3-CH2-CH2-CH2-CH3': 'Pentano',
             'C5H12': 'Pentano',
-            '(CH3)2CH-CH2-CH3': '2-Metilbutano',
-            '(CH3)4C': '2,2-Dimetilpropano',
+            '(CH3)2CH-CH2-CH3': '2-Metilbutano (Isopentano)',
+            'CH3-CH(CH3)-CH2-CH3': '2-Metilbutano (Isopentano)',
+            '(CH3)4C': '2,2-Dimetilpropano (Neopentano)',
+            'CH3-C(CH3)2-CH3': '2,2-Dimetilpropano (Neopentano)',
+            'CH3-CH2-CH2-CH2-CH2-CH3': 'Hexano',
             'CH3-(CH2)4-CH3': 'Hexano',
             'C6H14': 'Hexano',
+            'CH3-CH(CH3)-CH2-CH2-CH3': '2-Metilpentano',
+            '(CH3)2CH-CH2-CH2-CH3': '2-Metilpentano',
+            'CH3-CH2-CH(CH3)-CH2-CH3': '3-Metilpentano',
+            'CH3-C(CH3)2-CH2-CH3': '2,2-Dimetilbutano',
+            '(CH3)3C-CH2-CH3': '2,2-Dimetilbutano',
+            'CH3-CH(CH3)-CH(CH3)-CH3': '2,3-Dimetilbutano',
+            '(CH3)2CH-CH(CH3)2': '2,3-Dimetilbutano',
+            'CH3-CH2-CH2-CH2-CH2-CH2-CH3': 'Heptano',
             'CH3-(CH2)5-CH3': 'Heptano',
             'C7H16': 'Heptano',
+            'CH3-CH2-CH2-CH(CH3)-CH2-CH2-CH3': '4-Metilheptano',
+            'CH3-CH(CH3)-CH2-CH(CH2CH3)-CH2-CH3': '4-Etil-2-metilhexano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-CH2-CH2-CH3': '3-Etil-2-metilheptano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH(CH3)-CH(CH3)-CH3': '3-Etil-2,4,5-trimetilhexano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-CH(CH2CH3)-CH(CH3)-CH3': '3,5-Dietil-2,6-dimetilheptano',
+            'CH3-CH(CH3)-CH(CH(CH3)2)-CH2-CH2-CH(CH3)-CH3': '3-Isopropil-2,6-dimetilheptano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-CH(CH(CH3)2)-CH2-CH3': '3-Etil-5-isopropil-2-metilheptano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-CH(CH3)-CH(CH3)-CH(CH3)-CH3': '3-Etil-2,5,6,7-tetrametiloctano',
+            'CH3-CH(CH3)-CH(CH(CH3)2)-CH2-CH(CH3)-CH(CH3)-CH(CH3)-CH3': '3-Isopropil-2,5,6,7-tetrametiloctano',
+            'CH3-CH(CH3)-CH(CH(CH3)2)-CH2-CH(CH(CH3)2)-CH2-CH2-CH3': '3,5-Diisopropil-2-metiloctano',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-CH(CH(CH3)2)-CH(CH3)-CH3': '3-Etil-5-isopropil-2,6-dimetilheptano',
+            'CH3-CH(CH3)-CH2-CH2-CH2-C(CH3)(CH2CH3)-CH(CH3)-CH2-CH3': '6-Etil-2,6,7-trimetilnonano',
+            'CH3-CH(CH3)-CH2-CH(CH3)-CH(CH2CH3)-CH2-CH(CH2CH3)-CH(CH3)-CH2-CH3': '5,7-Dietil-2,4,8-trimetildecano',
             'CH3-(CH2)6-CH3': 'Octano',
             'C8H18': 'Octano',
+            'CH3-(CH2)7-CH3': 'Nonano',
+            'C9H20': 'Nonano',
+            'CH3-(CH2)8-CH3': 'Decano',
+            'C10H22': 'Decano',
+
+            // =====================================================================
+            // NIVEL 2: CICLOALCANOS
+            // =====================================================================
             'C3H6_ciclo': 'Ciclopropano',
             'C4H8_ciclo': 'Ciclobutano',
             'C5H10': 'Ciclopentano',
             'C6H12': 'Ciclohexano',
+            'C7H14': 'Cicloheptano',
+            'C8H16': 'Ciclooctano',
+            'C12H24': 'Ciclododecano',
+            'C5H9-CH3': 'Metilciclopentano',
+            'C6H11-CH3': 'Metilciclohexano',
+            'C5H8(CH3)2': '1,3-Dimetilciclopentano',
+            'cis-C6H10(CH3)2': 'cis-1,3-Dimetilciclohexano',
+            'trans-C6H10(CH3)2': 'trans-1,3-Dimetilciclohexano',
+            'C5H7(CH3)3': '1,1,2-Trimetilciclopentano',
+            'C5H9-CH(CH3)-(CH2)3-CH3': '2-Ciclopentilhexano',
 
-            // Alquenos y Alquinos
-            'CH2=CH2': 'Eteno',
-            'C2H4': 'Eteno',
+            // =====================================================================
+            // NIVEL 3: ALQUENOS, CICLOALQUENOS, DIENOS Y TRIENOS
+            // =====================================================================
+            'CH2=CH2': 'Eteno (Etileno)',
+            'C2H4': 'Eteno (Etileno)',
             'CH3-CH=CH2': 'Propeno',
             'C3H6': 'Propeno',
             'CH2=CH-CH2-CH3': '1-Buteno',
             'CH3CH2-CH=CH2': '1-Buteno',
             'CH3-CH2-CH=CH2': '1-Buteno',
             'CH3-CH=CH-CH3': '2-Buteno',
-            '(CH3)2C=CH2': '2-Metilpropeno',
+            'cis-CH3-CH=CH-CH3': 'cis-2-Buteno',
+            'trans-CH3-CH=CH-CH3': 'trans-2-Buteno',
+            '(CH3)2C=CH2': '2-Metilpropeno (Isobutileno)',
+            'CH2=C(CH3)-CH3': '2-Metilpropeno (Isobutileno)',
             'CH2=CH-CH2-CH2-CH3': '1-Penteno',
             'CH3-CH=CH-CH2-CH3': '2-Penteno',
-            '(CH3)2C=CH-CH3': '2-Metil-2-buteno',
             'CH2=C(CH3)-CH2-CH3': '2-Metil-1-buteno',
             'CH3-CH(CH3)-CH=CH2': '3-Metil-1-buteno',
+            '(CH3)2C=CH-CH3': '2-Metil-2-buteno',
+            'CH3-C(CH3)=CH-CH3': '2-Metil-2-buteno',
+            'CH3-CH2-CH(CH3)-CH=CH2': '3-Metil-1-penteno',
+            'CH3-CH2-C(CH3)=CH-CH3': '3-Metil-2-penteno',
+            'CH2=C(CH2CH3)-CH2-CH2-CH3': '2-Etil-1-penteno',
+            'CH3-CH(CH3)-CH=CH-CH2-CH3': '2-Metil-3-hexeno',
+            'CH3-CH=C(CH3)-CH2-CH2-CH3': '3-Metil-2-hexeno',
+            'CH3-CH2-C(CH3)=CH-CH2-CH3': '3-Metil-3-hexeno',
+            'CH3-C(CH3)=C(CH2CH3)-CH2-CH2-CH3': '3-Etil-2-metil-2-hexeno',
+            'CH3-CH2-C(CH2CH3)=CH-CH(CH3)-CH3': '3-Etil-5-metil-3-hexeno',
+            'CH3-CH(CH3)-C(CH2CH3)=C(CH3)-CH2-CH3': '3-Etil-2,4-dimetil-3-hexeno',
+            'CH3-CH(CH3)-C(CH3)=C(CH2CH3)-CH(CH3)-CH3': '3-Etil-2,4,5-trimetil-3-hexeno',
+            'CH3-CH=CH-CH2-CH2-CH2-CH3': '3-Hepteno',
+            'cis-3-hepteno': 'cis-3-Hepteno',
+            'trans-3-hepteno': 'trans-3-Hepteno',
+            'CH3-CH=CH-CH2-CH(CH2CH3)-CH(CH3)-CH3': '5-Etil-6-metil-2-hepteno',
+            'CH3-C(CH3)=C(CH(CH3)2)-CH2-CH2-CH(CH3)-CH3': '3-Isopropil-2,6-dimetil-2-hepteno',
+            'CH3-CH=C(CH2CH3)-CH2-CH2-CH(CH3)-CH2-CH3': '3-Etil-6-metil-2-octeno',
+            'CH2=C=CH2': 'Propadieno (1,2-Propadieno / Aleno)',
+            'CH2=C=CH-CH3': '1,2-Butadieno',
             'CH2=CH-CH=CH2': '1,3-Butadieno',
+            'CH2=C(CH3)-CH=CH2': '2-Metil-1,3-butadieno (Isopreno)',
+            'CH2=C(CH3)-C(CH3)=CH2': '2,3-Dimetil-1,3-butadieno',
+            'CH2=CH-CH=CH-CH3': '1,3-Pentadieno',
+            'CH2=CH-CH2-CH=CH2': '1,4-Pentadieno',
+            'cis-2,4-hexadieno': 'cis,cis-2,4-Hexadieno',
+            'CH2=C(CH2CH3)-CH=CH-CH2-CH3': '2-Etil-1,3-hexadieno',
+            'CH2=C(CH3)-C(CH2CH3)=C(CH3)-CH(CH3)-CH3': '3-Etil-2,4,5-trimetil-1,3-hexadieno',
+            'CH2=CH-CH(CH2CH3)-CH2-CH=CH-CH3': '3-Etil-1,5-heptadieno',
+            'CH2=CH-CH(CH2CH2CH3)-CH2-CH=CH-CH3': '3-Propil-1,5-heptadieno',
+            'CH3-C(CH3)=C(CH2CH3)-CH=C(CH(CH3)2)-CH2-CH3': '3-Etil-5-isopropil-2-metil-2,4-heptadieno',
+            'CH2=C(CH3)-CH(CH3)-CH=C(CH3)-CH2-CH2-CH3': '2,3,5-Trimetil-1,4-octadieno',
+            'CH2=CH-CH=CH-CH(CH(CH3)2)-CH2-CH(CH(CH3)2)-CH(CH3)-CH3': '4,6-Diisopropil-7-metil-1,3-octadieno',
+            'CH2=CH-CH(CH2CH2CH3)-CH=C(CH3)-CH=CH-CH3': '5-Metil-3-propil-1,4,6-octatrieno',
+            'CH3-CH=CH-C(CH3)(CH2CH2CH3)-CH=CH-CH=CH-CH3': '4-Metil-4-propil-2,5,7-nonatrieno',
             'C5H8': 'Ciclopenteno',
-            'C6H10': 'Ciclohexeno',
             'C5H7(CH3)': '1-Metilciclopenteno',
+            '3-metilciclopenteno': '3-Metilciclopenteno',
+            '1,3-dimetilciclopenteno': '1,3-Dimetilciclopenteno',
+            'C5H6': '1,3-Ciclopentadieno',
+            'C6H10': 'Ciclohexeno',
             'C6H9(CH3)': '1-Metilciclohexeno',
-            'CH≡CH': 'Etino',
-            'C2H2': 'Etino',
+            'C6H8': '1,3-Ciclohexadieno',
+            'C8H10': '1,3,5-Ciclooctatrieno',
+
+            // =====================================================================
+            // NIVEL 4: ALQUINOS, CICLOALQUINOS Y ENINOS
+            // =====================================================================
+            'CH≡CH': 'Etino (Acetileno)',
+            'HC≡CH': 'Etino (Acetileno)',
+            'C2H2': 'Etino (Acetileno)',
+            'HC≡C-Na': 'Acetiluro de sodio',
+            'CH≡C-Na': 'Acetiluro de sodio',
             'CH3-C≡CH': 'Propino',
+            'HC≡C-CH3': 'Propino',
             'C3H4': 'Propino',
             'CH3-CH2-C≡CH': '1-Butino',
+            'HC≡C-CH2-CH3': '1-Butino',
             'CH3-C≡C-CH3': '2-Butino',
-            'C5H8_ino': 'Ciclopentino',
+            'CH3-C≡C-CH(CH3)-CH3': '4-Metil-2-pentino',
+            'HC≡C-CH2-CH(CH3)-CH3': '4-Metil-1-pentino',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH2-C≡CH': '4-Etil-5-metil-1-hexino',
+            'CH3-C≡C-CH(CH2CH3)-CH(CH3)-CH2-CH3': '4-Etil-5-metil-2-heptino',
+            'CH≡C-C≡C-CH3': '1,3-Pentadiino',
+            'CH≡C-C≡C-C≡CH': '1,3,5-Hexatriino',
+            'CH≡C-CH(CH2CH3)-CH2-C≡C-CH2-CH3': '3-Etil-1,5-octadiino',
+            'CH≡C-CH(CH2CH2CH3)-CH2-C≡C-C(CH3)2-CH2-CH3': '7,7-Dimetil-3-propil-1,5-nonadiino',
+            'CH2=CH-C≡C-CH3': '1-Penten-3-ino',
+            'HC≡C-CH2-CH=CH2': '1-Penten-4-ino',
+            'HC≡C-CH=CH-CH3': '3-Penten-1-ino',
+            'C5H6_ino': 'Ciclopentino',
+            'C6H8_ino': 'Ciclohexino',
+            '1-ciclopenten-3-ino': '1-Ciclopenten-3-ino',
 
-            // Aromáticos
+            // =====================================================================
+            // NIVEL 5: HIDROCARBUROS AROMÁTICOS Y DERIVADOS
+            // =====================================================================
             'C6H6': 'Benceno',
-            'C6H5-CH3': 'Tolueno',
+            'C6H5-CH3': 'Tolueno (Metilbenceno)',
             'C6H5-CH2-CH3': 'Etilbenceno',
-            'C6H5-CH=CH2': 'Estireno',
-            'C6H5-Cl': 'Clorobenceno',
-            'C6H5-Br': 'Bromobenceno',
-            'C6H5-I': 'Yodobenceno',
+            'C6H5-CH2-CH2-CH3': 'Propilbenceno',
+            'C6H5-CH(CH3)2': 'Cumeno (Isopropilbenceno)',
+            'C6H5-CH=CH2': 'Estireno (Vinilbenceno)',
+            'o-C6H4(CH3)2': 'o-Xileno (1,2-Dimetilbenceno)',
+            'm-C6H4(CH3)2': 'm-Xileno (1,3-Dimetilbenceno)',
+            'p-C6H4(CH3)2': 'p-Xileno (1,4-Dimetilbenceno)',
+            '1,2,3-C6H3(CH3)3': '1,2,3-Trimetilbenceno',
+            '1,2,4-C6H3(CH3)3': '1,2,4-Trimetilbenceno',
+            '1,3,5-C6H3(CH3)3': '1,3,5-Trimetilbenceno (Mesitileno)',
+            'C10H8': 'Naftaleno',
+            'C14H10': 'Antraceno',
             'C6H5-NO2': 'Nitrobenceno',
             'C6H5-SO3H': 'Ácido bencenosulfónico',
+            'o-CH3-C6H4-NO2': 'o-Nitrotolueno',
+            'm-CH3-C6H4-NO2': 'm-Nitrotolueno',
+            'p-CH3-C6H4-NO2': 'p-Nitrotolueno',
+            'm-C6H4(NO2)2': 'm-Dinitrobenceno',
 
-            // Halogenuros de alquilo
+            // =====================================================================
+            // NIVEL 6: HALOGENUROS DE ALQUILO, VINILO Y ARILO
+            // =====================================================================
             'CH3-F': 'Fluorometano',
             'CH3-Cl': 'Clorometano',
             'CH3-Br': 'Bromometano',
             'CH3-I': 'Yodometano',
             'CH2Cl2': 'Diclorometano',
-            'CHCl3': 'Cloroformo',
+            'CHCl3': 'Cloroformo (Triclorometano)',
             'CCl4': 'Tetracloruro de carbono',
-            'CH3-CH2-Cl': 'Cloroetano',
-            'CH3-CH2-Br': 'Bromoetano',
-            'CH3-CH2-I': 'Yodoetano',
+            'CH3-CH2-Cl': 'Cloroetano (Cloruro de etilo)',
+            'CH3-CH2-Br': 'Bromoetano (Bromuro de etilo)',
+            'CH3-CH2-I': 'Yodoetano (Yoduro de etilo)',
+            'CH3-CHCl2': '1,1-Dicloroetano',
+            'Cl-CH2-CH2-Cl': '1,2-Dicloroetano',
+            'Br-CH2-CH2-Br': '1,2-Dibromoetano',
             'CH3-CH2-CH2-Cl': '1-Cloropropano',
             'CH3CH2-CH2-Cl': '1-Cloropropano',
             'CH3-CH2-CH2-Br': '1-Bromopropano',
             'CH3CH2-CH2-Br': '1-Bromopropano',
             'CH3-CH2-CH2-I': '1-Yodopropano',
-            '(CH3)2CH-Cl': '2-Cloropropano',
-            '(CH3)2CH-Br': '2-Bromopropano',
-            '(CH3)2CH-I': '2-Yodopropano',
+            '(CH3)2CH-Cl': '2-Cloropropano (Cloruro de isopropilo)',
+            'CH3-CH(Cl)-CH3': '2-Cloropropano (Cloruro de isopropilo)',
+            '(CH3)2CH-Br': '2-Bromopropano (Bromuro de isopropilo)',
+            'CH3-CH(Br)-CH3': '2-Bromopropano (Bromuro de isopropilo)',
+            '(CH3)2CH-I': '2-Yodopropano (Yoduro de isopropilo)',
+            'Cl-CH2-CH2-CH2-Cl': '1,3-Dicloropropano',
+            'Br-CH2-CH2-CH2-Br': '1,3-Dibromopropano',
             'CH3-CH2-CH2-CH2-Cl': '1-Clorobutano',
             'CH3-CH2-CH2-CH2-Br': '1-Bromobutano',
             'CH3-CH2-CH(Cl)-CH3': '2-Clorobutano',
             'CH3-CH2-CH(Br)-CH3': '2-Bromobutano',
-            '(CH3)2CH-CH2-Cl': '1-Cloro-2-metilpropano',
-            '(CH3)2CH-CH2-Br': '1-Bromo-2-metilpropano',
-            '(CH3)3C-Cl': '2-Cloro-2-metilpropano',
-            '(CH3)3C-Br': '2-Bromo-2-metilpropano',
-            '(CH3)3C-I': '2-Yodo-2-metilpropano',
+            '(R)-CH3-CH2-CH(Br)-CH3': '(R)-2-Bromobutano',
+            '(S)-CH3-CH2-CH(Br)-CH3': '(S)-2-Bromobutano',
+            '(CH3)2CH-CH2-Cl': '1-Cloro-2-metilpropano (Cloruro de isobutilo)',
+            '(CH3)2CH-CH2-Br': '1-Bromo-2-metilpropano (Bromuro de isobutilo)',
+            '(CH3)3C-Cl': '2-Cloro-2-metilpropano (Cloruro de terc-butilo)',
+            '(CH3)3C-Br': '2-Bromo-2-metilpropano (Bromuro de terc-butilo)',
+            '(CH3)3C-I': '2-Yodo-2-metilpropano (Yoduro de terc-butilo)',
             'CH3-CH2-CH2-CH(Cl)-CH3': '2-Cloropentano',
+            '(R)-CH3-CH2-CH2-CH(Cl)-CH3': '(R)-2-Cloropentano',
+            '(S)-CH3-CH2-CH2-CH(Cl)-CH3': '(S)-2-Cloropentano',
             'CH3-CH2-CH2-CH(Br)-CH3': '2-Bromopentano',
-            '(CH3)2C(Br)-CH2-CH3': '2-Bromo-2-metilbutano',
             '(CH3)2C(Cl)-CH2-CH3': '2-Cloro-2-metilbutano',
-            '(CH3)2CH-CH(I)-CH3': '2-Yodo-3-metilbutano',
+            '(CH3)2C(Br)-CH2-CH3': '2-Bromo-2-metilbutano',
             '(CH3)2CH-CH(Br)-CH3': '2-Bromo-3-metilbutano',
-            'C6H5-CH2-Cl': 'Cloruro de bencilo',
-            'C6H5-CH2-Br': 'Bromuro de bencilo',
-            'C6H5-CH(Br)-CH3': '1-Bromo-1-feniletano',
-            'C6H5-CH(Cl)-CH3': '1-Cloro-1-feniletano',
+            '(CH3)2CH-CH(I)-CH3': '2-Yodo-3-metilbutano',
+            '(R)-(CH3)2CH-CH(I)-CH3': '(R)-2-Yodo-3-metilbutano',
+            '(S)-(CH3)2CH-CH(I)-CH3': '(S)-2-Yodo-3-metilbutano',
+            '(CH3)3C-CH2-Br': '1-Bromo-2,2-dimetilpropano (Bromuro de neopentilo)',
+            'CH3-CH2-CH(CH3)-CH(Cl)-CH3': '2-Cloro-3-metilpentano',
+            'CH3-CH(Br)-CH(NO2)-CH3': '2-Bromo-3-nitrobutano',
+            'Br-CH2-CH2-CH(NO2)-CH3': '1-Bromo-3-nitrobutano',
+            'CH2=CH-Cl': 'Cloroeteno (Cloruro de vinilo)',
+            'cis-CHCl=CHCl': 'cis-1,2-Dicloroeteno',
+            'trans-CHCl=CHCl': 'trans-1,2-Dicloroeteno',
+            'CH2=CH-CH(Br)-CH3': '3-Bromo-1-buteno',
+            'Br-CH2-CH=CH-CH3': '1-Bromo-2-buteno',
+            'C5H9-Cl': 'Clorociclopentano',
             'C6H11-Cl': 'Clorociclohexano',
             'C6H11-Br': 'Bromociclohexano',
+            'C6H11-I': 'Yodociclohexano',
+            'C6H5-Cl': 'Clorobenceno',
+            'C6H5-Br': 'Bromobenceno',
+            'C6H5-I': 'Yodobenceno',
+            'C6H5-CH2-Cl': 'Cloruro de bencilo',
+            'C6H5-CH2-Br': 'Bromuro de bencilo',
+            'C6H5-CH(Cl)-CH3': '1-Cloro-1-feniletano',
+            'C6H5-CH(Br)-CH3': '1-Bromo-1-feniletano',
+            '(R)-C6H5-CH(Br)-CH3': '(R)-1-Bromo-1-feniletano',
+            '(S)-C6H5-CH(Br)-CH3': '(S)-1-Bromo-1-feniletano',
 
-            // Alcoholes, Dioles y Fenoles
-            'CH3-OH': 'Metanol',
-            'CH3OH': 'Metanol',
-            'CH3-CH2-OH': 'Etanol',
-            'CH3CH2OH': 'Etanol',
-            'CH3-CH2-CH2-OH': '1-Propanol',
-            'CH3CH2CH2OH': '1-Propanol',
-            'CH3-CH(OH)-CH3': '2-Propanol',
-            '(CH3)2CH-OH': '2-Propanol',
-            'CH3-CH2-CH2-CH2-OH': '1-Butanol',
-            'CH3-CH2-CH(OH)-CH3': '2-Butanol',
-            'CH3CH2-CH(OH)-CH3': '2-Butanol',
-            '(CH3)2CH-CH2-OH': '2-Metil-1-propanol',
-            '(CH3)3C-OH': '2-Metil-2-propanol',
+            // =====================================================================
+            // NIVEL 7: REACTIVOS DE GRIGNARD (ORGANOMETÁLICOS)
+            // =====================================================================
+            'CH3-Mg-I': 'Yoduro de metilmagnesio',
+            'CH3MgI': 'Yoduro de metilmagnesio',
+            'CH3-Mg-Br': 'Bromuro de metilmagnesio',
+            'CH3MgBr': 'Bromuro de metilmagnesio',
+            'CH3-Mg-Cl': 'Cloruro de metilmagnesio',
+            'CH3MgCl': 'Cloruro de metilmagnesio',
+            'CH3-CH2-Mg-Br': 'Bromuro de etilmagnesio',
+            'CH3CH2MgBr': 'Bromuro de etilmagnesio',
+            'CH3-CH2-Mg-Cl': 'Cloruro de etilmagnesio',
+            'CH3CH2MgCl': 'Cloruro de etilmagnesio',
+            'CH3-CH2-CH2-Mg-Br': 'Bromuro de propilmagnesio',
+            'C3H7MgBr': 'Bromuro de propilmagnesio',
+            'CH3-CH2-CH2-Mg-Cl': 'Cloruro de propilmagnesio',
+            '(CH3)2CH-Mg-Cl': 'Cloruro de isopropilmagnesio',
+            '(CH3)3C-Mg-Br': 'Bromuro de terc-butilmagnesio',
+            'C6H11-Mg-Br': 'Bromuro de ciclohexilmagnesio',
+            'C6H5-Mg-Cl': 'Cloruro de fenilmagnesio',
+            'C6H5-Mg-Br': 'Bromuro de fenilmagnesio',
+
+            // =====================================================================
+            // NIVEL 8: ALCOHOLES, GLICOLES, ALCÓXIDOS Y FENOLES
+            // =====================================================================
+            'CH3-OH': 'Metanol (Alcohol metílico)',
+            'CH3OH': 'Metanol (Alcohol metílico)',
+            'CH3-CH2-OH': 'Etanol (Alcohol etílico)',
+            'CH3CH2OH': 'Etanol (Alcohol etílico)',
+            'C2H5OH': 'Etanol (Alcohol etílico)',
+            'CF3-CH2-OH': '2,2,2-Trifluoroetanol',
+            'CH3-CH2-CH2-OH': '1-Propanol (Alcohol propílico)',
+            'CH3CH2CH2OH': '1-Propanol (Alcohol propílico)',
+            'CH3-CH(OH)-CH3': '2-Propanol (Alcohol isopropílico)',
+            '(CH3)2CH-OH': '2-Propanol (Alcohol isopropílico)',
+            'CH3-CH2-CH2-CH2-OH': '1-Butanol (Alcohol butílico)',
+            'CH3-CH2-CH(OH)-CH3': '2-Butanol (Alcohol sec-butílico)',
+            'CH3CH2-CH(OH)-CH3': '2-Butanol (Alcohol sec-butílico)',
+            '(R)-CH3-CH2-CH(OH)-CH3': '(R)-2-Butanol',
+            '(S)-CH3-CH2-CH(OH)-CH3': '(S)-2-Butanol',
+            '(CH3)2CH-CH2-OH': '2-Metil-1-propanol (Alcohol isobutílico)',
+            '(CH3)3C-OH': '2-Metil-2-propanol (terc-Butanol)',
             'CH3-CH2-CH2-CH2-CH2-OH': '1-Pentanol',
             'CH3-CH2-CH2-CH(OH)-CH3': '2-Pentanol',
+            '(R)-CH3-CH2-CH2-CH(OH)-CH3': '(R)-2-Pentanol',
+            '(S)-CH3-CH2-CH2-CH(OH)-CH3': '(S)-2-Pentanol',
             'CH3-CH2-CH(OH)-CH2-CH3': '3-Pentanol',
+            '(CH3)2CH-CH2-CH2-OH': '3-Metil-1-butanol',
+            'CH3-CH(CH3)-CH(CH3)-CH2-OH': '2,3-Dimetil-1-butanol',
             '(CH3)2C(OH)-CH2-CH3': '2-Metil-2-butanol',
+            'CH3-CH2-C(CH3)(OH)-CH3': '2-Metil-2-butanol',
             '(CH3)2CH-CH(OH)-CH3': '3-Metil-2-butanol',
-            'CH3-(CH2)5-CH2-OH': '1-Heptanol',
-            'C6H5-CH2-OH': 'Alcohol bencílico',
-            'C6H5-CH(OH)-CH3': '1-Feniletanol',
+            '(R)-(CH3)2CH-CH(OH)-CH3': '(R)-3-Metil-2-butanol',
+            '(S)-(CH3)2CH-CH(OH)-CH3': '(S)-3-Metil-2-butanol',
+            'CH3-CH2-CH(CH3)-CH(OH)-CH3': '3-Metil-2-pentanol',
+            'CH3-CH2-CH2-C(CH3)(OH)-CH2-CH3': '3-Metil-3-hexanol',
+            'CH3-CH(CH3)-CH2-CH(CH2CH3)-CH(OH)-CH3': '3-Etil-5-metil-2-hexanol',
+            'CH3-CH(CH3)-CH(CH2CH3)-CH(OH)-CH2-CH2-CH3': '3-Etil-2-metil-4-heptanol',
+            'CH3-CH(CH3)-CH(CH(CH3)2)-CH(OH)-CH2-CH(CH3)-CH3': '3-Isopropil-2,6-dimetil-4-heptanol',
+            'CH3-CH(OH)-CH(CH(CH3)2)-CH2-CH(CH2CH3)-CH(CH3)-CH3': '5-Etil-3-isopropil-6-metil-2-heptanol',
+            'CH2=CH-CH2-OH': 'Alcohol alílico (2-Propen-1-ol)',
+            'CH3-CH=CH-CH(CH2CH3)-CH2-OH': '2-Etil-3-penten-1-ol',
+            'CH3-CH=CH-CH(OH)-C≡CH': '4-Hexen-1-in-3-ol',
+            'CH3-CH=CH-CH2-C(OH)=CH2': '1,4-Hexadien-2-ol',
             'C5H9-OH': 'Ciclopentanol',
+            '1-ciclopentenol': '1-Ciclopentenol',
             'C5H8(CH3)-OH': '1-Metilciclopentanol',
             'C6H11-OH': 'Ciclohexanol',
             'C6H10(CH3)-OH': '1-Metilciclohexanol',
+            '3-metilciclohexanol': '3-Metilciclohexanol',
+            '2,3-dietilciclohexanol': '2,3-Dietilciclohexanol',
+            'C6H5-CH2-OH': 'Alcohol bencílico (Fenilmetanol)',
+            'C6H5-CH(OH)-CH3': '1-Feniletanol',
+            '(R)-C6H5-CH(OH)-CH3': '(R)-1-Feniletanol',
+            '(S)-C6H5-CH(OH)-CH3': '(S)-1-Feniletanol',
+            'C6H5-C(OH)(CH3)2': '2-Fenil-2-propanol',
             'HO-CH2-CH2-OH': '1,2-Etanodiol (Etilenglicol)',
-            'CH3-CH(OH)-CH2-OH': '1,2-Propanodiol',
+            'CH3-CH(OH)-CH2-OH': '1,2-Propanodiol (Propilenglicol)',
             'HO-CH2-CH(OH)-CH2-OH': '1,2,3-Propanotriol (Glicerol)',
-            'C6H5-OH': 'Fenol',
-            'C6H4(OH)2': 'Bencenodiol',
-
-            // Alcóxidos, Éteres y Epóxidos
+            'CH2OH-CHOH-CH2OH': '1,2,3-Propanotriol (Glicerol)',
+            'CH3-CH2-CH(OH)-CH(OH)-CH3': '2,3-Pentanodiol',
+            'CH3-CH2-CH2-CH(OH)-C(CH3)(OH)-CH3': '2-Metil-2,3-hexanodiol',
+            'HO-CH2-CH(CH2CH2CH3)-CH=CH-CH2-OH': '4-Propil-2-penten-1,5-diol',
+            'CH3-CH=CH-CH2-CH(OH)-CH2-OH': '4-Hexen-1,2-diol',
+            'CH3-CH2-CH2-CH(OH)-CH=C(CH3)-CH2-OH': '2-Metil-2-hepten-1,4-diol',
+            'CH3-CH(CH3)-CH(CH3)-CH(OH)-C(CH3)(OH)-CH2-OH': '2,4,5-Trimetil-1,2,3-hexanotriol',
             'CH3-O-Na': 'Metóxido de sodio',
             'CH3-O-K': 'Metóxido de potasio',
             'CH3-CH2-O-Na': 'Etóxido de sodio',
             'CH3-CH2-O-K': 'Etóxido de potasio',
             'CH3-CH2-CH2-O-Na': 'Propóxido de sodio',
             '(CH3)3C-O-K': 'terc-Butóxido de potasio',
+            'C6H5-OH': 'Fenol (Hidroxibenceno)',
             'C6H5-O-Na': 'Fenóxido de sodio',
-            'CH3-O-CH3': 'Dimetiléter',
-            'CH3-O-CH2-CH3': 'Etilmetiléter',
-            'CH3-CH2-O-CH2-CH3': 'Dietiléter',
-            'CH3-CH2-CH2-O-CH2-CH2-CH3': 'Dipropiléter',
-            'C6H5-O-CH3': 'Anisol (Metoxibenceno)',
-            'C2H4O': 'Oxirano (Óxido de etileno)',
+            'o-CH3-C6H4-OH': 'o-Cresol (2-Metilfenol)',
+            'm-CH3-C6H4-OH': 'm-Cresol (3-Metilfenol)',
+            'p-CH3-C6H4-OH': 'p-Cresol (4-Metilfenol)',
+            'o-Cl-C6H4-OH': 'o-Clorofenol',
+            'm-Cl-C6H4-OH': 'm-Clorofenol',
+            'p-Cl-C6H4-OH': 'p-Clorofenol',
+            'p-O2N-C6H4-OH': 'p-Nitrofenol',
+            'p-H2N-C6H4-OH': 'p-Aminofenol',
+            '2,4-(O2N)2-C6H3-OH': '2,4-Dinitrofenol',
+            '2,4,6-(O2N)3-C6H2-OH': '2,4,6-Trinitrofenol (Ácido pícrico)',
+            'o-C6H4(OH)2': 'Pirocatecol (1,2-Bencenodiol)',
+            'm-C6H4(OH)2': 'Resorcinol (1,3-Bencenodiol)',
+            'p-C6H4(OH)2': 'Hidroquinona (1,4-Bencenodiol)',
+            '1,2,3-C6H3(OH)3': 'Pirogalol (1,2,3-Bencenotriol)',
 
-            // Aldehídos y Cetonas
+            // =====================================================================
+            // NIVEL 9: ÉTERES Y EPÓXIDOS
+            // =====================================================================
+            'CH3-O-CH3': 'Dimetiléter (Metoximetano)',
+            'CH3OCH3': 'Dimetiléter (Metoximetano)',
+            'CH3-O-CH2-CH3': 'Etilmetiléter (Metoxietano)',
+            'CH3CH2-O-CH3': 'Etilmetiléter (Metoxietano)',
+            'CH3-CH2-O-CH2-CH3': 'Dietiléter (Etoxietano)',
+            'CH3CH2OCH2CH3': 'Dietiléter (Etoxietano)',
+            'CH3-CH2-O-CH2-CH2-CH3': '1-Etoxipropano (Etilpropiléter)',
+            'CH3-CH2-CH2-O-CH2-CH2-CH3': 'Dipropiléter',
+            'CH3-CH2-CH2-CH2-O-CH3': '1-Metoxibutano',
+            'CH3-CH2-CH(OCH3)-CH3': '2-Metoxibutano',
+            '(CH3)2CH-O-CH3': '2-Metoxipropano',
+            '(CH3)3C-O-CH3': '2-Metil-2-metoxipropano',
+            'CH3-CH2-CH2-CH2-O-CH2-CH2-CH2-CH3': 'Butoxibutano (Dibutiléter)',
+            'CH3-CH2-O-CH2-C≡C-CH3': '1-Etoxi-2-butino',
+            'C6H5-O-CH3': 'Anisol (Metoxibenceno)',
+            'C6H5-O-CH2-CH3': 'Etilfeniléter (Fenetol)',
+            'C6H5-CH2-O-C6H5': 'Bencilfeniléter',
+            'C6H5-O-C6H5': 'Difeniléter',
+            'C6H5-O-C5H9': 'Ciclopentilfeniléter',
+            'p-CH3O-C6H4-OH': 'p-Metoxifenol',
+            'o-CH3CH2O-C6H4-OH': 'o-Etoxifenol',
+            'p-C6H4(OCH3)2': '1,4-Dimetoxibenceno',
+            'C2H4O': 'Oxirano (Óxido de etileno)',
+            'THF': 'Tetrahidrofurano (Oxolano)',
+
+            // =====================================================================
+            // NIVEL 10: TIOLES, TIOÉTERES Y DISULFUROS
+            // =====================================================================
+            'CH3-SH': 'Metanotiol',
+            'CH3-CH2-SH': 'Etanotiol',
+            'CH3-CH2-CH2-SH': '1-Propanotiol',
+            'CH3-CH(SH)-CH3': '2-Propanotiol',
+            'CH3-CH2-CH2-CH2-SH': '1-Butanotiol',
+            'CH3-CH2-CH(SH)-CH3': '2-Butanotiol',
+            '(CH3)3C-SH': '2-Metil-2-propanotiol',
+            'CH3-CH2-C(CH3)(SH)-CH3': '2-Metil-2-butanotiol',
+            'C5H9-SH': 'Ciclopentanotiol',
+            'C6H11-SH': 'Ciclohexanotiol',
+            'C6H5-SH': 'Tiofenol (Bencenotiol)',
+            'CH3-S-CH3': 'Dimetiltioéter (Sulfuro de dimetilo)',
+            'CH3-S-CH2-CH3': 'Etilmetiltioéter (Metiltioetano)',
+            'CH3-CH2-S-CH2-CH3': 'Dietiltioéter (Etiltioetano)',
+            'CH3-CH2-S-CH2-CH2-CH3': 'Etilpropiltioéter',
+            'DMSO': 'Dimetilsulfóxido (DMSO)',
+
+            // =====================================================================
+            // NIVEL 11: AMINAS, SALES DE AMONIO Y SALES DE DIAZONIO
+            // =====================================================================
+            'CH3-NH2': 'Metilamina (Metanamina)',
+            'CH3-CH2-NH2': 'Etilamina (Etanamina)',
+            'CH3-CH2-CH2-NH2': 'Propilamina (1-Propanamina)',
+            '(CH3)2CH-NH2': 'Isopropilamina (2-Propanamina)',
+            'CH3-CH2-CH2-CH2-NH2': 'Butilamina (1-Butanamina)',
+            'C6H11-NH2': 'Ciclohexilamina',
+            '(CH3)2NH': 'Dimetilamina (N-Metilmetanamina)',
+            'CH3-NH-CH3': 'Dimetilamina (N-Metilmetanamina)',
+            'CH3-NH-CH2-CH3': 'Etilmetilamina (N-Metiletanamina)',
+            'CH3-CH2-NH-CH2-CH3': 'Dietilamina (N-Etiletanamina)',
+            '(CH3-CH2)2NH': 'Dietilamina (N-Etiletanamina)',
+            'C6H11-NH-CH3': 'N-Metilciclohexilamina',
+            'C6H11-NH-CH2-CH3': 'N-Etilciclohexilamina',
+            '(CH3)3N': 'Trimetilamina (N,N-Dimetilmetanamina)',
+            'CH3-N(CH3)-CH2-CH3': 'Etildimetilamina (N,N-Dimetiletanamina)',
+            '(CH3-CH2)3N': 'Trietilamina (N,N-Dietiletanamina)',
+            'C6H5-NH2': 'Anilina (Fenilamina)',
+            'm-CH3-C6H4-NH2': 'm-Metilanilina (m-Toluidina)',
+            'p-CH3-C6H4-NH2': 'p-Metilanilina (p-Toluidina)',
+            'p-Cl-C6H4-NH2': 'p-Cloroanilina',
+            'o-O2N-C6H4-NH2': 'o-Nitroanilina',
+            'm-O2N-C6H4-NH2': 'm-Nitroanilina',
+            'p-O2N-C6H4-NH2': 'p-Nitroanilina',
+            '(CH3-CH2)2N-NO': 'N-Nitrosodietilamina',
+            'CH3-CH2-NH3+Cl-': 'Cloruro de etilamonio',
+            '(CH3)4N+Cl-': 'Cloruro de tetrametilamonio',
+            'C6H5-N2+Cl-': 'Cloruro de bencenodiazonio',
+
+            // =====================================================================
+            // NIVEL 12: ALDEHÍDOS, HIDRATOS, ACETALES E IMINAS
+            // =====================================================================
             'H-CHO': 'Metanal (Formaldehído)',
             'HCHO': 'Metanal (Formaldehído)',
+            'CH2O': 'Metanal (Formaldehído)',
             'CH3-CHO': 'Etanal (Acetaldehído)',
             'CH3CHO': 'Etanal (Acetaldehído)',
+            'CCl3-CHO': 'Tricloroetanal (Cloral)',
+            'CH3-CH(OH)2': 'Hidrato de etanal (1,1-Etanodiol)',
+            'CCl3-CH(OH)2': 'Hidrato de cloral',
             'CH3-CH2-CHO': 'Propanal',
             'CH3-CH2-CH2-CHO': 'Butanal',
             '(CH3)2CH-CHO': '2-Metilpropanal',
+            'CH3-CH(CH3)-CH2-CHO': '3-Metilbutanal',
             'CH3-(CH2)5-CHO': 'Heptanal',
+            'CH2=CH-CHO': 'Propenal (Acroleína)',
+            'CH2=C(CH3)-CHO': '2-Metilpropenal',
+            'CH3-CH=CH-CHO': '2-Butenal (Crotonaldehído)',
+            'CH3-C(CH3)=CH-CHO': '3-Metil-2-butenal',
+            'CH3-CH2-CH=C(CH3)-CHO': '2-Metil-2-pentenal',
+            'CH3-CH2-C(CH3)=CH-CHO': '3-Metil-2-pentenal',
+            'CH3-CH=C(C6H5)-CH2-CHO': '3-Fenil-3-pentenal',
+            'OHC-CH2-CHO': 'Propanodial (Malonaldehído)',
+            'OHC-CH2-CH2-CH=CH-CHO': '2-Hexenodial',
+            'HO-CH2-CH(OH)-CHO': '2,3-Dihidroxipropanal (Gliceraldehído)',
+            'CH3-CH(OH)-CH2-CHO': '3-Hidroxibutanal (Aldol)',
+            'CH3-C(CH3)(OH)-CH2-CHO': '3-Hidroxi-3-metilbutanal',
+            'CH3-CH2-CH(OH)-CH(CH3)-CHO': '3-Hidroxi-2-metilpentanal',
+            'CH3-CH(OCH3)-CH2-CHO': '3-Metoxibutanal',
+            'CH3-CH2-CH(OH)-OCH3': '1-Metoxi-1-propanol (Hemiacetal)',
+            'CH3-CH2-CH(OCH3)2': '1,1-Dimetoxipropano (Acetal)',
             'C6H5-CHO': 'Benzaldehído',
+            'CH3-CH=NH': 'Etilidenimina (Imina primaria)',
+            'CH3-CH=N-CH2-CH3': 'N-Etiletilidenimina (Base de Schiff)',
+            'CH3-CH=N-NH2': 'Hidrazona del etanal',
+            'CH3-CH=N-OH': 'Oxima del etanal',
+            'CH3-CH=N-NH-C6H5': 'Fenilhidrazona del etanal',
+            'CH3-CH=N-NH-CO-NH2': 'Semicarbazona del etanal',
+
+            // =====================================================================
+            // NIVEL 13: CETONAS, QUINONAS, CETALES Y CIANHIDRINAS
+            // =====================================================================
             'CH3-CO-CH3': 'Propanona (Acetona)',
             'CH3COCH3': 'Propanona (Acetona)',
-            'CH3-CO-CH2-CH3': 'Butanona',
+            'CH3-CO-CH2-CH3': 'Butanona (Metiletilcetona)',
+            'CH3-CH2-CO-CH3': 'Butanona (Metiletilcetona)',
+            'CH3-CO-CH(CH3)-CH3': '3-Metilbutanona',
             'CH3-CO-CH2-CH2-CH3': '2-Pentanona',
             'CH3-CH2-CO-CH2-CH3': '3-Pentanona',
+            'CH3-CO-CH(CH3)-CH2-CH3': '3-Metil-2-pentanona',
+            'CH3-CO-CH2-CH(CH3)-CH3': '4-Metil-2-pentanona',
+            'HO-CH2-CO-CH2-OH': '1,3-Dihidroxipropanona (Dihidroxiacetona)',
+            'CH3-CH(OH)-CH2-CO-CH3': '4-Hidroxi-2-pentanona',
+            'CH3-C(CH3)(OH)-CH2-CO-CH3': '4-Hidroxi-4-metil-2-pentanona',
+            'CH3-CH2-C(CH3)(OH)-CH2-CO-CH3': '4-Hidroxi-4-metil-2-hexanona',
+            'C6H5-CH(OH)-CH2-CO-CH3': '4-Fenil-4-hidroxi-2-butanona',
+            'CH3-CH=CH-CO-CH3': '3-Penten-2-ona',
+            'CH3-C(CH3)=CH-CO-CH3': '4-Metil-3-penten-2-ona',
+            'CH3-CH2-C(CH3)=CH-CO-CH3': '4-Metil-3-hexen-2-ona',
+            'C6H5-CH=CH-CO-CH3': '4-Fenil-3-buten-2-ona (Benzalacetona)',
+            'CH3-CH=CH-CO-CH=CH2': '1,4-Hexadien-3-ona',
+            'CH3-CH2-CH=CH-CO-CH=CH2': '1,4-Heptadien-3-ona',
+            'CH3-CO-CH2-CHO': '3-Oxobutanal',
             'C5H8O': 'Ciclopentanona',
             'C6H10O': 'Ciclohexanona',
-            'C6H5-CO-CH3': 'Acetofenona',
-            'C6H5-CO-C6H5': 'Benzofenona',
+            '3-metilciclohexanona': '3-Metilciclohexanona',
+            '1,4-ciclohexanodiona': '1,4-Ciclohexanodiona',
+            '1,3,5-ciclohexanotriona': '1,3,5-Ciclohexanotriona',
+            'C6H4O2': '1,4-Benzoquinona (p-Benzoquinona)',
+            'C6H5-CO-CH3': 'Acetofenona (Fenilmetilcetona)',
+            'C6H5-CH2-CO-CH3': 'Fenilacetona',
+            'CH3-CH(C6H5)-CH2-CO-CH3': '4-Fenil-2-pentanona',
+            'C6H5-CO-C6H5': 'Benzofenona (Difenilcetona)',
+            'CH3-C(OH)(CN)-CH3': '2-Hidroxi-2-metilpropanonitrilo (Cianhidrina)',
+            'CH3-CH2-C(OH)(CN)-CH3': '2-Hidroxi-2-metilbutanonitrilo',
+            'CH3-CH2-C(OH)(OCH3)-CH3': '2-Metoxi-2-butanol (Hemicetal)',
+            'CH3-CH2-C(OH)(OCH2CH3)-CH3': '2-Etoxi-2-butanol (Hemicetal)',
+            'C6H5-C(OH)(OCH2CH3)-CH3': '1-Etoxi-1-feniletanol (Hemicetal)',
+            'CH3-CH2-C(OCH3)2-CH3': '2,2-Dimetoxibutano (Cetal)',
 
-            // Ácidos Carboxílicos y Derivados (Ésteres, Haluros, Anhídridos, Amidas)
-            'H-COOH': 'Ácido metanoico (Fórmico)',
-            'HCOOH': 'Ácido metanoico (Fórmico)',
-            'CH3-COOH': 'Ácido etanoico (Acético)',
-            'CH3COOH': 'Ácido etanoico (Acético)',
-            'CH3-CH2-COOH': 'Ácido propanoico',
-            'CH3-CH2-CH2-COOH': 'Ácido butanoico',
-            '(CH3)2CH-CH2-COOH': 'Ácido 3-metilbutanoico',
+            // =====================================================================
+            // NIVEL 14: ÁCIDOS CARBOXÍLICOS, HIDROXIÁCIDOS, CETOÁCIDOS Y SALES
+            // =====================================================================
+            'H-COOH': 'Ácido metanoico (Ácido fórmico)',
+            'HCOOH': 'Ácido metanoico (Ácido fórmico)',
+            'CH3-COOH': 'Ácido etanoico (Ácido acético)',
+            'CH3COOH': 'Ácido etanoico (Ácido acético)',
+            'CH3-CH2-COOH': 'Ácido propanoico (Ácido propiónico)',
+            'C2H5COOH': 'Ácido propanoico (Ácido propiónico)',
+            '(CH3)2CH-COOH': 'Ácido 2-metilpropanoico (Ácido isobutírico)',
+            '(CH3)3C-COOH': 'Ácido 2,2-dimetilpropanoico (Ácido piválico)',
+            'CH3-CH2-CH2-COOH': 'Ácido butanoico (Ácido butírico)',
+            'C3H7COOH': 'Ácido butanoico (Ácido butírico)',
+            '(CH3)2CH-CH2-COOH': 'Ácido 3-metilbutanoico (Ácido isovalérico)',
+            'CH3-CH2-CH2-CH2-COOH': 'Ácido pentanoico (Ácido valérico)',
+            'C4H9COOH': 'Ácido pentanoico (Ácido valérico)',
+            'CH3-(CH2)4-COOH': 'Ácido hexanoico (Ácido caproico)',
+            'C5H11COOH': 'Ácido hexanoico (Ácido caproico)',
+            'CH3-(CH2)5-COOH': 'Ácido heptanoico',
+            'CH3-(CH2)6-COOH': 'Ácido octanoico (Ácido caprílico)',
+            'C7H15COOH': 'Ácido octanoico (Ácido caprílico)',
+            'CH3-(CH2)8-COOH': 'Ácido decanoico (Ácido cáprico)',
+            'C9H19COOH': 'Ácido decanoico (Ácido cáprico)',
+            'C11H23COOH': 'Ácido dodecanoico (Ácido láurico)',
+            'C13H27COOH': 'Ácido tetradecanoico (Ácido mirístico)',
+            'C15H31COOH': 'Ácido hexadecanoico (Ácido palmítico)',
+            'C17H35COOH': 'Ácido octadecanoico (Ácido esteárico)',
+            'C17H33COOH': 'Ácido oleico',
+            'C17H31COOH': 'Ácido linoleico',
+            'C17H29COOH': 'Ácido linolénico',
+            'F-CH2-COOH': 'Ácido fluoroetanoico',
+            'Cl-CH2-COOH': 'Ácido cloroetanoico (Cloroacético)',
+            'Cl2CH-COOH': 'Ácido dicloroetanoico (Dicloroacético)',
+            'Cl3C-COOH': 'Ácido tricloroetanoico (Tricloroacético)',
+            'Br-CH2-COOH': 'Ácido bromoetanoico',
+            'I-CH2-COOH': 'Ácido yodoetanoico',
+            'O2N-CH2-COOH': 'Ácido nitroetanoico',
+            'H2N-CH2-COOH': 'Ácido aminoetanoico (Glicina)',
+            'CH3-CH=CH-CH(CH3)-COOH': 'Ácido 2-metil-3-pentenoico',
+            'CH3-CH2-CH=CH-CH(CH2CH3)-COOH': 'Ácido 2-etil-3-hexenoico',
+            'C6H5-CH=CH-COOH': 'Ácido 3-fenil-2-propenoico (Ácido cinámico)',
+            'HOOC-COOH': 'Ácido etanodioico (Ácido oxálico)',
+            'HOOC-CH2-COOH': 'Ácido propanodioico (Ácido malónico)',
+            'HOOC-CH2-CH2-COOH': 'Ácido butanodioico (Ácido succínico)',
+            'HOOC-(CH2)3-COOH': 'Ácido pentanodioico (Ácido glutárico)',
+            'HOOC-(CH2)4-COOH': 'Ácido hexanodioico (Ácido adípico)',
+            'cis-HOOC-CH=CH-COOH': 'Ácido cis-2-butenodioico (Ácido maleico)',
+            'trans-HOOC-CH=CH-COOH': 'Ácido trans-2-butenodioico (Ácido fumárico)',
+            'HOOC-CH2-CH=CH-COOH': 'Ácido 2-pentenodioico',
+            'HO-CH2-COOH': 'Ácido 2-hidroxietanoico (Ácido glicólico)',
+            'CH3-CH(OH)-COOH': 'Ácido 2-hidroxipropanoico (Ácido láctico)',
+            'HO-CH2-CH2-COOH': 'Ácido 3-hidroxipropanoico (Ácido β-láctico)',
+            'HO-CH2-CH(OH)-COOH': 'Ácido 2,3-dihidroxipropanoico (Ácido glicérico)',
+            'CH3-CH(OH)-CH2-COOH': 'Ácido 3-hidroxibutanoico (Ácido β-hidroxibutírico)',
+            'HOOC-CH(OH)-CH2-COOH': 'Ácido 2-hidroxibutanodioico (Ácido málico)',
+            'HOOC-CH(OH)-CH(OH)-COOH': 'Ácido 2,3-dihidroxibutanodioico (Ácido tartárico)',
+            'OHC-COOH': 'Ácido formilmetanoico (Ácido glioxílico)',
+            'CH3-CO-COOH': 'Ácido 2-oxopropanoico (Ácido pirúvico)',
+            'OHC-CH2-COOH': 'Ácido 3-oxopropanoico',
+            'CH3-CO-CH2-COOH': 'Ácido 3-oxobutanoico (Ácido acetoacético)',
+            'CH3-CO-CH2-CH2-COOH': 'Ácido 4-oxopentanoico (Ácido levulínico)',
+            'OHC-CH(CH3)-CH2-COOH': 'Ácido 3-formilbutanoico',
+            'HOOC-CO-CH2-COOH': 'Ácido 2-oxobutanodioico (Ácido oxaloacético)',
+            'HOOC-CO-CH2-CH2-COOH': 'Ácido 2-oxopentanodioico (Ácido α-cetoglutárico)',
             'C6H5-COOH': 'Ácido benzoico',
             'C6H11-COOH': 'Ácido ciclohexanocarboxílico',
-            'HOOC-COOH': 'Ácido oxálico',
-            'HOOC-CH2-COOH': 'Ácido malónico',
-            'HOOC-CH2-CH2-COOH': 'Ácido succínico',
-            'CH3-COO-CH3': 'Etanoato de metilo',
-            'CH3-COO-CH2-CH3': 'Etanoato de etilo',
-            'CH3-CH2-COO-CH2-CH3': 'Propanoato de etilo',
-            'C6H5-COO-CH2-CH3': 'Benzoato de etilo',
-            'CH3-CO-Cl': 'Cloruro de etanoílo',
+            'o-HO-C6H4-COOH': 'Ácido o-hidroxibenzoico (Ácido salicílico)',
+            'm-HO-C6H4-COOH': 'Ácido m-hidroxibenzoico',
+            'o-Cl-C6H4-COOH': 'Ácido o-clorobenzoico',
+            'm-Cl-C6H4-COOH': 'Ácido m-clorobenzoico',
+            'p-Cl-C6H4-COOH': 'Ácido p-clorobenzoico',
+            'o-O2N-C6H4-COOH': 'Ácido o-nitrobenzoico',
+            'm-H2N-C6H4-COOH': 'Ácido m-aminobenzoico',
+            'o-C6H4(COOH)2': 'Ácido o-ftálico (1,2-Bencenodicarboxílico)',
+            'p-C6H4(COOH)2': 'Ácido p-ftálico (1,4-Bencenodicarboxílico)',
+            'H-COOAg': 'Metanoato de plata (Formiato de plata)',
+            'H-COONa': 'Metanoato de sodio (Formiato de sodio)',
+            'CH3-COONa': 'Etanoato de sodio (Acetato de sodio)',
+            'CH3-COOK': 'Etanoato de potasio (Acetato de potasio)',
+            'CH3-CH2-COONa': 'Propanoato de sodio',
+            'CH3-CH2-CH(Cl)-COONa': '2-Clorobutanoato de sodio',
+            'CH2=CH-CH2-COOCs': '3-Butenoato de cesio',
+            '(CH3)2CH-CH2-CH2-COONH4': '4-Metilpentanoato de amonio',
+            'C6H5-COONa': 'Benzoato de sodio',
+            'C6H5-COOK': 'Benzoato de potasio',
+
+            // =====================================================================
+            // NIVEL 15: DERIVADOS DE ÁCIDOS (HALUROS, ANHÍDRIDOS, ÉSTERES, AMIDAS, NITRILOS)
+            // =====================================================================
+            'H-CO-Cl': 'Cloruro de metanoílo (Cloruro de formilo)',
+            'CH3-CO-Cl': 'Cloruro de etanoílo (Cloruro de acetilo)',
+            'CH3-CH2-CO-Cl': 'Cloruro de propanoílo',
+            'CH3-CH2-CH2-CO-Cl': 'Cloruro de butanoílo',
             'C6H5-CO-Cl': 'Cloruro de benzoílo',
-            '(CH3-CO)2O': 'Anhídrido acético',
-            'CH3-CO-NH2': 'Etanamida',
-            'CH3-CH2-CO-NH2': 'Propanamida',
-
-            // Aminas, Nitrilos y Tioles
-            'CH3-NH2': 'Metilamina',
-            'CH3-CH2-NH2': 'Etilamina',
-            '(CH3)2NH': 'Dimetilamina',
-            '(CH3-CH2)2NH': 'Dietilamina',
-            '(CH3-CH2)3N': 'Trietilamina',
-            'C6H5-NH2': 'Anilina',
-            'CH3-CN': 'Etanonitrilo',
+            'H-CO-O-CO-H': 'Anhídrido metanoico (Anhídrido fórmico)',
+            '(CH3-CO)2O': 'Anhídrido etanoico (Anhídrido acético)',
+            'CH3-CO-O-CO-CH3': 'Anhídrido etanoico (Anhídrido acético)',
+            'H-CO-O-CO-CH2-CH3': 'Anhídrido metanoico-propanoico',
+            'H-COO-CH3': 'Metanoato de metilo (Formiato de metilo)',
+            'HCOOCH3': 'Metanoato de metilo (Formiato de metilo)',
+            'H-COO-CH=CH2': 'Metanoato de etenilo (Formiato de vinilo)',
+            'CH3-COO-CH3': 'Etanoato de metilo (Acetato de metilo)',
+            'CH3COOCH3': 'Etanoato de metilo (Acetato de metilo)',
+            'CH3-COO-CH2-CH3': 'Etanoato de etilo (Acetato de etilo)',
+            'CH3COOCH2CH3': 'Etanoato de etilo (Acetato de etilo)',
+            'CH3-COO-CH2-CH2-CH(CH3)2': 'Etanoato de 3-metilbutilo (Acetato de isoamilo)',
+            'CH3-COO-(CH2)4-CH3': 'Etanoato de pentilo (Acetato de amilo)',
+            'CH3-COO-(CH2)7-CH3': 'Etanoato de octilo',
+            'CH3-CH2-COO-CH3': 'Propanoato de metilo',
+            'CH3-CH2-COO-CH2-CH3': 'Propanoato de etilo',
+            'CH3-CH2-COO-CH(CH3)2': 'Propanoato de 1-metiletilo (Propanoato de isopropilo)',
+            'CH3-CH2-COO-CH2-CH2-CH2-CH3': 'Propanoato de butilo',
+            'CH2=CH-COO-CH2-CH3': 'Propenoato de etilo (Acrilato de etilo)',
+            'CH3-CH2-CH2-COO-CH2-CH3': 'Butanoato de etilo (Butirato de etilo)',
+            '(CH3)2CH-COO-CH2-CH(CH3)2': '2-Metilpropanoato de 2-metilpropilo',
+            '(CH3)2CH-CH2-COO-CH2-CH3': '3-Metilbutanoato de etilo',
+            '(CH3)2CH-CH2-COO-CH(CH3)2': '3-Metilbutanoato de isopropilo',
+            'CH3-CO-CH2-COO-CH2-CH3': '3-Oxobutanoato de etilo (Acetoacetato de etilo)',
+            'C6H5-COO-CH3': 'Benzoato de metilo',
+            'C6H5-COO-CH2-CH3': 'Benzoato de etilo',
+            'o-HO-C6H4-COO-CH3': 'Salicilato de metilo',
+            'H-CO-NH2': 'Metanamida (Formamida)',
+            'HCONH2': 'Metanamida (Formamida)',
+            'CH3-CO-NH2': 'Etanamida (Acetamida)',
+            'CH3CONH2': 'Etanamida (Acetamida)',
+            'CH3-CH2-CO-NH2': 'Propanamida (Propionamida)',
+            'C2H5CONH2': 'Propanamida (Propionamida)',
+            'H-CO-NH-CH3': 'N-Metilmetanamida',
+            'CH3-CO-NH-CH3': 'N-Metiletanamida (N-Metilacetamida)',
+            'CH3-CO-NH-CH2-CH3': 'N-Etiletanamida (N-Etilacetamida)',
+            'CH3-CH2-CO-NH-CH3': 'N-Metilpropanamida',
+            'CH3-CH2-CO-NH-CH2-CH3': 'N-Etilpropanamida',
+            'CH3-CH2-CO-NH-CH(CH3)2': 'N-Isopropilpropanamida',
+            'H-CO-N(CH3)2': 'N,N-Dimetilmetanamida (DMF)',
+            'CH3-CO-N(CH3)-CH2-CH3': 'N-Etil-N-metiletanamida',
+            'CH3-CH2-CO-N(CH3)-CH2-CH3': 'N-Etil-N-metilpropanamida',
+            'C6H5-NH-CO-CH3': 'N-Feniletanamida (Acetanilida)',
+            'CH3-CO-NH-C6H5': 'N-Feniletanamida (Acetanilida)',
+            'C6H5-CO-NH2': 'Benzamida',
+            'C6H5-CO-NH-CH3': 'N-Metilbenzamida',
+            'H2CO3': 'Ácido carbónico',
+            'H2N-COOH': 'Ácido carbámico',
+            'NH2COOH': 'Ácido carbámico',
+            'H2N-COO-CH3': 'Carbamato de metilo (Uretano)',
+            'CH3-NH-COO-CH3': 'N-Metilcarbamato de metilo',
+            'H2N-CO-NH2': 'Urea (Carbodiamida)',
+            '(NH2)2CO': 'Urea (Carbodiamida)',
+            'H-CN': 'Ácido cianhídrico (Cianuro de hidrógeno)',
+            'HCN': 'Ácido cianhídrico (Cianuro de hidrógeno)',
+            'CH3-CN': 'Etanonitrilo (Acetonitrilo / Cianuro de metilo)',
+            'CH3-C≡N': 'Etanonitrilo (Acetonitrilo / Cianuro de metilo)',
+            'CH3-CH2-CN': 'Propanonitrilo (Propionitrilo / Cianuro de etilo)',
+            'CH3-CH2-C≡N': 'Propanonitrilo (Propionitrilo / Cianuro de etilo)',
+            '(CH3)2CH-CN': '2-Metilpropanonitrilo (Cianuro de isopropilo)',
             'CH3-CH2-CH2-CN': 'Butanonitrilo',
-            'CH3-SH': 'Metanotiol',
-            'CH3-CH2-SH': 'Etanotiol',
-            'C6H5-SH': 'Tiofenol',
+            'CH3-CH2-NC': 'Isocianuro de etilo',
 
-            // Reactivos de Grignard
-            'CH3-Mg-I': 'Yoduro de metilmagnesio',
-            'CH3MgI': 'Yoduro de metilmagnesio',
-            'CH3-Mg-Br': 'Bromuro de metilmagnesio',
-            'CH3-CH2-Mg-Br': 'Bromuro de etilmagnesio',
-            'CH3CH2MgBr': 'Bromuro de etilmagnesio',
-            'CH3-CH2-Mg-Cl': 'Cloruro de etilmagnesio',
-            'CH3-CH2-CH2-Mg-Br': 'Bromuro de propilmagnesio',
-            'C3H7MgBr': 'Bromuro de propilmagnesio',
-            '(CH3)2CH-Mg-Cl': 'Cloruro de isopropilmagnesio',
-            '(CH3)3C-Mg-Br': 'Bromuro de terc-butilmagnesio',
-            'C6H11-Mg-Br': 'Bromuro de ciclohexilmagnesio',
-
-            // Inorgánicos, Metales, Sales y Catalizadores
+            // =====================================================================
+            // REACTIVOS INORGÁNICOS, CATALIZADORES, OXIDANTES Y REDUCTORES
+            // =====================================================================
             'Mg0': 'Magnesio metálico',
             'Mg': 'Magnesio metálico',
             'Na0': 'Sodio metálico',
@@ -1122,7 +1588,19 @@
             'LiAlH4': 'Hidruro de litio y aluminio',
             'NaBH4': 'Borohidruro de sodio',
             'LiBH4': 'Borohidruro de litio',
-            'DIBAH': 'Hidruro de diisobutilaluminio',
+            'DIBAH': 'Hidruro de diisobutilaluminio (DIBAH)',
+            'KMnO4': 'Permanganato de potasio',
+            'Na2Cr2O7': 'Dicromato de sodio',
+            'K2Cr2O7': 'Dicromato de potasio',
+            'CrO3': 'Trióxido de cromo (Anhídrido crómico)',
+            'H2CrO4': 'Ácido crómico',
+            'PCC': 'Clorocromato de piridinio (PCC)',
+            'MCPBA': 'Ácido meta-cloroperoxibenzoico (AMCPB)',
+            'AMCPB': 'Ácido meta-cloroperoxibenzoico (AMCPB)',
+            'Ag(NH3)2+': 'Reactivo de Tollens',
+            'Cu2+': 'Reactivo de Benedict / Fehling',
+            'Cu2O': 'Óxido cuproso (precipitado rojo ladrillo)',
+            'Ag0': 'Espejo de plata (Ag⁰)',
             'H+': 'Catalizador ácido (H⁺)',
             'H2': 'Hidrógeno molecular',
             'Cl2': 'Cloro molecular',
@@ -1137,32 +1615,53 @@
             'KOH': 'Hidróxido de potasio',
             'Na-OH': 'Hidróxido de sodio',
             'NaOH': 'Hidróxido de sodio',
-            'HCl': 'Cloruro de hidrógeno',
-            'HBr': 'Bromuro de hidrógeno',
-            'HI': 'Yoduro de hidrógeno',
+            'NaNH2': 'Amiduro de sodio',
+            'NH3': 'Amoniaco',
+            'H-NH2': 'Amoniaco',
+            'NH2-NH2': 'Hidracina',
+            'H2N-NH2': 'Hidracina',
+            'NH2-OH': 'Hidroxilamina',
+            'H2N-OH': 'Hidroxilamina',
+            'C6H5-NH-NH2': 'Fenilhidracina',
+            'H2N-NH-CO-NH2': 'Semicarbazida',
+            'HCl': 'Cloruro de hidrógeno (Ácido clorhídrico)',
+            'H-Cl': 'Cloruro de hidrógeno (Ácido clorhídrico)',
+            'HBr': 'Bromuro de hidrógeno (Ácido bromhídrico)',
+            'H-Br': 'Bromuro de hidrógeno (Ácido bromhídrico)',
+            'HI': 'Yoduro de hidrógeno (Ácido yodhídrico)',
+            'H-I': 'Yoduro de hidrógeno (Ácido yodhídrico)',
             'HNO2': 'Ácido nitroso',
             'HNO3': 'Ácido nítrico',
             'H2SO4': 'Ácido sulfúrico',
+            'H3PO3': 'Ácido fosforoso',
+            'H3PO4': 'Ácido fosfórico',
             'SOCl2': 'Cloruro de tionilo',
-            'PBr3': 'Tribromuro de fósforo',
             'PCl3': 'Tricloruro de fósforo',
+            'PBr3': 'Tribromuro de fósforo',
+            'AlCl3': 'Tricloruro de aluminio',
+            'FeCl3': 'Tricloruro de hierro',
+            'FeBr3': 'Tribromuro de hierro',
+            'BF3': 'Trifluoruro de boro',
             'KCl': 'Cloruro de potasio',
             'KBr': 'Bromuro de potasio',
             'KI': 'Yoduro de potasio',
             'NaCl': 'Cloruro de sodio',
             'NaBr': 'Bromuro de sodio',
             'NaI': 'Yoduro de sodio',
+            'NH4Cl': 'Cloruro de amonio',
             'Na2CO3': 'Carbonato de sodio',
             'CO2': 'Dióxido de carbono',
+            'CO': 'Monóxido de carbono',
             'SO2': 'Dióxido de azufre',
+            'SO3': 'Trióxido de azufre',
             'N2': 'Nitrógeno molecular',
-            'NH3': 'Amoniaco',
             'HO-Mg-Br': 'Bromuro básico de magnesio',
             'Mg(OH)Br': 'Bromuro básico de magnesio',
             'HO-Mg-I': 'Yoduro básico de magnesio',
             'Mg(OH)I': 'Yoduro básico de magnesio',
             'HO-Mg-Cl': 'Cloruro básico de magnesio',
             'Mg(OH)Cl': 'Cloruro básico de magnesio',
+            'MgCl2': 'Cloruro de magnesio',
             'ZnBrCl': 'Cloruro-bromuro de zinc',
             'ZnCl2': 'Cloruro de zinc'
         };
@@ -3912,16 +4411,203 @@
             renderCurrentNomenclatureCard();
         }
 
+       function buildAutoNomenclatureScene(semi) {
+            const s = String(semi || '').trim();
+            const atoms = [];
+            const bonds = [];
+
+            // 1. Isómeros geométricos CIS- / TRANS- / E- / Z- (ej: CIS-CH3-CH=CH-CH3, E-CH3CH2-CH=C(Cl)-CH2CH2CH3)
+            const mGeo = s.match(/^(CIS|TRANS|E|Z)-(.+?)-C(?:\(([^)]+)\)|H)=C(?:\(([^)]+)\)|H)-(.+)$/i);
+            if (mGeo) {
+                const mode = mGeo[1].toUpperCase();
+                const leftMain = mGeo[2].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂');
+                const leftSub = (mGeo[3] || 'H').replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂');
+                const rightSub = (mGeo[4] || 'H').replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂');
+                const rightMain = mGeo[5].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂');
+
+                // Para CIS y Z: grupos principales arriba; para TRANS y E: izquierdo arriba y derecho abajo
+                const sameSide = (mode === 'CIS' || mode === 'Z');
+                atoms.push(
+                    { id: 'CL', el: 'C', x: 400, y: 195 },
+                    { id: 'CR', el: 'C', x: 520, y: 195 },
+                    { id: 'LT', el: leftMain, x: 300, y: 105 },
+                    { id: 'LB', el: leftSub, x: 300, y: 285 },
+                    { id: 'RT', el: sameSide ? rightMain : rightSub, x: 620, y: 105 },
+                    { id: 'RB', el: sameSide ? rightSub : rightMain, x: 620, y: 285 }
+                );
+                bonds.push(
+                    { from: 'CL', to: 'CR', order: 2 },
+                    { from: 'CL', to: 'LT', order: 1 },
+                    { from: 'CL', to: 'LB', order: 1 },
+                    { from: 'CR', to: 'RT', order: 1 },
+                    { from: 'CR', to: 'RB', order: 1 }
+                );
+                return { atoms, bonds };
+            }
+
+            // 2. Anillos Aromáticos (AROM-BENCENO, AROM-QUINONA, AROM-1-CH3, AROM-1,2-CH3, etc.)
+            if (s.startsWith('AROM-')) {
+                const cx = 460, cy = 195, R = 68;
+                const verts = [];
+                for (let k = 0; k < 6; k++) {
+                    const ang = -Math.PI / 2 + (Math.PI / 3) * k; // Vértice 1 arriba, 2 arriba-der, 3 abajo-der, 4 abajo, 5 abajo-izq, 6 arriba-izq
+                    const vx = Math.round(cx + Math.cos(ang) * R);
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    atoms.push({ id: `V${k + 1}`, el: 'C', x: vx, y: vy });
+                }
+
+                if (s === 'AROM-QUINONA') {
+                    bonds.push(
+                        { from: 'V1', to: 'V2', order: 1 }, { from: 'V2', to: 'V3', order: 2 },
+                        { from: 'V3', to: 'V4', order: 1 }, { from: 'V4', to: 'V5', order: 1 },
+                        { from: 'V5', to: 'V6', order: 2 }, { from: 'V6', to: 'V1', order: 1 }
+                    );
+                    atoms.push({ id: 'O1', el: 'O', x: cx, y: cy - R - 75 }, { id: 'O4', el: 'O', x: cx, y: cy + R + 75 });
+                    bonds.push({ from: 'V1', to: 'O1', order: 2 }, { from: 'V4', to: 'O4', order: 2 });
+                    return { atoms, bonds };
+                }
+
+                // Enlaces aromáticos alternados
+                for (let k = 0; k < 6; k++) {
+                    const next = (k + 1) % 6;
+                    bonds.push({ from: `V${k + 1}`, to: `V${next + 1}`, order: (k % 2 === 0) ? 2 : 1 });
+                }
+
+                // Parsear sustituyentes tipo -1-CH3, -1,2-CH3, -2,4,6-Cl
+                const rest = s.replace(/^AROM-(?:BENCENO)?/, '');
+                const subRegex = /-([0-9,]+)-([A-Za-z0-9\(\)]+)/g;
+                let m;
+                let sIdx = 0;
+                while ((m = subRegex.exec(rest)) !== null) {
+                    const positions = m[1].split(',').map(Number);
+                    const grp = m[2].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/NO2/g, 'NO₂').replace(/C6H5/g, 'C₆H₅');
+                    positions.forEach(pos => {
+                        const v = verts[(pos - 1) % 6];
+                        if (!v) return;
+                        const sx = Math.round(cx + Math.cos(v.ang) * (R + 78));
+                        const sy = Math.round(cy + Math.sin(v.ang) * (R + 78));
+                        const sid = `S_${sIdx++}`;
+                        atoms.push({ id: sid, el: grp, x: sx, y: sy });
+                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                    });
+                }
+                return { atoms, bonds };
+            }
+
+            // 3. Ciclos saturados e insaturados (CICLO-6, CICLOENO-5-3-CH3, CIS-CICLO-6-1,3-CH3, etc.)
+            const mCyc = s.match(/^(?:(CIS|TRANS)-)?(CICLO|CICLOENO|CICLODIENO|CICLOTRIENO|CICLOINO|CICLOENINO)-(\d+)(.*)$/);
+            if (mCyc) {
+                const stereoMode = mCyc[1] || '';
+                const cycType = mCyc[2];
+                const sides = Math.min(8, Math.max(3, parseInt(mCyc[3], 10)));
+                const rest = mCyc[4] || '';
+                const cx = 460, cy = 195, R = sides <= 4 ? 62 : 74;
+                const verts = [];
+
+                for (let k = 0; k < sides; k++) {
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / sides) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * R);
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    atoms.push({ id: `C${k + 1}`, el: 'C', x: vx, y: vy });
+                }
+
+                for (let k = 0; k < sides; k++) {
+                    const next = (k + 1) % sides;
+                    let ord = 1;
+                    if (cycType === 'CICLOENO' && k === 0) ord = 2;
+                    if (cycType === 'CICLODIENO' && (k === 0 || k === 2)) ord = 2;
+                    if (cycType === 'CICLOTRIENO' && (k === 0 || k === 2 || k === 4)) ord = 2;
+                    if (cycType === 'CICLOINO' && k === 0) ord = 3;
+                    if (cycType === 'CICLOENINO') {
+                        if (k === 0) ord = 2;
+                        if (k === 2) ord = 3;
+                    }
+                    bonds.push({ from: `C${k + 1}`, to: `C${next + 1}`, order: ord });
+                }
+
+                const subRegex = /-([0-9,]+)-([A-Za-z0-9\(\)]+)/g;
+                let m;
+                let sIdx = 0;
+                let subCount = 0;
+                while ((m = subRegex.exec(rest)) !== null) {
+                    const positions = m[1].split(',').map(Number);
+                    const grp = m[2].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/C3H7/g, 'C₃H₇').replace(/C4H9/g, 'C₄H₉');
+                    positions.forEach(pos => {
+                        const v = verts[(pos - 1) % sides];
+                        if (!v) return;
+                        const spread = (subCount % 2 === 1 && positions.length > 1) ? 0.25 : 0;
+                        const sx = Math.round(cx + Math.cos(v.ang + spread) * (R + 78));
+                        const sy = Math.round(cy + Math.sin(v.ang + spread) * (R + 78));
+                        const sid = `CS_${sIdx++}`;
+                        let st = null;
+                        if (stereoMode === 'CIS') st = 'wedge';
+                        if (stereoMode === 'TRANS') st = (subCount % 2 === 0) ? 'wedge' : 'dash';
+                        atoms.push({ id: sid, el: grp, x: sx, y: sy });
+                        bonds.push({ from: `C${pos}`, to: sid, order: 1, stereo: st });
+                        subCount++;
+                    });
+                }
+                return { atoms, bonds };
+            }
+
+            // 4. Fórmulas quirales (R)- / (S)- y cadenas lineales/ramificadas
+            const built = expandBranchedSemidevelopedNodes({ formula: s, compoundName: '' }, 460, 185, '#38bdf8', 'NomCard');
+            if (built.atoms.length > 1) {
+                return { atoms: built.atoms, bonds: built.bonds };
+            }
+
+            // 5. Desglose automático de cadenas lineales/ramificadas por segmentos separados por '—' o '=' o '≡'
+            const tokens = s.split(/(—|=|≡)/).filter(Boolean);
+            if (tokens.length >= 3) {
+                const chainNodes = [];
+                const chainBonds = [];
+                let pendingOrder = 1;
+                tokens.forEach(tok => {
+                    if (tok === '—') pendingOrder = 1;
+                    else if (tok === '=') pendingOrder = 2;
+                    else if (tok === '≡') pendingOrder = 3;
+                    else {
+                        chainNodes.push({ text: tok, orderFromPrev: pendingOrder });
+                        pendingOrder = 1;
+                    }
+                });
+
+                const stepX = Math.min(110, Math.max(76, Math.floor(780 / Math.max(1, chainNodes.length - 1))));
+                const startX = Math.round(460 - ((chainNodes.length - 1) * stepX) / 2);
+
+                chainNodes.forEach((nd, idx) => {
+                    const nx = startX + idx * stepX;
+                    const nid = `CN_${idx}`;
+                    // Detectar sustituyente entre paréntesis en el segmento, ej: CH(CH3) o C(CH2CH3)
+                    const mBranch = nd.text.match(/^(C|CH)\(([^()]+)\)$/);
+                    if (mBranch) {
+                        atoms.push({ id: nid, el: mBranch[1], x: nx, y: 195 });
+                        const bid = `BR_${idx}`;
+                        const up = idx % 2 === 0;
+                        atoms.push({ id: bid, el: mBranch[2], x: nx, y: up ? 100 : 290 });
+                        bonds.push({ from: nid, to: bid, order: 1 });
+                    } else {
+                        atoms.push({ id: nid, el: nd.text, x: nx, y: 195 });
+                    }
+                    if (idx > 0) {
+                        chainBonds.push({ from: `CN_${idx - 1}`, to: nid, order: nd.orderFromPrev });
+                    }
+                });
+                bonds.push(...chainBonds);
+                return { atoms, bonds };
+            }
+
+            return { atoms: built.atoms, bonds: built.bonds };
+        }
+
         function renderNomenclatureSceneToSvg(item) {
             const stage = document.getElementById('nomSvgStage');
             const svgEl = document.getElementById('nomSvgCanvas');
             if (!stage || !svgEl) return;
 
-            let sc = item.scene;
-            if (!sc && item.semiFormula) {
-                const built = expandBranchedSemidevelopedNodes({ formula: item.semiFormula, compoundName: '' }, 460, 185, '#38bdf8', 'NomCard');
-                sc = { atoms: built.atoms, bonds: built.bonds };
-            }
+            let sc = item.scene || buildAutoNomenclatureScene(item.semiFormula);
             if (!sc) sc = { atoms: [], bonds: [] };
 
             let html = '';
