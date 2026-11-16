@@ -1,0 +1,1302 @@
+{
+  "category": "obtencion",
+  "title": "3) Reducción de Aldehídos, Cetonas y Ácidos Carboxílicos",
+  "natureBadge": "Adición Nucleofílica de Hidruro (H⁻) • Carbonilo / Carboxilo ──(Reductor / H₂O)──► Alcohol",
+  "deltaH": "ΔH° < 0 (Exotérmica; ruptura del enlace π C=O y formación de enlaces σ C–H y O–H)",
+  "description": "Obtención de alcoholes mediante la reducción de compuestos carbonílicos con agentes donadores de hidruro (DIBAH, LiBH₄, NaBH₄, LiAlH₄) seguida de hidrólisis ácida o acuosa:\n1) Reducción de aldehídos: la adición de un ion hidruro (H⁻) al carbono carbonílico y posterior protonación del oxígeno genera alcoholes primarios.\n2) Reducción de cetonas: la adición de hidruro al grupo carbonilo interno produce alcoholes secundarios.\n3) Reducción de ácidos carboxílicos: requiere reductores potentes (como LiBH₄ o LiAlH₄) en dos equivalentes de hidruro, transformando el grupo carboxilo (–COOH) en un grupo hidroximetilo (–CH₂OH) para formar alcoholes primarios.",
+  "meta": {
+    "grupoFuncional": "Alcoholes Primarios (a partir de Aldehídos y Ácidos Carboxílicos) y Alcoholes Secundarios (a partir de Cetonas)",
+    "reaccionMecanismo": "Adición Nucleofílica de Hidruro (AN) sobre el grupo C=O seguida de Protonación (Hidrólisis)",
+    "naturaleza": "Por Etapas (2 fases): 1° Ataque nucleofílico del hidruro (H⁻) al carbono carbonílico → 2° Protonación del ion alcóxido intermediario con H₂O / H₃O⁺.",
+    "rupturaIntermediarios": "Ruptura heterolítica del enlace π C=O hacia el oxígeno electronegativo, generando un intermediario alcóxido metálico (R–CH₂–O⁻ o R₂CH–O⁻). En ácidos carboxílicos pasa por un intermediario aldehídico transitorio.",
+    "detalleMecanismo": "El agente reductor transfiere un ion hidruro (H⁻) al carbono electrofílico δ⁺ del doble enlace C=O mientras el par electrónico π sube al oxígeno. En la segunda etapa, la adición de agua protona el oxígeno formando el grupo hidroxilo (–OH).",
+    "reactivosCondiciones": "• Aldehídos y Cetonas: DIBAH (hidruro de diisobutilaluminio), LiBH₄, NaBH₄ o LiAlH₄ / H₂O\n• Ácidos Carboxílicos: LiBH₄ o LiAlH₄ en éter/THF anhidro, seguido de H₂O / H₃O⁺",
+    "rolReactivos": "• Compuesto carbonílico / carboxílico: Sustrato electrófilo en el carbono C=O (δ⁺).\n• DIBAH / LiBH₄ / NaBH₄ / LiAlH₄: Agentes reductores nucleofílicos donadores de hidruro (H⁻).\n• Agua (H₂O / H₃O⁺): Fuente de protones que neutraliza el alcóxido y libera el alcohol.",
+    "reglasObs": "• Los aldehídos y los ácidos carboxílicos siempre originan alcoholes primarios.\n• Las cetonas siempre originan alcoholes secundarios.\n• DIBAH es un reductor moderado; LiAlH₄ y LiBH₄ son reductores fuertes capaces de reducir ácidos carboxílicos."
+  },
+  "substrates": [
+    {
+      "id": "red_etanal_etanol",
+      "name": "Aldehído → Alcohol 1°: Etanal (CH₃CHO) + DIBAH ──(H₂O)──► Etanol (CH₃CH₂OH)",
+      "catalyst": "1) DIBAH (reductor moderado) → 2) H₂O"
+    },
+    {
+      "id": "red_propanal_1propanol",
+      "name": "Aldehído → Alcohol 1°: Propanal (CH₃CH₂CHO) + NaBH₄ ──(H₂O)──► 1-Propanol",
+      "catalyst": "1) NaBH₄ → 2) H₂O"
+    },
+    {
+      "id": "red_benzaldehido_bencilico",
+      "name": "Aldehído → Alcohol 1°: Benzaldehído (C₆H₅CHO) + LiAlH₄ ──(H₂O)──► Alcohol bencílico",
+      "catalyst": "1) LiAlH₄ / Éter → 2) H₂O"
+    },
+    {
+      "id": "red_propanona_2propanol",
+      "name": "Cetona → Alcohol 2°: Propanona (CH₃COCH₃) + LiBH₄ ──(H₂O)──► 2-Propanol",
+      "catalyst": "1) LiBH₄ → 2) H₂O"
+    },
+    {
+      "id": "red_butanona_2butanol",
+      "name": "Cetona → Alcohol 2°: Butanona (CH₃COCH₂CH₃) + NaBH₄ ──(H₂O)──► 2-Butanol",
+      "catalyst": "1) NaBH₄ → 2) H₂O"
+    },
+    {
+      "id": "red_ciclohexanona_ciclohexanol",
+      "name": "Cetona → Alcohol 2°: Ciclohexanona (C₆H₁₀O) + LiAlH₄ ──(H₂O)──► Ciclohexanol",
+      "catalyst": "1) LiAlH₄ / THF → 2) H₂O"
+    },
+    {
+      "id": "red_acidoetanoico_etanol",
+      "name": "Ácido Carboxílico → Alcohol 1°: Ácido etanoico (CH₃COOH) + LiBH₄ ──(H₂O)──► Etanol",
+      "catalyst": "1) LiBH₄ (2 eq) → 2) H₂O"
+    },
+    {
+      "id": "red_acidopropanoico_1propanol",
+      "name": "Ácido Carboxílico → Alcohol 1°: Ácido propanoico (CH₃CH₂COOH) + LiAlH₄ ──(H₂O)──► 1-Propanol",
+      "catalyst": "1) LiAlH₄ (2 eq) / THF → 2) H₂O"
+    },
+    {
+      "id": "red_acidobenzoico_bencilico",
+      "name": "Ácido Carboxílico → Alcohol 1°: Ácido benzoico (C₆H₅COOH) + LiAlH₄ ──(H₂O)──► Alcohol bencílico",
+      "catalyst": "1) LiAlH₄ (2 eq) / THF → 2) H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) DIBAH (reductor moderado) → 2) H₂O",
+    "1) NaBH₄ → 2) H₂O",
+    "1) LiAlH₄ / Éter → 2) H₂O",
+    "1) LiBH₄ → 2) H₂O",
+    "1) LiAlH₄ / THF → 2) H₂O",
+    "1) LiBH₄ (2 eq) → 2) H₂O",
+    "1) LiAlH₄ (2 eq) / THF → 2) H₂O"
+  ],
+  "stepsBySubstrate": {
+    "red_etanal_etanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Etanal (Acetaldehído) + DIBAH",
+        "semiStep": "CH₃—CHO  +  DIBAH",
+        "semiGlobal": "CH₃—CHO + DIBAH ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "El etanal presenta el grupo carbonilo polarizado (Cδ⁺=Oδ⁻) frente al hidruro de diisobutilaluminio (DIBAH), un reductor moderado donador de hidruro (H⁻).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro (H⁻) de DIBAH al carbono carbonílico." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95 },
+            { "id": "H1", "el": "H", "x": 475, "y": 215 },
+            { "id": "Red1", "el": "DIBAH", "x": 685, "y": 215, "label": "Reductor moderado" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 575, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "CH₃—CH(O⁻)—H  (Alcóxido intermediario)",
+        "semiGlobal": "CH₃—CHO + DIBAH ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "El ion hidruro (H⁻) cedido por DIBAH ataca al carbono carbonílico δ⁺ mientras el enlace π C=O se rompe en rojo punteado desplazando el par electrónico hacia el oxígeno.",
+        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace π C=O.", "forming": "Adición nucleofílica del ion hidruro (H⁻) al carbono.", "movement": "El hidruro entra por abajo y el par π sube al oxígeno." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 205 },
+            { "id": "C1", "el": "C", "x": 335, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 335, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 475, "y": 205 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "DIBAH", "x": 685, "y": 205 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 625, "y1": 240, "cx": 500, "cy": 330, "x2": 365, "y2": 315, "type": "full", "label": "Cede H⁻" },
+            { "x1": 335, "y1": 285, "cx": 310, "cy": 250, "x2": 328, "y2": 225, "type": "full", "label": "Ataque H⁻ → C" },
+            { "x1": 348, "y1": 150, "cx": 368, "cy": 125, "x2": 352, "y2": 108, "type": "full", "label": "Par π al O" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (CH₃CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "CH₃—CHO + DIBAH ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "Se consolida el nuevo enlace C—H formando el ion etóxido (CH₃CH₂O⁻), mientras entra la molécula de agua angular (H—O—H) para protonar el oxígeno.",
+        "legend": { "breaking": "Enlace π C=O escindido.", "forming": "En VERDE sólido: nuevo enlace C—H formado.", "movement": "Aproximación del agua para la etapa de hidrólisis." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido" },
+            { "id": "H1", "el": "H", "x": 475, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 545, "y": 95, "enterFromX": 680, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 645, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 780, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 745, "y": 95, "enterFromX": 880, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Ruptura en Rojo de H—O y Formación de O—H)",
+        "semiStep": "CH₃—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CHO + DIBAH ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "El oxígeno negativo captura un protón H⁺ del agua rompiéndose en rojo punteado el enlace H—O y trazándose en verde punteado el nuevo enlace O—H del grupo hidroxilo.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O del agua.", "forming": "En VERDE punteado: nuevo enlace O—H.", "movement": "Transferencia de protón hacia el oxígeno alcóxido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 475, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 465, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 645, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 745, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 365, "y1": 85, "cx": 400, "cy": 60, "x2": 445, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: Etanol (Alcohol Primario)",
+        "semiStep": "CH₃—CH₂—OH",
+        "semiGlobal": "CH₃—CHO + DIBAH ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el etanol (alcohol primario), con sus dos hidrógenos en C1 y su grupo hidroxilo (–OH) arriba.",
+        "legend": { "breaking": "Reducción completada.", "forming": "En VERDE sólido: enlaces C—H y O—H del etanol.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "Etanol (Alcohol 1°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_propanal_1propanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Propanal + NaBH₄",
+        "semiStep": "CH₃—CH₂—CHO  +  NaBH₄",
+        "semiGlobal": "CH₃—CH₂—CHO + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "El propanal presenta su grupo carbonilo terminal frente al borohidruro de sodio (NaBH₄).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro al carbonilo." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95 },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Red1", "el": "NaBH₄", "x": 695, "y": 215, "label": "Donador de hidruro" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 585, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "CH₃—CH₂—CH(O⁻)—H",
+        "semiGlobal": "CH₃—CH₂—CHO + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "El hidruro H⁻ ataca al carbono carbonílico δ⁺ mientras el enlace π C=O se rompe en rojo punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O.", "forming": "Adición nucleofílica de H⁻.", "movement": "Ataque de hidruro al carbono carbonílico." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 205 },
+            { "id": "C1", "el": "C", "x": 345, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 345, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 485, "y": 205 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "NaBH₄", "x": 695, "y": 205 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 635, "y1": 240, "cx": 510, "cy": 330, "x2": 375, "y2": 315, "type": "full", "label": "Cede H⁻" },
+            { "x1": 345, "y1": 285, "cx": 320, "cy": 250, "x2": 338, "y2": 225, "type": "full", "label": "Ataque H⁻ → C" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (CH₃CH₂CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "CH₃—CH₂—CHO + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "Se consolida el enlace C—H formando el ion propóxido y entra el agua para protonarlo.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 555, "y": 95, "enterFromX": 690, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 655, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 790, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95, "enterFromX": 890, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "CH₃—CH₂—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CH₂—CHO + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación del alcóxido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 655, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 1-Propanol (Alcohol Primario)",
+        "semiStep": "CH₃—CH₂—CH₂—OH",
+        "semiGlobal": "CH₃—CH₂—CHO + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el 1-propanol (alcohol primario).",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: 1-propanol.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "1-Propanol (Alcohol 1°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_benzaldehido_bencilico": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Benzaldehído + LiAlH₄",
+        "semiStep": "C₆H₅—CHO  +  LiAlH₄",
+        "semiGlobal": "C₆H₅—CHO + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "El benzaldehído presenta el anillo fenilo hexagonal unido al grupo carbonilo frente al hidruro de litio y aluminio (LiAlH₄).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro al carbonilo aromático." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215, "label": "Fenilo" },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95 },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Red1", "el": "LiAlH₄", "x": 695, "y": 215, "label": "Reductor fuerte" }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 585, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "C₆H₅—CH(O⁻)—H",
+        "semiGlobal": "C₆H₅—CHO + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "El ion hidruro H⁻ ataca al carbono carbonílico δ⁺ mientras el enlace π C=O se rompe en rojo punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O.", "forming": "Adición nucleofílica de H⁻.", "movement": "Ataque de hidruro." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 205 },
+            { "id": "C1", "el": "C", "x": 345, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 345, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 485, "y": 205 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "LiAlH₄", "x": 695, "y": 205 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 635, "y1": 240, "cx": 510, "cy": 330, "x2": 375, "y2": 315, "type": "full", "label": "Cede H⁻" },
+            { "x1": 345, "y1": 285, "cx": 320, "cy": 250, "x2": 338, "y2": 225, "type": "full", "label": "Ataque H⁻ → C" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (C₆H₅CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "C₆H₅—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "C₆H₅—CHO + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "Se consolida el enlace C—H formando el alcóxido bencílico y entra el agua para protonarlo.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 555, "y": 95, "enterFromX": 690, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 655, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 790, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95, "enterFromX": 890, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "C₆H₅—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "C₆H₅—CHO + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación del alcóxido." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 655, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: Alcohol Bencílico (Alcohol Primario)",
+        "semiStep": "C₆H₅—CH₂—OH",
+        "semiGlobal": "C₆H₅—CHO + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el alcohol bencílico (alcohol primario).",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: alcohol bencílico.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 225, "y": 215, "label": "Fenilo" },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "Alcohol bencílico" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_propanona_2propanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Propanona (Acetona) + LiBH₄",
+        "semiStep": "CH₃—CO—CH₃  +  LiBH₄",
+        "semiGlobal": "CH₃—CO—CH₃ + LiBH₄ ──(H₂O)──► CH₃—CH(OH)—CH₃",
+        "desc": "La propanona presenta el grupo carbonilo interno entre dos grupos metilo frente al borohidruro de litio (LiBH₄).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro (H⁻) al carbono carbonílico central." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95 },
+            { "id": "R2", "el": "CH₃", "x": 485, "y": 215 },
+            { "id": "Red1", "el": "LiBH₄", "x": 695, "y": 215, "label": "Agente reductor" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 585, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "CH₃—CH(O⁻)—CH₃",
+        "semiGlobal": "CH₃—CO—CH₃ + LiBH₄ ──(H₂O)──► CH₃—CH(OH)—CH₃",
+        "desc": "El hidruro H⁻ cedido por LiBH₄ ataca al carbono carbonílico central δ⁺ mientras se rompe en rojo punteado el enlace π C=O.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O.", "forming": "Adición nucleofílica de H⁻ al carbono central.", "movement": "Ataque de H⁻ por abajo y desplazamiento del par π al oxígeno." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 205 },
+            { "id": "C1", "el": "C", "x": 335, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 335, "y": 90, "charge": "δ-" },
+            { "id": "R2", "el": "CH₃", "x": 485, "y": 205 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "LiBH₄", "x": 695, "y": 205 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 635, "y1": 240, "cx": 500, "cy": 330, "x2": 365, "y2": 315, "type": "full", "label": "Cede H⁻" },
+            { "x1": 335, "y1": 285, "cx": 310, "cy": 250, "x2": 328, "y2": 225, "type": "full", "label": "Ataque H⁻ → C" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido Secundario + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH(O⁻)—CH₃  +  H—O—H",
+        "semiGlobal": "CH₃—CO—CH₃ + LiBH₄ ──(H₂O)──► CH₃—CH(OH)—CH₃",
+        "desc": "Se consolida el enlace C—H en el carbono secundario formando el ion isopropóxido, y entra la molécula de agua.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: nuevo enlace C—H.", "movement": "Aproximación del agua para protonar el alcóxido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 2°" },
+            { "id": "R2", "el": "CH₃", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 555, "y": 95, "enterFromX": 690, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 655, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 790, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95, "enterFromX": 890, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "CH₃—CH(O ··· H)—CH₃ ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CO—CH₃ + LiBH₄ ──(H₂O)──► CH₃—CH(OH)—CH₃",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia el alcohol secundario." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 485, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 335, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 655, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 2-Propanol (Alcohol Secundario)",
+        "semiStep": "CH₃—CH(OH)—CH₃",
+        "semiGlobal": "CH₃—CO—CH₃ + LiBH₄ ──(H₂O)──► CH₃—CH(OH)—CH₃",
+        "desc": "Queda consolidado en verde sólido el 2-propanol (alcohol secundario), con el grupo –OH arriba y el hidrógeno abajo.",
+        "legend": { "breaking": "Reducción completada.", "forming": "En VERDE sólido: enlaces C—H y O—H del 2-propanol.", "movement": "Alcohol secundario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "2-Propanol (Alcohol 2°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 545, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_butanona_2butanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Butanona + NaBH₄",
+        "semiStep": "CH₃—CO—CH₂—CH₃  +  NaBH₄",
+        "semiGlobal": "CH₃—CO—CH₂—CH₃ + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH(OH)—CH₃",
+        "desc": "La butanona presenta el grupo carbonilo interno frente al borohidruro de sodio (NaBH₄).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro al carbonilo." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95 },
+            { "id": "R2", "el": "CH₃", "x": 495, "y": 215 },
+            { "id": "Red1", "el": "NaBH₄", "x": 705, "y": 215, "label": "Agente reductor" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 595, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "CH₃—CH₂—CH(O⁻)—CH₃",
+        "semiGlobal": "CH₃—CO—CH₂—CH₃ + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH(OH)—CH₃",
+        "desc": "El ion hidruro H⁻ ataca al carbono carbonílico δ⁺ mientras el enlace π C=O se rompe en rojo punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O.", "forming": "Adición nucleofílica de H⁻.", "movement": "Ataque de hidruro." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 205 },
+            { "id": "C1", "el": "C", "x": 345, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 345, "y": 90, "charge": "δ-" },
+            { "id": "R2", "el": "CH₃", "x": 495, "y": 205 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "NaBH₄", "x": 705, "y": 205 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 645, "y1": 240, "cx": 510, "cy": 330, "x2": 375, "y2": 315, "type": "full", "label": "Cede H⁻" },
+            { "x1": 345, "y1": 285, "cx": 320, "cy": 250, "x2": 338, "y2": 225, "type": "full", "label": "Ataque H⁻ → C" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (sec-Butóxido) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—CH(O⁻)—CH₃  +  H—O—H",
+        "semiGlobal": "CH₃—CO—CH₂—CH₃ + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH(OH)—CH₃",
+        "desc": "Se consolida el enlace C—H formando el ion sec-butóxido y entra el agua para protonarlo.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 2°" },
+            { "id": "R2", "el": "CH₃", "x": 495, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 565, "y": 95, "enterFromX": 700, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 665, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 800, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95, "enterFromX": 900, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "CH₃—CH₂—CH(O ··· H)—CH₃ ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CO—CH₂—CH₃ + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH(OH)—CH₃",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia 2-butanol." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "highlight": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 495, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 345, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 665, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 2-Butanol (Alcohol Secundario)",
+        "semiStep": "CH₃—CH₂—CH(OH)—CH₃",
+        "semiGlobal": "CH₃—CO—CH₂—CH₃ + NaBH₄ ──(H₂O)──► CH₃—CH₂—CH(OH)—CH₃",
+        "desc": "Queda consolidado en verde sólido el 2-butanol (alcohol secundario).",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: 2-butanol.", "movement": "Alcohol secundario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "2-Butanol (Alcohol 2°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "R2", "el": "CH₃", "x": 545, "y": 215 },
+            { "id": "Hhyd", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "R2", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_ciclohexanona_ciclohexanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Ciclohexanona + LiAlH₄",
+        "semiStep": "C₆H₁₀O  +  LiAlH₄",
+        "semiGlobal": "C₆H₁₀O + LiAlH₄ ──(H₂O)──► C₆H₁₁—OH",
+        "desc": "La ciclohexanona presenta su anillo hexagonal de 6 carbonos con el grupo carbonilo C1=O frente a LiAlH₄.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del hidruro al carbonilo cíclico." },
+        "scene": {
+          "atoms": [
+            { "id": "C4", "el": "C", "x": 135, "y": 145 },
+            { "id": "C5", "el": "C", "x": 135, "y": 265 },
+            { "id": "C6", "el": "C", "x": 240, "y": 325 },
+            { "id": "C3", "el": "C", "x": 240, "y": 85 },
+            { "id": "C2", "el": "C", "x": 345, "y": 145 },
+            { "id": "C1", "el": "C", "x": 345, "y": 265 },
+            { "id": "O1", "el": "O", "x": 475, "y": 265 },
+            { "id": "Red1", "el": "LiAlH₄", "x": 685, "y": 265, "label": "Agente reductor" }
+          ],
+          "bonds": [
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" }
+          ],
+          "texts": [{ "x": 575, "y": 272, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Ataque Nucleofílico del Hidruro (H⁻) y Ruptura del Enlace π C=O",
+        "semiStep": "C₆H₁₀(O⁻)H",
+        "semiGlobal": "C₆H₁₀O + LiAlH₄ ──(H₂O)──► C₆H₁₁—OH",
+        "desc": "El hidruro H⁻ ataca al carbono carbonílico C1 mientras el enlace π C=O se rompe en rojo punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O.", "forming": "Adición nucleofílica de H⁻ en C1.", "movement": "Ataque de hidruro al anillo." },
+        "scene": {
+          "atoms": [
+            { "id": "C4", "el": "C", "x": 135, "y": 145 },
+            { "id": "C5", "el": "C", "x": 135, "y": 265 },
+            { "id": "C6", "el": "C", "x": 240, "y": 325 },
+            { "id": "C3", "el": "C", "x": 240, "y": 85 },
+            { "id": "C2", "el": "C", "x": 345, "y": 145 },
+            { "id": "C1", "el": "C", "x": 345, "y": 265, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 475, "y": 215, "charge": "δ-" },
+            { "id": "Hhyd", "el": "H", "x": 465, "y": 325, "charge": "-", "highlight": "#38bdf8", "label": "Hidruro (H⁻)" },
+            { "id": "Red1", "el": "LiAlH₄", "x": 685, "y": 265 }
+          ],
+          "bonds": [
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" }
+          ],
+          "arrows": [
+            { "x1": 625, "y1": 295, "cx": 555, "cy": 340, "x2": 495, "y2": 325, "type": "full", "label": "Cede H⁻" },
+            { "x1": 438, "y1": 312, "cx": 405, "cy": 295, "x2": 372, "y2": 278, "type": "full", "label": "Ataque H⁻ → C1" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido Cíclico + Entrada del Agua (H₂O)",
+        "semiStep": "C₆H₁₁—O⁻  +  H—O—H",
+        "semiGlobal": "C₆H₁₀O + LiAlH₄ ──(H₂O)──► C₆H₁₁—OH",
+        "desc": "Se consolida el enlace C—H en C1 formando el ion ciclohexóxido y entra la molécula de agua.",
+        "legend": { "breaking": "Enlace π escindido.", "forming": "En VERDE sólido: enlace C1—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "C4", "el": "C", "x": 135, "y": 145 },
+            { "id": "C5", "el": "C", "x": 135, "y": 265 },
+            { "id": "C6", "el": "C", "x": 240, "y": 325 },
+            { "id": "C3", "el": "C", "x": 240, "y": 85 },
+            { "id": "C2", "el": "C", "x": 345, "y": 145 },
+            { "id": "C1", "el": "C", "x": 345, "y": 265 },
+            { "id": "O1", "el": "O", "x": 475, "y": 215, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 2°" },
+            { "id": "Hhyd", "el": "H", "x": 455, "y": 325, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 585, "y": 145, "enterFromX": 710, "enterFromY": 145 },
+            { "id": "Ow", "el": "O", "x": 685, "y": 95, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 810, "enterFromY": 95 },
+            { "id": "Hw2", "el": "H", "x": 785, "y": 145, "enterFromX": 910, "enterFromY": 145 }
+          ],
+          "bonds": [
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido Cíclico (Formación en Verde de O—H)",
+        "semiStep": "C₆H₁₁—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "C₆H₁₀O + LiAlH₄ ──(H₂O)──► C₆H₁₁—OH",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia ciclohexanol." },
+        "scene": {
+          "atoms": [
+            { "id": "C4", "el": "C", "x": 135, "y": 145 },
+            { "id": "C5", "el": "C", "x": 135, "y": 265 },
+            { "id": "C6", "el": "C", "x": 240, "y": 325 },
+            { "id": "C3", "el": "C", "x": 240, "y": 85 },
+            { "id": "C2", "el": "C", "x": 345, "y": 145 },
+            { "id": "C1", "el": "C", "x": 345, "y": 265, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 475, "y": 215, "highlight": "#10b981" },
+            { "id": "Hhyd", "el": "H", "x": 455, "y": 325 },
+            { "id": "Hw1", "el": "H", "x": 585, "y": 215, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 735, "y": 215, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 835, "y": 215 }
+          ],
+          "bonds": [
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 505, "y1": 200, "cx": 535, "cy": 175, "x2": 565, "y2": 202, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: Ciclohexanol (Alcohol Secundario)",
+        "semiStep": "C₆H₁₁—OH",
+        "semiGlobal": "C₆H₁₀O + LiAlH₄ ──(H₂O)──► C₆H₁₁—OH",
+        "desc": "Queda consolidado en verde sólido el ciclohexanol con su anillo hexagonal completo.",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: ciclohexanol.", "movement": "Alcohol secundario cíclico obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "C4", "el": "C", "x": 165, "y": 145 },
+            { "id": "C5", "el": "C", "x": 165, "y": 265 },
+            { "id": "C6", "el": "C", "x": 270, "y": 325 },
+            { "id": "C3", "el": "C", "x": 270, "y": 85 },
+            { "id": "C2", "el": "C", "x": 375, "y": 145 },
+            { "id": "C1", "el": "C", "x": 375, "y": 265, "highlight": "#10b981", "label": "Ciclohexanol (Alcohol 2°)" },
+            { "id": "O1", "el": "O", "x": 505, "y": 215, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 625, "y": 215, "border": "#10b981" },
+            { "id": "Hhyd", "el": "H", "x": 485, "y": 325, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "C3", "to": "C4", "order": 1, "state": "normal" },
+            { "from": "C4", "to": "C5", "order": 1, "state": "normal" },
+            { "from": "C5", "to": "C6", "order": 1, "state": "normal" },
+            { "from": "C6", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C3", "to": "C2", "order": 1, "state": "normal" },
+            { "from": "C2", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "Hhyd", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_acidoetanoico_etanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Ácido Etanoico (Acético) + LiBH₄",
+        "semiStep": "CH₃—COOH  +  LiBH₄",
+        "semiGlobal": "CH₃—COOH + LiBH₄ ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "El ácido etanoico presenta el grupo carboxilo (–COOH) frente a dos equivalentes de borohidruro de litio (LiBH₄) para reducir completamente el carbono hasta alcohol primario.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de dos equivalentes de hidruro (2 H⁻)." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95 },
+            { "id": "OH1", "el": "OH", "x": 485, "y": 215 },
+            { "id": "Red1", "el": "LiBH₄", "x": 695, "y": 215, "label": "Reductor fuerte (2 eq)" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 585, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Doble Transferencia de Hidruro (2 H⁻) y Eliminación del Grupo Saliente",
+        "semiStep": "CH₃—C(O⁻)H₂  +  [LiBH₂(OH)₂]⁻",
+        "semiGlobal": "CH₃—COOH + LiBH₄ ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "Dos iones hidruro (H⁻) atacan sucesivamente al carbono carboxílico δ⁺: el primero desplaza al grupo –OH (como complejo borato) pasando por el aldehído y el segundo reduce el carbonilo hasta el alcóxido primario.",
+        "legend": { "breaking": "En ROJO punteado: ruptura del enlace π C=O y salida del –OH carboxílico.", "forming": "Adición de dos hidruros (2 H⁻) al carbono C1.", "movement": "Reducción completa del grupo carboxilo a –CH₂–O⁻." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 175, "y": 205 },
+            { "id": "C1", "el": "C", "x": 325, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 325, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 465, "y": 205, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "H2", "el": "H", "x": 325, "y": 315, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "OH1", "el": "OH", "x": 585, "y": 115, "border": "#ef4444", "label": "Sale grupo saliente" },
+            { "id": "Red1", "el": "LiBH₄", "x": 725, "y": 245 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 665, "y1": 235, "cx": 565, "cy": 195, "x2": 495, "y2": 205, "type": "full", "label": "1° Hidruro H⁻" },
+            { "x1": 665, "y1": 265, "cx": 500, "cy": 335, "x2": 355, "y2": 315, "type": "full", "label": "2° Hidruro H⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido Primario (CH₃CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "CH₃—COOH + LiBH₄ ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "Se consolidan ambos enlaces C—H formando el ion etóxido (CH₃CH₂O⁻) y entra la molécula de agua para protonar el oxígeno.",
+        "legend": { "breaking": "Grupo carboxílico reducido completamente.", "forming": "En VERDE sólido: dos nuevos enlaces C—H.", "movement": "Entrada del agua para la hidrólisis final." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215 },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 1°" },
+            { "id": "H1", "el": "H", "x": 475, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 335, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 555, "y": 95, "enterFromX": 690, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 655, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 790, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95, "enterFromX": 890, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "CH₃—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—COOH + LiBH₄ ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "El oxígeno negativo captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia etanol." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 335, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 335, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 475, "y": 215 },
+            { "id": "H2", "el": "H", "x": 335, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 655, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 755, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: Etanol (Alcohol Primario)",
+        "semiStep": "CH₃—CH₂—OH",
+        "semiGlobal": "CH₃—COOH + LiBH₄ ──(H₂O)──► CH₃—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el etanol (alcohol primario).",
+        "legend": { "breaking": "Reducción completada.", "forming": "En VERDE sólido: etanol.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "Etanol (Alcohol 1°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_acidopropanoico_1propanol": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Ácido Propanoico + LiAlH₄",
+        "semiStep": "CH₃—CH₂—COOH  +  LiAlH₄",
+        "semiGlobal": "CH₃—CH₂—COOH + LiAlH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "El ácido propanoico frente a dos equivalentes de hidruro de litio y aluminio (LiAlH₄).",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de dos hidruros." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95 },
+            { "id": "OH1", "el": "OH", "x": 495, "y": 215 },
+            { "id": "Red1", "el": "LiAlH₄", "x": 705, "y": 215, "label": "Reductor fuerte (2 eq)" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 595, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Doble Transferencia de Hidruro (2 H⁻) y Eliminación del Grupo Saliente",
+        "semiStep": "CH₃—CH₂—C(O⁻)H₂",
+        "semiGlobal": "CH₃—CH₂—COOH + LiAlH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "Dos iones hidruro (H⁻) reducen completamente el carbono carboxílico δ⁺ eliminando el grupo saliente oxigenado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O y salida del –OH carboxílico.", "forming": "Adición de dos hidruros (2 H⁻).", "movement": "Reducción del grupo carboxilo." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 175, "y": 205 },
+            { "id": "C1", "el": "C", "x": 335, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 335, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 475, "y": 205, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "H2", "el": "H", "x": 335, "y": 315, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "OH1", "el": "OH", "x": 595, "y": 115, "border": "#ef4444", "label": "Sale grupo saliente" },
+            { "id": "Red1", "el": "LiAlH₄", "x": 735, "y": 245 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 675, "y1": 235, "cx": 575, "cy": 195, "x2": 505, "y2": 205, "type": "full", "label": "1° Hidruro H⁻" },
+            { "x1": 675, "y1": 265, "cx": 510, "cy": 335, "x2": 365, "y2": 315, "type": "full", "label": "2° Hidruro H⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (CH₃CH₂CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "CH₃—CH₂—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "CH₃—CH₂—COOH + LiAlH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "Se consolidan ambos enlaces C—H formando el ion propóxido y entra el agua.",
+        "legend": { "breaking": "Carboxilo reducido.", "forming": "En VERDE sólido: dos enlaces C—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 1°" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 345, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 565, "y": 95, "enterFromX": 700, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 665, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 800, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95, "enterFromX": 900, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "CH₃—CH₂—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "CH₃—CH₂—COOH + LiAlH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia 1-propanol." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "H2", "el": "H", "x": 345, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 665, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: 1-Propanol (Alcohol Primario)",
+        "semiStep": "CH₃—CH₂—CH₂—OH",
+        "semiGlobal": "CH₃—CH₂—COOH + LiAlH₄ ──(H₂O)──► CH₃—CH₂—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el 1-propanol (alcohol primario).",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: 1-propanol.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "R1", "el": "CH₃CH₂", "x": 225, "y": 215 },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "1-Propanol (Alcohol 1°)" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ],
+    "red_acidobenzoico_bencilico": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Ácido Benzoico + LiAlH₄",
+        "semiStep": "C₆H₅—COOH  +  LiAlH₄",
+        "semiGlobal": "C₆H₅—COOH + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "El ácido benzoico presenta el anillo fenilo hexagonal unido al grupo carboxilo (–COOH) frente a LiAlH₄.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de dos equivalentes de hidruro." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215, "label": "Fenilo" },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95 },
+            { "id": "OH1", "el": "OH", "x": 495, "y": 215 },
+            { "id": "Red1", "el": "LiAlH₄", "x": 705, "y": 215, "label": "Reductor fuerte (2 eq)" }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "normal" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "normal" }
+          ],
+          "texts": [{ "x": 595, "y": 222, "text": "+" }]
+        }
+      },
+      {
+        "title": "Paso 2 — Doble Transferencia de Hidruro (2 H⁻) y Eliminación del Grupo Saliente",
+        "semiStep": "C₆H₅—C(O⁻)H₂",
+        "semiGlobal": "C₆H₅—COOH + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "Dos iones hidruro (H⁻) reducen completamente el carbono carboxílico δ⁺ eliminando el grupo saliente oxigenado.",
+        "legend": { "breaking": "En ROJO punteado: enlace π C=O y salida del –OH carboxílico.", "forming": "Adición de dos hidruros (2 H⁻).", "movement": "Reducción del grupo carboxilo aromático." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 175, "y": 205 },
+            { "id": "C1", "el": "C", "x": 335, "y": 205, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "O1", "el": "O", "x": 335, "y": 90, "charge": "δ-" },
+            { "id": "H1", "el": "H", "x": 475, "y": 205, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "H2", "el": "H", "x": 335, "y": 315, "charge": "-", "highlight": "#38bdf8" },
+            { "id": "OH1", "el": "OH", "x": 595, "y": 115, "border": "#ef4444", "label": "Sale grupo saliente" },
+            { "id": "Red1", "el": "LiAlH₄", "x": 735, "y": 245 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 2, "state": "breaking-pi" },
+            { "from": "C1", "to": "OH1", "order": 1, "state": "breaking" }
+          ],
+          "arrows": [
+            { "x1": 675, "y1": 235, "cx": 575, "cy": 195, "x2": 505, "y2": 205, "type": "full", "label": "1° Hidruro H⁻" },
+            { "x1": 675, "y1": 265, "cx": 510, "cy": 335, "x2": 365, "y2": 315, "type": "full", "label": "2° Hidruro H⁻" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Intermediario Alcóxido (C₆H₅CH₂O⁻) + Entrada del Agua (H₂O)",
+        "semiStep": "C₆H₅—CH₂—O⁻  +  H—O—H",
+        "semiGlobal": "C₆H₅—COOH + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "Se consolidan ambos enlaces C—H formando el alcóxido bencílico y entra el agua.",
+        "legend": { "breaking": "Carboxilo reducido.", "forming": "En VERDE sólido: dos enlaces C—H.", "movement": "Entrada del agua." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215 },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "charge": "-", "highlight": "#fbbf24", "label": "Ion alcóxido 1°" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 345, "y": 315, "border": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 565, "y": 95, "enterFromX": 700, "enterFromY": 95 },
+            { "id": "Ow", "el": "O", "x": 665, "y": 55, "label": "Agua (H₂O)", "labelPos": "top", "enterFromX": 800, "enterFromY": 55 },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95, "enterFromX": 900, "enterFromY": 95 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "normal" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 4 — Protonación del Alcóxido (Formación en Verde de O—H)",
+        "semiStep": "C₆H₅—CH₂—O ··· H ┆—┆ OH⁻",
+        "semiGlobal": "C₆H₅—COOH + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "El oxígeno captura un protón del agua formándose el enlace O—H en verde punteado.",
+        "legend": { "breaking": "En ROJO punteado: enlace H—O.", "forming": "En VERDE punteado: enlace O—H.", "movement": "Protonación hacia alcohol bencílico." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215 },
+            { "id": "C1", "el": "C", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "O1", "el": "O", "x": 345, "y": 95, "highlight": "#10b981" },
+            { "id": "H1", "el": "H", "x": 485, "y": 215 },
+            { "id": "H2", "el": "H", "x": 345, "y": 315 },
+            { "id": "Hw1", "el": "H", "x": 475, "y": 95, "border": "#10b981" },
+            { "id": "Ow", "el": "O", "x": 665, "y": 95, "charge": "-" },
+            { "id": "Hw2", "el": "H", "x": 765, "y": 95 }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "forming" },
+            { "from": "Hw1", "to": "Ow", "order": 1, "state": "breaking" },
+            { "from": "Ow", "to": "Hw2", "order": 1, "state": "normal" }
+          ],
+          "arrows": [
+            { "x1": 375, "y1": 85, "cx": 410, "cy": 60, "x2": 455, "y2": 85, "type": "full", "label": "Captura H⁺" }
+          ]
+        }
+      },
+      {
+        "title": "Paso 5 — Producto Final Consolidado: Alcohol Bencílico (Alcohol Primario)",
+        "semiStep": "C₆H₅—CH₂—OH",
+        "semiGlobal": "C₆H₅—COOH + LiAlH₄ ──(H₂O)──► C₆H₅—CH₂—OH",
+        "desc": "Queda consolidado en verde sólido el alcohol bencílico (alcohol primario).",
+        "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: alcohol bencílico.", "movement": "Alcohol primario obtenido." },
+        "scene": {
+          "atoms": [
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 225, "y": 215, "label": "Fenilo" },
+            { "id": "C1", "el": "C", "x": 385, "y": 215, "highlight": "#10b981", "label": "Alcohol bencílico" },
+            { "id": "O1", "el": "O", "x": 385, "y": 95, "highlight": "#10b981" },
+            { "id": "Hw1", "el": "H", "x": 515, "y": 95, "border": "#10b981" },
+            { "id": "H1", "el": "H", "x": 535, "y": 215, "border": "#10b981" },
+            { "id": "H2", "el": "H", "x": 385, "y": 315, "border": "#10b981" }
+          ],
+          "bonds": [
+            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "O1", "order": 1, "state": "normal" },
+            { "from": "O1", "to": "Hw1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H1", "order": 1, "state": "new" },
+            { "from": "C1", "to": "H2", "order": 1, "state": "new" }
+          ]
+        }
+      }
+    ]
+  }
+}
