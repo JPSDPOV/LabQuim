@@ -1,13 +1,13 @@
 {
   "category": "obtencion",
   "title": "1) Sustitución de Halogenuros de Alquilo con Amoniaco o Aminas (1° → 2° → 3°)",
-  "natureBadge": "Sustitución Nucleofílica Bimolecular (SN2) • R–X + :NR'₃ ──► Sal de Alquilamonio ──► Amina + HX",
+  "natureBadge": "Sustitución Nucleofílica Bimolecular (SN2) • :NR'₃ + R–X ──► Sal de Alquilamonio ──► Amina + HX",
   "deltaH": "ΔH° < 0 (Exotérmica; formación de enlace σ C–N y liberación de halogenuro de hidrógeno HX)",
-  "description": "Obtención progresiva de aminas mediante sustitución nucleofílica bimolecular (SN2) de halogenuros de alquilo con amoniaco o aminas:\n1) Amoniaco (:NH₃) + Halogenuro de alquilo → Sal de alquilamonio → Amina Primaria (1°) + HX.\n2) Amina Primaria (R–NH₂) + Halogenuro de alquilo → Sal de dialquilamonio → Amina Secundaria (2°) + HX.\n3) Amina Secundaria (R₂NH) + Halogenuro de alquilo → Sal de trialquilamonio → Amina Terciaria (3°) + HX.\nEn cada etapa, el par de electrones no enlazante del nitrógeno ataca al carbono electrofílico δ⁺ desplazando al ion haluro (X⁻), el cual abstrae un protón H⁺ del nitrógeno protonado para liberar la amina neutra y el ácido hidrácido (HCl, HBr o HI).",
+  "description": "Obtención progresiva de aminas mediante sustitución nucleofílica bimolecular (SN2) de halogenuros de alquilo con amoniaco o aminas:\n1) Amoniaco (:NH₃) + Halogenuro de alquilo → Sal de alquilamonio → Amina Primaria (1°) + HX.\n2) Amina Primaria (R–NH₂) + Halogenuro de alquilo → Sal de dialquilamonio → Amina Secundaria (2°) + HX.\n3) Amina Secundaria (R₂NH) + Halogenuro de alquilo → Sal de trialquilamonio → Amina Terciaria (3°) + HX.\nEn cada etapa, el par de electrones no enlazante del nitrógeno ataca dorsalmente (a 180°) al carbono electrofílico δ⁺ desplazando al ion haluro (X⁻), el cual abstrae un protón H⁺ del nitrógeno protonado para liberar la amina neutra y el ácido hidrácido (HCl, HBr o HI).",
   "meta": {
     "grupoFuncional": "Aminas Primarias (R–NH₂), Aminas Secundarias (R₂NH) y Aminas Terciarias (R₃N)",
     "reaccionMecanismo": "Sustitución Nucleofílica Bimolecular (SN2) vía Sal de Alquilamonio con Liberación de HX",
-    "naturaleza": "Por etapas: 1° Ataque nucleofílico SN2 del par libre del nitrógeno y ruptura heterolítica C–X → 2° Formación de la sal de alquilamonio (R–NH₃⁺X⁻) → 3° Transferencia de protón hacia el ion haluro formando la amina + HX.",
+    "naturaleza": "Por etapas: 1° Ataque dorsal SN2 del par libre del nitrógeno y ruptura heterolítica C–X → 2° Formación de la sal de alquilamonio (R–NH₃⁺X⁻) → 3° Transferencia de protón hacia el ion haluro formando la amina + HX.",
     "rupturaIntermediarios": "Ruptura heterolítica del enlace C–X hacia el halógeno electronegativo; formación de un intermediario sal de alquilamonio (ej. cloruro de etilamonio, CH₃–CH₂–NH₃⁺Cl⁻).",
     "detalleMecanismo": "El par libre del nitrógeno (:N) ataca al carbono unido al halógeno mientras el par σ C–X pasa al halógeno formando el ion haluro (Cl⁻, Br⁻ o I⁻). Posteriormente, el ion haluro retira un protón H⁺ del nitrógeno positivo, regenerando el par libre de la amina y liberando HX.",
     "reactivosCondiciones": "• Sustrato: Halogenuro de alquilo primario o metílico (R–CH₂–X, CH₃–X).\n• Nucleófilo: Amoniaco (:NH₃), amina primaria (R–NH₂) o amina secundaria (R₂NH).",
@@ -17,62 +17,62 @@
   "substrates": [
     {
       "id": "ami_sn2_1_etilamina",
-      "name": "1° Etapa (NH₃ → Amina 1°): Cloroetano + Amoniaco ──► Etilamina + HCl",
+      "name": "1° Etapa (NH₃ → Amina 1°): Amoniaco + Cloroetano ──► Etilamina + HCl",
       "catalyst": "SN2 • Vía Cloruro de etilamonio"
     },
     {
       "id": "ami_sn2_1_metilamina",
-      "name": "1° Etapa (NH₃ → Amina 1°): Bromometano + Amoniaco ──► Metilamina + HBr",
+      "name": "1° Etapa (NH₃ → Amina 1°): Amoniaco + Bromometano ──► Metilamina + HBr",
       "catalyst": "SN2 • Vía Bromuro de metilamonio"
     },
     {
       "id": "ami_sn2_1_propilamina",
-      "name": "1° Etapa (NH₃ → Amina 1°): 1-Cloropropano + Amoniaco ──► Propilamina + HCl",
+      "name": "1° Etapa (NH₃ → Amina 1°): Amoniaco + 1-Cloropropano ──► Propilamina + HCl",
       "catalyst": "SN2 • Vía Cloruro de propilamonio"
     },
     {
       "id": "ami_sn2_1_bencilamina",
-      "name": "1° Etapa (NH₃ → Amina 1°): Cloruro de bencilo + Amoniaco ──► Bencilamina + HCl",
+      "name": "1° Etapa (NH₃ → Amina 1°): Amoniaco + Cloruro de bencilo ──► Bencilamina + HCl",
       "catalyst": "SN2 • Vía Cloruro de bencilamonio"
     },
     {
       "id": "ami_sn2_2_dietilamina",
-      "name": "2° Etapa (Amina 1° → Amina 2°): Cloroetano + Etilamina ──► Dietilamina + HCl",
+      "name": "2° Etapa (Amina 1° → Amina 2°): Etilamina + Cloroetano ──► Dietilamina + HCl",
       "catalyst": "SN2 • Amina 1° como nucleófilo"
     },
     {
       "id": "ami_sn2_2_dimetilamina",
-      "name": "2° Etapa (Amina 1° → Amina 2°): Bromometano + Metilamina ──► Dimetilamina + HBr",
+      "name": "2° Etapa (Amina 1° → Amina 2°): Metilamina + Bromometano ──► Dimetilamina + HBr",
       "catalyst": "SN2 • Amina 1° como nucleófilo"
     },
     {
       "id": "ami_sn2_2_etilmetilamina",
-      "name": "2° Etapa (Amina 1° → Amina 2°): Cloroetano + Metilamina ──► Etilmetilamina + HCl",
+      "name": "2° Etapa (Amina 1° → Amina 2°): Metilamina + Cloroetano ──► Etilmetilamina + HCl",
       "catalyst": "SN2 • Amina 1° como nucleófilo"
     },
     {
       "id": "ami_sn2_2_isopropilpropilamina",
-      "name": "2° Etapa (Amina 1° → Amina 2°): 1-Cloropropano + Isopropilamina ──► Isopropilpropilamina + HCl",
+      "name": "2° Etapa (Amina 1° → Amina 2°): Isopropilamina + 1-Cloropropano ──► Isopropilpropilamina + HCl",
       "catalyst": "SN2 • Amina 1° como nucleófilo"
     },
     {
       "id": "ami_sn2_3_trietilamina",
-      "name": "3° Etapa (Amina 2° → Amina 3°): Cloroetano + Dietilamina ──► Trietilamina + HCl",
+      "name": "3° Etapa (Amina 2° → Amina 3°): Dietilamina + Cloroetano ──► Trietilamina + HCl",
       "catalyst": "SN2 • Amina 2° como nucleófilo"
     },
     {
       "id": "ami_sn2_3_trimetilamina",
-      "name": "3° Etapa (Amina 2° → Amina 3°): Yodometano + Dimetilamina ──► Trimetilamina + HI",
+      "name": "3° Etapa (Amina 2° → Amina 3°): Dimetilamina + Yodometano ──► Trimetilamina + HI",
       "catalyst": "SN2 • Amina 2° como nucleófilo"
     },
     {
       "id": "ami_sn2_3_etildimetilamina",
-      "name": "3° Etapa (Amina 2° → Amina 3°): Cloroetano + Dimetilamina ──► Etildimetilamina + HCl",
+      "name": "3° Etapa (Amina 2° → Amina 3°): Dimetilamina + Cloroetano ──► Etildimetilamina + HCl",
       "catalyst": "SN2 • Amina 2° como nucleófilo"
     },
     {
       "id": "ami_sn2_3_etilmetilpropilamina",
-      "name": "3° Etapa (Amina 2° → Amina 3°): 1-Cloropropano + Etilmetilamina ──► Etilmetilpropilamina + HCl",
+      "name": "3° Etapa (Amina 2° → Amina 3°): Etilmetilamina + 1-Cloropropano ──► Etilmetilpropilamina + HCl",
       "catalyst": "SN2 • Amina 2° como nucleófilo"
     }
   ],
@@ -87,58 +87,58 @@
   "stepsBySubstrate": {
     "ami_sn2_1_etilamina": [
       {
-        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (:NH₃) + Cloroetano",
+        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (H₃N:) + Cloroetano",
         "semiStep": "H₃N:  +  CH₃—CH₂—Cl",
         "semiGlobal": "NH₃ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH₂ + HCl",
-        "desc": "El amoniaco (H₃N:) dispone de un par de electrones no enlazantes sobre el nitrógeno para atacar al carbono electrofílico δ⁺ del cloroetano.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación del par libre de H₃N: al carbono α del cloroetano." },
+        "desc": "El amoniaco (H₃N:) a la izquierda orienta su par de electrones libres hacia el carbono α electrofílico del cloroetano a la derecha.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación dorsal del par libre de H₃N: al carbono α." },
         "scene": {
           "atoms": [
-            { "id": "N1", "el": "N", "x": 225, "y": 215, "label": "Amoniaco (H₃N:)" },
-            { "id": "Hn1", "el": "H", "x": 225, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 115, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 225, "y": 320 },
-            { "id": "R1", "el": "CH₃", "x": 455, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 605, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 745, "y": 215 }
+            { "id": "N1", "el": "N", "x": 245, "y": 215 },
+            { "id": "Hn1", "el": "H", "x": 245, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 135, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 245, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 685, "y": 215 }
           ],
           "bonds": [
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 345, "y": 222, "text": "+" }]
+          "texts": [{ "x": 385, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 Concertado y Ruptura Heterolítica C—Cl",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
         "semiStep": "[H₃N ··· CH₂(CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "NH₃ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH₂ + HCl",
-        "desc": "El par libre del nitrógeno ataca al carbono δ⁺ formando el enlace C—N en verde punteado, mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion cloruro (Cl⁻).",
-        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.", "forming": "En VERDE punteado: formación del enlace C—N.", "movement": "Ataque SN2 del nitrógeno y salida del par electrónico hacia el cloro." },
+        "desc": "El par libre del nitrógeno ataca en línea recta al carbono δ⁺ (verde punteado) mientras el enlace C—Cl se rompe hacia la derecha (rojo punteado) saliendo el ion cloruro.",
+        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.", "forming": "En VERDE punteado: formación simultánea del enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia del ion Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 335, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "N1", "el": "N", "x": 525, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 525, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 655, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 525, "y": 320 },
-            { "id": "Cl1", "el": "Cl", "x": 655, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "N1", "el": "N", "x": 285, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 285, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 165, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 285, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "R1", "el": "CH₃", "x": 505, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 715, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "N1", "order": 1, "state": "forming" },
-            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "C1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 495, "y1": 195, "cx": 430, "cy": 165, "x2": 365, "y2": 195, "type": "full", "label": "Ataque SN2 (:N → C)" },
-            { "x1": 495, "y1": 150, "cx": 565, "cy": 105, "x2": 625, "y2": 95, "type": "full", "label": "Par C–Cl al Cl⁻" }
+            { "x1": 325, "y1": 195, "cx": 395, "cy": 160, "x2": 465, "y2": 195, "type": "full", "label": "Ataque SN2 (:N → C)" },
+            { "x1": 575, "y1": 195, "cx": 625, "cy": 165, "x2": 675, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -146,33 +146,33 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Etilamonio (CH₃—CH₂—NH₃⁺ Cl⁻)",
         "semiStep": "CH₃—CH₂—NH₃⁺  Cl⁻",
         "semiGlobal": "NH₃ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH₂ + HCl",
-        "desc": "Se consolida el enlace C—N en verde sólido formando el intermediario iónico cloruro de etilamonio, con carga positiva sobre el nitrógeno tetravalente y el contraión cloruro (Cl⁻) al lado.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: nuevo enlace C—N.", "movement": "Aproximación del ion Cl⁻ hacia un protón H⁺ del grupo –NH₃⁺." },
+        "desc": "Se consolida el enlace N—C en verde sólido formando el cloruro de etilamonio; el ion cloruro (Cl⁻) se posiciona cerca del hidrógeno superior para abstraerlo.",
+        "legend": { "breaking": "Enlace C—Cl completamente escindido.", "forming": "En VERDE sólido: enlace N—C consolidado.", "movement": "Aproximación del ion Cl⁻ al protón H⁺." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
             { "id": "C1", "el": "CH₂", "x": 345, "y": 215 },
             { "id": "N1", "el": "N", "x": 505, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de etilamonio" },
             { "id": "Hn1", "el": "H", "x": 505, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 645, "y": 215 },
             { "id": "Hn3", "el": "H", "x": 505, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 635, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 765, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "Cl1", "el": "Cl", "x": 795, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "N1", "order": 1, "state": "new" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
           ]
         }
       },
       {
-        "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Ruptura N—H y Formación H—Cl)",
+        "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Formación de H—Cl)",
         "semiStep": "CH₃—CH₂—NH₂ ┆—┆ H ··· Cl",
         "semiGlobal": "NH₃ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH₂ + HCl",
-        "desc": "El ion cloruro (Cl⁻) abstrae un protón H⁺ del grupo –NH₃⁺ rompiéndose en rojo punteado el enlace N—H y trazándose en verde punteado el enlace H—Cl.",
-        "legend": { "breaking": "En ROJO punteado: ruptura del enlace N—H.", "forming": "En VERDE punteado: formación del enlace H—Cl.", "movement": "Transferencia de protón hacia el cloruro." },
+        "desc": "El ion cloruro captura el protón H⁺ derecho rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
+        "legend": { "breaking": "En ROJO punteado: ruptura del enlace N—H.", "forming": "En VERDE punteado: formación del enlace H—Cl.", "movement": "Transferencia de protón hacia Cl⁻." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
@@ -180,8 +180,8 @@
             { "id": "N1", "el": "N", "x": 505, "y": 215, "highlight": "#10b981" },
             { "id": "Hn1", "el": "H", "x": 505, "y": 105 },
             { "id": "Hn3", "el": "H", "x": 505, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 645, "y": 215, "border": "#ef4444" },
-            { "id": "Cl1", "el": "Cl", "x": 785, "y": 215, "highlight": "#38bdf8" }
+            { "id": "Hn2", "el": "H", "x": 655, "y": 215, "border": "#ef4444" },
+            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -192,7 +192,7 @@
             { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" }
           ],
           "arrows": [
-            { "x1": 755, "y1": 195, "cx": 710, "cy": 165, "x2": 665, "y2": 198, "type": "full", "label": "Captura H⁺" }
+            { "x1": 775, "y1": 195, "cx": 725, "cy": 165, "x2": 675, "y2": 198, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -200,15 +200,15 @@
         "title": "Paso 5 — Productos Finales Consolidados: Etilamina (Amina 1°) + HCl",
         "semiStep": "CH₃—CH₂—NH₂  +  HCl",
         "semiGlobal": "NH₃ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH₂ + HCl",
-        "desc": "Queda consolidada en verde sólido la etilamina (amina primaria) junto con el cloruro de hidrógeno (HCl) liberado.",
-        "legend": { "breaking": "Sustitución completada.", "forming": "En VERDE sólido: etilamina (1°) y enlace H—Cl.", "movement": "Productos finales obtenidos." },
+        "desc": "Queda consolidada en verde sólido la etilamina (amina primaria) junto con el cloruro de hidrógeno (HCl).",
+        "legend": { "breaking": "Sustitución completada.", "forming": "En VERDE sólido: etilamina (1°) y HCl.", "movement": "Productos finales obtenidos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃", "x": 185, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "N1", "el": "N", "x": 485, "y": 215, "highlight": "#10b981", "label": "Etilamina (Amina 1°)" },
-            { "id": "Hn1", "el": "H", "x": 485, "y": 105 },
-            { "id": "Hn3", "el": "H", "x": 485, "y": 325 },
+            { "id": "R1", "el": "CH₃", "x": 175, "y": 215 },
+            { "id": "C1", "el": "CH₂", "x": 325, "y": 215, "highlight": "#10b981" },
+            { "id": "N1", "el": "N", "x": 475, "y": 215, "highlight": "#10b981", "label": "Etilamina (1°)" },
+            { "id": "Hn1", "el": "H", "x": 475, "y": 105 },
+            { "id": "Hn3", "el": "H", "x": 475, "y": 325 },
             { "id": "Hn2", "el": "H", "x": 705, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 835, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
@@ -225,19 +225,19 @@
     ],
     "ami_sn2_1_metilamina": [
       {
-        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (:NH₃) + Bromometano",
+        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (H₃N:) + Bromometano",
         "semiStep": "H₃N:  +  CH₃—Br",
         "semiGlobal": "NH₃ + CH₃—Br ──(SN2)──► CH₃—NH₂ + HBr",
-        "desc": "El amoniaco (H₃N:) ataca al carbono metílico del bromometano.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de H₃N: al bromometano." },
+        "desc": "El amoniaco (H₃N:) a la izquierda orienta su par libre hacia el carbono metílico del bromometano a la derecha.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación dorsal del par libre de H₃N: al bromometano." },
         "scene": {
           "atoms": [
-            { "id": "N1", "el": "N", "x": 245, "y": 215, "label": "Amoniaco (H₃N:)" },
-            { "id": "Hn1", "el": "H", "x": 245, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 135, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 245, "y": 320 },
-            { "id": "C1", "el": "CH₃", "x": 515, "y": 215 },
-            { "id": "Br1", "el": "Br", "x": 675, "y": 215 }
+            { "id": "N1", "el": "N", "x": 255, "y": 215 },
+            { "id": "Hn1", "el": "H", "x": 255, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 145, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 255, "y": 320 },
+            { "id": "C1", "el": "CH₃", "x": 525, "y": 215 },
+            { "id": "Br1", "el": "Br", "x": 695, "y": 215 }
           ],
           "bonds": [
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
@@ -245,33 +245,34 @@
             { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Br1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 385, "y": 222, "text": "+" }]
+          "texts": [{ "x": 390, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida del Ion Bromuro (Br⁻)",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Br (Sin Cruces)",
         "semiStep": "[H₃N ··· CH₃ ┆—┆ Br]‡",
         "semiGlobal": "NH₃ + CH₃—Br ──(SN2)──► CH₃—NH₂ + HBr",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el ion bromuro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "El par libre del nitrógeno ataca en línea recta al carbono metílico δ⁺ (verde punteado) mientras el bromuro sale hacia la derecha (rojo punteado) sin cruzar ninguna línea.",
+        "legend": { "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Br.", "forming": "En VERDE punteado: formación simultánea del enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia del ion Br⁻." },
         "scene": {
           "atoms": [
-            { "id": "C1", "el": "CH₃", "x": 265, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "N1", "el": "N", "x": 465, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 465, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 595, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 465, "y": 320 },
-            { "id": "Br1", "el": "Br", "x": 615, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Br⁻" }
+            { "id": "N1", "el": "N", "x": 285, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 285, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 165, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 285, "y": 320 },
+            { "id": "C1", "el": "CH₃", "x": 505, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "Br1", "el": "Br", "x": 715, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Br⁻" }
           ],
           "bonds": [
-            { "from": "C1", "to": "N1", "order": 1, "state": "forming" },
-            { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "C1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 435, "y1": 195, "cx": 365, "cy": 165, "x2": 295, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 325, "y1": 195, "cx": 395, "cy": 160, "x2": 465, "y2": 195, "type": "full", "label": "Ataque SN2 (:N → C)" },
+            { "x1": 575, "y1": 195, "cx": 625, "cy": 165, "x2": 675, "y2": 195, "type": "full", "label": "Sale Br⁻" }
           ]
         }
       },
@@ -279,16 +280,16 @@
         "title": "Paso 3 — Intermediario Sal: Bromuro de Metilamonio (CH₃—NH₃⁺ Br⁻)",
         "semiStep": "CH₃—NH₃⁺  Br⁻",
         "semiGlobal": "NH₃ + CH₃—Br ──(SN2)──► CH₃—NH₂ + HBr",
-        "desc": "Se consolida el bromuro de metilamonio con carga positiva en el nitrógeno y el ion bromuro (Br⁻) próximo al hidrógeno.",
-        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Br⁻ al protón." },
+        "desc": "Se consolida el enlace N—C en verde sólido formando el bromuro de metilamonio; el ion Br⁻ queda junto al protón derecho.",
+        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Br⁻ al protón." },
         "scene": {
           "atoms": [
             { "id": "C1", "el": "CH₃", "x": 245, "y": 215 },
-            { "id": "N1", "el": "N", "x": 415, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Bromuro de metilamonio" },
-            { "id": "Hn1", "el": "H", "x": 415, "y": 105 },
-            { "id": "Hn3", "el": "H", "x": 415, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 555, "y": 215 },
-            { "id": "Br1", "el": "Br", "x": 705, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion bromuro (Br⁻)" }
+            { "id": "N1", "el": "N", "x": 425, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Bromuro de metilamonio" },
+            { "id": "Hn1", "el": "H", "x": 425, "y": 105 },
+            { "id": "Hn3", "el": "H", "x": 425, "y": 325 },
+            { "id": "Hn2", "el": "H", "x": 575, "y": 215 },
+            { "id": "Br1", "el": "Br", "x": 735, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion Br⁻" }
           ],
           "bonds": [
             { "from": "C1", "to": "N1", "order": 1, "state": "new" },
@@ -307,11 +308,11 @@
         "scene": {
           "atoms": [
             { "id": "C1", "el": "CH₃", "x": 245, "y": 215, "highlight": "#10b981" },
-            { "id": "N1", "el": "N", "x": 415, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 415, "y": 105 },
-            { "id": "Hn3", "el": "H", "x": 415, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 575, "y": 215, "border": "#ef4444" },
-            { "id": "Br1", "el": "Br", "x": 725, "y": 215, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 425, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 425, "y": 105 },
+            { "id": "Hn3", "el": "H", "x": 425, "y": 325 },
+            { "id": "Hn2", "el": "H", "x": 585, "y": 215, "border": "#ef4444" },
+            { "id": "Br1", "el": "Br", "x": 745, "y": 215, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "C1", "to": "N1", "order": 1, "state": "normal" },
@@ -321,7 +322,7 @@
             { "from": "Hn2", "to": "Br1", "order": 1, "state": "forming" }
           ],
           "arrows": [
-            { "x1": 695, "y1": 195, "cx": 645, "cy": 165, "x2": 595, "y2": 198, "type": "full", "label": "Captura H⁺" }
+            { "x1": 715, "y1": 195, "cx": 665, "cy": 165, "x2": 615, "y2": 198, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -334,7 +335,7 @@
         "scene": {
           "atoms": [
             { "id": "C1", "el": "CH₃", "x": 235, "y": 215, "highlight": "#10b981" },
-            { "id": "N1", "el": "N", "x": 405, "y": 215, "highlight": "#10b981", "label": "Metilamina (Amina 1°)" },
+            { "id": "N1", "el": "N", "x": 405, "y": 215, "highlight": "#10b981", "label": "Metilamina (1°)" },
             { "id": "Hn1", "el": "H", "x": 405, "y": 105 },
             { "id": "Hn3", "el": "H", "x": 405, "y": 325 },
             { "id": "Hn2", "el": "H", "x": 655, "y": 215, "border": "#10b981" },
@@ -352,57 +353,58 @@
     ],
     "ami_sn2_1_propilamina": [
       {
-        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (:NH₃) + 1-Cloropropano",
+        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (H₃N:) + 1-Cloropropano",
         "semiStep": "H₃N:  +  CH₃—CH₂—CH₂—Cl",
         "semiGlobal": "NH₃ + CH₃—CH₂—CH₂—Cl ──(SN2)──► CH₃—CH₂—CH₂—NH₂ + HCl",
-        "desc": "El amoniaco (H₃N:) frente al 1-cloropropano.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de H₃N: al carbono C1." },
+        "desc": "El amoniaco (H₃N:) a la izquierda frente al 1-cloropropano a la derecha.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación dorsal de H₃N: al carbono C1." },
         "scene": {
           "atoms": [
-            { "id": "N1", "el": "N", "x": 215, "y": 215, "label": "Amoniaco (H₃N:)" },
-            { "id": "Hn1", "el": "H", "x": 215, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 115, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 215, "y": 320 },
-            { "id": "R1", "el": "CH₃CH₂", "x": 455, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 615, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 755, "y": 215 }
+            { "id": "N1", "el": "N", "x": 245, "y": 215 },
+            { "id": "Hn1", "el": "H", "x": 245, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 135, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 245, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 695, "y": 215 }
           ],
           "bonds": [
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 335, "y": 222, "text": "+" }]
+          "texts": [{ "x": 385, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida del Ion Cloruro (Cl⁻)",
-        "semiStep": "[H₃N ··· CH₂CH₂CH₃ ┆—┆ Cl]‡",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
+        "semiStep": "[H₃N ··· CH₂(CH₂CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "NH₃ + CH₃—CH₂—CH₂—Cl ──(SN2)──► CH₃—CH₂—CH₂—NH₂ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "El par libre del nitrógeno ataca en línea recta al carbono C1 δ⁺ (verde punteado) mientras el cloruro sale hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 175, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 345, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "N1", "el": "N", "x": 535, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 535, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 665, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 535, "y": 320 },
-            { "id": "Cl1", "el": "Cl", "x": 665, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "N1", "el": "N", "x": 285, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 285, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 165, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 285, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "R1", "el": "CH₂CH₃", "x": 505, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 715, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "N1", "order": 1, "state": "forming" },
-            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "C1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 505, "y1": 195, "cx": 440, "cy": 165, "x2": 375, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 325, "y1": 195, "cx": 395, "cy": 160, "x2": 465, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 575, "y1": 195, "cx": 625, "cy": 165, "x2": 675, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -410,24 +412,24 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Propilamonio",
         "semiStep": "CH₃—CH₂—CH₂—NH₃⁺  Cl⁻",
         "semiGlobal": "NH₃ + CH₃—CH₂—CH₂—Cl ──(SN2)──► CH₃—CH₂—CH₂—NH₂ + HCl",
-        "desc": "Se consolida el cloruro de propilamonio y el ion Cl⁻ se acerca al hidrógeno ácido.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de propilamonio y el ion Cl⁻ se acerca al hidrógeno derecho.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón." },
         "scene": {
           "atoms": [
             { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
             { "id": "C1", "el": "CH₂", "x": 355, "y": 215 },
             { "id": "N1", "el": "N", "x": 515, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de propilamonio" },
             { "id": "Hn1", "el": "H", "x": 515, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 655, "y": 215 },
             { "id": "Hn3", "el": "H", "x": 515, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 645, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 775, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "N1", "order": 1, "state": "new" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
           ]
         }
       },
@@ -444,8 +446,8 @@
             { "id": "N1", "el": "N", "x": 515, "y": 215, "highlight": "#10b981" },
             { "id": "Hn1", "el": "H", "x": 515, "y": 105 },
             { "id": "Hn3", "el": "H", "x": 515, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 655, "y": 215, "border": "#ef4444" },
-            { "id": "Cl1", "el": "Cl", "x": 795, "y": 215, "highlight": "#38bdf8" }
+            { "id": "Hn2", "el": "H", "x": 665, "y": 215, "border": "#ef4444" },
+            { "id": "Cl1", "el": "Cl", "x": 815, "y": 215, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
@@ -456,7 +458,7 @@
             { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" }
           ],
           "arrows": [
-            { "x1": 765, "y1": 195, "cx": 720, "cy": 165, "x2": 675, "y2": 198, "type": "full", "label": "Captura H⁺" }
+            { "x1": 785, "y1": 195, "cx": 735, "cy": 165, "x2": 685, "y2": 198, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -468,11 +470,11 @@
         "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: propilamina (1°) + HCl.", "movement": "Productos finales obtenidos." },
         "scene": {
           "atoms": [
-            { "id": "R1", "el": "CH₃CH₂", "x": 185, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 345, "y": 215, "highlight": "#10b981" },
-            { "id": "N1", "el": "N", "x": 495, "y": 215, "highlight": "#10b981", "label": "Propilamina (Amina 1°)" },
-            { "id": "Hn1", "el": "H", "x": 495, "y": 105 },
-            { "id": "Hn3", "el": "H", "x": 495, "y": 325 },
+            { "id": "R1", "el": "CH₃CH₂", "x": 175, "y": 215 },
+            { "id": "C1", "el": "CH₂", "x": 335, "y": 215, "highlight": "#10b981" },
+            { "id": "N1", "el": "N", "x": 485, "y": 215, "highlight": "#10b981", "label": "Propilamina (1°)" },
+            { "id": "Hn1", "el": "H", "x": 485, "y": 105 },
+            { "id": "Hn3", "el": "H", "x": 485, "y": 325 },
             { "id": "Hn2", "el": "H", "x": 715, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 845, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
@@ -489,57 +491,58 @@
     ],
     "ami_sn2_1_bencilamina": [
       {
-        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (:NH₃) + Cloruro de Bencilo",
+        "title": "Paso 1 — Estado Inicial Intacto: Amoniaco (H₃N:) + Cloruro de Bencilo",
         "semiStep": "H₃N:  +  C₆H₅—CH₂—Cl",
         "semiGlobal": "NH₃ + C₆H₅—CH₂—Cl ──(SN2)──► C₆H₅—CH₂—NH₂ + HCl",
-        "desc": "El amoniaco (H₃N:) frente al cloruro de bencilo.",
-        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de H₃N: al carbono bencílico." },
+        "desc": "El amoniaco (H₃N:) a la izquierda frente al cloruro de bencilo a la derecha.",
+        "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación dorsal de H₃N: al carbono bencílico." },
         "scene": {
           "atoms": [
-            { "id": "N1", "el": "N", "x": 215, "y": 215, "label": "Amoniaco (H₃N:)" },
-            { "id": "Hn1", "el": "H", "x": 215, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 115, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 215, "y": 320 },
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 455, "y": 215, "label": "Fenilo" },
-            { "id": "C1", "el": "CH₂", "x": 615, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 755, "y": 215 }
+            { "id": "N1", "el": "N", "x": 245, "y": 215 },
+            { "id": "Hn1", "el": "H", "x": 245, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 135, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 245, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 525, "y": 315 },
+            { "id": "Cl1", "el": "Cl", "x": 695, "y": 215 }
           ],
           "bonds": [
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Ph1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 335, "y": 222, "text": "+" }]
+          "texts": [{ "x": 385, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 Bencílico y Salida de Cl⁻",
+        "title": "Paso 2 — Ataque Dorsal SN2 Bencílico y Ruptura C—Cl (Sin Cruces)",
         "semiStep": "[H₃N ··· CH₂(C₆H₅) ┆—┆ Cl]‡",
         "semiGlobal": "NH₃ + C₆H₅—CH₂—Cl ──(SN2)──► C₆H₅—CH₂—NH₂ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el ion cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "El par libre del nitrógeno ataca en línea recta al carbono bencílico δ⁺ (verde punteado) mientras sale el ion cloruro hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C bencílico.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 175, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 345, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "N1", "el": "N", "x": 535, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 535, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 665, "y": 215 },
-            { "id": "Hn3", "el": "H", "x": 535, "y": 320 },
-            { "id": "Cl1", "el": "Cl", "x": 665, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "N1", "el": "N", "x": 285, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 285, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 165, "y": 215 },
+            { "id": "Hn3", "el": "H", "x": 285, "y": 320 },
+            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 505, "y": 315 },
+            { "id": "Cl1", "el": "Cl", "x": 715, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
-            { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
-            { "from": "C1", "to": "N1", "order": 1, "state": "forming" },
-            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "C1", "order": 1, "state": "forming" },
+            { "from": "C1", "to": "Ph1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 505, "y1": 195, "cx": 440, "cy": 165, "x2": 375, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 325, "y1": 195, "cx": 395, "cy": 160, "x2": 465, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 575, "y1": 195, "cx": 625, "cy": 165, "x2": 675, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -547,24 +550,24 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Bencilamonio",
         "semiStep": "C₆H₅—CH₂—NH₃⁺  Cl⁻",
         "semiGlobal": "NH₃ + C₆H₅—CH₂—Cl ──(SN2)──► C₆H₅—CH₂—NH₂ + HCl",
-        "desc": "Se consolida el cloruro de bencilamonio y el ion Cl⁻ se acerca al protón ácido.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de bencilamonio y el ion Cl⁻ se acerca al hidrógeno derecho.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón." },
         "scene": {
           "atoms": [
             { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215 },
             { "id": "C1", "el": "CH₂", "x": 355, "y": 215 },
             { "id": "N1", "el": "N", "x": 515, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de bencilamonio" },
             { "id": "Hn1", "el": "H", "x": 515, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 655, "y": 215 },
             { "id": "Hn3", "el": "H", "x": 515, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 645, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 775, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "N1", "order": 1, "state": "new" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" }
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn3", "order": 1, "state": "normal" }
           ]
         }
       },
@@ -581,8 +584,8 @@
             { "id": "N1", "el": "N", "x": 515, "y": 215, "highlight": "#10b981" },
             { "id": "Hn1", "el": "H", "x": 515, "y": 105 },
             { "id": "Hn3", "el": "H", "x": 515, "y": 325 },
-            { "id": "Hn2", "el": "H", "x": 655, "y": 215, "border": "#ef4444" },
-            { "id": "Cl1", "el": "Cl", "x": 795, "y": 215, "highlight": "#38bdf8" }
+            { "id": "Hn2", "el": "H", "x": 665, "y": 215, "border": "#ef4444" },
+            { "id": "Cl1", "el": "Cl", "x": 815, "y": 215, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "Ph1", "to": "C1", "order": 1, "state": "normal" },
@@ -593,7 +596,7 @@
             { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" }
           ],
           "arrows": [
-            { "x1": 765, "y1": 195, "cx": 720, "cy": 165, "x2": 675, "y2": 198, "type": "full", "label": "Captura H⁺" }
+            { "x1": 785, "y1": 195, "cx": 735, "cy": 165, "x2": 685, "y2": 198, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -605,11 +608,11 @@
         "legend": { "breaking": "Completado.", "forming": "En VERDE sólido: bencilamina (1°) + HCl.", "movement": "Productos finales obtenidos." },
         "scene": {
           "atoms": [
-            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 185, "y": 215, "label": "Fenilo" },
-            { "id": "C1", "el": "CH₂", "x": 345, "y": 215, "highlight": "#10b981" },
-            { "id": "N1", "el": "N", "x": 495, "y": 215, "highlight": "#10b981", "label": "Bencilamina (Amina 1°)" },
-            { "id": "Hn1", "el": "H", "x": 495, "y": 105 },
-            { "id": "Hn3", "el": "H", "x": 495, "y": 325 },
+            { "id": "Ph1", "el": "Ph", "ring": "phenyl", "x": 175, "y": 215 },
+            { "id": "C1", "el": "CH₂", "x": 335, "y": 215, "highlight": "#10b981" },
+            { "id": "N1", "el": "N", "x": 485, "y": 215, "highlight": "#10b981", "label": "Bencilamina (1°)" },
+            { "id": "Hn1", "el": "H", "x": 485, "y": 105 },
+            { "id": "Hn3", "el": "H", "x": 485, "y": 325 },
             { "id": "Hn2", "el": "H", "x": 715, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 845, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
@@ -629,43 +632,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Etilamina (Amina 1°) + Cloroetano",
         "semiStep": "CH₃—CH₂—NH₂  +  CH₃—CH₂—Cl",
         "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH—CH₂—CH₃ + HCl",
-        "desc": "La etilamina (amina primaria) ataca con el par libre de su nitrógeno al carbono electrofílico del cloroetano.",
+        "desc": "La etilamina (amina primaria) a la izquierda orienta el par libre de su nitrógeno hacia el carbono α del cloroetano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la etilamina al cloroetano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 305, "y": 215, "label": "Etilamina (1°)" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 305, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 305, "y": 110 },
             { "id": "Hn2", "el": "H", "x": 305, "y": 320 },
-            { "id": "R1", "el": "CH₃", "x": 525, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 670, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 415, "y": 222, "text": "+" }]
+          "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Ruptura Heterolítica C—Cl",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
         "semiStep": "[CH₃CH₂—NH₂ ··· CH₂(CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH—CH₂—CH₃ + HCl",
-        "desc": "Se forma el segundo enlace C—N en verde punteado mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion Cl⁻.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: segundo enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el segundo enlace N—C en verde punteado mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion Cl⁻ hacia la derecha.",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: segundo enlace N—C.", "movement": "Ataque dorsal a 180° y salida de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 320 },
+            { "id": "R2", "el": "CH₃CH₂", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 325, "y": 320 },
             { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -676,8 +679,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 365, "y1": 195, "cx": 430, "cy": 165, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" },
-            { "x1": 575, "y1": 165, "cx": 615, "cy": 125, "x2": 648, "y2": 100, "type": "full", "label": "Sale Cl⁻" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -685,17 +688,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Dietilamonio ((CH₃CH₂)₂NH₂⁺ Cl⁻)",
         "semiStep": "CH₃—CH₂—NH₂⁺—CH₂—CH₃  Cl⁻",
         "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH—CH₂—CH₃ + HCl",
-        "desc": "Se consolida el segundo enlace C—N formando el cloruro de dietilamonio; el contraión Cl⁻ se acerca al protón del nitrógeno.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N consolidado.", "movement": "Aproximación de Cl⁻ al protón ácido." },
+        "desc": "Se consolida el segundo enlace N—C formando el cloruro de dietilamonio; el contraión Cl⁻ se sitúa arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C consolidado.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de dietilamonio" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215 },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 325, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de dietilamonio" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -710,28 +713,28 @@
         "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Formación de H—Cl)",
         "semiStep": "(CH₃CH₂)₂NH ┆—┆ H ··· Cl",
         "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—NH—CH₂—CH₃ + HCl",
-        "desc": "El ion cloruro captura un protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
+        "desc": "El ion cloruro captura el protón H⁺ superior rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
         "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón hacia Cl⁻." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 325, "border": "#ef4444" },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 325, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
+            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "breaking" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn1", "order": 1, "state": "breaking" },
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 470, "y1": 310, "cx": 420, "cy": 285, "x2": 370, "y2": 315, "type": "full", "label": "Captura H⁺" }
+            { "x1": 490, "y1": 90, "cx": 435, "cy": 65, "x2": 380, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -744,19 +747,19 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Dietilamina (Amina 2°)" },
-            { "id": "Hn1", "el": "H", "x": 310, "y": 105 },
+            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Dietilamina (2°)" },
+            { "id": "Hn2", "el": "H", "x": 310, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 465, "y": 215, "highlight": "#10b981" },
             { "id": "R1", "el": "CH₃", "x": 605, "y": 215 },
-            { "id": "Hn2", "el": "H", "x": 755, "y": 215, "border": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 755, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 875, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "new" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "new" }
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "new" }
           ],
           "texts": [{ "x": 680, "y": 222, "text": "+" }]
         }
@@ -767,16 +770,16 @@
         "title": "Paso 1 — Estado Inicial Intacto: Metilamina (Amina 1°) + Bromometano",
         "semiStep": "CH₃—NH₂  +  CH₃—Br",
         "semiGlobal": "CH₃—NH₂ + CH₃—Br ──(SN2)──► CH₃—NH—CH₃ + HBr",
-        "desc": "La metilamina (amina primaria) frente al bromometano.",
+        "desc": "La metilamina (amina primaria) a la izquierda frente al bromometano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la metilamina al bromometano." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 315, "y": 215, "label": "Metilamina (1°)" },
+            { "id": "N1", "el": "N", "x": 315, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 315, "y": 110 },
             { "id": "Hn2", "el": "H", "x": 315, "y": 320 },
             { "id": "C1", "el": "CH₃", "x": 555, "y": 215 },
-            { "id": "Br1", "el": "Br", "x": 705, "y": 215 }
+            { "id": "Br1", "el": "Br", "x": 715, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -788,19 +791,19 @@
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida del Ion Bromuro (Br⁻)",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Br (Sin Cruces)",
         "semiStep": "[CH₃—NH₂ ··· CH₃ ┆—┆ Br]‡",
         "semiGlobal": "CH₃—NH₂ + CH₃—Br ──(SN2)──► CH₃—NH—CH₃ + HBr",
-        "desc": "Se forma el segundo enlace C—N en verde punteado mientras sale el ion bromuro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el segundo enlace N—C en verde punteado mientras sale el ion bromuro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Br.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Br⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 320 },
-            { "id": "C1", "el": "CH₃", "x": 535, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "Br1", "el": "Br", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Br⁻" }
+            { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 325, "y": 320 },
+            { "id": "C1", "el": "CH₃", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "Br1", "el": "Br", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Br⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -810,7 +813,8 @@
             { "from": "C1", "to": "Br1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 375, "y1": 195, "cx": 440, "cy": 165, "x2": 505, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Br⁻" }
           ]
         }
       },
@@ -818,16 +822,16 @@
         "title": "Paso 3 — Intermediario Sal: Bromuro de Dimetilamonio ((CH₃)₂NH₂⁺ Br⁻)",
         "semiStep": "CH₃—NH₂⁺—CH₃  Br⁻",
         "semiGlobal": "CH₃—NH₂ + CH₃—Br ──(SN2)──► CH₃—NH—CH₃ + HBr",
-        "desc": "Se consolida el bromuro de dimetilamonio y el ion Br⁻ se aproxima al hidrógeno ácido.",
-        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Br⁻ al protón." },
+        "desc": "Se consolida el bromuro de dimetilamonio y el ion Br⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Br escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Br⁻ al protón superior." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Bromuro de dimetilamonio" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
-            { "id": "C1", "el": "CH₃", "x": 515, "y": 215 },
-            { "id": "Br1", "el": "Br", "x": 515, "y": 325, "charge": "-", "highlight": "#38bdf8", "label": "Ion bromuro (Br⁻)" }
+            { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "N1", "el": "N", "x": 365, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Bromuro de dimetilamonio" },
+            { "id": "Hn1", "el": "H", "x": 365, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 365, "y": 325 },
+            { "id": "C1", "el": "CH₃", "x": 545, "y": 215 },
+            { "id": "Br1", "el": "Br", "x": 545, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Br⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -841,26 +845,26 @@
         "title": "Paso 4 — Captura de Protón por el Ion Bromuro (Formación de H—Br)",
         "semiStep": "(CH₃)₂NH ┆—┆ H ··· Br",
         "semiGlobal": "CH₃—NH₂ + CH₃—Br ──(SN2)──► CH₃—NH—CH₃ + HBr",
-        "desc": "El ion bromuro captura un protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Br.",
+        "desc": "El ion bromuro captura el protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Br.",
         "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Br.", "movement": "Transferencia de protón." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 325, "border": "#ef4444" },
-            { "id": "C1", "el": "CH₃", "x": 515, "y": 215, "highlight": "#10b981" },
-            { "id": "Br1", "el": "Br", "x": 515, "y": 325, "highlight": "#38bdf8" }
+            { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "N1", "el": "N", "x": 365, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 365, "y": 105, "border": "#ef4444" },
+            { "id": "Hn2", "el": "H", "x": 365, "y": 325 },
+            { "id": "C1", "el": "CH₃", "x": 545, "y": 215, "highlight": "#10b981" },
+            { "id": "Br1", "el": "Br", "x": 545, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "breaking" },
-            { "from": "Hn2", "to": "Br1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn1", "order": 1, "state": "breaking" },
+            { "from": "Hn1", "to": "Br1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 480, "y1": 310, "cx": 430, "cy": 285, "x2": 380, "y2": 315, "type": "full", "label": "Captura H⁺" }
+            { "x1": 510, "y1": 90, "cx": 455, "cy": 65, "x2": 400, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -873,17 +877,17 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
-            { "id": "N1", "el": "N", "x": 355, "y": 215, "highlight": "#10b981", "label": "Dimetilamina (Amina 2°)" },
-            { "id": "Hn1", "el": "H", "x": 355, "y": 105 },
+            { "id": "N1", "el": "N", "x": 355, "y": 215, "highlight": "#10b981", "label": "Dimetilamina (2°)" },
+            { "id": "Hn2", "el": "H", "x": 355, "y": 325 },
             { "id": "C1", "el": "CH₃", "x": 525, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn2", "el": "H", "x": 725, "y": 215, "border": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 725, "y": 215, "border": "#10b981" },
             { "id": "Br1", "el": "Br", "x": 855, "y": 215, "highlight": "#10b981", "label": "HBr" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "new" },
-            { "from": "Hn2", "to": "Br1", "order": 1, "state": "new" }
+            { "from": "Hn1", "to": "Br1", "order": 1, "state": "new" }
           ],
           "texts": [{ "x": 635, "y": 222, "text": "+" }]
         }
@@ -894,43 +898,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Metilamina (Amina 1°) + Cloroetano",
         "semiStep": "CH₃—NH₂  +  CH₃—CH₂—Cl",
         "semiGlobal": "CH₃—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—NH—CH₂—CH₃ + HCl",
-        "desc": "La metilamina (amina primaria) frente al cloroetano.",
+        "desc": "La metilamina (amina primaria) a la izquierda frente al cloroetano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de metilamina al cloroetano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 305, "y": 215, "label": "Metilamina (1°)" },
+            { "id": "R2", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 305, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 305, "y": 110 },
             { "id": "Hn2", "el": "H", "x": 305, "y": 320 },
-            { "id": "R1", "el": "CH₃", "x": 525, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 670, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 415, "y": 222, "text": "+" }]
+          "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida de Cl⁻",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
         "semiStep": "[CH₃—NH₂ ··· CH₂(CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "CH₃—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—NH—CH₂—CH₃ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el ion cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el enlace N—C en verde punteado mientras sale el ion cloruro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 320 },
+            { "id": "R2", "el": "CH₃", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 325, "y": 320 },
             { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -941,7 +945,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 365, "y1": 195, "cx": 430, "cy": 165, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -949,17 +954,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Etilmetilamonio",
         "semiStep": "CH₃—NH₂⁺—CH₂—CH₃  Cl⁻",
         "semiGlobal": "CH₃—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—NH—CH₂—CH₃ + HCl",
-        "desc": "Se consolida el cloruro de etilmetilamonio y el ion Cl⁻ se acerca al protón ácido.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de etilmetilamonio y el ion Cl⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de etilmetilamonio" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215 },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 325, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de etilmetilamonio" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -974,28 +979,28 @@
         "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Formación de H—Cl)",
         "semiStep": "CH₃—NH(CH₂CH₃) ┆—┆ H ··· Cl",
         "semiGlobal": "CH₃—NH₂ + CH₃—CH₂—Cl ──(SN2)──► CH₃—NH—CH₂—CH₃ + HCl",
-        "desc": "El ion cloruro captura un protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
-        "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón." },
+        "desc": "El ion cloruro captura el protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
+        "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón hacia Cl⁻." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 335, "y": 325, "border": "#ef4444" },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 325, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
+            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "breaking" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn1", "order": 1, "state": "breaking" },
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 470, "y1": 310, "cx": 420, "cy": 285, "x2": 370, "y2": 315, "type": "full", "label": "Captura H⁺" }
+            { "x1": 490, "y1": 90, "cx": 435, "cy": 65, "x2": 380, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1008,19 +1013,19 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Etilmetilamina (Amina 2°)" },
-            { "id": "Hn1", "el": "H", "x": 310, "y": 105 },
+            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Etilmetilamina (2°)" },
+            { "id": "Hn2", "el": "H", "x": 310, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 465, "y": 215, "highlight": "#10b981" },
             { "id": "R1", "el": "CH₃", "x": 605, "y": 215 },
-            { "id": "Hn2", "el": "H", "x": 755, "y": 215, "border": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 755, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 875, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "new" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "new" }
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "new" }
           ],
           "texts": [{ "x": 680, "y": 222, "text": "+" }]
         }
@@ -1031,43 +1036,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Isopropilamina (Amina 1°) + 1-Cloropropano",
         "semiStep": "(CH₃)₂CH—NH₂  +  CH₃—CH₂—CH₂—Cl",
         "semiGlobal": "(CH₃)₂CH—NH₂ + CH₃—CH₂—CH₂—Cl ──(SN2)──► (CH₃)₂CH—NH—CH₂—CH₂—CH₃ + HCl",
-        "desc": "La isopropilamina (amina primaria) frente al 1-cloropropano.",
+        "desc": "La isopropilamina (amina primaria) a la izquierda frente al 1-cloropropano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de isopropilamina al 1-cloropropano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH(CH₃)₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 315, "y": 215, "label": "Isopropilamina (1°)" },
+            { "id": "R2", "el": "CH(CH₃)₂", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 315, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 315, "y": 110 },
             { "id": "Hn2", "el": "H", "x": 315, "y": 320 },
-            { "id": "R1", "el": "CH₃CH₂", "x": 535, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 685, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 815, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
           "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida de Cl⁻",
-        "semiStep": "[(CH₃)₂CH—NH₂ ··· CH₂CH₂CH₃ ┆—┆ Cl]‡",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
+        "semiStep": "[(CH₃)₂CH—NH₂ ··· CH₂(CH₂CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "(CH₃)₂CH—NH₂ + CH₃—CH₂—CH₂—Cl ──(SN2)──► (CH₃)₂CH—NH—CH₂—CH₂—CH₃ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el enlace N—C en verde punteado mientras sale el ion cloruro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH(CH₃)₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 110 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 320 },
+            { "id": "R2", "el": "CH(CH₃)₂", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
+            { "id": "Hn2", "el": "H", "x": 335, "y": 320 },
             { "id": "C1", "el": "CH₂", "x": 535, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 695, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 685, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₂CH₃", "x": 535, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 735, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1078,7 +1083,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 375, "y1": 195, "cx": 440, "cy": 165, "x2": 505, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 375, "y1": 195, "cx": 435, "cy": 160, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 605, "y1": 195, "cx": 650, "cy": 165, "x2": 695, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -1086,17 +1092,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Isopropilpropilamonio",
         "semiStep": "(CH₃)₂CH—NH₂⁺—CH₂—CH₂—CH₃  Cl⁻",
         "semiGlobal": "(CH₃)₂CH—NH₂ + CH₃—CH₂—CH₂—Cl ──(SN2)──► (CH₃)₂CH—NH—CH₂—CH₂—CH₃ + HCl",
-        "desc": "Se consolida el cloruro de isopropilpropilamonio y el ion Cl⁻ se acerca al protón ácido.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de isopropilpropilamonio y el ion Cl⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH(CH₃)₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de dialquilamonio" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 515, "y": 215 },
-            { "id": "R1", "el": "CH₃CH₂", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 515, "y": 325, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 355, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de dialquilamonio" },
+            { "id": "Hn1", "el": "H", "x": 355, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 355, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 535, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 695, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 535, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1111,28 +1117,28 @@
         "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Formación de H—Cl)",
         "semiStep": "(CH₃)₂CH—NH(C₃H₇) ┆—┆ H ··· Cl",
         "semiGlobal": "(CH₃)₂CH—NH₂ + CH₃—CH₂—CH₂—Cl ──(SN2)──► (CH₃)₂CH—NH—CH₂—CH₂—CH₃ + HCl",
-        "desc": "El ion cloruro captura un protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
-        "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón." },
+        "desc": "El ion cloruro captura el protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
+        "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón hacia Cl⁻." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH(CH₃)₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
-            { "id": "Hn2", "el": "H", "x": 345, "y": 325, "border": "#ef4444" },
-            { "id": "C1", "el": "CH₂", "x": 515, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 515, "y": 325, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 355, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 355, "y": 105, "border": "#ef4444" },
+            { "id": "Hn2", "el": "H", "x": 355, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 535, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₂CH₃", "x": 695, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 535, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn2", "order": 1, "state": "breaking" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn1", "order": 1, "state": "breaking" },
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "forming" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 480, "y1": 310, "cx": 430, "cy": 285, "x2": 380, "y2": 315, "type": "full", "label": "Captura H⁺" }
+            { "x1": 500, "y1": 90, "cx": 445, "cy": 65, "x2": 390, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1146,18 +1152,18 @@
           "atoms": [
             { "id": "R2", "el": "CH(CH₃)₂", "x": 150, "y": 215 },
             { "id": "N1", "el": "N", "x": 315, "y": 215, "highlight": "#10b981", "label": "Isopropilpropilamina (2°)" },
-            { "id": "Hn1", "el": "H", "x": 315, "y": 105 },
+            { "id": "Hn2", "el": "H", "x": 315, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 465, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 615, "y": 215 },
-            { "id": "Hn2", "el": "H", "x": 765, "y": 215, "border": "#10b981" },
+            { "id": "R1", "el": "CH₂CH₃", "x": 615, "y": 215 },
+            { "id": "Hn1", "el": "H", "x": 765, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 885, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
-            { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
+            { "from": "N1", "to": "Hn2", "order": 1, "state": "normal" },
             { "from": "N1", "to": "C1", "order": 1, "state": "new" },
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
-            { "from": "Hn2", "to": "Cl1", "order": 1, "state": "new" }
+            { "from": "Hn1", "to": "Cl1", "order": 1, "state": "new" }
           ],
           "texts": [{ "x": 690, "y": 222, "text": "+" }]
         }
@@ -1168,43 +1174,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Dietilamina (Amina 2°) + Cloroetano",
         "semiStep": "CH₃—CH₂—NH—CH₂—CH₃  +  CH₃—CH₂—Cl",
         "semiGlobal": "(CH₃—CH₂)₂NH + CH₃—CH₂—Cl ──(SN2)──► (CH₃—CH₂)₃N + HCl",
-        "desc": "La dietilamina (amina secundaria) ataca con el par libre de su nitrógeno al carbono electrofílico del cloroetano.",
+        "desc": "La dietilamina (amina secundaria) a la izquierda frente al cloroetano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la dietilamina al cloroetano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 305, "y": 215, "label": "Dietilamina (2°)" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 305, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 305, "y": 110 },
             { "id": "R3", "el": "CH₂CH₃", "x": 305, "y": 325 },
-            { "id": "R1", "el": "CH₃", "x": 525, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 670, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "R3", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 415, "y": 222, "text": "+" }]
+          "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida del Ion Cloruro (Cl⁻)",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
         "semiStep": "[(CH₃CH₂)₂NH ··· CH₂(CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "(CH₃—CH₂)₂NH + CH₃—CH₂—Cl ──(SN2)──► (CH₃—CH₂)₃N + HCl",
-        "desc": "Se forma el tercer enlace C—N en verde punteado mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion Cl⁻.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: tercer enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el tercer enlace N—C en verde punteado mientras sale el ion cloruro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: tercer enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
-            { "id": "R3", "el": "CH₂CH₃", "x": 335, "y": 325 },
+            { "id": "R2", "el": "CH₃CH₂", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "R3", "el": "CH₂CH₃", "x": 325, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1215,8 +1221,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 365, "y1": 195, "cx": 430, "cy": 165, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" },
-            { "x1": 575, "y1": 165, "cx": 615, "cy": 125, "x2": 648, "y2": 100, "type": "full", "label": "Sale Cl⁻" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -1224,17 +1230,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Trietilamonio ((CH₃CH₂)₃NH⁺ Cl⁻)",
         "semiStep": "(CH₃—CH₂)₃NH⁺  Cl⁻",
         "semiGlobal": "(CH₃—CH₂)₂NH + CH₃—CH₂—Cl ──(SN2)──► (CH₃—CH₂)₃N + HCl",
-        "desc": "Se consolida el tercer enlace C—N formando el cloruro de trietilamonio; el ion cloruro (Cl⁻) se aproxima al protón del nitrógeno.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: tercer enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el tercer enlace N—C formando el cloruro de trietilamonio; el ion cloruro (Cl⁻) se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: tercer enlace N—C.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de trietilamonio" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "R3", "el": "CH₂CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215 },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de trietilamonio" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
+            { "id": "R3", "el": "CH₂CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1249,17 +1255,17 @@
         "title": "Paso 4 — Captura de Protón por el Ion Cloruro (Formación de H—Cl)",
         "semiStep": "(CH₃CH₂)₃N ┆—┆ H ··· Cl",
         "semiGlobal": "(CH₃—CH₂)₂NH + CH₃—CH₂—Cl ──(SN2)──► (CH₃—CH₂)₃N + HCl",
-        "desc": "El ion cloruro captura el último protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
+        "desc": "El ion cloruro captura el protón H⁺ rompiéndose en rojo punteado el enlace N—H y formándose en verde punteado el enlace H—Cl.",
         "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—Cl.", "movement": "Transferencia de protón hacia Cl⁻." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105, "border": "#ef4444" },
-            { "id": "R3", "el": "CH₂CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
+            { "id": "R3", "el": "CH₂CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1270,7 +1276,7 @@
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 470, "y1": 95, "cx": 420, "cy": 70, "x2": 370, "y2": 95, "type": "full", "label": "Captura H⁺" }
+            { "x1": 490, "y1": 90, "cx": 435, "cy": 65, "x2": 380, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1283,7 +1289,7 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Trietilamina (Amina 3°)" },
+            { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Trietilamina (3°)" },
             { "id": "R3", "el": "CH₂CH₃", "x": 310, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 465, "y": 215, "highlight": "#10b981" },
             { "id": "R1", "el": "CH₃", "x": 605, "y": 215 },
@@ -1306,16 +1312,16 @@
         "title": "Paso 1 — Estado Inicial Intacto: Dimetilamina (Amina 2°) + Yodometano",
         "semiStep": "CH₃—NH—CH₃  +  CH₃—I",
         "semiGlobal": "(CH₃)₂NH + CH₃—I ──(SN2)──► (CH₃)₃N + HI",
-        "desc": "La dimetilamina (amina secundaria) frente al yodometano.",
+        "desc": "La dimetilamina (amina secundaria) a la izquierda frente al yodometano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la dimetilamina al yodometano." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 315, "y": 215, "label": "Dimetilamina (2°)" },
+            { "id": "N1", "el": "N", "x": 315, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 315, "y": 110 },
             { "id": "R3", "el": "CH₃", "x": 315, "y": 325 },
             { "id": "C1", "el": "CH₃", "x": 555, "y": 215 },
-            { "id": "I1", "el": "I", "x": 705, "y": 215 }
+            { "id": "I1", "el": "I", "x": 715, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1327,19 +1333,19 @@
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida del Ion Yoduro (I⁻)",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—I (Sin Cruces)",
         "semiStep": "[(CH₃)₂NH ··· CH₃ ┆—┆ I]‡",
         "semiGlobal": "(CH₃)₂NH + CH₃—I ──(SN2)──► (CH₃)₃N + HI",
-        "desc": "Se forma el tercer enlace C—N en verde punteado mientras sale el ion yoduro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—I.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el tercer enlace N—C en verde punteado mientras sale el ion yoduro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—I.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de I⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 110 },
-            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
-            { "id": "C1", "el": "CH₃", "x": 535, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "I1", "el": "I", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale I⁻" }
+            { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "R3", "el": "CH₃", "x": 325, "y": 325 },
+            { "id": "C1", "el": "CH₃", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
+            { "id": "I1", "el": "I", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale I⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1349,7 +1355,8 @@
             { "from": "C1", "to": "I1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 375, "y1": 195, "cx": 440, "cy": 165, "x2": 505, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale I⁻" }
           ]
         }
       },
@@ -1357,16 +1364,16 @@
         "title": "Paso 3 — Intermediario Sal: Yoduro de Trimetilamonio ((CH₃)₃NH⁺ I⁻)",
         "semiStep": "(CH₃)₃NH⁺  I⁻",
         "semiGlobal": "(CH₃)₂NH + CH₃—I ──(SN2)──► (CH₃)₃N + HI",
-        "desc": "Se consolida el yoduro de trimetilamonio y el ion I⁻ se acerca al protón del nitrógeno.",
-        "legend": { "breaking": "Enlace C—I escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de I⁻ al protón." },
+        "desc": "Se consolida el yoduro de trimetilamonio y el ion I⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—I escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de I⁻ al protón superior." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Yoduro de trimetilamonio" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
-            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
-            { "id": "C1", "el": "CH₃", "x": 515, "y": 215 },
-            { "id": "I1", "el": "I", "x": 515, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion yoduro (I⁻)" }
+            { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "N1", "el": "N", "x": 365, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Yoduro de trimetilamonio" },
+            { "id": "Hn1", "el": "H", "x": 365, "y": 105 },
+            { "id": "R3", "el": "CH₃", "x": 365, "y": 325 },
+            { "id": "C1", "el": "CH₃", "x": 545, "y": 215 },
+            { "id": "I1", "el": "I", "x": 545, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion I⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1384,12 +1391,12 @@
         "legend": { "breaking": "En ROJO punteado: enlace N—H.", "forming": "En VERDE punteado: enlace H—I.", "movement": "Transferencia de protón hacia I⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 175, "y": 215 },
-            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
-            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
-            { "id": "C1", "el": "CH₃", "x": 515, "y": 215, "highlight": "#10b981" },
-            { "id": "I1", "el": "I", "x": 515, "y": 105, "highlight": "#38bdf8" }
+            { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
+            { "id": "N1", "el": "N", "x": 365, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 365, "y": 105, "border": "#ef4444" },
+            { "id": "R3", "el": "CH₃", "x": 365, "y": 325 },
+            { "id": "C1", "el": "CH₃", "x": 545, "y": 215, "highlight": "#10b981" },
+            { "id": "I1", "el": "I", "x": 545, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1399,7 +1406,7 @@
             { "from": "N1", "to": "C1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 480, "y1": 95, "cx": 430, "cy": 70, "x2": 380, "y2": 95, "type": "full", "label": "Captura H⁺" }
+            { "x1": 510, "y1": 90, "cx": 455, "cy": 65, "x2": 400, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1412,7 +1419,7 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 185, "y": 215 },
-            { "id": "N1", "el": "N", "x": 355, "y": 215, "highlight": "#10b981", "label": "Trimetilamina (Amina 3°)" },
+            { "id": "N1", "el": "N", "x": 355, "y": 215, "highlight": "#10b981", "label": "Trimetilamina (3°)" },
             { "id": "R3", "el": "CH₃", "x": 355, "y": 325 },
             { "id": "C1", "el": "CH₃", "x": 525, "y": 215, "highlight": "#10b981" },
             { "id": "Hn1", "el": "H", "x": 725, "y": 215, "border": "#10b981" },
@@ -1433,43 +1440,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Dimetilamina (Amina 2°) + Cloroetano",
         "semiStep": "CH₃—NH—CH₃  +  CH₃—CH₂—Cl",
         "semiGlobal": "(CH₃)₂NH + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—N(CH₃)₂ + HCl",
-        "desc": "La dimetilamina (amina secundaria) frente al cloroetano.",
+        "desc": "La dimetilamina (amina secundaria) a la izquierda frente al cloroetano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la dimetilamina al cloroetano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 305, "y": 215, "label": "Dimetilamina (2°)" },
+            { "id": "R2", "el": "CH₃", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 305, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 305, "y": 110 },
             { "id": "R3", "el": "CH₃", "x": 305, "y": 325 },
-            { "id": "R1", "el": "CH₃", "x": 525, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 670, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 805, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "R3", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
-          "texts": [{ "x": 415, "y": 222, "text": "+" }]
+          "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida de Cl⁻",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
         "semiStep": "[(CH₃)₂NH ··· CH₂(CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "(CH₃)₂NH + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—N(CH₃)₂ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el enlace N—C en verde punteado mientras sale el ion cloruro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
+            { "id": "R2", "el": "CH₃", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "R3", "el": "CH₃", "x": 325, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1480,7 +1487,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 365, "y1": 195, "cx": 430, "cy": 165, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -1488,17 +1496,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Etildimetilamonio",
         "semiStep": "CH₃—CH₂—NH⁺(CH₃)₂  Cl⁻",
         "semiGlobal": "(CH₃)₂NH + CH₃—CH₂—Cl ──(SN2)──► CH₃—CH₂—N(CH₃)₂ + HCl",
-        "desc": "Se consolida el cloruro de etildimetilamonio y el ion Cl⁻ se acerca al protón ácido.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de etildimetilamonio y el ion Cl⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de etildimetilamonio" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215 },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de etildimetilamonio" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
+            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1518,12 +1526,12 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105, "border": "#ef4444" },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃", "x": 655, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
+            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₃", "x": 675, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1534,7 +1542,7 @@
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 470, "y1": 95, "cx": 420, "cy": 70, "x2": 370, "y2": 95, "type": "full", "label": "Captura H⁺" }
+            { "x1": 490, "y1": 90, "cx": 435, "cy": 65, "x2": 380, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1570,43 +1578,43 @@
         "title": "Paso 1 — Estado Inicial Intacto: Etilmetilamina (Amina 2°) + 1-Cloropropano",
         "semiStep": "CH₃—CH₂—NH—CH₃  +  CH₃—CH₂—CH₂—Cl",
         "semiGlobal": "CH₃CH₂NHCH₃ + CH₃CH₂CH₂Cl ──(SN2)──► CH₃CH₂CH₂N(CH₃)CH₂CH₃ + HCl",
-        "desc": "La etilmetilamina (amina secundaria mixta) frente al 1-cloropropano.",
+        "desc": "La etilmetilamina (amina secundaria mixta) a la izquierda frente al 1-cloropropano a la derecha.",
         "legend": { "breaking": "Sin ruptura inicial.", "forming": "Sin enlace nuevo.", "movement": "Aproximación de la etilmetilamina al 1-cloropropano." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 150, "y": 215 },
-            { "id": "N1", "el": "N", "x": 305, "y": 215, "label": "Etilmetilamina (2°)" },
+            { "id": "R2", "el": "CH₃CH₂", "x": 145, "y": 215 },
+            { "id": "N1", "el": "N", "x": 305, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 305, "y": 110 },
             { "id": "R3", "el": "CH₃", "x": 305, "y": 325 },
-            { "id": "R1", "el": "CH₃CH₂", "x": 535, "y": 215 },
-            { "id": "C1", "el": "CH₂", "x": 685, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 815, "y": 215 }
+            { "id": "C1", "el": "CH₂", "x": 545, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 545, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 705, "y": 215 }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "Hn1", "order": 1, "state": "normal" },
             { "from": "N1", "to": "R3", "order": 1, "state": "normal" },
-            { "from": "R1", "to": "C1", "order": 1, "state": "normal" },
+            { "from": "C1", "to": "R1", "order": 1, "state": "normal" },
             { "from": "C1", "to": "Cl1", "order": 1, "state": "normal" }
           ],
           "texts": [{ "x": 425, "y": 222, "text": "+" }]
         }
       },
       {
-        "title": "Paso 2 — Ataque Nucleofílico SN2 y Salida de Cl⁻",
-        "semiStep": "[CH₃CH₂NH(CH₃) ··· CH₂CH₂CH₃ ┆—┆ Cl]‡",
+        "title": "Paso 2 — Ataque Dorsal SN2 y Ruptura Heterolítica C—Cl (Sin Cruces)",
+        "semiStep": "[CH₃CH₂NH(CH₃) ··· CH₂(CH₂CH₃) ┆—┆ Cl]‡",
         "semiGlobal": "CH₃CH₂NHCH₃ + CH₃CH₂CH₂Cl ──(SN2)──► CH₃CH₂CH₂N(CH₃)CH₂CH₃ + HCl",
-        "desc": "Se forma el enlace C—N en verde punteado mientras sale el cloruro en rojo punteado.",
-        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace C—N.", "movement": "Ataque SN2 concertado." },
+        "desc": "Se forma el enlace N—C en verde punteado mientras sale el ion cloruro en línea recta hacia la derecha (rojo punteado).",
+        "legend": { "breaking": "En ROJO punteado: enlace C—Cl.", "forming": "En VERDE punteado: enlace N—C.", "movement": "Ataque dorsal a 180° y salida limpia de Cl⁻." },
         "scene": {
           "atoms": [
-            { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#38bdf8" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 110 },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
+            { "id": "R2", "el": "CH₃CH₂", "x": 155, "y": 215 },
+            { "id": "N1", "el": "N", "x": 325, "y": 215, "highlight": "#38bdf8" },
+            { "id": "Hn1", "el": "H", "x": 325, "y": 110 },
+            { "id": "R3", "el": "CH₃", "x": 325, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "charge": "δ+", "highlight": "#fbbf24" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 685, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 675, "y": 85, "charge": "-", "border": "#ef4444", "label": "Sale Cl⁻" }
+            { "id": "R1", "el": "CH₂CH₃", "x": 525, "y": 320 },
+            { "id": "Cl1", "el": "Cl", "x": 725, "y": 215, "charge": "δ-", "border": "#ef4444", "label": "Sale Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1617,7 +1625,8 @@
             { "from": "C1", "to": "Cl1", "order": 1, "state": "breaking" }
           ],
           "arrows": [
-            { "x1": 365, "y1": 195, "cx": 430, "cy": 165, "x2": 495, "y2": 195, "type": "full", "label": "Ataque SN2" }
+            { "x1": 365, "y1": 195, "cx": 425, "cy": 160, "x2": 485, "y2": 195, "type": "full", "label": "Ataque SN2" },
+            { "x1": 595, "y1": 195, "cx": 640, "cy": 165, "x2": 685, "y2": 195, "type": "full", "label": "Sale Cl⁻" }
           ]
         }
       },
@@ -1625,17 +1634,17 @@
         "title": "Paso 3 — Intermediario Sal: Cloruro de Etilmetilpropilamonio",
         "semiStep": "CH₃CH₂CH₂—NH⁺(CH₃)(CH₂CH₃)  Cl⁻",
         "semiGlobal": "CH₃CH₂NHCH₃ + CH₃CH₂CH₂Cl ──(SN2)──► CH₃CH₂CH₂N(CH₃)CH₂CH₃ + HCl",
-        "desc": "Se consolida el cloruro de etilmetilpropilamonio y el ion Cl⁻ se acerca al protón del nitrógeno.",
-        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace C—N.", "movement": "Aproximación de Cl⁻ al protón." },
+        "desc": "Se consolida el cloruro de etilmetilpropilamonio y el ion Cl⁻ se posiciona arriba a la derecha junto al protón ácido.",
+        "legend": { "breaking": "Enlace C—Cl escindido.", "forming": "En VERDE sólido: enlace N—C.", "movement": "Aproximación de Cl⁻ al protón superior." },
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de trialquilamonio" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105 },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215 },
-            { "id": "R1", "el": "CH₃CH₂", "x": 665, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion cloruro (Cl⁻)" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "charge": "+", "highlight": "#fbbf24", "label": "Cloruro de trialquilamonio" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105 },
+            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 685, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "charge": "-", "highlight": "#38bdf8", "label": "Ion Cl⁻" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1655,12 +1664,12 @@
         "scene": {
           "atoms": [
             { "id": "R2", "el": "CH₃CH₂", "x": 165, "y": 215 },
-            { "id": "N1", "el": "N", "x": 335, "y": 215, "highlight": "#10b981" },
-            { "id": "Hn1", "el": "H", "x": 335, "y": 105, "border": "#ef4444" },
-            { "id": "R3", "el": "CH₃", "x": 335, "y": 325 },
-            { "id": "C1", "el": "CH₂", "x": 505, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 665, "y": 215 },
-            { "id": "Cl1", "el": "Cl", "x": 505, "y": 105, "highlight": "#38bdf8" }
+            { "id": "N1", "el": "N", "x": 345, "y": 215, "highlight": "#10b981" },
+            { "id": "Hn1", "el": "H", "x": 345, "y": 105, "border": "#ef4444" },
+            { "id": "R3", "el": "CH₃", "x": 345, "y": 325 },
+            { "id": "C1", "el": "CH₂", "x": 525, "y": 215, "highlight": "#10b981" },
+            { "id": "R1", "el": "CH₂CH₃", "x": 685, "y": 215 },
+            { "id": "Cl1", "el": "Cl", "x": 525, "y": 105, "highlight": "#38bdf8" }
           ],
           "bonds": [
             { "from": "R2", "to": "N1", "order": 1, "state": "normal" },
@@ -1671,7 +1680,7 @@
             { "from": "C1", "to": "R1", "order": 1, "state": "normal" }
           ],
           "arrows": [
-            { "x1": 470, "y1": 95, "cx": 420, "cy": 70, "x2": 370, "y2": 95, "type": "full", "label": "Captura H⁺" }
+            { "x1": 490, "y1": 90, "cx": 435, "cy": 65, "x2": 380, "y2": 90, "type": "full", "label": "Captura H⁺" }
           ]
         }
       },
@@ -1687,7 +1696,7 @@
             { "id": "N1", "el": "N", "x": 310, "y": 215, "highlight": "#10b981", "label": "Etilmetilpropilamina (3°)" },
             { "id": "R3", "el": "CH₃", "x": 310, "y": 325 },
             { "id": "C1", "el": "CH₂", "x": 465, "y": 215, "highlight": "#10b981" },
-            { "id": "R1", "el": "CH₃CH₂", "x": 615, "y": 215 },
+            { "id": "R1", "el": "CH₂CH₃", "x": 615, "y": 215 },
             { "id": "Hn1", "el": "H", "x": 765, "y": 215, "border": "#10b981" },
             { "id": "Cl1", "el": "Cl", "x": 885, "y": 215, "highlight": "#10b981", "label": "HCl" }
           ],
