@@ -4752,7 +4752,16 @@
                         const ang = startAng + ((2 * Math.PI) / sides) * k;
                         const vx = Math.round(rcx + Math.cos(ang) * (R * 0.90));
                         const vy = Math.round(rcy + Math.sin(ang) * R);
-                        atoms.push({ id: `SR_${uniqueTag}_${k}`, el: 'C', x: vx, y: vy, noValenceDots: true });
+                        // En el vértice k === 0 se une a la cadena principal (tiene 1 H menos)
+                        let vLabel = 'CH₂';
+                        if (spec.aromatic) {
+                            vLabel = (k === 0) ? 'C' : 'CH';
+                        } else if (spec.doubleSide === k || (spec.doubleSide !== -1 && (spec.doubleSide + 1) % sides === k)) {
+                            vLabel = (k === 0) ? 'C' : 'CH';
+                        } else {
+                            vLabel = (k === 0) ? 'CH' : 'CH₂';
+                        }
+                        atoms.push({ id: `SR_${uniqueTag}_${k}`, el: vLabel, x: vx, y: vy, noValenceDots: true });
                     }
 
                     for (let k = 0; k < sides; k++) {
