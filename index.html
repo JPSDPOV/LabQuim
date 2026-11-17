@@ -4488,22 +4488,20 @@
                     bonds.push({ from: `V${k + 1}`, to: `V${next + 1}`, order: (k % 2 === 0) ? 2 : 1 });
                 }
 
-                // Dividir por cada bloque "-posiciones-" (ej. "-1-OH-2,4,6-NO2" -> ["1", "OH", "2,4,6", "NO2"])
                 const rest = s.replace(/^AROM-(?:BENCENO)?/, '').replace(/^-+/, '');
                 if (rest) {
                     const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
                     let sIdx = 0;
                     parts.forEach(part => {
                         const dashIdx = part.indexOf('-');
-                        if (dashIdx === -1) return;
-                        const posStr = part.slice(0, dashIdx);
-                        const rawGrp = part.slice(dashIdx + 1);
+                        // Si no trae número de posición (ej. "AROM-OH"), asumir posición 1
+                        const posStr = dashIdx === -1 ? '1' : part.slice(0, dashIdx);
+                        const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
                         const positions = posStr.split(',').map(Number);
 
                         positions.forEach(pos => {
                             const v = verts[(pos - 1) % 6];
                             if (!v) return;
-                            // Orientar grupos poliatómicos hacia la izquierda (pos 5 y 6) para que el enlace conecte al átomo correcto (ej. O2N- en pos 6)
                             let grp = rawGrp
                                 .replace(/CH3/g, 'CH₃')
                                 .replace(/CH2/g, 'CH₂')
@@ -4565,9 +4563,9 @@
                     let subCount = 0;
                     parts.forEach(part => {
                         const dashIdx = part.indexOf('-');
-                        if (dashIdx === -1) return;
-                        const posStr = part.slice(0, dashIdx);
-                        const rawGrp = part.slice(dashIdx + 1);
+                        // Si no trae número de posición (ej. "CICLO-6-CH3" o "CICLO-5-OH"), asumir posición 1
+                        const posStr = dashIdx === -1 ? '1' : part.slice(0, dashIdx);
+                        const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
                         const positions = posStr.split(',').map(Number);
 
                         positions.forEach(pos => {
@@ -4586,8 +4584,10 @@
                             let st = null;
                             if (stereoMode === 'CIS') st = 'wedge';
                             if (stereoMode === 'TRANS') st = (subCount % 2 === 0) ? 'wedge' : 'dash';
+                            // Si es carbonilo cíclico (ej. CICLO-6-O = Ciclohexanona), dibujar doble enlace =O
+                            const bondOrder = (rawGrp === 'O') ? 2 : 1;
                             atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                            bonds.push({ from: `C${pos}`, to: sid, order: 1, stereo: st });
+                            bonds.push({ from: `C${pos}`, to: sid, order: bondOrder, stereo: st });
                             subCount++;
                         });
                     });
