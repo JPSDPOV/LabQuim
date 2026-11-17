@@ -4671,6 +4671,55 @@
                     return { el: rawGrp, order: 1 };
                 };
 
+                // Helper que dibuja un anillo real (pentágono, hexágono, triángulo o benceno) cuando va como sustituyente de una cadena
+                const attachSubstituentNode = (parentId, px, py, rawEl, goUp, uniqueTag) => {
+                    const cleanEl = rawEl.replace(/[₀-₉]/g, d => '0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(d)]);
+                    const ringSpecs = {
+                        'C3H5': { sides: 3, aromatic: false, doubleSide: -1 },
+                        'C4H7': { sides: 4, aromatic: false, doubleSide: -1 },
+                        'C5H9': { sides: 5, aromatic: false, doubleSide: -1 },
+                        'C5H7': { sides: 5, aromatic: false, doubleSide: 0 },
+                        'C6H11': { sides: 6, aromatic: false, doubleSide: -1 },
+                        'C6H5': { sides: 6, aromatic: true, doubleSide: -1 }
+                    };
+
+                    const spec = ringSpecs[cleanEl];
+                    if (!spec) {
+                        const bid = `BR_${uniqueTag}`;
+                        const bOrder = rawEl.startsWith('=') ? 2 : 1;
+                        const bLabel = rawEl.startsWith('=') ? rawEl.slice(1) : rawEl;
+                        atoms.push({ id: bid, el: bLabel, x: px, y: goUp ? py - 93 : py + 93 });
+                        bonds.push({ from: parentId, to: bid, order: bOrder });
+                        return;
+                    }
+
+                    const sides = spec.sides;
+                    const R = sides <= 4 ? 38 : 44;
+                    const distCenter = R + 54;
+                    const rcx = px;
+                    const rcy = goUp ? (py - distCenter) : (py + distCenter);
+                    // Vértice 0 apunta directo al carbono padre (abajo si goUp=true, arriba si goUp=false)
+                    const startAng = goUp ? (Math.PI / 2) : (-Math.PI / 2);
+
+                    for (let k = 0; k < sides; k++) {
+                        const ang = startAng + ((2 * Math.PI) / sides) * k;
+                        const vx = Math.round(rcx + Math.cos(ang) * (R * 0.90));
+                        const vy = Math.round(rcy + Math.sin(ang) * R);
+                        atoms.push({ id: `SR_${uniqueTag}_${k}`, el: 'C', x: vx, y: vy, noValenceDots: true });
+                    }
+
+                    for (let k = 0; k < sides; k++) {
+                        const next = (k + 1) % sides;
+                        let ord = 1;
+                        if (spec.aromatic) ord = (k % 2 === 0) ? 2 : 1;
+                        else if (spec.doubleSide === k) ord = 2;
+                        bonds.push({ from: `SR_${uniqueTag}_${k}`, to: `SR_${uniqueTag}_${next}`, order: ord });
+                    }
+
+                    // Enlazar el carbono de la cadena con el vértice 0 del anillo
+                    bonds.push({ from: parentId, to: `SR_${uniqueTag}_0`, order: 1 });
+                };
+
                 chainNodes.forEach((nd, idx) => {
                     const nx = startX + idx * stepX;
                     const nid = `CN_${idx}`;
@@ -4680,24 +4729,28 @@
                     const mOne = txt.match(/^(C|CH|N)\(([^()]+)\)$/);
 
                     if (mTwo) {
-                     const bTop = parseBranchSpec(mTwo[2]);
-                     const bBot = parseBranchSpec(mTwo[3]);
-                     const isLeftTerminal = (idx === 0) && (bTop.order === 2 || bBot.order === 2);
-                     const isRightTerminal = (idx === chainNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
-                     const xOffset = isLeftTerminal ? -58 : (isRightTerminal ? 58 : 0);
-                     atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
-                     atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
-                     atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
-                     bonds.push(
-                         { from: nid, to: `BRT_${idx}`, order: bTop.order },
-                         { from: nid, to: `BRB_${idx}`, order: bBot.order }
-                     );
-                 } else if (mOne) {
+                        const bTop = parseBranchSpec(mTwo[2]);
+                        const bBot = parseBranchSpec(mTwo[3]);
+                        const isLeftTerminal = (idx === 0) && (bTop.order === 2 || bBot.order === 2);
+                        const isRightTerminal = (idx === chainNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
+                        const xOffset = isLeftTerminal ? -58 : (isRightTerminal ? 58 : 0);
+                        atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
+                        if (xOffset !== 0) {
+                            atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
+                            atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
+                            bonds.push(
+                                { from: nid, to: `BRT_${idx}`, order: bTop.order },
+                                { from: nid, to: `BRB_${idx}`, order: bBot.order }
+                            );
+                        } else {
+                            attachSubstituentNode(nid, nx, 185, mTwo[2], true, `T_${idx}`);
+                            attachSubstituentNode(nid, nx, 185, mTwo[3], false, `B_${idx}`);
+                        }
+                    } else if (mOne) {
                         const bSingle = parseBranchSpec(mOne[2]);
                         atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
                         const up = bSingle.order === 2 ? true : (idx % 2 === 1);
-                        atoms.push({ id: `BR_${idx}`, el: bSingle.el, x: nx, y: up ? 92 : 278 });
-                        bonds.push({ from: nid, to: `BR_${idx}`, order: bSingle.order });
+                        attachSubstituentNode(nid, nx, 185, mOne[2], up, `S_${idx}`);
                     } else {
                         atoms.push({ id: nid, el: txt, x: nx, y: 185 });
                     }
