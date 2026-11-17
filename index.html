@@ -4463,7 +4463,6 @@
                 const verts = [];
                 for (let k = 0; k < 6; k++) {
                     const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                    // Compensar factor de escala X/Y del lienzo para que el hexágono sea perfectamente regular
                     const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
                     const vy = Math.round(cy + Math.sin(ang) * R);
                     verts.push({ vx, vy, ang });
@@ -4476,7 +4475,10 @@
                         { from: 'V3', to: 'V4', order: 1 }, { from: 'V4', to: 'V5', order: 1 },
                         { from: 'V5', to: 'V6', order: 2 }, { from: 'V6', to: 'V1', order: 1 }
                     );
-                    atoms.push({ id: 'O1', el: 'O', x: cx, y: cy - R - 72 }, { id: 'O4', el: 'O', x: cx, y: cy + R + 72 });
+                    atoms.push(
+                        { id: 'O1', el: 'O', x: cx, y: cy - R - 72, noValenceDots: true },
+                        { id: 'O4', el: 'O', x: cx, y: cy + R + 72, noValenceDots: true }
+                    );
                     bonds.push({ from: 'V1', to: 'O1', order: 2 }, { from: 'V4', to: 'O4', order: 2 });
                     return { atoms, bonds };
                 }
@@ -4486,26 +4488,40 @@
                     bonds.push({ from: `V${k + 1}`, to: `V${next + 1}`, order: (k % 2 === 0) ? 2 : 1 });
                 }
 
-                // Parsear cada bloque -posiciones-grupo sin que el '-' se coma el siguiente sustituyente
-                const rest = s.replace(/^AROM-(?:BENCENO)?/, '');
-                const subRegex = /-([0-9,]+)-([A-Za-z0-9\(\)]+)/g;
-                let m;
-                let sIdx = 0;
-                while ((m = subRegex.exec(rest)) !== null) {
-                    const positions = m[1].split(',').map(Number);
-                    const grp = m[2]
-                        .replace(/CH3/g, 'CH₃')
-                        .replace(/CH2/g, 'CH₂')
-                        .replace(/NO2/g, 'NO₂')
-                        .replace(/C6H5/g, 'C₆H₅');
-                    positions.forEach(pos => {
-                        const v = verts[(pos - 1) % 6];
-                        if (!v) return;
-                        const sx = Math.round(cx + Math.cos(v.ang) * ((R + 78) * 0.92));
-                        const sy = Math.round(cy + Math.sin(v.ang) * (R + 78));
-                        const sid = `S_${sIdx++}`;
-                        atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                // Dividir por cada bloque "-posiciones-" (ej. "-1-OH-2,4,6-NO2" -> ["1", "OH", "2,4,6", "NO2"])
+                const rest = s.replace(/^AROM-(?:BENCENO)?/, '').replace(/^-+/, '');
+                if (rest) {
+                    const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
+                    let sIdx = 0;
+                    parts.forEach(part => {
+                        const dashIdx = part.indexOf('-');
+                        if (dashIdx === -1) return;
+                        const posStr = part.slice(0, dashIdx);
+                        const rawGrp = part.slice(dashIdx + 1);
+                        const positions = posStr.split(',').map(Number);
+
+                        positions.forEach(pos => {
+                            const v = verts[(pos - 1) % 6];
+                            if (!v) return;
+                            // Orientar grupos poliatómicos hacia la izquierda (pos 5 y 6) para que el enlace conecte al átomo correcto (ej. O2N- en pos 6)
+                            let grp = rawGrp
+                                .replace(/CH3/g, 'CH₃')
+                                .replace(/CH2/g, 'CH₂')
+                                .replace(/NO2/g, 'NO₂')
+                                .replace(/NH2/g, 'NH₂')
+                                .replace(/C6H5/g, 'C₆H₅');
+                            if (pos === 5 || pos === 6) {
+                                if (grp === 'NO₂') grp = 'O₂N';
+                                if (grp === 'NH₂') grp = 'H₂N';
+                                if (grp === 'OH') grp = 'HO';
+                                if (grp === 'CH₃') grp = 'H₃C';
+                            }
+                            const sx = Math.round(cx + Math.cos(v.ang) * ((R + 78) * 0.92));
+                            const sy = Math.round(cy + Math.sin(v.ang) * (R + 78));
+                            const sid = `S_${sIdx++}`;
+                            atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                        });
                     });
                 }
                 return { atoms, bonds };
@@ -4517,7 +4533,7 @@
                 const stereoMode = mCyc[1] || '';
                 const cycType = mCyc[2];
                 const sides = Math.min(8, Math.max(3, parseInt(mCyc[3], 10)));
-                const rest = mCyc[4] || '';
+                const rest = (mCyc[4] || '').replace(/^-+/, '');
                 const cx = 460, cy = 185, R = sides <= 4 ? 62 : 74;
                 const verts = [];
 
@@ -4543,26 +4559,37 @@
                     bonds.push({ from: `C${k + 1}`, to: `C${next + 1}`, order: ord });
                 }
 
-                const subRegex = /-([0-9,]+)-([A-Za-z0-9\(\)]+)/g;
-                let m;
-                let sIdx = 0;
-                let subCount = 0;
-                while ((m = subRegex.exec(rest)) !== null) {
-                    const positions = m[1].split(',').map(Number);
-                    const grp = m[2].replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/C3H7/g, 'C₃H₇').replace(/C4H9/g, 'C₄H₉');
-                    positions.forEach(pos => {
-                        const v = verts[(pos - 1) % sides];
-                        if (!v) return;
-                        const spread = (subCount % 2 === 1 && positions.length > 1) ? 0.25 : 0;
-                        const sx = Math.round(cx + Math.cos(v.ang + spread) * ((R + 78) * 0.92));
-                        const sy = Math.round(cy + Math.sin(v.ang + spread) * (R + 78));
-                        const sid = `CS_${sIdx++}`;
-                        let st = null;
-                        if (stereoMode === 'CIS') st = 'wedge';
-                        if (stereoMode === 'TRANS') st = (subCount % 2 === 0) ? 'wedge' : 'dash';
-                        atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                        bonds.push({ from: `C${pos}`, to: sid, order: 1, stereo: st });
-                        subCount++;
+                if (rest) {
+                    const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
+                    let sIdx = 0;
+                    let subCount = 0;
+                    parts.forEach(part => {
+                        const dashIdx = part.indexOf('-');
+                        if (dashIdx === -1) return;
+                        const posStr = part.slice(0, dashIdx);
+                        const rawGrp = part.slice(dashIdx + 1);
+                        const positions = posStr.split(',').map(Number);
+
+                        positions.forEach(pos => {
+                            const v = verts[(pos - 1) % sides];
+                            if (!v) return;
+                            const grp = rawGrp
+                                .replace(/CH3/g, 'CH₃')
+                                .replace(/CH2/g, 'CH₂')
+                                .replace(/C3H7/g, 'C₃H₇')
+                                .replace(/C4H9/g, 'C₄H₉')
+                                .replace(/NH2/g, 'NH₂');
+                            const spread = (subCount % 2 === 1 && positions.length > 1) ? 0.28 : (positions.length > 1 ? -0.18 : 0);
+                            const sx = Math.round(cx + Math.cos(v.ang + spread) * ((R + 78) * 0.92));
+                            const sy = Math.round(cy + Math.sin(v.ang + spread) * (R + 78));
+                            const sid = `CS_${sIdx++}`;
+                            let st = null;
+                            if (stereoMode === 'CIS') st = 'wedge';
+                            if (stereoMode === 'TRANS') st = (subCount % 2 === 0) ? 'wedge' : 'dash';
+                            atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: `C${pos}`, to: sid, order: 1, stereo: st });
+                            subCount++;
+                        });
                     });
                 }
                 return { atoms, bonds };
