@@ -5774,13 +5774,18 @@
                 }
             }
 
-            // 5. Expansión previa de grupos condensados para dibujarlos con enlaces reales
+            // 5. Expansión completa de TODOS los grupos condensados (incluidos C(CH₃)₂, C(CH₃)₃, CH(CH₃)₂, C(CH₂CH₃)₂, etc.)
             const expandCondensedGroups = (rawStr) => {
                 let out = rawStr.replace(/—/g, '-');
+                // Multiplicadores de grupos idénticos unidos a un carbono o extremo:
                 out = out.replace(/^\(CH₃\)₃C-/, 'CH₃-C(CH₃)(CH₃)-');
                 out = out.replace(/^\(CH₃\)₂CH-/, 'CH₃-CH(CH₃)-');
                 out = out.replace(/-\(CH₃\)₃$/, '-C(CH₃)(CH₃)-CH₃');
                 out = out.replace(/-\(CH₃\)₂$/, '-CH(CH₃)-CH₃');
+                out = out.replace(/C\(CH₃\)₃/g, 'C(CH₃)(CH₃)(CH₃)');
+                out = out.replace(/C\(CH₃\)₂/g, 'C(CH₃)(CH₃)');
+                out = out.replace(/C\(CH₂CH₃\)₂/g, 'C(CH₂CH₃)(CH₂CH₃)');
+                out = out.replace(/C\(CH₂CH₂CH₃\)₂/g, 'C(CH₂CH₂CH₃)(CH₂CH₂CH₃)');
                 out = out.replace(/-\(CH₂\)(\d+)-/g, (_, nStr) => {
                     const n = Math.min(4, parseInt(nStr, 10));
                     return '-' + Array(n).fill('CH₂').join('-') + '-';
@@ -5834,7 +5839,6 @@
                     }
                 });
 
-                // Helper para extraer grupos entre paréntesis anidados en el nivel superior, ej: CH(CH(CH₃)₂) -> base='CH', branches=['CH(CH₃)₂']
                 const parseNodeWithNestedBranches = (rawTok) => {
                     const mBase = rawTok.match(/^(C|CH|N)\(/);
                     if (!mBase || !rawTok.endsWith(')')) return null;
@@ -5868,7 +5872,6 @@
                     return { el: rawGrp, order: 1 };
                 };
 
-                // Helper que dibuja un anillo real o grupo ramificado (isopropilo, sec-butilo, terc-butilo, etc.) cuando va como sustituyente
                 const attachSubstituentNode = (parentId, px, py, rawEl, goUp, uniqueTag) => {
                     const cleanEl = rawEl.replace(/[₀-₉]/g, d => '0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(d)]);
                     const ringSpecs = {
@@ -5882,7 +5885,7 @@
 
                     if (cleanEl === 'CH(CH3)2' || cleanEl === '(CH3)2CH') {
                         const bid = `BR_${uniqueTag}`;
-                        const by = goUp ? py - 78 : py + 78;
+                        const by = goUp ? py - 68 : py + 68;
                         atoms.push(
                             { id: bid, el: 'CH', x: px, y: by },
                             { id: `${bid}_L`, el: 'CH₃', x: px - 68, y: by },
@@ -5901,14 +5904,14 @@
                         const bid = `BR_${uniqueTag}`;
                         const bOrder = rawEl.startsWith('=') ? 2 : 1;
                         const bLabel = rawEl.startsWith('=') ? rawEl.slice(1) : rawEl;
-                        atoms.push({ id: bid, el: bLabel, x: px, y: goUp ? py - 78 : py + 78 });
+                        atoms.push({ id: bid, el: bLabel, x: px, y: goUp ? py - 68 : py + 68 });
                         bonds.push({ from: parentId, to: bid, order: bOrder });
                         return;
                     }
 
                     const sides = spec.sides;
-                    const R = sides <= 4 ? 34 : 38;
-                    const distCenter = R + 44;
+                    const R = sides <= 4 ? 32 : 36;
+                    const distCenter = R + 38;
                     const rcx = px;
                     const rcy = goUp ? (py - distCenter) : (py + distCenter);
                     const startAng = goUp ? (Math.PI / 2) : (-Math.PI / 2);
@@ -5946,25 +5949,25 @@
                     bonds.push({ from: parentId, to: `SR_${uniqueTag}_0`, order: 1 });
                 };
 
-                // Calcular ancho necesario de cada nodo (incluyendo si lleva rama isopropilo arriba/abajo) para evitar solapamientos sin alargar de más los enlaces simples
+                // Calcular el ancho real de cada nodo teniendo en cuenta la longitud real del texto (el código anterior subestimaba por 2x frente a getNakedTextBox)
                 const parsedNodes = chainNodes.map((nd, idx) => {
                     const txt = nd.text;
                     const nested = parseNodeWithNestedBranches(txt);
                     const normTxt = normalizeFormulaLookupKey(txt);
-                    let halfW = 36;
+                    let halfW = 30;
                     if (nested) {
                         const hasIsoSub = nested.branches.some(b => {
                             const cb = normalizeFormulaLookupKey(b);
                             return cb === 'CH(CH3)2' || cb === '(CH3)2CH';
                         });
                         const maxSubLen = Math.max(...nested.branches.map(b => b.length));
-                        halfW = hasIsoSub ? 96 : Math.max(38, maxSubLen * 4.5);
+                        halfW = hasIsoSub ? 105 : Math.max(36, maxSubLen * 7.2);
                     } else if ((normTxt === 'CH(CH3)2' || normTxt === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
-                        halfW = 76;
+                        halfW = 86;
                     } else if (normTxt === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
                         halfW = 62;
                     } else {
-                        halfW = Math.max(34, txt.length * 5.8);
+                        halfW = Math.max(28, txt.length * 11.2);
                     }
                     return { ...nd, nested, normTxt, halfW };
                 });
@@ -5975,7 +5978,8 @@
                         nodeXList.push(0);
                     } else {
                         const prev = parsedNodes[idx - 1];
-                        const gap = Math.max(66, prev.halfW + pn.halfW + 14);
+                        // Espacio garantizado = semiancho anterior + semiancho actual + 38 unidades de enlace limpio
+                        const gap = prev.halfW + pn.halfW + 38;
                         nodeXList.push(nodeXList[idx - 1] + gap);
                     }
                 });
@@ -5992,11 +5996,11 @@
                         const bBot = parseBranchSpec(pn.nested.branches[1]);
                         const isLeftTerminal = (idx === 0) && (bTop.order === 2 || bBot.order === 2);
                         const isRightTerminal = (idx === parsedNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
-                        const xOffset = isLeftTerminal ? -50 : (isRightTerminal ? 50 : 0);
+                        const xOffset = isLeftTerminal ? -46 : (isRightTerminal ? 46 : 0);
                         atoms.push({ id: nid, el: pn.nested.baseEl, x: nx, y: 185 });
                         if (xOffset !== 0) {
-                            atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 105 });
-                            atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 265 });
+                            atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 112 });
+                            atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 258 });
                             bonds.push(
                                 { from: nid, to: `BRT_${idx}`, order: bTop.order },
                                 { from: nid, to: `BRB_${idx}`, order: bBot.order }
@@ -6004,6 +6008,12 @@
                         } else {
                             attachSubstituentNode(nid, nx, 185, pn.nested.branches[0], true, `T_${idx}`);
                             attachSubstituentNode(nid, nx, 185, pn.nested.branches[1], false, `B_${idx}`);
+                            // Si existe una tercera rama en un carbono cuaternario terminal (ej. C(CH₃)₃)
+                            if (pn.nested.branches.length >= 3) {
+                                const sideDir = idx === 0 ? -76 : 76;
+                                atoms.push({ id: `BRS_${idx}`, el: pn.nested.branches[2], x: nx + sideDir, y: 185 });
+                                bonds.push({ from: nid, to: `BRS_${idx}`, order: 1 });
+                            }
                         }
                     } else if (pn.nested && pn.nested.branches.length === 1) {
                         const bSingle = parseBranchSpec(pn.nested.branches[0]);
@@ -6016,7 +6026,7 @@
                         if (isLeftEnd) {
                             atoms.push(
                                 { id: `${nid}_L`, el: 'CH₃', x: nx - 68, y: 185 },
-                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 265 }
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 255 }
                             );
                             bonds.push(
                                 { from: nid, to: `${nid}_L`, order: 1 },
@@ -6025,7 +6035,7 @@
                         } else {
                             atoms.push(
                                 { id: `${nid}_R`, el: 'CH₃', x: nx + 68, y: 185 },
-                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 265 }
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 255 }
                             );
                             bonds.push(
                                 { from: nid, to: `${nid}_R`, order: 1 },
@@ -6034,8 +6044,8 @@
                         }
                     } else if (pn.normTxt === 'C6H5' && (idx === 0 || idx === parsedNodes.length - 1)) {
                         const isLeftEnd = (idx === 0);
-                        const rRad = 40;
-                        const rcx = isLeftEnd ? (nx - 18) : (nx + 18);
+                        const rRad = 38;
+                        const rcx = isLeftEnd ? (nx - 16) : (nx + 16);
                         const rcy = 185;
                         const rotStart = isLeftEnd ? 0 : Math.PI;
                         for (let k = 0; k < 6; k++) {
@@ -6080,7 +6090,7 @@
             if (!sc) sc = { atoms: [], bonds: [] };
 
             // Compactar distancias de enlace (factor 0.64 alrededor del centro 460, 190) para enlaces cortos y limpios
-            const COMPACT_K = 0.50;
+            const COMPACT_K = 0.44;
             const compactX = (rawX) => mapStageX(460 + (rawX - 460) * COMPACT_K);
             const compactY = (rawY) => mapStageY(190 + (rawY - 190) * COMPACT_K);
 
