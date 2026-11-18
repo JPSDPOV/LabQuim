@@ -5786,8 +5786,9 @@
                 out = out.replace(/C\(CH₃\)₂/g, 'C(CH₃)(CH₃)');
                 out = out.replace(/C\(CH₂CH₃\)₂/g, 'C(CH₂CH₃)(CH₂CH₃)');
                 out = out.replace(/C\(CH₂CH₂CH₃\)₂/g, 'C(CH₂CH₂CH₃)(CH₂CH₂CH₃)');
-                out = out.replace(/-\(CH₂\)(\d+)-/g, (_, nStr) => {
-                    const n = Math.min(4, parseInt(nStr, 10));
+                out = out.replace(/-\(CH₂\)([0-9₀-₉]+)-/g, (_, nStr) => {
+                    const asciiN = nStr.replace(/[₀-₉]/g, d => '0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(d)]);
+                    const n = Math.min(16, Math.max(1, parseInt(asciiN, 10)));
                     return '-' + Array(n).fill('CH₂').join('-') + '-';
                 });
                 out = out.replace(/^OHC-/, 'CHO-');
@@ -5885,11 +5886,11 @@
 
                     if (cleanEl === 'CH(CH3)2' || cleanEl === '(CH3)2CH') {
                         const bid = `BR_${uniqueTag}`;
-                        const by = goUp ? py - 68 : py + 68;
+                        const by = goUp ? py - 84 : py + 84;
                         atoms.push(
                             { id: bid, el: 'CH', x: px, y: by },
-                            { id: `${bid}_L`, el: 'CH₃', x: px - 68, y: by },
-                            { id: `${bid}_R`, el: 'CH₃', x: px + 68, y: by }
+                            { id: `${bid}_L`, el: 'CH₃', x: px - 128, y: by },
+                            { id: `${bid}_R`, el: 'CH₃', x: px + 128, y: by }
                         );
                         bonds.push(
                             { from: parentId, to: bid, order: 1 },
@@ -5961,7 +5962,7 @@
                             return cb === 'CH(CH3)2' || cb === '(CH3)2CH';
                         });
                         const maxSubLen = Math.max(...nested.branches.map(b => b.length));
-                        halfW = hasIsoSub ? 105 : Math.max(36, maxSubLen * 7.2);
+                        halfW = hasIsoSub ? 160 : Math.max(36, maxSubLen * 7.2);
                     } else if ((normTxt === 'CH(CH3)2' || normTxt === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
                         halfW = 86;
                     } else if (normTxt === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
@@ -6025,7 +6026,7 @@
                         atoms.push({ id: nid, el: 'CH', x: nx, y: 185 });
                         if (isLeftEnd) {
                             atoms.push(
-                                { id: `${nid}_L`, el: 'CH₃', x: nx - 68, y: 185 },
+                                { id: `${nid}_L`, el: 'CH₃', x: nx - 124, y: 185 },
                                 { id: `${nid}_B`, el: 'CH₃', x: nx, y: 255 }
                             );
                             bonds.push(
@@ -6034,7 +6035,7 @@
                             );
                         } else {
                             atoms.push(
-                                { id: `${nid}_R`, el: 'CH₃', x: nx + 68, y: 185 },
+                                { id: `${nid}_R`, el: 'CH₃', x: nx + 124, y: 185 },
                                 { id: `${nid}_B`, el: 'CH₃', x: nx, y: 255 }
                             );
                             bonds.push(
