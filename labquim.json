@@ -261,18 +261,102 @@
     "enabled": true,
     "bankPath": "reactions/nomenclatura.json",
     "groups": [
-      { "id": "alcanos", "label": "1. Alcanos (Lineales y Ramificados)" },
-      { "id": "cicloalcanos", "label": "2. Cicloalcanos (Anillos y cis/trans)" },
-      { "id": "alquenos", "label": "3. Alquenos y Dienos (cis/trans y E/Z)" },
-      { "id": "alquinos", "label": "4. Alquinos y Eninos" },
-      { "id": "aromaticos", "label": "5. Hidrocarburos Aromáticos (Benceno y Xilenos)" },
-      { "id": "haluros", "label": "6. Halogenuros de Alquilo y Quirales (R / S)" },
-      { "id": "alcoholes", "label": "7. Alcoholes, Dioles, Fenoles y Quirales (R / S)" },
-      { "id": "eteres", "label": "8. Éteres, Epóxidos, Tioles y Tioéteres" },
-      { "id": "aminas", "label": "9. Aminas (1°, 2°, 3° y Aromáticas)" },
-      { "id": "aldehidos_cetonas", "label": "10. Aldehídos, Cetonas y Quinonas" },
-      { "id": "acidos", "label": "11. Ácidos Carboxílicos, Hidroxiácidos y Cetoácidos" },
-      { "id": "derivados_acidos", "label": "12. Ésteres, Amidas, Anhídridos, Haluros y Nitrilos" }
+      {
+        "id": "alcanos",
+        "label": "1. Alcanos"
+      },
+      {
+        "id": "cicloalcanos",
+        "label": "2. Cicloalcanos"
+      },
+      {
+        "id": "alquenos",
+        "label": "3. Alquenos"
+      },
+      {
+        "id": "alquinos",
+        "label": "4. Alquinos"
+      },
+      {
+        "id": "aromaticos",
+        "label": "5. Hidrocarburos aromáticos"
+      },
+      {
+        "id": "haluros",
+        "label": "6. Haluros o Halogenuros"
+      },
+      {
+        "id": "nitrocompuestos",
+        "label": "7. Nitrocompuestos"
+      },
+      {
+        "id": "eteres",
+        "label": "8. Éteres"
+      },
+      {
+        "id": "tioeteres",
+        "label": "9. Tioéteres (Sulfuros)"
+      },
+      {
+        "id": "aminas",
+        "label": "10. Aminas"
+      },
+      {
+        "id": "imina",
+        "label": "11. Iminas"
+      },
+      {
+        "id": "tioles",
+        "label": "12. Tioles"
+      },
+      {
+        "id": "fenoles",
+        "label": "13. Fenoles"
+      },
+      {
+        "id": "alcoholes",
+        "label": "14. Alcoholes"
+      },
+      {
+        "id": "cetonas",
+        "label": "15. Cetonas"
+      },
+      {
+        "id": "aldehidos",
+        "label": "16. Aldehídos"
+      },
+      {
+        "id": "nitrilos",
+        "label": "17. Nitrilos"
+      },
+      {
+        "id": "amidas",
+        "label": "18. Amidas"
+      },
+      {
+        "id": "haluros_acilo",
+        "label": "19. Haluros de acilo / ácido"
+      },
+      {
+        "id": "tioesteres",
+        "label": "20. Tioésteres"
+      },
+      {
+        "id": "esteres",
+        "label": "21. Ésteres"
+      },
+      {
+        "id": "anhidridos",
+        "label": "22. Anhídridos"
+      },
+      {
+        "id": "acidos",
+        "label": "23. Ácidos Carboxílicos"
+      },
+      {
+        "id": "azoderivados",
+        "label": "24. Azoderivados"
+      }
     ]
   },
   "functionMenus": {
