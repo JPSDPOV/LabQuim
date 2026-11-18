@@ -4866,7 +4866,7 @@
       "badge": "Monosacárido (Aldohexosa)",
       "name": "D-Glucosa",
       "synonyms": "Dextrosa / Glucosa",
-      "semiFormula": "HO—CH₂—(CHOH)₄—CHO",
+      "semiFormula": "HAWORTH-PIRANOSA-GLUCOSA",
       "explanation": "Aldohexosa más abundante en la naturaleza; forma anillos de piranosa en solución."
     },
     {
@@ -4874,7 +4874,7 @@
       "badge": "Monosacárido (Aldohexosa)",
       "name": "D-Galactosa",
       "synonyms": "Galactosa",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "semiFormula": "HAWORTH-PIRANOSA-GALACTOSA",
       "explanation": "Epímero en C4 de la D-glucosa."
     },
     {
@@ -4882,7 +4882,7 @@
       "badge": "Monosacárido (Cetohexosa)",
       "name": "D-Fructosa",
       "synonyms": "Levulosa / Fructosa",
-      "semiFormula": "HO—CH₂—(CHOH)₃—CO—CH₂—OH",
+      "semiFormula": "HAWORTH-FURANOSA-FRUCTOSA",
       "explanation": "Cetohexosa con grupo cetona en C2; forma anillos de furanosa y da positiva la prueba de Seliwanoff."
     },
     {
@@ -4890,7 +4890,7 @@
       "badge": "Disacárido reductor",
       "name": "Maltosa",
       "synonyms": "Azúcar de malta (α-D-Glucopiranosil-(1→4)-D-glucopiranosa)",
-      "semiFormula": "Glucosa—α(1→4)—Glucosa",
+      "semiFormula": "DISACARIDO-MALTOSA",
       "explanation": "Disacárido formado por dos unidades de D-glucosa con enlace α(1→4); conserva un carbono anomérico libre (reductor)."
     },
     {
@@ -4898,7 +4898,7 @@
       "badge": "Disacárido reductor",
       "name": "Lactosa",
       "synonyms": "Azúcar de la leche (β-D-Galactopiranosil-(1→4)-D-glucopiranosa)",
-      "semiFormula": "Galactosa—β(1→4)—Glucosa",
+      "semiFormula": "DISACARIDO-LACTOSA",
       "explanation": "Disacárido reductor formado por D-galactosa y D-glucosa unidas por enlace β(1→4)."
     },
     {
@@ -4906,7 +4906,7 @@
       "badge": "Disacárido NO reductor",
       "name": "Sacarosa",
       "synonyms": "Azúcar de caña (α-D-Glucopiranosil-(1→2)-β-D-fructofuranósido)",
-      "semiFormula": "Glucosa—α(1↔2)β—Fructosa",
+      "semiFormula": "DISACARIDO-SACAROSA",
       "explanation": "Disacárido NO reductor porque ambos carbonos anoméricos (C1 de glucosa y C2 de fructosa) están comprometidos en el enlace glicosídico."
     },
     {
@@ -4914,7 +4914,7 @@
       "badge": "Polisacárido de reserva vegetal",
       "name": "Almidón",
       "synonyms": "Amilosa + Amilopectina",
-      "semiFormula": "[—Glucosa—α(1→4)—Glucosa—]ₙ",
+      "semiFormula": "POLISACARIDO-ALMIDON",
       "explanation": "Homopolisacárido de α-D-glucosa con enlaces α(1→4) lineales y ramificaciones α(1→6); da color azul intenso con Lugol."
     },
     {
@@ -4922,7 +4922,7 @@
       "badge": "Polisacárido de reserva animal",
       "name": "Glucógeno",
       "synonyms": "Almidón animal",
-      "semiFormula": "[—Glucosa—α(1→4) / α(1→6)—]ₙ",
+      "semiFormula": "POLISACARIDO-GLUCOGENO",
       "explanation": "Polímero muy ramificado de α-D-glucosa almacenado en hígado y músculo esquelético."
     },
     {
@@ -4930,7 +4930,7 @@
       "badge": "Polisacárido estructural",
       "name": "Celulosa",
       "synonyms": "Fibra vegetal",
-      "semiFormula": "[—Glucosa—β(1→4)—Glucosa—]ₙ",
+      "semiFormula": "POLISACARIDO-CELULOSA",
       "explanation": "Polímero lineal de β-D-glucosa con enlaces β(1→4) resistentes a la amilasa humana."
     },
     {
@@ -4970,7 +4970,7 @@
       "badge": "Monosacárido (Aldohexosa)",
       "name": "D-Manosa",
       "synonyms": "Manosa",
-      "semiFormula": "HO—CH₂—(CHOH)₄—CHO",
+      "semiFormula": "HAWORTH-PIRANOSA-MANOSA",
       "explanation": "Aldohexosa epímera en C2 de la D-glucosa."
     },
     {
@@ -4978,7 +4978,7 @@
       "badge": "Disacárido reductor",
       "name": "Celobiosa",
       "synonyms": "β-D-Glucopiranosil-(1→4)-D-glucopiranosa",
-      "semiFormula": "Glucosa—β(1→4)—Glucosa",
+      "semiFormula": "DISACARIDO-CELOBIOSA",
       "explanation": "Disacárido reductor obtenido por hidrólisis parcial de la celulosa."
     },
     {
@@ -4986,7 +4986,7 @@
       "badge": "Heteropolisacárido",
       "name": "Ácido hialurónico",
       "synonyms": "Glicosaminoglicano (GAG)",
-      "semiFormula": "[—Ác. D-Glucurónico—β(1→3)—N-Acetil-D-glucosamina—]ₙ",
+      "semiFormula": "POLISACARIDO-HIALURONICO",
       "explanation": "Heteropolisacárido lineal de la matriz extracelular formado por repeticiones de un disacárido ácido."
     },
     {
@@ -5026,7 +5026,7 @@
       "badge": "Lípido simple (Acilglicerol)",
       "name": "Triestearato de glicerilo",
       "synonyms": "Triestearina / Triacilglicerol",
-      "semiFormula": "Glicerol + 3 Ác. Esteárico (Triglicérido)",
+      "semiFormula": "LIPIDO-TAG-ESTEARICO",
       "explanation": "Lípido simple formado por esterificación completa de los tres grupos –OH del glicerol con ácido esteárico."
     },
     {
@@ -5042,7 +5042,7 @@
       "badge": "Lípido complejo (Glicerofosfolípido)",
       "name": "Fosfatidilcolina",
       "synonyms": "Lecitina (Glicerofosfolípido)",
-      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Colina",
+      "semiFormula": "LIPIDO-FOSFOLIPIDO-COLINA",
       "explanation": "Lípido complejo anfipático mayoritario en las membranas celulares eucariotas."
     },
     {
@@ -5050,7 +5050,7 @@
       "badge": "Lípido complejo (Esfingofosfolípido)",
       "name": "Esfingomielina",
       "synonyms": "Ceramida-1-fosfocolina",
-      "semiFormula": "Esfingosina + Ác. Graso + Fosfato + Colina",
+      "semiFormula": "LIPIDO-ESFINGOMIELINA",
       "explanation": "Esfingofosfolípido abundante en la vaina de mielina de las neuronas (sin glicerol)."
     },
     {
@@ -5090,7 +5090,7 @@
       "badge": "Lípido simple (Acilglicerol)",
       "name": "Trihexadecanoato de glicerilo",
       "synonyms": "Tripalmitina / Tripalmitoilglicerol",
-      "semiFormula": "Glicerol + 3 Ác. Palmítico (Triglicérido)",
+      "semiFormula": "LIPIDO-TAG-PALMITICO",
       "explanation": "Triacilglicerol saturado formado por glicerol y tres moléculas de ácido palmítico."
     },
     {
@@ -5098,7 +5098,7 @@
       "badge": "Lípido simple (Acilglicerol)",
       "name": "Trioleato de glicerilo",
       "synonyms": "Trioleína / Trioleoilglicerol",
-      "semiFormula": "Glicerol + 3 Ác. Oleico (Triglicérido)",
+      "semiFormula": "LIPIDO-TAG-OLEICO",
       "explanation": "Triacilglicerol insaturado líquido a temperatura ambiente (componente principal del aceite de oliva)."
     },
     {
@@ -5106,7 +5106,7 @@
       "badge": "Lípido simple (Acilglicerol mixto)",
       "name": "1-Oleoil-2-araquidonoil-3-linoleoilglicerol",
       "synonyms": "Triacilglicerol mixto poliinsaturado",
-      "semiFormula": "Glicerol (C1: Oleico, C2: Araquidónico, C3: Linoleico)",
+      "semiFormula": "LIPIDO-TAG-MIXTO-INSAT",
       "explanation": "Triglicérido mixto con tres ácidos grasos insaturados distintos (Test 26)."
     },
     {
@@ -5114,7 +5114,7 @@
       "badge": "Lípido simple (Acilglicerol mixto)",
       "name": "1,3-Dipalmitoil-2-estearoilglicerol",
       "synonyms": "1,3-Dipalmitil-2-estearilglicérido",
-      "semiFormula": "Glicerol (C1,C3: Palmítico, C2: Esteárico)",
+      "semiFormula": "LIPIDO-TAG-MIXTO-SAT",
       "explanation": "Triglicérido saturado mixto con dos residuos palmitoilo y uno estearoilo."
     },
     {
@@ -5122,7 +5122,7 @@
       "badge": "Lípido complejo (Precursor fosfolípidos)",
       "name": "Ácido fosfatídico",
       "synonyms": "Fosfatidato / Diacilglicerol-3-fosfato",
-      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato (–H)",
+      "semiFormula": "LIPIDO-FOSFOLIPIDO-H",
       "explanation": "Precursor estructural fundamental de todos los glicerofosfolípidos."
     },
     {
@@ -5130,7 +5130,7 @@
       "badge": "Lípido complejo (Glicerofosfolípido)",
       "name": "Fosfatidiletanolamina",
       "synonyms": "Cefalina",
-      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Etanolamina",
+      "semiFormula": "LIPIDO-FOSFOLIPIDO-ETANOLAMINA",
       "explanation": "Glicerofosfolípido abundante en las membranas neuronales y bacterianas."
     },
     {
@@ -5138,7 +5138,7 @@
       "badge": "Lípido complejo (Glicerofosfolípido)",
       "name": "Fosfatidilserina",
       "synonyms": "",
-      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Serina",
+      "semiFormula": "LIPIDO-FOSFOLIPIDO-SERINA",
       "explanation": "Glicerofosfolípido aniónico ubicado en la monocapa interna de la membrana plasmática."
     },
     {
@@ -5146,7 +5146,7 @@
       "badge": "Lípido complejo (Glicerofosfolípido)",
       "name": "Difosfatidilglicerol",
       "synonyms": "Cardiolipina",
-      "semiFormula": "2 Ácidos Fosfatídicos unidos por Glicerol",
+      "semiFormula": "LIPIDO-CARDIOLIPINA",
       "explanation": "Glicerofosfolípido doble exclusivo de la membrana mitocondrial interna."
     },
     {
@@ -5154,7 +5154,7 @@
       "badge": "Lípido complejo (Esfingolípido)",
       "name": "Ceramida",
       "synonyms": "N-Acilesfingosina",
-      "semiFormula": "Esfingosina (esfingol) + Ác. Graso (enlace amida en C2)",
+      "semiFormula": "LIPIDO-CERAMIDA",
       "explanation": "Unidad estructural básica de todos los esfingofosfolípidos y glucoesfingolípidos."
     },
     {
