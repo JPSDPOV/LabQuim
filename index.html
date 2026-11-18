@@ -1933,6 +1933,18 @@
                             }
                             bonds.push({ from: `${sId}_V0`, to: prevId, order: 1, state: 'normal' });
                             prevId = `${sId}_V0`;
+                        } else if (normalizeFormulaLookupKey(segs[idx]) === '(CH3)2CH' || normalizeFormulaLookupKey(segs[idx]) === 'CH(CH3)2') {
+                            atoms.push(
+                                { id: sId, el: 'CH', x: sx, y: centerY },
+                                { id: `${sId}_L`, el: 'CH₃', x: sx - 84, y: centerY },
+                                { id: `${sId}_B`, el: 'CH₃', x: sx, y: centerY + 82 }
+                            );
+                            bonds.push(
+                                { from: sId, to: `${sId}_L`, order: 1, state: 'normal' },
+                                { from: sId, to: `${sId}_B`, order: 1, state: 'normal' },
+                                { from: sId, to: prevId, order: 1, state: 'normal' }
+                            );
+                            prevId = sId;
                         } else {
                             atoms.push({
                                 id: sId,
@@ -1986,6 +1998,18 @@
                             }
                             bonds.push({ from: prevId, to: `${sId}_V0`, order: 1, state: 'normal' });
                             prevId = `${sId}_V0`;
+                        } else if (normalizeFormulaLookupKey(revSegs[idx]) === '(CH3)2CH' || normalizeFormulaLookupKey(revSegs[idx]) === 'CH(CH3)2') {
+                            atoms.push(
+                                { id: sId, el: 'CH', x: sx, y: centerY },
+                                { id: `${sId}_R`, el: 'CH₃', x: sx + 84, y: centerY },
+                                { id: `${sId}_B`, el: 'CH₃', x: sx, y: centerY + 82 }
+                            );
+                            bonds.push(
+                                { from: prevId, to: sId, order: 1, state: 'normal' },
+                                { from: sId, to: `${sId}_R`, order: 1, state: 'normal' },
+                                { from: sId, to: `${sId}_B`, order: 1, state: 'normal' }
+                            );
+                            prevId = sId;
                         } else {
                             atoms.push({
                                 id: sId,
@@ -4741,22 +4765,43 @@
                     const sy = Math.round(cy + Math.sin(v.ang + spread) * baseDist);
                     const sid = `S_${sIdx}`;
 
-                    // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente
-                    const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃)$/);
-                    if (mEtherSub && totalHere === 1) {
-                        const heteroEl = mEtherSub[1];
-                        const alkylEl = mEtherSub[2];
-                        atoms.push({ id: sid, el: heteroEl, x: sx, y: sy, noValenceDots: true });
+                    // Si el sustituyente es grupo isopropilo CH(CH3)2, desplegar CH con CH3 a la izquierda y CH3 a la derecha
+                    if (normalizeFormulaLookupKey(grp) === 'CH(CH3)2' && totalHere === 1) {
+                        atoms.push({ id: sid, el: 'CH', x: sx, y: sy, noValenceDots: true });
                         bonds.push({ from: v.id, to: sid, order: 1 });
 
-                        const sx2 = Math.round(cx + Math.cos(v.ang) * ((baseDist + 66) * 0.92));
-                        const sy2 = Math.round(cy + Math.sin(v.ang) * (baseDist + 66));
-                        const sid2 = `S2_${sIdx}`;
-                        atoms.push({ id: sid2, el: alkylEl, x: sx2, y: sy2, noValenceDots: true });
-                        bonds.push({ from: sid, to: sid2, order: 1 });
+                        const perpAng = v.ang + Math.PI / 2;
+                        const armDist = 84;
+                        const lx = Math.round(sx + Math.cos(perpAng) * armDist);
+                        const ly = Math.round(sy + Math.sin(perpAng) * armDist);
+                        const rx = Math.round(sx - Math.cos(perpAng) * armDist);
+                        const ry = Math.round(sy - Math.sin(perpAng) * armDist);
+                        atoms.push(
+                            { id: `S_ISO_L_${sIdx}`, el: 'CH₃', x: lx, y: ly, noValenceDots: true },
+                            { id: `S_ISO_R_${sIdx}`, el: 'CH₃', x: rx, y: ry, noValenceDots: true }
+                        );
+                        bonds.push(
+                            { from: sid, to: `S_ISO_L_${sIdx}`, order: 1 },
+                            { from: sid, to: `S_ISO_R_${sIdx}`, order: 1 }
+                        );
                     } else {
-                        atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                        bonds.push({ from: v.id, to: sid, order: 1 });
+                        // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente
+                        const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃)$/);
+                        if (mEtherSub && totalHere === 1) {
+                            const heteroEl = mEtherSub[1];
+                            const alkylEl = mEtherSub[2];
+                            atoms.push({ id: sid, el: heteroEl, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: v.id, to: sid, order: 1 });
+
+                            const sx2 = Math.round(cx + Math.cos(v.ang) * ((baseDist + 66) * 0.92));
+                            const sy2 = Math.round(cy + Math.sin(v.ang) * (baseDist + 66));
+                            const sid2 = `S2_${sIdx}`;
+                            atoms.push({ id: sid2, el: alkylEl, x: sx2, y: sy2, noValenceDots: true });
+                            bonds.push({ from: sid, to: sid2, order: 1 });
+                        } else {
+                            atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: v.id, to: sid, order: 1 });
+                        }
                     }
                 });
                 return { atoms, bonds };
@@ -5006,7 +5051,9 @@
                     }
                 });
 
-                const stepX = Math.min(115, Math.max(82, Math.floor(800 / Math.max(1, chainNodes.length - 1))));
+                const hasIsoBranch = chainNodes.some(nd => /CH\(CH₃\)₂|\(CH₃\)₂CH/.test(nd.text));
+                const minStep = hasIsoBranch ? 105 : 82;
+                const stepX = Math.min(125, Math.max(minStep, Math.floor(860 / Math.max(1, chainNodes.length - 1))));
                 const startX = Math.round(460 - ((chainNodes.length - 1) * stepX) / 2);
 
                 const parseBranchSpec = (rawGrp) => {
@@ -5025,6 +5072,22 @@
                         'C6H11': { sides: 6, aromatic: false, doubleSide: -1 },
                         'C6H5': { sides: 6, aromatic: true, doubleSide: -1 }
                     };
+
+                    if (cleanEl === 'CH(CH3)2' || cleanEl === '(CH3)2CH') {
+                        const bid = `BR_${uniqueTag}`;
+                        const by = goUp ? py - 93 : py + 93;
+                        atoms.push(
+                            { id: bid, el: 'CH', x: px, y: by },
+                            { id: `${bid}_L`, el: 'CH₃', x: px - 84, y: by },
+                            { id: `${bid}_R`, el: 'CH₃', x: px + 84, y: by }
+                        );
+                        bonds.push(
+                            { from: parentId, to: bid, order: 1 },
+                            { from: bid, to: `${bid}_L`, order: 1 },
+                            { from: bid, to: `${bid}_R`, order: 1 }
+                        );
+                        return;
+                    }
 
                     const spec = ringSpecs[cleanEl];
                     if (!spec) {
@@ -5109,6 +5172,28 @@
                         atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
                         const up = bSingle.order === 2 ? true : (idx % 2 === 1);
                         attachSubstituentNode(nid, nx, 185, mOne[2], up, `S_${idx}`);
+                    } else if ((normalizeFormulaLookupKey(txt) === 'CH(CH3)2' || normalizeFormulaLookupKey(txt) === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
+                        const isLeftEnd = (idx === 0);
+                        atoms.push({ id: nid, el: 'CH', x: nx, y: 185 });
+                        if (isLeftEnd) {
+                            atoms.push(
+                                { id: `${nid}_L`, el: 'CH₃', x: nx - 86, y: 185 },
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 278 }
+                            );
+                            bonds.push(
+                                { from: nid, to: `${nid}_L`, order: 1 },
+                                { from: nid, to: `${nid}_B`, order: 1 }
+                            );
+                        } else {
+                            atoms.push(
+                                { id: `${nid}_R`, el: 'CH₃', x: nx + 86, y: 185 },
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 278 }
+                            );
+                            bonds.push(
+                                { from: nid, to: `${nid}_R`, order: 1 },
+                                { from: nid, to: `${nid}_B`, order: 1 }
+                            );
+                        }
                     } else if (normalizeFormulaLookupKey(txt) === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
                         const isLeftEnd = (idx === 0);
                         const rRad = 46;
