@@ -5834,17 +5834,41 @@
                     }
                 });
 
-                const hasIsoBranch = chainNodes.some(nd => /CH\(CH₃\)₂|\(CH₃\)₂CH/.test(nd.text));
-                const minStep = hasIsoBranch ? 105 : 82;
-                const stepX = Math.min(125, Math.max(minStep, Math.floor(860 / Math.max(1, chainNodes.length - 1))));
-                const startX = Math.round(460 - ((chainNodes.length - 1) * stepX) / 2);
+                // Helper para extraer grupos entre paréntesis anidados en el nivel superior, ej: CH(CH(CH₃)₂) -> base='CH', branches=['CH(CH₃)₂']
+                const parseNodeWithNestedBranches = (rawTok) => {
+                    const mBase = rawTok.match(/^(C|CH|N)\(/);
+                    if (!mBase || !rawTok.endsWith(')')) return null;
+                    const baseEl = mBase[1];
+                    const branches = [];
+                    let i = baseEl.length;
+                    while (i < rawTok.length) {
+                        if (rawTok[i] !== '(') return null;
+                        let depth = 0;
+                        let start = i + 1;
+                        let foundEnd = -1;
+                        for (let j = i; j < rawTok.length; j++) {
+                            if (rawTok[j] === '(') depth++;
+                            else if (rawTok[j] === ')') {
+                                depth--;
+                                if (depth === 0) {
+                                    foundEnd = j;
+                                    break;
+                                }
+                            }
+                        }
+                        if (foundEnd === -1) return null;
+                        branches.push(rawTok.slice(start, foundEnd));
+                        i = foundEnd + 1;
+                    }
+                    return branches.length > 0 ? { baseEl, branches } : null;
+                };
 
                 const parseBranchSpec = (rawGrp) => {
                     if (rawGrp.startsWith('=')) return { el: rawGrp.slice(1), order: 2 };
                     return { el: rawGrp, order: 1 };
                 };
 
-                // Helper que dibuja un anillo real (pentágono, hexágono, triángulo o benceno) cuando va como sustituyente de una cadena
+                // Helper que dibuja un anillo real o grupo ramificado (isopropilo, sec-butilo, terc-butilo, etc.) cuando va como sustituyente
                 const attachSubstituentNode = (parentId, px, py, rawEl, goUp, uniqueTag) => {
                     const cleanEl = rawEl.replace(/[₀-₉]/g, d => '0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(d)]);
                     const ringSpecs = {
@@ -5858,11 +5882,11 @@
 
                     if (cleanEl === 'CH(CH3)2' || cleanEl === '(CH3)2CH') {
                         const bid = `BR_${uniqueTag}`;
-                        const by = goUp ? py - 93 : py + 93;
+                        const by = goUp ? py - 78 : py + 78;
                         atoms.push(
                             { id: bid, el: 'CH', x: px, y: by },
-                            { id: `${bid}_L`, el: 'CH₃', x: px - 84, y: by },
-                            { id: `${bid}_R`, el: 'CH₃', x: px + 84, y: by }
+                            { id: `${bid}_L`, el: 'CH₃', x: px - 68, y: by },
+                            { id: `${bid}_R`, el: 'CH₃', x: px + 68, y: by }
                         );
                         bonds.push(
                             { from: parentId, to: bid, order: 1 },
@@ -5877,17 +5901,16 @@
                         const bid = `BR_${uniqueTag}`;
                         const bOrder = rawEl.startsWith('=') ? 2 : 1;
                         const bLabel = rawEl.startsWith('=') ? rawEl.slice(1) : rawEl;
-                        atoms.push({ id: bid, el: bLabel, x: px, y: goUp ? py - 93 : py + 93 });
+                        atoms.push({ id: bid, el: bLabel, x: px, y: goUp ? py - 78 : py + 78 });
                         bonds.push({ from: parentId, to: bid, order: bOrder });
                         return;
                     }
 
                     const sides = spec.sides;
-                    const R = sides <= 4 ? 38 : 44;
-                    const distCenter = R + 54;
+                    const R = sides <= 4 ? 34 : 38;
+                    const distCenter = R + 44;
                     const rcx = px;
                     const rcy = goUp ? (py - distCenter) : (py + distCenter);
-                    // Vértice 0 apunta directo al carbono padre (abajo si goUp=true, arriba si goUp=false)
                     const startAng = goUp ? (Math.PI / 2) : (-Math.PI / 2);
 
                     for (let k = 0; k < sides; k++) {
@@ -5920,48 +5943,80 @@
                         });
                     }
 
-                    // Enlazar el carbono de la cadena con el vértice 0 del anillo
                     bonds.push({ from: parentId, to: `SR_${uniqueTag}_0`, order: 1 });
                 };
 
-                chainNodes.forEach((nd, idx) => {
-                    const nx = startX + idx * stepX;
-                    const nid = `CN_${idx}`;
+                // Calcular ancho necesario de cada nodo (incluyendo si lleva rama isopropilo arriba/abajo) para evitar solapamientos sin alargar de más los enlaces simples
+                const parsedNodes = chainNodes.map((nd, idx) => {
                     const txt = nd.text;
+                    const nested = parseNodeWithNestedBranches(txt);
+                    const normTxt = normalizeFormulaLookupKey(txt);
+                    let halfW = 36;
+                    if (nested) {
+                        const hasIsoSub = nested.branches.some(b => {
+                            const cb = normalizeFormulaLookupKey(b);
+                            return cb === 'CH(CH3)2' || cb === '(CH3)2CH';
+                        });
+                        const maxSubLen = Math.max(...nested.branches.map(b => b.length));
+                        halfW = hasIsoSub ? 96 : Math.max(38, maxSubLen * 4.5);
+                    } else if ((normTxt === 'CH(CH3)2' || normTxt === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
+                        halfW = 76;
+                    } else if (normTxt === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
+                        halfW = 62;
+                    } else {
+                        halfW = Math.max(34, txt.length * 5.8);
+                    }
+                    return { ...nd, nested, normTxt, halfW };
+                });
 
-                    const mTwo = txt.match(/^(C|CH|N)\(([^()]+)\)\(([^()]+)\)$/);
-                    const mOne = txt.match(/^(C|CH|N)\(([^()]+)\)$/);
+                const nodeXList = [];
+                parsedNodes.forEach((pn, idx) => {
+                    if (idx === 0) {
+                        nodeXList.push(0);
+                    } else {
+                        const prev = parsedNodes[idx - 1];
+                        const gap = Math.max(66, prev.halfW + pn.halfW + 14);
+                        nodeXList.push(nodeXList[idx - 1] + gap);
+                    }
+                });
+                const midSpan = nodeXList[nodeXList.length - 1] / 2;
+                const shiftX = Math.round(460 - midSpan);
 
-                    if (mTwo) {
-                        const bTop = parseBranchSpec(mTwo[2]);
-                        const bBot = parseBranchSpec(mTwo[3]);
+                parsedNodes.forEach((pn, idx) => {
+                    const nx = nodeXList[idx] + shiftX;
+                    const nid = `CN_${idx}`;
+                    const txt = pn.text;
+
+                    if (pn.nested && pn.nested.branches.length >= 2) {
+                        const bTop = parseBranchSpec(pn.nested.branches[0]);
+                        const bBot = parseBranchSpec(pn.nested.branches[1]);
                         const isLeftTerminal = (idx === 0) && (bTop.order === 2 || bBot.order === 2);
-                        const isRightTerminal = (idx === chainNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
-                        const xOffset = isLeftTerminal ? -58 : (isRightTerminal ? 58 : 0);
-                        atoms.push({ id: nid, el: mTwo[1], x: nx, y: 185 });
+                        const isRightTerminal = (idx === parsedNodes.length - 1) && (bTop.order === 2 || bBot.order === 2);
+                        const xOffset = isLeftTerminal ? -50 : (isRightTerminal ? 50 : 0);
+                        atoms.push({ id: nid, el: pn.nested.baseEl, x: nx, y: 185 });
                         if (xOffset !== 0) {
-                            atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 92 });
-                            atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 278 });
+                            atoms.push({ id: `BRT_${idx}`, el: bTop.el, x: nx + xOffset, y: 105 });
+                            atoms.push({ id: `BRB_${idx}`, el: bBot.el, x: nx + xOffset, y: 265 });
                             bonds.push(
                                 { from: nid, to: `BRT_${idx}`, order: bTop.order },
                                 { from: nid, to: `BRB_${idx}`, order: bBot.order }
                             );
                         } else {
-                            attachSubstituentNode(nid, nx, 185, mTwo[2], true, `T_${idx}`);
-                            attachSubstituentNode(nid, nx, 185, mTwo[3], false, `B_${idx}`);
+                            attachSubstituentNode(nid, nx, 185, pn.nested.branches[0], true, `T_${idx}`);
+                            attachSubstituentNode(nid, nx, 185, pn.nested.branches[1], false, `B_${idx}`);
                         }
-                    } else if (mOne) {
-                        const bSingle = parseBranchSpec(mOne[2]);
-                        atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
+                    } else if (pn.nested && pn.nested.branches.length === 1) {
+                        const bSingle = parseBranchSpec(pn.nested.branches[0]);
+                        atoms.push({ id: nid, el: pn.nested.baseEl, x: nx, y: 185 });
                         const up = bSingle.order === 2 ? true : (idx % 2 === 1);
-                        attachSubstituentNode(nid, nx, 185, mOne[2], up, `S_${idx}`);
-                    } else if ((normalizeFormulaLookupKey(txt) === 'CH(CH3)2' || normalizeFormulaLookupKey(txt) === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
+                        attachSubstituentNode(nid, nx, 185, pn.nested.branches[0], up, `S_${idx}`);
+                    } else if ((pn.normTxt === 'CH(CH3)2' || pn.normTxt === '(CH3)2CH') && (idx === 0 || idx === parsedNodes.length - 1)) {
                         const isLeftEnd = (idx === 0);
                         atoms.push({ id: nid, el: 'CH', x: nx, y: 185 });
                         if (isLeftEnd) {
                             atoms.push(
-                                { id: `${nid}_L`, el: 'CH₃', x: nx - 86, y: 185 },
-                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 278 }
+                                { id: `${nid}_L`, el: 'CH₃', x: nx - 68, y: 185 },
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 265 }
                             );
                             bonds.push(
                                 { from: nid, to: `${nid}_L`, order: 1 },
@@ -5969,20 +6024,20 @@
                             );
                         } else {
                             atoms.push(
-                                { id: `${nid}_R`, el: 'CH₃', x: nx + 86, y: 185 },
-                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 278 }
+                                { id: `${nid}_R`, el: 'CH₃', x: nx + 68, y: 185 },
+                                { id: `${nid}_B`, el: 'CH₃', x: nx, y: 265 }
                             );
                             bonds.push(
                                 { from: nid, to: `${nid}_R`, order: 1 },
                                 { from: nid, to: `${nid}_B`, order: 1 }
                             );
                         }
-                    } else if (normalizeFormulaLookupKey(txt) === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
+                    } else if (pn.normTxt === 'C6H5' && (idx === 0 || idx === parsedNodes.length - 1)) {
                         const isLeftEnd = (idx === 0);
-                        const rRad = 46;
-                        const rcx = isLeftEnd ? (nx - 22) : (nx + 22);
+                        const rRad = 40;
+                        const rcx = isLeftEnd ? (nx - 18) : (nx + 18);
                         const rcy = 185;
-                        const rotStart = isLeftEnd ? 0 : Math.PI; // V0 apunta hacia el interior de la cadena
+                        const rotStart = isLeftEnd ? 0 : Math.PI;
                         for (let k = 0; k < 6; k++) {
                             const ang = rotStart + (Math.PI / 3) * k;
                             const vx = Math.round(rcx + Math.cos(ang) * (rRad * 0.92));
@@ -6005,7 +6060,7 @@
                     }
 
                     if (idx > 0) {
-                        chainBonds.push({ from: `CN_${idx - 1}`, to: nid, order: nd.orderFromPrev });
+                        chainBonds.push({ from: `CN_${idx - 1}`, to: nid, order: pn.orderFromPrev });
                     }
                 });
                 bonds.push(...chainBonds);
@@ -6025,7 +6080,7 @@
             if (!sc) sc = { atoms: [], bonds: [] };
 
             // Compactar distancias de enlace (factor 0.64 alrededor del centro 460, 190) para enlaces cortos y limpios
-            const COMPACT_K = 0.64;
+            const COMPACT_K = 0.50;
             const compactX = (rawX) => mapStageX(460 + (rawX - 460) * COMPACT_K);
             const compactY = (rawY) => mapStageY(190 + (rawY - 190) * COMPACT_K);
 
@@ -6042,8 +6097,8 @@
                 if (a.isVertex) return { hw: 0, hh: 0 };
                 if (a.ring === 'phenyl') return { hw: 30, hh: 30 };
                 const txt = String(a.el || '');
-                const hw = Math.max(11, txt.length * 6.2 + 5);
-                const hh = 13;
+                const hw = Math.max(13, txt.length * 6.8 + 7);
+                const hh = 15;
                 return { hw, hh };
             };
 
