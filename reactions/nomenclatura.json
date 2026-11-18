@@ -5340,6 +5340,238 @@
       "synonyms": "p-Hidroxiazobenceno",
       "semiFormula": "AROM-1-OH-4-N=NC6H5",
       "explanation": "Colorante azoico donde el grupo –OH es prioritario (fenol) y –N=N–C₆H₅ se nombra como prefijo fenilazo-."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico condensado",
+      "name": "Fenantreno",
+      "synonyms": "",
+      "semiFormula": "FENANTRENO",
+      "explanation": "Hidrocarburo aromático tricíclico angular isómero del antraceno con 14 electrones π."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico condensado",
+      "name": "Pireno",
+      "synonyms": "",
+      "semiFormula": "PIRENO",
+      "explanation": "Hidrocarburo aromático tetracíclico pericondensado con 16 electrones π (sistema periférico de 14 electrones π)."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico condensado",
+      "name": "Benzo[a]pireno",
+      "synonyms": "Benzopireno",
+      "semiFormula": "BENZOPIRENO",
+      "explanation": "Hidrocarburo aromático pentacíclico condensado de 20 electrones π."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático halogenado",
+      "name": "1-Cloro-2-metilbenceno",
+      "synonyms": "2-Clorotolueno / o-Clorotolueno",
+      "semiFormula": "AROM-1-CH3-2-Cl",
+      "explanation": "Producto orto de la cloración electrofílica del tolueno."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático diclorado",
+      "name": "2,4-Diclorotolueno",
+      "synonyms": "2,4-Dicloro-1-metilbenceno",
+      "semiFormula": "AROM-1-CH3-2,4-Cl",
+      "explanation": "Producto diclorado en posiciones orto y para respecto al grupo metilo del tolueno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Derivado del tolueno",
+      "name": "1-Metil-3-nitrobenceno",
+      "synonyms": "m-Nitrotolueno / 3-Nitrotolueno",
+      "semiFormula": "AROM-1-CH3-3-NO2",
+      "explanation": "Isómero meta minoritario (4%) obtenido en la nitración del tolueno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitroderivado disustituido",
+      "name": "1,2-Dinitrobenceno",
+      "synonyms": "o-Dinitrobenceno",
+      "semiFormula": "AROM-1,2-NO2",
+      "explanation": "Isómero orto minoritario (6%) de la nitración del nitrobenceno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitroderivado disustituido",
+      "name": "1,4-Dinitrobenceno",
+      "synonyms": "p-Dinitrobenceno",
+      "semiFormula": "AROM-1,4-NO2",
+      "explanation": "Isómero para (0,7%) de la nitración del nitrobenceno."
+    },
+    {
+      "group": "acidos",
+      "badge": "Haloácido aromático",
+      "name": "Ácido 3-clorobenzoico",
+      "synonyms": "Ácido m-clorobenzoico",
+      "semiFormula": "AROM-1-COOH-3-Cl",
+      "explanation": "Producto mayoritario de la cloración del ácido benzoico (el –COOH orienta a meta)."
+    },
+    {
+      "group": "acidos",
+      "badge": "Haloácido aromático",
+      "name": "Ácido 2-clorobenzoico",
+      "synonyms": "Ácido o-clorobenzoico",
+      "semiFormula": "AROM-1-COOH-2-Cl",
+      "explanation": "Ácido benzoico sustituido con cloro en posición orto (C2)."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno acumulado",
+      "name": "1,2-Butadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=C=CH—CH₃",
+      "explanation": "Dieno acumulado (aleno sustituido) de 4 carbonos."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno acumulado",
+      "name": "1,2-Pentadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=C=CH—CH₂—CH₃",
+      "explanation": "Dieno acumulado de 5 carbonos."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno aislado",
+      "name": "1,4-Pentadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH₂—CH=CH₂",
+      "explanation": "Dieno aislado de 5 carbonos con dobles enlaces separados por un grupo metileno."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno conjugado",
+      "name": "1,3-Pentadieno",
+      "synonyms": "Piperileno",
+      "semiFormula": "CH₂=CH—CH=CH—CH₃",
+      "explanation": "Dieno conjugado de 5 carbonos."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno aislado",
+      "name": "1,4-Heptadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH₂—CH=CH—CH₂—CH₃",
+      "explanation": "Dieno no conjugado (aislado) de 7 carbonos."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno conjugado",
+      "name": "7,7,8-Trimetil-3,5-nonadieno",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH=CH—CH=CH—C(CH₃)₂—CH(CH₃)—CH₃",
+      "explanation": "Dieno conjugado ramificado de 9 carbonos."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno aislado",
+      "name": "3,3-Dietil-1,4-hexadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—C(CH₂CH₃)₂—CH=CH—CH₃",
+      "explanation": "Dieno aislado de 6 carbonos con dos grupos etilo geminales en C3."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno halogenado",
+      "name": "(Z)-7-Cloro-4-isopropil-3-metil-3-hepteno",
+      "synonyms": "",
+      "semiFormula": "Z-CH3CH2-C(CH3)=C(CH(CH3)2)-CH2CH2CH2Cl",
+      "explanation": "Alqueno tetrasustituido con configuración estereoquímica (Z)."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno halogenado",
+      "name": "cis-1,2-Dicloroeteno",
+      "synonyms": "cis-Dicloroetileno",
+      "semiFormula": "CIS-Cl-CH=CH-Cl",
+      "explanation": "Ambos átomos de cloro del mismo lado del doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno halogenado",
+      "name": "trans-1,2-Dicloroeteno",
+      "synonyms": "trans-Dicloroetileno",
+      "semiFormula": "TRANS-Cl-CH=CH-Cl",
+      "explanation": "Átomos de cloro en lados opuestos del doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno exocíclico",
+      "name": "Metilenciclohexano",
+      "synonyms": "Metilidenociclohexano",
+      "semiFormula": "CICLO-6-1-=CH2",
+      "explanation": "Anillo de ciclohexano con un doble enlace exocíclico =CH₂."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano",
+      "name": "Ciclododecano",
+      "synonyms": "",
+      "semiFormula": "CICLO-12",
+      "explanation": "Cicloalcano macrocíclico de 12 átomos de carbono."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "cis-1,2-Dimetilciclopropano",
+      "synonyms": "",
+      "semiFormula": "CIS-CICLO-3-1,2-CH3",
+      "explanation": "Anillo de ciclopropano con dos grupos metilo hacia la misma cara."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "trans-1,2-Dimetilciclopropano",
+      "synonyms": "",
+      "semiFormula": "TRANS-CICLO-3-1,2-CH3",
+      "explanation": "Anillo de ciclopropano con dos grupos metilo en caras opuestas."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "cis-1-Bromo-2-clorociclobutano",
+      "synonyms": "",
+      "semiFormula": "CIS-CICLO-4-1-Br-2-Cl",
+      "explanation": "Ciclobutano disustituido en cis con bromo (C1) y cloro (C2)."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "trans-1-Bromo-2-clorociclobutano",
+      "synonyms": "",
+      "semiFormula": "TRANS-CICLO-4-1-Br-2-Cl",
+      "explanation": "Ciclobutano disustituido en trans con bromo (C1) y cloro (C2)."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino (Enino)",
+      "name": "2-Metil-1-penten-3-ino",
+      "synonyms": "2-Metilpent-1-en-3-ino",
+      "semiFormula": "CH₂=C(CH₃)—C≡C—CH₃",
+      "explanation": "Enino ramificado de 5 carbonos con doble enlace en C1 y triple en C3."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquinol",
+      "name": "3-Butin-2-ol",
+      "synonyms": "But-3-in-2-ol",
+      "semiFormula": "CH₃—CH(OH)—C≡CH",
+      "explanation": "Alquinol secundario de 4 carbonos (el –OH en C2 tiene prioridad)."
+    },
+    {
+      "group": "eteres",
+      "badge": "Alcoxialquino",
+      "name": "4-Metoxi-2-hexino",
+      "synonyms": "4-Metoxihex-2-ino",
+      "semiFormula": "CH₃—C≡C—CH(OCH₃)—CH₂—CH₃",
+      "explanation": "El triple enlace (C2) tiene prioridad de numeración sobre el grupo metoxi (C4)."
     }
   ]
 }
