@@ -1912,15 +1912,37 @@
                         const sx = cX - distIdx * segStep;
                         const sId = `${prefixId}_S${idx}`;
                         const isRing = segs[idx] === 'C₆H₅';
-                        atoms.push({
-                            id: sId,
-                            el: isRing ? 'Ph' : segs[idx],
-                            ring: isRing ? 'phenyl' : undefined,
-                            x: sx,
-                            y: centerY
-                        });
-                        bonds.push({ from: sId, to: prevId, order: 1, state: 'normal' });
-                        prevId = sId;
+                        if (isRing) {
+                            const rRad = 44;
+                            const rcx = sx - 24;
+                            const rcy = centerY;
+                            for (let k = 0; k < 6; k++) {
+                                const ang = (Math.PI / 3) * k; // k=0 apunta directo a la derecha (0 rad) hacia el carbono quiral
+                                const vx = Math.round(rcx + Math.cos(ang) * (rRad * 0.92));
+                                const vy = Math.round(rcy + Math.sin(ang) * rRad);
+                                atoms.push({ id: `${sId}_V${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                            }
+                            for (let k = 0; k < 6; k++) {
+                                const nxt = (k + 1) % 6;
+                                bonds.push({
+                                    from: `${sId}_V${k}`,
+                                    to: `${sId}_V${nxt}`,
+                                    order: (k % 2 === 0) ? 2 : 1,
+                                    inwardCenter: { x: rcx, y: rcy }
+                                });
+                            }
+                            bonds.push({ from: `${sId}_V0`, to: prevId, order: 1, state: 'normal' });
+                            prevId = `${sId}_V0`;
+                        } else {
+                            atoms.push({
+                                id: sId,
+                                el: segs[idx],
+                                x: sx,
+                                y: centerY
+                            });
+                            bonds.push({ from: sId, to: prevId, order: 1, state: 'normal' });
+                            prevId = sId;
+                        }
                     }
                     return { atoms, bonds, spanHalfW: Math.max(130, segs.length * segStep + 40) };
                 } else {
@@ -1943,15 +1965,37 @@
                         const sx = cX + (idx + 1) * segStep;
                         const sId = `${prefixId}_S${idx}`;
                         const isRing = revSegs[idx] === 'C₆H₅';
-                        atoms.push({
-                            id: sId,
-                            el: isRing ? 'Ph' : revSegs[idx],
-                            ring: isRing ? 'phenyl' : undefined,
-                            x: sx,
-                            y: centerY
-                        });
-                        bonds.push({ from: prevId, to: sId, order: 1, state: 'normal' });
-                        prevId = sId;
+                        if (isRing) {
+                            const rRad = 44;
+                            const rcx = sx + 24;
+                            const rcy = centerY;
+                            for (let k = 0; k < 6; k++) {
+                                const ang = Math.PI + (Math.PI / 3) * k; // k=0 apunta directo a la izquierda (PI rad) hacia el carbono quiral
+                                const vx = Math.round(rcx + Math.cos(ang) * (rRad * 0.92));
+                                const vy = Math.round(rcy + Math.sin(ang) * rRad);
+                                atoms.push({ id: `${sId}_V${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                            }
+                            for (let k = 0; k < 6; k++) {
+                                const nxt = (k + 1) % 6;
+                                bonds.push({
+                                    from: `${sId}_V${k}`,
+                                    to: `${sId}_V${nxt}`,
+                                    order: (k % 2 === 0) ? 2 : 1,
+                                    inwardCenter: { x: rcx, y: rcy }
+                                });
+                            }
+                            bonds.push({ from: prevId, to: `${sId}_V0`, order: 1, state: 'normal' });
+                            prevId = `${sId}_V0`;
+                        } else {
+                            atoms.push({
+                                id: sId,
+                                el: revSegs[idx],
+                                x: sx,
+                                y: centerY
+                            });
+                            bonds.push({ from: prevId, to: sId, order: 1, state: 'normal' });
+                            prevId = sId;
+                        }
                     }
                     return { atoms, bonds, spanHalfW: Math.max(130, revSegs.length * segStep + 45) };
                 }
@@ -4557,11 +4601,79 @@
 
             // 2. Anillos Aromáticos (AROM-...) en representación topológica limpia (hexágono con 3 dobles enlaces internos y sustituyentes en los vértices)
             if (s.startsWith('AROM-')) {
-                const cx = 460, cy = 195, R = 64;
-                const verts = [];
-                const subCountsByPos = {};
-
                 const rest = s.replace(/^AROM-(?:BENCENO)?/, '').replace(/^-+/, '');
+
+                // Helper interno para dibujar un anillo de benceno topológico limpio
+                const addBenzeneRing = (ringTag, rcx, rcy, rRad, rotOffset = -Math.PI / 2) => {
+                    const ringVerts = [];
+                    for (let k = 0; k < 6; k++) {
+                        const pos = k + 1;
+                        const ang = rotOffset + (Math.PI / 3) * k;
+                        const vx = Math.round(rcx + Math.cos(ang) * (rRad * 0.92));
+                        const vy = Math.round(rcy + Math.sin(ang) * rRad);
+                        ringVerts.push({ vx, vy, ang, id: `${ringTag}_V${pos}` });
+                        atoms.push({ id: `${ringTag}_V${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                    }
+                    for (let k = 0; k < 6; k++) {
+                        const next = (k + 1) % 6;
+                        bonds.push({
+                            from: `${ringTag}_V${k + 1}`,
+                            to: `${ringTag}_V${next + 1}`,
+                            order: (k % 2 === 0) ? 2 : 1,
+                            inwardCenter: { x: rcx, y: rcy }
+                        });
+                    }
+                    return ringVerts;
+                };
+
+                // Casos especiales bi-aromáticos horizontales (Fenoxibenceno, Bencilfeniléter, Difenilmetanona)
+                const normRest = normalizeFormulaLookupKey(rest);
+                if (normRest === '1-O-C6H5') {
+                    // Fenoxibenceno (Difeniléter) en horizontal: Benceno izq — O — Benceno der
+                    const leftVerts = addBenzeneRing('R1', 285, 190, 62, 0);   // V1 apunta a la derecha (0 rad)
+                    const rightVerts = addBenzeneRing('R2', 635, 190, 62, Math.PI); // V1 apunta a la izquierda (PI rad)
+                    atoms.push({ id: 'O_BRIDGE', el: 'O', x: 460, y: 190, noValenceDots: true });
+                    bonds.push(
+                        { from: leftVerts[0].id, to: 'O_BRIDGE', order: 1 },
+                        { from: 'O_BRIDGE', to: rightVerts[0].id, order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+
+                if (normRest === '1-OCH2C6H5') {
+                    // Bencilfeniléter en horizontal: Benceno izq — O — CH₂ — Benceno der
+                    const leftVerts = addBenzeneRing('R1', 240, 190, 58, 0);
+                    const rightVerts = addBenzeneRing('R2', 680, 190, 58, Math.PI);
+                    atoms.push(
+                        { id: 'O_BRIDGE', el: 'O', x: 400, y: 190, noValenceDots: true },
+                        { id: 'CH2_BRIDGE', el: 'CH₂', x: 520, y: 190, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: leftVerts[0].id, to: 'O_BRIDGE', order: 1 },
+                        { from: 'O_BRIDGE', to: 'CH2_BRIDGE', order: 1 },
+                        { from: 'CH2_BRIDGE', to: rightVerts[0].id, order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+
+                if (normRest === '1-COC6H5') {
+                    // Difenilmetanona (Benzofenona) en horizontal: Benceno izq — C(=O) — Benceno der
+                    const leftVerts = addBenzeneRing('R1', 285, 205, 60, 0);
+                    const rightVerts = addBenzeneRing('R2', 635, 205, 60, Math.PI);
+                    atoms.push(
+                        { id: 'C_CARB', el: 'C', x: 460, y: 205, noValenceDots: true },
+                        { id: 'O_CARB', el: 'O', x: 460, y: 105, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: leftVerts[0].id, to: 'C_CARB', order: 1 },
+                        { from: 'C_CARB', to: 'O_CARB', order: 2 },
+                        { from: 'C_CARB', to: rightVerts[0].id, order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+
+                const cx = 460, cy = 195, R = 64;
+                const subCountsByPos = {};
                 const parsedSubs = [];
                 if (rest && rest !== 'QUINONA') {
                     const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
@@ -4576,21 +4688,20 @@
                     });
                 }
 
-                for (let k = 0; k < 6; k++) {
-                    const pos = k + 1;
-                    const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
-                    const vy = Math.round(cy + Math.sin(ang) * R);
-                    verts.push({ vx, vy, ang });
-                    // Vértice esquelético limpio (sin círculo CH ni puntos de valencia)
-                    atoms.push({ id: `V${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
-                }
-
                 if (s === 'AROM-QUINONA') {
+                    const verts = [];
+                    for (let k = 0; k < 6; k++) {
+                        const pos = k + 1;
+                        const ang = -Math.PI / 2 + (Math.PI / 3) * k;
+                        const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                        const vy = Math.round(cy + Math.sin(ang) * R);
+                        verts.push({ vx, vy, ang });
+                        atoms.push({ id: `V${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                    }
                     bonds.push(
-                        { from: 'V1', to: 'V2', order: 1, ringPoly: true }, { from: 'V2', to: 'V3', order: 2, innerSide: 'left' },
-                        { from: 'V3', to: 'V4', order: 1, ringPoly: true }, { from: 'V4', to: 'V5', order: 1, ringPoly: true },
-                        { from: 'V5', to: 'V6', order: 2, innerSide: 'right' }, { from: 'V6', to: 'V1', order: 1, ringPoly: true }
+                        { from: 'V1', to: 'V2', order: 1 }, { from: 'V2', to: 'V3', order: 2, inwardCenter: { x: cx, y: cy } },
+                        { from: 'V3', to: 'V4', order: 1 }, { from: 'V4', to: 'V5', order: 1 },
+                        { from: 'V5', to: 'V6', order: 2, inwardCenter: { x: cx, y: cy } }, { from: 'V6', to: 'V1', order: 1 }
                     );
                     atoms.push(
                         { id: 'O1', el: 'O', x: cx, y: cy - R - 64, noValenceDots: true },
@@ -4600,16 +4711,7 @@
                     return { atoms, bonds };
                 }
 
-                // Hexágono exterior + 3 dobles enlaces internos (Kekulé) apuntando hacia el centro (cx, cy)
-                for (let k = 0; k < 6; k++) {
-                    const next = (k + 1) % 6;
-                    bonds.push({
-                        from: `V${k + 1}`,
-                        to: `V${next + 1}`,
-                        order: (k % 2 === 0) ? 2 : 1,
-                        inwardCenter: { x: cx, y: cy }
-                    });
-                }
+                const verts = addBenzeneRing('R0', cx, cy, R, -Math.PI / 2);
 
                 const placedAtPos = {};
                 parsedSubs.forEach((itemSub, sIdx) => {
@@ -4639,13 +4741,13 @@
                     const sy = Math.round(cy + Math.sin(v.ang + spread) * baseDist);
                     const sid = `S_${sIdx}`;
 
-                    // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente como en la imagen
+                    // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente
                     const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃)$/);
                     if (mEtherSub && totalHere === 1) {
                         const heteroEl = mEtherSub[1];
                         const alkylEl = mEtherSub[2];
                         atoms.push({ id: sid, el: heteroEl, x: sx, y: sy, noValenceDots: true });
-                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                        bonds.push({ from: v.id, to: sid, order: 1 });
 
                         const sx2 = Math.round(cx + Math.cos(v.ang) * ((baseDist + 66) * 0.92));
                         const sy2 = Math.round(cy + Math.sin(v.ang) * (baseDist + 66));
@@ -4654,7 +4756,7 @@
                         bonds.push({ from: sid, to: sid2, order: 1 });
                     } else {
                         atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                        bonds.push({ from: v.id, to: sid, order: 1 });
                     }
                 });
                 return { atoms, bonds };
@@ -5007,6 +5109,29 @@
                         atoms.push({ id: nid, el: mOne[1], x: nx, y: 185 });
                         const up = bSingle.order === 2 ? true : (idx % 2 === 1);
                         attachSubstituentNode(nid, nx, 185, mOne[2], up, `S_${idx}`);
+                    } else if (normalizeFormulaLookupKey(txt) === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
+                        const isLeftEnd = (idx === 0);
+                        const rRad = 46;
+                        const rcx = isLeftEnd ? (nx - 22) : (nx + 22);
+                        const rcy = 185;
+                        const rotStart = isLeftEnd ? 0 : Math.PI; // V0 apunta hacia el interior de la cadena
+                        for (let k = 0; k < 6; k++) {
+                            const ang = rotStart + (Math.PI / 3) * k;
+                            const vx = Math.round(rcx + Math.cos(ang) * (rRad * 0.92));
+                            const vy = Math.round(rcy + Math.sin(ang) * rRad);
+                            atoms.push({ id: k === 0 ? nid : `${nid}_V${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                        }
+                        for (let k = 0; k < 6; k++) {
+                            const nxt = (k + 1) % 6;
+                            const idA = k === 0 ? nid : `${nid}_V${k}`;
+                            const idB = nxt === 0 ? nid : `${nid}_V${nxt}`;
+                            bonds.push({
+                                from: idA,
+                                to: idB,
+                                order: (k % 2 === 0) ? 2 : 1,
+                                inwardCenter: { x: rcx, y: rcy }
+                            });
+                        }
                     } else {
                         atoms.push({ id: nid, el: txt, x: nx, y: 185 });
                     }
