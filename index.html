@@ -4916,7 +4916,7 @@
                 });
                 const ringEdges = [
                     ['1', '2', 2, c2x], ['2', '3', 1, c2x], ['3', '4', 2, c2x], ['4', '4a', 1, c2x], ['4a', '8a', 2, c2x], ['8a', '1', 1, c2x],
-                    ['8a', '8', 2, c1x], ['8', '7', 1, c1x], ['7', '6', 2, c1x], ['6', '5', 1, c1x], ['5', '4a', 1, c1x]
+                    ['8a', '8', 1, c1x], ['8', '7', 2, c1x], ['7', '6', 1, c1x], ['6', '5', 2, c1x], ['5', '4a', 1, c1x]
                 ];
                 ringEdges.forEach(([u, v, ord, rcx]) => {
                     bonds.push({ from: `N_${u}`, to: `N_${v}`, order: ord, inwardCenter: { x: rcx, y: cy } });
@@ -5011,68 +5011,83 @@
             }
 
             // 2a-bis. Heterociclos Aromáticos, Biciclos Condensados, Anulenos, Lactonas, Prolina, Carbohidratos y Lípidos
-            if (s === 'FENANTRENO') {
-                // Fenantreno: sistema tricíclico angular de 14 electrones pi
-                const R = 50, dx = Math.round(R * Math.cos(Math.PI / 6)), dy = Math.round(R * Math.sin(Math.PI / 6));
-                const c1x = 415, c2x = c1x + 2 * dx, c3x = c1x + dx, cy1 = 215, cy2 = cy1 - (R + dy);
-                const addHex = (tag, cx, cy, dblEdges) => {
+            // Helper de red hexagonal perfecta (hexágonos con lados verticales, ancho 2*dx, paso vertical R+dy = 1.5*R)
+            const buildHexLattice = (ringSpecs) => {
+                const R = 48;
+                const dx = Math.round(R * Math.cos(Math.PI / 6)); // ~42
+                const dy = Math.round(R * Math.sin(Math.PI / 6)); // 24
+                const rowStep = R + dy; // 72
+                const vertMap = new Map();
+                const edgeMap = new Map();
+
+                const vKey = (x, y) => `${Math.round(x)},${Math.round(y)}`;
+                const getOrAddVert = (x, y) => {
+                    const k = vKey(x, y);
+                    if (!vertMap.has(k)) {
+                        const id = `HV_${vertMap.size}`;
+                        vertMap.set(k, { id, x: Math.round(x), y: Math.round(y) });
+                        atoms.push({ id, el: '', isVertex: true, x: Math.round(x), y: Math.round(y), noValenceDots: true });
+                    }
+                    return vertMap.get(k);
+                };
+
+                ringSpecs.forEach(rg => {
+                    const cx = rg.cx;
+                    const cy = rg.cy;
+                    const pts = [];
                     for (let k = 0; k < 6; k++) {
                         const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                        atoms.push({ id: `${tag}_${k}`, el: '', isVertex: true, x: Math.round(cx + Math.cos(ang) * dx / Math.cos(Math.PI/6)), y: Math.round(cy + Math.sin(ang) * R), noValenceDots: true });
+                        pts.push(getOrAddVert(cx + Math.cos(ang) * R, cy + Math.sin(ang) * R));
                     }
                     for (let k = 0; k < 6; k++) {
-                        bonds.push({ from: `${tag}_${k}`, to: `${tag}_${(k + 1) % 6}`, order: dblEdges.includes(k) ? 2 : 1, inwardCenter: { x: cx, y: cy } });
+                        const vA = pts[k];
+                        const vB = pts[(k + 1) % 6];
+                        const eKey = [vA.id, vB.id].sort().join('--');
+                        const ord = (rg.dbl || []).includes(k) ? 2 : 1;
+                        if (!edgeMap.has(eKey) || ord === 2) {
+                            edgeMap.set(eKey, { from: vA.id, to: vB.id, order: ord, inwardCenter: { x: cx, y: cy } });
+                        }
                     }
-                };
-                addHex('FA', c1x, cy1, [0, 2, 4]);
-                addHex('FB', c2x, cy1, [1, 3, 5]);
-                addHex('FC', c3x, cy2, [0, 4]);
+                });
+
+                edgeMap.forEach(e => bonds.push(e));
                 return { atoms, bonds };
+            };
+
+            if (s === 'FENANTRENO') {
+                // Fenantreno: 2 anillos inferiores (izq y der) + 1 anillo superior desplazado +dx (angular, 14 electrones pi = 7 dobles enlaces)
+                const R = 48, dx = Math.round(R * Math.cos(Math.PI / 6)), rowStep = Math.round(R * 1.5);
+                const cx = 440, cy = 225;
+                return buildHexLattice([
+                    { cx: cx - dx, cy: cy,           dbl: [0, 2, 4] },
+                    { cx: cx + dx, cy: cy,           dbl: [0, 2] },
+                    { cx: cx,      cy: cy - rowStep, dbl: [1, 5] }
+                ]);
             }
 
             if (s === 'PIRENO') {
-                // Pireno: sistema tetracíclico pericondensado de 16 electrones pi
-                const R = 48, dx = Math.round(R * Math.cos(Math.PI / 6)), dy = Math.round(R * Math.sin(Math.PI / 6));
-                const cx = 460, cy = 195;
-                const rings = [
-                    { tag: 'P1', x: cx - dx, y: cy - (R + dy) / 2, dbl: [0, 4] },
-                    { tag: 'P2', x: cx + dx, y: cy - (R + dy) / 2, dbl: [1, 5] },
-                    { tag: 'P3', x: cx - dx, y: cy + (R + dy) / 2, dbl: [2, 4] },
-                    { tag: 'P4', x: cx + dx, y: cy + (R + dy) / 2, dbl: [1, 3] }
-                ];
-                rings.forEach(rg => {
-                    for (let k = 0; k < 6; k++) {
-                        const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                        atoms.push({ id: `${rg.tag}_${k}`, el: '', isVertex: true, x: Math.round(rg.x + Math.cos(ang) * R), y: Math.round(rg.y + Math.sin(ang) * R), noValenceDots: true });
-                    }
-                    for (let k = 0; k < 6; k++) {
-                        bonds.push({ from: `${rg.tag}_${k}`, to: `${rg.tag}_${(k + 1) % 6}`, order: rg.dbl.includes(k) ? 2 : 1, inwardCenter: { x: rg.x, y: rg.y } });
-                    }
-                });
-                return { atoms, bonds };
+                // Pireno: 2 anillos arriba + 2 anillos abajo desplazados +dx (4 anillos pericondensados, 16 electrones pi = 8 dobles enlaces)
+                const R = 48, dx = Math.round(R * Math.cos(Math.PI / 6)), rowStep = Math.round(R * 1.5);
+                const cx = 440, cy = 195;
+                return buildHexLattice([
+                    { cx: cx - dx,     cy: cy - rowStep / 2, dbl: [0, 2, 4] },
+                    { cx: cx + dx,     cy: cy - rowStep / 2, dbl: [0, 2] },
+                    { cx: cx,          cy: cy + rowStep / 2, dbl: [1, 3] },
+                    { cx: cx + 2 * dx, cy: cy + rowStep / 2, dbl: [1] }
+                ]);
             }
 
             if (s === 'BENZOPIRENO') {
-                // Benzo[a]pireno: pireno con un quinto anillo bencénico fusionado
-                const R = 44, dx = Math.round(R * Math.cos(Math.PI / 6)), dy = Math.round(R * Math.sin(Math.PI / 6));
-                const cx = 445, cy = 195;
-                const rings = [
-                    { tag: 'B1', x: cx - dx, y: cy - (R + dy) / 2, dbl: [0, 4] },
-                    { tag: 'B2', x: cx + dx, y: cy - (R + dy) / 2, dbl: [1, 5] },
-                    { tag: 'B3', x: cx - dx, y: cy + (R + dy) / 2, dbl: [2, 4] },
-                    { tag: 'B4', x: cx + dx, y: cy + (R + dy) / 2, dbl: [1, 3] },
-                    { tag: 'B5', x: cx + 3 * dx, y: cy - (R + dy) / 2, dbl: [0, 2, 4] }
-                ];
-                rings.forEach(rg => {
-                    for (let k = 0; k < 6; k++) {
-                        const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                        atoms.push({ id: `${rg.tag}_${k}`, el: '', isVertex: true, x: Math.round(rg.x + Math.cos(ang) * R), y: Math.round(rg.y + Math.sin(ang) * R), noValenceDots: true });
-                    }
-                    for (let k = 0; k < 6; k++) {
-                        bonds.push({ from: `${rg.tag}_${k}`, to: `${rg.tag}_${(k + 1) % 6}`, order: rg.dbl.includes(k) ? 2 : 1, inwardCenter: { x: rg.x, y: rg.y } });
-                    }
-                });
-                return { atoms, bonds };
+                // Benzo[a]pireno: núcleo de pireno (4 anillos) + 1 anillo bencénico fusionado en la arista superior derecha (20 e- pi = 10 dobles enlaces)
+                const R = 48, dx = Math.round(R * Math.cos(Math.PI / 6)), rowStep = Math.round(R * 1.5);
+                const cx = 415, cy = 195;
+                return buildHexLattice([
+                    { cx: cx - dx,     cy: cy - rowStep / 2, dbl: [0, 2, 4] },
+                    { cx: cx + dx,     cy: cy - rowStep / 2, dbl: [0, 2] },
+                    { cx: cx + 3 * dx, cy: cy - rowStep / 2, dbl: [0, 2] },
+                    { cx: cx,          cy: cy + rowStep / 2, dbl: [1, 3] },
+                    { cx: cx + 2 * dx, cy: cy + rowStep / 2, dbl: [1] }
+                ]);
             }
 
             if (s === 'CICLO-6-1-=CH2') {
