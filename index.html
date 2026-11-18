@@ -313,6 +313,31 @@
 
             <!-- MÓDULO NOMENCLATURA B: TARJETA INTERACTIVA DE PRÁCTICA -->
             <section id="nomenclaturePracticeSection" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-4 sm:p-6 shadow-2xl flex flex-col gap-4">
+                <!-- Buscador Dinámico de Compuestos por Nombre -->
+                <div class="relative">
+                    <div class="relative">
+                        <input
+                            type="text"
+                            id="nomFormulaSearchInput"
+                            oninput="handleNomenclatureDynamicSearch(this.value)"
+                            onfocus="handleNomenclatureDynamicSearch(this.value)"
+                            placeholder="🔍 Buscar compuesto por nombre o sinónimo (ej: ácido pícrico, anisol, 2-penteno...)"
+                            autocomplete="off"
+                            class="w-full px-4 py-2.5 pr-10 rounded-xl bg-slate-950/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 text-sm text-slate-100 placeholder-slate-500 outline-none transition"
+                        />
+                        <button
+                            type="button"
+                            id="nomClearSearchBtn"
+                            onclick="clearNomenclatureSearch()"
+                            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white text-xs font-bold px-1.5 py-0.5 rounded bg-slate-800"
+                            title="Limpiar búsqueda"
+                        >✕</button>
+                    </div>
+                    <div
+                        id="nomSearchResultsDropdown"
+                        class="hidden mt-1.5 max-h-64 overflow-y-auto rounded-xl bg-slate-950 border border-cyan-500/50 shadow-2xl divide-y divide-slate-800/80 z-50"
+                    ></div>
+                </div>
                 <!-- Barra Superior de Progreso y Puntaje -->
                 <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-950/90 border border-slate-800 px-4 py-2.5 rounded-2xl">
                     <div class="flex items-center gap-2.5">
@@ -4934,85 +4959,109 @@
             renderNomenclatureSceneToSvg(item);
         }
 
-        function renderNomenclatureSceneToSvg(item) {
-            const stage = document.getElementById('nomSvgStage');
-            const svgEl = document.getElementById('nomSvgCanvas');
-            if (!stage || !svgEl) return;
-
-            let sc = item.scene || buildAutoNomenclatureScene(item.semiFormula);
-            if (!sc) sc = { atoms: [], bonds: [] };
-
-            let html = '';
-            let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-            const expand = (x1, y1, x2, y2) => {
-                if (x1 < minX) minX = x1;
-                if (x2 > maxX) maxX = x2;
-                if (y1 < minY) minY = y1;
-                if (y2 > maxY) maxY = y2;
-            };
-
-            const atomMap = {};
-            const bondsByAtom = {};
-            (sc.atoms || []).forEach(a => {
-                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y) };
-            });
-
-            (sc.bonds || []).forEach(b => {
-                const a1 = atomMap[b.from];
-                const a2 = atomMap[b.to];
-                if (!a1 || !a2) return;
-                if (!bondsByAtom[b.from]) bondsByAtom[b.from] = [];
-                if (!bondsByAtom[b.to]) bondsByAtom[b.to] = [];
-                bondsByAtom[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
-                bondsByAtom[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
-                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null);
-            });
-
-            Object.values(atomMap).forEach(a => {
-                const geom = getNodeGeometry(a);
-                const valInfo = computeAutomaticValenceDots(a, bondsByAtom[a.id] || []);
-                expand(a.x - geom.halfW - 14, a.y - geom.halfH - 14, a.x + geom.halfW + 14, a.y + geom.halfH + 14);
-                html += renderSingleAtomNode(a, geom, valInfo);
-            });
-
-            stage.innerHTML = html;
-            if (isFinite(minX) && isFinite(maxX)) {
-                const padX = 45, padY = 30;
-                const vbX = Math.max(0, minX - padX);
-                const vbY = Math.max(0, minY - padY);
-                const vbW = Math.min(1040 - vbX, Math.max(360, (maxX - minX) + padX * 2));
-                const vbH = Math.min(360 - vbY, Math.max(210, (maxY - minY) + padY * 2));
-                svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${vbW.toFixed(1)} ${vbH.toFixed(1)}`);
-            }
+        function normalizeSearchText(str) {
+            return String(str || '')
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .trim();
         }
 
-        function renderCurrentNomenclatureCard() {
-            const item = nomDeck[nomCurrentIndex];
-            if (!item) return;
+        function handleNomenclatureDynamicSearch(rawQuery) {
+            const dropdown = document.getElementById('nomSearchResultsDropdown');
+            const clearBtn = document.getElementById('nomClearSearchBtn');
+            if (!dropdown) return;
 
-            nomIsFlipped = false;
-            document.getElementById('nomCardInner')?.classList.remove('is-flipped');
-            document.getElementById('nomControlsFlipHint')?.classList.remove('hidden');
-            document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
-
-            document.getElementById('nomProgressBadge').innerText = `${nomCurrentIndex + 1} / ${nomDeck.length}`;
-            const grpObj = NOMENCLATURE_GROUPS.find(g => g.id === item.group);
-            document.getElementById('nomGroupTag').innerText = grpObj ? grpObj.label : item.group;
-            document.getElementById('nomStereoHintBadge').innerText = item.badge || 'Compuesto Orgánico';
-            document.getElementById('nomScoreCorrect').innerText = nomCorrectCount;
-            document.getElementById('nomScoreWrong').innerText = nomWrongCount;
-
-            document.getElementById('nomAnswerPrimary').innerText = item.name;
-            const synBox = document.getElementById('nomAnswerSynonymsBox');
-            if (item.synonyms) {
-                document.getElementById('nomAnswerSynonyms').innerText = item.synonyms;
-                synBox.classList.remove('hidden');
-            } else {
-                synBox.classList.add('hidden');
+            const q = normalizeSearchText(rawQuery);
+            if (clearBtn) {
+                clearBtn.classList.toggle('hidden', q.length === 0);
             }
-            document.getElementById('nomAnswerExplanation').innerText = item.explanation || '';
 
-            renderNomenclatureSceneToSvg(item);
+            if (q.length === 0) {
+                dropdown.classList.add('hidden');
+                dropdown.innerHTML = '';
+                return;
+            }
+
+            const terms = q.split(/\s+/).filter(Boolean);
+            const matches = NOMENCLATURE_BANK.filter(item => {
+                const haystack = normalizeSearchText(
+                    `${item.name || ''} ${item.synonyms || ''} ${item.semiFormula || ''}`
+                );
+                return terms.every(t => haystack.includes(t));
+            }).slice(0, 15);
+
+            if (matches.length === 0) {
+                dropdown.innerHTML = `
+                    <div class="px-4 py-3 text-xs text-slate-400 text-center">
+                        No se encontraron compuestos que coincidan con "<span class="text-slate-200 font-semibold">${rawQuery}</span>".
+                    </div>
+                `;
+                dropdown.classList.remove('hidden');
+                return;
+            }
+
+            dropdown.innerHTML = matches.map((item, idx) => {
+                const grpObj = NOMENCLATURE_GROUPS.find(g => g.id === item.group);
+                const grpLabel = grpObj ? grpObj.label : (item.group || '');
+                const synHtml = item.synonyms
+                    ? `<span class="text-[11px] text-amber-300/90 block truncate">También: ${item.synonyms}</span>`
+                    : '';
+
+                return `
+                    <button
+                        type="button"
+                        onclick="selectSearchedNomenclatureItem(${idx})"
+                        class="w-full text-left px-4 py-2.5 hover:bg-cyan-950/50 transition flex items-center justify-between gap-3 cursor-pointer"
+                    >
+                        <div class="min-w-0">
+                            <span class="text-sm font-bold text-slate-100 block truncate">${item.name}</span>
+                            ${synHtml}
+                            <span class="text-[11px] text-slate-400 block truncate">${grpLabel}</span>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-[11px] font-bold shrink-0">
+                            Ver figura ➡
+                        </span>
+                    </button>
+                `;
+            }).join('');
+
+            window._nomLastSearchMatches = matches;
+            dropdown.classList.remove('hidden');
+        }
+
+        function selectSearchedNomenclatureItem(matchIdx) {
+            const matches = window._nomLastSearchMatches || [];
+            const selected = matches[matchIdx];
+            if (!selected) return;
+
+            const dropdown = document.getElementById('nomSearchResultsDropdown');
+            if (dropdown) dropdown.classList.add('hidden');
+
+            document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
+            document.getElementById('nomSummaryBox')?.classList.add('hidden');
+            document.getElementById('nomCardWrapper')?.classList.remove('hidden');
+            document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
+
+            nomDeck = [selected];
+            nomCurrentIndex = 0;
+            nomCorrectCount = 0;
+            nomWrongCount = 0;
+            nomIsFlipped = false;
+
+            renderCurrentNomenclatureCard();
+        }
+
+        function clearNomenclatureSearch() {
+            const input = document.getElementById('nomFormulaSearchInput');
+            const dropdown = document.getElementById('nomSearchResultsDropdown');
+            const clearBtn = document.getElementById('nomClearSearchBtn');
+            if (input) input.value = '';
+            if (dropdown) {
+                dropdown.classList.add('hidden');
+                dropdown.innerHTML = '';
+            }
+            if (clearBtn) clearBtn.classList.add('hidden');
         }
 
         function flipNomenclatureCard() {
