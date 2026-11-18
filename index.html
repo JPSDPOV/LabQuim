@@ -368,14 +368,19 @@
                     <div class="flex items-center gap-3 text-xs font-extrabold">
                         <span class="text-emerald-400">✓ <span id="nomScoreCorrect">0</span></span>
                         <span class="text-rose-400">✗ <span id="nomScoreWrong">0</span></span>
-                        <button type="button" onclick="openNomenclatureSetup()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-bold">
-                            ⚙ Configurar
+                        <button type="button" onclick="openNomenclatureSetup()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold flex items-center gap-1 transition active:scale-95 cursor-pointer">
+                            <span>⬅</span> <span>Volver</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- TARJETA FLIP 3D (AL TOCAR SE DA LA VUELTA) -->
-                <div id="nomCardWrapper" class="flashcard-perspective w-full h-[330px] sm:h-[370px] cursor-pointer select-none" onclick="flipNomenclatureCard()">
+                <!-- TARJETA FLIP 3D (TOCA O DESLIZA IZQUIERDA/DERECHA PARA VOLTEAR) + FLECHAS DE NAVEGACIÓN -->
+                <div id="nomCardOuter" class="relative flex items-center gap-2 sm:gap-3 w-full">
+                    <button type="button" id="btnNomPrevCard" onclick="prevNomenclatureCard(event)" title="Compuesto anterior" class="w-9 h-12 sm:w-11 sm:h-14 rounded-2xl bg-slate-800/90 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-base sm:text-lg font-extrabold flex items-center justify-center shadow-lg transition active:scale-90 shrink-0 cursor-pointer">
+                        ◀
+                    </button>
+
+                    <div id="nomCardWrapper" class="flashcard-perspective flex-1 min-w-0 h-[350px] sm:h-[400px] cursor-pointer select-none touch-pan-y">
                     <div id="nomCardInner" class="flashcard-inner">
                         <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA -->
                         <div class="flashcard-face bg-slate-950 border-2 border-slate-700/90 hover:border-cyan-500/60 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
@@ -420,6 +425,11 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+
+                    <button type="button" id="btnNomNextCard" onclick="nextNomenclatureCard(event)" title="Siguiente compuesto" class="w-9 h-12 sm:w-11 sm:h-14 rounded-2xl bg-slate-800/90 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-base sm:text-lg font-extrabold flex items-center justify-center shadow-lg transition active:scale-90 shrink-0 cursor-pointer">
+                        ▶
+                    </button>
                 </div>
 
                 <!-- CONTROLES DE AUTOEVALUACIÓN -->
@@ -2437,13 +2447,15 @@
             const baseKey = rawText === 'CH₃' ? 'CH3' : (rawText.replace(/[^A-Za-z]/g, '') || 'C');
             const cfg = ATOM_COLORS[baseKey] || ATOM_COLORS['C'] || { bg: '#1e293b', border: '#94a3b8', text: '#f8fafc', r: 19 };
             if (isCompactAtom) {
-                const baseR = a.r || cfg.r || 19;
-                const r = mobile ? Math.round(baseR * 1.38) : baseR;
+                const baseR = a.r || cfg.r || 24;
+                const scaledBase = a.nomScale ? Math.round(baseR * a.nomScale) : baseR;
+                const r = mobile ? Math.round(scaledBase * 1.35) : scaledBase;
                 return { isPill: false, r, halfW: r, halfH: r, cfg };
             }
-            const charW = mobile ? 11.5 : 8.2;
-            const pillW = Math.max(mobile ? 64 : 46, Math.min(480, rawText.length * charW + (mobile ? 28 : 22)));
-            const pillH = mobile ? 42 : 32;
+            const scaleM = a.nomScale || 1;
+            const charW = (mobile ? 12.5 : 9.6) * scaleM;
+            const pillW = Math.max(mobile ? 72 : Math.round(58 * scaleM), Math.min(520, rawText.length * charW + (mobile ? 32 : 26)));
+            const pillH = mobile ? 46 : Math.round(38 * scaleM);
             return { isPill: true, r: 16, pillW, pillH, halfW: pillW / 2, halfH: pillH / 2, cfg };
         }
 
@@ -3045,22 +3057,25 @@
             } else if (g.isPill) {
                 const w = g.pillW;
                 const h = g.pillH;
-                const pillFont = mobile ? 18.5 : 12;
+                const scaleM = a.nomScale || 1;
+                const pillFont = mobile ? 19.5 : Math.round(14.5 * scaleM);
                 if (a.highlight) {
                     html += `<rect x="${-w / 2 - 4}" y="${-h / 2 - 4}" width="${w + 8}" height="${h + 8}" rx="14" fill="none" stroke="${a.highlight}" stroke-width="2.2" opacity="0.65"/>`;
                 }
                 html += `<rect x="${-w / 2}" y="${-h / 2}" width="${w}" height="${h}" rx="11" fill="${bg}" stroke="${border}" stroke-width="2.6"/>`;
-                html += `<text x="0" y="${mobile ? 6.5 : 4.5}" text-anchor="middle" fill="${textCol}" font-size="${pillFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+                html += `<text x="0" y="${mobile ? 7 : Math.round(5.2 * scaleM)}" text-anchor="middle" fill="${textCol}" font-size="${pillFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
             } else {
                 const r = g.r;
+                const scaleM = a.nomScale || 1;
+                const isChGroup = (a.el === 'CH₃' || a.el === 'CH₂' || a.el === 'CH');
                 const atomFont = mobile
-                    ? (a.el === 'CH₃' ? 17.5 : (r > 20 ? 22 : 19))
-                    : (a.el === 'CH₃' ? 11.5 : (r > 15 ? 14 : 12));
+                    ? (isChGroup ? 19 : (r > 22 ? 23 : 20))
+                    : Math.round((isChGroup ? 14.5 : (r > 20 ? 16.5 : 15)) * scaleM);
                 if (a.highlight) {
                     html += `<circle cx="0" cy="0" r="${r + 6}" fill="none" stroke="${a.highlight}" stroke-width="2.4" opacity="0.65"/>`;
                 }
                 html += `<circle cx="0" cy="0" r="${r}" fill="${bg}" stroke="${border}" stroke-width="2.8" />`;
-                html += `<text x="0" y="${mobile ? 7 : (a.el === 'CH₃' ? 4 : 5)}" text-anchor="middle" fill="${textCol}" font-size="${atomFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+                html += `<text x="0" y="${mobile ? 7 : Math.round(5.2 * scaleM)}" text-anchor="middle" fill="${textCol}" font-size="${atomFont}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
             }
 
             if (a.charge) {
@@ -4497,6 +4512,7 @@
 
             document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
             document.getElementById('nomSummaryBox')?.classList.add('hidden');
+            document.getElementById('nomCardOuter')?.classList.remove('hidden');
             document.getElementById('nomCardWrapper')?.classList.remove('hidden');
             document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
 
@@ -4949,7 +4965,7 @@
             const atomMap = {};
             const bondsByAtom = {};
             (sc.atoms || []).forEach(a => {
-                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y) };
+                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y), nomScale: 1.26 };
             });
 
             (sc.bonds || []).forEach(b => {
@@ -4979,8 +4995,8 @@
             if (isFinite(minX) && isFinite(maxX)) {
                 const centerX = (minX + maxX) / 2;
                 const centerY = (minY + maxY) / 2;
-                const spanW = Math.max(420, (maxX - minX) + 120);
-                const spanH = Math.max(240, (maxY - minY) + 90);
+                const spanW = Math.max(360, (maxX - minX) + 64);
+                const spanH = Math.max(200, (maxY - minY) + 52);
                 const vbX = centerX - spanW / 2;
                 const vbY = centerY - spanH / 2;
                 svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${spanW.toFixed(1)} ${spanH.toFixed(1)}`);
@@ -5020,7 +5036,61 @@
                 ? cleanExp.charAt(0).toUpperCase() + cleanExp.slice(1)
                 : '';
 
+            const prevBtn = document.getElementById('btnNomPrevCard');
+            const nextBtn = document.getElementById('btnNomNextCard');
+            if (prevBtn) prevBtn.disabled = (nomCurrentIndex <= 0);
+            if (nextBtn) nextBtn.disabled = (nomCurrentIndex >= nomDeck.length - 1);
+
             renderNomenclatureSceneToSvg(item);
+        }
+
+        function prevNomenclatureCard(ev) {
+            if (ev) ev.stopPropagation();
+            if (nomCurrentIndex > 0) {
+                nomCurrentIndex--;
+                renderCurrentNomenclatureCard();
+            }
+        }
+
+        function nextNomenclatureCard(ev) {
+            if (ev) ev.stopPropagation();
+            if (nomCurrentIndex < nomDeck.length - 1) {
+                nomCurrentIndex++;
+                renderCurrentNomenclatureCard();
+            }
+        }
+
+        function initNomenclatureCardGestures() {
+            const cardEl = document.getElementById('nomCardWrapper');
+            if (!cardEl || cardEl.dataset.gesturesBound) return;
+            cardEl.dataset.gesturesBound = '1';
+
+            let startX = 0;
+            let startY = 0;
+            let isPointerDown = false;
+
+            cardEl.addEventListener('pointerdown', (e) => {
+                startX = e.clientX;
+                startY = e.clientY;
+                isPointerDown = true;
+            });
+
+            cardEl.addEventListener('pointerup', (e) => {
+                if (!isPointerDown) return;
+                isPointerDown = false;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                // Deslizamiento horizontal (>= 35px) o toque simple (< 12px) voltea la tarjeta
+                if (Math.abs(dx) >= 35 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+                    flipNomenclatureCard();
+                } else if (Math.abs(dx) < 12 && Math.abs(dy) < 12) {
+                    flipNomenclatureCard();
+                }
+            });
+
+            cardEl.addEventListener('pointercancel', () => {
+                isPointerDown = false;
+            });
         }
 
         function normalizeSearchText(str) {
@@ -5104,6 +5174,7 @@
 
             document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
             document.getElementById('nomSummaryBox')?.classList.add('hidden');
+            document.getElementById('nomCardOuter')?.classList.remove('hidden');
             document.getElementById('nomCardWrapper')?.classList.remove('hidden');
             document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
 
@@ -5154,6 +5225,7 @@
                 nomCurrentIndex++;
                 renderCurrentNomenclatureCard();
             } else {
+                document.getElementById('nomCardOuter')?.classList.add('hidden');
                 document.getElementById('nomCardWrapper')?.classList.add('hidden');
                 document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
                 document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
@@ -5173,6 +5245,7 @@
         }
 
         window.onload = async () => {
+            initNomenclatureCardGestures();
             await loadDatabaseFromJson();
             renderFunctionCards();
             showWizardStage(1);
