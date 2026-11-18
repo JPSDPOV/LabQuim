@@ -4696,6 +4696,18 @@
                     return { atoms, bonds };
                 }
 
+                if (normRest === '1-NHC6H5') {
+                    // Difenilamina (N-Fenilanilina) en horizontal: Benceno izq — NH — Benceno der
+                    const leftVerts = addBenzeneRing('R1', 285, 190, 62, 0);
+                    const rightVerts = addBenzeneRing('R2', 635, 190, 62, Math.PI);
+                    atoms.push({ id: 'NH_BRIDGE', el: 'NH', x: 460, y: 190, noValenceDots: true });
+                    bonds.push(
+                        { from: leftVerts[0].id, to: 'NH_BRIDGE', order: 1 },
+                        { from: 'NH_BRIDGE', to: rightVerts[0].id, order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+
                 const cx = 460, cy = 195, R = 64;
                 const subCountsByPos = {};
                 const parsedSubs = [];
@@ -4804,6 +4816,140 @@
                         }
                     }
                 });
+                return { atoms, bonds };
+            }
+
+            // 2a. Hidrocarburos Aromáticos Policíclicos Condensados (NAFTALENO-... y ANTRACENO-...)
+            if (s.startsWith('NAFTALENO')) {
+                const rest = s.replace(/^NAFTALENO-?/, '');
+                const R = 58;
+                const dx = Math.round(R * Math.cos(Math.PI / 6)); // ~50
+                const dy = Math.round(R * Math.sin(Math.PI / 6)); // ~29
+                const c1x = 460 - dx, c2x = 460 + dx, cy = 195;
+
+                // Numeración IUPAC oficial del naftaleno (1..8 + 4a, 8a)
+                const pts = {
+                    1:  { x: c1x,      y: cy - R,      ang: -Math.PI / 2 },
+                    2:  { x: c1x - dx, y: cy - dy,     ang: -(5 * Math.PI) / 6 },
+                    3:  { x: c1x - dx, y: cy + dy,     ang: (5 * Math.PI) / 6 },
+                    4:  { x: c1x,      y: cy + R,      ang: Math.PI / 2 },
+                    '4a': { x: 460,    y: cy + dy,     ang: Math.PI / 2 },
+                    5:  { x: c2x,      y: cy + R,      ang: Math.PI / 2 },
+                    6:  { x: c2x + dx, y: cy + dy,     ang: Math.PI / 6 },
+                    7:  { x: c2x + dx, y: cy - dy,     ang: -Math.PI / 6 },
+                    8:  { x: c2x,      y: cy - R,      ang: -Math.PI / 2 },
+                    '8a': { x: 460,    y: cy - dy,     ang: -Math.PI / 2 }
+                };
+                // Nota: invertimos izq/der para que C1 quede arriba-derecha según convención clásica de Isasi (1 arriba-der, 2 der-sup, 3 der-inf, 4 abajo-der, 5 abajo-izq, 6 izq-inf, 7 izq-sup, 8 arriba-izq)
+                const ptsIsasi = {
+                    1:  { x: c2x,      y: cy - R,      ang: -Math.PI / 2 },
+                    2:  { x: c2x + dx, y: cy - dy,     ang: -Math.PI / 6 },
+                    3:  { x: c2x + dx, y: cy + dy,     ang: Math.PI / 6 },
+                    4:  { x: c2x,      y: cy + R,      ang: Math.PI / 2 },
+                    '4a': { x: 460,    y: cy + dy,     ang: Math.PI / 2 },
+                    5:  { x: c1x,      y: cy + R,      ang: Math.PI / 2 },
+                    6:  { x: c1x - dx, y: cy + dy,     ang: (5 * Math.PI) / 6 },
+                    7:  { x: c1x - dx, y: cy - dy,     ang: -(5 * Math.PI) / 6 },
+                    8:  { x: c1x,      y: cy - R,      ang: -Math.PI / 2 },
+                    '8a': { x: 460,    y: cy - dy,     ang: -Math.PI / 2 }
+                };
+
+                Object.entries(ptsIsasi).forEach(([k, p]) => {
+                    atoms.push({ id: `N_${k}`, el: '', isVertex: true, x: p.x, y: p.y, noValenceDots: true });
+                });
+                const ringEdges = [
+                    ['1', '2', 2, c2x], ['2', '3', 1, c2x], ['3', '4', 2, c2x], ['4', '4a', 1, c2x], ['4a', '8a', 2, c2x], ['8a', '1', 1, c2x],
+                    ['8a', '8', 2, c1x], ['8', '7', 1, c1x], ['7', '6', 2, c1x], ['6', '5', 1, c1x], ['5', '4a', 1, c1x]
+                ];
+                ringEdges.forEach(([u, v, ord, rcx]) => {
+                    bonds.push({ from: `N_${u}`, to: `N_${v}`, order: ord, inwardCenter: { x: rcx, y: cy } });
+                });
+
+                if (rest) {
+                    const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
+                    parts.forEach((part, pIdx) => {
+                        const dashIdx = part.indexOf('-');
+                        const posStr = dashIdx === -1 ? '1' : part.slice(0, dashIdx);
+                        const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
+                        posStr.split(',').map(Number).forEach((pos, subIdx) => {
+                            const v = ptsIsasi[pos];
+                            if (!v) return;
+                            let grp = rawGrp.replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/NO2/g, 'NO₂');
+                            if (pos >= 5 && pos <= 8) {
+                                if (grp === 'CH₃') grp = 'H₃C';
+                                if (grp === 'NO₂') grp = 'O₂N';
+                            }
+                            const sx = Math.round(v.x + Math.cos(v.ang) * 62);
+                            const sy = Math.round(v.y + Math.sin(v.ang) * 62);
+                            const sid = `NS_${pIdx}_${subIdx}`;
+                            atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: `N_${pos}`, to: sid, order: 1 });
+                        });
+                    });
+                }
+                return { atoms, bonds };
+            }
+
+            if (s.startsWith('ANTRACENO')) {
+                const rest = s.replace(/^ANTRACENO-?/, '');
+                const R = 52;
+                const dx = Math.round(R * Math.cos(Math.PI / 6)); // ~45
+                const dy = Math.round(R * Math.sin(Math.PI / 6)); // ~26
+                const cLeft = 460 - 2 * dx;
+                const cMid = 460;
+                const cRight = 460 + 2 * dx;
+                const cy = 195;
+
+                // Numeración IUPAC del antraceno (1..4 derecha, 9 arriba-centro, 10 abajo-centro, 5..8 izquierda)
+                const ptsAnt = {
+                    1:  { x: cRight,      y: cy - R,  ang: -Math.PI / 2 },
+                    2:  { x: cRight + dx, y: cy - dy, ang: -Math.PI / 6 },
+                    3:  { x: cRight + dx, y: cy + dy, ang: Math.PI / 6 },
+                    4:  { x: cRight,      y: cy + R,  ang: Math.PI / 2 },
+                    '4a': { x: cMid + dx, y: cy + dy, ang: Math.PI / 2 },
+                    10: { x: cMid,        y: cy + R,  ang: Math.PI / 2 },
+                    '10a': { x: cMid - dx, y: cy + dy, ang: Math.PI / 2 },
+                    5:  { x: cLeft,       y: cy + R,  ang: Math.PI / 2 },
+                    6:  { x: cLeft - dx,  y: cy + dy, ang: (5 * Math.PI) / 6 },
+                    7:  { x: cLeft - dx,  y: cy - dy, ang: -(5 * Math.PI) / 6 },
+                    8:  { x: cLeft,       y: cy - R,  ang: -Math.PI / 2 },
+                    '8a': { x: cMid - dx, y: cy - dy, ang: -Math.PI / 2 },
+                    9:  { x: cMid,        y: cy - R,  ang: -Math.PI / 2 },
+                    '9a': { x: cMid + dx, y: cy - dy, ang: -Math.PI / 2 }
+                };
+
+                Object.entries(ptsAnt).forEach(([k, p]) => {
+                    atoms.push({ id: `A_${k}`, el: '', isVertex: true, x: p.x, y: p.y, noValenceDots: true });
+                });
+
+                const antEdges = [
+                    ['1', '2', 2, cRight], ['2', '3', 1, cRight], ['3', '4', 2, cRight], ['4', '4a', 1, cRight], ['4a', '9a', 2, cRight], ['9a', '1', 1, cRight],
+                    ['9a', '9', 1, cMid], ['9', '8a', 2, cMid], ['8a', '10a', 1, cMid], ['10a', '10', 2, cMid], ['10', '4a', 1, cMid],
+                    ['8a', '8', 1, cLeft], ['8', '7', 2, cLeft], ['7', '6', 1, cLeft], ['6', '5', 2, cLeft], ['5', '10a', 1, cLeft]
+                ];
+                antEdges.forEach(([u, v, ord, rcx]) => {
+                    bonds.push({ from: `A_${u}`, to: `A_${v}`, order: ord, inwardCenter: { x: rcx, y: cy } });
+                });
+
+                if (rest) {
+                    const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
+                    parts.forEach((part, pIdx) => {
+                        const dashIdx = part.indexOf('-');
+                        const posStr = dashIdx === -1 ? '9' : part.slice(0, dashIdx);
+                        const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
+                        posStr.split(',').map(Number).forEach((pos, subIdx) => {
+                            const v = ptsAnt[pos];
+                            if (!v) return;
+                            let grp = rawGrp.replace(/CH3/g, 'CH₃').replace(/NO2/g, 'NO₂');
+                            if (pos >= 5 && pos <= 8 && grp === 'NO₂') grp = 'O₂N';
+                            const sx = Math.round(v.x + Math.cos(v.ang) * 58);
+                            const sy = Math.round(v.y + Math.sin(v.ang) * 58);
+                            const sid = `AS_${pIdx}_${subIdx}`;
+                            atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                            bonds.push({ from: `A_${pos}`, to: sid, order: 1 });
+                        });
+                    });
+                }
                 return { atoms, bonds };
             }
 
