@@ -3956,30 +3956,35 @@
         // MÓDULO DE PRÁCTICA DE NOMENCLATURA ORGÁNICA (FLASHCARDS + AUTOEVALUACIÓN)
         // =========================================================================
         let NOMENCLATURE_GROUPS = [
-            { id: 'alcanos', label: '1. Alcanos' },
-            { id: 'cicloalcanos', label: '2. Cicloalcanos' },
-            { id: 'alquenos', label: '3. Alquenos' },
-            { id: 'alquinos', label: '4. Alquinos' },
-            { id: 'aromaticos', label: '5. Hidrocarburos aromáticos' },
-            { id: 'haluros', label: '6. Haluros o Halogenuros' },
-            { id: 'nitrocompuestos', label: '7. Nitrocompuestos' },
-            { id: 'eteres', label: '8. Éteres' },
-            { id: 'tioeteres', label: '9. Tioéteres (Sulfuros)' },
-            { id: 'aminas', label: '10. Aminas' },
-            { id: 'imina', label: '11. Iminas' },
-            { id: 'tioles', label: '12. Tioles' },
-            { id: 'fenoles', label: '13. Fenoles' },
-            { id: 'alcoholes', label: '14. Alcoholes' },
-            { id: 'cetonas', label: '15. Cetonas' },
-            { id: 'aldehidos', label: '16. Aldehídos' },
-            { id: 'nitrilos', label: '17. Nitrilos' },
-            { id: 'amidas', label: '18. Amidas' },
-            { id: 'haluros_acilo', label: '19. Haluros de acilo / ácido' },
-            { id: 'tioesteres', label: '20. Tioésteres' },
-            { id: 'esteres', label: '21. Ésteres' },
-            { id: 'anhidridos', label: '22. Anhídridos' },
-            { id: 'acidos', label: '23. Ácidos Carboxílicos' },
-            { id: 'azoderivados', label: '24. Azoderivados' }
+            { id: 'alcanos', label: '1. Alcanos', tier: 'primary' },
+            { id: 'cicloalcanos', label: '2. Cicloalcanos', tier: 'primary' },
+            { id: 'alquenos', label: '3. Alquenos', tier: 'primary' },
+            { id: 'alquinos', label: '4. Alquinos', tier: 'primary' },
+            { id: 'aromaticos', label: '5. Hidrocarburos aromáticos y derivados', tier: 'primary' },
+            { id: 'haluros', label: '6. Halogenuros de alquilo', tier: 'primary' },
+            { id: 'alcoholes', label: '7. Alcoholes', tier: 'primary' },
+            { id: 'fenoles', label: '8. Fenoles', tier: 'primary' },
+            { id: 'eteres', label: '9. Éteres', tier: 'primary' },
+            { id: 'aminas', label: '10. Aminas', tier: 'primary' },
+            { id: 'tioles', label: '11. Tioles', tier: 'primary' },
+            { id: 'tioeteres', label: '12. Tioéteres', tier: 'primary' },
+            { id: 'heterociclos_no_arom', label: '13. Compuestos heterociclos no aromáticos (O, N y S)', tier: 'primary' },
+            { id: 'aldehidos', label: '14. Aldehídos', tier: 'primary' },
+            { id: 'cetonas', label: '15. Cetonas', tier: 'primary' },
+            { id: 'acidos', label: '16. Ácidos carboxílicos (hidroxiácidos y cetoácidos)', tier: 'primary' },
+            { id: 'sales_acidos', label: '17. Sales de ácidos orgánicos', tier: 'primary' },
+            { id: 'esteres', label: '18. Ésteres', tier: 'primary' },
+            { id: 'amidas', label: '19. Amidas', tier: 'primary' },
+            { id: 'anhidridos', label: '20. Anhídridos', tier: 'primary' },
+            { id: 'haluros_acilo', label: '21. Halogenuros de ácidos', tier: 'primary' },
+            { id: 'aminoacidos', label: '22. Aminoácidos', tier: 'primary' },
+            { id: 'carbohidratos', label: '23. Hidratos de carbono (mono-, di- y polisacáridos)', tier: 'primary' },
+            { id: 'lipidos', label: '24. Lípidos (ácidos grasos, acilgliceroles, ceras y fosfolípidos)', tier: 'primary' },
+            { id: 'nitrilos', label: '25. Nitrilos', tier: 'extra' },
+            { id: 'imina', label: '26. Iminas', tier: 'extra' },
+            { id: 'tioesteres', label: '27. Tioésteres', tier: 'extra' },
+            { id: 'nitrocompuestos', label: '28. Nitrocompuestos', tier: 'extra' },
+            { id: 'azoderivados', label: '29. Azoderivados', tier: 'extra' }
         ];
 
         let NOMENCLATURE_BANK = [
@@ -4536,15 +4541,24 @@
         function renderNomenclatureChecklist() {
             const box = document.getElementById('nomGroupsChecklist');
             if (!box) return;
+            const EXTRA_IDS = new Set(['nitrilos', 'imina', 'tioesteres', 'nitrocompuestos', 'azoderivados']);
             box.innerHTML = NOMENCLATURE_GROUPS.map(g => {
                 const count = NOMENCLATURE_BANK.filter(it => it.group === g.id).length;
+                const isExtra = g.tier === 'extra' || EXTRA_IDS.has(g.id);
+                const cardStyle = isExtra
+                    ? 'bg-blue-950/65 hover:bg-blue-900/70 border-blue-500/45'
+                    : 'bg-emerald-950/65 hover:bg-emerald-900/70 border-emerald-500/45';
+                const cbAccent = isExtra ? 'accent-blue-400' : 'accent-emerald-400';
+                const badgeStyle = isExtra
+                    ? 'bg-blue-950 border-blue-400/50 text-blue-200'
+                    : 'bg-emerald-950 border-emerald-400/50 text-emerald-200';
                 return `
-                    <label class="flex items-center justify-between gap-2.5 p-3 rounded-xl bg-slate-950/90 hover:bg-slate-800/80 border border-slate-800 cursor-pointer transition select-none">
+                    <label class="flex items-center justify-between gap-2.5 p-3 rounded-xl ${cardStyle} border cursor-pointer transition select-none">
                         <div class="flex items-center gap-2.5 min-w-0">
-                            <input type="checkbox" value="${g.id}" checked onchange="updateNomenclatureAvailableCount()" class="nom-group-cb w-4 h-4 accent-amber-500 rounded cursor-pointer shrink-0">
+                            <input type="checkbox" value="${g.id}" checked onchange="updateNomenclatureAvailableCount()" class="nom-group-cb w-4 h-4 ${cbAccent} rounded cursor-pointer shrink-0">
                             <span class="text-xs sm:text-sm font-bold text-slate-100 truncate">${g.label}</span>
                         </div>
-                        <span class="px-2 py-0.5 rounded-md bg-slate-900 border border-slate-700 text-[11px] font-extrabold text-cyan-300 shrink-0">${count}</span>
+                        <span class="px-2 py-0.5 rounded-md ${badgeStyle} border text-[11px] font-extrabold shrink-0">${count}</span>
                     </label>
                 `;
             }).join('');
@@ -5017,8 +5031,11 @@
                     const vy = Math.round(cy + Math.sin(ang) * R);
                     verts.push({ vx, vy, ang });
 
+                    const heteroAtPos = parsedSubs.find(sb => sb.pos === pos && ['O', 'N', 'NH', 'S'].includes(sb.rawGrp.toUpperCase()));
                     if (pos === 1) {
                         atoms.push({ id: `H_V1`, el: heteroEl, x: vx, y: vy, noValenceDots: true });
+                    } else if (heteroAtPos) {
+                        atoms.push({ id: `H_V${pos}`, el: heteroAtPos.rawGrp, x: vx, y: vy, noValenceDots: true });
                     } else {
                         const subsHere = subCountsByPos[pos] || 0;
                         const hCount = Math.max(0, 2 - subsHere);
@@ -5035,6 +5052,7 @@
                 const placedAtPos = {};
                 parsedSubs.forEach((sub, idx) => {
                     const { pos, rawGrp } = sub;
+                    if (['O', 'N', 'NH', 'S'].includes(rawGrp.toUpperCase())) return;
                     const v = verts[(pos - 1) % sides];
                     if (!v) return;
                     const totalHere = subCountsByPos[pos] || 1;
