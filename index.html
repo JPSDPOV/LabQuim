@@ -4998,6 +4998,454 @@
                 return { atoms, bonds };
             }
 
+            // 2a-bis. Heterociclos Aromáticos, Biciclos Condensados, Anulenos, Lactonas, Prolina, Carbohidratos y Lípidos
+            if (s === 'QUINOLINA') {
+                // Quinolina (1-azanaftaleno): biciclo aromático condensado con N en vértice inferior derecho (posición 1)
+                const R = 58, dx = Math.round(R * Math.cos(Math.PI / 6)), dy = Math.round(R * Math.sin(Math.PI / 6));
+                const c1x = 460 - dx, c2x = 460 + dx, cy = 195;
+                const pts = {
+                    1:  { x: c2x,      y: cy + R,  el: 'N', isVertex: false },
+                    2:  { x: c2x + dx, y: cy + dy, el: '',  isVertex: true },
+                    3:  { x: c2x + dx, y: cy - dy, el: '',  isVertex: true },
+                    4:  { x: c2x,      y: cy - R,  el: '',  isVertex: true },
+                    '4a': { x: 460,    y: cy - dy, el: '',  isVertex: true },
+                    5:  { x: c1x,      y: cy - R,  el: '',  isVertex: true },
+                    6:  { x: c1x - dx, y: cy - dy, el: '',  isVertex: true },
+                    7:  { x: c1x - dx, y: cy + dy, el: '',  isVertex: true },
+                    8:  { x: c1x,      y: cy + R,  el: '',  isVertex: true },
+                    '8a': { x: 460,    y: cy + dy, el: '',  isVertex: true }
+                };
+                Object.entries(pts).forEach(([k, p]) => {
+                    atoms.push({ id: `Q_${k}`, el: p.el, isVertex: p.isVertex, x: p.x, y: p.y, noValenceDots: true });
+                });
+                const qEdges = [
+                    ['1', '2', 2, c2x], ['2', '3', 1, c2x], ['3', '4', 2, c2x], ['4', '4a', 1, c2x], ['4a', '8a', 2, c2x], ['8a', '1', 1, c2x],
+                    ['8a', '8', 1, c1x], ['8', '7', 2, c1x], ['7', '6', 1, c1x], ['6', '5', 2, c1x], ['5', '4a', 1, c1x]
+                ];
+                qEdges.forEach(([u, v, ord, rcx]) => {
+                    bonds.push({ from: `Q_${u}`, to: `Q_${v}`, order: ord, inwardCenter: { x: rcx, y: cy } });
+                });
+                return { atoms, bonds };
+            }
+
+            if (s === 'HETERO-AROM-6-1,2-N') {
+                // Piridazina: anillo hexagonal aromático con N en pos 1 y N en pos 2
+                const cx = 460, cy = 195, R = 64;
+                for (let k = 0; k < 6; k++) {
+                    const pos = k + 1;
+                    const ang = -Math.PI / 2 + (Math.PI / 3) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.92));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    const isN = (pos === 1 || pos === 2);
+                    atoms.push({ id: `PZ_${pos}`, el: isN ? 'N' : '', isVertex: !isN, x: vx, y: vy, noValenceDots: true });
+                }
+                for (let k = 0; k < 6; k++) {
+                    const next = (k + 1) % 6;
+                    bonds.push({
+                        from: `PZ_${k + 1}`,
+                        to: `PZ_${next + 1}`,
+                        order: (k % 2 === 0) ? 2 : 1,
+                        inwardCenter: { x: cx, y: cy }
+                    });
+                }
+                return { atoms, bonds };
+            }
+
+            if (s === 'PIRIDINA-3-COOH') {
+                // Ácido nicotínico (3-piridinocarboxílico): N en pos 1 (arriba) y COOH en pos 3
+                const cx = 460, cy = 195, R = 64;
+                const verts = [];
+                for (let k = 0; k < 6; k++) {
+                    const pos = k + 1;
+                    const ang = -Math.PI / 2 + (Math.PI / 3) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.92));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    atoms.push({ id: `PY_${pos}`, el: pos === 1 ? 'N' : '', isVertex: pos !== 1, x: vx, y: vy, noValenceDots: true });
+                }
+                for (let k = 0; k < 6; k++) {
+                    const next = (k + 1) % 6;
+                    bonds.push({
+                        from: `PY_${k + 1}`,
+                        to: `PY_${next + 1}`,
+                        order: (k % 2 === 0) ? 2 : 1,
+                        inwardCenter: { x: cx, y: cy }
+                    });
+                }
+                const v3 = verts[2];
+                const sx = Math.round(cx + Math.cos(v3.ang) * ((R + 68) * 0.92));
+                const sy = Math.round(cy + Math.sin(v3.ang) * (R + 68));
+                atoms.push({ id: 'PY_COOH', el: 'COOH', x: sx, y: sy, noValenceDots: true });
+                bonds.push({ from: 'PY_3', to: 'PY_COOH', order: 1 });
+                return { atoms, bonds };
+            }
+
+            if (s === 'PURINA') {
+                // Purina: pirimidina (hexágono izq con N1 y N3) fusionada a imidazol (pentágono der con N7 y NH9)
+                const cx = 430, cy = 195, R = 56;
+                const hexNodes = [
+                    { id: 'PU_6', el: '', isVertex: true },
+                    { id: 'PU_5', el: '', isVertex: true },
+                    { id: 'PU_4', el: '', isVertex: true },
+                    { id: 'PU_3', el: 'N', isVertex: false },
+                    { id: 'PU_2', el: '', isVertex: true },
+                    { id: 'PU_1', el: 'N', isVertex: false }
+                ];
+                const hexCoords = [];
+                hexNodes.forEach((nd, k) => {
+                    const ang = -Math.PI / 2 + (Math.PI / 3) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.92));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    hexCoords.push({ vx, vy });
+                    atoms.push({ id: nd.id, el: nd.el, isVertex: nd.isVertex, x: vx, y: vy, noValenceDots: true });
+                });
+                // Pentágono fusionado a PU_5 (k=1) y PU_4 (k=2)
+                const p5 = hexCoords[1], p4 = hexCoords[2];
+                const n7x = p5.vx + 56, n7y = p5.vy - 12;
+                const c8x = p5.vx + 90, c8y = cy;
+                const n9x = p4.vx + 56, n9y = p4.vy + 12;
+                atoms.push(
+                    { id: 'PU_7', el: 'N', isVertex: false, x: n7x, y: n7y, noValenceDots: true },
+                    { id: 'PU_8', el: '', isVertex: true, x: c8x, y: c8y, noValenceDots: true },
+                    { id: 'PU_9', el: 'NH', isVertex: false, x: n9x, y: n9y, noValenceDots: true }
+                );
+                bonds.push(
+                    { from: 'PU_6', to: 'PU_5', order: 2, inwardCenter: { x: cx, y: cy } },
+                    { from: 'PU_5', to: 'PU_4', order: 1 },
+                    { from: 'PU_4', to: 'PU_3', order: 2, inwardCenter: { x: cx, y: cy } },
+                    { from: 'PU_3', to: 'PU_2', order: 1 },
+                    { from: 'PU_2', to: 'PU_1', order: 2, inwardCenter: { x: cx, y: cy } },
+                    { from: 'PU_1', to: 'PU_6', order: 1 },
+                    { from: 'PU_5', to: 'PU_7', order: 1 },
+                    { from: 'PU_7', to: 'PU_8', order: 2, inwardCenter: { x: cx + 75, y: cy } },
+                    { from: 'PU_8', to: 'PU_9', order: 1 },
+                    { from: 'PU_9', to: 'PU_4', order: 1 }
+                );
+                return { atoms, bonds };
+            }
+
+            if (s === 'PTERIDINA') {
+                // Pteridina: pirimidina (N1, N3 izq) fusionada a pirazina (N5, N8 der)
+                const R = 58, dx = Math.round(R * Math.cos(Math.PI / 6)), dy = Math.round(R * Math.sin(Math.PI / 6));
+                const c1x = 460 - dx, c2x = 460 + dx, cy = 195;
+                const pts = {
+                    5:  { x: c2x,      y: cy - R,  el: 'N', isVertex: false },
+                    6:  { x: c2x + dx, y: cy - dy, el: '',  isVertex: true },
+                    7:  { x: c2x + dx, y: cy + dy, el: '',  isVertex: true },
+                    8:  { x: c2x,      y: cy + R,  el: 'N', isVertex: false },
+                    '8a': { x: 460,    y: cy + dy, el: '',  isVertex: true },
+                    1:  { x: c1x,      y: cy + R,  el: 'N', isVertex: false },
+                    2:  { x: c1x - dx, y: cy + dy, el: '',  isVertex: true },
+                    3:  { x: c1x - dx, y: cy - dy, el: 'N', isVertex: false },
+                    4:  { x: c1x,      y: cy - R,  el: '',  isVertex: true },
+                    '4a': { x: 460,    y: cy - dy, el: '',  isVertex: true }
+                };
+                Object.entries(pts).forEach(([k, p]) => {
+                    atoms.push({ id: `PT_${k}`, el: p.el, isVertex: p.isVertex, x: p.x, y: p.y, noValenceDots: true });
+                });
+                const ptEdges = [
+                    ['5', '6', 2, c2x], ['6', '7', 1, c2x], ['7', '8', 2, c2x], ['8', '8a', 1, c2x], ['8a', '4a', 2, c2x], ['4a', '5', 1, c2x],
+                    ['8a', '1', 1, c1x], ['1', '2', 2, c1x], ['2', '3', 1, c1x], ['3', '4', 2, c1x], ['4', '4a', 1, c1x]
+                ];
+                ptEdges.forEach(([u, v, ord, rcx]) => {
+                    bonds.push({ from: `PT_${u}`, to: `PT_${v}`, order: ord, inwardCenter: { x: rcx, y: cy } });
+                });
+                return { atoms, bonds };
+            }
+
+            if (s === 'ANULENO-16') {
+                // [16]-Anuleno: polieno cíclico conjugado de 16 carbonos (8 dobles enlaces alternados)
+                const cx = 460, cy = 190, R = 105;
+                for (let k = 0; k < 16; k++) {
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / 16) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * R);
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    atoms.push({ id: `AN_${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                }
+                for (let k = 0; k < 16; k++) {
+                    const next = (k + 1) % 16;
+                    bonds.push({
+                        from: `AN_${k}`,
+                        to: `AN_${next}`,
+                        order: (k % 2 === 0) ? 2 : 1,
+                        inwardCenter: { x: cx, y: cy }
+                    });
+                }
+                return { atoms, bonds };
+            }
+
+            if (s === 'LACTONA-5') {
+                // γ-Butirolactona: anillo de 5 miembros con O en pos 1 y C=O en pos 2
+                const cx = 460, cy = 195, R = 74;
+                const verts = [];
+                for (let k = 0; k < 5; k++) {
+                    const pos = k + 1;
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / 5) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    const lbl = pos === 1 ? 'O' : (pos === 2 ? 'C' : 'CH₂');
+                    atoms.push({ id: `LC_${pos}`, el: lbl, x: vx, y: vy, noValenceDots: true });
+                }
+                for (let k = 0; k < 5; k++) {
+                    bonds.push({ from: `LC_${k + 1}`, to: `LC_${((k + 1) % 5) + 1}`, order: 1 });
+                }
+                const v2 = verts[1];
+                atoms.push({ id: 'LC_O2', el: 'O', x: Math.round(cx + Math.cos(v2.ang) * (R + 68)), y: Math.round(cy + Math.sin(v2.ang) * (R + 68)), noValenceDots: true });
+                bonds.push({ from: 'LC_2', to: 'LC_O2', order: 2 });
+                return { atoms, bonds };
+            }
+
+            if (s === 'PIRROLIDINA-2-COOH') {
+                // Prolina: anillo de pirrolidina con NH en pos 1 y COOH en pos 2
+                const cx = 460, cy = 195, R = 74;
+                const verts = [];
+                for (let k = 0; k < 5; k++) {
+                    const pos = k + 1;
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / 5) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    const lbl = pos === 1 ? 'NH' : (pos === 2 ? 'CH' : 'CH₂');
+                    atoms.push({ id: `PR_${pos}`, el: lbl, x: vx, y: vy, noValenceDots: true });
+                }
+                for (let k = 0; k < 5; k++) {
+                    bonds.push({ from: `PR_${k + 1}`, to: `PR_${((k + 1) % 5) + 1}`, order: 1 });
+                }
+                const v2 = verts[1];
+                atoms.push({ id: 'PR_COOH', el: 'COOH', x: Math.round(cx + Math.cos(v2.ang) * (R + 74)), y: Math.round(cy + Math.sin(v2.ang) * (R + 74)), noValenceDots: true });
+                bonds.push({ from: 'PR_2', to: 'PR_COOH', order: 1 });
+                return { atoms, bonds };
+            }
+
+            if (s.startsWith('HAWORTH-PIRANOSA-')) {
+                // Proyección de Haworth de Aldohexosas (Glucosa, Galactosa, Manosa)
+                const kind = s.replace('HAWORTH-PIRANOSA-', '');
+                const pts = {
+                    O:  { x: 520, y: 125, el: 'O' },
+                    C1: { x: 585, y: 190, el: 'C1' },
+                    C2: { x: 520, y: 255, el: 'C2' },
+                    C3: { x: 400, y: 255, el: 'C3' },
+                    C4: { x: 335, y: 190, el: 'C4' },
+                    C5: { x: 400, y: 125, el: 'C5' }
+                };
+                Object.entries(pts).forEach(([k, p]) => {
+                    atoms.push({ id: `HW_${k}`, el: p.el, x: p.x, y: p.y, noValenceDots: true });
+                });
+                bonds.push(
+                    { from: 'HW_O', to: 'HW_C1', order: 1 },
+                    { from: 'HW_C1', to: 'HW_C2', order: 1 },
+                    { from: 'HW_C2', to: 'HW_C3', order: 1 },
+                    { from: 'HW_C3', to: 'HW_C4', order: 1 },
+                    { from: 'HW_C4', to: 'HW_C5', order: 1 },
+                    { from: 'HW_C5', to: 'HW_O', order: 1 }
+                );
+                // C5-CH2OH arriba
+                atoms.push({ id: 'HW_C6', el: 'CH₂OH', x: 400, y: 55, noValenceDots: true });
+                bonds.push({ from: 'HW_C5', to: 'HW_C6', order: 1 });
+                // C1-OH (abajo alfa)
+                atoms.push({ id: 'HW_OH1', el: 'OH', x: 585, y: 265, noValenceDots: true });
+                bonds.push({ from: 'HW_C1', to: 'HW_OH1', order: 1 });
+                // C2-OH (arriba en Manosa, abajo en Glucosa/Galactosa)
+                atoms.push({ id: 'HW_OH2', el: 'OH', x: 520, y: kind === 'MANOSA' ? 185 : 325, noValenceDots: true });
+                bonds.push({ from: 'HW_C2', to: 'HW_OH2', order: 1 });
+                // C3-OH (arriba)
+                atoms.push({ id: 'HW_OH3', el: 'OH', x: 400, y: 185, noValenceDots: true });
+                bonds.push({ from: 'HW_C3', to: 'HW_OH3', order: 1 });
+                // C4-OH (arriba en Galactosa, abajo en Glucosa/Manosa)
+                atoms.push({ id: 'HW_OH4', el: 'OH', x: 335, y: kind === 'GALACTOSA' ? 115 : 265, noValenceDots: true });
+                bonds.push({ from: 'HW_C4', to: 'HW_OH4', order: 1 });
+                return { atoms, bonds };
+            }
+
+            if (s === 'HAWORTH-FURANOSA-FRUCTOSA') {
+                // Proyección de Haworth de β-D-Fructofuranosa (anillo de 5 miembros con O arriba)
+                atoms.push(
+                    { id: 'FR_O', el: 'O', x: 460, y: 115, noValenceDots: true },
+                    { id: 'FR_C2', el: 'C2', x: 560, y: 185, noValenceDots: true },
+                    { id: 'FR_C3', el: 'C3', x: 515, y: 265, noValenceDots: true },
+                    { id: 'FR_C4', el: 'C4', x: 405, y: 265, noValenceDots: true },
+                    { id: 'FR_C5', el: 'C5', x: 360, y: 185, noValenceDots: true },
+                    { id: 'FR_OH2', el: 'OH', x: 560, y: 110, noValenceDots: true },
+                    { id: 'FR_C1', el: 'CH₂OH', x: 645, y: 245, noValenceDots: true },
+                    { id: 'FR_OH3', el: 'OH', x: 515, y: 195, noValenceDots: true },
+                    { id: 'FR_OH4', el: 'OH', x: 405, y: 335, noValenceDots: true },
+                    { id: 'FR_C6', el: 'CH₂OH', x: 360, y: 110, noValenceDots: true }
+                );
+                bonds.push(
+                    { from: 'FR_O', to: 'FR_C2', order: 1 },
+                    { from: 'FR_C2', to: 'FR_C3', order: 1 },
+                    { from: 'FR_C3', to: 'FR_C4', order: 1 },
+                    { from: 'FR_C4', to: 'FR_C5', order: 1 },
+                    { from: 'FR_C5', to: 'FR_O', order: 1 },
+                    { from: 'FR_C2', to: 'FR_OH2', order: 1 },
+                    { from: 'FR_C2', to: 'FR_C1', order: 1 },
+                    { from: 'FR_C3', to: 'FR_OH3', order: 1 },
+                    { from: 'FR_C4', to: 'FR_OH4', order: 1 },
+                    { from: 'FR_C5', to: 'FR_C6', order: 1 }
+                );
+                return { atoms, bonds };
+            }
+
+            if (s.startsWith('DISACARIDO-')) {
+                const kind = s.replace('DISACARIDO-', '');
+                if (kind === 'SACAROSA') {
+                    // α-D-Glucopiranosa — O(α1↔2β) — β-D-Fructofuranosa
+                    atoms.push(
+                        { id: 'G_O', el: 'O', x: 300, y: 135, noValenceDots: true },
+                        { id: 'G_C1', el: 'C1', x: 355, y: 190, noValenceDots: true },
+                        { id: 'G_C2', el: 'C2', x: 300, y: 245, noValenceDots: true },
+                        { id: 'G_C3', el: 'C3', x: 215, y: 245, noValenceDots: true },
+                        { id: 'G_C4', el: 'C4', x: 165, y: 190, noValenceDots: true },
+                        { id: 'G_C5', el: 'C5', x: 215, y: 135, noValenceDots: true },
+                        { id: 'G_C6', el: 'CH₂OH', x: 215, y: 70, noValenceDots: true },
+                        { id: 'O_GLIC', el: 'O', x: 460, y: 190, noValenceDots: true },
+                        { id: 'F_C2', el: 'C2', x: 565, y: 190, noValenceDots: true },
+                        { id: 'F_O', el: 'O', x: 635, y: 135, noValenceDots: true },
+                        { id: 'F_C5', el: 'C5', x: 705, y: 190, noValenceDots: true },
+                        { id: 'F_C4', el: 'C4', x: 675, y: 255, noValenceDots: true },
+                        { id: 'F_C3', el: 'C3', x: 595, y: 255, noValenceDots: true },
+                        { id: 'F_C1', el: 'CH₂OH', x: 565, y: 115, noValenceDots: true },
+                        { id: 'F_C6', el: 'CH₂OH', x: 705, y: 115, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: 'G_O', to: 'G_C1', order: 1 }, { from: 'G_C1', to: 'G_C2', order: 1 },
+                        { from: 'G_C2', to: 'G_C3', order: 1 }, { from: 'G_C3', to: 'G_C4', order: 1 },
+                        { from: 'G_C4', to: 'G_C5', order: 1 }, { from: 'G_C5', to: 'G_O', order: 1 },
+                        { from: 'G_C5', to: 'G_C6', order: 1 },
+                        { from: 'G_C1', to: 'O_GLIC', order: 1 }, { from: 'O_GLIC', to: 'F_C2', order: 1 },
+                        { from: 'F_C2', to: 'F_O', order: 1 }, { from: 'F_O', to: 'F_C5', order: 1 },
+                        { from: 'F_C5', to: 'F_C4', order: 1 }, { from: 'F_C4', to: 'F_C3', order: 1 },
+                        { from: 'F_C3', to: 'F_C2', order: 1 }, { from: 'F_C2', to: 'F_C1', order: 1 },
+                        { from: 'F_C5', to: 'F_C6', order: 1 }
+                    );
+                    return { atoms, bonds };
+                } else {
+                    // Maltosa (α1→4), Lactosa (β1→4), Celobiosa (β1→4)
+                    atoms.push(
+                        { id: 'L_O', el: 'O', x: 295, y: 135, noValenceDots: true },
+                        { id: 'L_C1', el: 'C1', x: 350, y: 190, noValenceDots: true },
+                        { id: 'L_C2', el: 'C2', x: 295, y: 245, noValenceDots: true },
+                        { id: 'L_C3', el: 'C3', x: 210, y: 245, noValenceDots: true },
+                        { id: 'L_C4', el: 'C4', x: 160, y: 190, noValenceDots: true },
+                        { id: 'L_C5', el: 'C5', x: 210, y: 135, noValenceDots: true },
+                        { id: 'L_C6', el: 'CH₂OH', x: 210, y: 70, noValenceDots: true },
+                        { id: 'O_GLIC', el: 'O', x: 455, y: 190, noValenceDots: true },
+                        { id: 'R_C4', el: 'C4', x: 560, y: 190, noValenceDots: true },
+                        { id: 'R_C5', el: 'C5', x: 615, y: 135, noValenceDots: true },
+                        { id: 'R_O', el: 'O', x: 700, y: 135, noValenceDots: true },
+                        { id: 'R_C1', el: 'C1', x: 750, y: 190, noValenceDots: true },
+                        { id: 'R_C2', el: 'C2', x: 700, y: 245, noValenceDots: true },
+                        { id: 'R_C3', el: 'C3', x: 615, y: 245, noValenceDots: true },
+                        { id: 'R_C6', el: 'CH₂OH', x: 615, y: 70, noValenceDots: true },
+                        { id: 'R_OH1', el: 'OH', x: 830, y: 190, noValenceDots: true }
+                    );
+                    if (kind === 'LACTOSA') {
+                        atoms.push({ id: 'L_OH4', el: 'OH', x: 160, y: 120, noValenceDots: true });
+                        bonds.push({ from: 'L_C4', to: 'L_OH4', order: 1 });
+                    }
+                    bonds.push(
+                        { from: 'L_O', to: 'L_C1', order: 1 }, { from: 'L_C1', to: 'L_C2', order: 1 },
+                        { from: 'L_C2', to: 'L_C3', order: 1 }, { from: 'L_C3', to: 'L_C4', order: 1 },
+                        { from: 'L_C4', to: 'L_C5', order: 1 }, { from: 'L_C5', to: 'L_O', order: 1 },
+                        { from: 'L_C5', to: 'L_C6', order: 1 },
+                        { from: 'L_C1', to: 'O_GLIC', order: 1 }, { from: 'O_GLIC', to: 'R_C4', order: 1 },
+                        { from: 'R_C4', to: 'R_C5', order: 1 }, { from: 'R_C5', to: 'R_O', order: 1 },
+                        { from: 'R_O', to: 'R_C1', order: 1 }, { from: 'R_C1', to: 'R_C2', order: 1 },
+                        { from: 'R_C2', to: 'R_C3', order: 1 }, { from: 'R_C3', to: 'R_C4', order: 1 },
+                        { from: 'R_C5', to: 'R_C6', order: 1 }, { from: 'R_C1', to: 'R_OH1', order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+            }
+
+            if (s.startsWith('POLISACARIDO-')) {
+                const kind = s.replace('POLISACARIDO-', '');
+                const unitA = kind === 'HIALURONICO' ? 'Ác. D-Glucurónico' : (kind === 'CELULOSA' ? 'β-D-Glucosa' : 'α-D-Glucosa');
+                const bondLbl = kind === 'HIALURONICO' ? 'β(1→3)' : (kind === 'CELULOSA' ? 'β(1→4)' : 'α(1→4)');
+                const unitB = kind === 'HIALURONICO' ? 'GlcNAc' : unitA;
+                atoms.push(
+                    { id: 'P_L', el: '[ — O', x: 165, y: 195, noValenceDots: true },
+                    { id: 'P_U1', el: unitA, x: 325, y: 195, noValenceDots: true },
+                    { id: 'P_B', el: bondLbl, x: 485, y: 195, noValenceDots: true },
+                    { id: 'P_U2', el: unitB, x: 645, y: 195, noValenceDots: true },
+                    { id: 'P_R', el: 'O — ]ₙ', x: 800, y: 195, noValenceDots: true }
+                );
+                bonds.push(
+                    { from: 'P_L', to: 'P_U1', order: 1 },
+                    { from: 'P_U1', to: 'P_B', order: 1 },
+                    { from: 'P_B', to: 'P_U2', order: 1 },
+                    { from: 'P_U2', to: 'P_R', order: 1 }
+                );
+                if (kind === 'ALMIDON' || kind === 'GLUCOGENO') {
+                    atoms.push({ id: 'P_BR', el: 'Ramificación α(1→6)', x: 645, y: 95, noValenceDots: true });
+                    bonds.push({ from: 'P_U2', to: 'P_BR', order: 1 });
+                }
+                return { atoms, bonds };
+            }
+
+            if (s.startsWith('LIPIDO-')) {
+                const kind = s.replace('LIPIDO-', '');
+                if (kind.startsWith('TAG-')) {
+                    const chains = {
+                        'TAG-ESTEARICO': ['O—CO—(CH₂)₁₆—CH₃', 'O—CO—(CH₂)₁₆—CH₃', 'O—CO—(CH₂)₁₆—CH₃'],
+                        'TAG-PALMITICO': ['O—CO—(CH₂)₁₄—CH₃', 'O—CO—(CH₂)₁₄—CH₃', 'O—CO—(CH₂)₁₄—CH₃'],
+                        'TAG-OLEICO': ['O—CO—(CH₂)₇CH=CH(CH₂)₇CH₃', 'O—CO—(CH₂)₇CH=CH(CH₂)₇CH₃', 'O—CO—(CH₂)₇CH=CH(CH₂)₇CH₃'],
+                        'TAG-MIXTO-INSAT': ['O—CO—C₁₇H₃₃ (Oleoil)', 'O—CO—C₁₉H₃₁ (Araquidonoil)', 'O—CO—C₁₇H₃₁ (Linoleoil)'],
+                        'TAG-MIXTO-SAT': ['O—CO—(CH₂)₁₄CH₃ (Palmitoil)', 'O—CO—(CH₂)₁₆CH₃ (Estearoil)', 'O—CO—(CH₂)₁₄CH₃ (Palmitoil)']
+                    }[kind];
+                    atoms.push(
+                        { id: 'G1', el: 'CH₂', x: 260, y: 95, noValenceDots: true },
+                        { id: 'G2', el: 'CH', x: 260, y: 190, noValenceDots: true },
+                        { id: 'G3', el: 'CH₂', x: 260, y: 285, noValenceDots: true },
+                        { id: 'A1', el: chains[0], x: 540, y: 95, noValenceDots: true },
+                        { id: 'A2', el: chains[1], x: 540, y: 190, noValenceDots: true },
+                        { id: 'A3', el: chains[2], x: 540, y: 285, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
+                        { from: 'G1', to: 'A1', order: 1 }, { from: 'G2', to: 'A2', order: 1 }, { from: 'G3', to: 'A3', order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+                if (kind.startsWith('FOSFOLIPIDO-') || kind === 'CARDIOLIPINA') {
+                    const headMap = {
+                        'FOSFOLIPIDO-H': 'O—PO₂⁻—H',
+                        'FOSFOLIPIDO-COLINA': 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃',
+                        'FOSFOLIPIDO-ETANOLAMINA': 'O—PO₂⁻—O—CH₂CH₂NH₃⁺',
+                        'FOSFOLIPIDO-SERINA': 'O—PO₂⁻—O—CH₂CH(NH₃⁺)COO⁻',
+                        'CARDIOLIPINA': 'O—PO₂⁻—O—CH₂CH(OH)CH₂—O—PO₂⁻—Fosfatidilo'
+                    };
+                    atoms.push(
+                        { id: 'G1', el: 'CH₂', x: 240, y: 95, noValenceDots: true },
+                        { id: 'G2', el: 'CH', x: 240, y: 190, noValenceDots: true },
+                        { id: 'G3', el: 'CH₂', x: 240, y: 285, noValenceDots: true },
+                        { id: 'A1', el: 'O—CO—R₁ (Ác. Graso Sat.)', x: 545, y: 95, noValenceDots: true },
+                        { id: 'A2', el: 'O—CO—R₂ (Ác. Graso Insat.)', x: 545, y: 190, noValenceDots: true },
+                        { id: 'HD', el: headMap[kind], x: 545, y: 285, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
+                        { from: 'G1', to: 'A1', order: 1 }, { from: 'G2', to: 'A2', order: 1 }, { from: 'G3', to: 'HD', order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+                if (kind === 'CERAMIDA' || kind === 'ESFINGOMIELINA') {
+                    atoms.push(
+                        { id: 'E3', el: 'CH₃—(CH₂)₁₂—CH=CH—CH(OH)', x: 270, y: 95, noValenceDots: true },
+                        { id: 'E2', el: 'CH', x: 270, y: 190, noValenceDots: true },
+                        { id: 'E1', el: 'CH₂', x: 270, y: 285, noValenceDots: true },
+                        { id: 'AM', el: 'NH—CO—R (Ácido Graso)', x: 565, y: 190, noValenceDots: true },
+                        { id: 'C1G', el: kind === 'ESFINGOMIELINA' ? 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃' : 'OH', x: 565, y: 285, noValenceDots: true }
+                    );
+                    bonds.push(
+                        { from: 'E3', to: 'E2', order: 1 }, { from: 'E2', to: 'E1', order: 1 },
+                        { from: 'E2', to: 'AM', order: 1 }, { from: 'E1', to: 'C1G', order: 1 }
+                    );
+                    return { atoms, bonds };
+                }
+            }
+
             // 2b. Heterociclos (HETERO-3-O, HETERO-5-O, HETERO-6-N, etc.) dibujados como polígonos reales con el heteroátomo en el vértice superior
             const mHet = s.match(/^HETERO-(\d+)-([A-Za-z0-9]+)(.*)$/i);
             if (mHet) {
