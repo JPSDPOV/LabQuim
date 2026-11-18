@@ -3011,8 +3011,8 @@
             let html = `<g opacity="${bondFadeOp}" ${glow}>`;
 
             if (order === 1 && stereo === 'wedge') {
-                const startOff = mobile ? 20 : 16;
-                const endOff = mobile ? 20 : 16;
+                const startOff = trim1 === 0 ? 0 : (mobile ? 12 : 8);
+                const endOff = trim2 === 0 ? 0 : (mobile ? 12 : 8);
                 const sx = x1 + ux * startOff;
                 const sy = y1 + uy * startOff;
                 const ex = drawX2 - ux * endOff;
@@ -3021,8 +3021,8 @@
                 const fillCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : (lightTheme ? '#0f172a' : '#e2e8f0'));
                 html += `<polygon points="${sx.toFixed(1)},${sy.toFixed(1)} ${(ex + nx * halfBase).toFixed(1)},${(ey + ny * halfBase).toFixed(1)} ${(ex - nx * halfBase).toFixed(1)},${(ey - ny * halfBase).toFixed(1)}" fill="${fillCol}" ${state === 'forming' || state === 'breaking' ? 'fill-opacity="0.45" stroke="' + fillCol + '" stroke-width="1.8" ' + dash : ''}/>`;
             } else if (order === 1 && stereo === 'dash') {
-                const startOff = mobile ? 20 : 16;
-                const endOff = mobile ? 20 : 16;
+                const startOff = trim1 === 0 ? 0 : (mobile ? 12 : 8);
+                const endOff = trim2 === 0 ? 0 : (mobile ? 12 : 8);
                 const sx = x1 + ux * startOff;
                 const sy = y1 + uy * startOff;
                 const ex = drawX2 - ux * endOff;
@@ -5125,16 +5125,16 @@
             }
 
             if (s === 'CICLO-6-1-=CH2') {
-                // Metilenciclohexano: ciclohexano con =CH2 exocíclico en C1
-                const cx = 460, cy = 205, R = 64;
+                // Metilenciclohexano: hexágono geométrico limpio con =CH2 exocíclico en C1
+                const cx = 460, cy = 205, R = 68;
                 for (let k = 0; k < 6; k++) {
                     const ang = -Math.PI / 2 + (Math.PI / 3) * k;
-                    atoms.push({ id: `MC_${k + 1}`, el: k === 0 ? 'C' : 'CH₂', x: Math.round(cx + Math.cos(ang) * (R * 0.90)), y: Math.round(cy + Math.sin(ang) * R), noValenceDots: true });
+                    atoms.push({ id: `MC_${k + 1}`, el: '', isVertex: true, x: Math.round(cx + Math.cos(ang) * (R * 0.92)), y: Math.round(cy + Math.sin(ang) * R), noValenceDots: true });
                 }
                 for (let k = 0; k < 6; k++) {
                     bonds.push({ from: `MC_${k + 1}`, to: `MC_${((k + 1) % 6) + 1}`, order: 1 });
                 }
-                atoms.push({ id: 'MC_CH2', el: 'CH₂', x: cx, y: cy - R - 68, noValenceDots: true });
+                atoms.push({ id: 'MC_CH2', el: 'CH₂', x: cx, y: cy - R - 64, noValenceDots: true });
                 bonds.push({ from: 'MC_1', to: 'MC_CH2', order: 2 });
                 return { atoms, bonds };
             }
@@ -5315,45 +5315,43 @@
             }
 
             if (s === 'LACTONA-5') {
-                // γ-Butirolactona: anillo de 5 miembros con O en pos 1 y C=O en pos 2
+                // γ-Butirolactona: pentágono geométrico con O en pos 1 y =O en pos 2
                 const cx = 460, cy = 195, R = 74;
                 const verts = [];
                 for (let k = 0; k < 5; k++) {
                     const pos = k + 1;
                     const ang = -Math.PI / 2 + ((2 * Math.PI) / 5) * k;
-                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.92));
                     const vy = Math.round(cy + Math.sin(ang) * R);
                     verts.push({ vx, vy, ang });
-                    const lbl = pos === 1 ? 'O' : (pos === 2 ? 'C' : 'CH₂');
-                    atoms.push({ id: `LC_${pos}`, el: lbl, x: vx, y: vy, noValenceDots: true });
+                    atoms.push({ id: `LC_${pos}`, el: pos === 1 ? 'O' : '', isVertex: pos !== 1, x: vx, y: vy, noValenceDots: true });
                 }
                 for (let k = 0; k < 5; k++) {
                     bonds.push({ from: `LC_${k + 1}`, to: `LC_${((k + 1) % 5) + 1}`, order: 1 });
                 }
                 const v2 = verts[1];
-                atoms.push({ id: 'LC_O2', el: 'O', x: Math.round(cx + Math.cos(v2.ang) * (R + 68)), y: Math.round(cy + Math.sin(v2.ang) * (R + 68)), noValenceDots: true });
+                atoms.push({ id: 'LC_O2', el: 'O', x: Math.round(cx + Math.cos(v2.ang) * (R + 62)), y: Math.round(cy + Math.sin(v2.ang) * (R + 62)), noValenceDots: true });
                 bonds.push({ from: 'LC_2', to: 'LC_O2', order: 2 });
                 return { atoms, bonds };
             }
 
             if (s === 'PIRROLIDINA-2-COOH') {
-                // Prolina: anillo de pirrolidina con NH en pos 1 y COOH en pos 2
+                // Prolina: pentágono geométrico con NH en pos 1 y COOH en pos 2
                 const cx = 460, cy = 195, R = 74;
                 const verts = [];
                 for (let k = 0; k < 5; k++) {
                     const pos = k + 1;
                     const ang = -Math.PI / 2 + ((2 * Math.PI) / 5) * k;
-                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.92));
                     const vy = Math.round(cy + Math.sin(ang) * R);
                     verts.push({ vx, vy, ang });
-                    const lbl = pos === 1 ? 'NH' : (pos === 2 ? 'CH' : 'CH₂');
-                    atoms.push({ id: `PR_${pos}`, el: lbl, x: vx, y: vy, noValenceDots: true });
+                    atoms.push({ id: `PR_${pos}`, el: pos === 1 ? 'NH' : '', isVertex: pos !== 1, x: vx, y: vy, noValenceDots: true });
                 }
                 for (let k = 0; k < 5; k++) {
                     bonds.push({ from: `PR_${k + 1}`, to: `PR_${((k + 1) % 5) + 1}`, order: 1 });
                 }
                 const v2 = verts[1];
-                atoms.push({ id: 'PR_COOH', el: 'COOH', x: Math.round(cx + Math.cos(v2.ang) * (R + 74)), y: Math.round(cy + Math.sin(v2.ang) * (R + 74)), noValenceDots: true });
+                atoms.push({ id: 'PR_COOH', el: 'COOH', x: Math.round(cx + Math.cos(v2.ang) * (R + 68)), y: Math.round(cy + Math.sin(v2.ang) * (R + 68)), noValenceDots: true });
                 bonds.push({ from: 'PR_2', to: 'PR_COOH', order: 1 });
                 return { atoms, bonds };
             }
@@ -5625,10 +5623,7 @@
                     } else if (heteroAtPos) {
                         atoms.push({ id: `H_V${pos}`, el: heteroAtPos.rawGrp, x: vx, y: vy, noValenceDots: true });
                     } else {
-                        const subsHere = subCountsByPos[pos] || 0;
-                        const hCount = Math.max(0, 2 - subsHere);
-                        const nodeLabel = hCount === 2 ? 'CH₂' : (hCount === 1 ? 'CH' : 'C');
-                        atoms.push({ id: `H_V${pos}`, el: nodeLabel, x: vx, y: vy, noValenceDots: true });
+                        atoms.push({ id: `H_V${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
                     }
                 }
 
@@ -5665,19 +5660,18 @@
                 return { atoms, bonds };
             }
 
-            // 3. Ciclos saturados e insaturados con hidrógenos explícitos (CH₂, CH, C) y separación angular de geminales
+            // 3. Ciclos saturados e insaturados en forma geométrica esquelética limpia (polígono puro sin CH₂/CH en los vértices)
             const mCyc = s.match(/^(?:(CIS|TRANS)-)?(CICLO|CICLOENO|CICLODIENO|CICLOTRIENO|CICLOINO|CICLOENINO)-(\d+)(.*)$/);
             if (mCyc) {
                 const stereoMode = mCyc[1] || '';
                 const cycType = mCyc[2];
                 const sides = Math.min(12, Math.max(3, parseInt(mCyc[3], 10)));
                 const rest = (mCyc[4] || '').replace(/^-+/, '');
-                const cx = 460, cy = 185, R = sides <= 4 ? 68 : 78;
+                const cx = 460, cy = 190, R = sides <= 4 ? 72 : (sides >= 9 ? 94 : 80);
                 const verts = [];
 
-                // Paso A: Parsear todos los sustituyentes y agruparlos por posición del anillo
                 const parsedSubs = [];
-                const subValenceByPos = {};
+                const subCountsByPos = {};
                 if (rest) {
                     const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
                     parts.forEach(part => {
@@ -5686,15 +5680,21 @@
                         const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
                         const bOrd = (rawGrp === 'O') ? 2 : 1;
                         posStr.split(',').map(Number).forEach(pos => {
-                            subValenceByPos[pos] = (subValenceByPos[pos] || 0) + bOrd;
+                            subCountsByPos[pos] = (subCountsByPos[pos] || 0) + 1;
                             parsedSubs.push({ pos, rawGrp, bOrd });
                         });
                     });
                 }
 
-                // Paso B: Calcular enlaces del ciclo para deducir los hidrógenos exactos de cada vértice (CH₂, CH o C)
-                const ringBonds = [];
-                const ringValenceByPos = {};
+                for (let k = 0; k < sides; k++) {
+                    const pos = k + 1;
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / sides) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.94));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+                    atoms.push({ id: `C${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
+                }
+
                 for (let k = 0; k < sides; k++) {
                     const next = (k + 1) % sides;
                     let ord = 1;
@@ -5706,31 +5706,13 @@
                         if (k === 0) ord = 2;
                         if (k === 2) ord = 3;
                     }
-                    ringBonds.push({ from: `C${k + 1}`, to: `C${next + 1}`, order: ord });
-                    ringValenceByPos[k + 1] = (ringValenceByPos[k + 1] || 0) + ord;
-                    ringValenceByPos[next + 1] = (ringValenceByPos[next + 1] || 0) + ord;
+                    bonds.push({
+                        from: `C${k + 1}`,
+                        to: `C${next + 1}`,
+                        order: ord,
+                        inwardCenter: ord === 2 ? { x: cx, y: cy } : null
+                    });
                 }
-
-                for (let k = 0; k < sides; k++) {
-                    const pos = k + 1;
-                    const ang = -Math.PI / 2 + ((2 * Math.PI) / sides) * k;
-                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
-                    const vy = Math.round(cy + Math.sin(ang) * R);
-                    verts.push({ vx, vy, ang });
-
-                    const usedValence = (ringValenceByPos[pos] || 2) + (subValenceByPos[pos] || 0);
-                    const hCount = Math.max(0, 4 - usedValence);
-                    const nodeLabel = hCount === 2 ? 'CH₂' : (hCount === 1 ? 'CH' : 'C');
-                    atoms.push({ id: `C${pos}`, el: nodeLabel, x: vx, y: vy, noValenceDots: true });
-                }
-
-                bonds.push(...ringBonds);
-
-                // Paso C: Colocar cada sustituyente separando en V (±0.42 rad) si hay 2 en el mismo vértice
-                const countAtPos = {};
-                parsedSubs.forEach(sub => {
-                    countAtPos[sub.pos] = (countAtPos[sub.pos] || 0) + 1;
-                });
 
                 const placedAtPos = {};
                 parsedSubs.forEach((sub, idx) => {
@@ -5738,20 +5720,28 @@
                     const v = verts[(pos - 1) % sides];
                     if (!v) return;
 
-                    const totalHere = countAtPos[pos] || 1;
+                    const totalHere = subCountsByPos[pos] || 1;
                     const idxHere = placedAtPos[pos] || 0;
                     placedAtPos[pos] = idxHere + 1;
 
-                    const grp = rawGrp
+                    let grp = rawGrp
                         .replace(/CH3/g, 'CH₃')
                         .replace(/CH2/g, 'CH₂')
                         .replace(/C3H7/g, 'C₃H₇')
                         .replace(/C4H9/g, 'C₄H₉')
                         .replace(/NH2/g, 'NH₂');
 
-                    const spread = totalHere > 1 ? (idxHere === 0 ? -0.42 : 0.42) : 0;
-                    const distOut = totalHere > 1 ? (R + 90) : (R + 78);
-                    const sx = Math.round(cx + Math.cos(v.ang + spread) * (distOut * 0.92));
+                    // Invertir escritura cuando apunta a la izquierda para que el carbono enlazado quede junto al vértice
+                    if (Math.cos(v.ang) < -0.25) {
+                        if (grp === 'CH₃') grp = 'H₃C';
+                        else if (grp === 'CH₂CH₃') grp = 'H₃CH₂C';
+                        else if (grp === 'OH') grp = 'HO';
+                        else if (grp === 'NH₂') grp = 'H₂N';
+                    }
+
+                    const spread = totalHere > 1 ? (idxHere === 0 ? -0.38 : 0.38) : 0;
+                    const distOut = totalHere > 1 ? (R + 74) : (R + 64);
+                    const sx = Math.round(cx + Math.cos(v.ang + spread) * (distOut * 0.94));
                     const sy = Math.round(cy + Math.sin(v.ang + spread) * distOut);
                     const sid = `CS_${idx}`;
 
@@ -5921,17 +5911,7 @@
                         const ang = startAng + ((2 * Math.PI) / sides) * k;
                         const vx = Math.round(rcx + Math.cos(ang) * (R * 0.90));
                         const vy = Math.round(rcy + Math.sin(ang) * R);
-                        if (spec.aromatic) {
-                            atoms.push({ id: `SR_${uniqueTag}_${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
-                        } else {
-                            let vLabel = 'CH₂';
-                            if (spec.doubleSide === k || (spec.doubleSide !== -1 && (spec.doubleSide + 1) % sides === k)) {
-                                vLabel = (k === 0) ? 'C' : 'CH';
-                            } else {
-                                vLabel = (k === 0) ? 'CH' : 'CH₂';
-                            }
-                            atoms.push({ id: `SR_${uniqueTag}_${k}`, el: vLabel, x: vx, y: vy, noValenceDots: true });
-                        }
+                        atoms.push({ id: `SR_${uniqueTag}_${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
                     }
 
                     for (let k = 0; k < sides; k++) {
@@ -5943,7 +5923,7 @@
                             from: `SR_${uniqueTag}_${k}`,
                             to: `SR_${uniqueTag}_${next}`,
                             order: ord,
-                            inwardCenter: spec.aromatic ? { x: rcx, y: rcy } : null
+                            inwardCenter: (spec.aromatic || ord === 2) ? { x: rcx, y: rcy } : null
                         });
                     }
 
