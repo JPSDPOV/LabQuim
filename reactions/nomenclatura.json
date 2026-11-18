@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "title": "Banco Completo de Nomenclatura Orgánica — Orden de Aprendizaje",
+  "version": "2.0.0",
+  "title": "Banco Exhaustivo de Nomenclatura Orgánica — Recopilación Química Isasi 2026",
   "groups": [
     {
       "id": "alcanos",
@@ -350,6 +350,238 @@
       "explanation": "Cadena más larga de 10 carbonos (decano)."
     },
     {
+      "group": "alcanos",
+      "badge": "Alcano lineal",
+      "name": "Octano",
+      "synonyms": "n-Octano",
+      "semiFormula": "CH₃—(CH₂)₆—CH₃",
+      "explanation": "Alcano saturado lineal de 8 carbonos."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano lineal",
+      "name": "Nonano",
+      "synonyms": "n-Nonano",
+      "semiFormula": "CH₃—(CH₂)₇—CH₃",
+      "explanation": "Alcano saturado lineal de 9 carbonos."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano lineal",
+      "name": "Decano",
+      "synonyms": "n-Decano",
+      "semiFormula": "CH₃—(CH₂)₈—CH₃",
+      "explanation": "Alcano saturado lineal de 10 carbonos."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Metilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos (hexano) con sustituyente metilo en C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2-Metilhexano",
+      "synonyms": "Isoheptano",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con sustituyente metilo en C2."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,3-Dimetilpentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 5 carbonos con grupos metilo en C2 y C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,2,3-Trimetilbutano",
+      "synonyms": "Triptano",
+      "semiFormula": "CH₃—C(CH₃)₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 4 carbonos con tres sustituyentes metilo (2,2,3)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,2,3-Trimetilpentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Unión de los grupos sec-butilo y terc-butilo."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,2,4-Trimetilpentano",
+      "synonyms": "Isooctano",
+      "semiFormula": "CH₃—C(CH₃)₂—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Estándar de referencia de índice de octano 100 en gasolinas."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,2,4-Trimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)₂—CH₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con sustituyentes metilo en C2, C2 y C4."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,3,4-Trimetilpentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 5 carbonos con tres metilos en C2, C3 y C4."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,3-Dimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₃)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con grupos metilo en C2 y C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3,3-Dimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—C(CH₃)₂—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con dos metilos geminales en C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3,4-Dimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con grupos metilo en C3 y C4."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2,4-Dimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con grupos metilo en C2 y C4."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Etil-4-metilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₂CH₃)—CH(CH₃)—CH₂—CH₃",
+      "explanation": "A igualdad de distancia desde los extremos, se numera dando menor localizador al sustituyente alfabéticamente prioritario (etil en C3)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Etil-2,2-dimetilbutano",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)₂—CH(CH₂CH₃)—CH₃",
+      "explanation": "Cadena de 4 carbonos con dos metilos en C2 y etilo en C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Etil-2,5-dimetilheptano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₂CH₃)—CH₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 7 carbonos con etilo en C3 y metilos en C2 y C5."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "4-Etil-2-metiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(CH₂CH₃)—(CH₂)₃—CH₃",
+      "explanation": "Cadena principal de 8 carbonos (octano) con metilo en C2 y etilo en C4."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Etil-6-metiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₂CH₃)—CH₂—CH₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena simétrica de 8 carbonos numerada dando menor localizador al etilo (C3)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "4-Etil-2,2,4-trimetiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)₂—CH₂—C(CH₃)(CH₂CH₃)—(CH₂)₃—CH₃",
+      "explanation": "Cadena de 8 carbonos con cuatro sustituyentes (2,2,4,4)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "4-Etil-5-isopropil-2,7-dimetiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(CH₂CH₃)—CH(CH(CH₃)₂)—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 8 carbonos numerada para dar localizadores 2,4,5,7 y ordenada alfabéticamente (etil, isopropil, dimetil)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "4-terc-Butil-6-etil-2-metiloctano",
+      "synonyms": "4-(1,1-Dimetiletil)-6-etil-2-metiloctano",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(C(CH₃)₃)—CH₂—CH(CH₂CH₃)—CH₂—CH₃",
+      "explanation": "El prefijo terc- no se alfabetiza (butil antes que etil y metil)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "6-Etil-5-isopropil-3,3-dimetiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—C(CH₃)₂—CH₂—CH(CH(CH₃)₂)—CH(CH₂CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 8 carbonos con secuencia de localizadores 3,3,5,6."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "4,5-Diisopropil-3-metiloctano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH(CH(CH₃)₂)—CH(CH(CH₃)₂)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 8 carbonos con dos grupos isopropilo en C4, C5 y metilo en C3."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "2-Metilnonano",
+      "synonyms": "Isodecano",
+      "semiFormula": "CH₃—CH(CH₃)—(CH₂)₆—CH₃",
+      "explanation": "Cadena de 9 carbonos con un sustituyente metilo en C2."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "6-Isopropil-2,5-dimetilnonano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH₂—CH(CH₃)—CH(CH(CH₃)₂)—CH₂—CH₂—CH₃",
+      "explanation": "El prefijo iso- sí se toma en cuenta al alfabetizar (isopropil antes que metil)."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "3-Etil-5-isopropil-2,6-dimetilheptano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₂CH₃)—CH₂—CH(CH(CH₃)₂)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con cuatro sustituyentes en C2, C3, C5 y C6."
+    },
+    {
+      "group": "alcanos",
+      "badge": "Alcano ramificado",
+      "name": "6-Etil-3-metildecano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH₂—CH₂—CH(CH₂CH₃)—(CH₂)₃—CH₃",
+      "explanation": "Cadena principal de 10 carbonos (decano) con metilo en C3 y etilo en C6."
+    },
+    {
       "group": "cicloalcanos",
       "badge": "Cicloalcano",
       "name": "Ciclopropano",
@@ -460,6 +692,86 @@
       "synonyms": "",
       "semiFormula": "CH₃—CH(C₅H₉)—CH₂—CH₂—CH₂—CH₃",
       "explanation": "La cadena abierta tiene 6 carbonos (mayor que el anillo de 5), por lo que el ciclo actúa como sustituyente."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano",
+      "name": "Cicloheptano",
+      "synonyms": "",
+      "semiFormula": "CICLO-7",
+      "explanation": "Anillo saturado de 7 átomos de carbono."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano",
+      "name": "Ciclooctano",
+      "synonyms": "",
+      "semiFormula": "CICLO-8",
+      "explanation": "Anillo saturado de 8 átomos de carbono."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano disustituido",
+      "name": "1-Metil-3-propilciclopentano",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1-CH3-3-C3H7",
+      "explanation": "Orden alfabético: metilo en C1 y propilo en C3."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano disustituido",
+      "name": "3-Etil-1-sec-butilciclopentano",
+      "synonyms": "1-(1-Metilpropil)-3-etilciclopentano",
+      "semiFormula": "CICLO-5-1-CH(CH3)CH2CH3-3-CH2CH3",
+      "explanation": "El prefijo sec- no se alfabetiza: butil (C1) antes que etil (C3)."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano polisustituido",
+      "name": "3-Etil-1,1-dimetilciclopentano",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1,1-CH3-3-CH2CH3",
+      "explanation": "El carbono disustituido recibe localizador 1 para obtener la serie más baja (1,1,3)."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Cicloalcano trisustituido",
+      "name": "1-Etil-4-isopropil-2-metilciclopentano",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1-CH2CH3-2-CH3-4-CH(CH3)2",
+      "explanation": "Localizadores 1,2,4 ordenados alfabéticamente: etil, isopropil, metil."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "trans-1-Etil-3-metilcicloheptano",
+      "synonyms": "",
+      "semiFormula": "TRANS-CICLO-7-1-CH2CH3-3-CH3",
+      "explanation": "Anillo de 7 carbonos con etilo en C1 y metilo en C3 en caras opuestas."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Estereoisomería cis/trans",
+      "name": "cis-1-Etil-3-metilcicloheptano",
+      "synonyms": "",
+      "semiFormula": "CIS-CICLO-7-1-CH2CH3-3-CH3",
+      "explanation": "Anillo de 7 carbonos con etilo en C1 y metilo en C3 hacia la misma cara."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Alcano con ciclo sustituyente",
+      "name": "3-Ciclobutilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(C₄H₇)—CH₂—CH₂—CH₃",
+      "explanation": "La cadena lineal tiene 6 carbonos (mayor que el anillo de 4), por lo que el ciclobutilo actúa como sustituyente en C3."
+    },
+    {
+      "group": "cicloalcanos",
+      "badge": "Alcano con ciclo sustituyente",
+      "name": "3-Ciclopentilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(C₅H₉)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena lineal de 6 carbonos con sustituyente ciclopentilo en C3."
     },
     {
       "group": "alquenos",
@@ -694,6 +1006,182 @@
       "explanation": "Ejercicio Unidad 13: cadena de 5 carbonos con doble enlace en C2 y sustituyente ciclopentenilo."
     },
     {
+      "group": "alquenos",
+      "badge": "Alqueno lineal",
+      "name": "1-Penteno",
+      "synonyms": "α-Amileno",
+      "semiFormula": "CH₂=CH—CH₂—CH₂—CH₃",
+      "explanation": "Alqueno lineal de 5 carbonos con doble enlace terminal en C1."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Isomería geométrica cis",
+      "name": "cis-2-Penteno",
+      "synonyms": "(Z)-2-Penteno",
+      "semiFormula": "CIS-CH3-CH=CH-CH2CH3",
+      "explanation": "Grupos metilo y etilo del mismo lado del doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Isomería geométrica trans",
+      "name": "trans-2-Penteno",
+      "synonyms": "(E)-2-Penteno",
+      "semiFormula": "TRANS-CH3-CH=CH-CH2CH3",
+      "explanation": "Grupos metilo y etilo en lados opuestos del doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno ramificado",
+      "name": "2-Metil-2-buteno",
+      "synonyms": "Trimetiletileno",
+      "semiFormula": "CH₃—C(CH₃)=CH—CH₃",
+      "explanation": "Alqueno trisustituido de gran estabilidad termodinámica."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno ramificado",
+      "name": "4-Metil-2-hexeno",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH=CH—CH(CH₃)—CH₂—CH₃",
+      "explanation": "El doble enlace tiene prioridad sobre los grupos alquilo (C2 < C4)."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno ramificado",
+      "name": "5-Etil-6-metil-2-hepteno",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH=CH—CH₂—CH(CH₂CH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con doble enlace en C2, etilo en C5 y metilo en C6."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alqueno ramificado",
+      "name": "3-Isopropil-2,6-dimetil-2-hepteno",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)=C(CH(CH₃)₂)—CH₂—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con doble enlace en C2 e isopropilo en C3."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno conjugado",
+      "name": "2,4-Hexadieno",
+      "synonyms": "Bipropenilo",
+      "semiFormula": "CH₃—CH=CH—CH=CH—CH₃",
+      "explanation": "Dieno conjugado simétrico de 6 carbonos usado en reacciones de Diels-Alder."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno conjugado",
+      "name": "3-Etil-5-isopropil-2-metil-2,4-heptadieno",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)=C(CH₂CH₃)—CH=C(CH(CH₃)₂)—CH₂—CH₃",
+      "explanation": "Dieno conjugado de 7 carbonos con dobles enlaces en C2 y C4."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno",
+      "name": "6-Etil-2,5,6,7-trimetil-2,7-nonadieno",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)=CH—CH₂—CH(CH₃)—C(CH₃)(CH₂CH₃)—C(CH₃)=CH—CH₃",
+      "explanation": "Dieno de 9 carbonos con dobles enlaces en C2 y C7."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcadieno conjugado",
+      "name": "4,6-Diisopropil-7-metil-1,3-octadieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH=C(CH(CH₃)₂)—CH₂—CH(CH(CH₃)₂)—CH(CH₃)—CH₃",
+      "explanation": "Dieno conjugado de 8 carbonos con dobles enlaces en C1 y C3."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcatrieno conjugado",
+      "name": "3-Etil-5-isopropil-2,6-dimetil-1,3,5-heptatrieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=C(CH₃)—C(CH₂CH₃)=CH—C(CH(CH₃)₂)=C(CH₃)—CH₃",
+      "explanation": "Trieno conjugado de 7 carbonos con dobles enlaces en C1, C3 y C5."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Alcatrieno",
+      "name": "7-sec-Butil-5-etil-2,4-dimetil-1,4,7-decatrieno",
+      "synonyms": "",
+      "semiFormula": "CH₂=C(CH₃)—CH₂—C(CH₃)=C(CH₂CH₃)—CH₂—C(CH(CH₃)CH₂CH₃)=CH—CH₂—CH₃",
+      "explanation": "Trieno de 10 carbonos con dobles enlaces en C1, C4 y C7."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno",
+      "name": "Ciclopropeno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-3",
+      "explanation": "Anillo insaturado de 3 miembros con alta tensión."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno",
+      "name": "Ciclobuteno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-4",
+      "explanation": "Anillo de 4 carbonos con un doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno",
+      "name": "Ciclopenteno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-5",
+      "explanation": "Anillo de 5 carbonos con un doble enlace."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno disustituido",
+      "name": "1,3-Dimetilciclopenteno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-5-1,3-CH3",
+      "explanation": "Doble enlace en C1=C2 con metilos en C1 y C3."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno disustituido",
+      "name": "3-Etil-5-metilciclopenteno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-5-3-CH2CH3-5-CH3",
+      "explanation": "Se numera pasando por el doble enlace (C1=C2) dando menor localizador al sustituyente alfabéticamente prioritario (3-etil, 5-metil)."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno disustituido",
+      "name": "3-Metil-1-propilciclopenteno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-5-1-C3H7-3-CH3",
+      "explanation": "Propilo en C1 (carbono del doble enlace) y metilo en C3."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalqueno disustituido",
+      "name": "3,4-Dimetilciclohexeno",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-6-3,4-CH3",
+      "explanation": "Doble enlace C1=C2 y grupos metilo en C3 y C4."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalcadieno sustituido",
+      "name": "1-sec-Hexil-1,3-ciclopentadieno",
+      "synonyms": "1-(1-Metilpentil)-1,3-ciclopentadieno",
+      "semiFormula": "CICLODIENO-5-1-CH(CH3)C4H9",
+      "explanation": "Anillo de 1,3-ciclopentadieno con sustituyente sec-hexilo en C1."
+    },
+    {
+      "group": "alquenos",
+      "badge": "Cicloalcatrieno",
+      "name": "1,3,5-Cicloheptatrieno",
+      "synonyms": "Tropilideno",
+      "semiFormula": "CICLOTRIENO-7",
+      "explanation": "Anillo no aromático de 7 carbonos con un carbono sp³ (CH₂) que interrumpe la conjugación."
+    },
+    {
       "group": "alquinos",
       "badge": "Alquino simple",
       "name": "Etino",
@@ -804,6 +1292,94 @@
       "synonyms": "",
       "semiFormula": "CICLOENINO-5",
       "explanation": "Ejercicio Unidad 13: anillo de 5 carbonos con doble enlace en C1 y triple en C3."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquino interno",
+      "name": "2-Pentino",
+      "synonyms": "Etilmetilacetileno",
+      "semiFormula": "CH₃—C≡C—CH₂—CH₃",
+      "explanation": "Isómero de posición del 1-pentino con triple enlace en C2–C3."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquino terminal",
+      "name": "1-Pentino",
+      "synonyms": "Propilacetileno",
+      "semiFormula": "HC≡C—CH₂—CH₂—CH₃",
+      "explanation": "Alquino terminal de 5 carbonos."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquino ramificado",
+      "name": "3-Metil-1-butino",
+      "synonyms": "Isopropilacetileno",
+      "semiFormula": "HC≡C—CH(CH₃)—CH₃",
+      "explanation": "Isómero de esqueleto de fórmula C₅H₈."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquino halogenado",
+      "name": "4-Cloro-5-etil-6-metil-2-heptino",
+      "synonyms": "",
+      "semiFormula": "CH₃—C≡C—CH(Cl)—CH(CH₂CH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con triple enlace en C2 y sustituyentes en C4, C5 y C6."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquino halogenado",
+      "name": "6-Cloro-5-isopropil-2-metil-3-octino",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—C≡C—CH(CH(CH₃)₂)—CH(Cl)—CH₂—CH₃",
+      "explanation": "Cadena de 8 carbonos con triple enlace en C3."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino (Enino)",
+      "name": "3-Isopropil-6-metil-2-hepten-4-ino",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH=C(CH(CH₃)₂)—C≡C—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con doble enlace en C2 y triple enlace en C4."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino (Enino)",
+      "name": "6-Etil-2,6-dimetil-2-nonen-7-ino",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)=CH—CH₂—CH₂—C(CH₃)(CH₂CH₃)—C≡C—CH₃",
+      "explanation": "Cadena de 9 carbonos con doble enlace en C2 y triple enlace en C7."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino (Enino)",
+      "name": "4,6-Diisopropil-7-metil-4-octen-1-ino",
+      "synonyms": "",
+      "semiFormula": "HC≡C—CH₂—C(CH(CH₃)₂)=CH—CH(CH(CH₃)₂)—CH(CH₃)—CH₃",
+      "explanation": "El triple enlace en C1 recibe menor localizador que el doble enlace en C4."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino halogenado",
+      "name": "4-Cloro-5-etil-2-octen-6-ino",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH=CH—CH(Cl)—CH(CH₂CH₃)—C≡C—CH₃",
+      "explanation": "A igualdad de localizadores (2 y 6), el doble enlace tiene prioridad de numeración (2-octen-6-ino)."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Alquenino halogenado",
+      "name": "5-Cloro-6-metil-3-propil-4-hepten-1-ino",
+      "synonyms": "",
+      "semiFormula": "HC≡C—CH(CH₂CH₂CH₃)—CH=C(Cl)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con triple enlace en C1 y doble enlace en C4."
+    },
+    {
+      "group": "alquinos",
+      "badge": "Cicloalquino",
+      "name": "Ciclopentino",
+      "synonyms": "",
+      "semiFormula": "CICLOINO-5",
+      "explanation": "Anillo de 5 carbonos con un triple enlace."
     },
     {
       "group": "aromaticos",
@@ -1014,6 +1590,46 @@
       "explanation": "Derivado hidroxilado del antraceno en el carbono central C9 (posición γ)."
     },
     {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico",
+      "name": "Quinolina",
+      "synonyms": "1-Azanaftaleno / Benzopiridina",
+      "semiFormula": "QUINOLINA",
+      "explanation": "Compuesto heteroaromático bicíclico condensado de 10 electrones π."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Heteroaromático diazina",
+      "name": "Piridazina",
+      "synonyms": "1,2-Diazabenceno",
+      "semiFormula": "HETERO-AROM-6-1,2-N",
+      "explanation": "Anillo aromático de 6 miembros con dos átomos de nitrógeno contiguos (10 electrones π o 6 π)."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico",
+      "name": "Purina",
+      "synonyms": "",
+      "semiFormula": "PURINA",
+      "explanation": "Sistema heteroaromático bicíclico formado por fusión de pirimidina e imidazol (10 electrones π)."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Aromático policíclico",
+      "name": "Pteridina",
+      "synonyms": "",
+      "semiFormula": "PTERIDINA",
+      "explanation": "Sistema heteroaromático bicíclico nitrogenado con 10 electrones π."
+    },
+    {
+      "group": "aromaticos",
+      "badge": "Anuleno aromático",
+      "name": "[16]-Anuleno",
+      "synonyms": "Ciclohexadecaoctaeno",
+      "semiFormula": "ANULENO-16",
+      "explanation": "Polieno cíclico conjugado de 16 electrones π (no cumple 4n + 2)."
+    },
+    {
       "group": "haluros",
       "badge": "Halogenuro de alquilo",
       "name": "Clorometano",
@@ -1188,6 +1804,142 @@
       "synonyms": "p-Cloronitrobenceno",
       "semiFormula": "AROM-1-Cl-4-NO2",
       "explanation": "Producto para mayoritario obtenido por nitración del clorobenceno."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "Bromoetano",
+      "synonyms": "Bromuro de etilo",
+      "semiFormula": "CH₃—CH₂—Br",
+      "explanation": "Halogenuro primario de 2 carbonos."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "Fluoroetano",
+      "synonyms": "Fluoruro de etilo",
+      "semiFormula": "CH₃—CH₂—F",
+      "explanation": "Fluoruro de alquilo primario de 2 carbonos."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "Yodoetano",
+      "synonyms": "Yoduro de etilo",
+      "semiFormula": "CH₃—CH₂—I",
+      "explanation": "Halogenuro primario de mayor punto de ebullición entre los haluros de etilo."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "1-Clorobutano",
+      "synonyms": "Cloruro de butilo",
+      "semiFormula": "CH₃—CH₂—CH₂—CH₂—Cl",
+      "explanation": "Halogenuro lineal primario de 4 carbonos."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro secundario",
+      "name": "2-Yodopropano",
+      "synonyms": "Yoduro de isopropilo",
+      "semiFormula": "(CH₃)₂CH—I",
+      "explanation": "Átomo de yodo en el carbono secundario C2."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro terciario",
+      "name": "2-Cloro-2-metilbutano",
+      "synonyms": "Cloruro de terc-pentilo",
+      "semiFormula": "CH₃—C(Cl)(CH₃)—CH₂—CH₃",
+      "explanation": "Halogenuro terciario de 5 carbonos (producto mayoritario de monocloración del 2-metilbutano)."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro secundario",
+      "name": "2-Cloropentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Cl)—CH₂—CH₂—CH₃",
+      "explanation": "Halogenuro quiral obtenido en la monocloración del n-pentano."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro secundario",
+      "name": "3-Cloropentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(Cl)—CH₂—CH₃",
+      "explanation": "Halogenuro aquiral obtenido por cloración en el carbono central C3 del pentano."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "1-Cloropentano",
+      "synonyms": "Cloruro de pentilo",
+      "semiFormula": "CH₃—CH₂—CH₂—CH₂—CH₂—Cl",
+      "explanation": "Halogenuro primario lineal de 5 carbonos."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "1-Cloro-2,2-dimetilpropano",
+      "synonyms": "Cloruro de neopentilo",
+      "semiFormula": "(CH₃)₃C—CH₂—Cl",
+      "explanation": "Único producto de monocloración del 2,2-dimetilpropano."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "1-Cloro-2-metilbutano",
+      "synonyms": "",
+      "semiFormula": "Cl—CH₂—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Halogenuro primario ramificado de 5 carbonos."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro primario",
+      "name": "1-Cloro-3-metilbutano",
+      "synonyms": "Cloruro de isopentilo / Cloruro de isoamilo",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH₂—Cl",
+      "explanation": "Halogenuro primario derivado del isopentano."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro nitro-sustituido",
+      "name": "2-Bromo-3-nitrobutano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—CH(NO₂)—CH₃",
+      "explanation": "Orden alfabético para numerar a igualdad de distancia: bromo en C2 y nitro en C3."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro nitro-sustituido",
+      "name": "1-Bromo-3-nitrobutano",
+      "synonyms": "",
+      "semiFormula": "Br—CH₂—CH₂—CH(NO₂)—CH₃",
+      "explanation": "Cadena de 4 carbonos con bromo en C1 y grupo nitro en C3."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro cíclico",
+      "name": "1-Bromo-4-terc-butil-2-metilcicloheptano",
+      "synonyms": "",
+      "semiFormula": "CICLO-7-1-Br-2-CH3-4-C(CH3)3",
+      "explanation": "Anillo de cicloheptano trisustituido con localizadores 1,2,4 (bromo, terc-butil, metil)."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro cíclico",
+      "name": "1,3-Dibromo-5-metilciclohexano",
+      "synonyms": "",
+      "semiFormula": "CICLO-6-1,3-Br-5-CH3",
+      "explanation": "Secuencia más baja 1,3,5 dando prioridad alfabética al bromo (C1 y C3) sobre el metilo (C5)."
+    },
+    {
+      "group": "haluros",
+      "badge": "Halogenuro alcoxi-sustituido",
+      "name": "trans-1-Cloro-2-metoxiciclobutano",
+      "synonyms": "",
+      "semiFormula": "TRANS-CICLO-4-1-Cl-2-OCH3",
+      "explanation": "Ciclobutano disustituido en trans con cloro (C1) y metoxi (C2)."
     },
     {
       "group": "alcoholes",
@@ -1428,6 +2180,198 @@
       "synonyms": "Alcohol β-feniletílico",
       "semiFormula": "C₆H₅—CH₂—CH₂—OH",
       "explanation": "Cadena principal de 2 carbonos (etanol) con el grupo –OH en C1 y un sustituyente fenilo en C2."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol secundario",
+      "name": "2-Butanol",
+      "synonyms": "Alcohol sec-butílico",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CH₃",
+      "explanation": "Alcohol secundario quiral de 4 carbonos."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol primario",
+      "name": "1-Pentanol",
+      "synonyms": "Alcohol amílico / Alcohol n-pentílico",
+      "semiFormula": "CH₃—CH₂—CH₂—CH₂—CH₂—OH",
+      "explanation": "Alcohol primario lineal de 5 carbonos."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol secundario",
+      "name": "2-Pentanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CH₂—CH₃",
+      "explanation": "Alcohol secundario de 5 carbonos con –OH en C2."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol secundario",
+      "name": "3-Pentanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(OH)—CH₂—CH₃",
+      "explanation": "Alcohol secundario simétrico de 5 carbonos con –OH en C3."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol secundario",
+      "name": "3-Metil-2-butanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH(CH₃)—CH₃",
+      "explanation": "Alcohol secundario ramificado de 4 carbonos."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol terciario",
+      "name": "3,5,5-Trimetil-3-hexanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(CH₃)₂—CH₂—C(OH)(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con –OH en C3 y tres grupos metilo en C3, C5 y C5."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquenol",
+      "name": "3-Hexen-1-ol",
+      "synonyms": "Alcohol de hoja",
+      "semiFormula": "CH₃—CH₂—CH=CH—CH₂—CH₂—OH",
+      "explanation": "El grupo hidroxilo en C1 tiene prioridad sobre el doble enlace en C3."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquinol",
+      "name": "3-Butin-1-ol",
+      "synonyms": "",
+      "semiFormula": "HC≡C—CH₂—CH₂—OH",
+      "explanation": "Alcohol insaturado de 4 carbonos con –OH en C1 y triple enlace en C3."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquinol halogenado",
+      "name": "5-Bromo-3-hexin-1-ol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—C≡C—CH₂—CH₂—OH",
+      "explanation": "Cadena de 6 carbonos con –OH en C1, triple enlace en C3 y bromo en C5."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquenol",
+      "name": "3-Metil-2-penten-2-ol",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(OH)=C(CH₃)—CH₂—CH₃",
+      "explanation": "Enol sustituido de 5 carbonos."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Cicloalquenol",
+      "name": "4-Metil-2-ciclohexenol",
+      "synonyms": "4-Metil-2-ciclohexen-1-ol",
+      "semiFormula": "CICLOENO-6-1-OH-4-CH3",
+      "explanation": "El grupo –OH es C1, el doble enlace pasa por C2=C3 y el metilo queda en C4."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Cicloalquenol",
+      "name": "2-Metil-4-ciclohexen-1-ol",
+      "synonyms": "6-Metil-3-ciclohexenol",
+      "semiFormula": "CICLOENO-6-4-OH-5-CH3",
+      "explanation": "Anillo de ciclohexeno con –OH en C1 y metilo en C2."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Cicloalcanol halogenado",
+      "name": "2-Clorociclobutanol",
+      "synonyms": "",
+      "semiFormula": "CICLO-4-1-OH-2-Cl",
+      "explanation": "Anillo de 4 carbonos con –OH en C1 y cloro en C2."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Cicloalcanodiol",
+      "name": "1,1-Ciclobutanodiol",
+      "synonyms": "",
+      "semiFormula": "CICLO-4-1,1-OH",
+      "explanation": "Diol geminal sobre el carbono C1 del ciclobutano."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Cicloalcanol alcoxi",
+      "name": "trans-2-Metoxiciclohexanol",
+      "synonyms": "",
+      "semiFormula": "TRANS-CICLO-6-1-OH-2-OCH3",
+      "explanation": "Ciclohexanol con grupo metoxi en C2 en disposición trans."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcoxialcohol",
+      "name": "4-Etoxi-2-metil-2-butanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(OH)(CH₃)—CH₂—CH₂—OCH₂CH₃",
+      "explanation": "El alcohol (–OH en C2) tiene prioridad sobre el éter (etoxi en C4)."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Diol halogenado",
+      "name": "1-Bromo-3-cloro-1,3-propanodiol",
+      "synonyms": "",
+      "semiFormula": "HO—CH(Br)—CH₂—CH(Cl)—OH",
+      "explanation": "Diol de 3 carbonos con dos centros quirales."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Diol lineal",
+      "name": "1,5-Pentanodiol",
+      "synonyms": "",
+      "semiFormula": "HO—(CH₂)₅—OH",
+      "explanation": "Diol terminal de 5 carbonos."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Mercaptoalcohol",
+      "name": "2-Mercapto-1-propanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH₂—OH",
+      "explanation": "El grupo –OH tiene prioridad sobre el –SH (que se nombra mercapto-)."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Mercaptoalcohol",
+      "name": "4-Etil-5-mercapto-2-hexanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CH(CH₂CH₃)—CH(SH)—CH₃",
+      "explanation": "Cadena de 6 carbonos con –OH en C2 y grupo mercapto (–SH) en C5."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Mercaptoalcohol",
+      "name": "3-Etil-4-mercapto-2-metil-1-heptanol",
+      "synonyms": "",
+      "semiFormula": "HO—CH₂—CH(CH₃)—CH(CH₂CH₃)—CH(SH)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 7 carbonos con –OH en C1 y grupo mercapto en C4."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcoxialcohol",
+      "name": "4-Etil-5-metiltio-2-pentanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CH(CH₂CH₃)—CH₂—SCH₃",
+      "explanation": "El grupo alcohol (C2) tiene prioridad sobre el grupo alquiltio (C5)."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alquiltioalcohol",
+      "name": "4-Etil-5-etiltio-3-metil-2-hexanol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH(CH₃)—CH(CH₂CH₃)—CH(SCH₂CH₃)—CH₃",
+      "explanation": "Cadena de 6 carbonos con –OH en C2 y etiltio en C5."
+    },
+    {
+      "group": "alcoholes",
+      "badge": "Alcohol aromático",
+      "name": "1-Feniletanol",
+      "synonyms": "Alcohol α-metilbencílico",
+      "semiFormula": "C₆H₅—CH(OH)—CH₃",
+      "explanation": "Alcohol secundario quiral unido a un anillo fenilo."
     },
     {
       "group": "fenoles",
@@ -1678,6 +2622,14 @@
       "explanation": "Ejercicio Unidad 13: grupo etoxi en posición orto respecto al fenol."
     },
     {
+      "group": "eteres",
+      "badge": "Alcoxialcano ramificado",
+      "name": "1-Etoxi-2,2-dimetilpropano",
+      "synonyms": "Etilneopentiléter",
+      "semiFormula": "CH₃—CH₂—O—CH₂—C(CH₃)₃",
+      "explanation": "Producto de síntesis de Williamson entre yoduro de etilo y neopentóxido de sodio."
+    },
+    {
       "group": "aminas",
       "badge": "Amina primaria",
       "name": "Metanamina",
@@ -1806,6 +2758,86 @@
       "explanation": "Anilina sustituida en posición para (C4) con un grupo metilo."
     },
     {
+      "group": "aminas",
+      "badge": "Amina primaria",
+      "name": "2-Butanamina",
+      "synonyms": "sec-Butilamina",
+      "semiFormula": "CH₃—CH(NH₂)—CH₂—CH₃",
+      "explanation": "Amina primaria con el grupo –NH₂ en el carbono secundario C2."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina insaturada",
+      "name": "3-Penten-2-amina",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(NH₂)—CH=CH—CH₃",
+      "explanation": "El grupo amino (C2) tiene prioridad de numeración sobre el doble enlace (C3)."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina cíclica",
+      "name": "Ciclopentanamina",
+      "synonyms": "Ciclopentilamina",
+      "semiFormula": "CICLO-5-NH2",
+      "explanation": "Anillo de ciclopentano con un sustituyente amino."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria",
+      "name": "N-Metil-1-propanamina",
+      "synonyms": "Metilpropilamina",
+      "semiFormula": "CH₃—CH₂—CH₂—NH—CH₃",
+      "explanation": "Amina secundaria con cadena principal propil (3C) y metilo en el nitrógeno."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina terciaria",
+      "name": "N,N-Dimetil-2-butanamina",
+      "synonyms": "sec-Butildimetilamina",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—N(CH₃)₂",
+      "explanation": "Cadena principal de 4 carbonos (2-butanamina) con dos metilos en N."
+    },
+    {
+      "group": "aminas",
+      "badge": "Mercaptoamina",
+      "name": "4-Etil-5-mercapto-2-hexanamina",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(NH₂)—CH₂—CH(CH₂CH₃)—CH(SH)—CH₃",
+      "explanation": "La amina tiene prioridad sobre el tiol (que se nombra como prefijo mercapto-)."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria bicíclica",
+      "name": "N-Ciclohexilciclohexanamina",
+      "synonyms": "Diciclohexilamina",
+      "semiFormula": "CICLO-6-NH-C6H11",
+      "explanation": "Amina secundaria alifática muy básica con dos anillos de ciclohexilo."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina aromática",
+      "name": "4-Cloroanilina",
+      "synonyms": "p-Cloroanilina / 4-Clorobencenamina",
+      "semiFormula": "AROM-1-NH2-4-Cl",
+      "explanation": "Anilina sustituida con cloro en posición para (C4)."
+    },
+    {
+      "group": "aminas",
+      "badge": "Nitroanilina",
+      "name": "2-Nitroanilina",
+      "synonyms": "o-Nitroanilina",
+      "semiFormula": "AROM-1-NH2-2-NO2",
+      "explanation": "Anilina sustituida con grupo nitro en posición orto (C2)."
+    },
+    {
+      "group": "aminas",
+      "badge": "Nitroanilina",
+      "name": "3-Nitroanilina",
+      "synonyms": "m-Nitroanilina",
+      "semiFormula": "AROM-1-NH2-3-NO2",
+      "explanation": "Anilina sustituida con grupo nitro en posición meta (C3)."
+    },
+    {
       "group": "tioles",
       "badge": "Tiol primario",
       "name": "Etanotiol",
@@ -1828,6 +2860,150 @@
       "synonyms": "Tiofenol",
       "semiFormula": "AROM-1-SH",
       "explanation": "Grupo –SH unido directamente al benceno."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol primario",
+      "name": "Metanotiol",
+      "synonyms": "Metilmercaptano",
+      "semiFormula": "CH₃—SH",
+      "explanation": "Tiol más simple de 1 átomo de carbono."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol primario",
+      "name": "1-Propanotiol",
+      "synonyms": "Propilmercaptano",
+      "semiFormula": "CH₃—CH₂—CH₂—SH",
+      "explanation": "Tiol primario lineal de 3 carbonos."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol secundario",
+      "name": "2-Butanotiol",
+      "synonyms": "sec-Butilmercaptano",
+      "semiFormula": "CH₃—CH(SH)—CH₂—CH₃",
+      "explanation": "Grupo sulfhidrilo (–SH) en el carbono secundario C2."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol primario ramificado",
+      "name": "3-Metil-1-butanotiol",
+      "synonyms": "Isopentilmercaptano / Isoamilmercaptano",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH₂—SH",
+      "explanation": "Tiol primario de 5 carbonos responsable del olor característico del zorrillo."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol secundario",
+      "name": "3-Metil-2-pentanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 5 carbonos con –SH en C2 y metilo en C3."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol secundario",
+      "name": "2-Hexanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH₂—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 6 carbonos con –SH en C2."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol terciario",
+      "name": "2-Metil-2-propanotiol",
+      "synonyms": "terc-Butilmercaptano",
+      "semiFormula": "(CH₃)₃C—SH",
+      "explanation": "Tiol terciario usado como odorizante del gas natural."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol terciario",
+      "name": "2-Metil-2-butanotiol",
+      "synonyms": "terc-Pentilmercaptano",
+      "semiFormula": "CH₃—C(SH)(CH₃)—CH₂—CH₃",
+      "explanation": "Tiol terciario de 5 carbonos."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol cíclico",
+      "name": "Ciclopentanotiol",
+      "synonyms": "Ciclopentilmercaptano",
+      "semiFormula": "CICLO-5-SH",
+      "explanation": "Anillo de ciclopentano con un grupo –SH."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol cíclico",
+      "name": "1-Metilciclopentanotiol",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1-SH-1-CH3",
+      "explanation": "Tiol terciario cíclico de 5 miembros."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol cíclico",
+      "name": "Ciclohexanotiol",
+      "synonyms": "Ciclohexilmercaptano",
+      "semiFormula": "CICLO-6-SH",
+      "explanation": "Anillo de ciclohexano con un grupo –SH."
+    },
+    {
+      "group": "tioles",
+      "badge": "Alquenotiol",
+      "name": "2-Buteno-1-tiol",
+      "synonyms": "Crotilmercaptano",
+      "semiFormula": "CH₃—CH=CH—CH₂—SH",
+      "explanation": "El grupo sulfhidrilo (C1) tiene prioridad sobre el doble enlace (C2)."
+    },
+    {
+      "group": "tioles",
+      "badge": "Alquenotiol",
+      "name": "3-Metil-2-buteno-1-tiol",
+      "synonyms": "Prenilmercaptano",
+      "semiFormula": "CH₃—C(CH₃)=CH—CH₂—SH",
+      "explanation": "Alquenotiol de 5 carbonos con –SH en C1."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol ramificado",
+      "name": "3-Etil-5-metil-2-hexanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH(CH₂CH₃)—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 6 carbonos con –SH en C2."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol ramificado",
+      "name": "3-Isopropil-2,6-dimetil-4-heptanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH(CH₃)₂)—CH(SH)—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con –SH en C4."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol ramificado",
+      "name": "3-Etil-2-metil-4-heptanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH₂CH₃)—CH(SH)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 7 carbonos con –SH en C4."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol ramificado",
+      "name": "5-Etil-3-isopropil-6-metil-2-heptanotiol",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH(CH(CH₃)₂)—CH₂—CH(CH₂CH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con –SH en C2."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol aromático",
+      "name": "Fenilmetanotiol",
+      "synonyms": "Bencilmercaptano / α-Toluenotiol",
+      "semiFormula": "AROM-1-CH2SH",
+      "explanation": "Grupo mercaptometilo unido al anillo bencénico."
     },
     {
       "group": "tioeteres",
@@ -1860,6 +3036,54 @@
       "synonyms": "Sulfuro de etilfenilo",
       "semiFormula": "AROM-1-SCH2CH3",
       "explanation": "Grupo etiltio unido directamente al anillo bencénico."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter (Sulfuro)",
+      "name": "1-Etiltiopropano",
+      "synonyms": "Etilpropiltioéter / Sulfuro de etilpropilo",
+      "semiFormula": "CH₃—CH₂—S—CH₂—CH₂—CH₃",
+      "explanation": "El grupo más pequeño unido al azufre (etilo) se nombra como prefijo etiltio-."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter ramificado",
+      "name": "2-Metiltiobutano",
+      "synonyms": "sec-Butilmetiltioéter",
+      "semiFormula": "CH₃—CH(SCH₃)—CH₂—CH₃",
+      "explanation": "Cadena principal de 4 carbonos (butano) con grupo metiltio en C2."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter ramificado",
+      "name": "2-Metil-2-metiltiopropano",
+      "synonyms": "terc-Butilmetiltioéter",
+      "semiFormula": "(CH₃)₃C—S—CH₃",
+      "explanation": "Cadena de 3 carbonos con metilo y metiltio en C2."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter ramificado",
+      "name": "3-Etiltio-3-metilpentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—C(CH₃)(SCH₂CH₃)—CH₂—CH₃",
+      "explanation": "Cadena principal de 5 carbonos (pentano) con etiltio y metilo en C3."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter ramificado",
+      "name": "3-Metil-2-metiltiopentano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SCH₃)—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 5 carbonos con grupo metiltio en C2 y metilo en C3."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter ramificado",
+      "name": "2-Etiltio-4,5-dimetilhexano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SCH₂CH₃)—CH₂—CH(CH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena principal de 6 carbonos (hexano) con etiltio en C2."
     },
     {
       "group": "heterociclos_no_arom",
@@ -1932,6 +3156,22 @@
       "synonyms": "Tetrahidrotiofeno (THT)",
       "semiFormula": "HETERO-5-S",
       "explanation": "Tioéter cíclico saturado de 5 miembros con un átomo de azufre."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático oxigenado",
+      "name": "Oxetano",
+      "synonyms": "Oxaciclobutano / Óxido de trimetileno",
+      "semiFormula": "HETERO-4-O",
+      "explanation": "Éter cíclico saturado de 4 miembros."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático O/N",
+      "name": "Morfolina",
+      "synonyms": "Tetrahidro-1,4-oxazina",
+      "semiFormula": "HETERO-6-O-4-NH",
+      "explanation": "Anillo heterocíclico saturado de 6 miembros con un átomo de oxígeno (pos. 1) y un nitrógeno (pos. 4)."
     },
     {
       "group": "aldehidos",
@@ -2068,6 +3308,118 @@
       "synonyms": "Fenilacetaldehído",
       "semiFormula": "C₆H₅—CH₂—CHO",
       "explanation": "Cadena principal de 2 carbonos (etanal) con un grupo fenilo en C2."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído lineal",
+      "name": "Pentanal",
+      "synonyms": "Valeraldehído / Aldehído valérico",
+      "semiFormula": "CH₃—CH₂—CH₂—CH₂—CHO",
+      "explanation": "Aldehído lineal de 5 átomos de carbono."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído lineal",
+      "name": "Heptanal",
+      "synonyms": "Enantaldehído",
+      "semiFormula": "CH₃—(CH₂)₅—CHO",
+      "explanation": "Aldehído lineal de 7 átomos de carbono."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído ramificado",
+      "name": "2-Metilpropanal",
+      "synonyms": "Isobutiraldehído",
+      "semiFormula": "(CH₃)₂CH—CHO",
+      "explanation": "Aldehído ramificado de 3 carbonos en cadena principal."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído ramificado",
+      "name": "3-Metilbutanal",
+      "synonyms": "Isovaleraldehído",
+      "semiFormula": "(CH₃)₂CH—CH₂—CHO",
+      "explanation": "Aldehído ramificado de 4 carbonos en cadena principal."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Dialdehído",
+      "name": "Pentanodial",
+      "synonyms": "Glutaraldehído",
+      "semiFormula": "OHC—CH₂—CH₂—CH₂—CHO",
+      "explanation": "Dialdehído lineal de 5 carbonos (usado como esterilizante en frío)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado",
+      "name": "4-Metil-2-pentenal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH=CH—CHO",
+      "explanation": "Cadena de 5 carbonos con –CHO en C1, doble enlace en C2 y metilo en C4."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado aromático",
+      "name": "3-Fenilpropenal",
+      "synonyms": "Cinamaldehído / Aldehído cinámico",
+      "semiFormula": "C₆H₅—CH=CH—CHO",
+      "explanation": "Aldehído α,β-insaturado aromático responsable del aroma de la canela."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Oxoaldehído halogenado",
+      "name": "4-Etil-2-fluoro-5-oxohexanal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH(CH₂CH₃)—CH₂—CH(F)—CHO",
+      "explanation": "El aldehído (C1) tiene prioridad sobre la cetona (oxo- en C5) y el flúor (C2)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Hidroxioxoaldehído",
+      "name": "6-Hidroxi-3-isopropil-2-metil-4-oxoheptanal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CO—CH(CH(CH₃)₂)—CH(CH₃)—CHO",
+      "explanation": "Cadena de 7 carbonos con –CHO en C1, oxo en C4 e hidroxi en C6."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Alcoxioxoaldehído",
+      "name": "5-terc-Butil-3-metoxi-7-oxooctanal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH₂—CH(C(CH₃)₃)—CH₂—CH(OCH₃)—CH₂—CHO",
+      "explanation": "Cadena de 8 carbonos con –CHO en C1 y cetona en C7 (7-oxo)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Mercaptoaldehído",
+      "name": "3-Etil-5-isopropil-6-mercapto-2-metilheptanal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(SH)—CH(CH(CH₃)₂)—CH₂—CH(CH₂CH₃)—CH(CH₃)—CHO",
+      "explanation": "Cadena de 7 carbonos con –CHO en C1 y grupo mercapto en C6."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aminoaldehído",
+      "name": "6-Amino-3-etil-5-isopropil-2-metilheptanal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(NH₂)—CH(CH(CH₃)₂)—CH₂—CH(CH₂CH₃)—CH(CH₃)—CHO",
+      "explanation": "El aldehído tiene prioridad sobre el grupo amino (6-amino)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído polifuncional",
+      "name": "7-Amino-2-etil-6-hidroxi-3-oxo-4-octenal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(NH₂)—CH(OH)—CH=CH—CO—CH(CH₂CH₃)—CHO",
+      "explanation": "Cadena de 8 carbonos con grupo principal aldehído (C1) y sustituyentes en orden alfabético."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído cíclico insaturado",
+      "name": "2-Ciclohexenocarbaldehído",
+      "synonyms": "",
+      "semiFormula": "CICLOENO-6-3-CHO",
+      "explanation": "Anillo de ciclohexeno unido directamente a un grupo formilo (–CHO)."
     },
     {
       "group": "cetonas",
@@ -2212,6 +3564,142 @@
       "synonyms": "Fenilacetona / Bencilmetilcetona",
       "semiFormula": "C₆H₅—CH₂—CO—CH₃",
       "explanation": "Cetona de 3 carbonos con carbonilo en C2 y grupo fenilo en C1 (grupo bencilo)."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona lineal",
+      "name": "2-Pentanona",
+      "synonyms": "Metilpropilcetona",
+      "semiFormula": "CH₃—CO—CH₂—CH₂—CH₃",
+      "explanation": "Cetona lineal de 5 carbonos con carbonilo en C2."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona ramificada",
+      "name": "3-Metil-2-butanona",
+      "synonyms": "Isopropilmetilcetona",
+      "semiFormula": "CH₃—CO—CH(CH₃)—CH₃",
+      "explanation": "Cetona ramificada de 4 carbonos en cadena principal."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona ramificada",
+      "name": "3-Metil-2-pentanona",
+      "synonyms": "sec-Butilmetilcetona",
+      "semiFormula": "CH₃—CO—CH(CH₃)—CH₂—CH₃",
+      "explanation": "Cadena de 5 carbonos con carbonilo en C2 y metilo en C3."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona ramificada",
+      "name": "4-Metil-2-pentanona",
+      "synonyms": "Isobutilmetilcetona (MIBK)",
+      "semiFormula": "CH₃—CO—CH₂—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 5 carbonos con carbonilo en C2 y metilo en C4."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Hidroxicetona",
+      "name": "2-Hidroxi-2,5-dimetil-4-heptanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—C(OH)(CH₃)—CH₂—CO—CH(CH₃)—CH₂—CH₃",
+      "explanation": "La cetona en C4 recibe el menor localizador posible frente al grupo hidroxi en C2."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Halocetona",
+      "name": "4-Cloro-3-etil-2-pentanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH(CH₂CH₃)—CH(Cl)—CH₃",
+      "explanation": "Cadena de 5 carbonos con carbonilo en C2, etilo en C3 y cloro en C4."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Alcoxicetona",
+      "name": "3-Isopropil-4-metoxi-2-heptanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH(CH(CH₃)₂)—CH(OCH₃)—CH₂—CH₂—CH₃",
+      "explanation": "Cadena de 7 carbonos con cetona en C2."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Alcoxicetona",
+      "name": "3-Isopropil-5-metoxi-6-metil-2-heptanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH(CH(CH₃)₂)—CH₂—CH(OCH₃)—CH(CH₃)—CH₃",
+      "explanation": "Cadena de 7 carbonos con cetona en C2."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Mercaptocetona",
+      "name": "5-Isopropil-4-mercapto-6-metil-2-heptanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH₂—CH(SH)—CH(CH(CH₃)₂)—CH(CH₃)—CH₃",
+      "explanation": "La cetona (C2) tiene prioridad sobre el tiol (4-mercapto)."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Mercaptocetona",
+      "name": "4-Metoxi-5-mercapto-2-pentanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH₂—CH(OCH₃)—CH₂—SH",
+      "explanation": "Cadena de 5 carbonos con carbonilo en C2, metoxi en C4 y mercapto en C5."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Aminocetona",
+      "name": "5-Amino-4-mercapto-6-metil-2-heptanona",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH₂—CH(SH)—CH(NH₂)—CH(CH₃)—CH₃",
+      "explanation": "Grupo principal cetona en C2 con sustituyentes amino y mercapto."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Enona aromática",
+      "name": "4-Fenil-3-buten-2-ona",
+      "synonyms": "Benzalacetona / Bencilidenacetona",
+      "semiFormula": "C₆H₅—CH=CH—CO—CH₃",
+      "explanation": "Producto de condensación aldólica cruzada entre benzaldehído y acetona."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona cíclica",
+      "name": "Ciclobutanona",
+      "synonyms": "",
+      "semiFormula": "CICLO-4-O",
+      "explanation": "Cetona cíclica de 4 átomos de carbono."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona cíclica",
+      "name": "Ciclopentanona",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-O",
+      "explanation": "Cetona cíclica de 5 átomos de carbono."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona cíclica disustituida",
+      "name": "3-Etil-4-metilciclohexanona",
+      "synonyms": "",
+      "semiFormula": "CICLO-6-1-O-3-CH2CH3-4-CH3",
+      "explanation": "El carbono carbonílico es C1; etilo en C3 y metilo en C4."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Cetona cíclica disustituida",
+      "name": "3-Metoxi-3-metilciclopentanona",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1-O-3-OCH3-3-CH3",
+      "explanation": "Anillo de ciclopentanona con grupos metoxi y metilo en C3."
+    },
+    {
+      "group": "cetonas",
+      "badge": "Halohidroxicetona cíclica",
+      "name": "3-Bromo-6-etil-5-hidroxiciclooctanona",
+      "synonyms": "",
+      "semiFormula": "CICLO-8-1-O-3-Br-5-OH-6-CH2CH3",
+      "explanation": "La cetona (C1) es el grupo principal frente al alcohol (5-hidroxi) y el bromo (C3)."
     },
     {
       "group": "acidos",
@@ -2470,6 +3958,254 @@
       "explanation": "Anillo bencénico con dos grupos carboxilo en posiciones opuestas 1,4; monómero del poliéster PET."
     },
     {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido pentanoico",
+      "synonyms": "Ácido valérico",
+      "semiFormula": "CH₃—(CH₂)₃—COOH",
+      "explanation": "Ácido carboxílico lineal de 5 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido hexanoico",
+      "synonyms": "Ácido caproico",
+      "semiFormula": "CH₃—(CH₂)₄—COOH",
+      "explanation": "Ácido carboxílico lineal de 6 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido heptanoico",
+      "synonyms": "Ácido enántico",
+      "semiFormula": "CH₃—(CH₂)₅—COOH",
+      "explanation": "Ácido carboxílico lineal de 7 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido octanoico",
+      "synonyms": "Ácido caprílico",
+      "semiFormula": "CH₃—(CH₂)₆—COOH",
+      "explanation": "Ácido carboxílico lineal de 8 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido nonanoico",
+      "synonyms": "Ácido pelargónico",
+      "semiFormula": "CH₃—(CH₂)₇—COOH",
+      "explanation": "Ácido carboxílico lineal de 9 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido monocarboxílico",
+      "name": "Ácido decanoico",
+      "synonyms": "Ácido cáprico",
+      "semiFormula": "CH₃—(CH₂)₈—COOH",
+      "explanation": "Ácido carboxílico lineal de 10 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido ramificado",
+      "name": "Ácido 2-metilpropanoico",
+      "synonyms": "Ácido isobutírico",
+      "semiFormula": "(CH₃)₂CH—COOH",
+      "explanation": "Isómero ramificado del ácido butanoico."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido ramificado",
+      "name": "Ácido 2,2-dimetilpropanoico",
+      "synonyms": "Ácido piválico",
+      "semiFormula": "(CH₃)₃C—COOH",
+      "explanation": "Ácido carboxílico unido a un grupo terc-butilo."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido ramificado",
+      "name": "Ácido 3-isopropil-5-metilhexanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(CH(CH₃)₂)—CH₂—COOH",
+      "explanation": "Cadena principal de 6 carbonos con –COOH en C1."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido alcoxi-sustituido",
+      "name": "Ácido 3-metoxi-5-metilhexanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH₂—CH(OCH₃)—CH₂—COOH",
+      "explanation": "Cadena de 6 carbonos con grupo metoxi en C3 y metilo en C5."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido alcoxi-sustituido",
+      "name": "Ácido 4-isopropil-3-metoxi-5-metilhexanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH(CH₃)₂)—CH(OCH₃)—CH₂—COOH",
+      "explanation": "Cadena de 6 carbonos con sustituyentes ordenados alfabéticamente."
+    },
+    {
+      "group": "acidos",
+      "badge": "Haloácido",
+      "name": "Ácido 4-bromo-2-metilpentanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—CH₂—CH(CH₃)—COOH",
+      "explanation": "Cadena de 5 carbonos con –COOH en C1, metilo en C2 y bromo en C4."
+    },
+    {
+      "group": "acidos",
+      "badge": "Haloácido",
+      "name": "Ácido 4-bromo-3-etil-5-metilheptanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH(Br)—CH(CH₂CH₃)—CH₂—COOH",
+      "explanation": "Cadena de 7 carbonos con –COOH en C1."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido insaturado",
+      "name": "Ácido 5-etil-6-heptenoico",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH(CH₂CH₃)—CH₂—CH₂—CH₂—COOH",
+      "explanation": "Cadena de 7 carbonos con –COOH en C1, etilo en C5 y doble enlace en C6."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxiácido insaturado",
+      "name": "Ácido 6-etil-4-hidroxi-3-metil-7-octenoico",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH(CH₂CH₃)—CH₂—CH(OH)—CH(CH₃)—CH₂—COOH",
+      "explanation": "Cadena de 8 carbonos con –COOH en C1, hidroxi en C4 y doble enlace en C7."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido dicarboxílico",
+      "name": "Ácido pentanodioico",
+      "synonyms": "Ácido glutárico",
+      "semiFormula": "HOOC—CH₂—CH₂—CH₂—COOH",
+      "explanation": "Ácido dicarboxílico lineal de 5 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido dicarboxílico",
+      "name": "Ácido hexanodioico",
+      "synonyms": "Ácido adípico",
+      "semiFormula": "HOOC—(CH₂)₄—COOH",
+      "explanation": "Ácido dicarboxílico de 6 carbonos (monómero del Nylon-6,6)."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido dicarboxílico",
+      "name": "Ácido 3-etil-6-metiloctanodioico",
+      "synonyms": "",
+      "semiFormula": "HOOC—CH₂—CH(CH₂CH₃)—CH₂—CH₂—CH(CH₃)—CH₂—COOH",
+      "explanation": "Diácido simétrico de 8 carbonos numerado dando menor localizador al etilo (C3) frente al metilo (C6)."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxiácido",
+      "name": "Ácido 2-hidroxietanoico",
+      "synonyms": "Ácido glicólico",
+      "semiFormula": "HO—CH₂—COOH",
+      "explanation": "α-Hidroxiácido más sencillo de 2 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxiácido",
+      "name": "Ácido 3-hidroxipropanoico",
+      "synonyms": "Ácido β-láctico / Ácido hidracrílico",
+      "semiFormula": "HO—CH₂—CH₂—COOH",
+      "explanation": "β-Hidroxiácido de 3 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Dihidroxiácido",
+      "name": "Ácido 2,3-dihidroxipropanoico",
+      "synonyms": "Ácido glicérico",
+      "semiFormula": "HO—CH₂—CH(OH)—COOH",
+      "explanation": "Ácido carboxílico de 3 carbonos con dos grupos hidroxilo en C2 y C3."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxiácido",
+      "name": "Ácido 3-hidroxibutanoico",
+      "synonyms": "Ácido β-hidroxibutírico",
+      "semiFormula": "CH₃—CH(OH)—CH₂—COOH",
+      "explanation": "Cuerpo cetónico fisiológico de 4 carbonos."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido tricarboxílico (Hidroxiácido)",
+      "name": "Ácido 2-hidroxi-1,2,3-propanotricarboxílico",
+      "synonyms": "Ácido cítrico",
+      "semiFormula": "HOOC—CH₂—C(OH)(COOH)—CH₂—COOH",
+      "explanation": "Hidroxiácido tricarboxílico intermediario inicial del ciclo de Krebs."
+    },
+    {
+      "group": "acidos",
+      "badge": "Cetoácido",
+      "name": "Ácido 3-etil-4-oxopentanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CH(CH₂CH₃)—CH₂—COOH",
+      "explanation": "γ-Cetoácido de 5 carbonos con grupo etilo en C3."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxi-dicetoácido",
+      "name": "Ácido 3-hidroxi-4,5-dioxohexanoico",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—CO—CH(OH)—CH₂—COOH",
+      "explanation": "Cadena de 6 carbonos con –COOH en C1, hidroxi en C3 y dos grupos oxo en C4 y C5."
+    },
+    {
+      "group": "acidos",
+      "badge": "Cetoácido dicarboxílico",
+      "name": "Ácido 2-oxobutanodioico",
+      "synonyms": "Ácido oxaloacético / Oxalacetato",
+      "semiFormula": "HOOC—CO—CH₂—COOH",
+      "explanation": "α-Cetoácido dicarboxílico clave en el ciclo de Krebs y la gluconeogénesis."
+    },
+    {
+      "group": "acidos",
+      "badge": "Cetoácido dicarboxílico",
+      "name": "Ácido 2-oxopentanodioico",
+      "synonyms": "Ácido α-cetoglutárico / α-Cetoglutarato",
+      "semiFormula": "HOOC—CO—CH₂—CH₂—COOH",
+      "explanation": "α-Cetoácido dicarboxílico de 5 carbonos del ciclo de Krebs."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido polifuncional",
+      "name": "Ácido 7-amino-6-hidroxi-2-metil-3-oxo-4-heptenoico",
+      "synonyms": "",
+      "semiFormula": "H₂N—CH₂—CH(OH)—CH=CH—CO—CH(CH₃)—COOH",
+      "explanation": "El grupo carboxilo (C1) tiene máxima prioridad sobre amino, hidroxi, oxo y alqueno."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido cíclico halogenado",
+      "name": "Ácido 1-bromo-2-clorociclopentanocarboxílico",
+      "synonyms": "",
+      "semiFormula": "CICLO-5-1-COOH-1-Br-2-Cl",
+      "explanation": "El carbono del anillo unido al –COOH es C1."
+    },
+    {
+      "group": "acidos",
+      "badge": "Hidroxiácido aromático",
+      "name": "Ácido 4-etil-3-hidroxibenzoico",
+      "synonyms": "",
+      "semiFormula": "AROM-1-COOH-3-OH-4-CH2CH3",
+      "explanation": "Ácido benzoico trisustituido con hidroxi en C3 y etilo en C4."
+    },
+    {
+      "group": "acidos",
+      "badge": "Ácido heteroaromático",
+      "name": "Ácido 3-piridinocarboxílico",
+      "synonyms": "Ácido nicotínico / Niacina / Vitamina B3",
+      "semiFormula": "PIRIDINA-3-COOH",
+      "explanation": "Ácido carboxílico derivado del anillo de piridina en posición 3 (β)."
+    },
+    {
       "group": "sales_acidos",
       "badge": "Sal carboxilato",
       "name": "Etanoato de sodio",
@@ -2614,6 +4350,102 @@
       "explanation": "Producto de la acetilación del grupo fenólico del ácido salicílico con anhídrido acético."
     },
     {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Propanoato de metilo",
+      "synonyms": "Propionato de metilo",
+      "semiFormula": "CH₃—CH₂—COO—CH₃",
+      "explanation": "Éster formado por ácido propanoico y metanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Propanoato de etilo",
+      "synonyms": "Propionato de etilo",
+      "semiFormula": "CH₃—CH₂—COO—CH₂—CH₃",
+      "explanation": "Éster derivado del ácido propanoico y etanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Propanoato de propilo",
+      "synonyms": "Propionato de propilo",
+      "semiFormula": "CH₃—CH₂—COO—CH₂—CH₂—CH₃",
+      "explanation": "Éster de 6 carbonos totales (3 en el acilo y 3 en el alquilo)."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster ramificado",
+      "name": "Etanoato de 1-metiletilo",
+      "synonyms": "Etanoato de isopropilo / Acetato de isopropilo",
+      "semiFormula": "CH₃—COO—CH(CH₃)₂",
+      "explanation": "Producto de esterificación entre ácido acético e isopropanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Butanoato de pentilo",
+      "synonyms": "Butirato de pentilo / Butirato de amilo",
+      "semiFormula": "CH₃—CH₂—CH₂—COO—(CH₂)₄—CH₃",
+      "explanation": "Éster responsable del aroma de albaricoque/pera."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático",
+      "name": "3-Metilbutanoato de fenilo",
+      "synonyms": "Isovalerato de fenilo",
+      "semiFormula": "(CH₃)₂CH—CH₂—COO—C₆H₅",
+      "explanation": "Éster cuya hidrólisis ácida produce ácido 3-metilbutanoico y fenol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático",
+      "name": "Etanoato de fenilo",
+      "synonyms": "Acetato de fenilo",
+      "semiFormula": "CH₃—COO—C₆H₅",
+      "explanation": "Producto de esterificación del fenol con cloruro de etanoílo o anhídrido acético."
+    },
+    {
+      "group": "esteres",
+      "badge": "Cetoéster",
+      "name": "2-Metil-3-oxopentanoato de etilo",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CO—CH(CH₃)—COO—CH₂—CH₃",
+      "explanation": "β-Cetoéster obtenido por condensación de Claisen del propanoato de etilo."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster halogenado hidroxilado",
+      "name": "4-Bromo-2-etil-3-hidroxipentanoato de terc-butilo",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—CH(OH)—CH(CH₂CH₃)—COO—C(CH₃)₃",
+      "explanation": "Éster polifuncional con grupo terc-butilo en el oxígeno."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster alcoxi-sustituido",
+      "name": "4-Isopropil-3-metoxi-5-metilhexanoato de metilo",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH(CH₃)₂)—CH(OCH₃)—CH₂—COO—CH₃",
+      "explanation": "Éster metílico de 6 carbonos en la cadena acílica."
+    },
+    {
+      "group": "esteres",
+      "badge": "Hidroxiéster aromático",
+      "name": "4-Etil-3-hidroxibenzoato de 1-metiletilo",
+      "synonyms": "4-Etil-3-hidroxibenzoato de isopropilo",
+      "semiFormula": "AROM-1-COOCH(CH3)2-3-OH-4-CH2CH3",
+      "explanation": "Éster isopropílico derivado del ácido 4-etil-3-hidroxibenzoico."
+    },
+    {
+      "group": "esteres",
+      "badge": "Lactona (Éster cíclico)",
+      "name": "4-Hidroxibutanoato lactona",
+      "synonyms": "γ-Butirolactona (GBL)",
+      "semiFormula": "LACTONA-5",
+      "explanation": "Éster cíclico de 5 miembros formado por esterificación intramolecular del ácido 4-hidroxibutanoico."
+    },
+    {
       "group": "amidas",
       "badge": "Amida primaria",
       "name": "Etanamida",
@@ -2686,6 +4518,126 @@
       "explanation": "Producto de la N-acilación selectiva del p-aminofenol con anhídrido acético."
     },
     {
+      "group": "amidas",
+      "badge": "Amida primaria",
+      "name": "Metanamida",
+      "synonyms": "Formamida",
+      "semiFormula": "H—CO—NH₂",
+      "explanation": "Amida primaria más sencilla de 1 átomo de carbono."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida primaria",
+      "name": "Propanamida",
+      "synonyms": "Propionamida",
+      "semiFormula": "CH₃—CH₂—CO—NH₂",
+      "explanation": "Amida primaria de 3 carbonos."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida primaria",
+      "name": "Butanamida",
+      "synonyms": "Butiramida",
+      "semiFormula": "CH₃—CH₂—CH₂—CO—NH₂",
+      "explanation": "Amida primaria de 4 carbonos."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida primaria ramificada",
+      "name": "2-Metilpropanamida",
+      "synonyms": "Isobutiramida",
+      "semiFormula": "(CH₃)₂CH—CO—NH₂",
+      "explanation": "Amida primaria derivada del ácido isobutírico."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria",
+      "name": "N-Metiletanamida",
+      "synonyms": "N-Metilacetamida",
+      "semiFormula": "CH₃—CO—NH—CH₃",
+      "explanation": "Amida secundaria con un sustituyente metilo en el nitrógeno."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria",
+      "name": "N-Etilpropanamida",
+      "synonyms": "N-Etilpropionamida",
+      "semiFormula": "CH₃—CH₂—CO—NH—CH₂—CH₃",
+      "explanation": "Amida secundaria con cadena acílica de 3 carbonos y etilo en N."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria",
+      "name": "N,N-Dimetiletanamida",
+      "synonyms": "N,N-Dimetilacetamida (DMA)",
+      "semiFormula": "CH₃—CO—N(CH₃)₂",
+      "explanation": "Amida terciaria derivada del ácido acético y dimetilamina."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria",
+      "name": "N,N-Dietilpropanamida",
+      "synonyms": "N,N-Dietilpropionamida",
+      "semiFormula": "CH₃—CH₂—CO—N(CH₂CH₃)₂",
+      "explanation": "Producto de reacción entre cloruro de propanoílo y dietilamina."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria",
+      "name": "N-Etil-N-isopropiletanamida",
+      "synonyms": "",
+      "semiFormula": "CH₃—CO—N(CH₂CH₃)—CH(CH₃)₂",
+      "explanation": "Amida terciaria con sustituyentes etilo e isopropilo sobre el nitrógeno."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria halogenada",
+      "name": "4-Bromo-N-etil-N-metilpentanamida",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—CH₂—CH₂—CO—N(CH₃)—CH₂CH₃",
+      "explanation": "Cadena acílica de 5 carbonos con bromo en C4."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria polisustituida",
+      "name": "4-Bromo-N,N,3-trietil-5-metilheptanamida",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH(Br)—CH(CH₂CH₃)—CH₂—CO—N(CH₂CH₃)₂",
+      "explanation": "Amida terciaria de 7 carbonos en su cadena principal."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria polisustituida",
+      "name": "4-Bromo-N-terc-butil-2-etil-3-hidroxipentanamida",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(Br)—CH(OH)—CH(CH₂CH₃)—CO—NH—C(CH₃)₃",
+      "explanation": "Amida secundaria con grupo terc-butilo en el nitrógeno."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria alcoxi",
+      "name": "4-Isopropil-3-metoxi-N,5-dimetilhexanamida",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(CH₃)—CH(CH(CH₃)₂)—CH(OCH₃)—CH₂—CO—NH—CH₃",
+      "explanation": "Amida secundaria con metilo en N y en C5."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida cíclica",
+      "name": "Ciclohexanocarboxamida",
+      "synonyms": "",
+      "semiFormula": "CICLO-6-1-CONH2",
+      "explanation": "Grupo carboxamida unido directamente a un anillo de ciclohexano."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida aromática polisustituida",
+      "name": "4-Etil-3-hidroxi-N-isopropil-N-metilbenzamida",
+      "synonyms": "",
+      "semiFormula": "AROM-1-CON(CH3)CH(CH3)2-3-OH-4-CH2CH3",
+      "explanation": "Benzamida terciaria trisustituida en el anillo."
+    },
+    {
       "group": "anhidridos",
       "badge": "Anhídrido de ácido",
       "name": "Anhídrido etanoico",
@@ -2718,6 +4670,22 @@
       "explanation": "Anhídrido simétrico derivado del ácido benzoico."
     },
     {
+      "group": "anhidridos",
+      "badge": "Anhídrido simétrico",
+      "name": "Anhídrido propanoico",
+      "synonyms": "Anhídrido propiónico",
+      "semiFormula": "CH₃—CH₂—CO—O—CO—CH₂—CH₃",
+      "explanation": "Producto de condensación entre ácido propanoico y cloruro de propanoílo."
+    },
+    {
+      "group": "anhidridos",
+      "badge": "Anhídrido simétrico",
+      "name": "Anhídrido butanoico",
+      "synonyms": "Anhídrido butírico",
+      "semiFormula": "CH₃—CH₂—CH₂—CO—O—CO—CH₂—CH₂—CH₃",
+      "explanation": "Anhídrido simétrico derivado del ácido butanoico."
+    },
+    {
       "group": "haluros_acilo",
       "badge": "Halogenuro de acilo",
       "name": "Cloruro de etanoílo",
@@ -2732,6 +4700,30 @@
       "synonyms": "",
       "semiFormula": "AROM-1-COCl",
       "explanation": "Utilizado en reacciones de acilación de Friedel-Crafts."
+    },
+    {
+      "group": "haluros_acilo",
+      "badge": "Halogenuro de acilo",
+      "name": "Cloruro de metanoílo",
+      "synonyms": "Cloruro de formilo",
+      "semiFormula": "H—CO—Cl",
+      "explanation": "Halogenuro de acilo más sencillo de 1 carbono (inestable en estado libre, usado in situ en Gattermann-Koch)."
+    },
+    {
+      "group": "haluros_acilo",
+      "badge": "Halogenuro de acilo",
+      "name": "Cloruro de propanoílo",
+      "synonyms": "Cloruro de propionilo",
+      "semiFormula": "CH₃—CH₂—CO—Cl",
+      "explanation": "Halogenuro de acilo derivado del ácido propanoico."
+    },
+    {
+      "group": "haluros_acilo",
+      "badge": "Halogenuro de acilo",
+      "name": "Cloruro de butanoílo",
+      "synonyms": "Cloruro de butirilo",
+      "semiFormula": "CH₃—CH₂—CH₂—CO—Cl",
+      "explanation": "Halogenuro de acilo de 4 carbonos."
     },
     {
       "group": "aminoacidos",
@@ -2796,6 +4788,70 @@
       "synonyms": "Ácido glutámico (Glu) / Glutamato",
       "semiFormula": "HOOC—CH₂—CH₂—CH(NH₂)—COOH",
       "explanation": "α-Aminoácido dicarboxílico de 5 carbonos."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido ramificado",
+      "name": "Ácido 2-amino-4-metilpentanoico",
+      "synonyms": "Leucina (Leu)",
+      "semiFormula": "(CH₃)₂CH—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial apolar con cadena lateral isobutilo."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido ramificado",
+      "name": "Ácido 2-amino-3-metilpentanoico",
+      "synonyms": "Isoleucina (Ile)",
+      "semiFormula": "CH₃—CH₂—CH(CH₃)—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial con dos centros quirales."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido azufrado",
+      "name": "Ácido 2-amino-4-(metiltio)butanoico",
+      "synonyms": "Metionina (Met)",
+      "semiFormula": "CH₃—S—CH₂—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial iniciador de la síntesis proteica; contiene un grupo tioéter."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido hidroxilado",
+      "name": "Ácido 2-amino-3-hidroxibutanoico",
+      "synonyms": "Treonina (Thr)",
+      "semiFormula": "CH₃—CH(OH)—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido polar esencial con grupo hidroxilo secundario."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido aromático",
+      "name": "Ácido 2-amino-3-(4-hidroxifenil)propanoico",
+      "synonyms": "Tirosina (Tyr)",
+      "semiFormula": "HO—C₆H₄—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido aromático fenólico precursor de catecolaminas (DOPA, dopamina)."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "Catecolamina aminoácido",
+      "name": "3,4-Dihidroxifenilalanina",
+      "synonyms": "L-DOPA / Levodopa",
+      "semiFormula": "C₆H₃(OH)₂—CH₂—CH(NH₂)—COOH",
+      "explanation": "Intermediario metabólico obtenido por hidroxilación de la tirosina; descarboxila a dopamina."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido básico",
+      "name": "Ácido 2,6-diaminohexanoico",
+      "synonyms": "Lisina (Lys)",
+      "semiFormula": "H₂N—(CH₂)₄—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial básico con un grupo ε-amino en C6."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido cíclico",
+      "name": "Ácido pirrolidina-2-carboxílico",
+      "synonyms": "Prolina (Pro)",
+      "semiFormula": "PIRROLIDINA-2-COOH",
+      "explanation": "Iminoácido cíclico cuya cadena lateral forma un anillo de pirrolidina con el nitrógeno α."
     },
     {
       "group": "carbohidratos",
@@ -2878,6 +4934,62 @@
       "explanation": "Polímero lineal de β-D-glucosa con enlaces β(1→4) resistentes a la amilasa humana."
     },
     {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldotetrosa)",
+      "name": "D-Eritrosa",
+      "synonyms": "Eritrosa",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CHO",
+      "explanation": "Aldotetrosa de 4 carbonos intermediaria de la vía de las pentosas fosfato."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldopentosa)",
+      "name": "D-Arabinosa",
+      "synonyms": "Arabinosa",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "explanation": "Aldopentosa epímera en C2 de la D-ribosa."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldopentosa)",
+      "name": "D-Xilosa",
+      "synonyms": "Xilosa / Azúcar de madera",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "explanation": "Aldopentosa epímera en C3 de la D-ribosa."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Desoxiazúcar)",
+      "name": "2-Desoxi-D-ribosa",
+      "synonyms": "Desoxirribosa",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH₂—CHO",
+      "explanation": "Pentosa que carece de grupo –OH en C2; componente esencial del ADN."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldohexosa)",
+      "name": "D-Manosa",
+      "synonyms": "Manosa",
+      "semiFormula": "HO—CH₂—(CHOH)₄—CHO",
+      "explanation": "Aldohexosa epímera en C2 de la D-glucosa."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Disacárido reductor",
+      "name": "Celobiosa",
+      "synonyms": "β-D-Glucopiranosil-(1→4)-D-glucopiranosa",
+      "semiFormula": "Glucosa—β(1→4)—Glucosa",
+      "explanation": "Disacárido reductor obtenido por hidrólisis parcial de la celulosa."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Heteropolisacárido",
+      "name": "Ácido hialurónico",
+      "synonyms": "Glicosaminoglicano (GAG)",
+      "semiFormula": "[—Ác. D-Glucurónico—β(1→3)—N-Acetil-D-glucosamina—]ₙ",
+      "explanation": "Heteropolisacárido lineal de la matriz extracelular formado por repeticiones de un disacárido ácido."
+    },
+    {
       "group": "lipidos",
       "badge": "Ácido graso saturado",
       "name": "Ácido hexadecanoico",
@@ -2942,6 +5054,110 @@
       "explanation": "Esfingofosfolípido abundante en la vaina de mielina de las neuronas (sin glicerol)."
     },
     {
+      "group": "lipidos",
+      "badge": "Ácido graso saturado",
+      "name": "Ácido dodecanoico",
+      "synonyms": "Ácido láurico (C12:0)",
+      "semiFormula": "CH₃—(CH₂)₁₀—COOH",
+      "explanation": "Ácido graso saturado de 12 carbonos abundante en el aceite de coco."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso saturado",
+      "name": "Ácido tetradecanoico",
+      "synonyms": "Ácido mirístico (C14:0)",
+      "semiFormula": "CH₃—(CH₂)₁₂—COOH",
+      "explanation": "Ácido graso saturado de 14 carbonos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso poliinsaturado esencial",
+      "name": "Ácido todo-cis-9,12,15-octadecatrienoico",
+      "synonyms": "Ácido linolénico (C18:3 Δ9,12,15)",
+      "semiFormula": "CH₃—CH₂—CH=CH—CH₂—CH=CH—CH₂—CH=CH—(CH₂)₇—COOH",
+      "explanation": "Ácido graso esencial ω-3 de 18 carbonos con tres dobles enlaces cis."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso poliinsaturado",
+      "name": "Ácido todo-cis-5,8,11,14-eicosatetraenoico",
+      "synonyms": "Ácido araquidónico (C20:4 Δ5,8,11,14)",
+      "semiFormula": "CH₃—(CH₂)₄—(CH=CH—CH₂)₄—(CH₂)₂—COOH",
+      "explanation": "Ácido graso ω-6 de 20 carbonos precursor de prostaglandinas y leucotrienos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Acilglicerol)",
+      "name": "Trihexadecanoato de glicerilo",
+      "synonyms": "Tripalmitina / Tripalmitoilglicerol",
+      "semiFormula": "Glicerol + 3 Ác. Palmítico (Triglicérido)",
+      "explanation": "Triacilglicerol saturado formado por glicerol y tres moléculas de ácido palmítico."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Acilglicerol)",
+      "name": "Trioleato de glicerilo",
+      "synonyms": "Trioleína / Trioleoilglicerol",
+      "semiFormula": "Glicerol + 3 Ác. Oleico (Triglicérido)",
+      "explanation": "Triacilglicerol insaturado líquido a temperatura ambiente (componente principal del aceite de oliva)."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Acilglicerol mixto)",
+      "name": "1-Oleoil-2-araquidonoil-3-linoleoilglicerol",
+      "synonyms": "Triacilglicerol mixto poliinsaturado",
+      "semiFormula": "Glicerol (C1: Oleico, C2: Araquidónico, C3: Linoleico)",
+      "explanation": "Triglicérido mixto con tres ácidos grasos insaturados distintos (Test 26)."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Acilglicerol mixto)",
+      "name": "1,3-Dipalmitoil-2-estearoilglicerol",
+      "synonyms": "1,3-Dipalmitil-2-estearilglicérido",
+      "semiFormula": "Glicerol (C1,C3: Palmítico, C2: Esteárico)",
+      "explanation": "Triglicérido saturado mixto con dos residuos palmitoilo y uno estearoilo."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Precursor fosfolípidos)",
+      "name": "Ácido fosfatídico",
+      "synonyms": "Fosfatidato / Diacilglicerol-3-fosfato",
+      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato (–H)",
+      "explanation": "Precursor estructural fundamental de todos los glicerofosfolípidos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Glicerofosfolípido)",
+      "name": "Fosfatidiletanolamina",
+      "synonyms": "Cefalina",
+      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Etanolamina",
+      "explanation": "Glicerofosfolípido abundante en las membranas neuronales y bacterianas."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Glicerofosfolípido)",
+      "name": "Fosfatidilserina",
+      "synonyms": "",
+      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Serina",
+      "explanation": "Glicerofosfolípido aniónico ubicado en la monocapa interna de la membrana plasmática."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Glicerofosfolípido)",
+      "name": "Difosfatidilglicerol",
+      "synonyms": "Cardiolipina",
+      "semiFormula": "2 Ácidos Fosfatídicos unidos por Glicerol",
+      "explanation": "Glicerofosfolípido doble exclusivo de la membrana mitocondrial interna."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Esfingolípido)",
+      "name": "Ceramida",
+      "synonyms": "N-Acilesfingosina",
+      "semiFormula": "Esfingosina (esfingol) + Ác. Graso (enlace amida en C2)",
+      "explanation": "Unidad estructural básica de todos los esfingofosfolípidos y glucoesfingolípidos."
+    },
+    {
       "group": "nitrilos",
       "badge": "Nitrilo",
       "name": "Etanonitrilo",
@@ -2964,6 +5180,22 @@
       "synonyms": "Bencenocarbonitrilo / Cianuro de fenilo",
       "semiFormula": "AROM-1-CN",
       "explanation": "Grupo ciano (–C≡N) unido directamente al anillo bencénico."
+    },
+    {
+      "group": "nitrilos",
+      "badge": "Nitrilo",
+      "name": "Propanonitrilo",
+      "synonyms": "Propionitrilo / Cianuro de etilo",
+      "semiFormula": "CH₃—CH₂—C≡N",
+      "explanation": "Nitrilo alifático de 3 átomos de carbono."
+    },
+    {
+      "group": "nitrilos",
+      "badge": "Nitrilo ramificado",
+      "name": "2-Metilpropanonitrilo",
+      "synonyms": "Isobutironitrilo / Cianuro de isopropilo",
+      "semiFormula": "(CH₃)₂CH—C≡N",
+      "explanation": "Nitrilo ramificado con grupo isopropilo unido al carbono del nitrilo."
     },
     {
       "group": "imina",
