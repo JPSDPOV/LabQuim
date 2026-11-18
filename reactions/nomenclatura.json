@@ -1,102 +1,151 @@
 {
-  "version": "1.2.0",
-  "title": "Banco de Nomenclatura Orgánica — Orden de Aprendizaje (Cursillo Lambda)",
+  "version": "1.3.0",
+  "title": "Banco Completo de Nomenclatura Orgánica — Orden de Aprendizaje",
   "groups": [
     {
       "id": "alcanos",
-      "label": "1. Alcanos"
+      "label": "1. Alcanos",
+      "tier": "primary"
     },
     {
       "id": "cicloalcanos",
-      "label": "2. Cicloalcanos"
+      "label": "2. Cicloalcanos",
+      "tier": "primary"
     },
     {
       "id": "alquenos",
-      "label": "3. Alquenos"
+      "label": "3. Alquenos",
+      "tier": "primary"
     },
     {
       "id": "alquinos",
-      "label": "4. Alquinos"
+      "label": "4. Alquinos",
+      "tier": "primary"
     },
     {
       "id": "aromaticos",
-      "label": "5. Hidrocarburos aromáticos"
+      "label": "5. Hidrocarburos aromáticos y derivados",
+      "tier": "primary"
     },
     {
       "id": "haluros",
-      "label": "6. Haluros o Halogenuros"
-    },
-    {
-      "id": "nitrocompuestos",
-      "label": "7. Nitrocompuestos"
-    },
-    {
-      "id": "eteres",
-      "label": "8. Éteres"
-    },
-    {
-      "id": "tioeteres",
-      "label": "9. Tioéteres (Sulfuros)"
-    },
-    {
-      "id": "aminas",
-      "label": "10. Aminas"
-    },
-    {
-      "id": "imina",
-      "label": "11. Iminas"
-    },
-    {
-      "id": "tioles",
-      "label": "12. Tioles"
-    },
-    {
-      "id": "fenoles",
-      "label": "13. Fenoles"
+      "label": "6. Halogenuros de alquilo",
+      "tier": "primary"
     },
     {
       "id": "alcoholes",
-      "label": "14. Alcoholes"
+      "label": "7. Alcoholes",
+      "tier": "primary"
     },
     {
-      "id": "cetonas",
-      "label": "15. Cetonas"
+      "id": "fenoles",
+      "label": "8. Fenoles",
+      "tier": "primary"
+    },
+    {
+      "id": "eteres",
+      "label": "9. Éteres",
+      "tier": "primary"
+    },
+    {
+      "id": "aminas",
+      "label": "10. Aminas",
+      "tier": "primary"
+    },
+    {
+      "id": "tioles",
+      "label": "11. Tioles",
+      "tier": "primary"
+    },
+    {
+      "id": "tioeteres",
+      "label": "12. Tioéteres",
+      "tier": "primary"
+    },
+    {
+      "id": "heterociclos_no_arom",
+      "label": "13. Compuestos heterociclos no aromáticos (O, N y S)",
+      "tier": "primary"
     },
     {
       "id": "aldehidos",
-      "label": "16. Aldehídos"
+      "label": "14. Aldehídos",
+      "tier": "primary"
     },
     {
-      "id": "nitrilos",
-      "label": "17. Nitrilos"
-    },
-    {
-      "id": "amidas",
-      "label": "18. Amidas"
-    },
-    {
-      "id": "haluros_acilo",
-      "label": "19. Haluros de acilo / ácido"
-    },
-    {
-      "id": "tioesteres",
-      "label": "20. Tioésteres"
-    },
-    {
-      "id": "esteres",
-      "label": "21. Ésteres"
-    },
-    {
-      "id": "anhidridos",
-      "label": "22. Anhídridos"
+      "id": "cetonas",
+      "label": "15. Cetonas",
+      "tier": "primary"
     },
     {
       "id": "acidos",
-      "label": "23. Ácidos Carboxílicos"
+      "label": "16. Ácidos carboxílicos (hidroxiácidos y cetoácidos)",
+      "tier": "primary"
+    },
+    {
+      "id": "sales_acidos",
+      "label": "17. Sales de ácidos orgánicos",
+      "tier": "primary"
+    },
+    {
+      "id": "esteres",
+      "label": "18. Ésteres",
+      "tier": "primary"
+    },
+    {
+      "id": "amidas",
+      "label": "19. Amidas",
+      "tier": "primary"
+    },
+    {
+      "id": "anhidridos",
+      "label": "20. Anhídridos",
+      "tier": "primary"
+    },
+    {
+      "id": "haluros_acilo",
+      "label": "21. Halogenuros de ácidos",
+      "tier": "primary"
+    },
+    {
+      "id": "aminoacidos",
+      "label": "22. Aminoácidos",
+      "tier": "primary"
+    },
+    {
+      "id": "carbohidratos",
+      "label": "23. Hidratos de carbono (mono-, di- y polisacáridos)",
+      "tier": "primary"
+    },
+    {
+      "id": "lipidos",
+      "label": "24. Lípidos (ácidos grasos, acilgliceroles, ceras y fosfolípidos)",
+      "tier": "primary"
+    },
+    {
+      "id": "nitrilos",
+      "label": "25. Nitrilos",
+      "tier": "extra"
+    },
+    {
+      "id": "imina",
+      "label": "26. Iminas",
+      "tier": "extra"
+    },
+    {
+      "id": "tioesteres",
+      "label": "27. Tioésteres",
+      "tier": "extra"
+    },
+    {
+      "id": "nitrocompuestos",
+      "label": "28. Nitrocompuestos",
+      "tier": "extra"
     },
     {
       "id": "azoderivados",
-      "label": "24. Azoderivados"
+      "label": "29. Azoderivados",
+      "tier": "extra"
     }
   ],
   "items": [
@@ -1141,558 +1190,6 @@
       "explanation": "Producto para mayoritario obtenido por nitración del clorobenceno."
     },
     {
-      "group": "nitrocompuestos",
-      "badge": "Nitroderivado aromático",
-      "name": "Nitrobenceno",
-      "synonyms": "Esencia de mirbana",
-      "semiFormula": "AROM-1-NO2",
-      "explanation": "Anillo bencénico con un grupo nitro (–NO₂), desactivante meta-dirigente."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Nitroderivado disustituido",
-      "name": "1,3-Dinitrobenceno",
-      "synonyms": "m-Dinitrobenceno",
-      "semiFormula": "AROM-1,3-NO2",
-      "explanation": "Producto mayoritario de la nitración del nitrobenceno."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Aromático disustituido",
-      "name": "1-Etil-2-nitrobenceno",
-      "synonyms": "o-Etilnitrobenceno",
-      "semiFormula": "AROM-1-CH2CH3-2-NO2",
-      "explanation": "Producto orto de la nitración del etilbenceno."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Aromático disustituido",
-      "name": "1-Etil-4-nitrobenceno",
-      "synonyms": "p-Etilnitrobenceno",
-      "semiFormula": "AROM-1-CH2CH3-4-NO2",
-      "explanation": "Producto para mayoritario de la nitración del etilbenceno."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Derivado del tolueno",
-      "name": "1-Metil-2-nitrobenceno",
-      "synonyms": "o-Nitrotolueno / 2-Nitrotolueno",
-      "semiFormula": "AROM-1-CH3-2-NO2",
-      "explanation": "Isómero orto obtenido al nitrar el tolueno con mezcla sulfonítrica."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Derivado del tolueno",
-      "name": "1-Metil-4-nitrobenceno",
-      "synonyms": "p-Nitrotolueno / 4-Nitrotolueno",
-      "semiFormula": "AROM-1-CH3-4-NO2",
-      "explanation": "Isómero para mayoritario de la nitración del tolueno."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Aromático polisustituido",
-      "name": "2-Metil-1,3,5-trinitrobenceno",
-      "synonyms": "2,4,6-Trinitrotolueno / TNT",
-      "semiFormula": "AROM-1-CH3-2,4,6-NO2",
-      "explanation": "Derivado trinitrado del tolueno en las posiciones orto y para respecto al metilo."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Derivado del antraceno",
-      "name": "1,5-Dinitroantraceno",
-      "synonyms": "",
-      "semiFormula": "ANTRACENO-1,5-NO2",
-      "explanation": "Antraceno disustituido con grupos nitro en los vértices opuestos α (C1 y C5)."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Nitrocompuesto alifático",
-      "name": "Nitrometano",
-      "synonyms": "",
-      "semiFormula": "CH₃—NO₂",
-      "explanation": "Nitroalcano más simple (grupo funcional –NO₂ siempre se nombra como prefijo nitro-)."
-    },
-    {
-      "group": "nitrocompuestos",
-      "badge": "Nitrocompuesto alifático",
-      "name": "2-Nitropropano",
-      "synonyms": "",
-      "semiFormula": "CH₃—CH(NO₂)—CH₃",
-      "explanation": "Grupo nitro en C2 de una cadena de propano."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter simétrico",
-      "name": "Metoximetano",
-      "synonyms": "Dimetiléter / Éter dimetílico",
-      "semiFormula": "CH₃—O—CH₃",
-      "explanation": "Éter más sencillo de 2 carbonos."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter asimétrico",
-      "name": "Metoxietano",
-      "synonyms": "Etilmetiléter",
-      "semiFormula": "CH₃—O—CH₂—CH₃",
-      "explanation": "Grupo metoxi unido a una cadena de etano."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter simétrico",
-      "name": "Etoxietano",
-      "synonyms": "Dietiléter / Éter etílico",
-      "semiFormula": "CH₃—CH₂—O—CH₂—CH₃",
-      "explanation": "Disolvente clásico de reacciones de Grignard."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter simétrico",
-      "name": "1-Butoxibutano",
-      "synonyms": "Butoxibutano / Dibutiléter",
-      "semiFormula": "CH₃—(CH₂)₃—O—(CH₂)₃—CH₃",
-      "explanation": "Ejercicio Unidad 13: dos cadenas de 4 carbonos unidas por un oxígeno."
-    },
-    {
-      "group": "eteres",
-      "badge": "Alcoxialcano ramificado",
-      "name": "2-Metoxibutano",
-      "synonyms": "sec-Butilmetiléter",
-      "semiFormula": "CH₃—CH(OCH₃)—CH₂—CH₃",
-      "explanation": "Cadena principal de 4 carbonos (butano) con sustituyente metoxi en C2."
-    },
-    {
-      "group": "eteres",
-      "badge": "Alcoxialcano ramificado",
-      "name": "2-Metil-2-metoxipropano",
-      "synonyms": "MTBE / terc-Butilmetiléter",
-      "semiFormula": "(CH₃)₃C—O—CH₃",
-      "explanation": "Cadena de 3 carbonos con metilo y metoxi en C2."
-    },
-    {
-      "group": "eteres",
-      "badge": "Alcoxialquino",
-      "name": "1-Etoxi-2-butino",
-      "synonyms": "Etoxi-2-butino",
-      "semiFormula": "CH₃—CH₂—O—CH₂—C≡C—CH₃",
-      "explanation": "Ejercicio Unidad 13: el triple enlace tiene prioridad de numeración sobre el grupo alcoxi."
-    },
-    {
-      "group": "eteres",
-      "badge": "Hidroxiéter",
-      "name": "3-Metoxi-1-butanol",
-      "synonyms": "",
-      "semiFormula": "HO—CH₂—CH₂—CH(OCH₃)—CH₃",
-      "explanation": "El grupo alcohol (–OH) es principal y el grupo –OCH₃ se nombra como sustituyente."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter aromático",
-      "name": "Metoxibenceno",
-      "synonyms": "Anisol / Fenilmetiléter",
-      "semiFormula": "AROM-1-OCH3",
-      "explanation": "Grupo metoxi unido al anillo bencénico."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter aromático",
-      "name": "Etoxibenceno",
-      "synonyms": "Etilfeniléter / Fenetol",
-      "semiFormula": "AROM-1-OCH2CH3",
-      "explanation": "Ejercicio Unidad 13: grupo etoxi unido al anillo de benceno."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter diarílico",
-      "name": "Fenoxibenceno",
-      "synonyms": "Difeniléter",
-      "semiFormula": "AROM-1-O-C6H5",
-      "explanation": "Ejercicio Unidad 13: dos anillos fenilo unidos por un puente de oxígeno."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter bencílico",
-      "name": "Bencilfeniléter",
-      "synonyms": "(Fenoximetil)benceno",
-      "semiFormula": "AROM-1-OCH2C6H5",
-      "explanation": "Ejercicio Unidad 13: grupo benciloxi unido al anillo fenilo."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter aromático disustituido",
-      "name": "1,4-Dimetoxibenceno",
-      "synonyms": "p-Dimetoxibenceno",
-      "semiFormula": "AROM-1,4-OCH3",
-      "explanation": "Ejercicio Unidad 13: dos grupos metoxi en posiciones opuestas (1,4)."
-    },
-    {
-      "group": "eteres",
-      "badge": "Hidroxiéter aromático",
-      "name": "4-Metoxifenol",
-      "synonyms": "p-Metoxifenol",
-      "semiFormula": "AROM-1-OH-4-OCH3",
-      "explanation": "Ejercicio Unidad 13: el grupo fenólico –OH es principal frente al metoxi."
-    },
-    {
-      "group": "eteres",
-      "badge": "Hidroxiéter aromático",
-      "name": "2-Etoxifenol",
-      "synonyms": "o-Etoxifenol",
-      "semiFormula": "AROM-1-OH-2-OCH2CH3",
-      "explanation": "Ejercicio Unidad 13: grupo etoxi en posición orto respecto al fenol."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter cíclico (Epóxido)",
-      "name": "Oxirano",
-      "synonyms": "Óxido de etileno / Oxaciclopropano",
-      "semiFormula": "HETERO-3-O",
-      "explanation": "Anillo heterocíclico de 3 miembros con alta tensión angular."
-    },
-    {
-      "group": "eteres",
-      "badge": "Éter cíclico",
-      "name": "Oxolano",
-      "synonyms": "Tetrahidrofurano (THF)",
-      "semiFormula": "HETERO-5-O",
-      "explanation": "Éter cíclico saturado de 5 miembros muy usado como solvente."
-    },
-    {
-      "group": "tioeteres",
-      "badge": "Tioéter (Sulfuro)",
-      "name": "Etiltioetano",
-      "synonyms": "Dietiltioéter / Sulfuro de dietilo",
-      "semiFormula": "CH₃—CH₂—S—CH₂—CH₃",
-      "explanation": "Análogo azufrado del dietiléter."
-    },
-    {
-      "group": "tioeteres",
-      "badge": "Tioéter (Sulfuro)",
-      "name": "Metiltiometano",
-      "synonyms": "Dimetiltioéter / Sulfuro de dimetilo",
-      "semiFormula": "CH₃—S—CH₃",
-      "explanation": "Tioéter simétrico más sencillo."
-    },
-    {
-      "group": "tioeteres",
-      "badge": "Tioéter (Sulfuro)",
-      "name": "Metiltioetano",
-      "synonyms": "Etilmetiltioéter / Sulfuro de etilmetilo",
-      "semiFormula": "CH₃—S—CH₂—CH₃",
-      "explanation": "El grupo más pequeño unido al azufre se nombra como prefijo alquiltio- (metiltio)."
-    },
-    {
-      "group": "tioeteres",
-      "badge": "Tioéter aromático",
-      "name": "Etiltiobenceno",
-      "synonyms": "Sulfuro de etilfenilo",
-      "semiFormula": "AROM-1-SCH2CH3",
-      "explanation": "Grupo etiltio unido directamente al anillo bencénico."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina primaria",
-      "name": "Metanamina",
-      "synonyms": "Metilamina",
-      "semiFormula": "CH₃—NH₂",
-      "explanation": "Amina primaria más sencilla de 1 carbono."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina primaria",
-      "name": "Etanamina",
-      "synonyms": "Etilamina",
-      "semiFormula": "CH₃—CH₂—NH₂",
-      "explanation": "Amina primaria de 2 carbonos."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina primaria",
-      "name": "1-Propanamina",
-      "synonyms": "Propilamina",
-      "semiFormula": "CH₃—CH₂—CH₂—NH₂",
-      "explanation": "Amina primaria lineal de 3 carbonos."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina secundaria",
-      "name": "N-Metilmetanamina",
-      "synonyms": "Dimetilamina",
-      "semiFormula": "CH₃—NH—CH₃",
-      "explanation": "Amina secundaria simétrica con dos grupos metilo."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina secundaria",
-      "name": "N-Etiletanamina",
-      "synonyms": "Dietilamina",
-      "semiFormula": "CH₃—CH₂—NH—CH₂—CH₃",
-      "explanation": "Amina secundaria simétrica con dos grupos etilo."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina secundaria",
-      "name": "N-Metiletanamina",
-      "synonyms": "Etilmetilamina",
-      "semiFormula": "CH₃—NH—CH₂—CH₃",
-      "explanation": "Cadena principal de 2 carbonos (etanamina) con un metilo en el nitrógeno."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina terciaria",
-      "name": "N,N-Dimetilmetanamina",
-      "synonyms": "Trimetilamina",
-      "semiFormula": "(CH₃)₃N",
-      "explanation": "Amina terciaria con tres grupos metilo unidos al nitrógeno."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina terciaria",
-      "name": "N-Etil-N-metilpropanamina",
-      "synonyms": "Etilmetilpropilamina",
-      "semiFormula": "CH₃CH₂—N(CH₃)—CH₂CH₂CH₃",
-      "explanation": "Cadena más larga de 3 carbonos (propanamina) con sustituyentes N-etil y N-metil."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina cíclica",
-      "name": "Ciclohexanamina",
-      "synonyms": "Ciclohexilamina",
-      "semiFormula": "CICLO-6-NH2",
-      "explanation": "Grupo amino unido a un anillo de ciclohexano."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina aromática",
-      "name": "Bencenamina",
-      "synonyms": "Anilina / Fenilamina",
-      "semiFormula": "AROM-1-NH2",
-      "explanation": "Amina aromática primaria; menos básica que las alquilaminas por resonancia."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina aromática sustituida",
-      "name": "3-Metilanilina",
-      "synonyms": "m-Toluidina / m-Metilanilina",
-      "semiFormula": "AROM-1-NH2-3-CH3",
-      "explanation": "Anilina sustituida en posición meta con un grupo metilo."
-    },
-    {
-      "group": "aminas",
-      "badge": "Nitroanilina",
-      "name": "4-Nitroanilina",
-      "synonyms": "p-Nitroanilina",
-      "semiFormula": "AROM-1-NH2-4-NO2",
-      "explanation": "Grupo nitro en posición para que disminuye la basicidad de la anilina."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina secundaria aromática",
-      "name": "N-Metilbencenamina",
-      "synonyms": "N-Metilanilina / Fenilmetilamina",
-      "semiFormula": "AROM-1-NHCH3",
-      "explanation": "Amina aromática secundaria con un grupo metilo sobre el nitrógeno de la anilina."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina terciaria aromática",
-      "name": "N,N-Dimetilbencenamina",
-      "synonyms": "N,N-Dimetilanilina",
-      "semiFormula": "AROM-1-N(CH3)2",
-      "explanation": "Amina aromática terciaria con dos grupos metilo enlazados al nitrógeno."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina secundaria diarílica",
-      "name": "N-Fenilbencenamina",
-      "synonyms": "Difenilamina / N-Fenilanilina",
-      "semiFormula": "AROM-1-NHC6H5",
-      "explanation": "Dos anillos fenilo unidos a un grupo amino secundario (–NH–)."
-    },
-    {
-      "group": "aminas",
-      "badge": "Amina aromática sustituida",
-      "name": "4-Metilbencenamina",
-      "synonyms": "p-Toluidina / p-Metilanilina",
-      "semiFormula": "AROM-1-NH2-4-CH3",
-      "explanation": "Anilina sustituida en posición para (C4) con un grupo metilo."
-    },
-    {
-      "group": "imina",
-      "badge": "Imina primaria (Aldimina)",
-      "name": "Etilidenimina",
-      "synonyms": "Etanimina",
-      "semiFormula": "CH₃—CH=NH",
-      "explanation": "Producto de condensación entre etanal y amoníaco (enlace doble C=N)."
-    },
-    {
-      "group": "imina",
-      "badge": "Imina secundaria (Base de Schiff)",
-      "name": "N-Etiletilidenimina",
-      "synonyms": "N-Etiletanimina",
-      "semiFormula": "CH₃—CH=N—CH₂—CH₃",
-      "explanation": "Base de Schiff formada por condensación de etanal con etilamina."
-    },
-    {
-      "group": "imina",
-      "badge": "Imina aromática",
-      "name": "N-Fenilbencilidenimina",
-      "synonyms": "N-Bencilidenanilina",
-      "semiFormula": "C₆H₅—CH=N—C₆H₅",
-      "explanation": "Base de Schiff aromática obtenida a partir de benzaldehído y anilina."
-    },
-    {
-      "group": "tioles",
-      "badge": "Tiol primario",
-      "name": "Etanotiol",
-      "synonyms": "Etilmercaptano",
-      "semiFormula": "CH₃—CH₂—SH",
-      "explanation": "Análogo azufrado del etanol (grupo sulfhidrilo –SH)."
-    },
-    {
-      "group": "tioles",
-      "badge": "Tiol secundario",
-      "name": "2-Propanotiol",
-      "synonyms": "Isopropilmercaptano",
-      "semiFormula": "CH₃—CH(SH)—CH₃",
-      "explanation": "Grupo –SH unido al carbono secundario C2."
-    },
-    {
-      "group": "tioles",
-      "badge": "Tiol aromático",
-      "name": "Bencenotiol",
-      "synonyms": "Tiofenol",
-      "semiFormula": "AROM-1-SH",
-      "explanation": "Grupo –SH unido directamente al benceno."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Fenol",
-      "name": "Fenol",
-      "synonyms": "Hidroxibenceno / Ácido fénico",
-      "semiFormula": "AROM-1-OH",
-      "explanation": "Grupo –OH unido directamente al anillo aromático."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Fenol sustituido",
-      "name": "2-Metilfenol",
-      "synonyms": "o-Cresol",
-      "semiFormula": "AROM-1-OH-2-CH3",
-      "explanation": "Isómero orto del metilfenol."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Fenol sustituido",
-      "name": "3-Metilfenol",
-      "synonyms": "m-Cresol",
-      "semiFormula": "AROM-1-OH-3-CH3",
-      "explanation": "Isómero meta del metilfenol."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Fenol sustituido",
-      "name": "4-Metilfenol",
-      "synonyms": "p-Cresol",
-      "semiFormula": "AROM-1-OH-4-CH3",
-      "explanation": "Isómero para del metilfenol."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Difenol",
-      "name": "1,2-Bencenodiol",
-      "synonyms": "Pirocatecol / Catecol",
-      "semiFormula": "AROM-1,2-OH",
-      "explanation": "Difenol orto (1,2)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Difenol",
-      "name": "1,3-Bencenodiol",
-      "synonyms": "Resorcinol / Resorcina",
-      "semiFormula": "AROM-1,3-OH",
-      "explanation": "Difenol meta (1,3)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Difenol",
-      "name": "1,4-Bencenodiol",
-      "synonyms": "Hidroquinona / Quinol",
-      "semiFormula": "AROM-1,4-OH",
-      "explanation": "Difenol para (1,4); se oxida reversiblemente a 1,4-benzoquinona."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Trifenol",
-      "name": "1,2,3-Bencenotriol",
-      "synonyms": "Pirogalol",
-      "semiFormula": "AROM-1,2,3-OH",
-      "explanation": "Anillo bencénico con tres grupos –OH contiguos."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Nitrofenol",
-      "name": "2,4,6-Trinitrofenol",
-      "synonyms": "Ácido pícrico",
-      "semiFormula": "AROM-1-OH-2,4,6-NO2",
-      "explanation": "Fenol fuertemente ácido (pKa = 0,4) debido a tres grupos –NO₂ atractores."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Halofenol",
-      "name": "2-Clorofenol",
-      "synonyms": "o-Clorofenol",
-      "semiFormula": "AROM-1-OH-2-Cl",
-      "explanation": "Fenol sustituido con cloro en posición orto (C2)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Halofenol",
-      "name": "3-Clorofenol",
-      "synonyms": "m-Clorofenol",
-      "semiFormula": "AROM-1-OH-3-Cl",
-      "explanation": "Fenol sustituido con cloro en posición meta (C3)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Halofenol",
-      "name": "4-Clorofenol",
-      "synonyms": "p-Clorofenol",
-      "semiFormula": "AROM-1-OH-4-Cl",
-      "explanation": "Fenol sustituido con cloro en posición para (C4)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Fenol polisustituido",
-      "name": "4-Cloro-3-metilfenol",
-      "synonyms": "p-Cloro-m-cresol",
-      "semiFormula": "AROM-1-OH-3-CH3-4-Cl",
-      "explanation": "Se numera desde el –OH (C1) buscando los localizadores más bajos para los sustituyentes (3-metil, 4-cloro)."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Nitrofenol",
-      "name": "4-Nitrofenol",
-      "synonyms": "p-Nitrofenol",
-      "semiFormula": "AROM-1-OH-4-NO2",
-      "explanation": "Fenol con grupo nitro en posición para (C4); aumenta notablemente la acidez del –OH."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Aminofenol",
-      "name": "4-Aminofenol",
-      "synonyms": "p-Aminofenol",
-      "semiFormula": "AROM-1-OH-4-NH2",
-      "explanation": "El grupo –OH tiene prioridad sobre –NH₂, por lo que el anillo se nombra como fenol en C1 y amino en C4; precursor del paracetamol."
-    },
-    {
-      "group": "fenoles",
-      "badge": "Nitrofenol disustituido",
-      "name": "2,4-Dinitrofenol",
-      "synonyms": "2,4-DNP",
-      "semiFormula": "AROM-1-OH-2,4-NO2",
-      "explanation": "Fenol con dos grupos nitro en posiciones 2 y 4."
-    },
-    {
       "group": "alcoholes",
       "badge": "Alcohol primario",
       "name": "Metanol",
@@ -1933,6 +1430,646 @@
       "explanation": "Cadena principal de 2 carbonos (etanol) con el grupo –OH en C1 y un sustituyente fenilo en C2."
     },
     {
+      "group": "fenoles",
+      "badge": "Fenol",
+      "name": "Fenol",
+      "synonyms": "Hidroxibenceno / Ácido fénico",
+      "semiFormula": "AROM-1-OH",
+      "explanation": "Grupo –OH unido directamente al anillo aromático."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Fenol sustituido",
+      "name": "2-Metilfenol",
+      "synonyms": "o-Cresol",
+      "semiFormula": "AROM-1-OH-2-CH3",
+      "explanation": "Isómero orto del metilfenol."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Fenol sustituido",
+      "name": "3-Metilfenol",
+      "synonyms": "m-Cresol",
+      "semiFormula": "AROM-1-OH-3-CH3",
+      "explanation": "Isómero meta del metilfenol."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Fenol sustituido",
+      "name": "4-Metilfenol",
+      "synonyms": "p-Cresol",
+      "semiFormula": "AROM-1-OH-4-CH3",
+      "explanation": "Isómero para del metilfenol."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Difenol",
+      "name": "1,2-Bencenodiol",
+      "synonyms": "Pirocatecol / Catecol",
+      "semiFormula": "AROM-1,2-OH",
+      "explanation": "Difenol orto (1,2)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Difenol",
+      "name": "1,3-Bencenodiol",
+      "synonyms": "Resorcinol / Resorcina",
+      "semiFormula": "AROM-1,3-OH",
+      "explanation": "Difenol meta (1,3)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Difenol",
+      "name": "1,4-Bencenodiol",
+      "synonyms": "Hidroquinona / Quinol",
+      "semiFormula": "AROM-1,4-OH",
+      "explanation": "Difenol para (1,4); se oxida reversiblemente a 1,4-benzoquinona."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Trifenol",
+      "name": "1,2,3-Bencenotriol",
+      "synonyms": "Pirogalol",
+      "semiFormula": "AROM-1,2,3-OH",
+      "explanation": "Anillo bencénico con tres grupos –OH contiguos."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Nitrofenol",
+      "name": "2,4,6-Trinitrofenol",
+      "synonyms": "Ácido pícrico",
+      "semiFormula": "AROM-1-OH-2,4,6-NO2",
+      "explanation": "Fenol fuertemente ácido (pKa = 0,4) debido a tres grupos –NO₂ atractores."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Halofenol",
+      "name": "2-Clorofenol",
+      "synonyms": "o-Clorofenol",
+      "semiFormula": "AROM-1-OH-2-Cl",
+      "explanation": "Fenol sustituido con cloro en posición orto (C2)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Halofenol",
+      "name": "3-Clorofenol",
+      "synonyms": "m-Clorofenol",
+      "semiFormula": "AROM-1-OH-3-Cl",
+      "explanation": "Fenol sustituido con cloro en posición meta (C3)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Halofenol",
+      "name": "4-Clorofenol",
+      "synonyms": "p-Clorofenol",
+      "semiFormula": "AROM-1-OH-4-Cl",
+      "explanation": "Fenol sustituido con cloro en posición para (C4)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Fenol polisustituido",
+      "name": "4-Cloro-3-metilfenol",
+      "synonyms": "p-Cloro-m-cresol",
+      "semiFormula": "AROM-1-OH-3-CH3-4-Cl",
+      "explanation": "Se numera desde el –OH (C1) buscando los localizadores más bajos para los sustituyentes (3-metil, 4-cloro)."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Nitrofenol",
+      "name": "4-Nitrofenol",
+      "synonyms": "p-Nitrofenol",
+      "semiFormula": "AROM-1-OH-4-NO2",
+      "explanation": "Fenol con grupo nitro en posición para (C4); aumenta notablemente la acidez del –OH."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Aminofenol",
+      "name": "4-Aminofenol",
+      "synonyms": "p-Aminofenol",
+      "semiFormula": "AROM-1-OH-4-NH2",
+      "explanation": "El grupo –OH tiene prioridad sobre –NH₂, por lo que el anillo se nombra como fenol en C1 y amino en C4; precursor del paracetamol."
+    },
+    {
+      "group": "fenoles",
+      "badge": "Nitrofenol disustituido",
+      "name": "2,4-Dinitrofenol",
+      "synonyms": "2,4-DNP",
+      "semiFormula": "AROM-1-OH-2,4-NO2",
+      "explanation": "Fenol con dos grupos nitro en posiciones 2 y 4."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter simétrico",
+      "name": "Metoximetano",
+      "synonyms": "Dimetiléter / Éter dimetílico",
+      "semiFormula": "CH₃—O—CH₃",
+      "explanation": "Éter más sencillo de 2 carbonos."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter asimétrico",
+      "name": "Metoxietano",
+      "synonyms": "Etilmetiléter",
+      "semiFormula": "CH₃—O—CH₂—CH₃",
+      "explanation": "Grupo metoxi unido a una cadena de etano."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter simétrico",
+      "name": "Etoxietano",
+      "synonyms": "Dietiléter / Éter etílico",
+      "semiFormula": "CH₃—CH₂—O—CH₂—CH₃",
+      "explanation": "Disolvente clásico de reacciones de Grignard."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter simétrico",
+      "name": "1-Butoxibutano",
+      "synonyms": "Butoxibutano / Dibutiléter",
+      "semiFormula": "CH₃—(CH₂)₃—O—(CH₂)₃—CH₃",
+      "explanation": "Ejercicio Unidad 13: dos cadenas de 4 carbonos unidas por un oxígeno."
+    },
+    {
+      "group": "eteres",
+      "badge": "Alcoxialcano ramificado",
+      "name": "2-Metoxibutano",
+      "synonyms": "sec-Butilmetiléter",
+      "semiFormula": "CH₃—CH(OCH₃)—CH₂—CH₃",
+      "explanation": "Cadena principal de 4 carbonos (butano) con sustituyente metoxi en C2."
+    },
+    {
+      "group": "eteres",
+      "badge": "Alcoxialcano ramificado",
+      "name": "2-Metil-2-metoxipropano",
+      "synonyms": "MTBE / terc-Butilmetiléter",
+      "semiFormula": "(CH₃)₃C—O—CH₃",
+      "explanation": "Cadena de 3 carbonos con metilo y metoxi en C2."
+    },
+    {
+      "group": "eteres",
+      "badge": "Alcoxialquino",
+      "name": "1-Etoxi-2-butino",
+      "synonyms": "Etoxi-2-butino",
+      "semiFormula": "CH₃—CH₂—O—CH₂—C≡C—CH₃",
+      "explanation": "Ejercicio Unidad 13: el triple enlace tiene prioridad de numeración sobre el grupo alcoxi."
+    },
+    {
+      "group": "eteres",
+      "badge": "Hidroxiéter",
+      "name": "3-Metoxi-1-butanol",
+      "synonyms": "",
+      "semiFormula": "HO—CH₂—CH₂—CH(OCH₃)—CH₃",
+      "explanation": "El grupo alcohol (–OH) es principal y el grupo –OCH₃ se nombra como sustituyente."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter aromático",
+      "name": "Metoxibenceno",
+      "synonyms": "Anisol / Fenilmetiléter",
+      "semiFormula": "AROM-1-OCH3",
+      "explanation": "Grupo metoxi unido al anillo bencénico."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter aromático",
+      "name": "Etoxibenceno",
+      "synonyms": "Etilfeniléter / Fenetol",
+      "semiFormula": "AROM-1-OCH2CH3",
+      "explanation": "Ejercicio Unidad 13: grupo etoxi unido al anillo de benceno."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter diarílico",
+      "name": "Fenoxibenceno",
+      "synonyms": "Difeniléter",
+      "semiFormula": "AROM-1-O-C6H5",
+      "explanation": "Ejercicio Unidad 13: dos anillos fenilo unidos por un puente de oxígeno."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter bencílico",
+      "name": "Bencilfeniléter",
+      "synonyms": "(Fenoximetil)benceno",
+      "semiFormula": "AROM-1-OCH2C6H5",
+      "explanation": "Ejercicio Unidad 13: grupo benciloxi unido al anillo fenilo."
+    },
+    {
+      "group": "eteres",
+      "badge": "Éter aromático disustituido",
+      "name": "1,4-Dimetoxibenceno",
+      "synonyms": "p-Dimetoxibenceno",
+      "semiFormula": "AROM-1,4-OCH3",
+      "explanation": "Ejercicio Unidad 13: dos grupos metoxi en posiciones opuestas (1,4)."
+    },
+    {
+      "group": "eteres",
+      "badge": "Hidroxiéter aromático",
+      "name": "4-Metoxifenol",
+      "synonyms": "p-Metoxifenol",
+      "semiFormula": "AROM-1-OH-4-OCH3",
+      "explanation": "Ejercicio Unidad 13: el grupo fenólico –OH es principal frente al metoxi."
+    },
+    {
+      "group": "eteres",
+      "badge": "Hidroxiéter aromático",
+      "name": "2-Etoxifenol",
+      "synonyms": "o-Etoxifenol",
+      "semiFormula": "AROM-1-OH-2-OCH2CH3",
+      "explanation": "Ejercicio Unidad 13: grupo etoxi en posición orto respecto al fenol."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina primaria",
+      "name": "Metanamina",
+      "synonyms": "Metilamina",
+      "semiFormula": "CH₃—NH₂",
+      "explanation": "Amina primaria más sencilla de 1 carbono."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina primaria",
+      "name": "Etanamina",
+      "synonyms": "Etilamina",
+      "semiFormula": "CH₃—CH₂—NH₂",
+      "explanation": "Amina primaria de 2 carbonos."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina primaria",
+      "name": "1-Propanamina",
+      "synonyms": "Propilamina",
+      "semiFormula": "CH₃—CH₂—CH₂—NH₂",
+      "explanation": "Amina primaria lineal de 3 carbonos."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria",
+      "name": "N-Metilmetanamina",
+      "synonyms": "Dimetilamina",
+      "semiFormula": "CH₃—NH—CH₃",
+      "explanation": "Amina secundaria simétrica con dos grupos metilo."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria",
+      "name": "N-Etiletanamina",
+      "synonyms": "Dietilamina",
+      "semiFormula": "CH₃—CH₂—NH—CH₂—CH₃",
+      "explanation": "Amina secundaria simétrica con dos grupos etilo."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria",
+      "name": "N-Metiletanamina",
+      "synonyms": "Etilmetilamina",
+      "semiFormula": "CH₃—NH—CH₂—CH₃",
+      "explanation": "Cadena principal de 2 carbonos (etanamina) con un metilo en el nitrógeno."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina terciaria",
+      "name": "N,N-Dimetilmetanamina",
+      "synonyms": "Trimetilamina",
+      "semiFormula": "(CH₃)₃N",
+      "explanation": "Amina terciaria con tres grupos metilo unidos al nitrógeno."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina terciaria",
+      "name": "N-Etil-N-metilpropanamina",
+      "synonyms": "Etilmetilpropilamina",
+      "semiFormula": "CH₃CH₂—N(CH₃)—CH₂CH₂CH₃",
+      "explanation": "Cadena más larga de 3 carbonos (propanamina) con sustituyentes N-etil y N-metil."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina cíclica",
+      "name": "Ciclohexanamina",
+      "synonyms": "Ciclohexilamina",
+      "semiFormula": "CICLO-6-NH2",
+      "explanation": "Grupo amino unido a un anillo de ciclohexano."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina aromática",
+      "name": "Bencenamina",
+      "synonyms": "Anilina / Fenilamina",
+      "semiFormula": "AROM-1-NH2",
+      "explanation": "Amina aromática primaria; menos básica que las alquilaminas por resonancia."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina aromática sustituida",
+      "name": "3-Metilanilina",
+      "synonyms": "m-Toluidina / m-Metilanilina",
+      "semiFormula": "AROM-1-NH2-3-CH3",
+      "explanation": "Anilina sustituida en posición meta con un grupo metilo."
+    },
+    {
+      "group": "aminas",
+      "badge": "Nitroanilina",
+      "name": "4-Nitroanilina",
+      "synonyms": "p-Nitroanilina",
+      "semiFormula": "AROM-1-NH2-4-NO2",
+      "explanation": "Grupo nitro en posición para que disminuye la basicidad de la anilina."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria aromática",
+      "name": "N-Metilbencenamina",
+      "synonyms": "N-Metilanilina / Fenilmetilamina",
+      "semiFormula": "AROM-1-NHCH3",
+      "explanation": "Amina aromática secundaria con un grupo metilo sobre el nitrógeno de la anilina."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina terciaria aromática",
+      "name": "N,N-Dimetilbencenamina",
+      "synonyms": "N,N-Dimetilanilina",
+      "semiFormula": "AROM-1-N(CH3)2",
+      "explanation": "Amina aromática terciaria con dos grupos metilo enlazados al nitrógeno."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina secundaria diarílica",
+      "name": "N-Fenilbencenamina",
+      "synonyms": "Difenilamina / N-Fenilanilina",
+      "semiFormula": "AROM-1-NHC6H5",
+      "explanation": "Dos anillos fenilo unidos a un grupo amino secundario (–NH–)."
+    },
+    {
+      "group": "aminas",
+      "badge": "Amina aromática sustituida",
+      "name": "4-Metilbencenamina",
+      "synonyms": "p-Toluidina / p-Metilanilina",
+      "semiFormula": "AROM-1-NH2-4-CH3",
+      "explanation": "Anilina sustituida en posición para (C4) con un grupo metilo."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol primario",
+      "name": "Etanotiol",
+      "synonyms": "Etilmercaptano",
+      "semiFormula": "CH₃—CH₂—SH",
+      "explanation": "Análogo azufrado del etanol (grupo sulfhidrilo –SH)."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol secundario",
+      "name": "2-Propanotiol",
+      "synonyms": "Isopropilmercaptano",
+      "semiFormula": "CH₃—CH(SH)—CH₃",
+      "explanation": "Grupo –SH unido al carbono secundario C2."
+    },
+    {
+      "group": "tioles",
+      "badge": "Tiol aromático",
+      "name": "Bencenotiol",
+      "synonyms": "Tiofenol",
+      "semiFormula": "AROM-1-SH",
+      "explanation": "Grupo –SH unido directamente al benceno."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter (Sulfuro)",
+      "name": "Etiltioetano",
+      "synonyms": "Dietiltioéter / Sulfuro de dietilo",
+      "semiFormula": "CH₃—CH₂—S—CH₂—CH₃",
+      "explanation": "Análogo azufrado del dietiléter."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter (Sulfuro)",
+      "name": "Metiltiometano",
+      "synonyms": "Dimetiltioéter / Sulfuro de dimetilo",
+      "semiFormula": "CH₃—S—CH₃",
+      "explanation": "Tioéter simétrico más sencillo."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter (Sulfuro)",
+      "name": "Metiltioetano",
+      "synonyms": "Etilmetiltioéter / Sulfuro de etilmetilo",
+      "semiFormula": "CH₃—S—CH₂—CH₃",
+      "explanation": "El grupo más pequeño unido al azufre se nombra como prefijo alquiltio- (metiltio)."
+    },
+    {
+      "group": "tioeteres",
+      "badge": "Tioéter aromático",
+      "name": "Etiltiobenceno",
+      "synonyms": "Sulfuro de etilfenilo",
+      "semiFormula": "AROM-1-SCH2CH3",
+      "explanation": "Grupo etiltio unido directamente al anillo bencénico."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Éter cíclico (Epóxido)",
+      "name": "Oxirano",
+      "synonyms": "Óxido de etileno / Oxaciclopropano",
+      "semiFormula": "HETERO-3-O",
+      "explanation": "Anillo heterocíclico de 3 miembros con alta tensión angular."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Éter cíclico",
+      "name": "Oxolano",
+      "synonyms": "Tetrahidrofurano (THF)",
+      "semiFormula": "HETERO-5-O",
+      "explanation": "Éter cíclico saturado de 5 miembros muy usado como solvente."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático oxigenado",
+      "name": "Oxano",
+      "synonyms": "Tetrahidropirano (THP) / Oxaciclohexano",
+      "semiFormula": "HETERO-6-O",
+      "explanation": "Heterociclo saturado de 6 miembros con un átomo de oxígeno."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático oxigenado",
+      "name": "1,4-Dioxano",
+      "synonyms": "p-Dioxano",
+      "semiFormula": "HETERO-6-O-4-O",
+      "explanation": "Éter cíclico saturado de 6 miembros con dos átomos de oxígeno en posiciones 1 y 4."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático nitrogenado",
+      "name": "Aziridina",
+      "synonyms": "Azaciclopropano / Etilenimina",
+      "semiFormula": "HETERO-3-NH",
+      "explanation": "Anillo heterocíclico saturado de 3 miembros con un nitrógeno (alta tensión angular)."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático nitrogenado",
+      "name": "Pirrolidina",
+      "synonyms": "Azolidina / Tetrahidropirrol",
+      "semiFormula": "HETERO-5-NH",
+      "explanation": "Amina secundaria cíclica saturada de 5 miembros (base estructural de la prolina)."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático nitrogenado",
+      "name": "Piperidina",
+      "synonyms": "Azinano / Hexahidropiridina",
+      "semiFormula": "HETERO-6-NH",
+      "explanation": "Amina secundaria cíclica saturada de 6 miembros."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático azufrado",
+      "name": "Tiirano",
+      "synonyms": "Tiaciclopropano / Sulfuro de etileno",
+      "semiFormula": "HETERO-3-S",
+      "explanation": "Heterociclo saturado de 3 miembros con un átomo de azufre."
+    },
+    {
+      "group": "heterociclos_no_arom",
+      "badge": "Heterociclo no aromático azufrado",
+      "name": "Tiolano",
+      "synonyms": "Tetrahidrotiofeno (THT)",
+      "semiFormula": "HETERO-5-S",
+      "explanation": "Tioéter cíclico saturado de 5 miembros con un átomo de azufre."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído simple",
+      "name": "Metanal",
+      "synonyms": "Formaldehído / Aldehído fórmico",
+      "semiFormula": "H—CHO",
+      "explanation": "Aldehído de 1 carbono con dos hidrógenos unidos al carbonilo."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído simple",
+      "name": "Etanal",
+      "synonyms": "Acetaldehído",
+      "semiFormula": "CH₃—CHO",
+      "explanation": "Aldehído de 2 carbonos; da positiva la reacción halofórmica."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído halogenado",
+      "name": "Tricloroetanal",
+      "synonyms": "Cloral",
+      "semiFormula": "CCl₃—CHO",
+      "explanation": "Forma con agua el hidrato de cloral estable."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído lineal",
+      "name": "Propanal",
+      "synonyms": "Propionaldehído",
+      "semiFormula": "CH₃—CH₂—CHO",
+      "explanation": "Aldehído lineal de 3 carbonos."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído lineal",
+      "name": "Butanal",
+      "synonyms": "Butiraldehído",
+      "semiFormula": "CH₃—CH₂—CH₂—CHO",
+      "explanation": "Ejercicio Unidad 13: aldehído lineal de 4 carbonos."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado",
+      "name": "Propenal",
+      "synonyms": "Acroleína",
+      "semiFormula": "CH₂=CH—CHO",
+      "explanation": "Aldehído α,β-insaturado de 3 carbonos."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado",
+      "name": "2-Metilpropenal",
+      "synonyms": "Metacroleína",
+      "semiFormula": "CH₂=C(CH₃)—CHO",
+      "explanation": "Ejercicio Unidad 13: aldehído insaturado ramificado de 3 carbonos."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado",
+      "name": "2-Butenal",
+      "synonyms": "Crotonaldehído",
+      "semiFormula": "CH₃—CH=CH—CHO",
+      "explanation": "Producto de deshidratación del aldol (3-hidroxibutanal)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado",
+      "name": "3-Metil-2-pentenal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—C(CH₃)=CH—CHO",
+      "explanation": "Ejercicio Unidad 13: cadena de 5 carbonos con –CHO en C1."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído insaturado aromático",
+      "name": "3-Fenil-3-pentenal",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH=C(C₆H₅)—CH₂—CHO",
+      "explanation": "Ejercicio Unidad 13: cadena de 5 carbonos con grupo fenilo y doble enlace en C3."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Dialdehído",
+      "name": "Propanodial",
+      "synonyms": "Malonaldehído",
+      "semiFormula": "OHC—CH₂—CHO",
+      "explanation": "Ejercicio Unidad 13: dialdehído de 3 carbonos."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Dialdehído insaturado",
+      "name": "2-Hexenodial",
+      "synonyms": "",
+      "semiFormula": "OHC—CH=CH—CH₂—CH₂—CHO",
+      "explanation": "Ejercicio Unidad 13: cadena de 6 carbonos con dos grupos –CHO terminales y doble enlace en C2."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Hidroxialdehído",
+      "name": "2,3-Dihidroxipropanal",
+      "synonyms": "Gliceraldehído",
+      "semiFormula": "HO—CH₂—CH(OH)—CHO",
+      "explanation": "Aldotriosa más simple; el aldehído tiene prioridad sobre los grupos –OH."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Hidroxialdehído",
+      "name": "3-Hidroxibutanal",
+      "synonyms": "Aldol",
+      "semiFormula": "CH₃—CH(OH)—CH₂—CHO",
+      "explanation": "Producto de condensación aldólica de dos moléculas de etanal."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído aromático",
+      "name": "Benzaldehído",
+      "synonyms": "Bencenocarbaldehído",
+      "semiFormula": "AROM-1-CHO",
+      "explanation": "Ejercicio Unidad 13: grupo formilo unido directamente al benceno."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Oxoaldehído (Prioridad)",
+      "name": "3-Oxobutanal",
+      "synonyms": "Acetoacetaldehído",
+      "semiFormula": "CH₃—CO—CH₂—CHO",
+      "explanation": "Ejercicio Unidad 13: el aldehído tiene mayor prioridad que la cetona (se nombra como oxo-)."
+    },
+    {
+      "group": "aldehidos",
+      "badge": "Aldehído con sustituyente fenilo",
+      "name": "Feniletanal",
+      "synonyms": "Fenilacetaldehído",
+      "semiFormula": "C₆H₅—CH₂—CHO",
+      "explanation": "Cadena principal de 2 carbonos (etanal) con un grupo fenilo en C2."
+    },
+    {
       "group": "cetonas",
       "badge": "Cetona simple",
       "name": "Propanona",
@@ -2077,406 +2214,6 @@
       "explanation": "Cetona de 3 carbonos con carbonilo en C2 y grupo fenilo en C1 (grupo bencilo)."
     },
     {
-      "group": "aldehidos",
-      "badge": "Aldehído simple",
-      "name": "Metanal",
-      "synonyms": "Formaldehído / Aldehído fórmico",
-      "semiFormula": "H—CHO",
-      "explanation": "Aldehído de 1 carbono con dos hidrógenos unidos al carbonilo."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído simple",
-      "name": "Etanal",
-      "synonyms": "Acetaldehído",
-      "semiFormula": "CH₃—CHO",
-      "explanation": "Aldehído de 2 carbonos; da positiva la reacción halofórmica."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído halogenado",
-      "name": "Tricloroetanal",
-      "synonyms": "Cloral",
-      "semiFormula": "CCl₃—CHO",
-      "explanation": "Forma con agua el hidrato de cloral estable."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído lineal",
-      "name": "Propanal",
-      "synonyms": "Propionaldehído",
-      "semiFormula": "CH₃—CH₂—CHO",
-      "explanation": "Aldehído lineal de 3 carbonos."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído lineal",
-      "name": "Butanal",
-      "synonyms": "Butiraldehído",
-      "semiFormula": "CH₃—CH₂—CH₂—CHO",
-      "explanation": "Ejercicio Unidad 13: aldehído lineal de 4 carbonos."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído insaturado",
-      "name": "Propenal",
-      "synonyms": "Acroleína",
-      "semiFormula": "CH₂=CH—CHO",
-      "explanation": "Aldehído α,β-insaturado de 3 carbonos."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído insaturado",
-      "name": "2-Metilpropenal",
-      "synonyms": "Metacroleína",
-      "semiFormula": "CH₂=C(CH₃)—CHO",
-      "explanation": "Ejercicio Unidad 13: aldehído insaturado ramificado de 3 carbonos."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído insaturado",
-      "name": "2-Butenal",
-      "synonyms": "Crotonaldehído",
-      "semiFormula": "CH₃—CH=CH—CHO",
-      "explanation": "Producto de deshidratación del aldol (3-hidroxibutanal)."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído insaturado",
-      "name": "3-Metil-2-pentenal",
-      "synonyms": "",
-      "semiFormula": "CH₃—CH₂—C(CH₃)=CH—CHO",
-      "explanation": "Ejercicio Unidad 13: cadena de 5 carbonos con –CHO en C1."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído insaturado aromático",
-      "name": "3-Fenil-3-pentenal",
-      "synonyms": "",
-      "semiFormula": "CH₃—CH=C(C₆H₅)—CH₂—CHO",
-      "explanation": "Ejercicio Unidad 13: cadena de 5 carbonos con grupo fenilo y doble enlace en C3."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Dialdehído",
-      "name": "Propanodial",
-      "synonyms": "Malonaldehído",
-      "semiFormula": "OHC—CH₂—CHO",
-      "explanation": "Ejercicio Unidad 13: dialdehído de 3 carbonos."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Dialdehído insaturado",
-      "name": "2-Hexenodial",
-      "synonyms": "",
-      "semiFormula": "OHC—CH=CH—CH₂—CH₂—CHO",
-      "explanation": "Ejercicio Unidad 13: cadena de 6 carbonos con dos grupos –CHO terminales y doble enlace en C2."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Hidroxialdehído",
-      "name": "2,3-Dihidroxipropanal",
-      "synonyms": "Gliceraldehído",
-      "semiFormula": "HO—CH₂—CH(OH)—CHO",
-      "explanation": "Aldotriosa más simple; el aldehído tiene prioridad sobre los grupos –OH."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Hidroxialdehído",
-      "name": "3-Hidroxibutanal",
-      "synonyms": "Aldol",
-      "semiFormula": "CH₃—CH(OH)—CH₂—CHO",
-      "explanation": "Producto de condensación aldólica de dos moléculas de etanal."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído aromático",
-      "name": "Benzaldehído",
-      "synonyms": "Bencenocarbaldehído",
-      "semiFormula": "AROM-1-CHO",
-      "explanation": "Ejercicio Unidad 13: grupo formilo unido directamente al benceno."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Oxoaldehído (Prioridad)",
-      "name": "3-Oxobutanal",
-      "synonyms": "Acetoacetaldehído",
-      "semiFormula": "CH₃—CO—CH₂—CHO",
-      "explanation": "Ejercicio Unidad 13: el aldehído tiene mayor prioridad que la cetona (se nombra como oxo-)."
-    },
-    {
-      "group": "aldehidos",
-      "badge": "Aldehído con sustituyente fenilo",
-      "name": "Feniletanal",
-      "synonyms": "Fenilacetaldehído",
-      "semiFormula": "C₆H₅—CH₂—CHO",
-      "explanation": "Cadena principal de 2 carbonos (etanal) con un grupo fenilo en C2."
-    },
-    {
-      "group": "nitrilos",
-      "badge": "Nitrilo",
-      "name": "Etanonitrilo",
-      "synonyms": "Acetonitrilo / Cianuro de metilo",
-      "semiFormula": "CH₃—C≡N",
-      "explanation": "Compuesto con grupo ciano (–C≡N)."
-    },
-    {
-      "group": "nitrilos",
-      "badge": "Nitrilo",
-      "name": "Butanonitrilo",
-      "synonyms": "Butironitrilo / Cianuro de propilo",
-      "semiFormula": "CH₃—CH₂—CH₂—C≡N",
-      "explanation": "Cadena de 4 carbonos incluyendo el carbono del grupo nitrilo."
-    },
-    {
-      "group": "nitrilos",
-      "badge": "Nitrilo aromático",
-      "name": "Benzonitrilo",
-      "synonyms": "Bencenocarbonitrilo / Cianuro de fenilo",
-      "semiFormula": "AROM-1-CN",
-      "explanation": "Grupo ciano (–C≡N) unido directamente al anillo bencénico."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida primaria",
-      "name": "Etanamida",
-      "synonyms": "Acetamida",
-      "semiFormula": "CH₃—CO—NH₂",
-      "explanation": "Amida primaria derivada del ácido acético."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida secundaria",
-      "name": "N-Etiletanamida",
-      "synonyms": "N-Etilacetamida",
-      "semiFormula": "CH₃—CO—NH—CH₂—CH₃",
-      "explanation": "Amida N-monosustituida."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida terciaria",
-      "name": "N,N-Dimetilmetanamida",
-      "synonyms": "N,N-Dimetilformamida (DMF)",
-      "semiFormula": "H—CO—N(CH₃)₂",
-      "explanation": "Solvente polar aprótico clásico para reacciones SN2."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida aromática",
-      "name": "N-Feniletanamida",
-      "synonyms": "Acetanilida",
-      "semiFormula": "AROM-1-NHCOCH3",
-      "explanation": "Producto de acetilación de la anilina."
-    },
-    {
-      "group": "amidas",
-      "badge": "Derivado carbónico",
-      "name": "Urea",
-      "synonyms": "Carbodiamida / Diamida del ácido carbónico",
-      "semiFormula": "H₂N—CO—NH₂",
-      "explanation": "Producto final del metabolismo nitrogenado excretado en la orina."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida primaria aromática",
-      "name": "Benzamida",
-      "synonyms": "Bencenocarboxamida",
-      "semiFormula": "AROM-1-CONH2",
-      "explanation": "Amida primaria derivada del ácido benzoico (–CONH₂)."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida secundaria aromática",
-      "name": "N-Metilbenzamida",
-      "synonyms": "N-Metilbencenocarboxamida",
-      "semiFormula": "C₆H₅—CO—NH—CH₃",
-      "explanation": "Amida secundaria con un sustituyente metilo sobre el nitrógeno."
-    },
-    {
-      "group": "amidas",
-      "badge": "Amida terciaria aromática",
-      "name": "N,N-Dimetilbenzamida",
-      "synonyms": "N,N-Dimetilbencenocarboxamida",
-      "semiFormula": "C₆H₅—CO—N(CH₃)₂",
-      "explanation": "Amida terciaria obtenida al tratar ácido benzoico o cloruro de benzoílo con dimetilamina."
-    },
-    {
-      "group": "amidas",
-      "badge": "Anilida farmacéutica",
-      "name": "N-(4-Hidroxifenil)etanamida",
-      "synonyms": "Paracetamol / Acetaminofén / p-Hidroxiacetanilida",
-      "semiFormula": "AROM-1-OH-4-NHCOCH3",
-      "explanation": "Producto de la N-acilación selectiva del p-aminofenol con anhídrido acético."
-    },
-    {
-      "group": "haluros_acilo",
-      "badge": "Halogenuro de acilo",
-      "name": "Cloruro de etanoílo",
-      "synonyms": "Cloruro de acetilo",
-      "semiFormula": "CH₃—CO—Cl",
-      "explanation": "Derivado de ácido más reactivo."
-    },
-    {
-      "group": "haluros_acilo",
-      "badge": "Halogenuro de acilo aromático",
-      "name": "Cloruro de benzoílo",
-      "synonyms": "",
-      "semiFormula": "AROM-1-COCl",
-      "explanation": "Utilizado en reacciones de acilación de Friedel-Crafts."
-    },
-    {
-      "group": "tioesteres",
-      "badge": "Tioéster",
-      "name": "Etanotioato de metilo",
-      "synonyms": "Tioacetato de metilo",
-      "semiFormula": "CH₃—CO—S—CH₃",
-      "explanation": "Derivado azufrado de éster con grupo funcional R–COS–R' (sufijo -tioato de -ilo)."
-    },
-    {
-      "group": "tioesteres",
-      "badge": "Tioéster",
-      "name": "Etanotioato de etilo",
-      "synonyms": "Tioacetato de etilo",
-      "semiFormula": "CH₃—CO—S—CH₂—CH₃",
-      "explanation": "Análogo azufrado del acetato de etilo (modelo estructural de la Acetil-CoA)."
-    },
-    {
-      "group": "tioesteres",
-      "badge": "Tioéster aromático",
-      "name": "Bencenotioato de metilo",
-      "synonyms": "Tiobenzoato de metilo",
-      "semiFormula": "C₆H₅—CO—S—CH₃",
-      "explanation": "Tioéster derivado del ácido benzoico."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster",
-      "name": "Metanoato de metilo",
-      "synonyms": "Formiato de metilo",
-      "semiFormula": "H—COO—CH₃",
-      "explanation": "Éster más sencillo derivado del ácido fórmico y metanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster insaturado",
-      "name": "Metanoato de etenilo",
-      "synonyms": "Formiato de vinilo",
-      "semiFormula": "H—COO—CH=CH₂",
-      "explanation": "Ejercicio Unidad 13: grupo etenilo (vinilo) unido al oxígeno del éster."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster",
-      "name": "Etanoato de metilo",
-      "synonyms": "Acetato de metilo",
-      "semiFormula": "CH₃—COO—CH₃",
-      "explanation": "Éster derivado del ácido acético y metanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster",
-      "name": "Etanoato de etilo",
-      "synonyms": "Acetato de etilo",
-      "semiFormula": "CH₃—COO—CH₂—CH₃",
-      "explanation": "Éster derivado del ácido acético y etanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster",
-      "name": "Propanoato de butilo",
-      "synonyms": "Propionato de butilo",
-      "semiFormula": "CH₃—CH₂—COO—CH₂—CH₂—CH₂—CH₃",
-      "explanation": "Ejercicio Unidad 13: parte ácida de 3 carbonos y alcohol de 4 carbonos."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster ramificado",
-      "name": "Propanoato de 1-metiletilo",
-      "synonyms": "Propanoato de isopropilo / Propionato de isopropilo",
-      "semiFormula": "CH₃—CH₂—COO—CH(CH₃)₂",
-      "explanation": "Ejercicio Unidad 13: propanoato unido a un grupo isopropilo."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster ramificado",
-      "name": "2-Metilpropanoato de 2-metilpropilo",
-      "synonyms": "Isobutirato de isobutilo",
-      "semiFormula": "(CH₃)₂CH—COO—CH₂—CH(CH₃)₂",
-      "explanation": "Ejercicio Unidad 13: ácido isobutírico esterificado con alcohol isobutílico."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster aromático",
-      "name": "Benzoato de etilo",
-      "synonyms": "",
-      "semiFormula": "AROM-1-COOCH2CH3",
-      "explanation": "Éster del ácido benzoico y etanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Hidroxiéster aromático",
-      "name": "2-Hidroxibenzoato de metilo",
-      "synonyms": "Salicilato de metilo",
-      "semiFormula": "AROM-1-COOCH3-2-OH",
-      "explanation": "Éster metílico del ácido salicílico (aceite de gaulteria)."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster aromático",
-      "name": "Benzoato de metilo",
-      "synonyms": "Bencenocarboxilato de metilo",
-      "semiFormula": "C₆H₅—COO—CH₃",
-      "explanation": "Éster formado por esterificación del ácido benzoico con metanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster aromático",
-      "name": "Benzoato de propilo",
-      "synonyms": "Bencenocarboxilato de propilo",
-      "semiFormula": "C₆H₅—COO—CH₂—CH₂—CH₃",
-      "explanation": "Éster obtenido al reaccionar ácido benzoico o cloruro de benzoílo con 1-propanol."
-    },
-    {
-      "group": "esteres",
-      "badge": "Éster aromático medicinal",
-      "name": "Ácido 2-acetoxibenzoico",
-      "synonyms": "Ácido acetilsalicílico / Aspirina",
-      "semiFormula": "AROM-1-COOH-2-OCOCH3",
-      "explanation": "Producto de la acetilación del grupo fenólico del ácido salicílico con anhídrido acético."
-    },
-    {
-      "group": "anhidridos",
-      "badge": "Anhídrido de ácido",
-      "name": "Anhídrido etanoico",
-      "synonyms": "Anhídrido acético",
-      "semiFormula": "CH₃—CO—O—CO—CH₃",
-      "explanation": "Formado por condensación de dos moléculas de ácido acético."
-    },
-    {
-      "group": "anhidridos",
-      "badge": "Anhídrido simétrico",
-      "name": "Anhídrido metanoico",
-      "synonyms": "Anhídrido fórmico",
-      "semiFormula": "H—CO—O—CO—H",
-      "explanation": "Anhídrido derivado de dos moléculas de ácido metanoico."
-    },
-    {
-      "group": "anhidridos",
-      "badge": "Anhídrido mixto",
-      "name": "Anhídrido etanoico propanoico",
-      "synonyms": "Anhídrido acético propiónico",
-      "semiFormula": "CH₃—CO—O—CO—CH₂—CH₃",
-      "explanation": "Anhídrido mixto nombrado citando ambos ácidos en orden alfabético."
-    },
-    {
-      "group": "anhidridos",
-      "badge": "Anhídrido aromático",
-      "name": "Anhídrido benzoico",
-      "synonyms": "Anhídrido bencenocarboxílico",
-      "semiFormula": "C₆H₅—CO—O—CO—C₆H₅",
-      "explanation": "Anhídrido simétrico derivado del ácido benzoico."
-    },
-    {
       "group": "acidos",
       "badge": "Ácido monocarboxílico",
       "name": "Ácido metanoico",
@@ -2518,22 +2255,6 @@
     },
     {
       "group": "acidos",
-      "badge": "Ácido graso saturado",
-      "name": "Ácido hexadecanoico",
-      "synonyms": "Ácido palmítico (C16:0)",
-      "semiFormula": "CH₃—(CH₂)₁₄—COOH",
-      "explanation": "Ácido graso saturado de 16 carbonos."
-    },
-    {
-      "group": "acidos",
-      "badge": "Ácido graso saturado",
-      "name": "Ácido octadecanoico",
-      "synonyms": "Ácido esteárico (C18:0)",
-      "semiFormula": "CH₃—(CH₂)₁₆—COOH",
-      "explanation": "Ácido graso saturado de 18 carbonos."
-    },
-    {
-      "group": "acidos",
       "badge": "Ácido insaturado",
       "name": "Ácido 2-metil-3-pentenoico",
       "synonyms": "",
@@ -2563,14 +2284,6 @@
       "synonyms": "Ácido tricloroacético",
       "semiFormula": "CCl₃—COOH",
       "explanation": "Tres átomos de cloro ejercen fuerte efecto –I estabilizando el anión carboxilato."
-    },
-    {
-      "group": "acidos",
-      "badge": "Aminoácido",
-      "name": "Ácido aminoetanoico",
-      "synonyms": "Glicina / Glicocola",
-      "semiFormula": "H₂N—CH₂—COOH",
-      "explanation": "Aminoácido más simple (aquiral)."
     },
     {
       "group": "acidos",
@@ -2702,54 +2415,6 @@
     },
     {
       "group": "acidos",
-      "badge": "Sal carboxilato",
-      "name": "Etanoato de sodio",
-      "synonyms": "Acetato de sodio",
-      "semiFormula": "CH₃—COONa",
-      "explanation": "Ejercicio Unidad 13: sal sódica del ácido etanoico."
-    },
-    {
-      "group": "acidos",
-      "badge": "Sal carboxilato",
-      "name": "Metanoato de plata",
-      "synonyms": "Formiato de plata",
-      "semiFormula": "H—COOAg",
-      "explanation": "Ejercicio Unidad 13: sal de plata del ácido metanoico."
-    },
-    {
-      "group": "acidos",
-      "badge": "Sal carboxilato aromática",
-      "name": "Benzoato de potasio",
-      "synonyms": "",
-      "semiFormula": "AROM-1-COOK",
-      "explanation": "Ejercicio Unidad 13: sal potásica del ácido benzoico."
-    },
-    {
-      "group": "acidos",
-      "badge": "Sal halogenada",
-      "name": "2-Clorobutanoato de sodio",
-      "synonyms": "",
-      "semiFormula": "CH₃—CH₂—CH(Cl)—COONa",
-      "explanation": "Ejercicio Unidad 13: sal sódica con cloro en posición α (C2)."
-    },
-    {
-      "group": "acidos",
-      "badge": "Sal de amonio",
-      "name": "4-Metilpentanoato de amonio",
-      "synonyms": "",
-      "semiFormula": "(CH₃)₂CH—CH₂—CH₂—COONH₄",
-      "explanation": "Ejercicio Unidad 13: carboxilato de amonio."
-    },
-    {
-      "group": "acidos",
-      "badge": "Sal insaturada",
-      "name": "3-Butenoato de cesio",
-      "synonyms": "",
-      "semiFormula": "CH₂=CH—CH₂—COOCs",
-      "explanation": "Ejercicio Unidad 13: sal de cesio de un ácido carboxílico insaturado."
-    },
-    {
-      "group": "acidos",
       "badge": "Hidroxiácido aromático",
       "name": "Ácido 3-hidroxibenzoico",
       "synonyms": "Ácido m-hidroxibenzoico",
@@ -2803,6 +2468,630 @@
       "synonyms": "Ácido tereftálico / Ácido p-ftálico",
       "semiFormula": "AROM-1,4-COOH",
       "explanation": "Anillo bencénico con dos grupos carboxilo en posiciones opuestas 1,4; monómero del poliéster PET."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal carboxilato",
+      "name": "Etanoato de sodio",
+      "synonyms": "Acetato de sodio",
+      "semiFormula": "CH₃—COONa",
+      "explanation": "Ejercicio Unidad 13: sal sódica del ácido etanoico."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal carboxilato",
+      "name": "Metanoato de plata",
+      "synonyms": "Formiato de plata",
+      "semiFormula": "H—COOAg",
+      "explanation": "Ejercicio Unidad 13: sal de plata del ácido metanoico."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal carboxilato aromática",
+      "name": "Benzoato de potasio",
+      "synonyms": "",
+      "semiFormula": "AROM-1-COOK",
+      "explanation": "Ejercicio Unidad 13: sal potásica del ácido benzoico."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal halogenada",
+      "name": "2-Clorobutanoato de sodio",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH₂—CH(Cl)—COONa",
+      "explanation": "Ejercicio Unidad 13: sal sódica con cloro en posición α (C2)."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal de amonio",
+      "name": "4-Metilpentanoato de amonio",
+      "synonyms": "",
+      "semiFormula": "(CH₃)₂CH—CH₂—CH₂—COONH₄",
+      "explanation": "Ejercicio Unidad 13: carboxilato de amonio."
+    },
+    {
+      "group": "sales_acidos",
+      "badge": "Sal insaturada",
+      "name": "3-Butenoato de cesio",
+      "synonyms": "",
+      "semiFormula": "CH₂=CH—CH₂—COOCs",
+      "explanation": "Ejercicio Unidad 13: sal de cesio de un ácido carboxílico insaturado."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Metanoato de metilo",
+      "synonyms": "Formiato de metilo",
+      "semiFormula": "H—COO—CH₃",
+      "explanation": "Éster más sencillo derivado del ácido fórmico y metanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster insaturado",
+      "name": "Metanoato de etenilo",
+      "synonyms": "Formiato de vinilo",
+      "semiFormula": "H—COO—CH=CH₂",
+      "explanation": "Ejercicio Unidad 13: grupo etenilo (vinilo) unido al oxígeno del éster."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Etanoato de metilo",
+      "synonyms": "Acetato de metilo",
+      "semiFormula": "CH₃—COO—CH₃",
+      "explanation": "Éster derivado del ácido acético y metanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Etanoato de etilo",
+      "synonyms": "Acetato de etilo",
+      "semiFormula": "CH₃—COO—CH₂—CH₃",
+      "explanation": "Éster derivado del ácido acético y etanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster",
+      "name": "Propanoato de butilo",
+      "synonyms": "Propionato de butilo",
+      "semiFormula": "CH₃—CH₂—COO—CH₂—CH₂—CH₂—CH₃",
+      "explanation": "Ejercicio Unidad 13: parte ácida de 3 carbonos y alcohol de 4 carbonos."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster ramificado",
+      "name": "Propanoato de 1-metiletilo",
+      "synonyms": "Propanoato de isopropilo / Propionato de isopropilo",
+      "semiFormula": "CH₃—CH₂—COO—CH(CH₃)₂",
+      "explanation": "Ejercicio Unidad 13: propanoato unido a un grupo isopropilo."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster ramificado",
+      "name": "2-Metilpropanoato de 2-metilpropilo",
+      "synonyms": "Isobutirato de isobutilo",
+      "semiFormula": "(CH₃)₂CH—COO—CH₂—CH(CH₃)₂",
+      "explanation": "Ejercicio Unidad 13: ácido isobutírico esterificado con alcohol isobutílico."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático",
+      "name": "Benzoato de etilo",
+      "synonyms": "",
+      "semiFormula": "AROM-1-COOCH2CH3",
+      "explanation": "Éster del ácido benzoico y etanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Hidroxiéster aromático",
+      "name": "2-Hidroxibenzoato de metilo",
+      "synonyms": "Salicilato de metilo",
+      "semiFormula": "AROM-1-COOCH3-2-OH",
+      "explanation": "Éster metílico del ácido salicílico (aceite de gaulteria)."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático",
+      "name": "Benzoato de metilo",
+      "synonyms": "Bencenocarboxilato de metilo",
+      "semiFormula": "C₆H₅—COO—CH₃",
+      "explanation": "Éster formado por esterificación del ácido benzoico con metanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático",
+      "name": "Benzoato de propilo",
+      "synonyms": "Bencenocarboxilato de propilo",
+      "semiFormula": "C₆H₅—COO—CH₂—CH₂—CH₃",
+      "explanation": "Éster obtenido al reaccionar ácido benzoico o cloruro de benzoílo con 1-propanol."
+    },
+    {
+      "group": "esteres",
+      "badge": "Éster aromático medicinal",
+      "name": "Ácido 2-acetoxibenzoico",
+      "synonyms": "Ácido acetilsalicílico / Aspirina",
+      "semiFormula": "AROM-1-COOH-2-OCOCH3",
+      "explanation": "Producto de la acetilación del grupo fenólico del ácido salicílico con anhídrido acético."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida primaria",
+      "name": "Etanamida",
+      "synonyms": "Acetamida",
+      "semiFormula": "CH₃—CO—NH₂",
+      "explanation": "Amida primaria derivada del ácido acético."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria",
+      "name": "N-Etiletanamida",
+      "synonyms": "N-Etilacetamida",
+      "semiFormula": "CH₃—CO—NH—CH₂—CH₃",
+      "explanation": "Amida N-monosustituida."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria",
+      "name": "N,N-Dimetilmetanamida",
+      "synonyms": "N,N-Dimetilformamida (DMF)",
+      "semiFormula": "H—CO—N(CH₃)₂",
+      "explanation": "Solvente polar aprótico clásico para reacciones SN2."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida aromática",
+      "name": "N-Feniletanamida",
+      "synonyms": "Acetanilida",
+      "semiFormula": "AROM-1-NHCOCH3",
+      "explanation": "Producto de acetilación de la anilina."
+    },
+    {
+      "group": "amidas",
+      "badge": "Derivado carbónico",
+      "name": "Urea",
+      "synonyms": "Carbodiamida / Diamida del ácido carbónico",
+      "semiFormula": "H₂N—CO—NH₂",
+      "explanation": "Producto final del metabolismo nitrogenado excretado en la orina."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida primaria aromática",
+      "name": "Benzamida",
+      "synonyms": "Bencenocarboxamida",
+      "semiFormula": "AROM-1-CONH2",
+      "explanation": "Amida primaria derivada del ácido benzoico (–CONH₂)."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida secundaria aromática",
+      "name": "N-Metilbenzamida",
+      "synonyms": "N-Metilbencenocarboxamida",
+      "semiFormula": "C₆H₅—CO—NH—CH₃",
+      "explanation": "Amida secundaria con un sustituyente metilo sobre el nitrógeno."
+    },
+    {
+      "group": "amidas",
+      "badge": "Amida terciaria aromática",
+      "name": "N,N-Dimetilbenzamida",
+      "synonyms": "N,N-Dimetilbencenocarboxamida",
+      "semiFormula": "C₆H₅—CO—N(CH₃)₂",
+      "explanation": "Amida terciaria obtenida al tratar ácido benzoico o cloruro de benzoílo con dimetilamina."
+    },
+    {
+      "group": "amidas",
+      "badge": "Anilida farmacéutica",
+      "name": "N-(4-Hidroxifenil)etanamida",
+      "synonyms": "Paracetamol / Acetaminofén / p-Hidroxiacetanilida",
+      "semiFormula": "AROM-1-OH-4-NHCOCH3",
+      "explanation": "Producto de la N-acilación selectiva del p-aminofenol con anhídrido acético."
+    },
+    {
+      "group": "anhidridos",
+      "badge": "Anhídrido de ácido",
+      "name": "Anhídrido etanoico",
+      "synonyms": "Anhídrido acético",
+      "semiFormula": "CH₃—CO—O—CO—CH₃",
+      "explanation": "Formado por condensación de dos moléculas de ácido acético."
+    },
+    {
+      "group": "anhidridos",
+      "badge": "Anhídrido simétrico",
+      "name": "Anhídrido metanoico",
+      "synonyms": "Anhídrido fórmico",
+      "semiFormula": "H—CO—O—CO—H",
+      "explanation": "Anhídrido derivado de dos moléculas de ácido metanoico."
+    },
+    {
+      "group": "anhidridos",
+      "badge": "Anhídrido mixto",
+      "name": "Anhídrido etanoico propanoico",
+      "synonyms": "Anhídrido acético propiónico",
+      "semiFormula": "CH₃—CO—O—CO—CH₂—CH₃",
+      "explanation": "Anhídrido mixto nombrado citando ambos ácidos en orden alfabético."
+    },
+    {
+      "group": "anhidridos",
+      "badge": "Anhídrido aromático",
+      "name": "Anhídrido benzoico",
+      "synonyms": "Anhídrido bencenocarboxílico",
+      "semiFormula": "C₆H₅—CO—O—CO—C₆H₅",
+      "explanation": "Anhídrido simétrico derivado del ácido benzoico."
+    },
+    {
+      "group": "haluros_acilo",
+      "badge": "Halogenuro de acilo",
+      "name": "Cloruro de etanoílo",
+      "synonyms": "Cloruro de acetilo",
+      "semiFormula": "CH₃—CO—Cl",
+      "explanation": "Derivado de ácido más reactivo."
+    },
+    {
+      "group": "haluros_acilo",
+      "badge": "Halogenuro de acilo aromático",
+      "name": "Cloruro de benzoílo",
+      "synonyms": "",
+      "semiFormula": "AROM-1-COCl",
+      "explanation": "Utilizado en reacciones de acilación de Friedel-Crafts."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "Aminoácido",
+      "name": "Ácido aminoetanoico",
+      "synonyms": "Glicina / Glicocola",
+      "semiFormula": "H₂N—CH₂—COOH",
+      "explanation": "Aminoácido más simple (aquiral)."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido apolar",
+      "name": "Ácido 2-aminopropanoico",
+      "synonyms": "Alanina (Ala)",
+      "semiFormula": "CH₃—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido quiral con cadena lateral metilo (–CH₃)."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido ramificado",
+      "name": "Ácido 2-amino-3-metilbutanoico",
+      "synonyms": "Valina (Val)",
+      "semiFormula": "(CH₃)₂CH—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial con grupo isopropilo en C3."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido hidroxilado",
+      "name": "Ácido 2-amino-3-hidroxipropanoico",
+      "synonyms": "Serina (Ser)",
+      "semiFormula": "HO—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido polar neutro con grupo hidroxilo en su cadena lateral."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido azufrado",
+      "name": "Ácido 2-amino-3-mercaptopropanoico",
+      "synonyms": "Cisteína (Cys)",
+      "semiFormula": "HS—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido con grupo tiol (–SH) capaz de formar puentes disulfuro (cistina)."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido aromático",
+      "name": "Ácido 2-amino-3-fenilpropanoico",
+      "synonyms": "Fenilalanina (Phe)",
+      "semiFormula": "C₆H₅—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido esencial aromático con grupo bencilo."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido ácido",
+      "name": "Ácido 2-aminobutanodioico",
+      "synonyms": "Ácido aspártico (Asp) / Aspartato",
+      "semiFormula": "HOOC—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido dicarboxílico con cadena lateral ácida."
+    },
+    {
+      "group": "aminoacidos",
+      "badge": "α-Aminoácido ácido",
+      "name": "Ácido 2-aminopentanodioico",
+      "synonyms": "Ácido glutámico (Glu) / Glutamato",
+      "semiFormula": "HOOC—CH₂—CH₂—CH(NH₂)—COOH",
+      "explanation": "α-Aminoácido dicarboxílico de 5 carbonos."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldopentosa)",
+      "name": "D-Ribosa",
+      "synonyms": "Ribosa",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "explanation": "Aldopentosa de 5 carbonos componente estructural del ARN y ATP."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldohexosa)",
+      "name": "D-Glucosa",
+      "synonyms": "Dextrosa / Glucosa",
+      "semiFormula": "HO—CH₂—(CHOH)₄—CHO",
+      "explanation": "Aldohexosa más abundante en la naturaleza; forma anillos de piranosa en solución."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Aldohexosa)",
+      "name": "D-Galactosa",
+      "synonyms": "Galactosa",
+      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "explanation": "Epímero en C4 de la D-glucosa."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Monosacárido (Cetohexosa)",
+      "name": "D-Fructosa",
+      "synonyms": "Levulosa / Fructosa",
+      "semiFormula": "HO—CH₂—(CHOH)₃—CO—CH₂—OH",
+      "explanation": "Cetohexosa con grupo cetona en C2; forma anillos de furanosa y da positiva la prueba de Seliwanoff."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Disacárido reductor",
+      "name": "Maltosa",
+      "synonyms": "Azúcar de malta (α-D-Glucopiranosil-(1→4)-D-glucopiranosa)",
+      "semiFormula": "Glucosa—α(1→4)—Glucosa",
+      "explanation": "Disacárido formado por dos unidades de D-glucosa con enlace α(1→4); conserva un carbono anomérico libre (reductor)."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Disacárido reductor",
+      "name": "Lactosa",
+      "synonyms": "Azúcar de la leche (β-D-Galactopiranosil-(1→4)-D-glucopiranosa)",
+      "semiFormula": "Galactosa—β(1→4)—Glucosa",
+      "explanation": "Disacárido reductor formado por D-galactosa y D-glucosa unidas por enlace β(1→4)."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Disacárido NO reductor",
+      "name": "Sacarosa",
+      "synonyms": "Azúcar de caña (α-D-Glucopiranosil-(1→2)-β-D-fructofuranósido)",
+      "semiFormula": "Glucosa—α(1↔2)β—Fructosa",
+      "explanation": "Disacárido NO reductor porque ambos carbonos anoméricos (C1 de glucosa y C2 de fructosa) están comprometidos en el enlace glicosídico."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Polisacárido de reserva vegetal",
+      "name": "Almidón",
+      "synonyms": "Amilosa + Amilopectina",
+      "semiFormula": "[—Glucosa—α(1→4)—Glucosa—]ₙ",
+      "explanation": "Homopolisacárido de α-D-glucosa con enlaces α(1→4) lineales y ramificaciones α(1→6); da color azul intenso con Lugol."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Polisacárido de reserva animal",
+      "name": "Glucógeno",
+      "synonyms": "Almidón animal",
+      "semiFormula": "[—Glucosa—α(1→4) / α(1→6)—]ₙ",
+      "explanation": "Polímero muy ramificado de α-D-glucosa almacenado en hígado y músculo esquelético."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Polisacárido estructural",
+      "name": "Celulosa",
+      "synonyms": "Fibra vegetal",
+      "semiFormula": "[—Glucosa—β(1→4)—Glucosa—]ₙ",
+      "explanation": "Polímero lineal de β-D-glucosa con enlaces β(1→4) resistentes a la amilasa humana."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso saturado",
+      "name": "Ácido hexadecanoico",
+      "synonyms": "Ácido palmítico (C16:0)",
+      "semiFormula": "CH₃—(CH₂)₁₄—COOH",
+      "explanation": "Ácido graso saturado de 16 carbonos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso saturado",
+      "name": "Ácido octadecanoico",
+      "synonyms": "Ácido esteárico (C18:0)",
+      "semiFormula": "CH₃—(CH₂)₁₆—COOH",
+      "explanation": "Ácido graso saturado de 18 carbonos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso monoinsaturado",
+      "name": "Ácido cis-9-octadecenoico",
+      "synonyms": "Ácido oleico (C18:1 Δ9)",
+      "semiFormula": "CH₃—(CH₂)₇—CH=CH—(CH₂)₇—COOH",
+      "explanation": "Ácido graso insaturado ω-9 de 18 carbonos con doble enlace cis en C9."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Ácido graso poliinsaturado esencial",
+      "name": "Ácido cis,cis-9,12-octadecadienoico",
+      "synonyms": "Ácido linoleico (C18:2 Δ9,12)",
+      "semiFormula": "CH₃—(CH₂)₄—CH=CH—CH₂—CH=CH—(CH₂)₇—COOH",
+      "explanation": "Ácido graso esencial ω-6 de 18 carbonos."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Acilglicerol)",
+      "name": "Triestearato de glicerilo",
+      "synonyms": "Triestearina / Triacilglicerol",
+      "semiFormula": "Glicerol + 3 Ác. Esteárico (Triglicérido)",
+      "explanation": "Lípido simple formado por esterificación completa de los tres grupos –OH del glicerol con ácido esteárico."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido simple (Cera)",
+      "name": "Hexadecanoato de triacontilo",
+      "synonyms": "Palmitato de miricilo (Cera de abeja)",
+      "semiFormula": "CH₃—(CH₂)₁₄—COO—(CH₂)₂₉—CH₃",
+      "explanation": "Lípido simple resultante de la esterificación de un ácido graso de cadena larga con un alcohol monohidroxílico de cadena larga."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Glicerofosfolípido)",
+      "name": "Fosfatidilcolina",
+      "synonyms": "Lecitina (Glicerofosfolípido)",
+      "semiFormula": "Glicerol + 2 Ác. Grasos + Fosfato + Colina",
+      "explanation": "Lípido complejo anfipático mayoritario en las membranas celulares eucariotas."
+    },
+    {
+      "group": "lipidos",
+      "badge": "Lípido complejo (Esfingofosfolípido)",
+      "name": "Esfingomielina",
+      "synonyms": "Ceramida-1-fosfocolina",
+      "semiFormula": "Esfingosina + Ác. Graso + Fosfato + Colina",
+      "explanation": "Esfingofosfolípido abundante en la vaina de mielina de las neuronas (sin glicerol)."
+    },
+    {
+      "group": "nitrilos",
+      "badge": "Nitrilo",
+      "name": "Etanonitrilo",
+      "synonyms": "Acetonitrilo / Cianuro de metilo",
+      "semiFormula": "CH₃—C≡N",
+      "explanation": "Compuesto con grupo ciano (–C≡N)."
+    },
+    {
+      "group": "nitrilos",
+      "badge": "Nitrilo",
+      "name": "Butanonitrilo",
+      "synonyms": "Butironitrilo / Cianuro de propilo",
+      "semiFormula": "CH₃—CH₂—CH₂—C≡N",
+      "explanation": "Cadena de 4 carbonos incluyendo el carbono del grupo nitrilo."
+    },
+    {
+      "group": "nitrilos",
+      "badge": "Nitrilo aromático",
+      "name": "Benzonitrilo",
+      "synonyms": "Bencenocarbonitrilo / Cianuro de fenilo",
+      "semiFormula": "AROM-1-CN",
+      "explanation": "Grupo ciano (–C≡N) unido directamente al anillo bencénico."
+    },
+    {
+      "group": "imina",
+      "badge": "Imina primaria (Aldimina)",
+      "name": "Etilidenimina",
+      "synonyms": "Etanimina",
+      "semiFormula": "CH₃—CH=NH",
+      "explanation": "Producto de condensación entre etanal y amoníaco (enlace doble C=N)."
+    },
+    {
+      "group": "imina",
+      "badge": "Imina secundaria (Base de Schiff)",
+      "name": "N-Etiletilidenimina",
+      "synonyms": "N-Etiletanimina",
+      "semiFormula": "CH₃—CH=N—CH₂—CH₃",
+      "explanation": "Base de Schiff formada por condensación de etanal con etilamina."
+    },
+    {
+      "group": "imina",
+      "badge": "Imina aromática",
+      "name": "N-Fenilbencilidenimina",
+      "synonyms": "N-Bencilidenanilina",
+      "semiFormula": "C₆H₅—CH=N—C₆H₅",
+      "explanation": "Base de Schiff aromática obtenida a partir de benzaldehído y anilina."
+    },
+    {
+      "group": "tioesteres",
+      "badge": "Tioéster",
+      "name": "Etanotioato de metilo",
+      "synonyms": "Tioacetato de metilo",
+      "semiFormula": "CH₃—CO—S—CH₃",
+      "explanation": "Derivado azufrado de éster con grupo funcional R–COS–R' (sufijo -tioato de -ilo)."
+    },
+    {
+      "group": "tioesteres",
+      "badge": "Tioéster",
+      "name": "Etanotioato de etilo",
+      "synonyms": "Tioacetato de etilo",
+      "semiFormula": "CH₃—CO—S—CH₂—CH₃",
+      "explanation": "Análogo azufrado del acetato de etilo (modelo estructural de la Acetil-CoA)."
+    },
+    {
+      "group": "tioesteres",
+      "badge": "Tioéster aromático",
+      "name": "Bencenotioato de metilo",
+      "synonyms": "Tiobenzoato de metilo",
+      "semiFormula": "C₆H₅—CO—S—CH₃",
+      "explanation": "Tioéster derivado del ácido benzoico."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitroderivado aromático",
+      "name": "Nitrobenceno",
+      "synonyms": "Esencia de mirbana",
+      "semiFormula": "AROM-1-NO2",
+      "explanation": "Anillo bencénico con un grupo nitro (–NO₂), desactivante meta-dirigente."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitroderivado disustituido",
+      "name": "1,3-Dinitrobenceno",
+      "synonyms": "m-Dinitrobenceno",
+      "semiFormula": "AROM-1,3-NO2",
+      "explanation": "Producto mayoritario de la nitración del nitrobenceno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Aromático disustituido",
+      "name": "1-Etil-2-nitrobenceno",
+      "synonyms": "o-Etilnitrobenceno",
+      "semiFormula": "AROM-1-CH2CH3-2-NO2",
+      "explanation": "Producto orto de la nitración del etilbenceno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Aromático disustituido",
+      "name": "1-Etil-4-nitrobenceno",
+      "synonyms": "p-Etilnitrobenceno",
+      "semiFormula": "AROM-1-CH2CH3-4-NO2",
+      "explanation": "Producto para mayoritario de la nitración del etilbenceno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Derivado del tolueno",
+      "name": "1-Metil-2-nitrobenceno",
+      "synonyms": "o-Nitrotolueno / 2-Nitrotolueno",
+      "semiFormula": "AROM-1-CH3-2-NO2",
+      "explanation": "Isómero orto obtenido al nitrar el tolueno con mezcla sulfonítrica."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Derivado del tolueno",
+      "name": "1-Metil-4-nitrobenceno",
+      "synonyms": "p-Nitrotolueno / 4-Nitrotolueno",
+      "semiFormula": "AROM-1-CH3-4-NO2",
+      "explanation": "Isómero para mayoritario de la nitración del tolueno."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Aromático polisustituido",
+      "name": "2-Metil-1,3,5-trinitrobenceno",
+      "synonyms": "2,4,6-Trinitrotolueno / TNT",
+      "semiFormula": "AROM-1-CH3-2,4,6-NO2",
+      "explanation": "Derivado trinitrado del tolueno en las posiciones orto y para respecto al metilo."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Derivado del antraceno",
+      "name": "1,5-Dinitroantraceno",
+      "synonyms": "",
+      "semiFormula": "ANTRACENO-1,5-NO2",
+      "explanation": "Antraceno disustituido con grupos nitro en los vértices opuestos α (C1 y C5)."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitrocompuesto alifático",
+      "name": "Nitrometano",
+      "synonyms": "",
+      "semiFormula": "CH₃—NO₂",
+      "explanation": "Nitroalcano más simple (grupo funcional –NO₂ siempre se nombra como prefijo nitro-)."
+    },
+    {
+      "group": "nitrocompuestos",
+      "badge": "Nitrocompuesto alifático",
+      "name": "2-Nitropropano",
+      "synonyms": "",
+      "semiFormula": "CH₃—CH(NO₂)—CH₃",
+      "explanation": "Grupo nitro en C2 de una cadena de propano."
     },
     {
       "group": "azoderivados",
