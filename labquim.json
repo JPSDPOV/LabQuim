@@ -263,99 +263,148 @@
     "groups": [
       {
         "id": "alcanos",
-        "label": "1. Alcanos"
+        "label": "1. Alcanos",
+        "tier": "primary"
       },
       {
         "id": "cicloalcanos",
-        "label": "2. Cicloalcanos"
+        "label": "2. Cicloalcanos",
+        "tier": "primary"
       },
       {
         "id": "alquenos",
-        "label": "3. Alquenos"
+        "label": "3. Alquenos",
+        "tier": "primary"
       },
       {
         "id": "alquinos",
-        "label": "4. Alquinos"
+        "label": "4. Alquinos",
+        "tier": "primary"
       },
       {
         "id": "aromaticos",
-        "label": "5. Hidrocarburos aromáticos"
+        "label": "5. Hidrocarburos aromáticos y derivados",
+        "tier": "primary"
       },
       {
         "id": "haluros",
-        "label": "6. Haluros o Halogenuros"
-      },
-      {
-        "id": "nitrocompuestos",
-        "label": "7. Nitrocompuestos"
-      },
-      {
-        "id": "eteres",
-        "label": "8. Éteres"
-      },
-      {
-        "id": "tioeteres",
-        "label": "9. Tioéteres (Sulfuros)"
-      },
-      {
-        "id": "aminas",
-        "label": "10. Aminas"
-      },
-      {
-        "id": "imina",
-        "label": "11. Iminas"
-      },
-      {
-        "id": "tioles",
-        "label": "12. Tioles"
-      },
-      {
-        "id": "fenoles",
-        "label": "13. Fenoles"
+        "label": "6. Halogenuros de alquilo",
+        "tier": "primary"
       },
       {
         "id": "alcoholes",
-        "label": "14. Alcoholes"
+        "label": "7. Alcoholes",
+        "tier": "primary"
       },
       {
-        "id": "cetonas",
-        "label": "15. Cetonas"
+        "id": "fenoles",
+        "label": "8. Fenoles",
+        "tier": "primary"
+      },
+      {
+        "id": "eteres",
+        "label": "9. Éteres",
+        "tier": "primary"
+      },
+      {
+        "id": "aminas",
+        "label": "10. Aminas",
+        "tier": "primary"
+      },
+      {
+        "id": "tioles",
+        "label": "11. Tioles",
+        "tier": "primary"
+      },
+      {
+        "id": "tioeteres",
+        "label": "12. Tioéteres",
+        "tier": "primary"
+      },
+      {
+        "id": "heterociclos_no_arom",
+        "label": "13. Compuestos heterociclos no aromáticos (O, N y S)",
+        "tier": "primary"
       },
       {
         "id": "aldehidos",
-        "label": "16. Aldehídos"
+        "label": "14. Aldehídos",
+        "tier": "primary"
       },
       {
-        "id": "nitrilos",
-        "label": "17. Nitrilos"
-      },
-      {
-        "id": "amidas",
-        "label": "18. Amidas"
-      },
-      {
-        "id": "haluros_acilo",
-        "label": "19. Haluros de acilo / ácido"
-      },
-      {
-        "id": "tioesteres",
-        "label": "20. Tioésteres"
-      },
-      {
-        "id": "esteres",
-        "label": "21. Ésteres"
-      },
-      {
-        "id": "anhidridos",
-        "label": "22. Anhídridos"
+        "id": "cetonas",
+        "label": "15. Cetonas",
+        "tier": "primary"
       },
       {
         "id": "acidos",
-        "label": "23. Ácidos Carboxílicos"
+        "label": "16. Ácidos carboxílicos (hidroxiácidos y cetoácidos)",
+        "tier": "primary"
+      },
+      {
+        "id": "sales_acidos",
+        "label": "17. Sales de ácidos orgánicos",
+        "tier": "primary"
+      },
+      {
+        "id": "esteres",
+        "label": "18. Ésteres",
+        "tier": "primary"
+      },
+      {
+        "id": "amidas",
+        "label": "19. Amidas",
+        "tier": "primary"
+      },
+      {
+        "id": "anhidridos",
+        "label": "20. Anhídridos",
+        "tier": "primary"
+      },
+      {
+        "id": "haluros_acilo",
+        "label": "21. Halogenuros de ácidos",
+        "tier": "primary"
+      },
+      {
+        "id": "aminoacidos",
+        "label": "22. Aminoácidos",
+        "tier": "primary"
+      },
+      {
+        "id": "carbohidratos",
+        "label": "23. Hidratos de carbono (mono-, di- y polisacáridos)",
+        "tier": "primary"
+      },
+      {
+        "id": "lipidos",
+        "label": "24. Lípidos (ácidos grasos, acilgliceroles, ceras y fosfolípidos)",
+        "tier": "primary"
+      },
+      {
+        "id": "nitrilos",
+        "label": "25. Nitrilos",
+        "tier": "extra"
+      },
+      {
+        "id": "imina",
+        "label": "26. Iminas",
+        "tier": "extra"
+      },
+      {
+        "id": "tioesteres",
+        "label": "27. Tioésteres",
+        "tier": "extra"
+      },
+      {
+        "id": "nitrocompuestos",
+        "label": "28. Nitrocompuestos",
+        "tier": "extra"
       },
       {
         "id": "azoderivados",
-        "label": "24. Azoderivados"
+        "label": "29. Azoderivados",
+        "tier": "extra"
       }
     ]
   },
