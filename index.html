@@ -2428,8 +2428,8 @@
         function getNodeGeometry(a) {
             const mobile = isCompactMobile();
             if (a.ring === 'phenyl') {
-             const rad = mobile ? 38 : 30;
-             return { isPill: false, isRing: 'phenyl', r: rad, halfW: rad + 6, halfH: rad + 6, cfg: { bg: '#1e293b', border: '#a78bfa', text: '#f8fafc', r: rad } };
+             const rad = mobile ? 52 : 44;
+             return { isPill: false, isRing: 'phenyl', r: rad, halfW: rad + 4, halfH: rad + 4, cfg: { bg: '#0f172a', border: '#e2e8f0', text: '#f8fafc', r: rad } };
             }
             const rawText = String(a.el || '');
             const compactLen = rawText.replace(/[₀-₉⁰-⁹⁺⁻°•]/g, '').length;
@@ -2878,7 +2878,7 @@
             }
         }
 
-        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null) {
+        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null, inwardCenter = null) {
             const mobile = isCompactMobile();
             const dx = x2 - x1;
             const dy = y2 - y1;
@@ -2955,6 +2955,25 @@
                     const off = mobile ? 6.8 : 5.5;
                     html += `<line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${x2 - nx * off}" y2="${y2 - ny * off}" stroke="#ef4444" stroke-width="3.4" stroke-dasharray="5,5" opacity="${piOp}" stroke-linecap="round"/>`;
                 }
+            } else if (order === 2 && inwardCenter) {
+                // Doble enlace aromático: línea exterior completa + línea interior acortada hacia el centro del anillo
+                const midX = (x1 + drawX2) / 2;
+                const midY = (y1 + drawY2) / 2;
+                const toCx = inwardCenter.x - midX;
+                const toCy = inwardCenter.y - midY;
+                const dotSign = (nx * toCx + ny * toCy) >= 0 ? 1 : -1;
+                const inNx = nx * dotSign;
+                const inNy = ny * dotSign;
+                const inOff = mobile ? 9.5 : 7.8;
+                const trim = mobile ? 11 : 9;
+                const ix1 = x1 + ux * trim + inNx * inOff;
+                const iy1 = y1 + uy * trim + inNy * inOff;
+                const ix2 = drawX2 - ux * trim + inNx * inOff;
+                const iy2 = drawY2 - uy * trim + inNy * inOff;
+                html += `
+                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="#e2e8f0" stroke-width="${mobile ? 3.8 : 2.8}" stroke-linecap="round"/>
+                    <line x1="${ix1.toFixed(1)}" y1="${iy1.toFixed(1)}" x2="${ix2.toFixed(1)}" y2="${iy2.toFixed(1)}" stroke="#cbd5e1" stroke-width="${mobile ? 3.2 : 2.4}" stroke-linecap="round"/>
+                `;
             } else if (order === 2) {
                 const off = mobile ? 6.0 : 4.8;
                 let piStroke = '#a78bfa';
@@ -2998,23 +3017,30 @@
             const border = a.border || cfg.border;
             const textCol = a.text || cfg.text;
 
+            if (a.isVertex) {
+                return '';
+            }
             let html = `<g transform="translate(${a.x}, ${a.y})" opacity="${a.opacity !== undefined ? a.opacity : 1}">`;
             if (g.isRing === 'phenyl') {
              const R = g.r;
-             const rIn = R * 0.72;
+             const rIn = R * 0.76;
              const pts = [];
              for (let k = 0; k < 6; k++) {
-                 const ang = (Math.PI / 3) * k;
+                 const ang = -Math.PI / 2 + (Math.PI / 3) * k;
                  pts.push(`${(Math.cos(ang) * R).toFixed(1)},${(Math.sin(ang) * R).toFixed(1)}`);
              }
              if (a.highlight) {
                  html += `<circle cx="0" cy="0" r="${R + 7}" fill="none" stroke="${a.highlight}" stroke-width="2.2" opacity="0.65"/>`;
              }
-             html += `<polygon points="${pts.join(' ')}" fill="${bg}" stroke="${border}" stroke-width="2.6" stroke-linejoin="round"/>`;
+             html += `<polygon points="${pts.join(' ')}" fill="#0f172a" stroke="#e2e8f0" stroke-width="2.6" stroke-linejoin="round"/>`;
              for (const k of [0, 2, 4]) {
-                 const a1 = (Math.PI / 3) * k;
-                 const a2 = (Math.PI / 3) * (k + 1);
-                 html += `<line x1="${(Math.cos(a1) * rIn).toFixed(1)}" y1="${(Math.sin(a1) * rIn).toFixed(1)}" x2="${(Math.cos(a2) * rIn).toFixed(1)}" y2="${(Math.sin(a2) * rIn).toFixed(1)}" stroke="#a78bfa" stroke-width="2.3" stroke-linecap="round"/>`;
+                 const a1 = -Math.PI / 2 + (Math.PI / 3) * k;
+                 const a2 = -Math.PI / 2 + (Math.PI / 3) * (k + 1);
+                 const mx1 = Math.cos(a1) * rIn + (Math.cos(a2) - Math.cos(a1)) * 0.12 * rIn;
+                 const my1 = Math.sin(a1) * rIn + (Math.sin(a2) - Math.sin(a1)) * 0.12 * rIn;
+                 const mx2 = Math.cos(a2) * rIn - (Math.cos(a2) - Math.cos(a1)) * 0.12 * rIn;
+                 const my2 = Math.sin(a2) * rIn - (Math.sin(a2) - Math.sin(a1)) * 0.12 * rIn;
+                 html += `<line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="#cbd5e1" stroke-width="2.2" stroke-linecap="round"/>`;
              }
             } else if (g.isPill) {
                 const w = g.pillW;
@@ -4217,17 +4243,7 @@
                 name: 'Metoxibenceno',
                 synonyms: 'Anisol / Fenilmetiléter',
                 explanation: 'Grupo metoxi (–OCH₃) unido directamente a un anillo de benceno.',
-                scene: {
-                    atoms: [
-                        { id: 'Ph', el: 'Ph', ring: 'phenyl', x: 380, y: 195 },
-                        { id: 'O', el: 'O', x: 505, y: 195 },
-                        { id: 'Me', el: 'CH₃', x: 615, y: 195 }
-                    ],
-                    bonds: [
-                        { from: 'Ph', to: 'O', order: 1 },
-                        { from: 'O', to: 'Me', order: 1 }
-                    ]
-                }
+                semiFormula: 'AROM-1-OCH3'
             },
 
             // --- AMINAS ---
@@ -4520,9 +4536,9 @@
                 return { atoms, bonds };
             }
 
-            // 2. Anillos Aromáticos (AROM-...) con hexágono regular y todos sus sustituyentes
+            // 2. Anillos Aromáticos (AROM-...) en representación topológica limpia (hexágono con 3 dobles enlaces internos y sustituyentes en los vértices)
             if (s.startsWith('AROM-')) {
-                const cx = 460, cy = 185, R = 68;
+                const cx = 460, cy = 195, R = 64;
                 const verts = [];
                 const subCountsByPos = {};
 
@@ -4547,30 +4563,33 @@
                     const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
                     const vy = Math.round(cy + Math.sin(ang) * R);
                     verts.push({ vx, vy, ang });
-                    // En aromáticos: CH si no tiene sustituyente, C si tiene sustituyente
-                    const elLabel = (s === 'AROM-QUINONA' && (pos === 1 || pos === 4))
-                        ? 'C'
-                        : (subCountsByPos[pos] ? 'C' : 'CH');
-                    atoms.push({ id: `V${pos}`, el: elLabel, x: vx, y: vy, noValenceDots: true });
+                    // Vértice esquelético limpio (sin círculo CH ni puntos de valencia)
+                    atoms.push({ id: `V${pos}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
                 }
 
                 if (s === 'AROM-QUINONA') {
                     bonds.push(
-                        { from: 'V1', to: 'V2', order: 1 }, { from: 'V2', to: 'V3', order: 2 },
-                        { from: 'V3', to: 'V4', order: 1 }, { from: 'V4', to: 'V5', order: 1 },
-                        { from: 'V5', to: 'V6', order: 2 }, { from: 'V6', to: 'V1', order: 1 }
+                        { from: 'V1', to: 'V2', order: 1, ringPoly: true }, { from: 'V2', to: 'V3', order: 2, innerSide: 'left' },
+                        { from: 'V3', to: 'V4', order: 1, ringPoly: true }, { from: 'V4', to: 'V5', order: 1, ringPoly: true },
+                        { from: 'V5', to: 'V6', order: 2, innerSide: 'right' }, { from: 'V6', to: 'V1', order: 1, ringPoly: true }
                     );
                     atoms.push(
-                        { id: 'O1', el: 'O', x: cx, y: cy - R - 72, noValenceDots: true },
-                        { id: 'O4', el: 'O', x: cx, y: cy + R + 72, noValenceDots: true }
+                        { id: 'O1', el: 'O', x: cx, y: cy - R - 64, noValenceDots: true },
+                        { id: 'O4', el: 'O', x: cx, y: cy + R + 64, noValenceDots: true }
                     );
                     bonds.push({ from: 'V1', to: 'O1', order: 2 }, { from: 'V4', to: 'O4', order: 2 });
                     return { atoms, bonds };
                 }
 
+                // Hexágono exterior + 3 dobles enlaces internos (Kekulé) apuntando hacia el centro (cx, cy)
                 for (let k = 0; k < 6; k++) {
                     const next = (k + 1) % 6;
-                    bonds.push({ from: `V${k + 1}`, to: `V${next + 1}`, order: (k % 2 === 0) ? 2 : 1 });
+                    bonds.push({
+                        from: `V${k + 1}`,
+                        to: `V${next + 1}`,
+                        order: (k % 2 === 0) ? 2 : 1,
+                        inwardCenter: { x: cx, y: cy }
+                    });
                 }
 
                 const placedAtPos = {};
@@ -4594,12 +4613,30 @@
                         if (grp === 'OH') grp = 'HO';
                         if (grp === 'CH₃') grp = 'H₃C';
                     }
+
                     const spread = totalHere > 1 ? (idxHere === 0 ? -0.36 : 0.36) : 0;
-                    const sx = Math.round(cx + Math.cos(v.ang + spread) * ((R + 82) * 0.92));
-                    const sy = Math.round(cy + Math.sin(v.ang + spread) * (R + 82));
+                    const baseDist = R + 64;
+                    const sx = Math.round(cx + Math.cos(v.ang + spread) * (baseDist * 0.92));
+                    const sy = Math.round(cy + Math.sin(v.ang + spread) * baseDist);
                     const sid = `S_${sIdx}`;
-                    atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
-                    bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+
+                    // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente como en la imagen
+                    const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃)$/);
+                    if (mEtherSub && totalHere === 1) {
+                        const heteroEl = mEtherSub[1];
+                        const alkylEl = mEtherSub[2];
+                        atoms.push({ id: sid, el: heteroEl, x: sx, y: sy, noValenceDots: true });
+                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+
+                        const sx2 = Math.round(cx + Math.cos(v.ang) * ((baseDist + 66) * 0.92));
+                        const sy2 = Math.round(cy + Math.sin(v.ang) * (baseDist + 66));
+                        const sid2 = `S2_${sIdx}`;
+                        atoms.push({ id: sid2, el: alkylEl, x: sx2, y: sy2, noValenceDots: true });
+                        bonds.push({ from: sid, to: sid2, order: 1 });
+                    } else {
+                        atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                        bonds.push({ from: `V${pos}`, to: sid, order: 1 });
+                    }
                 });
                 return { atoms, bonds };
             }
@@ -4815,16 +4852,17 @@
                         const ang = startAng + ((2 * Math.PI) / sides) * k;
                         const vx = Math.round(rcx + Math.cos(ang) * (R * 0.90));
                         const vy = Math.round(rcy + Math.sin(ang) * R);
-                        // En el vértice k === 0 se une a la cadena principal (tiene 1 H menos)
-                        let vLabel = 'CH₂';
                         if (spec.aromatic) {
-                            vLabel = (k === 0) ? 'C' : 'CH';
-                        } else if (spec.doubleSide === k || (spec.doubleSide !== -1 && (spec.doubleSide + 1) % sides === k)) {
-                            vLabel = (k === 0) ? 'C' : 'CH';
+                            atoms.push({ id: `SR_${uniqueTag}_${k}`, el: '', isVertex: true, x: vx, y: vy, noValenceDots: true });
                         } else {
-                            vLabel = (k === 0) ? 'CH' : 'CH₂';
+                            let vLabel = 'CH₂';
+                            if (spec.doubleSide === k || (spec.doubleSide !== -1 && (spec.doubleSide + 1) % sides === k)) {
+                                vLabel = (k === 0) ? 'C' : 'CH';
+                            } else {
+                                vLabel = (k === 0) ? 'CH' : 'CH₂';
+                            }
+                            atoms.push({ id: `SR_${uniqueTag}_${k}`, el: vLabel, x: vx, y: vy, noValenceDots: true });
                         }
-                        atoms.push({ id: `SR_${uniqueTag}_${k}`, el: vLabel, x: vx, y: vy, noValenceDots: true });
                     }
 
                     for (let k = 0; k < sides; k++) {
@@ -4832,7 +4870,12 @@
                         let ord = 1;
                         if (spec.aromatic) ord = (k % 2 === 0) ? 2 : 1;
                         else if (spec.doubleSide === k) ord = 2;
-                        bonds.push({ from: `SR_${uniqueTag}_${k}`, to: `SR_${uniqueTag}_${next}`, order: ord });
+                        bonds.push({
+                            from: `SR_${uniqueTag}_${k}`,
+                            to: `SR_${uniqueTag}_${next}`,
+                            order: ord,
+                            inwardCenter: spec.aromatic ? { x: rcx, y: rcy } : null
+                        });
                     }
 
                     // Enlazar el carbono de la cadena con el vértice 0 del anillo
@@ -4917,10 +4960,15 @@
                 if (!bondsByAtom[b.to]) bondsByAtom[b.to] = [];
                 bondsByAtom[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
                 bondsByAtom[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
-                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null);
+                const mappedCenter = b.inwardCenter ? { x: mapStageX(b.inwardCenter.x), y: mapStageY(b.inwardCenter.y) } : null;
+                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter);
             });
 
             Object.values(atomMap).forEach(a => {
+                if (a.isVertex) {
+                    expand(a.x - 16, a.y - 16, a.x + 16, a.y + 16);
+                    return;
+                }
                 const geom = getNodeGeometry(a);
                 const valInfo = a.noValenceDots ? { pairs: [], singleDot: null } : computeAutomaticValenceDots(a, bondsByAtom[a.id] || []);
                 expand(a.x - geom.halfW - 14, a.y - geom.halfH - 14, a.x + geom.halfW + 14, a.y + geom.halfH + 14);
