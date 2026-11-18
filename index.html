@@ -382,11 +382,11 @@
 
                     <div id="nomCardWrapper" class="flashcard-perspective flex-1 min-w-0 h-[350px] sm:h-[400px] cursor-pointer select-none touch-pan-y">
                     <div id="nomCardInner" class="flashcard-inner">
-                        <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA -->
-                        <div class="flashcard-face bg-slate-950 border-2 border-slate-700/90 hover:border-cyan-500/60 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
-                            <div class="flex items-center justify-between text-[11px] font-bold text-slate-400">
+                        <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA (FONDO BLANCO Y TRAZOS NEGROS) -->
+                        <div class="flashcard-face bg-white border-2 border-slate-300 hover:border-cyan-500 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
+                            <div class="flex items-center justify-between text-[11px] font-bold text-slate-600">
                                 <span id="nomStereoHintBadge" class="hidden"></span>
-                                <span class="text-amber-300 animate-pulse">👆 Toca la tarjeta para ver el nombre</span>
+                                <span class="text-amber-600 font-extrabold">👆 Toca o desliza la tarjeta para ver el nombre</span>
                             </div>
 
                             <div class="flex-1 min-h-0 w-full flex items-center justify-center overflow-hidden">
@@ -395,8 +395,8 @@
                                 </svg>
                             </div>
 
-                            <div class="text-center text-xs text-slate-400 font-medium">
-                                Nombra el compuesto según las reglas IUPAC y toca la pantalla para comprobar
+                            <div class="text-center text-xs text-slate-600 font-semibold">
+                                Nombra el compuesto según las reglas IUPAC y toca o desliza para comprobar
                             </div>
                         </div>
 
@@ -2890,7 +2890,7 @@
             }
         }
 
-        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null, inwardCenter = null) {
+        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null, inwardCenter = null, lightTheme = false) {
             const mobile = isCompactMobile();
             const dx = x2 - x1;
             const dy = y2 - y1;
@@ -2900,7 +2900,7 @@
             const nx = -uy;
             const ny = ux;
 
-            let stroke = '#cbd5e1';
+            let stroke = lightTheme ? '#0f172a' : '#cbd5e1';
             let width = mobile ? 4.2 : 3.2;
             let dash = '';
             let glow = '';
@@ -2941,7 +2941,7 @@
                 const ex = drawX2 - ux * endOff;
                 const ey = drawY2 - uy * endOff;
                 const halfBase = mobile ? 9.5 : 7.5;
-                const fillCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : '#e2e8f0');
+                const fillCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : (lightTheme ? '#0f172a' : '#e2e8f0'));
                 html += `<polygon points="${sx.toFixed(1)},${sy.toFixed(1)} ${(ex + nx * halfBase).toFixed(1)},${(ey + ny * halfBase).toFixed(1)} ${(ex - nx * halfBase).toFixed(1)},${(ey - ny * halfBase).toFixed(1)}" fill="${fillCol}" ${state === 'forming' || state === 'breaking' ? 'fill-opacity="0.45" stroke="' + fillCol + '" stroke-width="1.8" ' + dash : ''}/>`;
             } else if (order === 1 && stereo === 'dash') {
                 const startOff = mobile ? 20 : 16;
@@ -2952,7 +2952,7 @@
                 const ey = drawY2 - uy * endOff;
                 const steps = 6;
                 const maxHalf = mobile ? 9.5 : 7.5;
-                const dashCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : '#cbd5e1');
+                const dashCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : (lightTheme ? '#0f172a' : '#cbd5e1'));
                 for (let k = 1; k <= steps; k++) {
                     const frac = k / (steps + 1);
                     const px = lerp(sx, ex, frac);
@@ -2982,13 +2982,14 @@
                 const iy1 = y1 + uy * trim + inNy * inOff;
                 const ix2 = drawX2 - ux * trim + inNx * inOff;
                 const iy2 = drawY2 - uy * trim + inNy * inOff;
+                const aromStroke = lightTheme ? '#0f172a' : '#e2e8f0';
                 html += `
-                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="#e2e8f0" stroke-width="${mobile ? 3.8 : 2.8}" stroke-linecap="round"/>
-                    <line x1="${ix1.toFixed(1)}" y1="${iy1.toFixed(1)}" x2="${ix2.toFixed(1)}" y2="${iy2.toFixed(1)}" stroke="#cbd5e1" stroke-width="${mobile ? 3.2 : 2.4}" stroke-linecap="round"/>
+                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${aromStroke}" stroke-width="${mobile ? 3.8 : 2.8}" stroke-linecap="round"/>
+                    <line x1="${ix1.toFixed(1)}" y1="${iy1.toFixed(1)}" x2="${ix2.toFixed(1)}" y2="${iy2.toFixed(1)}" stroke="${aromStroke}" stroke-width="${mobile ? 3.2 : 2.4}" stroke-linecap="round"/>
                 `;
             } else if (order === 2) {
                 const off = mobile ? 6.0 : 4.8;
-                let piStroke = '#a78bfa';
+                let piStroke = lightTheme ? '#0f172a' : '#a78bfa';
                 let piDash = '';
                 let piGlow = '';
                 if (state === 'breaking-pi' || state === 'breaking') {
@@ -3003,15 +3004,15 @@
                     piGlow = 'filter="drop-shadow(0 0 7px rgba(16,185,129,0.8))"';
                 }
                 html += `
-                    <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="#cbd5e1" stroke-width="${mobile ? 4.2 : 3.2}" stroke-linecap="round"/>
+                    <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${lightTheme ? '#0f172a' : '#cbd5e1'}" stroke-width="${mobile ? 4.2 : 3.2}" stroke-linecap="round"/>
                     <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 4.6 : 3.6}" ${piDash} ${piGlow} stroke-linecap="round"/>
                 `;
             } else if (order === 3) {
                 const off = mobile ? 7.6 : 6.2;
-                const piStroke = (state === 'breaking-pi' || state === 'breaking') ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : '#38bdf8');
+                const piStroke = (state === 'breaking-pi' || state === 'breaking') ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : (lightTheme ? '#0f172a' : '#38bdf8'));
                 const piDash = (state === 'breaking-pi' || state === 'breaking') ? 'stroke-dasharray="6,5"' : '';
                 html += `
-                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="#cbd5e1" stroke-width="${mobile ? 4.0 : 3.2}" stroke-linecap="round"/>
+                    <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${lightTheme ? '#0f172a' : '#cbd5e1'}" stroke-width="${mobile ? 4.0 : 3.2}" stroke-linecap="round"/>
                     <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 3.5 : 2.8}" ${piDash} stroke-linecap="round"/>
                     <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${mobile ? 3.5 : 2.8}" ${piDash} stroke-linecap="round"/>
                 `;
@@ -3025,9 +3026,9 @@
             const mobile = isCompactMobile();
             const g = geom || getNodeGeometry(a);
             const cfg = g.cfg;
-            const bg = a.bg || cfg.bg;
-            const border = a.border || cfg.border;
-            const textCol = a.text || cfg.text;
+            const bg = a.lightTheme ? '#ffffff' : (a.bg || cfg.bg);
+            const border = a.lightTheme ? '#0f172a' : (a.border || cfg.border);
+            const textCol = a.lightTheme ? '#0f172a' : (a.text || cfg.text);
 
             if (a.isVertex) {
                 return '';
@@ -3044,7 +3045,9 @@
              if (a.highlight) {
                  html += `<circle cx="0" cy="0" r="${R + 7}" fill="none" stroke="${a.highlight}" stroke-width="2.2" opacity="0.65"/>`;
              }
-             html += `<polygon points="${pts.join(' ')}" fill="#0f172a" stroke="#e2e8f0" stroke-width="2.6" stroke-linejoin="round"/>`;
+             const phFill = a.lightTheme ? '#ffffff' : '#0f172a';
+             const phStroke = a.lightTheme ? '#0f172a' : '#e2e8f0';
+             html += `<polygon points="${pts.join(' ')}" fill="${phFill}" stroke="${phStroke}" stroke-width="2.6" stroke-linejoin="round"/>`;
              for (const k of [0, 2, 4]) {
                  const a1 = -Math.PI / 2 + (Math.PI / 3) * k;
                  const a2 = -Math.PI / 2 + (Math.PI / 3) * (k + 1);
@@ -3052,7 +3055,7 @@
                  const my1 = Math.sin(a1) * rIn + (Math.sin(a2) - Math.sin(a1)) * 0.12 * rIn;
                  const mx2 = Math.cos(a2) * rIn - (Math.cos(a2) - Math.cos(a1)) * 0.12 * rIn;
                  const my2 = Math.sin(a2) * rIn - (Math.sin(a2) - Math.sin(a1)) * 0.12 * rIn;
-                 html += `<line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="#cbd5e1" stroke-width="2.2" stroke-linecap="round"/>`;
+                 html += `<line x1="${mx1.toFixed(1)}" y1="${my1.toFixed(1)}" x2="${mx2.toFixed(1)}" y2="${my2.toFixed(1)}" stroke="${phStroke}" stroke-width="2.2" stroke-linecap="round"/>`;
              }
             } else if (g.isPill) {
                 const w = g.pillW;
@@ -4657,6 +4660,81 @@
                 return { atoms, bonds };
             }
 
+            // 2b. Heterociclos (HETERO-3-O, HETERO-5-O, HETERO-6-N, etc.) dibujados como polígonos reales con el heteroátomo en el vértice superior
+            const mHet = s.match(/^HETERO-(\d+)-([A-Za-z0-9]+)(.*)$/i);
+            if (mHet) {
+                const sides = Math.min(8, Math.max(3, parseInt(mHet[1], 10)));
+                const heteroEl = mHet[2]
+                    .replace(/NH2/g, 'NH₂')
+                    .replace(/CH3/g, 'CH₃');
+                const rest = (mHet[3] || '').replace(/^-+/, '');
+                const cx = 460, cy = 190, R = sides <= 4 ? 72 : 82;
+                const verts = [];
+
+                const parsedSubs = [];
+                const subCountsByPos = {};
+                if (rest) {
+                    const parts = rest.split(/-(?=[0-9]+(?:,[0-9]+)*-)/);
+                    parts.forEach(part => {
+                        const dashIdx = part.indexOf('-');
+                        const posStr = dashIdx === -1 ? '2' : part.slice(0, dashIdx);
+                        const rawGrp = dashIdx === -1 ? part : part.slice(dashIdx + 1);
+                        posStr.split(',').map(Number).forEach(pos => {
+                            subCountsByPos[pos] = (subCountsByPos[pos] || 0) + 1;
+                            parsedSubs.push({ pos, rawGrp });
+                        });
+                    });
+                }
+
+                for (let k = 0; k < sides; k++) {
+                    const pos = k + 1; // pos 1 es el heteroátomo (arriba), pos 2..sides son los carbonos
+                    const ang = -Math.PI / 2 + ((2 * Math.PI) / sides) * k;
+                    const vx = Math.round(cx + Math.cos(ang) * (R * 0.90));
+                    const vy = Math.round(cy + Math.sin(ang) * R);
+                    verts.push({ vx, vy, ang });
+
+                    if (pos === 1) {
+                        atoms.push({ id: `H_V1`, el: heteroEl, x: vx, y: vy, noValenceDots: true });
+                    } else {
+                        const subsHere = subCountsByPos[pos] || 0;
+                        const hCount = Math.max(0, 2 - subsHere);
+                        const nodeLabel = hCount === 2 ? 'CH₂' : (hCount === 1 ? 'CH' : 'C');
+                        atoms.push({ id: `H_V${pos}`, el: nodeLabel, x: vx, y: vy, noValenceDots: true });
+                    }
+                }
+
+                for (let k = 0; k < sides; k++) {
+                    const next = (k + 1) % sides;
+                    bonds.push({ from: `H_V${k + 1}`, to: `H_V${next + 1}`, order: 1 });
+                }
+
+                const placedAtPos = {};
+                parsedSubs.forEach((sub, idx) => {
+                    const { pos, rawGrp } = sub;
+                    const v = verts[(pos - 1) % sides];
+                    if (!v) return;
+                    const totalHere = subCountsByPos[pos] || 1;
+                    const idxHere = placedAtPos[pos] || 0;
+                    placedAtPos[pos] = idxHere + 1;
+
+                    const grp = rawGrp
+                        .replace(/CH3/g, 'CH₃')
+                        .replace(/CH2/g, 'CH₂')
+                        .replace(/C3H7/g, 'C₃H₇')
+                        .replace(/NH2/g, 'NH₂');
+
+                    const spread = totalHere > 1 ? (idxHere === 0 ? -0.42 : 0.42) : 0;
+                    const distOut = R + 82;
+                    const sx = Math.round(cx + Math.cos(v.ang + spread) * (distOut * 0.92));
+                    const sy = Math.round(cy + Math.sin(v.ang + spread) * distOut);
+                    const sid = `HS_${idx}`;
+                    atoms.push({ id: sid, el: grp, x: sx, y: sy, noValenceDots: true });
+                    bonds.push({ from: `H_V${pos}`, to: sid, order: 1 });
+                });
+
+                return { atoms, bonds };
+            }
+
             // 3. Ciclos saturados e insaturados con hidrógenos explícitos (CH₂, CH, C) y separación angular de geminales
             const mCyc = s.match(/^(?:(CIS|TRANS)-)?(CICLO|CICLOENO|CICLODIENO|CICLOTRIENO|CICLOINO|CICLOENINO)-(\d+)(.*)$/);
             if (mCyc) {
@@ -4965,7 +5043,7 @@
             const atomMap = {};
             const bondsByAtom = {};
             (sc.atoms || []).forEach(a => {
-                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y), nomScale: 1.26 };
+                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y), nomScale: 1.26, lightTheme: true };
             });
 
             (sc.bonds || []).forEach(b => {
@@ -4977,7 +5055,7 @@
                 bondsByAtom[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
                 bondsByAtom[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
                 const mappedCenter = b.inwardCenter ? { x: mapStageX(b.inwardCenter.x), y: mapStageY(b.inwardCenter.y) } : null;
-                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter);
+                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter, true);
             });
 
             Object.values(atomMap).forEach(a => {
