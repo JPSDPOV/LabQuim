@@ -148,7 +148,7 @@
         </header>
 
         <!-- Contenedor Central del Asistente de Selección -->
-        <main class="max-w-3xl w-full mx-auto px-4 py-6 sm:py-10 flex-1 flex flex-col justify-center gap-5">
+        <main class="max-w-5xl w-full mx-auto px-4 py-6 sm:py-10 flex-1 flex flex-col justify-center gap-5">
 
             <!-- Aviso diagnóstico si falla la carga de GitHub -->
             <div id="jsonDiagnosticBanner" class="hidden bg-rose-950/85 border border-rose-500/60 text-rose-100 px-4 py-3 rounded-2xl shadow-lg text-xs flex flex-col gap-1">
@@ -323,7 +323,7 @@
                         </div>
                     </div>
 
-                    <div id="nomGroupsChecklist" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-h-[42vh] overflow-y-auto pr-1"></div>
+                    <div id="nomGroupsChecklist" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-[46vh] overflow-y-auto pr-1"></div>
                 </div>
 
                 <!-- Selector de Cantidad de Ejercicios -->
@@ -2958,15 +2958,24 @@
             }
         }
 
-        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null, inwardCenter = null, lightTheme = false) {
+        function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, prevOrder, t, baseOpacity, stereo = null, inwardCenter = null, lightTheme = false, trim1 = 0, trim2 = 0) {
             const mobile = isCompactMobile();
-            const dx = x2 - x1;
-            const dy = y2 - y1;
-            const len = Math.sqrt(dx * dx + dy * dy) || 1;
-            const ux = dx / len;
-            const uy = dy / len;
+            const rawDx = x2 - x1;
+            const rawDy = y2 - y1;
+            const rawLen = Math.sqrt(rawDx * rawDx + rawDy * rawDy) || 1;
+            const ux = rawDx / rawLen;
+            const uy = rawDy / rawLen;
             const nx = -uy;
             const ny = ux;
+            if (trim1 > 0 || trim2 > 0) {
+                const maxTrim = Math.max(0, (rawLen - 12) / 2);
+                const t1 = Math.min(trim1, maxTrim);
+                const t2 = Math.min(trim2, maxTrim);
+                x1 = x1 + ux * t1;
+                y1 = y1 + uy * t1;
+                x2 = x2 - ux * t2;
+                y2 = y2 - uy * t2;
+            }
 
             let stroke = lightTheme ? '#0f172a' : '#cbd5e1';
             let width = mobile ? 4.2 : 3.2;
@@ -3102,7 +3111,10 @@
                 return '';
             }
             let html = `<g transform="translate(${a.x}, ${a.y})" opacity="${a.opacity !== undefined ? a.opacity : 1}">`;
-            if (g.isRing === 'phenyl') {
+            if (a.noShape) {
+                const fontSz = mobile ? 23 : 19;
+                html += `<text x="0" y="${mobile ? 8 : 6.5}" text-anchor="middle" fill="${textCol}" font-size="${fontSz}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+            } else if (g.isRing === 'phenyl') {
              const R = g.r;
              const rIn = R * 0.76;
              const pts = [];
@@ -4555,7 +4567,7 @@
                 return `
                     <label class="flex items-center justify-between gap-2.5 p-3 rounded-xl ${cardStyle} border cursor-pointer transition select-none">
                         <div class="flex items-center gap-2.5 min-w-0">
-                            <input type="checkbox" value="${g.id}" checked onchange="updateNomenclatureAvailableCount()" class="nom-group-cb w-4 h-4 ${cbAccent} rounded cursor-pointer shrink-0">
+                            <input type="checkbox" value="${g.id}" onchange="updateNomenclatureAvailableCount()" class="nom-group-cb w-4 h-4 ${cbAccent} rounded cursor-pointer shrink-0">
                             <span class="text-xs sm:text-sm font-bold text-slate-100 truncate">${g.label}</span>
                         </div>
                         <span class="px-2 py-0.5 rounded-md ${badgeStyle} border text-[11px] font-extrabold shrink-0">${count}</span>
@@ -5884,6 +5896,11 @@
             let sc = item.scene || buildAutoNomenclatureScene(item.semiFormula);
             if (!sc) sc = { atoms: [], bonds: [] };
 
+            // Compactar distancias de enlace (factor 0.64 alrededor del centro 460, 190) para enlaces cortos y limpios
+            const COMPACT_K = 0.64;
+            const compactX = (rawX) => mapStageX(460 + (rawX - 460) * COMPACT_K);
+            const compactY = (rawY) => mapStageY(190 + (rawY - 190) * COMPACT_K);
+
             let html = '';
             let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
             const expand = (x1, y1, x2, y2) => {
@@ -5893,41 +5910,69 @@
                 if (y2 > maxY) maxY = y2;
             };
 
+            const getNakedTextBox = (a) => {
+                if (a.isVertex) return { hw: 0, hh: 0 };
+                if (a.ring === 'phenyl') return { hw: 30, hh: 30 };
+                const txt = String(a.el || '');
+                const hw = Math.max(11, txt.length * 6.2 + 5);
+                const hh = 13;
+                return { hw, hh };
+            };
+
             const atomMap = {};
-            const bondsByAtom = {};
             (sc.atoms || []).forEach(a => {
-                atomMap[a.id] = { ...a, x: mapStageX(a.x), y: mapStageY(a.y), nomScale: 1.26, lightTheme: true };
+                atomMap[a.id] = {
+                    ...a,
+                    x: compactX(a.x),
+                    y: compactY(a.y),
+                    noShape: (a.ring !== 'phenyl'),
+                    noValenceDots: true,
+                    lightTheme: true
+                };
             });
 
             (sc.bonds || []).forEach(b => {
                 const a1 = atomMap[b.from];
                 const a2 = atomMap[b.to];
                 if (!a1 || !a2) return;
-                if (!bondsByAtom[b.from]) bondsByAtom[b.from] = [];
-                if (!bondsByAtom[b.to]) bondsByAtom[b.to] = [];
-                bondsByAtom[b.from].push({ order: b.order || 1, angle: Math.atan2(a2.y - a1.y, a2.x - a1.x) });
-                bondsByAtom[b.to].push({ order: b.order || 1, angle: Math.atan2(a1.y - a2.y, a1.x - a2.x) });
-                const mappedCenter = b.inwardCenter ? { x: mapStageX(b.inwardCenter.x), y: mapStageY(b.inwardCenter.y) } : null;
-                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter, true);
+                const ang = Math.atan2(a2.y - a1.y, a2.x - a1.x);
+                const cosA = Math.abs(Math.cos(ang));
+                const sinA = Math.abs(Math.sin(ang));
+                const box1 = getNakedTextBox(a1);
+                const box2 = getNakedTextBox(a2);
+                const trim1 = a1.isVertex ? 0 : Math.min(box1.hw / (cosA || 0.01), box1.hh / (sinA || 0.01), Math.max(box1.hw, box1.hh) + 3);
+                const trim2 = a2.isVertex ? 0 : Math.min(box2.hw / (cosA || 0.01), box2.hh / (sinA || 0.01), Math.max(box2.hw, box2.hh) + 3);
+                const mappedCenter = b.inwardCenter ? { x: compactX(b.inwardCenter.x), y: compactY(b.inwardCenter.y) } : null;
+                html += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter, true, trim1, trim2);
             });
 
             Object.values(atomMap).forEach(a => {
                 if (a.isVertex) {
-                    expand(a.x - 16, a.y - 16, a.x + 16, a.y + 16);
+                    expand(a.x - 8, a.y - 8, a.x + 8, a.y + 8);
                     return;
                 }
-                const geom = getNodeGeometry(a);
-                const valInfo = a.noValenceDots ? { pairs: [], singleDot: null } : computeAutomaticValenceDots(a, bondsByAtom[a.id] || []);
-                expand(a.x - geom.halfW - 14, a.y - geom.halfH - 14, a.x + geom.halfW + 14, a.y + geom.halfH + 14);
-                html += renderSingleAtomNode(a, geom, valInfo);
+                const box = getNakedTextBox(a);
+                expand(a.x - box.hw - 8, a.y - box.hh - 8, a.x + box.hw + 8, a.y + box.hh + 8);
+                html += renderSingleAtomNode(a, null, { pairs: [], singleDot: null });
             });
 
             stage.innerHTML = html;
             if (isFinite(minX) && isFinite(maxX)) {
                 const centerX = (minX + maxX) / 2;
                 const centerY = (minY + maxY) / 2;
-                const spanW = Math.max(360, (maxX - minX) + 64);
-                const spanH = Math.max(200, (maxY - minY) + 52);
+                const rawW = (maxX - minX) + 36;
+                const rawH = (maxY - minY) + 32;
+                // Mantener la proporción del contenedor de la tarjeta (~2.6:1 en escritorio, ~1.5:1 en móvil) para maximizar el tamaño sin recortes
+                const cardEl = document.getElementById('nomSvgCanvas');
+                const rect = cardEl ? cardEl.getBoundingClientRect() : null;
+                const aspect = (rect && rect.width > 50 && rect.height > 50) ? (rect.width / rect.height) : 2.3;
+                let spanW = Math.max(220, rawW);
+                let spanH = Math.max(130, rawH);
+                if (spanW / spanH < aspect) {
+                    spanW = spanH * aspect;
+                } else {
+                    spanH = spanW / aspect;
+                }
                 const vbX = centerX - spanW / 2;
                 const vbY = centerY - spanH / 2;
                 svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${spanW.toFixed(1)} ${spanH.toFixed(1)}`);
