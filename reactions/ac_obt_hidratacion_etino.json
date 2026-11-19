@@ -1,0 +1,144 @@
+{
+  "category": "obtencion",
+  "title": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)",
+  "natureBadge": "Adición + Tautomería Ceto-Enólica • HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₂=CH–OH] ⇄ CH₃–CHO",
+  "deltaH": "ΔH° < 0 (Exotérmica; el etino es el ÚNICO alquino que produce un aldehído)",
+  "description": "Adición de agua al triple enlace del etino (acetileno) catalizada por ácido sulfúrico y sulfato mercúrico (Diap. 12). Se forma primero el alcohol vinílico (enol inestable), que se tautomeriza espontáneamente al grupo carbonilo formando etanal (acetaldehído).",
+  "meta": {
+    "grupoFuncional": "Aldehído (Etanal / Acetaldehído, CH₃–CHO)",
+    "reaccionMecanismo": "Adición electrofílica catalizada por Hg²⁺/H⁺ seguida de tautomería ceto-enólica",
+    "naturaleza": "Por etapas vía intermediario enol inestable.",
+    "rupturaIntermediarios": "Ruptura de enlace π C≡C y H–OH; intermedio enol [CH₂=CH–OH].",
+    "detalleMecanismo": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₂=CH–OH] ⇄ CH₃–CHO",
+    "reactivosCondiciones": "Etino (HC≡CH) + H₂O / H₂SO₄ acuoso + HgSO₄.",
+    "rolReactivos": "• Sustrato: Etino (acetileno).\n• Reactivo: Agua (H₂O).\n• Catalizadores: H₂SO₄ + HgSO₄.",
+    "reglasObs": "• Es el único alquino cuya hidratación produce un aldehído; todos los demás alquinos generan cetonas."
+  },
+  "substrates": [
+    {
+      "id": "etino_etanal",
+      "name": "Diap. 12: Etino (HC≡CH) + H₂O ──► Etanal",
+      "catalyst": "H₂O / H₂SO₄ / HgSO₄"
+    }
+  ],
+  "catalysts": [
+    "H₂O / H₂SO₄ / HgSO₄"
+  ],
+  "stepsBySubstrate": {
+    "etino_etanal": [
+      {
+        "title": "Paso 1 — Adición de H₂O al Etino: Formación del Enol (Alcohol Vinílico)",
+        "semiStep": "HC≡CH  +  H–OH  ──(H⁺/Hg²⁺)──►  [CH₂=CH–OH]",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "Se adiciona H y OH al triple enlace formando el alcohol vinílico intermediario.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace π C≡C.",
+          "forming": "Enlace C–OH del enol.",
+          "movement": "Adición electrofílica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 300,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 500,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Enol inestable"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 500,
+              "y": 100,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Tautomería Ceto-Enólica ──► Etanal (CH₃–CHO)",
+        "semiStep": "[CH₂=CH–OH]  ⇄  CH₃–CH=O  (Etanal)",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "El protón del –OH migra al =CH₂ y se forma el doble enlace C=O del etanal.",
+        "legend": {
+          "breaking": "Enlace O–H y π C=C reorganizados.",
+          "forming": "En VERDE sólido: etanal.",
+          "movement": "Tautomería ceto-enólica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 280,
+              "y": 215
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 470,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 470,
+              "y": 100,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 650,
+              "y": 215,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
