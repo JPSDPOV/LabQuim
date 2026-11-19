@@ -2317,24 +2317,60 @@
                 return { atoms, bonds, spanHalfW: 165 };
             }
 
-            // Caso 4: (CH3)2CH-X (ej. (CH₃)₂CH—Cl, (CH₃)₂CH—Br) -> CH3 izquierda, CH3 abajo, X derecha
+            // Caso 4: (CH3)2CH-X (ej. (CH₃)₂CH—Cl, (CH₃)₂CH—CH₂—C≡CH) -> CH3 izquierda, CH3 abajo, cadena derecha separada nodo por nodo
             const mIso = norm.match(/^\(CH3\)2CH-?(.+)$/);
             if (mIso) {
-                const rightGrp = mIso[1]
+                const rightRaw = mIso[1]
                     .replace(/CH3/g, 'CH₃')
                     .replace(/CH2/g, 'CH₂');
+                const segTokens = [];
+                let buf = '';
+                let pendingOrd = 1;
+                for (let i = 0; i < rightRaw.length; i++) {
+                    const ch = rightRaw[i];
+                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                        if (buf) segTokens.push({ el: buf, order: pendingOrd });
+                        pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
+                        buf = '';
+                    } else {
+                        buf += ch;
+                    }
+                }
+                if (buf) segTokens.push({ el: buf, order: pendingOrd });
+
+                const stepSeg = 88;
+                const totalRightSpan = segTokens.length * stepSeg;
+                const baseShiftX = segTokens.length > 1 ? Math.round((totalRightSpan - stepSeg) * 0.42) : 0;
+                const cX = centerX - baseShiftX;
+
                 atoms.push(
-                    { id: `${prefixId}_C`, el: 'CH', x: centerX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
-                    { id: `${prefixId}_L`, el: 'CH₃', x: centerX - 95, y: centerY },
-                    { id: `${prefixId}_B`, el: 'CH₃', x: centerX, y: centerY + 82 },
-                    { id: `${prefixId}_R`, el: rightGrp, x: centerX + 95, y: centerY, highlight: accentColor, border: accentColor }
+                    { id: `${prefixId}_C`, el: 'CH', x: cX, y: centerY, highlight: accentColor, border: accentColor, label: lbl },
+                    { id: `${prefixId}_L`, el: 'CH₃', x: cX - 88, y: centerY },
+                    { id: `${prefixId}_B`, el: 'CH₃', x: cX, y: centerY + 82 }
                 );
                 bonds.push(
                     { from: `${prefixId}_L`, to: `${prefixId}_C`, order: 1, state: 'normal' },
-                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' },
-                    { from: `${prefixId}_C`, to: `${prefixId}_R`, order: 1, state: 'normal' }
+                    { from: `${prefixId}_B`, to: `${prefixId}_C`, order: 1, state: 'normal' }
                 );
-                return { atoms, bonds, spanHalfW: 135 };
+
+                let prevNodeId = `${prefixId}_C`;
+                segTokens.forEach((seg, sIdx) => {
+                    const sx = cX + (sIdx + 1) * stepSeg;
+                    const sId = `${prefixId}_R${sIdx}`;
+                    const isLast = (sIdx === segTokens.length - 1);
+                    atoms.push({
+                        id: sId,
+                        el: seg.el,
+                        x: sx,
+                        y: centerY,
+                        highlight: isLast ? accentColor : undefined,
+                        border: isLast ? accentColor : undefined
+                    });
+                    bonds.push({ from: prevNodeId, to: sId, order: seg.order, state: 'normal' });
+                    prevNodeId = sId;
+                });
+
+                return { atoms, bonds, spanHalfW: Math.max(125, totalRightSpan - baseShiftX + 28) };
             }
 
             // Caso 5: R-CH(OH)-R' (alcoholes secundarios aquirales, ej. CH₃—CH(OH)—CH₃ o CH₃—CH₂—CH(OH)—CH₃)
