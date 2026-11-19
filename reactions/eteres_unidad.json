@@ -7017,27 +7017,27 @@
       "substrates": [
         {
           "id": "epox_eteno_oxirano",
-          "name": "1) Ejemplo Básico (Alqueno más simple): Eteno (CH₂=CH₂) + AMCPB ──► Oxirano (Óxido de Etileno)",
+          "name": "Eteno (CH₂=CH₂) + AMCPB ──► Oxirano (Oxaciclopropano / Óxido de etileno)",
           "catalyst": "AMCPB / CH₂Cl₂, 0–25 °C"
         },
         {
           "id": "epox_propeno_metiloxirano",
-          "name": "2) Ejemplo Básico (Alqueno terminal): Propeno (CH₃–CH=CH₂) + AMCPB ──► Metiloxirano (Óxido de propileno)",
+          "name": "Propeno (CH₃–CH=CH₂) + AMCPB ──► Metiloxirano (Óxido de propileno)",
           "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
         },
         {
           "id": "epox_ciclohexeno_amcpb",
-          "name": "3) Ejemplo Básico (Cicloalqueno): Ciclohexeno + AMCPB ──► 1,2-Epoxiciclohexano (Óxido de Ciclohexeno)",
+          "name": "Ciclohexeno + AMCPB ──► 1,2-Epoxiciclohexano (Óxido de ciclohexeno)",
           "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
         },
         {
           "id": "epox_2buteno_amcpb",
-          "name": "4) Examen Único 2026: 2-Buteno + Ácido meta-cloroperoxibenzoico (AMCPB) ──► 2,3-Dimetiloxirano (Epóxido)",
+          "name": "Examen Único 2026: 2-Buteno + Ácido meta-cloroperoxibenzoico (AMCPB) ──► 2,3-Dimetiloxirano (Epóxido)",
           "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
         },
         {
           "id": "epox_maleico_amcpb",
-          "name": "5) Examen Único 2022: Ácido Maleico + Ácido meta-cloroperoxibenzoico (AMCPB) ──► Epóxido Dicarboxílico",
+          "name": "Examen Único 2022: Ácido Maleico + Ácido meta-cloroperoxibenzoico (AMCPB) ──► Epóxido Dicarboxílico",
           "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
         }
       ],
@@ -7709,7 +7709,7 @@
           {
             "title": "Paso 1 — Estado Inicial Intacto: Eteno (CH₂=CH₂) + AMCPB",
             "semiStep": "CH₂=CH₂  +  Ar—CO₃H (AMCPB)",
-            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano / Oxaciclopropano) + Ar—CO₂H",
             "desc": "El eteno presenta su doble enlace C=C frente al oxígeno electrófilo del ácido meta-cloroperoxibenzoico (AMCPB).",
             "legend": {
               "breaking": "Sin ruptura inicial.",
@@ -7737,7 +7737,7 @@
                   "x": 345,
                   "y": 105,
                   "highlight": "#38bdf8",
-                  "label": "O electrófilo (AMCPB)"
+                  "label": "Oxirano (Oxaciclopropano)"
                 },
                 {
                   "id": "Ar_out",
@@ -7766,7 +7766,7 @@
           {
             "title": "Paso 2 — Transferencia Concertada de Oxígeno (Ruptura π C=C y O—O)",
             "semiStep": "[CH₂ ··· O ··· CH₂]  +  Ar—CO₂H",
-            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano / Oxaciclopropano) + Ar—CO₂H",
             "desc": "Se rompe en rojo punteado el enlace π C=C y el enlace peróxido O—O mientras se forman simultáneamente en verde punteado los dos enlaces C—O del anillo de 3 miembros.",
             "legend": {
               "breaking": "En ROJO punteado: enlace π C=C y enlace peróxido O—O.",
@@ -7834,9 +7834,9 @@
             }
           },
           {
-            "title": "Paso 3 — Producto Final Consolidado: Oxirano (Óxido de Etileno) + Ar—CO₂H",
-            "semiStep": "C₂H₄O (Oxirano)  +  Ar—CO₂H",
-            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "title": "Paso 3 — Producto Final Consolidado: Oxirano (Oxaciclopropano) + Ar—CO₂H",
+            "semiStep": "C₂H₄O (Oxirano / Oxaciclopropano)  +  Ar—CO₂H",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano / Oxaciclopropano) + Ar—CO₂H",
             "desc": "Queda consolidado en verde sólido el anillo heterocíclico de 3 miembros oxirano (óxido de etileno).",
             "legend": {
               "breaking": "Ruptura completada.",
@@ -7865,7 +7865,7 @@
                   "x": 355,
                   "y": 115,
                   "highlight": "#10b981",
-                  "label": "Oxirano (Óxido de etileno)"
+                  "label": "Oxirano (Oxaciclopropano)"
                 },
                 {
                   "id": "Ar_out",
