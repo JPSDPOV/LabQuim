@@ -1,0 +1,162 @@
+{
+  "category": "obtencion",
+  "title": "3) Reducción Débil de Ácidos Carboxílicos (+ DIBAH ──► Aldehído)",
+  "natureBadge": "Reducción Controlada • R–COOH + DIBAH ──(-78 °C, luego H₂O)──► R–CHO",
+  "deltaH": "ΔH° < 0 (Exotérmica; se detiene en el aldehído sin reducir hasta alcohol primario)",
+  "description": "Reducción selectiva de ácidos carboxílicos mediante un reductor débil impedido como el DIBAH (hidruro de diisobutilaluminio) a baja temperatura (Diap. 12), convirtiendo el grupo –COOH directamente en aldehído –CHO.",
+  "meta": {
+    "grupoFuncional": "Aldehídos (R–CHO)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica por transferencia controlada de hidruro",
+    "naturaleza": "Adición-eliminación controlada en el carbono carboxílico.",
+    "rupturaIntermediarios": "Ruptura del enlace C–OH y formación de C–H.",
+    "detalleMecanismo": "CH₃–COOH + DIBAH ──► CH₃–CHO (etanal)",
+    "reactivosCondiciones": "Ácido carboxílico + DIBAH (-78 °C), seguido de hidrólisis suave.",
+    "rolReactivos": "• Sustrato: Ácido carboxílico (R–COOH).\n• Reductor débil: DIBAH (hidruro de diisobutilaluminio).",
+    "reglasObs": "• Diap. 12: Ácido etanoico + DIBAH → etanal."
+  },
+  "substrates": [
+    {
+      "id": "ac_etanoico_dibah",
+      "name": "Diap. 12: Ácido Etanoico + DIBAH ──► Etanal",
+      "catalyst": "DIBAH (Hidruro de diisobutilaluminio)"
+    }
+  ],
+  "catalysts": [
+    "DIBAH (Hidruro de diisobutilaluminio)"
+  ],
+  "stepsBySubstrate": {
+    "ac_etanoico_dibah": [
+      {
+        "title": "Paso 1 — Estado Inicial: Ácido Etanoico + DIBAH",
+        "semiStep": "CH₃–CO–OH  +  DIBAH",
+        "semiGlobal": "CH₃–COOH + DIBAH ──► CH₃–CHO",
+        "desc": "El DIBAH transfiere un hidruro al carbono carboxílico del ácido etanoico.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C–OH.",
+          "forming": "En VERDE punteado: enlace C–H.",
+          "movement": "Transferencia controlada de hidruro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 230,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "label": "Ácido etanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 410,
+              "y": 100
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 580,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Reag",
+              "el": "DIBAH",
+              "x": 760,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Etanal (CH₃–CHO)",
+        "semiStep": "CH₃–CH=O  (Etanal)",
+        "semiGlobal": "CH₃–COOH + DIBAH ──► CH₃–CHO",
+        "desc": "Se obtiene etanal.",
+        "legend": {
+          "breaking": "Grupo –OH eliminado.",
+          "forming": "En VERDE sólido: etanal.",
+          "movement": "Producto aldehído consolidado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 270,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 450,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 100,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 630,
+              "y": 215,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
