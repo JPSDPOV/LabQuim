@@ -1,0 +1,157 @@
+{
+  "category": "obtencion",
+  "title": "5) Oxidación de Alcoholes Secundarios (+ [O] / CrO₃ / K₂Cr₂O₇ ──► Cetona)",
+  "natureBadge": "Deshidrogenación Oxidativa • R–CH(OH)–R' + [O] ──► R–CO–R' + H₂O",
+  "deltaH": "ΔH° < 0 (Exotérmica; las cetonas resisten la oxidación ulterior en condiciones normales)",
+  "description": "Los alcoholes secundarios al tratarse con agentes oxidantes como anhídrido crómico (CrO₃), dicromato de potasio en medio ácido (K₂Cr₂O₇/H₂SO₄) o PCC pierden dos hidrógenos formando cetonas (Diap. 13 y 24).",
+  "meta": {
+    "grupoFuncional": "Cetonas (R–CO–R')",
+    "reaccionMecanismo": "Eliminación oxidativa E2 sobre éster cromato",
+    "naturaleza": "Por etapas.",
+    "rupturaIntermediarios": "Ruptura de O–H y Cα–H; formación de enlace π C=O.",
+    "detalleMecanismo": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O | 3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
+    "reactivosCondiciones": "Alcohol secundario + CrO₃, Na₂Cr₂O₇/H₂SO₄ o PCC.",
+    "rolReactivos": "• Sustrato: Alcohol secundario.\n• Agente oxidante: CrO₃, dicromato o PCC.",
+    "reglasObs": "• Diap. 13: Ciclopentanol → ciclopentanona; Diap. 24 (Ej. 11): 3-metilciclohexanol + CrO₃ → 3-metilciclohexanona."
+  },
+  "substrates": [
+    {
+      "id": "ciclopentanol_cetona",
+      "name": "Diap. 13: Ciclopentanol + [O] ──► Ciclopentanona",
+      "catalyst": "[O] (CrO₃ / H₂SO₄ o PCC)"
+    },
+    {
+      "id": "3metilciclohexanol_cetona",
+      "name": "Ejercicio 11 (Diap. 24): 3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
+      "catalyst": "CrO₃ (Anhídrido crómico)"
+    }
+  ],
+  "catalysts": [
+    "[O] (CrO₃ / H₂SO₄ o PCC)",
+    "CrO₃ (Anhídrido crómico)"
+  ],
+  "stepsBySubstrate": {
+    "ciclopentanol_cetona": [
+      {
+        "title": "Paso 1 — Estado Inicial: Ciclopentanol + [O]",
+        "semiStep": "C₅H₉–OH (Ciclopentanol)  +  [O]",
+        "semiGlobal": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O",
+        "desc": "El alcohol secundario cíclico enfrenta al agente oxidante.",
+        "legend": {
+          "breaking": "Enlaces C1–H y O–H.",
+          "forming": "Sin enlaces nuevos aún.",
+          "movement": "Oxidación de alcohol 2°."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "Ciclopentanol",
+              "x": 310,
+              "y": 195
+            },
+            {
+              "id": "Ox",
+              "el": "[O] (CrO₃)",
+              "x": 630,
+              "y": 195,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 470,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Ciclopentanona",
+        "semiStep": "Ciclopentanona  +  H₂O",
+        "semiGlobal": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O",
+        "desc": "Se obtiene ciclopentanona.",
+        "legend": {
+          "breaking": "2 H eliminados.",
+          "forming": "En VERDE sólido: ciclopentanona.",
+          "movement": "Producto cetónico consolidado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "Ciclopentanona",
+              "x": 460,
+              "y": 195,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "3metilciclohexanol_cetona": [
+      {
+        "title": "Paso 1 — Estado Inicial: 3-Metilciclohexanol + CrO₃",
+        "semiStep": "3-Metilciclohexanol  +  CrO₃",
+        "semiGlobal": "3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
+        "desc": "El anhídrido crómico oxida el grupo –OH secundario en C1.",
+        "legend": {
+          "breaking": "Enlaces C1–H y O–H.",
+          "forming": "Sin enlaces nuevos aún.",
+          "movement": "Oxidación con CrO₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "3-Metilciclohexanol",
+              "x": 310,
+              "y": 195
+            },
+            {
+              "id": "Ox",
+              "el": "CrO₃",
+              "x": 640,
+              "y": 195,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 485,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: 3-Metilciclohexanona",
+        "semiStep": "3-Metilciclohexanona",
+        "semiGlobal": "3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
+        "desc": "Se obtiene 3-metilciclohexanona.",
+        "legend": {
+          "breaking": "Grupo alcohol oxidado.",
+          "forming": "En VERDE sólido: 3-metilciclohexanona.",
+          "movement": "Producto final obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "3-Metilciclohexanona",
+              "x": 460,
+              "y": 195,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
