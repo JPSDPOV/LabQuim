@@ -1,0 +1,2763 @@
+{
+  "functionMenus": {
+    "aminas": {
+      "obtencion": [
+        {
+          "value": "aminas_obt_alquilacion_sn2",
+          "label": "1) Sustitución de halogenuros de alquilo con NH₃ o aminas (SN2)"
+        },
+        {
+          "value": "aminas_obt_reduccion_nitro",
+          "label": "2) Reducción de compuestos nitro aromáticos (H₂ / Pt o Fe / HCl)"
+        },
+        {
+          "value": "aminas_obt_reduccion_nitrilos",
+          "label": "3) Reducción de nitrilos (2 H₂ / Ni o LiAlH₄)"
+        },
+        {
+          "value": "aminas_obt_reduccion_isonitrilos",
+          "label": "4) Reducción de isonitrilos / isocianuros (2 H₂ / Ni) → Aminas 2°"
+        },
+        {
+          "value": "aminas_obt_reduccion_amidas",
+          "label": "5) Reducción de amidas 1° y N-sustituidas (LiAlH₄ / H₂O)"
+        }
+      ],
+      "reacciones": [
+        {
+          "value": "aminas_rxn_acido_base",
+          "label": "1) Reacción ácido-base con ácidos minerales (Formación de sales de amonio)"
+        },
+        {
+          "value": "aminas_rxn_alquilacion_nucleofila",
+          "label": "2) Alquilación nucleofílica SN2 (Aminas 2°, 3° y sales de amonio 4°)"
+        },
+        {
+          "value": "aminas_rxn_acilacion_derivados",
+          "label": "3) Acilación nucleofílica con haluros de acilo y anhídridos → Amidas"
+        },
+        {
+          "value": "aminas_rxn_hno2_alifaticas",
+          "label": "4) Reacción con HNO₂ (Alifáticas 1° → Alcohol + N₂; 2° → Nitrosamina; 3° → Sal)"
+        },
+        {
+          "value": "aminas_rxn_diazotacion_aromatica",
+          "label": "5) Diazotación de aminas aromáticas 1° (NaNO₂ / HCl frío) → Sal de diazonio"
+        },
+        {
+          "value": "aminas_rxn_condensacion_carbonilos",
+          "label": "6) Condensación con aldehídos y cetonas → Bases de Schiff (Iminas)"
+        }
+      ]
+    }
+  },
+  "reactions": {
+    "aminas_obt_alquilacion_sn2": {
+      "category": "obtencion",
+      "title": "1) Sustitución de halogenuros de alquilo con NH₃ o aminas (Mecanismo SN2)",
+      "natureBadge": "Sustitución Nucleofílica Bimolecular (SN2)",
+      "description": "El par de electrones no enlazante del nitrógeno del amoniaco (NH₃) o de una amina actúa como nucleófilo atacando al carbono electrófilo de un halogenuro de alquilo primario (R–X) vía SN2. Primero se forma una sal de amonio que, tras perder HX, libera una amina primaria; si esta vuelve a reaccionar con más halogenuro de alquilo se obtienen sucesivamente aminas secundarias, terciarias y sales de amonio cuaternario.",
+      "deltaH": "R–X + NH₃ ──(SN2)──► [R–NH₃⁺] X⁻ ──► R–NH₂ + HX",
+      "meta": {
+        "grupoFuncional": "Amina 1° (R–NH₂), 2° (R₂NH) o 3° (R₃N)",
+        "reaccionMecanismo": "Sustitución Nucleofílica Bimolecular (SN2)",
+        "naturaleza": "Ataque nucleofílico concertado del par libre del N con desplazamiento del haluro.",
+        "rupturaIntermediarios": "Ruptura heterolítica C–Cl; intermediario sal de amonio.",
+        "detalleMecanismo": "CH₃CH₂–Cl + NH₃ → [CH₃CH₂–NH₃⁺] Cl⁻ → CH₃CH₂–NH₂ + HCl",
+        "reactivosCondiciones": "Halogenuro de alquilo 1° + Amoniaco (NH₃) o amina",
+        "rolReactivos": "• Nucleófilo: NH₃ o amina (par libre del N).\n• Sustrato electrófilo: Halogenuro de alquilo primario (ej. cloroetano).",
+        "reglasObs": "Para obtener mayoritariamente la amina primaria y evitar polialquilación se emplea exceso de NH₃."
+      },
+      "substrates": [
+        {
+          "id": "cloroetano_nh3",
+          "name": "Cloroetano + NH₃ → Etilamina + HCl (SN2)",
+          "catalyst": "Exceso de NH₃ (SN2)"
+        },
+        {
+          "id": "etilamina_cloroetano",
+          "name": "Etilamina + Cloroetano → Dietilamina + HCl (SN2)",
+          "catalyst": "SN2"
+        }
+      ],
+      "catalysts": [
+        "Exceso de NH₃ (SN2)",
+        "SN2"
+      ],
+      "stepsBySubstrate": {
+        "cloroetano_nh3": [
+          {
+            "title": "Paso 1 — Estado Inicial: Cloroetano + Amoniaco (NH₃)",
+            "semiStep": "CH₃–CH₂–Cl  +  :NH₃",
+            "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₂ + HCl",
+            "desc": "El amoniaco posee un par electrónico libre sobre el nitrógeno (nucleófilo) y se aproxima al carbono C1 electrófilo (δ⁺) del cloroetano.",
+            "legend": {
+              "breaking": "Aproximación inicial sin ruptura.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del par libre del NH₃ hacia el carbono C1."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 180,
+                  "y": 195
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 310,
+                  "y": 195,
+                  "label": "Cloroetano"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 440,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₃",
+                  "x": 620,
+                  "y": 195,
+                  "lonePairs": [
+                    "left"
+                  ],
+                  "highlight": "#38bdf8",
+                  "label": "Nucleófilo"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Ataque SN2 Concertado y Salida de Cl⁻",
+            "semiStep": "[H₃N ··· CH₂CH₃ ··· Cl]‡  ──►  [CH₃CH₂–NH₃⁺] Cl⁻",
+            "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₂ + HCl",
+            "desc": "El nitrógeno forma un enlace C–N (en verde punteado) mientras se rompe heterolíticamente el enlace C–Cl (en rojo) formando cloruro de etilamonio.",
+            "legend": {
+              "breaking": "Enlace C–Cl rompiéndose heterolíticamente (en rojo punteado).",
+              "forming": "Enlace C–N formándose concertadamente (en verde punteado).",
+              "movement": "Sustitución nucleofílica SN2."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 160,
+                  "y": 195
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 290,
+                  "y": 195,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₃",
+                  "x": 440,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 610,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#ef4444"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C2",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 420,
+                  "y1": 180,
+                  "cx": 365,
+                  "cy": 148,
+                  "x2": 315,
+                  "y2": 180,
+                  "label": "Ataque SN2"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Etilamina + HCl",
+            "semiStep": "CH₃–CH₂–NH₂  +  HCl",
+            "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₂ + HCl",
+            "desc": "Tras la desprotonación de la sal de amonio se obtiene la amina primaria (etilamina) y HCl.",
+            "legend": {
+              "breaking": "Enlace C–Cl disociado.",
+              "forming": "Enlace C–NH₂ consolidado en verde sólido.",
+              "movement": "Amina primaria estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 175,
+                  "y": 195
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 305,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 440,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Etilamina (Amina 1°)"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "HCl",
+                  "x": 640,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 545,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "etilamina_cloroetano": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina + Cloroetano",
+            "semiStep": "CH₃–CH₂–NH₂  +  CH₃–CH₂–Cl",
+            "semiGlobal": "CH₃CH₂–NH₂ + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₂NH + HCl",
+            "desc": "La etilamina (amina primaria) conserva un par libre sobre el nitrógeno y puede volver a atacar a otra molécula de cloroetano.",
+            "legend": {
+              "breaking": "Aproximación inicial.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del par libre de la etilamina hacia el cloroetano."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 175,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 325,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "R2",
+                  "el": "CH₂CH₃",
+                  "x": 515,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 655,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "R2",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Dietilamina (Amina 2°) + HCl",
+            "semiStep": "CH₃–CH₂–NH–CH₂–CH₃  +  HCl",
+            "semiGlobal": "CH₃CH₂–NH₂ + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₂NH + HCl",
+            "desc": "Se obtiene una amina secundaria (dietilamina) más HCl.",
+            "legend": {
+              "breaking": "Enlace C–Cl roto.",
+              "forming": "Segundo enlace N–C consolidado en verde sólido.",
+              "movement": "Amina secundaria formada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 165,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 320,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Dietilamina (Amina 2°)"
+                },
+                {
+                  "id": "R2",
+                  "el": "CH₂CH₃",
+                  "x": 475,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "HCl",
+                  "x": 665,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 575,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_obt_reduccion_nitro": {
+      "category": "obtencion",
+      "title": "2) Reducción de compuestos nitro aromáticos (3 H₂ / Pt o Fe / HCl)",
+      "natureBadge": "Reducción Catalítica o Química de Nitroarenos",
+      "description": "Los compuestos nitro aromáticos (como el p-nitrotolueno o el nitrobenceno) se reducen mediante hidrogenación catalítica (3 H₂ / Pt, Pd o Ni) o con metales en medio ácido (Fe / HCl o Sn / HCl, seguido de NaOH) transformando el grupo –NO₂ en grupo amino primario (–NH₂) más 2 moléculas de agua.",
+      "deltaH": "Ar–NO₂ + 3 H₂ ──(Pt)──► Ar–NH₂ + 2 H₂O",
+      "meta": {
+        "grupoFuncional": "Amina aromática primaria (Ar–NH₂, ej. p-metilanilina / anilina)",
+        "reaccionMecanismo": "Reducción catalítica de nitrocompuestos",
+        "naturaleza": "Reducción del nitrógeno (Nox +3 → -3) con eliminación de 2 H₂O.",
+        "rupturaIntermediarios": "Ruptura de enlaces N–O y formación de nuevos enlaces N–H.",
+        "detalleMecanismo": "p-CH₃–C₆H₄–NO₂ + 3 H₂ (Pt) → p-CH₃–C₆H₄–NH₂ + 2 H₂O",
+        "reactivosCondiciones": "Nitrocompuesto aromático + 3 H₂ / Pt (o Fe / HCl)",
+        "rolReactivos": "• Sustrato: p-Nitrotolueno.\n• Reductor: Hidrógeno molecular (3 H₂) sobre catalizador de Platino (Pt).",
+        "reglasObs": "Es la vía principal para sintetizar aminas aromáticas primarias (anilinas sustituidas)."
+      },
+      "substrates": [
+        {
+          "id": "pnitrotolueno_h2",
+          "name": "p-Nitrotolueno + 3 H₂ (Pt) → p-Metilanilina (p-Toluidina) + 2 H₂O",
+          "catalyst": "3 H₂ / Pt"
+        }
+      ],
+      "catalysts": [
+        "3 H₂ / Pt"
+      ],
+      "stepsBySubstrate": {
+        "pnitrotolueno_h2": [
+          {
+            "title": "Paso 1 — Estado Inicial: p-Nitrotolueno + 3 H₂ / Pt",
+            "semiStep": "p-CH₃–C₆H₄–NO₂  +  3 H₂ (Pt)",
+            "semiGlobal": "p-CH₃–C₆H₄–NO₂ + 3 H₂ ──(Pt)──► p-CH₃–C₆H₄–NH₂ + 2 H₂O",
+            "desc": "El p-nitrotolueno adsorbe sobre el catalizador de platino (Pt) junto con 3 equivalentes de hidrógeno molecular.",
+            "legend": {
+              "breaking": "Activación de los enlaces N–O y H–H sobre el platino.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Transferencia de hidrógenos hacia el grupo nitro."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 180,
+                  "y": 195
+                },
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 335,
+                  "y": 195,
+                  "label": "p-Nitrotolueno"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 490,
+                  "y": 195,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "H2",
+                  "el": "3 H₂ / Pt",
+                  "x": 675,
+                  "y": 195,
+                  "highlight": "#38bdf8",
+                  "label": "Reductor"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me",
+                  "to": "Ph",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: p-Metilanilina (p-Toluidina) + 2 H₂O",
+            "semiStep": "p-CH₃–C₆H₄–NH₂  +  2 H₂O",
+            "semiGlobal": "p-CH₃–C₆H₄–NO₂ + 3 H₂ ──(Pt)──► p-CH₃–C₆H₄–NH₂ + 2 H₂O",
+            "desc": "Los dos oxígenos del grupo nitro se eliminan como 2 H₂O y se obtienen los nuevos enlaces N–H formando p-metilanilina.",
+            "legend": {
+              "breaking": "Enlaces N–O completamente reducidos.",
+              "forming": "Grupo amino primario (–NH₂) consolidado en verde sólido.",
+              "movement": "Amina aromática primaria obtenida."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 175,
+                  "y": 195
+                },
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 330,
+                  "y": 195,
+                  "label": "p-Metilanilina (p-Toluidina)"
+                },
+                {
+                  "id": "NH2",
+                  "el": "NH₂",
+                  "x": 485,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "H2O",
+                  "el": "2 H₂O",
+                  "x": 685,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me",
+                  "to": "Ph",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "NH2",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 585,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_obt_reduccion_nitrilos": {
+      "category": "obtencion",
+      "title": "3) Reducción de nitrilos (2 H₂ / Ni o LiAlH₄) → Aminas primarias",
+      "natureBadge": "Hidrogenación Catalítica de Triple Enlace C≡N",
+      "description": "La reducción completa de un nitrilo (R–C≡N) con 2 moles de hidrógeno sobre níquel (2 H₂ / Ni) o con LiAlH₄ satura los dos enlaces π del grupo ciano generando una amina primaria (R–CH₂–NH₂) sin pérdida de carbonos.",
+      "deltaH": "R–C≡N + 2 H₂ ──(Ni)──► R–CH₂–NH₂",
+      "meta": {
+        "grupoFuncional": "Amina primaria (R–CH₂–NH₂, ej. butanamina)",
+        "reaccionMecanismo": "Reducción / Adición catalítica de H₂ al grupo –C≡N",
+        "naturaleza": "Adición de 4 átomos de hidrógeno sobre el triple enlace carbono-nitrógeno.",
+        "rupturaIntermediarios": "Ruptura de los 2 enlaces π del C≡N; intermediario imina.",
+        "detalleMecanismo": "CH₃–CH₂–CH₂–C≡N + 2 H₂ (Ni) → CH₃–CH₂–CH₂–CH₂–NH₂",
+        "reactivosCondiciones": "Nitrilo + 2 H₂ / Ni (o LiAlH₄)",
+        "rolReactivos": "• Sustrato: Butanonitrilo.\n• Reductor: Hidrógeno molecular (2 H₂) catalizado por Níquel (Ni).",
+        "reglasObs": "Conserva todos los átomos de carbono del nitrilo original (incluyendo el carbono del grupo –CN)."
+      },
+      "substrates": [
+        {
+          "id": "butanonitrilo_h2",
+          "name": "Butanonitrilo + 2 H₂ (Ni) → 1-Butanamina (Butilamina)",
+          "catalyst": "2 H₂ / Ni"
+        }
+      ],
+      "catalysts": [
+        "2 H₂ / Ni"
+      ],
+      "stepsBySubstrate": {
+        "butanonitrilo_h2": [
+          {
+            "title": "Paso 1 — Estado Inicial: Butanonitrilo + 2 H₂ / Ni",
+            "semiStep": "CH₃–CH₂–CH₂–C≡N  +  2 H₂ (Ni)",
+            "semiGlobal": "CH₃–CH₂–CH₂–C≡N + 2 H₂ ──(Ni)──► CH₃–CH₂–CH₂–CH₂–NH₂",
+            "desc": "El butanonitrilo presenta un triple enlace C≡N con dos enlaces π susceptibles de hidrogenación catalítica.",
+            "legend": {
+              "breaking": "Aproximación de 2 H₂ sobre superficie de Níquel.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Adición de hidrógenos al grupo ciano."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂CH₂",
+                  "x": 185,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 355,
+                  "y": 195,
+                  "label": "Butanonitrilo"
+                },
+                {
+                  "id": "N1",
+                  "el": "N",
+                  "x": 495,
+                  "y": 195
+                },
+                {
+                  "id": "H2",
+                  "el": "2 H₂ / Ni",
+                  "x": 675,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 3,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: 1-Butanamina (Amina primaria)",
+            "semiStep": "CH₃–CH₂–CH₂–CH₂–NH₂",
+            "semiGlobal": "CH₃–CH₂–CH₂–C≡N + 2 H₂ ──(Ni)──► CH₃–CH₂–CH₂–CH₂–NH₂",
+            "desc": "Se obtiene 1-butanamina (butilamina) con el enlace simple C–N consolidado en verde sólido.",
+            "legend": {
+              "breaking": "Los dos enlaces π del triple enlace C≡N saturados.",
+              "forming": "Nuevos enlaces C–H y N–H consolidados (en verde sólido).",
+              "movement": "Amina primaria estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂CH₂",
+                  "x": 205,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 385,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 545,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "1-Butanamina"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "new"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_obt_reduccion_isonitrilos": {
+      "category": "obtencion",
+      "title": "4) Reducción de isonitrilos / isocianuros (2 H₂ / Ni) → Aminas secundarias N-metiladas",
+      "natureBadge": "Reducción Catalítica de Isocianuros (R–N≡C)",
+      "description": "A diferencia de los nitrilos (que producen aminas primarias), la reducción de isonitrilos o isocianuros (R–N≡C, como el isocianuro de etilo) con 2 H₂ / Ni transforma el carbono terminal en un grupo metilo (–CH₃) unido al nitrógeno, generando específicamente una amina secundaria N-metilada (R–NH–CH₃).",
+      "deltaH": "R–N≡C + 2 H₂ ──(Ni)──► R–NH–CH₃",
+      "meta": {
+        "grupoFuncional": "Amina secundaria N-metilada (R–NH–CH₃, ej. etilmetilamina)",
+        "reaccionMecanismo": "Reducción catalítica de isonitrilos",
+        "naturaleza": "Adición de 4 hidrógenos al grupo isociano (–N≡C).",
+        "rupturaIntermediarios": "Saturación de los enlaces múltiples N≡C.",
+        "detalleMecanismo": "CH₃–CH₂–N≡C + 2 H₂ (Ni) → CH₃–CH₂–NH–CH₃",
+        "reactivosCondiciones": "Isonitrilo + 2 H₂ / Ni",
+        "rolReactivos": "• Sustrato: Isocianuro de etilo (CH₃CH₂–NC).\n• Reductor: 2 H₂ / Ni.",
+        "reglasObs": "Siempre produce una amina secundaria donde uno de los sustituyentes sobre el nitrógeno es un grupo metilo (–CH₃)."
+      },
+      "substrates": [
+        {
+          "id": "isocianuro_etilo_h2",
+          "name": "Isocianuro de etilo + 2 H₂ (Ni) → Etilmetilamina (Amina 2°)",
+          "catalyst": "2 H₂ / Ni"
+        }
+      ],
+      "catalysts": [
+        "2 H₂ / Ni"
+      ],
+      "stepsBySubstrate": {
+        "isocianuro_etilo_h2": [
+          {
+            "title": "Paso 1 — Estado Inicial: Isocianuro de etilo + 2 H₂ / Ni",
+            "semiStep": "CH₃–CH₂–N≡C  +  2 H₂ (Ni)",
+            "semiGlobal": "CH₃–CH₂–N≡C + 2 H₂ ──(Ni)──► CH₃–CH₂–NH–CH₃",
+            "desc": "En el isocianuro de etilo el nitrógeno está unido directamente al grupo etilo y al carbono terminal (–N≡C).",
+            "legend": {
+              "breaking": "Aproximación de 2 H₂ sobre Níquel.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Hidrogenación del grupo isocianuro."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 195,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "N",
+                  "x": 355,
+                  "y": 195,
+                  "label": "Isocianuro de etilo"
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 495,
+                  "y": 195
+                },
+                {
+                  "id": "H2",
+                  "el": "2 H₂ / Ni",
+                  "x": 675,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "C1",
+                  "order": 3,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Etilmetilamina (Amina secundaria)",
+            "semiStep": "CH₃–CH₂–NH–CH₃",
+            "semiGlobal": "CH₃–CH₂–N≡C + 2 H₂ ──(Ni)──► CH₃–CH₂–NH–CH₃",
+            "desc": "El carbono terminal se reduce a –CH₃ y el nitrógeno a –NH–, generando etilmetilamina (amina secundaria).",
+            "legend": {
+              "breaking": "Enlaces múltiples N≡C reducidos.",
+              "forming": "Enlaces N–H y C–H consolidados (en verde sólido).",
+              "movement": "Amina secundaria N-metilada formada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 205,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 375,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Etilmetilamina (Amina 2°)"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 535,
+                  "y": 195,
+                  "highlight": "#10b981"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "new"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_obt_reduccion_amidas": {
+      "category": "obtencion",
+      "title": "5) Reducción de amidas 1° y N-sustituidas con LiAlH₄ / H₂O",
+      "natureBadge": "Reducción de Carbonilo Amídico (C=O → CH₂)",
+      "description": "El hidruro de litio y aluminio (LiAlH₄) seguido de hidrólisis reduce el grupo carbonilo (C=O) de las amidas directamente a un grupo metileno (–CH₂–) sin romper el enlace C–N. Las amidas primarias (R–CONH₂) dan aminas primarias (R–CH₂NH₂), las N-monosustituidas dan aminas secundarias y las N,N-disustituidas dan aminas terciarias.",
+      "deltaH": "R–CO–NR'R'' ──(1. LiAlH₄ / 2. H₂O)──► R–CH₂–NR'R'' + H₂O",
+      "meta": {
+        "grupoFuncional": "Amina 1° (de amida 1°), 2° (de amida N-sustituida) o 3°",
+        "reaccionMecanismo": "Reducción nucleofílica con hidruro (LiAlH₄)",
+        "naturaleza": "Desoxigenación reductiva del grupo C=O a –CH₂–.",
+        "rupturaIntermediarios": "Eliminación del oxígeno carbonílico como aluminato; se conserva el enlace C–N.",
+        "detalleMecanismo": "CH₃CH₂–CONH₂ + LiAlH₄ / H₂O → CH₃CH₂–CH₂NH₂ + H₂O",
+        "reactivosCondiciones": "1) LiAlH₄ en éter seco, 2) H₂O",
+        "rolReactivos": "• Sustrato: Propanamida o N-isopropilpropanamida.\n• Reductor fuerte: LiAlH₄ (dona iones hidruro H⁻).",
+        "reglasObs": "A diferencia de los ésteres (donde se rompe el enlace acilo-oxígeno), en las amidas NO se rompe el enlace C–N."
+      },
+      "substrates": [
+        {
+          "id": "propanamida_lialh4",
+          "name": "Propanamida + LiAlH₄ / H₂O → 1-Propanamina (Amina 1°)",
+          "catalyst": "1) LiAlH₄, 2) H₂O"
+        },
+        {
+          "id": "nisopropilpropanamida_lialh4",
+          "name": "N-Isopropilpropanamida + LiAlH₄ / H₂O → Isopropilpropilamina (Amina 2°)",
+          "catalyst": "1) LiAlH₄, 2) H₂O"
+        }
+      ],
+      "catalysts": [
+        "1) LiAlH₄, 2) H₂O"
+      ],
+      "stepsBySubstrate": {
+        "propanamida_lialh4": [
+          {
+            "title": "Paso 1 — Estado Inicial: Propanamida + LiAlH₄",
+            "semiStep": "CH₃–CH₂–CO–NH₂  +  1) LiAlH₄ / 2) H₂O",
+            "semiGlobal": "CH₃–CH₂–CO–NH₂ ──(LiAlH₄ / H₂O)──► CH₃–CH₂–CH₂–NH₂ + H₂O",
+            "desc": "El hidruro de litio y aluminio ataca al carbono carbonílico de la propanamida para reemplazar el doble enlace C=O por dos enlaces C–H.",
+            "legend": {
+              "breaking": "Enlace doble C=O del grupo amida.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Transferencia de hidruros (H⁻) al carbono carbonílico."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 190,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 350,
+                  "y": 195,
+                  "label": "Propanamida"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 350,
+                  "y": 85,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 500,
+                  "y": 195
+                },
+                {
+                  "id": "RED",
+                  "el": "LiAlH₄",
+                  "x": 675,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: 1-Propanamina + H₂O",
+            "semiStep": "CH₃–CH₂–CH₂–NH₂  +  H₂O",
+            "semiGlobal": "CH₃–CH₂–CO–NH₂ ──(LiAlH₄ / H₂O)──► CH₃–CH₂–CH₂–NH₂ + H₂O",
+            "desc": "El grupo C=O se transforma en –CH₂– consolidado en verde sólido, obteniéndose 1-propanamina.",
+            "legend": {
+              "breaking": "Oxígeno carbonílico eliminado como agua/aluminato.",
+              "forming": "Grupo metileno –CH₂– consolidado en verde sólido.",
+              "movement": "Amina primaria estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 185,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 350,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 505,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "1-Propanamina"
+                },
+                {
+                  "id": "O1",
+                  "el": "H₂O",
+                  "x": 690,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 600,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "nisopropilpropanamida_lialh4": [
+          {
+            "title": "Paso 1 — Estado Inicial: N-Isopropilpropanamida + LiAlH₄",
+            "semiStep": "CH₃–CH₂–CO–NH–CH(CH₃)₂  +  1) LiAlH₄ / 2) H₂O",
+            "semiGlobal": "CH₃CH₂CONHCH(CH₃)₂ ──(LiAlH₄ / H₂O)──► CH₃CH₂CH₂NHCH(CH₃)₂ + H₂O",
+            "desc": "La amida N-monosustituida conserva el sustituyente isopropilo sobre el nitrógeno durante la reducción del carbonilo.",
+            "legend": {
+              "breaking": "Enlace C=O del carbonilo amídico.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Reducción del grupo acilo."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 165,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 315,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 315,
+                  "y": 85,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 455,
+                  "y": 195
+                },
+                {
+                  "id": "R2",
+                  "el": "CH(CH₃)₂",
+                  "x": 615,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Isopropilpropilamina (Amina 2°)",
+            "semiStep": "CH₃–CH₂–CH₂–NH–CH(CH₃)₂  +  H₂O",
+            "semiGlobal": "CH₃CH₂CONHCH(CH₃)₂ ──(LiAlH₄ / H₂O)──► CH₃CH₂CH₂NHCH(CH₃)₂ + H₂O",
+            "desc": "Se obtiene isopropilpropilamina (amina secundaria) más agua.",
+            "legend": {
+              "breaking": "Carbonilo C=O reducido completamente.",
+              "forming": "Enlace –CH₂–NH– consolidado en verde sólido.",
+              "movement": "Amina secundaria estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 155,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 305,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 445,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Isopropilpropilamina (Amina 2°)"
+                },
+                {
+                  "id": "R2",
+                  "el": "CH(CH₃)₂",
+                  "x": 605,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "N1",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_acido_base": {
+      "category": "reacciones",
+      "title": "1) Reacción ácido-base con ácidos minerales (Formación de sales de amonio)",
+      "natureBadge": "Neutralización Ácido-Base de Lewis / Brønsted",
+      "description": "Debido al par de electrones no enlazante del nitrógeno, las aminas son bases débiles de Brønsted-Lowry y de Lewis que reaccionan con ácidos minerales fuertes (HCl, HI, HNO₃, H₂SO₄) formando sales de alquilamonio cristalinas y solubles en agua.",
+      "deltaH": "R–NH₂ + HX (HCl, HI, HNO₃) ──► [R–NH₃⁺] X⁻",
+      "meta": {
+        "grupoFuncional": "Sal de amonio sustituida (ej. Cloruro de etilamonio)",
+        "reaccionMecanismo": "Reacción ácido-base (Transferencia de protón H⁺)",
+        "naturaleza": "Neutralización rápida en una etapa.",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace H–X; formación de enlace dativo N–H⁺.",
+        "detalleMecanismo": "CH₃CH₂–NH₂ + HCl → [CH₃CH₂–NH₃⁺] Cl⁻",
+        "reactivosCondiciones": "Amina + Ácido mineral fuerte (HCl, HI, HNO₃)",
+        "rolReactivos": "• Base: Etilamina (par libre del N).\n• Ácido: HCl, HI o HNO₃ (dona H⁺).",
+        "reglasObs": "Las sales de amonio son iónicas y solubles en agua, lo que permite separar aminas de compuestos orgánicos neutros."
+      },
+      "substrates": [
+        {
+          "id": "etilamina_hcl",
+          "name": "Etilamina + HCl → Cloruro de etilamonio",
+          "catalyst": "Ácido clorhídrico (HCl)"
+        },
+        {
+          "id": "etilamina_hno3",
+          "name": "Etilamina + HNO₃ → Nitrato de etilamonio",
+          "catalyst": "Ácido nítrico (HNO₃)"
+        }
+      ],
+      "catalysts": [
+        "Ácido clorhídrico (HCl)",
+        "Ácido nítrico (HNO₃)"
+      ],
+      "stepsBySubstrate": {
+        "etilamina_hcl": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina + HCl",
+            "semiStep": "CH₃–CH₂–NH₂  +  H–Cl",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HCl ──► [CH₃–CH₂–NH₃⁺] Cl⁻",
+            "desc": "El par electrónico libre del nitrógeno de la etilamina ataca al protón ácido (H⁺) del HCl.",
+            "legend": {
+              "breaking": "Polarización del enlace H–Cl.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Transferencia del protón H⁺ al par libre del nitrógeno."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 200,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 360,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "highlight": "#38bdf8",
+                  "label": "Base"
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 510,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 635,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "H1",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Cloruro de etilamonio ([CH₃CH₂NH₃⁺] Cl⁻)",
+            "semiStep": "[CH₃–CH₂–NH₃⁺] Cl⁻",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HCl ──► [CH₃–CH₂–NH₃⁺] Cl⁻",
+            "desc": "Se obtiene la sal iónica cloruro de etilamonio.",
+            "legend": {
+              "breaking": "Enlace H–Cl roto heterolíticamente.",
+              "forming": "Enlace N–H⁺ formado (en verde sólido).",
+              "movement": "Sal de amonio estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 210,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₃",
+                  "x": 385,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#10b981",
+                  "label": "Cloruro de etilamonio"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 575,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          }
+        ],
+        "etilamina_hno3": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina + HNO₃",
+            "semiStep": "CH₃–CH₂–NH₂  +  HNO₃",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HNO₃ ──► [CH₃–CH₂–NH₃⁺] NO₃⁻",
+            "desc": "La etilamina acepta el protón del ácido nítrico (HNO₃).",
+            "legend": {
+              "breaking": "Ionización del HNO₃.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Neutralización ácido-base."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 200,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 360,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 505,
+                  "y": 195
+                },
+                {
+                  "id": "NO3",
+                  "el": "NO₃",
+                  "x": 635,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "H1",
+                  "to": "NO3",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Nitrato de etilamonio ([CH₃CH₂NH₃⁺] NO₃⁻)",
+            "semiStep": "[CH₃–CH₂–NH₃⁺] NO₃⁻",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HNO₃ ──► [CH₃–CH₂–NH₃⁺] NO₃⁻",
+            "desc": "Se forma la sal nitrato de etilamonio.",
+            "legend": {
+              "breaking": "Enlace H–ONO₂ disociado.",
+              "forming": "Catión etilamonio formado (en verde sólido).",
+              "movement": "Sal de amonio estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 210,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₃",
+                  "x": 385,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#10b981",
+                  "label": "Nitrato de etilamonio"
+                },
+                {
+                  "id": "NO3",
+                  "el": "NO₃",
+                  "x": 580,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_alquilacion_nucleofila": {
+      "category": "reacciones",
+      "title": "2) Alquilación nucleofílica SN2 de aminas (Aminas 2°, 3° y sales cuaternarias)",
+      "natureBadge": "Sustitución Nucleofílica Bimolecular (SN2 Exhaustiva)",
+      "description": "Las aminas primarias, secundarias y terciarias actúan como nucleófilos frente a halogenuros de alquilo primarios vía SN2. Una amina 1° da una amina 2°, una amina 2° da una amina 3° y una amina 3° (como la trimetilamina con clorometano) forma una sal de amonio cuaternario (cloruro de tetrametilamonio).",
+      "deltaH": "R₃N + R'–X ──(SN2)──► [R₃N⁺–R'] X⁻",
+      "meta": {
+        "grupoFuncional": "Sal de amonio cuaternario (ej. Cloruro de tetrametilamonio) o aminas 2°/3°",
+        "reaccionMecanismo": "Sustitución Nucleofílica Bimolecular (SN2)",
+        "naturaleza": "Ataque concertado del par libre del nitrógeno con desplazamiento de haluro.",
+        "rupturaIntermediarios": "Ruptura heterolítica C–Cl y formación del cuarto enlace C–N⁺.",
+        "detalleMecanismo": "(CH₃)₃N + CH₃–Cl → [(CH₃)₄N⁺] Cl⁻",
+        "reactivosCondiciones": "Amina + Halogenuro de alquilo primario",
+        "rolReactivos": "• Nucleófilo: Trimetilamina (o dietilamina).\n• Sustrato electrófilo: Clorometano (o cloroetano).",
+        "reglasObs": "Las sales de amonio cuaternario no tienen hidrógenos sobre el N, por lo que no pueden desprotonarse."
+      },
+      "substrates": [
+        {
+          "id": "trimetilamina_ch3cl",
+          "name": "Trimetilamina + Clorometano → Cloruro de tetrametilamonio (SN2)",
+          "catalyst": "SN2"
+        },
+        {
+          "id": "dietilamina_c2h5cl",
+          "name": "Dietilamina + Cloroetano → Trietilamina + HCl (SN2)",
+          "catalyst": "SN2"
+        }
+      ],
+      "catalysts": [
+        "SN2"
+      ],
+      "stepsBySubstrate": {
+        "trimetilamina_ch3cl": [
+          {
+            "title": "Paso 1 — Estado Inicial: Trimetilamina + Clorometano",
+            "semiStep": "(CH₃)₃N:  +  CH₃–Cl",
+            "semiGlobal": "(CH₃)₃N + CH₃–Cl ──(SN2)──► [(CH₃)₄N⁺] Cl⁻",
+            "desc": "La trimetilamina (amina terciaria) ataca con su par libre al carbono del clorometano.",
+            "legend": {
+              "breaking": "Aproximación inicial.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Ataque nucleofílico del nitrógeno terciario sobre el CH₃–Cl."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "N1",
+                  "el": "(CH₃)₃N",
+                  "x": 235,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "highlight": "#38bdf8",
+                  "label": "Trimetilamina"
+                },
+                {
+                  "id": "C4",
+                  "el": "CH₃",
+                  "x": 455,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 595,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C4",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Cloruro de tetrametilamonio ([(CH₃)₄N⁺] Cl⁻)",
+            "semiStep": "[(CH₃)₄N⁺] Cl⁻",
+            "semiGlobal": "(CH₃)₃N + CH₃–Cl ──(SN2)──► [(CH₃)₄N⁺] Cl⁻",
+            "desc": "Se forma la sal de amonio cuaternario cloruro de tetrametilamonio.",
+            "legend": {
+              "breaking": "Enlace C–Cl roto heterolíticamente.",
+              "forming": "Cuarto enlace N–CH₃ consolidado (en verde sólido).",
+              "movement": "Sal de amonio cuaternario estable."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "N1",
+                  "el": "(CH₃)₃N",
+                  "x": 225,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#10b981",
+                  "label": "Cloruro de tetrametilamonio"
+                },
+                {
+                  "id": "C4",
+                  "el": "CH₃",
+                  "x": 385,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 575,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "N1",
+                  "to": "C4",
+                  "order": 1,
+                  "state": "new"
+                }
+              ]
+            }
+          }
+        ],
+        "dietilamina_c2h5cl": [
+          {
+            "title": "Paso 1 — Estado Inicial: Dietilamina + Cloroetano",
+            "semiStep": "(CH₃CH₂)₂NH  +  CH₃CH₂–Cl",
+            "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₃N + HCl",
+            "desc": "La dietilamina ataca al cloroetano vía SN2.",
+            "legend": {
+              "breaking": "Aproximación inicial.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Ataque SN2."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "N1",
+                  "el": "(CH₃CH₂)₂NH",
+                  "x": 235,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH₂CH₃",
+                  "x": 465,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 605,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C3",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Trietilamina (Amina 3°) + HCl",
+            "semiStep": "(CH₃–CH₂)₃N  +  HCl",
+            "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₃N + HCl",
+            "desc": "Se obtiene trietilamina (amina terciaria) y HCl.",
+            "legend": {
+              "breaking": "Enlace C–Cl roto.",
+              "forming": "Tercer grupo etilo unido al N (en verde sólido).",
+              "movement": "Amina terciaria obtenida."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "N1",
+                  "el": "(CH₃CH₂)₃N",
+                  "x": 275,
+                  "y": 195,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Trietilamina (Amina 3°)"
+                },
+                {
+                  "id": "Cl1",
+                  "el": "HCl",
+                  "x": 545,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [],
+              "texts": [
+                {
+                  "x": 430,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_acilacion_derivados": {
+      "category": "reacciones",
+      "title": "3) Acilación nucleofílica con haluros de acilo y anhídridos → Amidas",
+      "natureBadge": "Sustitución Nucleofílica Acílica (Adición-Eliminación)",
+      "description": "Las aminas primarias y secundarias (alifáticas o aromáticas como la anilina) atacan nucleofílicamente al carbono carbonílico de cloruros de acilo o anhídridos de ácido mediante un mecanismo de adición-eliminación, generando amidas N-sustituidas más HCl o ácido carboxílico respectivamente.",
+      "deltaH": "R–NH₂ + R'–CO–Cl (o (R'CO)₂O) ──► R'–CO–NH–R + HCl (o R'COOH)",
+      "meta": {
+        "grupoFuncional": "Amida N-sustituida (ej. N-Etiletanamida, Acetanilida)",
+        "reaccionMecanismo": "Sustitución Nucleofílica en el Acilo (Adición-Eliminación)",
+        "naturaleza": "1) Ataque del N al C=O (intermediario tetraédrico) + 2) Eliminación del grupo saliente (Cl⁻ o R'COO⁻).",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace C–Cl (o C–O acílico).",
+        "detalleMecanismo": "CH₃CH₂–NH₂ + CH₃COCl → CH₃CO–NH–CH₂CH₃ + HCl",
+        "reactivosCondiciones": "Amina 1° o 2° + Cloruro de acilo o Anhídrido acético",
+        "rolReactivos": "• Nucleófilo: Etilamina, metilamina o anilina.\n• Electrófilo acilante: Cloruro de etanoílo o anhídrido etanoico.",
+        "reglasObs": "Las aminas terciarias (R₃N) no forman amidas estables porque carecen de enlaces N–H para desprotonarse."
+      },
+      "substrates": [
+        {
+          "id": "etilamina_ch3cocl",
+          "name": "Etilamina + Cloruro de etanoílo → N-Etiletanamida + HCl",
+          "catalyst": "Sustitución nucleofílica acílica"
+        },
+        {
+          "id": "anilina_anhidrido",
+          "name": "Anilina + Anhídrido acético → N-Feniletanamida (Acetanilida) + Ácido acético",
+          "catalyst": "Acetilación"
+        }
+      ],
+      "catalysts": [
+        "Sustitución nucleofílica acílica",
+        "Acetilación"
+      ],
+      "stepsBySubstrate": {
+        "etilamina_ch3cocl": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina + Cloruro de etanoílo",
+            "semiStep": "CH₃–CH₂–NH₂  +  CH₃–CO–Cl",
+            "semiGlobal": "CH₃–CH₂–NH₂ + CH₃–CO–Cl ──► CH₃–CO–NH–CH₂–CH₃ + HCl",
+            "desc": "El par libre del nitrógeno de la etilamina ataca al carbono carbonílico altamente electrófilo del cloruro de etanoílo.",
+            "legend": {
+              "breaking": "Aproximación inicial al grupo carbonilo.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Ataque nucleofílico del N sobre C=O."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 155,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 300,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 475,
+                  "y": 195,
+                  "label": "Cloruro de etanoílo"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 475,
+                  "y": 85
+                },
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 610,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "Cl",
+                  "x": 475,
+                  "y": 300
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "Me",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "Cl1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: N-Etiletanamida + HCl",
+            "semiStep": "CH₃–CO–NH–CH₂–CH₃  +  HCl",
+            "semiGlobal": "CH₃–CH₂–NH₂ + CH₃–CO–Cl ──► CH₃–CO–NH–CH₂–CH₃ + HCl",
+            "desc": "Tras expulsar Cl⁻ y H⁺ se consolida el enlace amida (–CO–NH–) en verde sólido.",
+            "legend": {
+              "breaking": "Enlace C–Cl roto heterolíticamente.",
+              "forming": "Enlace amida C–N consolidado en verde sólido.",
+              "movement": "Amida N-sustituida obtenida."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 160,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 290,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 290,
+                  "y": 85
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 430,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "N-Etiletanamida"
+                },
+                {
+                  "id": "R1",
+                  "el": "CH₂CH₃",
+                  "x": 575,
+                  "y": 195
+                },
+                {
+                  "id": "Cl1",
+                  "el": "HCl",
+                  "x": 745,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "N1",
+                  "to": "R1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 665,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "anilina_anhidrido": [
+          {
+            "title": "Paso 1 — Estado Inicial: Anilina + Anhídrido acético",
+            "semiStep": "C₆H₅–NH₂  +  (CH₃CO)₂O",
+            "semiGlobal": "C₆H₅–NH₂ + (CH₃CO)₂O ──► C₆H₅–NH–COCH₃ + CH₃COOH",
+            "desc": "La anilina ataca al anhídrido acético para acetilar el grupo amino.",
+            "legend": {
+              "breaking": "Aproximación de la anilina al anhídrido.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Ataque nucleofílico acílico."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 195,
+                  "y": 195,
+                  "label": "Anilina"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 345,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "ANH",
+                  "el": "(CH₃CO)₂O",
+                  "x": 565,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Acetanilida (N-Feniletanamida) + Ácido acético",
+            "semiStep": "C₆H₅–NH–COCH₃  +  CH₃COOH",
+            "semiGlobal": "C₆H₅–NH₂ + (CH₃CO)₂O ──► C₆H₅–NH–COCH₃ + CH₃COOH",
+            "desc": "Se obtiene acetanilida (N-feniletanamida) más ácido acético.",
+            "legend": {
+              "breaking": "Enlace acilo-oxígeno del anhídrido roto.",
+              "forming": "Enlace amida consolidado en verde sólido.",
+              "movement": "Acetanilida obtenida."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 180,
+                  "y": 195,
+                  "label": "Acetanilida"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 330,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "AC",
+                  "el": "COCH₃",
+                  "x": 485,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "ACOH",
+                  "el": "CH₃COOH",
+                  "x": 705,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "AC",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 595,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_hno2_alifaticas": {
+      "category": "reacciones",
+      "title": "4) Reacción de aminas alifáticas 1°, 2° y 3° con Ácido Nitroso (HNO₂)",
+      "natureBadge": "Diferenciación Química de Aminas Alifáticas (NaNO₂ + HCl)",
+      "description": "El ácido nitroso (HNO₂, generado in situ con NaNO₂ + HCl) permite distinguir las clases de aminas alifáticas: 1) Las aminas primarias alifáticas (R–NH₂) forman sales de diazonio inestables que desprenden N₂ gaseoso generando alcoholes (R–OH) + N₂ + H₂O; 2) Las aminas secundarias (R₂NH) producen N-nitrosaminas amarillas aceitosas (R₂N–N=O) + H₂O; 3) Las aminas terciarias (R₃N) solo dan reacción ácido-base formando nitrito de trialquilamonio ([R₃NH⁺] NO₂⁻).",
+      "deltaH": "1°: R–NH₂ + HNO₂ → R–OH + N₂↑ + H₂O  |  2°: R₂NH + HNO₂ → R₂N–N=O + H₂O  |  3°: R₃N + HNO₂ → [R₃NH⁺] NO₂⁻",
+      "meta": {
+        "grupoFuncional": "Alcohol (1°), N-Nitrosamina (2°) o Sal nitrito de amonio (3°)",
+        "reaccionMecanismo": "Nitrosación (1° y 2°) vs Neutralización ácido-base (3°)",
+        "naturaleza": "Permite diferenciar experimentalmente aminas 1°, 2° y 3°.",
+        "rupturaIntermediarios": "1°: pérdida espontánea de N₂. 2°: enlace N–N=O. 3°: transferencia protónica.",
+        "detalleMecanismo": "CH₃CH₂NH₂ + HNO₂ → CH₃CH₂OH + N₂ + H₂O  |  (CH₃CH₂)₂NH + HNO₂ → (CH₃CH₂)₂N–NO + H₂O",
+        "reactivosCondiciones": "Amina alifática + Ácido nitroso (NaNO₂ + HCl)",
+        "rolReactivos": "• Sustrato: Amina 1°, 2° o 3°.\n• Reactivo: HNO₂ (agente nitrosante / ácido débil).",
+        "reglasObs": "1° desprende burbujas de N₂ y da alcohol; 2° forma aceite amarillo insoluble (N-nitrosamina); 3° solo forma sal soluble."
+      },
+      "substrates": [
+        {
+          "id": "amina1_hno2",
+          "name": "Amina 1°: Etilamina + HNO₂ → Etanol + N₂ ↑ + H₂O",
+          "catalyst": "HNO₂ (NaNO₂ + HCl)"
+        },
+        {
+          "id": "amina2_hno2",
+          "name": "Amina 2°: Dietilamina + HNO₂ → N-Nitrosodietilamina + H₂O",
+          "catalyst": "HNO₂ (NaNO₂ + HCl)"
+        },
+        {
+          "id": "amina3_hno2",
+          "name": "Amina 3°: Trietilamina + HNO₂ → Nitrito de trietilamonio (Ácido-Base)",
+          "catalyst": "HNO₂ (NaNO₂ + HCl)"
+        }
+      ],
+      "catalysts": [
+        "HNO₂ (NaNO₂ + HCl)"
+      ],
+      "stepsBySubstrate": {
+        "amina1_hno2": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina (Amina 1°) + HNO₂",
+            "semiStep": "CH₃–CH₂–NH₂  +  HNO₂",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HNO₂ ──► CH₃–CH₂–OH + N₂ ↑ + H₂O",
+            "desc": "La etilamina (amina primaria alifática) reacciona con ácido nitroso formando un ion etildiazonio inestable.",
+            "legend": {
+              "breaking": "Aproximación del HNO₂ al grupo –NH₂.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Nitrosación de la amina primaria."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 200,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 365,
+                  "y": 195,
+                  "label": "Etilamina (1°)"
+                },
+                {
+                  "id": "HNO2",
+                  "el": "HNO₂",
+                  "x": 565,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Productos Finales: Etanol + N₂ ↑ + H₂O",
+            "semiStep": "CH₃–CH₂–OH  +  N₂ ↑  +  H₂O",
+            "semiGlobal": "CH₃–CH₂–NH₂ + HNO₂ ──► CH₃–CH₂–OH + N₂ ↑ + H₂O",
+            "desc": "Se desprende gas nitrógeno (N₂ ↑) y se obtiene etanol más agua.",
+            "legend": {
+              "breaking": "Ruptura del enlace C–N₂⁺ con liberación de N₂ gaseoso.",
+              "forming": "Enlace C–OH consolidado en verde sólido.",
+              "movement": "Alcohol primario obtenido."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 185,
+                  "y": 195
+                },
+                {
+                  "id": "OH",
+                  "el": "OH",
+                  "x": 345,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Etanol"
+                },
+                {
+                  "id": "N2",
+                  "el": "N₂ ↑",
+                  "x": 525,
+                  "y": 195,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "H2O",
+                  "el": "H₂O",
+                  "x": 695,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "OH",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 435,
+                  "y": 203,
+                  "text": "+",
+                  "size": 24,
+                  "color": "#10b981"
+                },
+                {
+                  "x": 610,
+                  "y": 203,
+                  "text": "+",
+                  "size": 24,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "amina2_hno2": [
+          {
+            "title": "Paso 1 — Estado Inicial: Dietilamina (Amina 2°) + HNO₂",
+            "semiStep": "(CH₃CH₂)₂NH  +  HNO₂",
+            "semiGlobal": "(CH₃CH₂)₂NH + HNO₂ ──► (CH₃CH₂)₂N–N=O + H₂O",
+            "desc": "La dietilamina (amina secundaria) reacciona con HNO₂ sustituyendo el hidrógeno del N por el grupo nitroso (–N=O).",
+            "legend": {
+              "breaking": "Enlace N–H de la amina secundaria.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Nitrosación en el átomo de nitrógeno."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R2N",
+                  "el": "(CH₃CH₂)₂NH",
+                  "x": 245,
+                  "y": 195,
+                  "label": "Dietilamina (2°)"
+                },
+                {
+                  "id": "HNO2",
+                  "el": "HNO₂",
+                  "x": 525,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": []
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: N-Nitrosodietilamina + H₂O",
+            "semiStep": "(CH₃CH₂)₂N–N=O  +  H₂O",
+            "semiGlobal": "(CH₃CH₂)₂NH + HNO₂ ──► (CH₃CH₂)₂N–N=O + H₂O",
+            "desc": "Se forma N-nitrosodietilamina (compuesto N-nitroso aceitoso amarillo) más agua.",
+            "legend": {
+              "breaking": "Eliminación de H₂O.",
+              "forming": "Enlace N–NO consolidado en verde sólido.",
+              "movement": "N-Nitrosamina estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R2N",
+                  "el": "(CH₃CH₂)₂N",
+                  "x": 225,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "N-Nitrosodietilamina"
+                },
+                {
+                  "id": "NO",
+                  "el": "N=O",
+                  "x": 415,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "H2O",
+                  "el": "H₂O",
+                  "x": 625,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R2N",
+                  "to": "NO",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 525,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "amina3_hno2": [
+          {
+            "title": "Paso 1 — Estado Inicial: Trietilamina (Amina 3°) + HNO₂",
+            "semiStep": "(CH₃CH₂)₃N:  +  HNO₂",
+            "semiGlobal": "(CH₃CH₂)₃N + HNO₂ ──► [(CH₃CH₂)₃NH⁺] NO₂⁻",
+            "desc": "Al no poseer hidrógenos unidos al nitrógeno, la trietilamina solo actúa como base frente al HNO₂.",
+            "legend": {
+              "breaking": "Ionización débil del HNO₂.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Transferencia protónica."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R3N",
+                  "el": "(CH₃CH₂)₃N",
+                  "x": 245,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "label": "Trietilamina (3°)"
+                },
+                {
+                  "id": "HNO2",
+                  "el": "HNO₂",
+                  "x": 525,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": []
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Nitrito de trietilamonio ([(CH₃CH₂)₃NH⁺] NO₂⁻)",
+            "semiStep": "[(CH₃CH₂)₃NH⁺] NO₂⁻",
+            "semiGlobal": "(CH₃CH₂)₃N + HNO₂ ──► [(CH₃CH₂)₃NH⁺] NO₂⁻",
+            "desc": "Se obtiene la sal soluble nitrito de trietilamonio.",
+            "legend": {
+              "breaking": "Enlace H–ONO roto.",
+              "forming": "Catión trietilamonio formado (en verde sólido).",
+              "movement": "Sal de amonio soluble."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R3NH",
+                  "el": "(CH₃CH₂)₃NH",
+                  "x": 265,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#10b981",
+                  "label": "Nitrito de trietilamonio"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 535,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": []
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_diazotacion_aromatica": {
+      "category": "reacciones",
+      "title": "5) Diazotación de aminas aromáticas 1° (NaNO₂ / HCl frío) → Sal de diazonio",
+      "natureBadge": "Diazotación Aromática en Frío (0–5 °C)",
+      "description": "Las aminas aromáticas primarias (como la anilina o fenilamina) reaccionan con ácido nitroso en medio ácido y en frío (NaNO₂ + HCl, 0–5 °C) formando sales de arenodiazonio (cloruro de bencenodiazonio, C₆H₅–N₂⁺ Cl⁻) más 2 H₂O, estabilizadas por resonancia con el anillo bencénico.",
+      "deltaH": "C₆H₅–NH₂ + HNO₂ + HCl ──(0–5 °C)──► [C₆H₅–N≡N⁺] Cl⁻ + 2 H₂O",
+      "meta": {
+        "grupoFuncional": "Sal de arenodiazonio (Cloruro de bencenodiazonio)",
+        "reaccionMecanismo": "Diazotación de aminas aromáticas primarias",
+        "naturaleza": "Nitrosación seguida de deshidratación formando el grupo diazonio (–N≡N⁺).",
+        "rupturaIntermediarios": "Ruptura de enlaces N–H y eliminación de 2 moléculas de agua.",
+        "detalleMecanismo": "C₆H₅–NH₂ + NaNO₂ / HCl (frío) → C₆H₅–N₂⁺ Cl⁻ + 2 H₂O",
+        "reactivosCondiciones": "Anilina + NaNO₂ / HCl en frío (0–5 °C)",
+        "rolReactivos": "• Sustrato: Anilina (aminobenceno).\n• Reactivos: Nitrito de sodio (NaNO₂) + HCl en baño de hielo.",
+        "reglasObs": "Debe mantenerse en frío (0–5 °C) porque en caliente la sal de diazonio se hidroliza a fenol liberando N₂."
+      },
+      "substrates": [
+        {
+          "id": "anilina_diazotacion",
+          "name": "Anilina + HNO₂ / HCl (frío) → Cloruro de bencenodiazonio + 2 H₂O",
+          "catalyst": "NaNO₂ / HCl, frío (0–5 °C)"
+        }
+      ],
+      "catalysts": [
+        "NaNO₂ / HCl, frío (0–5 °C)"
+      ],
+      "stepsBySubstrate": {
+        "anilina_diazotacion": [
+          {
+            "title": "Paso 1 — Estado Inicial: Anilina + HNO₂ / HCl en frío (0–5 °C)",
+            "semiStep": "C₆H₅–NH₂  +  HNO₂ + HCl (frío)",
+            "semiGlobal": "C₆H₅–NH₂ + HNO₂ + HCl ──(frío)──► C₆H₅–N₂⁺ Cl⁻ + 2 H₂O",
+            "desc": "La anilina reacciona en baño de hielo con ácido nitroso y ácido clorhídrico.",
+            "legend": {
+              "breaking": "Aproximación del agente nitrosante al grupo –NH₂ aromático.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Inicio de la diazotación en frío."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 225,
+                  "y": 195,
+                  "label": "Anilina"
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 385,
+                  "y": 195
+                },
+                {
+                  "id": "HNO2",
+                  "el": "HNO₂ / HCl",
+                  "x": 585,
+                  "y": 195,
+                  "highlight": "#38bdf8",
+                  "label": "Frío (0–5 °C)"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Cloruro de bencenodiazonio + 2 H₂O",
+            "semiStep": "[C₆H₅–N≡N⁺] Cl⁻  +  2 H₂O",
+            "semiGlobal": "C₆H₅–NH₂ + HNO₂ + HCl ──(frío)──► C₆H₅–N₂⁺ Cl⁻ + 2 H₂O",
+            "desc": "Se forma el cloruro de bencenodiazonio estable en frío más 2 moléculas de agua.",
+            "legend": {
+              "breaking": "Eliminación de 2 moléculas de H₂O.",
+              "forming": "Grupo diazonio (–N≡N⁺) consolidado en verde sólido.",
+              "movement": "Sal de diazonio estabilizada por resonancia."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 205,
+                  "y": 195,
+                  "label": "Cloruro de bencenodiazonio"
+                },
+                {
+                  "id": "N2",
+                  "el": "N≡N⁺ Cl⁻",
+                  "x": 385,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "H2O",
+                  "el": "2 H₂O",
+                  "x": 625,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "N2",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 515,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "aminas_rxn_condensacion_carbonilos": {
+      "category": "reacciones",
+      "title": "6) Condensación de aminas primarias con aldehídos y cetonas → Bases de Schiff (Iminas)",
+      "natureBadge": "Adición Nucleofílica Seguida de Deshidratación (C=N)",
+      "description": "Las aminas primarias (R–NH₂) reaccionan con aldehídos y cetonas mediante adición nucleofílica al grupo carbonilo formando un intermediario inestable llamado carbinolamina (–NH–C(OH)–), el cual pierde espontáneamente una molécula de agua para formar una imina sustituida o Base de Schiff (R–N=CR'R'') más H₂O.",
+      "deltaH": "R–NH₂ + R'–CO–R'' ⇄ [R–NH–C(OH)R'R''] ──► R–N=CR'R'' (Base de Schiff) + H₂O",
+      "meta": {
+        "grupoFuncional": "Imina sustituida / Base de Schiff (C=N–R)",
+        "reaccionMecanismo": "Adición-Eliminación (Condensación carbonilo-amina)",
+        "naturaleza": "1) Ataque nucleofílico al C=O (carbinolamina) + 2) Deshidratación a doble enlace C=N.",
+        "rupturaIntermediarios": "Ruptura del doble enlace C=O y formación del doble enlace C=N; intermediario carbinolamina.",
+        "detalleMecanismo": "CH₃CH₂–NH₂ + CH₃–CHO → CH₃CH₂–N=CH–CH₃ + H₂O",
+        "reactivosCondiciones": "Amina primaria + Aldehído o Cetona (catálisis ácida suave)",
+        "rolReactivos": "• Nucleófilo: Amina primaria (etilamina o isopropilamina).\n• Electrófilo: Aldehído o cetona (etanal o propanona).",
+        "reglasObs": "Las bases de Schiff tienen gran importancia biológica (ej. unión del piridoxal fosfato PLP con lisina en enzimas)."
+      },
+      "substrates": [
+        {
+          "id": "etilamina_etanal",
+          "name": "Etilamina + Etanal → N-Etilidenetanamina (Base de Schiff) + H₂O",
+          "catalyst": "Condensación (Adición-Eliminación)"
+        },
+        {
+          "id": "isopropilamina_propanona",
+          "name": "Isopropilamina + Propanona → Base de Schiff + H₂O",
+          "catalyst": "Condensación (Adición-Eliminación)"
+        }
+      ],
+      "catalysts": [
+        "Condensación (Adición-Eliminación)"
+      ],
+      "stepsBySubstrate": {
+        "etilamina_etanal": [
+          {
+            "title": "Paso 1 — Estado Inicial: Etilamina + Etanal",
+            "semiStep": "CH₃–CH₂–NH₂  +  CH₃–CH=O",
+            "semiGlobal": "CH₃–CH₂–NH₂ + CH₃–CHO ──► CH₃–CH₂–N=CH–CH₃ + H₂O",
+            "desc": "El par libre del nitrógeno de la etilamina ataca al carbono carbonílico δ⁺ del etanal.",
+            "legend": {
+              "breaking": "Aproximación inicial al grupo carbonilo C=O.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Ataque nucleofílico del nitrógeno sobre el carbonilo."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 165,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 315,
+                  "y": 195,
+                  "lonePairs": [
+                    "right"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH",
+                  "x": 495,
+                  "y": 195,
+                  "label": "Etanal"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 495,
+                  "y": 85
+                },
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 635,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "Me",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Intermediario Carbinolamina (–NH–CH(OH)–)",
+            "semiStep": "CH₃–CH₂–NH–CH(OH)–CH₃",
+            "semiGlobal": "CH₃–CH₂–NH₂ + CH₃–CHO ──► CH₃–CH₂–N=CH–CH₃ + H₂O",
+            "desc": "Se forma la carbinolamina intermedia que pierde –OH (en rojo) y un H del nitrógeno para deshidratarse.",
+            "legend": {
+              "breaking": "Enlace C–OH listo para eliminarse como H₂O (en rojo punteado).",
+              "forming": "Enlace simple C–N formado.",
+              "movement": "Deshidratación de la carbinolamina."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 155,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH",
+                  "x": 310,
+                  "y": 195,
+                  "highlight": "#fbbf24",
+                  "label": "Carbinolamina"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH",
+                  "x": 465,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "OH",
+                  "x": 465,
+                  "y": 85,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 615,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "C1",
+                  "to": "Me",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Base de Schiff (Imina) + H₂O",
+            "semiStep": "CH₃–CH₂–N=CH–CH₃  +  H₂O",
+            "semiGlobal": "CH₃–CH₂–NH₂ + CH₃–CHO ──► CH₃–CH₂–N=CH–CH₃ + H₂O",
+            "desc": "Se obtiene la imina (Base de Schiff) con el doble enlace C=N consolidado en verde sólido más agua.",
+            "legend": {
+              "breaking": "Molécula de H₂O eliminada.",
+              "forming": "Doble enlace C=N (Base de Schiff) consolidado en verde sólido.",
+              "movement": "Imina estabilizada."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 155,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "N",
+                  "x": 310,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Base de Schiff (Imina)"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH",
+                  "x": 465,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "Me",
+                  "el": "CH₃",
+                  "x": 610,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "H₂O",
+                  "x": 765,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "C1",
+                  "order": 2,
+                  "state": "new"
+                },
+                {
+                  "from": "C1",
+                  "to": "Me",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 690,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "isopropilamina_propanona": [
+          {
+            "title": "Paso 1 — Estado Inicial: Isopropilamina + Propanona",
+            "semiStep": "(CH₃)₂CH–NH₂  +  (CH₃)₂C=O",
+            "semiGlobal": "(CH₃)₂CH–NH₂ + (CH₃)₂C=O ──► (CH₃)₂CH–N=C(CH₃)₂ + H₂O",
+            "desc": "La isopropilamina condensa con la propanona (cetona).",
+            "legend": {
+              "breaking": "Aproximación inicial al carbonilo cetónico.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Adición nucleofílica."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "(CH₃)₂CH",
+                  "x": 185,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "NH₂",
+                  "x": 345,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C1",
+                  "el": "C(CH₃)₂",
+                  "x": 545,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 545,
+                  "y": 85
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final: Base de Schiff + H₂O",
+            "semiStep": "(CH₃)₂CH–N=C(CH₃)₂  +  H₂O",
+            "semiGlobal": "(CH₃)₂CH–NH₂ + (CH₃)₂C=O ──► (CH₃)₂CH–N=C(CH₃)₂ + H₂O",
+            "desc": "Se obtiene la imina correspondiente (Base de Schiff) más agua.",
+            "legend": {
+              "breaking": "Agua eliminada.",
+              "forming": "Doble enlace N=C consolidado en verde sólido.",
+              "movement": "Base de Schiff obtenida."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "(CH₃)₂CH",
+                  "x": 175,
+                  "y": 195
+                },
+                {
+                  "id": "N1",
+                  "el": "N",
+                  "x": 335,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Base de Schiff"
+                },
+                {
+                  "id": "C1",
+                  "el": "C(CH₃)₂",
+                  "x": 505,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O1",
+                  "el": "H₂O",
+                  "x": 705,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "N1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "N1",
+                  "to": "C1",
+                  "order": 2,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 615,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
