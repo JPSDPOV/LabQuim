@@ -1060,20 +1060,40 @@
     "carbonilos": {
       "obtencion": [
         {
-          "value": "carb_obt_ox_alc",
-          "label": "1) Oxidación de Alcoholes: 1° con PCC → Aldehído | 2° con Na₂Cr₂O₇/H₂SO₄ → Cetona"
+          "value": "ac_obt_hidratacion_etino",
+          "label": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)"
         },
         {
-          "value": "carb_obt_ozonolisis",
-          "label": "2) Ozonólisis Reductiva de Alquenos (1° O₃ / 2° Zn, H₂O → Aldehídos y/o Cetonas)"
+          "value": "ac_obt_hidratacion_alquinos",
+          "label": "2) Hidratación de Alquinos Terminales e Internos (+ H₂O / H₂SO₄ / HgSO₄ ──► Cetonas)"
         },
         {
-          "value": "carb_obt_kucherov",
-          "label": "3) Hidratación de Alquinos (H₂O / H₂SO₄, HgSO₄: Etino → Etanal | Alquinos sustituidos → Cetonas)"
+          "value": "ac_obt_reduccion_acidos_dibah",
+          "label": "3) Reducción Débil de Ácidos Carboxílicos (+ DIBAH ──► Aldehído)"
         },
         {
-          "value": "carb_obt_fc_rosenmund",
-          "label": "4) Acilación de Friedel-Crafts (→ Cetonas Aromáticas) y Reducción de Rosenmund (→ Aldehídos)"
+          "value": "ac_obt_oxidacion_alcohol1",
+          "label": "4) Oxidación Suave de Alcoholes Primarios (+ [O] débil / PCC ──► Aldehído)"
+        },
+        {
+          "value": "ac_obt_oxidacion_alcohol2",
+          "label": "5) Oxidación de Alcoholes Secundarios (+ [O] / CrO₃ / K₂Cr₂O₇ ──► Cetona)"
+        },
+        {
+          "value": "ac_obt_reduccion_haluros_acilo",
+          "label": "6) Reducción Catalítica de Halogenuros de Ácido (Rosenmund: + H₂ / Pt ──► Aldehído)"
+        },
+        {
+          "value": "ac_obt_friedel_crafts",
+          "label": "7) Acilación de Friedel-Crafts (+ R–COCl ó Cl–CHO / AlCl₃ ──► Aldehído o Cetona Aromática)"
+        },
+        {
+          "value": "ac_obt_ozonolisis",
+          "label": "8) Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn/H₂O ──► Aldehídos y/o Cetonas)"
+        },
+        {
+          "value": "ac_obt_oxidacion_alquenos",
+          "label": "9) Ruptura Oxidativa de Alquenos Disustituidos (+ KMnO₄ conc., H⁺, Δ ──► Cetonas)"
         }
       ],
       "reacciones": [
