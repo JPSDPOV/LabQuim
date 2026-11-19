@@ -228,14 +228,14 @@
         }
       },
       {
-        "title": "Intermediario Formado: Enol Inestable (Alcohol Vinílico, CH₂=CH–OH)",
-        "semiStep": "[CH₂=CH–OH] (Enol inestable / Alcohol vinílico)",
+        "title": "Intermediario Formado: Enol Inestable (Alcohol Vinílico, CH₂=CH–O–H)",
+        "semiStep": "[CH₂=CH–O–H] (Enol inestable / Alcohol vinílico)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-        "desc": "Se forma el alcohol vinílico (CH₂=CH–OH). Este enol es termodinámicamente inestable porque el grupo –OH está unido directamente a un carbono con doble enlace C=C.",
+        "desc": "Se forma el alcohol vinílico (CH₂=CH–O–H) con el enlace O–H desplegado. Este enol es inestable y experimentará tautomería ceto-enólica.",
         "legend": {
           "breaking": "Enlace π C≡C y enlace H–OH ya rotos.",
-          "forming": "Nuevos enlaces C1–H y C2–OH consolidados en el enol.",
-          "movement": "Intermediario listo para experimentar tautomería ceto-enólica."
+          "forming": "Nuevos enlaces C1–H y C2–O–H consolidados en el enol.",
+          "movement": "Intermediario listo para iniciar la tautomería ceto-enólica."
         },
         "scene": {
           "atoms": [
@@ -274,11 +274,18 @@
               "y": 230
             },
             {
-              "id": "OH_agua",
-              "el": "OH",
+              "id": "O_carb",
+              "el": "O",
               "x": 490,
               "y": 110,
               "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 385,
+              "y": 110,
+              "highlight": "#fbbf24"
             }
           ],
           "bonds": [
@@ -308,22 +315,28 @@
             },
             {
               "from": "C2",
-              "to": "OH_agua",
+              "to": "O_carb",
               "order": 1,
               "state": "new"
+            },
+            {
+              "from": "O_carb",
+              "to": "H_mig",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Tautomería Ceto-Enólica: Migración del Protón y Formación del Carbonilo C=O",
-        "semiStep": "[CH₂=CH–O–H] ⇄ CH₃–CH=O",
+        "title": "Ruptura en el Enol: Separación del Enlace O–H y Apertura del Doble Enlace C1=C2",
+        "semiStep": "[CH₂=CH–O···H] (Ruptura O–H y π C=C)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-        "desc": "En la tautomería ceto-enólica, el enlace π del C=C y el enlace O–H se rompen simultáneamente: el hidrógeno migra hacia el carbono C1 (=CH₂ → –CH₃) mientras se forma el doble enlace C2=O.",
+        "desc": "Primero se rompe el enlace entre el oxígeno y el hidrógeno (O–H) del grupo hidroxilo, al mismo tiempo que se abre el enlace π del doble enlace C1=C2.",
         "legend": {
-          "breaking": "En ROJO punteado: enlace π C1=C2 y enlace O–H.",
-          "forming": "En VERDE punteado: enlace C1–H y doble enlace carbonilo C2=O.",
-          "movement": "Reorganización tautomérica hacia el aldehído estable."
+          "breaking": "En ROJO punteado: ruptura del enlace O–H y del enlace π C1=C2.",
+          "forming": "Preparación para la migración del protón H⁺ hacia C1.",
+          "movement": "El hidrógeno se separa del oxígeno mientras los electrones π se desplazan hacia C2=O."
         },
         "scene": {
           "atoms": [
@@ -331,45 +344,46 @@
               "id": "H_izq",
               "el": "H",
               "x": 180,
-              "y": 210
+              "y": 230
             },
             {
               "id": "H_agua",
               "el": "H",
               "x": 310,
-              "y": 95
+              "y": 105
             },
             {
               "id": "C1",
               "el": "C",
               "x": 310,
-              "y": 210
+              "y": 230
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 470,
-              "y": 210
+              "x": 490,
+              "y": 230
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 565,
-              "y": 310
+              "x": 635,
+              "y": 230
             },
             {
               "id": "O_carb",
               "el": "O",
-              "x": 532,
-              "y": 92,
-              "highlight": "#10b981"
+              "x": 490,
+              "y": 105,
+              "highlight": "#ef4444"
             },
             {
               "id": "H_mig",
               "el": "H",
-              "x": 385,
-              "y": 155,
-              "highlight": "#10b981"
+              "x": 370,
+              "y": 115,
+              "highlight": "#ef4444",
+              "label": "Se separa O–H"
             }
           ],
           "bonds": [
@@ -400,42 +414,146 @@
             {
               "from": "C2",
               "to": "O_carb",
-              "order": 2,
-              "state": "forming-pi"
+              "order": 1,
+              "state": "normal"
             },
             {
               "from": "O_carb",
               "to": "H_mig",
               "order": 1,
               "state": "breaking"
-            },
-            {
-              "from": "C1",
-              "to": "H_mig",
-              "order": 1,
-              "state": "forming"
             }
           ],
           "arrows": [
             {
               "type": "full",
-              "x1": 485,
-              "y1": 125,
-              "cx": 430,
-              "cy": 115,
-              "x2": 395,
-              "y2": 145,
-              "label": "Migra H⁺"
+              "x1": 430,
+              "y1": 108,
+              "cx": 455,
+              "cy": 145,
+              "x2": 484,
+              "y2": 175,
+              "label": "Par e⁻ hacia C=O"
             },
             {
               "type": "full",
-              "x1": 405,
-              "y1": 225,
-              "cx": 455,
-              "cy": 180,
-              "x2": 495,
+              "x1": 400,
+              "y1": 222,
+              "cx": 370,
+              "cy": 175,
+              "x2": 370,
               "y2": 135,
-              "label": "Forma C=O"
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Migración del Hidrógeno hacia C1 y Formación del Doble Enlace Carbonilo C2=O",
+        "semiStep": "CH₃–CH=O (Formación de C=O y C1–H)",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "Una vez separado del oxígeno, el hidrógeno se desplaza hacia el carbono C1 formando el enlace C1–H en verde, mientras entre C2 y O se forma el doble enlace carbonilo C2=O.",
+        "legend": {
+          "breaking": "Enlace O–H y enlace π C1=C2 ya separados.",
+          "forming": "En VERDE punteado: nuevo enlace C1–H y doble enlace carbonilo C2=O.",
+          "movement": "Desplazamiento del H hacia C1 y cierre del doble enlace C2=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_izq",
+              "el": "H",
+              "x": 180,
+              "y": 210
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 310,
+              "y": 95
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 310,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "H unido a C1"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 310,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 470,
+              "y": 210
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 542,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 542,
+              "y": 338
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_mig",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_carb",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 360,
+              "y1": 140,
+              "cx": 335,
+              "cy": 215,
+              "x2": 315,
+              "y2": 300,
+              "label": "Migra H → C1"
             }
           ]
         }
