@@ -135,6 +135,10 @@
         {
           "value": "nom_23",
           "label": "Nomenclatura 23 (Catecol, Resorcinol e Hidroquinona)"
+        },
+        {
+          "value": "feb2026_46",
+          "label": "2026 Febrero - Fila 1 (Ítem 46: Especie ácida que reacciona con NaOH)"
         }
       ],
       "test": []
@@ -312,6 +316,10 @@
         {
           "value": "nom_57",
           "label": "Nomenclatura 57 (Ítem con clave Z en grilla oficial)"
+        },
+        {
+          "value": "presel_2022_sr",
+          "label": "Preselección PRE-CPAM 2022 Santa Rosa (Págs. 116-117)"
         }
       ],
       "test": []
@@ -361,6 +369,10 @@
         {
           "value": "nom_05",
           "label": "Nomenclatura 5 (Cicloalcano como sustituyente — 2-Ciclopentilhexano)"
+        },
+        {
+          "value": "feb2026_24",
+          "label": "2026 Febrero - Fila 1 (Ítem 24: Sustancia sin pares de diastereoisómeros)"
         }
       ],
       "test": []
@@ -482,6 +494,26 @@
         {
           "value": "nom_58",
           "label": "Nomenclatura 58 (Ítem con clave Z en grilla oficial)"
+        },
+        {
+          "value": "feb2026_10",
+          "label": "2026 Febrero - Fila 1 (Ítem 10: Síntesis de ciclohexeno — Diels-Alder)"
+        },
+        {
+          "value": "feb2026_14",
+          "label": "2026 Febrero - Fila 1 (Ítem 14: Obtención de 1,4-dicloro-2-buteno)"
+        },
+        {
+          "value": "feb2026_41",
+          "label": "2026 Febrero - Fila 1 (Ítem 41: Isomería inequívoca en estructura)"
+        },
+        {
+          "value": "feb2026_47",
+          "label": "2026 Febrero - Fila 1 (Ítem 47: Ozonólisis de 2-metilciclopenteno)"
+        },
+        {
+          "value": "presel_2022_asu",
+          "label": "Preselección PRE-CPAM 2022 Asunción (Págs. 118-119)"
         }
       ],
       "test": []
@@ -535,6 +567,10 @@
         {
           "value": "nom_11",
           "label": "Nomenclatura 11 (Alquenino — Doble y triple enlace)"
+        },
+        {
+          "value": "feb2026_06",
+          "label": "2026 Febrero - Fila 1 (Ítem 6: Ciclopentino + H₂O)"
         }
       ],
       "test": []
@@ -620,6 +656,14 @@
         {
           "value": "nom_56",
           "label": "Nomenclatura 56 (Numeración del Naftaleno)"
+        },
+        {
+          "value": "feb2026_38",
+          "label": "2026 Febrero - Fila 1 (Ítem 38: Sustitución radicalaria con Cl₂ / luz)"
+        },
+        {
+          "value": "presel_2023_sr",
+          "label": "Preselección PRE-CPAM 2023 Santa Rosa (Págs. 122-123)"
         }
       ],
       "test": []
@@ -681,6 +725,10 @@
         {
           "value": "nom_17",
           "label": "Nomenclatura 17 (Halogenuro alílico / insaturado)"
+        },
+        {
+          "value": "feb2026_15",
+          "label": "2026 Febrero - Fila 1 (Ítem 15: Mejor sustrato para SN2)"
         }
       ],
       "test": []
@@ -814,6 +862,18 @@
         {
           "value": "nom_59",
           "label": "Nomenclatura 59 (Ítem con clave Z en grilla oficial)"
+        },
+        {
+          "value": "feb2026_08",
+          "label": "2026 Febrero - Fila 1 (Ítem 8: Solubilidad de alcoholes en benceno)"
+        },
+        {
+          "value": "feb2026_36",
+          "label": "2026 Febrero - Fila 1 (Ítem 36: Puentes de hidrógeno entre sí)"
+        },
+        {
+          "value": "presel_2023_asu",
+          "label": "Preselección PRE-CPAM 2023 Asunción (Págs. 120-121)"
         }
       ],
       "test": []
@@ -899,6 +959,10 @@
         {
           "value": "nom_52",
           "label": "Nomenclatura 52 (Piridina y Pirimidina)"
+        },
+        {
+          "value": "feb2026_12",
+          "label": "2026 Febrero - Fila 1 (Ítem 12: Proporción relativa C/N en la morfina)"
         }
       ],
       "test": []
@@ -1046,6 +1110,14 @@
         {
           "value": "nom_60",
           "label": "Nomenclatura 60 (Ítem con clave Z en grilla oficial)"
+        },
+        {
+          "value": "feb2026_32",
+          "label": "2026 Febrero - Fila 1 (Ítem 32: Secuencia 2-buteno + H₂O → A + KMnO₄ → B + Etanol)"
+        },
+        {
+          "value": "feb2026_60",
+          "label": "2026 Febrero - Fila 1 (Ítem 60: Peso fórmula de la testosterona)"
         }
       ],
       "test": []
@@ -1131,6 +1203,18 @@
         {
           "value": "nom_54",
           "label": "Nomenclatura 54 (Ácido cinámico)"
+        },
+        {
+          "value": "feb2026_23",
+          "label": "2026 Febrero - Fila 1 (Ítem 23: Fuerzas intermoleculares en ácido acético, I₂ y NaCl)"
+        },
+        {
+          "value": "feb2026_49",
+          "label": "2026 Febrero - Fila 1 (Ítem 49: Ácido y alcohol sólidos a 20 °C)"
+        },
+        {
+          "value": "presel_2024_sr",
+          "label": "Preselección 2024 Santa Rosa (Págs. 124-125)"
         }
       ],
       "test": []
@@ -1232,6 +1316,26 @@
         {
           "value": "nom_61",
           "label": "Nomenclatura 61 (Ítem con clave Z en grilla oficial)"
+        },
+        {
+          "value": "feb2026_16",
+          "label": "2026 Febrero - Fila 1 (Ítem 16: Grupos funcionales en estructura mixta)"
+        },
+        {
+          "value": "feb2026_29",
+          "label": "2026 Febrero - Fila 1 (Ítem 29: Hidrólisis de β-butanolactona y β-propanolactama)"
+        },
+        {
+          "value": "feb2026_33",
+          "label": "2026 Febrero - Fila 1 (Ítem 33: Etanoato de etilo + cloruro de etilmagnesio)"
+        },
+        {
+          "value": "feb2026_56",
+          "label": "2026 Febrero - Fila 1 (Ítem 56: Hidrólisis del anhídrido butenodioico)"
+        },
+        {
+          "value": "presel_2024_asu",
+          "label": "Preselección 2024 Asunción (Págs. 126-127)"
         }
       ],
       "test": []
@@ -1277,6 +1381,14 @@
         {
           "value": "bio_02",
           "label": "Biomoléculas 2 (Enlaces glucosídicos en polisacáridos: Almidón, Glucógeno y Celulosa)"
+        },
+        {
+          "value": "feb2026_21",
+          "label": "2026 Febrero - Fila 1 (Ítem 21: Diferencia entre ribosa y desoxirribosa)"
+        },
+        {
+          "value": "feb2026_26",
+          "label": "2026 Febrero - Fila 1 (Ítem 26: Ramificaciones del almidón)"
         }
       ],
       "test": []
@@ -1298,6 +1410,14 @@
         {
           "value": "bio_03",
           "label": "Biomoléculas 3 (Fosfolípidos — Fosfatidilcolina / Lecitina)"
+        },
+        {
+          "value": "feb2026_11",
+          "label": "2026 Febrero - Fila 1 (Ítem 11: Composición de las ceras)"
+        },
+        {
+          "value": "feb2026_53",
+          "label": "2026 Febrero - Fila 1 (Ítem 53: Lípido complejo)"
         }
       ],
       "test": []
@@ -1323,6 +1443,10 @@
         {
           "value": "bio_04",
           "label": "Biomoléculas 4 (Aminoácidos esenciales, glicina aquiral y cisteína)"
+        },
+        {
+          "value": "feb2026_57",
+          "label": "2026 Febrero - Fila 1 (Ítem 57: Reducción con LiAlH₄)"
         }
       ],
       "test": []
@@ -11684,6 +11808,1051 @@
       "correct": "b",
       "feedbackCorrect": "Correcto: En la glicina (H₂N–CH₂–COOH) el carbono α tiene dos hidrógenos idénticos, por lo que es aquiral.",
       "feedbackWrong": "Incorrecto. La respuesta correcta es b) Glicina."
+    },
+    "feb2026_06": {
+      "unit": "alquinos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 6: Ciclopentino + H₂O)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 6: Ciclopentino + H₂O)",
+      "topic": "Examen Febrero 2026 • Alquinos",
+      "statement": "6. Para la reacción entre ciclopentino + agua; el mecanismo de reacción y el producto obtenido respectivamente son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "adición electrofílica - enolización - ciclopentanol"
+        },
+        {
+          "letter": "b",
+          "text": "hidrólisis - ciclopentanol"
+        },
+        {
+          "letter": "c",
+          "text": "hidrólisis - 1,5-pentanodiol"
+        },
+        {
+          "letter": "d",
+          "text": "adición electrofílica - tautomerización - ciclopentanona"
+        },
+        {
+          "letter": "e",
+          "text": "sustitución nucleofílica - 2-ciclopentinol"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! La hidratación de alquinos (ciclopentino + H₂O / H₂SO₄, HgSO₄) ocurre por adición electrofílica formando un enol (1-ciclopentenol) que se tautomeriza inmediatamente a ciclopentanona.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) adición electrofílica - tautomerización - ciclopentanona.",
+      "semiFormula": "CICLO-5-1-O"
+    },
+    "feb2026_08": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 8: Solubilidad de alcoholes en benceno)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 8: Solubilidad de alcoholes en benceno)",
+      "topic": "Examen Febrero 2026 • Alcoholes",
+      "statement": "8. El alcohol más soluble en el benceno es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-pentanol"
+        },
+        {
+          "letter": "b",
+          "text": "2-metil-1-propanol"
+        },
+        {
+          "letter": "c",
+          "text": "2-metil-2-propanol"
+        },
+        {
+          "letter": "d",
+          "text": "2-propanol"
+        },
+        {
+          "letter": "e",
+          "text": "etanol"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! Como el benceno es un disolvente apolar, el alcohol con la cadena hidrocarbonada apolar más larga (1-pentanol, 5 carbonos) es el más soluble en benceno.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es a) 1-pentanol.",
+      "semiFormula": "CH3-CH2-CH2-CH2-CH2-OH"
+    },
+    "feb2026_10": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 10: Síntesis de ciclohexeno — Diels-Alder)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 10: Síntesis de ciclohexeno — Diels-Alder)",
+      "topic": "Examen Febrero 2026 • Alquenos",
+      "statement": "10. La reacción que podrá formar el ciclohexeno es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "eteno + 2-buteno"
+        },
+        {
+          "letter": "b",
+          "text": "ciclohexeno + hidrógeno"
+        },
+        {
+          "letter": "c",
+          "text": "benceno + hidrógeno"
+        },
+        {
+          "letter": "d",
+          "text": "eteno + 1,3-butadieno"
+        },
+        {
+          "letter": "e",
+          "text": "1,2-propadieno + 1,2-propadieno"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! La cicloadición [4+2] de Diels-Alder entre el 1,3-butadieno (dieno conjugado) y el eteno (dienófilo) forma directamente ciclohexeno.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) eteno + 1,3-butadieno (reacción de Diels-Alder).",
+      "semiFormula": "CICLOENO-6"
+    },
+    "feb2026_11": {
+      "unit": "lipidos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 11: Composición de las ceras)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 11: Composición de las ceras)",
+      "topic": "Examen Febrero 2026 • Lípidos",
+      "statement": "11. Las ceras están formadas por:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido graso de cadena larga + alcohol monohidroxílico de cadena larga (en el examen impreso decía 'corta' por errata tipográfica en a y d)"
+        },
+        {
+          "letter": "b",
+          "text": "ácido graso de cadena larga + alcohol polihidroxilado de cadena corta"
+        },
+        {
+          "letter": "c",
+          "text": "ácido graso de cadena corta + alcohol monohidroxílico del colesterol"
+        },
+        {
+          "letter": "d",
+          "text": "ácido graso de cadena larga + alcohol monohidroxílico de cadena corta"
+        },
+        {
+          "letter": "e",
+          "text": "alcohol polihidroxilado + alcohol polihidroxilado de cadena corta"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! Químicamente las ceras son ésteres de un ácido graso de cadena larga con un alcohol monohidroxílico de cadena larga (clave oficial: a).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es a).",
+      "ambiguousNote": "Ítem 11 Febrero 2026 (pág. 132): en el examen impreso las opciones a) y d) aparecieron repetidas con 'cadena corta' por errata tipográfica; la clave oficial en la matriz es a)."
+    },
+    "feb2026_12": {
+      "unit": "aminas",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 12: Proporción relativa C/N en la morfina)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 12: Proporción relativa C/N en la morfina)",
+      "topic": "Examen Febrero 2026 • Análisis Elemental / Alcaloides",
+      "statement": "12. En la morfina además de otros sustituyentes hay 67,3% de carbono y 4,6% de nitrógeno, entre otros elementos; la proporción relativa de carbono nitrógeno en el compuesto es:\nDatos: C = 12 g/mol; N = 14 g/mol",
+      "options": [
+        {
+          "letter": "a",
+          "text": "5"
+        },
+        {
+          "letter": "b",
+          "text": "7"
+        },
+        {
+          "letter": "c",
+          "text": "1,5"
+        },
+        {
+          "letter": "d",
+          "text": "17"
+        },
+        {
+          "letter": "e",
+          "text": "12"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Moles de C = 67,3 / 12 = 5,61; moles de N = 4,6 / 14 = 0,328. Relación C/N = 5,61 / 0,328 = 17,1 (en la matriz oficial de Febrero 2026 la clave marcada es c) 1,5 por coma decimal; revisar).",
+      "feedbackWrong": "La clave oficial marcada en la Matriz Feb 2026 es c) 1,5 (el cociente atómico exacto 5,61 / 0,328 = 17).",
+      "ambiguousNote": "Ítem 12 Febrero 2026 (pág. 133): el cálculo estequiométrico da (67,3/12)/(4,6/14) = 17,08 (opción d), pero la Matriz oficial pág. 143 marca la letra C."
+    },
+    "feb2026_14": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 14: Obtención de 1,4-dicloro-2-buteno)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 14: Obtención de 1,4-dicloro-2-buteno)",
+      "topic": "Examen Febrero 2026 • Dienos Conjugados",
+      "statement": "14. La reacción que podrá obtenerse el 1,4-dicloro-2-buteno es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1,3-butadieno + ácido clorhídrico"
+        },
+        {
+          "letter": "b",
+          "text": "2-buteno + cloro"
+        },
+        {
+          "letter": "c",
+          "text": "cloroeteno + cloroeteno"
+        },
+        {
+          "letter": "d",
+          "text": "cloroeteno + eteno"
+        },
+        {
+          "letter": "e",
+          "text": "1,3-butadieno + cloro"
+        }
+      ],
+      "correct": "e",
+      "feedbackCorrect": "¡Correcto! La adición 1,4 de Cl₂ al 1,3-butadieno (dieno conjugado) introduce un cloro en C1 y otro en C4 desplazando el doble enlace a C2=C3: 1,4-dicloro-2-buteno.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es e) 1,3-butadieno + cloro."
+    },
+    "feb2026_15": {
+      "unit": "haluros",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 15: Mejor sustrato para SN2)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 15: Mejor sustrato para SN2)",
+      "topic": "Examen Febrero 2026 • Halogenuros",
+      "statement": "15. La sustancia que podrá actuar mejor para una SN2 es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido propiónico"
+        },
+        {
+          "letter": "b",
+          "text": "ácido β-láctico"
+        },
+        {
+          "letter": "c",
+          "text": "3-cloro-pentano"
+        },
+        {
+          "letter": "d",
+          "text": "ácido pirúvico"
+        },
+        {
+          "letter": "e",
+          "text": "acetona"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! El 3-cloropentano es el único halogenuro de alquilo con buen grupo saliente (Cl⁻) capaz de experimentar sustitución nucleofílica SN2; los demás son ácidos o cetonas.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) 3-cloro-pentano.",
+      "semiFormula": "CH3-CH2-CH(Cl)-CH2-CH3"
+    },
+    "feb2026_16": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 16: Grupos funcionales en estructura mixta)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 16: Grupos funcionales en estructura mixta)",
+      "topic": "Examen Febrero 2026 • Polifuncionales",
+      "statement": "16. [Ítem con imagen de estructura orgánica] Los grupos funcionales presentes en la siguiente estructura son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "éster - alcohol - alqueno - acetal"
+        },
+        {
+          "letter": "b",
+          "text": "éster - alcohol - alquino - éter"
+        },
+        {
+          "letter": "c",
+          "text": "ácido - alcohol - alqueno - éter"
+        },
+        {
+          "letter": "d",
+          "text": "cetona - alcohol - alqueno - éter"
+        },
+        {
+          "letter": "e",
+          "text": "éster - alcohol - alqueno - éter"
+        }
+      ],
+      "correct": "e",
+      "feedbackCorrect": "¡Correcto! La estructura presentada contiene los grupos funcionales éster (–COOR), alcohol (–OH), alqueno (C=C) y éter (–O–).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es e) éster - alcohol - alqueno - éter.",
+      "ambiguousNote": "Ítem 16 Febrero 2026 (pág. 133): la imagen de la estructura polifuncional está incrustada como gráfico en el PDF; clave oficial e)."
+    },
+    "feb2026_21": {
+      "unit": "carbohidratos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 21: Diferencia entre ribosa y desoxirribosa)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 21: Diferencia entre ribosa y desoxirribosa)",
+      "topic": "Examen Febrero 2026 • Carbohidratos",
+      "statement": "21. La diferencia entre ribosa y desoxirribosa es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "OH"
+        },
+        {
+          "letter": "b",
+          "text": "COH"
+        },
+        {
+          "letter": "c",
+          "text": "O"
+        },
+        {
+          "letter": "d",
+          "text": "CH2OH"
+        },
+        {
+          "letter": "e",
+          "text": "H2O"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! La D-ribosa (C₅H₁₀O₅) y la 2-desoxi-D-ribosa (C₅H₁₀O₄) difieren exactamente en un átomo de oxígeno (O) en el carbono 2 (–OH vs –H).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) O."
+    },
+    "feb2026_23": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 23: Fuerzas intermoleculares en ácido acético, I₂ y NaCl)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 23: Fuerzas intermoleculares en ácido acético, I₂ y NaCl)",
+      "topic": "Examen Febrero 2026 • Fuerzas Intermoleculares",
+      "statement": "23. Las principales fuerzas de atracción que deben vencer para evaporar el ácido acético, sublimar el yodo y fundir el cloruro de sodio respectivamente son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "enlace iónico, dispersión de London, puente de hidrógeno"
+        },
+        {
+          "letter": "b",
+          "text": "dipolo-dipolo, dispersión de London, puente de hidrógeno"
+        },
+        {
+          "letter": "c",
+          "text": "puente de hidrógeno, dispersión de London, enlace iónico"
+        },
+        {
+          "letter": "d",
+          "text": "dispersión de London, enlace iónico, puente de hidrógeno"
+        },
+        {
+          "letter": "e",
+          "text": "dipolo-dipolo, enlace iónico, dispersión de London"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Ácido acético (puente de hidrógeno), yodo molecular I₂ apolar (dispersión de London) y NaCl (enlace iónico).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) puente de hidrógeno, dispersión de London, enlace iónico."
+    },
+    "feb2026_24": {
+      "unit": "cicloalcanos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 24: Sustancia sin pares de diastereoisómeros)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 24: Sustancia sin pares de diastereoisómeros)",
+      "topic": "Examen Febrero 2026 • Estereoisomería",
+      "statement": "24. La sustancia que no presenta pares de diastereoisómeros es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-cloro-3-butanol"
+        },
+        {
+          "letter": "b",
+          "text": "ácido 2-amino-3-hidroxi-butanoico"
+        },
+        {
+          "letter": "c",
+          "text": "2-cloro-3-metil-ciclopropano"
+        },
+        {
+          "letter": "d",
+          "text": "2,3-butanodiol"
+        },
+        {
+          "letter": "e",
+          "text": "2-bromo-3-cloro-pentano"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Según la matriz oficial de Febrero 2026, la respuesta correcta es c) 2-cloro-3-metil-ciclopropano (clave C).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) 2-cloro-3-metil-ciclopropano.",
+      "semiFormula": "CICLO-3-1-Cl-2-CH3"
+    },
+    "feb2026_26": {
+      "unit": "carbohidratos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 26: Ramificaciones del almidón)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 26: Ramificaciones del almidón)",
+      "topic": "Examen Febrero 2026 • Polisacáridos",
+      "statement": "26. Las ramificaciones del almidón presentan uniones del tipo:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "β-(1-6)"
+        },
+        {
+          "letter": "b",
+          "text": "α-(1-2)"
+        },
+        {
+          "letter": "c",
+          "text": "β-(1-4)"
+        },
+        {
+          "letter": "d",
+          "text": "α-(1-4)"
+        },
+        {
+          "letter": "e",
+          "text": "α-(1-6)"
+        }
+      ],
+      "correct": "e",
+      "feedbackCorrect": "¡Correcto! En la amilopectina (almidón), la cadena lineal tiene enlaces α-(1→4) y los puntos de ramificación son enlaces glucosídicos α-(1→6).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es e) α-(1-6).",
+      "semiFormula": "POLISACARIDO-ALMIDON"
+    },
+    "feb2026_29": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 29: Hidrólisis de β-butanolactona y β-propanolactama)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 29: Hidrólisis de β-butanolactona y β-propanolactama)",
+      "topic": "Examen Febrero 2026 • Lactonas y Lactamas",
+      "statement": "29. Por hidrólisis de β-butanolactona y β-propanolactama generan respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido 3-amino-butanoico y ácido 3-hidroxi-propanoico"
+        },
+        {
+          "letter": "b",
+          "text": "ácido 3-hidroxi-butanoico y ácido 3-amino-propanoico"
+        },
+        {
+          "letter": "c",
+          "text": "3-hidroxi-butanal y 3-amino-propanal"
+        },
+        {
+          "letter": "d",
+          "text": "ácido 3-hidroxi-butanoato de metilo y ácido 3-amino-propanoato de metilo"
+        },
+        {
+          "letter": "e",
+          "text": "ácido 3-hidroxi-3-metil-butanoico y ácido 3-amino-propanoico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! Las lactonas son ésteres cíclicos que al hidrolizarse dan hidroxiácidos (β-butanolactona → ácido 3-hidroxibutanoico) y las lactamas son amidas cíclicas que dan aminoácidos (β-propanolactama → ácido 3-aminopropanoico).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es b) ácido 3-hidroxi-butanoico y ácido 3-amino-propanoico."
+    },
+    "feb2026_32": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 32: Secuencia 2-buteno + H₂O → A + KMnO₄ → B + Etanol)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 32: Secuencia 2-buteno + H₂O → A + KMnO₄ → B + Etanol)",
+      "topic": "Examen Febrero 2026 • Secuencia de Reacciones",
+      "statement": "32. La siguiente secuencia de reacciones:\n2-buteno + agua → producto A + permanganato de potasio → producto B + etanol (Grignard en el esquema original), dando el 2-etil-2-butanol, respectivamente son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "adición electrofílica - reducción - adición nucleofílica"
+        },
+        {
+          "letter": "b",
+          "text": "adición nucleofílica - oxidación - adición nucleofílica"
+        },
+        {
+          "letter": "c",
+          "text": "adición nucleofílica - reducción - adición electrofílica"
+        },
+        {
+          "letter": "d",
+          "text": "adición electrofílica - oxidación - adición nucleofílica"
+        },
+        {
+          "letter": "e",
+          "text": "adición electrofílica - oxidación - adición electrofílica"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! 1) 2-buteno + H₂O → 2-butanol (adición electrofílica); 2) 2-butanol + KMnO₄ → butanona (oxidación); 3) butanona + nucleófilo etilo → 2-etil-2-butanol (adición nucleofílica).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) adición electrofílica - oxidación - adición nucleofílica."
+    },
+    "feb2026_33": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 33: Etanoato de etilo + cloruro de etilmagnesio)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 33: Etanoato de etilo + cloruro de etilmagnesio)",
+      "topic": "Examen Febrero 2026 • Ésteres y Grignard",
+      "statement": "33. El producto de la reacción del etanoato de etilo con el cloruro de etil magnesio (1 equivalente / intermediario carbonílico) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "propanona"
+        },
+        {
+          "letter": "b",
+          "text": "propanal"
+        },
+        {
+          "letter": "c",
+          "text": "butanal"
+        },
+        {
+          "letter": "d",
+          "text": "pentanal"
+        },
+        {
+          "letter": "e",
+          "text": "3-pentanona"
+        }
+      ],
+      "correct": "e",
+      "feedbackCorrect": "¡Correcto! Según la clave oficial (Matriz Feb 2026: E), la sustitución acílica del etanoato de etilo con cloruro de etilmagnesio (1 eq.) genera butanona / 3-pentanona (clave oficial: e) 3-pentanona).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es e) 3-pentanona."
+    },
+    "feb2026_36": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 36: Puentes de hidrógeno entre sí)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 36: Puentes de hidrógeno entre sí)",
+      "topic": "Examen Febrero 2026 • Fuerzas Intermoleculares",
+      "statement": "36. Las moléculas que presentan fuerza de atracción puente de hidrógeno entre sí, son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "HCN"
+        },
+        {
+          "letter": "b",
+          "text": "CH3Br"
+        },
+        {
+          "letter": "c",
+          "text": "CH3OH"
+        },
+        {
+          "letter": "d",
+          "text": "CH3OCH3"
+        },
+        {
+          "letter": "e",
+          "text": "(C2H3)3N"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! El metanol (CH₃OH) posee un enlace O–H polarizado que permite formar puentes de hidrógeno intermoleculares directos entre sus moléculas.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) CH3OH.",
+      "semiFormula": "CH3-OH"
+    },
+    "feb2026_38": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 38: Sustitución radicalaria con Cl₂ / luz)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 38: Sustitución radicalaria con Cl₂ / luz)",
+      "topic": "Examen Febrero 2026 • Tolueno",
+      "statement": "38. La sustancia que reacciona fácilmente por una sustitución radicalaria con el cloro en presencia de luz es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "fenol"
+        },
+        {
+          "letter": "b",
+          "text": "nitrobenceno"
+        },
+        {
+          "letter": "c",
+          "text": "ácido benzoico"
+        },
+        {
+          "letter": "d",
+          "text": "tolueno"
+        },
+        {
+          "letter": "e",
+          "text": "o-catecol"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! El tolueno (metilbenceno) posee hidrógenos bencílicos en el grupo –CH₃ que sufren halogenación radicalaria fácilmente en presencia de luz UV formando cloruro de bencilo.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) tolueno.",
+      "semiFormula": "AROM-1-CH3"
+    },
+    "feb2026_41": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 41: Isomería inequívoca en estructura)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 41: Isomería inequívoca en estructura)",
+      "topic": "Examen Febrero 2026 • Estereoquímica E/Z",
+      "statement": "41. [Ítem con imagen de alqueno sustituido] La estructura presenta inequívocamente isomería:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cis"
+        },
+        {
+          "letter": "b",
+          "text": "trans"
+        },
+        {
+          "letter": "c",
+          "text": "E"
+        },
+        {
+          "letter": "d",
+          "text": "Z"
+        },
+        {
+          "letter": "e",
+          "text": "diasteroisómeros"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! Según la Matriz oficial de Febrero 2026, la estructura mostrada corresponde al isómero Z (clave D).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) Z.",
+      "ambiguousNote": "Ítem 41 Febrero 2026 (pág. 138): figura estructural incrustada como imagen; clave oficial D (Z)."
+    },
+    "feb2026_46": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 46: Especie ácida que reacciona con NaOH)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 46: Especie ácida que reacciona con NaOH)",
+      "topic": "Examen Febrero 2026 • Acidez de Fenoles",
+      "statement": "46. La especie ácida que podrá reaccionar con el hidróxido de sodio es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "etanol"
+        },
+        {
+          "letter": "b",
+          "text": "ciclohexano"
+        },
+        {
+          "letter": "c",
+          "text": "fenol"
+        },
+        {
+          "letter": "d",
+          "text": "anilina"
+        },
+        {
+          "letter": "e",
+          "text": "dietiléter"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! El fenol (pKa ≈ 10) es suficientemente ácido para neutralizarse completamente con NaOH acuoso formando fenóxido de sodio y agua.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) fenol.",
+      "semiFormula": "AROM-1-OH"
+    },
+    "feb2026_47": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 47: Ozonólisis de 2-metilciclopenteno)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 47: Ozonólisis de 2-metilciclopenteno)",
+      "topic": "Examen Febrero 2026 • Ozonólisis",
+      "statement": "47. El producto de la reacción del 2-metil-ciclopenteno más ozono (seguido de hidrólisis reductiva) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "5-oxo-hexanal"
+        },
+        {
+          "letter": "b",
+          "text": "2-metil-3-ciclopentanona"
+        },
+        {
+          "letter": "c",
+          "text": "3-metil-2-ciclopentanona"
+        },
+        {
+          "letter": "d",
+          "text": "3-metil-1,5-pentanodial"
+        },
+        {
+          "letter": "e",
+          "text": "2-metil-1,5-pentanodial"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! La ozonólisis abre el anillo del 1-metilciclopenteno (o 2-metilciclopenteno) rompiendo el doble enlace C=C: un carbono sp² da grupo aldehído (C1, –CHO) y el carbono sp² metilado da cetona en C5 (5-oxohexanal).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es a) 5-oxo-hexanal."
+    },
+    "feb2026_49": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 49: Ácido y alcohol sólidos a 20 °C)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 49: Ácido y alcohol sólidos a 20 °C)",
+      "topic": "Examen Febrero 2026 • Propiedades Físicas",
+      "statement": "49. El ácido y alcohol que son sólidos a temperatura ambiente (20°C) respectivamente son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido oxálico y ter-butanol"
+        },
+        {
+          "letter": "b",
+          "text": "ácido valeriánico y 1-butanol"
+        },
+        {
+          "letter": "c",
+          "text": "ácido acético y etanol"
+        },
+        {
+          "letter": "d",
+          "text": "ácido fumárico y 2-propanol"
+        },
+        {
+          "letter": "e",
+          "text": "ácido oleico y ter-pentílico"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! El ácido oxálico (P.F. 101 °C) y el terc-butanol / 2-metil-2-propanol (P.F. 25,5 °C, el único alcohol saturado pequeño sólido a 20 °C por su simetría esférica) son sólidos a 20 °C.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es a) ácido oxálico y ter-butanol.",
+      "semiFormula": "(CH3)3C-OH"
+    },
+    "feb2026_53": {
+      "unit": "lipidos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 53: Lípido complejo)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 53: Lípido complejo)",
+      "topic": "Examen Febrero 2026 • Lípidos",
+      "statement": "53. Un lípido complejo es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido graso superior"
+        },
+        {
+          "letter": "b",
+          "text": "triacilglicérido"
+        },
+        {
+          "letter": "c",
+          "text": "cerebrósido"
+        },
+        {
+          "letter": "d",
+          "text": "ceras"
+        },
+        {
+          "letter": "e",
+          "text": "aceites"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Los cerebrósidos son glucoesfingolípidos (lípidos complejos formados por ceramida + un monosacárido como galactosa o glucosa).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) cerebrósido."
+    },
+    "feb2026_56": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 56: Hidrólisis del anhídrido butenodioico)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 56: Hidrólisis del anhídrido butenodioico)",
+      "topic": "Examen Febrero 2026 • Anhídridos",
+      "statement": "56. Por hidrólisis del anhídrido butenodioico (anhídrido maleico) genera:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido oxálico"
+        },
+        {
+          "letter": "b",
+          "text": "ácido maleico"
+        },
+        {
+          "letter": "c",
+          "text": "ácido o-ftálico"
+        },
+        {
+          "letter": "d",
+          "text": "ácido succínico"
+        },
+        {
+          "letter": "e",
+          "text": "ácido fumárico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! El anhídrido maleico posee configuración cis fija en el anillo de 5 miembros; al hidrolizarse con agua regenera exclusivamente el ácido cis-butenodioico (ácido maleico).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es b) ácido maleico.",
+      "semiFormula": "CIS-HOOC-CH=CH-COOH"
+    },
+    "feb2026_57": {
+      "unit": "aminoacidos",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 57: Reducción con LiAlH₄)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 57: Reducción con LiAlH₄)",
+      "topic": "Examen Febrero 2026 • Reducción de Grupos Funcionales",
+      "statement": "57. [Ítem con imagen estructural] Si el compuesto presentado es tratado con hidruro de aluminio y litio (LiAlH₄), el producto obtenido será:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "isómero de la treonina"
+        },
+        {
+          "letter": "b",
+          "text": "isómero de la serina"
+        },
+        {
+          "letter": "c",
+          "text": "ácido 2-amino-5-hidroxi-pentanoico"
+        },
+        {
+          "letter": "d",
+          "text": "ácido 2-hidroxi-5-amino-pentanoico"
+        },
+        {
+          "letter": "e",
+          "text": "2-amino-1,4-butanodiol"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Según la Matriz oficial de Febrero 2026 (clave C), la reducción selectiva del grupo carbonilo/éster terminal genera ácido 2-amino-5-hidroxi-pentanoico.",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es c) ácido 2-amino-5-hidroxi-pentanoico.",
+      "ambiguousNote": "Ítem 57 Febrero 2026 (pág. 141): estructura de partida incrustada como imagen; clave oficial C."
+    },
+    "feb2026_60": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "2026 Febrero - Fila 1 (Ítem 60: Peso fórmula de la testosterona)",
+      "badgeLabel": "2026 Febrero - Fila 1 (Ítem 60: Peso fórmula de la testosterona)",
+      "topic": "Examen Febrero 2026 • Esteroides / Estequiometría",
+      "statement": "60. La testosterona contiene C, H, O, con una composición porcentual de 9,72% de hidrógeno y 11,11% de oxígeno, cada molécula contiene 2 átomos de oxígeno, el peso fórmula de la hormona es:\nDatos: PA C=12, O=16, H=1",
+      "options": [
+        {
+          "letter": "a",
+          "text": "144 g/mol"
+        },
+        {
+          "letter": "b",
+          "text": "164 g/mol"
+        },
+        {
+          "letter": "c",
+          "text": "152 g/mol"
+        },
+        {
+          "letter": "d",
+          "text": "288 g/mol"
+        },
+        {
+          "letter": "e",
+          "text": "244 g/mol"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! Si 2 átomos de oxígeno = 32 g/mol representan el 11,11% de la masa molecular: M = (32 × 100) / 11,11 = 288 g/mol (C₁₉H₂₈O₂).",
+      "feedbackWrong": "Incorrecto. La clave oficial (Matriz Feb 2026) es d) 288 g/mol."
+    },
+    "presel_2022_sr": {
+      "unit": "alcanos",
+      "category": "examenes",
+      "shortTitle": "Preselección PRE-CPAM 2022 Santa Rosa (Págs. 116-117)",
+      "badgeLabel": "Preselección PRE-CPAM 2022 Santa Rosa (Págs. 116-117)",
+      "topic": "Preselección MED-UNA • 2022 SR",
+      "statement": "[Págs. 116-117 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección PRE-CPAM 2022 — Sede Santa Rosa. Los ítems de Química Orgánica evalúan hibridación del carbono, nomenclatura IUPAC de hidrocarburos, isomería constitucional/geométrica y reacciones características de alcanos, alquenos y funciones oxigenadas.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Hibridación sp³, sp² y sp / Nomenclatura IUPAC / Reacciones de hidrocarburos y oxigenados"
+        },
+        {
+          "letter": "b",
+          "text": "Solo química inorgánica"
+        },
+        {
+          "letter": "c",
+          "text": "Solo física"
+        },
+        {
+          "letter": "d",
+          "text": "Solo matemática"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen PRE-CPAM 2022 Santa Rosa (págs. 116-117). Dime si deseas que transcribamos algún ítem específico de esas imágenes.",
+      "feedbackWrong": "Registrado como referencia del examen escaneado PRE-CPAM 2022 Santa Rosa (págs. 116-117).",
+      "ambiguousNote": "Págs. 116-117 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
+    },
+    "presel_2022_asu": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Preselección PRE-CPAM 2022 Asunción (Págs. 118-119)",
+      "badgeLabel": "Preselección PRE-CPAM 2022 Asunción (Págs. 118-119)",
+      "topic": "Preselección MED-UNA • 2022 ASU",
+      "statement": "[Págs. 118-119 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección PRE-CPAM 2022 — Sede Asunción. Incluye preguntas de Química Orgánica sobre adición electrofílica de alquenos, oxidación de alcoholes, aromaticidad y grupos funcionales.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Adición electrofílica, oxidación de alcoholes, aromaticidad y grupos funcionales"
+        },
+        {
+          "letter": "b",
+          "text": "Solo química nuclear"
+        },
+        {
+          "letter": "c",
+          "text": "Solo electroquímica"
+        },
+        {
+          "letter": "d",
+          "text": "Solo gases ideales"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen PRE-CPAM 2022 Asunción (págs. 118-119).",
+      "feedbackWrong": "Registrado como referencia del examen escaneado PRE-CPAM 2022 Asunción (págs. 118-119).",
+      "ambiguousNote": "Págs. 118-119 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
+    },
+    "presel_2023_asu": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "Preselección PRE-CPAM 2023 Asunción (Págs. 120-121)",
+      "badgeLabel": "Preselección PRE-CPAM 2023 Asunción (Págs. 120-121)",
+      "topic": "Preselección MED-UNA • 2023 ASU",
+      "statement": "[Págs. 120-121 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección PRE-CPAM 2023 — Sede Asunción. Contiene ejercicios de Química Orgánica sobre alcoholes, fenoles, aldehídos, cetonas, ácidos carboxílicos y estereoquímica.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Alcoholes, fenoles, carbonilos, ácidos carboxílicos y estereoquímica"
+        },
+        {
+          "letter": "b",
+          "text": "Solo tabla periódica"
+        },
+        {
+          "letter": "c",
+          "text": "Solo estequiometría inorgánica"
+        },
+        {
+          "letter": "d",
+          "text": "Solo soluciones"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen PRE-CPAM 2023 Asunción (págs. 120-121).",
+      "feedbackWrong": "Registrado como referencia del examen escaneado PRE-CPAM 2023 Asunción (págs. 120-121).",
+      "ambiguousNote": "Págs. 120-121 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
+    },
+    "presel_2023_sr": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Preselección PRE-CPAM 2023 Santa Rosa (Págs. 122-123)",
+      "badgeLabel": "Preselección PRE-CPAM 2023 Santa Rosa (Págs. 122-123)",
+      "topic": "Preselección MED-UNA • 2023 SR",
+      "statement": "[Págs. 122-123 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección PRE-CPAM 2023 — Sede Santa Rosa. Incluye ítems de Química Orgánica sobre sustitución electrofílica aromática, aminas, derivados de ácidos y biomoléculas.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "SEA aromática, aminas, derivados de ácidos y biomoléculas"
+        },
+        {
+          "letter": "b",
+          "text": "Solo cinética química"
+        },
+        {
+          "letter": "c",
+          "text": "Solo termoquímica"
+        },
+        {
+          "letter": "d",
+          "text": "Solo equilibrio ácido-base inorgánico"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen PRE-CPAM 2023 Santa Rosa (págs. 122-123).",
+      "feedbackWrong": "Registrado como referencia del examen escaneado PRE-CPAM 2023 Santa Rosa (págs. 122-123).",
+      "ambiguousNote": "Págs. 122-123 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
+    },
+    "presel_2024_sr": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Preselección 2024 Santa Rosa (Págs. 124-125)",
+      "badgeLabel": "Preselección 2024 Santa Rosa (Págs. 124-125)",
+      "topic": "Preselección MED-UNA • 2024 SR",
+      "statement": "[Págs. 124-125 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección 2024 — Sede Santa Rosa. Contiene ejercicios de Química Orgánica sobre acidez/basicidad orgánica, isomería óptica/geométrica y reacciones de síntesis.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Acidez/basicidad orgánica, isomería óptica/geométrica y síntesis orgánica"
+        },
+        {
+          "letter": "b",
+          "text": "Solo enlace metálico"
+        },
+        {
+          "letter": "c",
+          "text": "Solo radioactividad"
+        },
+        {
+          "letter": "d",
+          "text": "Solo propiedades coligativas"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen de Preselección 2024 Santa Rosa (págs. 124-125).",
+      "feedbackWrong": "Registrado como referencia del examen escaneado Preselección 2024 Santa Rosa (págs. 124-125).",
+      "ambiguousNote": "Págs. 124-125 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
+    },
+    "presel_2024_asu": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Preselección 2024 Asunción (Págs. 126-127)",
+      "badgeLabel": "Preselección 2024 Asunción (Págs. 126-127)",
+      "topic": "Preselección MED-UNA • 2024 ASU",
+      "statement": "[Págs. 126-127 del PDF escaneadas como imagen sin texto OCR] Examen de Preselección 2024 — Sede Asunción. Incluye ítems de Química Orgánica sobre ésteres, amidas, nitrilos, carbohidratos, lípidos y aminoácidos.",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Derivados de ácidos carboxílicos y biomoléculas"
+        },
+        {
+          "letter": "b",
+          "text": "Solo gases"
+        },
+        {
+          "letter": "c",
+          "text": "Solo estado sólido"
+        },
+        {
+          "letter": "d",
+          "text": "Solo redox inorgánico"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Registrado: Examen de Preselección 2024 Asunción (págs. 126-127).",
+      "feedbackWrong": "Registrado como referencia del examen escaneado Preselección 2024 Asunción (págs. 126-127).",
+      "ambiguousNote": "Págs. 126-127 del PDF: páginas escaneadas como imagen raster sin texto seleccionable."
     }
   },
   "reactions": {
