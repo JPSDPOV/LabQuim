@@ -1,0 +1,1084 @@
+{
+  "category": "obtencion",
+  "title": "3) Reducción de Nitrilos (→ Amina Primaria 1°) vs. Isonitrilos (→ Amina Secundaria 2°)",
+  "natureBadge": "Reducción de Triple Enlace C≡N y N≡C • 2 H₂ / Ni o LiAlH₄",
+  "deltaH": "ΔH° < 0 (Exotérmica; saturación de 2 enlaces π con adición de 4 átomos de hidrógeno)",
+  "description": "Contraste clave de examen entre nitrilos e isonitrilos:\n1) Reducción de Nitrilos (R–C≡N + 2 H₂ / Ni o LiAlH₄): el carbono del grupo ciano se reduce a –CH₂– y el nitrógeno a –NH₂, generando una AMINA PRIMARIA (R–CH₂–NH₂) con el mismo número de carbonos (ej. butanonitrilo → 1-butanamina; etanonitrilo → etilamina).\n2) Reducción de Isonitrilos o Isocianuros (R–N≡C + 2 H₂ / Ni o LiAlH₄): el nitrógeno está unido directamente a la cadena R y al carbono terminal; al saturarse el grupo –N≡C se forma una AMINA SECUNDARIA N-metilada (R–NH–CH₃) (ej. isocianuro de etilo → etilmetilamina).",
+  "meta": {
+    "grupoFuncional": "Amina Primaria 1° (desde Nitrilos) vs. Amina Secundaria 2° N-metilada (desde Isonitrilos)",
+    "reaccionMecanismo": "Hidrogenación Catalítica (2 H₂ / Ni, Pt o Pd) o Reducción con Hidruros (LiAlH₄ / H₂O)",
+    "naturaleza": "Adición sucesiva de 2 moles de H₂ (4 átomos de H) sobre el triple enlace vía intermediario imina (R–CH=NH).",
+    "rupturaIntermediarios": "Ruptura de los 2 enlaces π del C≡N (o N≡C) formando 2 enlaces C–H y 2 enlaces N–H (en nitrilos) o 1 N–H y 3 C–H (en isonitrilos).",
+    "detalleMecanismo": "En nitrilos (R–C≡N), la primera adición de H₂ forma la aldimina (R–CH=NH) y la segunda adición completa la reducción a amina 1° (R–CH₂–NH₂). En isonitrilos (R–N≡C), el carbono terminal captura 3 H formando –NH–CH₃ (amina 2°).",
+    "reactivosCondiciones": "• Hidrogenación catalítica: 2 H₂ / Ni Raney, Pt o Pd, etanol.\n• Reducción química: 1) LiAlH₄ / Éter anhidro → 2) H₂O.",
+    "rolReactivos": "• Nitrilo (R–C≡N) / Isonitrilo (R–N≡C): Sustrato insaturado.\n• 2 H₂ / Ni o LiAlH₄: Agente reductor.",
+    "reglasObs": "• Nitrilo (–C≡N) → Amina Primaria (–CH₂–NH₂).\n• Isonitrilo (–N≡C) → Amina Secundaria N-metilada (–NH–CH₃)."
+  },
+  "substrates": [
+    {
+      "id": "ami_nit_butanonitrilo",
+      "name": "Nitrilo → Amina 1°: Butanonitrilo (CH₃CH₂CH₂C≡N) + 2 H₂ (Ni) ──► 1-Butanamina",
+      "catalyst": "2 H₂ / Ni (Hidrogenación catalítica)"
+    },
+    {
+      "id": "ami_nit_etanonitrilo",
+      "name": "Nitrilo → Amina 1°: Etanonitrilo (CH₃C≡N) + LiAlH₄ (luego H₂O) ──► Etilamina",
+      "catalyst": "1) LiAlH₄ / Éter → 2) H₂O"
+    },
+    {
+      "id": "ami_nit_benzonitrilo",
+      "name": "Nitrilo Aromático → Amina 1°: Benzonitrilo (C₆H₅C≡N) + 2 H₂ (Ni) ──► Bencilamina",
+      "catalyst": "2 H₂ / Ni (Hidrogenación catalítica)"
+    },
+    {
+      "id": "ami_nit_isocianuro_etilo",
+      "name": "Isonitrilo → Amina 2°: Isocianuro de etilo (CH₃CH₂N≡C) + 2 H₂ (Ni) ──► Etilmetilamina",
+      "catalyst": "2 H₂ / Ni (Genera amina secundaria 2°)"
+    },
+    {
+      "id": "ami_nit_isocianuro_fenilo",
+      "name": "Isonitrilo Aromático → Amina 2°: Isocianuro de fenilo (C₆H₅N≡C) + 2 H₂ (Ni) ──► N-Metilanilina",
+      "catalyst": "2 H₂ / Ni (Genera amina secundaria 2°)"
+    }
+  ],
+  "catalysts": [
+    "2 H₂ / Ni (Hidrogenación catalítica)",
+    "1) LiAlH₄ / Éter → 2) H₂O",
+    "2 H₂ / Ni (Genera amina secundaria 2°)"
+  ],
+  "stepsBySubstrate": {
+    "ami_nit_butanonitrilo": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Butanonitrilo + 2 H₂ / Ni",
+        "semiStep": "CH₃—CH₂—CH₂—C≡N  +  2 H₂ (Ni)",
+        "semiGlobal": "CH₃—CH₂—CH₂—C≡N + 2 H₂ ──(Ni)──► CH₃—CH₂—CH₂—CH₂—NH₂",
+        "desc": "El butanonitrilo presenta un triple enlace C≡N con 1 enlace σ y 2 enlaces π frente a 2 moles de hidrógeno sobre níquel.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Adsorción del triple enlace C≡N sobre Ni."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂CH₂",
+              "x": 185,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 365,
+              "y": 205,
+              "label": "Butanonitrilo"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 515,
+              "y": 205
+            },
+            {
+              "id": "H2_cat",
+              "el": "2 H₂ / Ni",
+              "x": 725,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 615,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Ruptura de los 2 Enlaces π y Adición de 4 Hidrógenos",
+        "semiStep": "CH₃CH₂CH₂—CH=NH  +  H₂  ──►",
+        "semiGlobal": "CH₃—CH₂—CH₂—C≡N + 2 H₂ ──(Ni)──► CH₃—CH₂—CH₂—CH₂—NH₂",
+        "desc": "Se rompen en rojo punteado los 2 enlaces π del triple enlace C≡N mientras se forman en verde punteado dos enlaces C—H y dos enlaces N—H.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los 2 enlaces π C≡N.",
+          "forming": "En VERDE punteado: 2 enlaces C—H y 2 enlaces N—H.",
+          "movement": "Saturación completa sobre el catalizador de Ni."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂CH₂",
+              "x": 165,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 355,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 355,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 355,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 525,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 525,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 655,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: 1-Butanamina (Amina Primaria 1°)",
+        "semiStep": "CH₃—CH₂—CH₂—CH₂—NH₂",
+        "semiGlobal": "CH₃—CH₂—CH₂—C≡N + 2 H₂ ──(Ni)──► CH₃—CH₂—CH₂—CH₂—NH₂",
+        "desc": "Queda consolidada en verde sólido la 1-butanamina (amina primaria de 4 carbonos).",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: 1-butanamina (amina 1°).",
+          "movement": "Producto final estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂CH₂",
+              "x": 185,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 375,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 375,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 375,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 545,
+              "y": 205,
+              "highlight": "#10b981",
+              "label": "1-Butanamina (1°)"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 545,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 675,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nit_etanonitrilo": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Etanonitrilo (Acetonitrilo) + LiAlH₄",
+        "semiStep": "CH₃—C≡N  +  LiAlH₄ / H₂O",
+        "semiGlobal": "CH₃—C≡N ──(1. LiAlH₄; 2. H₂O)──► CH₃—CH₂—NH₂",
+        "desc": "El etanonitrilo se trata con hidruro de litio y aluminio (LiAlH₄) en éter anhidro seguido de hidrólisis.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Ataque de hidruros H⁻ al carbono del nitrilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 205,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 365,
+              "y": 205,
+              "label": "Etanonitrilo"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 515,
+              "y": 205
+            },
+            {
+              "id": "Red",
+              "el": "LiAlH₄ / H₂O",
+              "x": 725,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 615,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Adición de Hidruros y Protonación (Ruptura π C≡N)",
+        "semiStep": "CH₃—CH=N⁻  ──►  CH₃—CH₂—NH₂",
+        "semiGlobal": "CH₃—C≡N ──(1. LiAlH₄; 2. H₂O)──► CH₃—CH₂—NH₂",
+        "desc": "Se rompen en rojo punteado los enlaces π del grupo ciano y se forman los nuevos enlaces C—H y N—H.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlaces π C≡N.",
+          "forming": "En VERDE punteado: enlaces C—H y N—H.",
+          "movement": "Reducción con hidruro e hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 185,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 355,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 355,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 355,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 525,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 525,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 655,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: Etilamina (Amina Primaria 1°)",
+        "semiStep": "CH₃—CH₂—NH₂",
+        "semiGlobal": "CH₃—C≡N ──(1. LiAlH₄; 2. H₂O)──► CH₃—CH₂—NH₂",
+        "desc": "Se obtiene etilamina (etanamina) consolidada en verde sólido.",
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: etilamina.",
+          "movement": "Amina primaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 195,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 365,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 365,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 365,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 535,
+              "y": 205,
+              "highlight": "#10b981",
+              "label": "Etilamina (1°)"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 535,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 665,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nit_benzonitrilo": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Benzonitrilo + 2 H₂ / Ni",
+        "semiStep": "C₆H₅—C≡N  +  2 H₂ (Ni)",
+        "semiGlobal": "C₆H₅—C≡N + 2 H₂ ──(Ni)──► C₆H₅—CH₂—NH₂",
+        "desc": "El benzonitrilo presenta el grupo ciano unido al anillo aromático frente a 2 moles de H₂ sobre níquel.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Hidrogenación del grupo ciano."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 205,
+              "label": "Benzonitrilo"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 375,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 525,
+              "y": 205
+            },
+            {
+              "id": "H2_cat",
+              "el": "2 H₂ / Ni",
+              "x": 725,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 625,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Bencilamina (Fenilmetanamina)",
+        "semiStep": "C₆H₅—CH₂—NH₂",
+        "semiGlobal": "C₆H₅—C≡N + 2 H₂ ──(Ni)──► C₆H₅—CH₂—NH₂",
+        "desc": "Se obtiene bencilamina (amina primaria bencílica) consolidada en verde sólido.",
+        "legend": {
+          "breaking": "Enlaces π C≡N reducidos.",
+          "forming": "En VERDE sólido: bencilamina.",
+          "movement": "Amina primaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 385,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 545,
+              "y": 205,
+              "highlight": "#10b981",
+              "label": "Bencilamina (1°)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nit_isocianuro_etilo": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Isocianuro de Etilo (CH₃CH₂—N≡C) + 2 H₂ / Ni",
+        "semiStep": "CH₃—CH₂—N≡C  +  2 H₂ (Ni)",
+        "semiGlobal": "CH₃—CH₂—N≡C + 2 H₂ ──(Ni)──► CH₃—CH₂—NH—CH₃",
+        "desc": "Observa la conectividad invertida del isonitrilo: el nitrógeno está en el centro (CH₃CH₂—N≡C) y el carbono es terminal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Hidrogenación del grupo isocianuro –N≡C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 185,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 365,
+              "y": 205,
+              "label": "Isocianuro de etilo"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 515,
+              "y": 205
+            },
+            {
+              "id": "H2_cat",
+              "el": "2 H₂ / Ni",
+              "x": 725,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 615,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Saturación del Grupo –N≡C (1 H al Nitrógeno, 3 H al Carbono Terminal)",
+        "semiStep": "CH₃CH₂—NH—CH₃",
+        "semiGlobal": "CH₃—CH₂—N≡C + 2 H₂ ──(Ni)──► CH₃—CH₂—NH—CH₃",
+        "desc": "Se rompen en rojo punteado los 2 enlaces π del N≡C; el nitrógeno recibe 1 H (–NH–) y el carbono terminal recibe 3 H formando un grupo metilo (–CH₃).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los 2 enlaces π N≡C.",
+          "forming": "En VERDE punteado: 1 enlace N—H y 3 enlaces C—H.",
+          "movement": "Conversión a amina secundaria N-metilada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 355,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 355,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 525,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 525,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc3",
+              "el": "H",
+              "x": 655,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Hc3",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: Etilmetilamina (Amina Secundaria 2°)",
+        "semiStep": "CH₃—CH₂—NH—CH₃",
+        "semiGlobal": "CH₃—CH₂—N≡C + 2 H₂ ──(Ni)──► CH₃—CH₂—NH—CH₃",
+        "desc": "Queda consolidada en verde sólido la etilmetilamina (N-metiletanamina), una amina secundaria.",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: etilmetilamina (amina 2°).",
+          "movement": "Amina secundaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 185,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 375,
+              "y": 205,
+              "highlight": "#10b981",
+              "label": "Etilmetilamina (2°)"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 375,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 545,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Hc1",
+              "el": "H",
+              "x": 545,
+              "y": 100,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc2",
+              "el": "H",
+              "x": 545,
+              "y": 310,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hc3",
+              "el": "H",
+              "x": 675,
+              "y": 205,
+              "border": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Hc1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Hc2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Hc3",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nit_isocianuro_fenilo": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Isocianuro de Fenilo (C₆H₅—N≡C) + 2 H₂ / Ni",
+        "semiStep": "C₆H₅—N≡C  +  2 H₂ (Ni)",
+        "semiGlobal": "C₆H₅—N≡C + 2 H₂ ──(Ni)──► C₆H₅—NH—CH₃",
+        "desc": "El isocianuro de fenilo tiene el átomo de nitrógeno unido directamente al anillo bencénico y al carbono terminal.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Hidrogenación del grupo isociano."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 205,
+              "label": "Isocianuro de fenilo"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 375,
+              "y": 205
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 205
+            },
+            {
+              "id": "H2_cat",
+              "el": "2 H₂ / Ni",
+              "x": 725,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 625,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: N-Metilanilina (Amina Secundaria 2°)",
+        "semiStep": "C₆H₅—NH—CH₃",
+        "semiGlobal": "C₆H₅—N≡C + 2 H₂ ──(Ni)──► C₆H₅—NH—CH₃",
+        "desc": "Se obtiene N-metilanilina (N-metilbencenamina), una amina secundaria aromática.",
+        "legend": {
+          "breaking": "Enlaces π N≡C reducidos.",
+          "forming": "En VERDE sólido: N-metilanilina (amina 2°).",
+          "movement": "Amina secundaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 385,
+              "y": 205,
+              "highlight": "#10b981",
+              "label": "N-Metilanilina (2°)"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 545,
+              "y": 205,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
