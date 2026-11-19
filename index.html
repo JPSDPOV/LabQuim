@@ -788,6 +788,9 @@
                     <marker id="arrowFishhook" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="7.5" markerHeight="7.5" orient="auto-start-reverse">
                         <path d="M 0 6 L 10 6 L 4 1.5" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </marker>
+                    <marker id="arrowOrange" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                        <path d="M 0 1.5 L 8.5 5 L 0 8.5 z" fill="#f97316" />
+                    </marker>
                     <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stop-color="#334155"/>
                         <stop offset="50%" stop-color="#64748b"/>
@@ -2310,12 +2313,13 @@
             return { atoms, bonds, spanHalfW: Math.max(55, f.length * 6.5) };
         }
 
-        function buildSemidevelopedBannerScene(semiText, accentColor, contextHints = []) {
+        function buildSemidevelopedBannerScene(semiText, accentColor, contextHints = [], catalystLabel = '') {
             const raw = String(semiText || '').trim();
             const clean = raw
                 .replace(/^PRODUCTO OBTENIDO:\s*/i, '')
                 .replace(/\s*──\([^)]+\)──►.*$/, '')
                 .replace(/\s*──►\s*$/, '')
+                .replace(/\s*\((?:Reactivos intactos|Ruptura[^)]*|Enol[^)]*|Tautomería[^)]*)\)\s*$/i, '')
                 .trim();
 
             const sides = clean.split(/──►|→|⇄/);
@@ -2326,22 +2330,31 @@
             const atoms = [];
             const bonds = [];
             const texts = [];
+            const arrows = [];
             const n = parsedParts.length;
+            const hasCatArrow = Boolean(catalystLabel && String(catalystLabel).trim());
+            let rightEdgeX = 520;
 
             if (n === 1) {
-                const built = expandBranchedSemidevelopedNodes(parsedParts[0], 460, 185, accentColor, 'Semi_0');
+                const cx = hasCatArrow ? 340 : 460;
+                const built = expandBranchedSemidevelopedNodes(parsedParts[0], cx, 185, accentColor, 'Semi_0');
                 atoms.push(...built.atoms);
                 bonds.push(...built.bonds);
+                rightEdgeX = cx + built.spanHalfW;
             } else if (n === 2) {
-                const built0 = expandBranchedSemidevelopedNodes(parsedParts[0], 255, 185, accentColor, 'Semi_0');
-                const built1 = expandBranchedSemidevelopedNodes(parsedParts[1], 675, 185, accentColor, 'Semi_1');
+                const cx0 = hasCatArrow ? 195 : 255;
+                const cx1 = hasCatArrow ? 515 : 675;
+                const built0 = expandBranchedSemidevelopedNodes(parsedParts[0], cx0, 185, accentColor, 'Semi_0');
+                const built1 = expandBranchedSemidevelopedNodes(parsedParts[1], cx1, 185, accentColor, 'Semi_1');
                 atoms.push(...built0.atoms, ...built1.atoms);
                 bonds.push(...built0.bonds, ...built1.bonds);
-                const plusX = Math.round(((255 + built0.spanHalfW) + (675 - built1.spanHalfW)) / 2);
+                const plusX = Math.round(((cx0 + built0.spanHalfW) + (cx1 - built1.spanHalfW)) / 2);
                 texts.push({ x: plusX, y: 193, text: '+', size: 24, color: accentColor });
+                rightEdgeX = cx1 + built1.spanHalfW;
             } else if (n >= 3) {
-                const startX = 175;
-                const stepX = Math.floor(570 / (n - 1));
+                const startX = hasCatArrow ? 130 : 175;
+                const spanTotal = hasCatArrow ? 440 : 570;
+                const stepX = Math.floor(spanTotal / (n - 1));
                 parsedParts.forEach((item, idx) => {
                     const cx = startX + idx * stepX;
                     const built = expandBranchedSemidevelopedNodes(item, cx, 185, accentColor, `Semi_${idx}`);
@@ -2349,14 +2362,34 @@
                     bonds.push(...built.bonds);
                     if (idx < n - 1) {
                         texts.push({ x: cx + Math.round(stepX / 2), y: 193, text: '+', size: 22, color: accentColor });
+                    } else {
+                        rightEdgeX = cx + built.spanHalfW;
                     }
                 });
             }
 
-            return { atoms, bonds, texts, forceCentered: true };
+            if (hasCatArrow) {
+                const cleanCat = String(catalystLabel).trim();
+                const arrowX1 = Math.min(720, Math.max(rightEdgeX + 26, 595));
+                const arrowX2 = Math.min(895, arrowX1 + Math.max(135, cleanCat.length * 7.5 + 24));
+                const arrowCx = Math.round((arrowX1 + arrowX2) / 2);
+                arrows.push({
+                    type: 'full',
+                    color: '#f97316',
+                    x1: arrowX1,
+                    y1: 185,
+                    cx: arrowCx,
+                    cy: 185,
+                    x2: arrowX2,
+                    y2: 185,
+                    label: cleanCat
+                });
+            }
+
+            return { atoms, bonds, texts, arrows, forceCentered: true };
         }
 
-        function wrapWithSemidevelopedEndpoints(stepsArray) {
+        function wrapWithSemidevelopedEndpoints(stepsArray, catalystLabel = '') {
             if (!Array.isArray(stepsArray) || stepsArray.length === 0) return stepsArray;
 
             const firstStep = stepsArray[0];
@@ -2380,6 +2413,7 @@
             const introParts = introSemiText
                 .replace(/\s*──\([^)]+\)──►.*$/, '')
                 .replace(/\s*──►\s*$/, '')
+                .replace(/\s*\((?:Reactivos intactos|Ruptura[^)]*|Enol[^)]*|Tautomería[^)]*)\)\s*$/i, '')
                 .split(/\s+\+\s+/)
                 .map(s => parseFormulaAndCompoundName(s, contextHints).formula)
                 .filter(Boolean)
@@ -2395,7 +2429,7 @@
                     forming: 'Ningún enlace formado todavía.',
                     movement: 'En el siguiente paso se despliegan los enlaces desarrollados.'
                 },
-                scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints)
+                scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints, catalystLabel)
             };
 
             const middleSteps = stepsArray.map((st, idx) => ({
@@ -2430,7 +2464,7 @@
             return [introStep, ...middleSteps, outroStep];
         }
 
-        function expandStepsToVisualMicroSteps(rawSteps) {
+        function expandStepsToVisualMicroSteps(rawSteps, catalystLabel = '') {
             if (!Array.isArray(rawSteps) || rawSteps.length === 0) return [];
             if (rawSteps.length >= 5) {
                 const baseSteps = rawSteps.map((st, idx) => ({
@@ -2451,7 +2485,7 @@
                             : JSON.parse(JSON.stringify(sc));
                     }
                 }));
-                return wrapWithSemidevelopedEndpoints(baseSteps);
+                return wrapWithSemidevelopedEndpoints(baseSteps, catalystLabel);
             }
 
             const expanded = [];
@@ -2570,7 +2604,7 @@
                 scene: () => JSON.parse(JSON.stringify(finalScene))
             });
 
-            return wrapWithSemidevelopedEndpoints(expanded);
+            return wrapWithSemidevelopedEndpoints(expanded, catalystLabel);
         }
 
         function parseFlexibleJson(rawText) {
@@ -2965,8 +2999,8 @@
                 const pendingArrowLabels = [];
 
                 targetScene.arrows.forEach(arr => {
-                    const marker = arr.type === 'fishhook' ? 'url(#arrowFishhook)' : 'url(#arrowFull)';
-                    const col = arr.type === 'fishhook' ? '#fbbf24' : '#38bdf8';
+                    const marker = arr.type === 'fishhook' ? 'url(#arrowFishhook)' : (arr.color === '#f97316' ? 'url(#arrowOrange)' : 'url(#arrowFull)');
+                    const col = arr.color || (arr.type === 'fishhook' ? '#fbbf24' : '#38bdf8');
                     const x1 = mapStageX(arr.x1), y1 = mapStageY(arr.y1);
                     const cx = mapStageX(arr.cx), cy = mapStageY(arr.cy);
                     const x2 = mapStageX(arr.x2), y2 = mapStageY(arr.y2);
@@ -3573,7 +3607,9 @@
                     }
                     const mapBySub = rawRxn.stepsBySubstrate || {};
                     const chosenSteps = mapBySub[subId] || mapBySub['default'] || Object.values(mapBySub)[0] || rawRxn.steps || [];
-                    return expandStepsToVisualMicroSteps(chosenSteps);
+                    const activeSubObj = (Array.isArray(rawRxn.substrates) ? rawRxn.substrates.find(s => s.id === subId) : null) || {};
+                    const effectiveCat = activeSubObj.catalyst || catName || (Array.isArray(rawRxn.catalysts) ? rawRxn.catalysts[0] : '') || '';
+                    return expandStepsToVisualMicroSteps(chosenSteps, effectiveCat);
                 }
             };
         }
