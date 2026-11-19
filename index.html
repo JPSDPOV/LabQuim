@@ -850,7 +850,7 @@
             <div class="max-w-2xl w-full mx-auto flex items-center gap-2.5 bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-xl">
                 <span class="text-[11px] font-bold text-cyan-300 whitespace-nowrap">Control Manual:</span>
                 <span id="scrubberPercentText" class="mono text-[11px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-700/50 px-1.5 py-0.5 rounded">0%</span>
-                <input id="transitionScrubber" type="range" min="0" max="100" value="0" oninput="scrubTransitionManually(this.value)" class="w-full accent-violet-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg"/>
+                <input id="transitionScrubber" type="range" min="0" max="100" step="0.1" value="0" oninput="scrubTransitionManually(this.value)" onchange="scrubTransitionManually(this.value)" class="w-full accent-violet-500 cursor-pointer h-2.5 bg-slate-800 rounded-lg touch-none"/>
                 <span id="stepCounterText" class="mono text-[11px] text-slate-400 whitespace-nowrap">1/8</span>
             </div>
         </footer>
@@ -1024,22 +1024,21 @@
         }
 
         async function requestMandatoryFullscreenAndLandscape(targetEl) {
-            const isTouchMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 900;
-
-            if (!isTouchMobile) {
-                const docEl = document.documentElement;
-                for (const el of [targetEl, docEl]) {
-                    if (!el) continue;
-                    try {
-                        if (el.requestFullscreen && !document.fullscreenElement) {
-                            await el.requestFullscreen({ navigationUI: 'hide' });
-                            break;
-                        } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
-                            await el.webkitRequestFullscreen();
-                            break;
-                        }
-                    } catch (e) {}
-                }
+            const docEl = document.documentElement;
+            for (const el of [targetEl, docEl]) {
+                if (!el) continue;
+                try {
+                    if (el.requestFullscreen && !document.fullscreenElement) {
+                        await el.requestFullscreen({ navigationUI: 'hide' });
+                        break;
+                    } else if (el.webkitRequestFullscreen && !document.webkitFullscreenElement) {
+                        await el.webkitRequestFullscreen();
+                        break;
+                    } else if (el.msRequestFullscreen && !document.msFullscreenElement) {
+                        await el.msRequestFullscreen();
+                        break;
+                    }
+                } catch (e) {}
             }
 
             try {
@@ -2409,6 +2408,49 @@
                 return { atoms, bonds, spanHalfW: 135 };
             }
 
+            // Caso lineal con múltiples grupos unidos por enlaces (ej. CH₃—CH₂—C≡CH, CH₃—CH₂—CO—CH₃) -> nodos separados
+            if (!/[()]/.test(f) && /[-—=≡]/.test(f) && !/^(H-OH|H-O-H|H-Cl|H-Br|H-I|H-CN|H-NH2|H-C≡C-H)$/i.test(norm)) {
+                const segs = [];
+                let buf = '';
+                let pendingOrd = 1;
+                for (let i = 0; i < f.length; i++) {
+                    const ch = f[i];
+                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                        if (buf) segs.push({ el: buf, order: pendingOrd });
+                        pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
+                        buf = '';
+                    } else {
+                        buf += ch;
+                    }
+                }
+                if (buf) segs.push({ el: buf, order: pendingOrd });
+
+                if (segs.length >= 2) {
+                    const stepSeg = 84;
+                    const totalSpan = (segs.length - 1) * stepSeg;
+                    const startX = centerX - Math.round(totalSpan / 2);
+                    const midIdx = Math.floor(segs.length / 2);
+                    segs.forEach((seg, idx) => {
+                        const sx = startX + idx * stepSeg;
+                        const sId = `${prefixId}_${idx}`;
+                        const isFuncNode = (idx === segs.length - 1 || /CO|CHO|OH|NH/.test(seg.el));
+                        atoms.push({
+                            id: sId,
+                            el: seg.el,
+                            x: sx,
+                            y: centerY,
+                            highlight: isFuncNode ? accentColor : undefined,
+                            border: isFuncNode ? accentColor : undefined,
+                            label: (idx === midIdx) ? lbl : undefined
+                        });
+                        if (idx > 0) {
+                            bonds.push({ from: `${prefixId}_${idx - 1}`, to: sId, order: seg.order, state: 'normal' });
+                        }
+                    });
+                    return { atoms, bonds, spanHalfW: Math.max(65, Math.round(totalSpan / 2) + 34) };
+                }
+            }
+
             // Caso lineal / estándar sin ramificaciones: cápsula única centrada
             atoms.push({
                 id: `${prefixId}_0`,
@@ -3665,7 +3707,7 @@
                 </button>
             `).join('');
             document.getElementById('stepPillsContainer').innerHTML = pillsHtml;
-            document.getElementById('stepCounterText').innerText = `Paso ${currentStepIdx + 1} de ${steps.length}`;
+            document.getElementById('stepCounterText').innerText = `${currentStepIdx + 1}/${steps.length}`;
             document.getElementById('stepNumberBadge').innerText = `PASO ${currentStepIdx + 1} DE ${steps.length}`;
             document.getElementById('stepTitleText').innerText = step.title;
             applyStageThemeUI();
@@ -3929,6 +3971,9 @@
 
         function showWizardStage(stageNum) {
             wizardStage = stageNum;
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
             const s1 = document.getElementById('wizardStep1');
             const s2 = document.getElementById('wizardStep2');
             const s3 = document.getElementById('wizardStep3');
