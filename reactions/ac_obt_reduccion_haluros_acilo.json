@@ -1,0 +1,137 @@
+{
+  "category": "obtencion",
+  "title": "6) Reducción Catalítica de Halogenuros de Ácido (Reacción de Rosenmund: + H₂ / Pt ──► Aldehído)",
+  "natureBadge": "Hidrogenólisis Selectiva • R–COCl + H₂ ──(Pt o Pd/BaSO₄)──► R–CHO + HCl",
+  "deltaH": "ΔH° < 0 (Exotérmica; convierte cloruros de acilo en aldehídos sin reducir el carbonilo a alcohol)",
+  "description": "Reducción catalítica de un halogenuro de acilo (cloruro de ácido) con hidrógeno gaseoso sobre platino o paladio envenenado sobre sulfato de bario (Reacción de Rosenmund, Diap. 14), reemplazando el átomo de cloro por hidrógeno para generar un aldehído.",
+  "meta": {
+    "grupoFuncional": "Aldehídos (R–CHO) + HCl",
+    "reaccionMecanismo": "Adición oxidativa / eliminación reductora catalítica sobre Pt o Pd",
+    "naturaleza": "Catalítica heterogénea.",
+    "rupturaIntermediarios": "Ruptura de enlaces C–Cl y H–H; formación de C–H y H–Cl.",
+    "detalleMecanismo": "CH₃–CH₂–CH₂–COCl + H₂ ──(Pt)──► CH₃–CH₂–CH₂–CHO + HCl",
+    "reactivosCondiciones": "Cloruro de acilo (R–COCl) + H₂ / Pt (o Pd/BaSO₄ envenenado).",
+    "rolReactivos": "• Sustrato: Halogenuro de ácido (cloruro de butanoílo).\n• Reductor: Hidrógeno (H₂).\n• Catalizador: Pt o Pd/BaSO₄.",
+    "reglasObs": "• Diap. 14: Cloruro de butanoílo + [H₂] / Pt → butanal."
+  },
+  "substrates": [
+    {
+      "id": "cl_butanoilo_butanal",
+      "name": "Diap. 14: Cloruro de Butanoílo + H₂ (Pt) ──► Butanal",
+      "catalyst": "H₂ / Pt (o Pd/BaSO₄)"
+    }
+  ],
+  "catalysts": [
+    "H₂ / Pt (o Pd/BaSO₄)"
+  ],
+  "stepsBySubstrate": {
+    "cl_butanoilo_butanal": [
+      {
+        "title": "Paso 1 — Estado Inicial: Cloruro de Butanoílo + H₂ / Pt",
+        "semiStep": "CH₃–CH₂–CH₂–CO–Cl  +  H₂ (Pt)",
+        "semiGlobal": "CH₃–CH₂–CH₂–COCl + H₂ (Pt) ──► CH₃–CH₂–CH₂–CHO + HCl",
+        "desc": "El cloruro de butanoílo se adsorbe con H₂ sobre el catalizador metálico.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C–Cl y H–H.",
+          "forming": "En VERDE punteado: enlace C–H.",
+          "movement": "Sustitución del cloro por hidrógeno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃–CH₂–CH₂",
+              "x": 220,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 440,
+              "y": 210,
+              "label": "Cloruro de butanoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 440,
+              "y": 100
+            },
+            {
+              "id": "Cl",
+              "el": "Cl",
+              "x": 610,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2",
+              "el": "H₂ / Pt",
+              "x": 780,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Butanal + HCl",
+        "semiStep": "CH₃–CH₂–CH₂–CHO  +  HCl",
+        "semiGlobal": "CH₃–CH₂–CH₂–COCl + H₂ (Pt) ──► CH₃–CH₂–CH₂–CHO + HCl",
+        "desc": "Se obtiene butanal y ácido clorhídrico.",
+        "legend": {
+          "breaking": "Enlace C–Cl roto.",
+          "forming": "En VERDE sólido: butanal.",
+          "movement": "Producto final obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–CH₂–CHO",
+              "x": 330,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Butanal"
+            },
+            {
+              "id": "HCl",
+              "el": "HCl",
+              "x": 690,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 540,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
