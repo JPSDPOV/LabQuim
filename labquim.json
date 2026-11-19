@@ -1,4 +1,4 @@
-﻿{
+{
   "version": "3.1.0",
   "appConfig": {
     "title": "Laboratorio de Química Orgánica",
@@ -185,8 +185,8 @@
       "label": "☁️ Unidad 15.3: Éteres y Epóxidos"
     },
     {
-       "value": "tioles",
-       "label": "🧪 Unidad 15.4A: Tioles (Mercaptanos)"
+      "value": "tioles",
+      "label": "🧪 Unidad 15.4A: Tioles (Mercaptanos)"
     },
     {
       "value": "tioeteres",
