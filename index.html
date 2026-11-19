@@ -6174,14 +6174,18 @@
             document.getElementById('nomScoreWrong').innerText = nomWrongCount;
 
             const primaryEl = document.getElementById('nomAnswerPrimary');
-            primaryEl.innerText = item.name;
-            const maxWordLen = Math.max(...String(item.name || '').split(/[\s\-]/).map(w => w.length));
-            if (maxWordLen >= 20 || String(item.name || '').length >= 36) {
-                primaryEl.className = 'text-base sm:text-2xl font-extrabold text-white leading-snug break-words max-w-full px-1';
-            } else if (maxWordLen >= 14 || String(item.name || '').length >= 26) {
-                primaryEl.className = 'text-lg sm:text-2xl font-extrabold text-white leading-snug break-words max-w-full px-1';
+            const nameStr = String(item.name || '');
+            primaryEl.innerText = nameStr;
+            const maxWordLen = Math.max(...nameStr.split(/[\s\-]/).map(w => w.length));
+            primaryEl.className = 'font-extrabold text-white leading-snug max-w-full px-0.5 text-center';
+            if (window.innerWidth < 640) {
+                // Calcular tamaño exacto en px para que la palabra más larga (ej. 28-34 letras) quepa entera en una sola línea sin partir letras
+                const availW = Math.max(210, window.innerWidth - 116);
+                const fitPx = Math.floor(availW / Math.max(10, maxWordLen * 0.58));
+                const finalPx = Math.max(12.5, Math.min(24, fitPx));
+                primaryEl.style.fontSize = finalPx + 'px';
             } else {
-                primaryEl.className = 'text-2xl sm:text-3xl font-extrabold text-white leading-tight break-words max-w-full px-1';
+                primaryEl.style.fontSize = maxWordLen >= 24 ? '24px' : '30px';
             }
             const synBox = document.getElementById('nomAnswerSynonymsBox');
             if (item.synonyms) {
