@@ -335,8 +335,8 @@
                         <span id="nomAvailableCountHint" class="text-xs text-slate-400">0 compuestos disponibles</span>
                     </div>
 
-                    <div class="flex items-center gap-2">
-                        <select id="nomQuestionCountSelect" class="bg-slate-900 border border-slate-700 focus:border-amber-400 text-white rounded-xl px-3.5 py-2 text-sm font-extrabold outline-none cursor-pointer">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+                        <select id="nomQuestionCountSelect" class="w-full sm:w-auto bg-slate-900 border border-slate-700 focus:border-amber-400 text-white rounded-xl px-3.5 py-2.5 text-sm font-extrabold outline-none cursor-pointer">
                             <option value="5">5 compuestos</option>
                             <option value="10" selected>10 compuestos</option>
                             <option value="15">15 compuestos</option>
@@ -345,8 +345,8 @@
                             <option value="all">Todos los seleccionados</option>
                         </select>
 
-                        <button type="button" onclick="startNomenclatureSession()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 text-sm font-extrabold shadow-lg shadow-emerald-600/25 transition active:scale-95 cursor-pointer">
-                            ▶ Comenzar
+                        <button type="button" onclick="startNomenclatureSession()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 text-sm font-extrabold shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer">
+                            <span>▶</span> <span>Comenzar</span>
                         </button>
                     </div>
                 </div>
@@ -1884,22 +1884,22 @@
                 const segs = chainRaw.split('-').map(s =>
                     s.replace(/CH3/g, 'CH₃').replace(/CH2/g, 'CH₂').replace(/C6H5/g, 'C₆H₅')
                 );
-                const segStep = 74;
+                const segStep = 122;
 
                 // Para que CIP coincida exactamente:
                 // En reactivo (X a derecha, R a izquierda): (R) lleva H arriba (dash) y CH3 abajo (wedge); (S) lleva CH3 arriba (wedge) y H abajo (dash)
                 // En producto (OH a izquierda, R a derecha): (S) lleva H arriba (dash) y CH3 abajo (wedge); (R) lleva CH3 arriba (wedge) y H abajo (dash)
                 const hOnTop = (!isProductOH && config === 'S') || (isProductOH && config === 'R');
-                const topY = centerY - 82;
-                const botY = centerY + 82;
+                const topY = centerY - 104;
+                const botY = centerY + 104;
 
                 if (!isProductOH) {
-                    const cX = centerX + 25;
+                    const cX = centerX + 35;
                     atoms.push(
                         { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
                         { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined },
-                        { id: `${prefixId}_X`, el: subGroup, x: cX + 82, y: centerY, highlight: accentColor, border: accentColor }
+                        { id: `${prefixId}_X`, el: subGroup, x: cX + 108, y: centerY, highlight: accentColor, border: accentColor }
                     );
                     bonds.push(
                         { from: `${prefixId}_C`, to: `${prefixId}_H`, order: 1, state: 'normal', stereo: 'dash' },
@@ -1937,7 +1937,7 @@
                         } else if (normalizeFormulaLookupKey(segs[idx]) === '(CH3)2CH' || normalizeFormulaLookupKey(segs[idx]) === 'CH(CH3)2') {
                             atoms.push(
                                 { id: sId, el: 'CH', x: sx, y: centerY },
-                                { id: `${sId}_L`, el: 'CH₃', x: sx - 84, y: centerY },
+                                { id: `${sId}_L`, el: 'CH₃', x: sx - 128, y: centerY },
                                 { id: `${sId}_B`, el: 'CH₃', x: sx, y: centerY + 82 }
                             );
                             bonds.push(
@@ -1959,9 +1959,9 @@
                     }
                     return { atoms, bonds, spanHalfW: Math.max(130, segs.length * segStep + 40) };
                 } else {
-                    const cX = centerX - 35;
+                    const cX = centerX - 45;
                     atoms.push(
-                        { id: `${prefixId}_OH`, el: 'OH', x: cX - 82, y: centerY, highlight: accentColor, border: accentColor },
+                        { id: `${prefixId}_OH`, el: 'OH', x: cX - 108, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
                         { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined }
@@ -2002,7 +2002,7 @@
                         } else if (normalizeFormulaLookupKey(revSegs[idx]) === '(CH3)2CH' || normalizeFormulaLookupKey(revSegs[idx]) === 'CH(CH3)2') {
                             atoms.push(
                                 { id: sId, el: 'CH', x: sx, y: centerY },
-                                { id: `${sId}_R`, el: 'CH₃', x: sx + 84, y: centerY },
+                                { id: `${sId}_R`, el: 'CH₃', x: sx + 128, y: centerY },
                                 { id: `${sId}_B`, el: 'CH₃', x: sx, y: centerY + 82 }
                             );
                             bonds.push(
@@ -6057,8 +6057,9 @@
                 if (a.isVertex) return { hw: 0, hh: 0 };
                 if (a.ring === 'phenyl') return { hw: 30, hh: 30 };
                 const txt = String(a.el || '');
-                const hw = Math.max(14, txt.length * 7.8 + 8);
-                const hh = 15;
+                const charHalf = isCompactMobile() ? 9.2 : 7.8;
+                const hw = Math.max(15, txt.length * charHalf + 8);
+                const hh = isCompactMobile() ? 17 : 15;
                 return { hw, hh };
             };
 
