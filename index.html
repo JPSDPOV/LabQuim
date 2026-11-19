@@ -374,13 +374,18 @@
                     </div>
                 </div>
 
-                <!-- TARJETA FLIP 3D (TOCA O DESLIZA IZQUIERDA/DERECHA PARA VOLTEAR) + FLECHAS DE NAVEGACIÓN -->
-                <div id="nomCardOuter" class="relative flex items-center gap-2 sm:gap-3 w-full">
-                    <button type="button" id="btnNomPrevCard" onclick="prevNomenclatureCard(event)" title="Compuesto anterior" class="w-9 h-12 sm:w-11 sm:h-14 rounded-2xl bg-slate-800/90 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-base sm:text-lg font-extrabold flex items-center justify-center shadow-lg transition active:scale-90 shrink-0 cursor-pointer">
-                        ◀
-                    </button>
+                <!-- TARJETA FLIP 3D (TOCA O DESLIZA IZQUIERDA/DERECHA PARA VOLTEAR) + FLECHAS DE NAVEGACIÓN ARRIBA -->
+                <div id="nomCardOuter" class="relative flex flex-col gap-2.5 w-full">
+                    <div class="flex items-center justify-between gap-2 w-full">
+                        <button type="button" id="btnNomPrevCard" onclick="prevNomenclatureCard(event)" title="Compuesto anterior" class="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-slate-800/95 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-xs sm:text-sm font-extrabold flex items-center justify-center gap-1.5 shadow-md transition active:scale-95 cursor-pointer">
+                            <span>◀</span> <span>Anterior</span>
+                        </button>
+                        <button type="button" id="btnNomNextCard" onclick="nextNomenclatureCard(event)" title="Siguiente compuesto" class="flex-1 sm:flex-none px-4 py-2 rounded-xl bg-slate-800/95 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-xs sm:text-sm font-extrabold flex items-center justify-center gap-1.5 shadow-md transition active:scale-95 cursor-pointer">
+                            <span>Siguiente</span> <span>▶</span>
+                        </button>
+                    </div>
 
-                    <div id="nomCardWrapper" class="flashcard-perspective flex-1 min-w-0 h-[350px] sm:h-[400px] cursor-pointer select-none touch-pan-y">
+                    <div id="nomCardWrapper" class="flashcard-perspective w-full h-[350px] sm:h-[400px] cursor-pointer select-none touch-pan-y">
                     <div id="nomCardInner" class="flashcard-inner">
                         <!-- CARA FRONTAL: FÓRMULA ESTRUCTURAL / SEMIDESARROLLADA (FONDO BLANCO Y TRAZOS NEGROS) -->
                         <div class="flashcard-face bg-white border-2 border-slate-300 hover:border-cyan-500 rounded-3xl p-4 flex flex-col justify-between shadow-xl transition">
@@ -426,10 +431,6 @@
                         </div>
                     </div>
                     </div>
-
-                    <button type="button" id="btnNomNextCard" onclick="nextNomenclatureCard(event)" title="Siguiente compuesto" class="w-9 h-12 sm:w-11 sm:h-14 rounded-2xl bg-slate-800/90 hover:bg-violet-600/80 disabled:opacity-30 disabled:pointer-events-none border border-slate-700 hover:border-violet-400 text-white text-base sm:text-lg font-extrabold flex items-center justify-center shadow-lg transition active:scale-90 shrink-0 cursor-pointer">
-                        ▶
-                    </button>
                 </div>
 
                 <!-- CONTROLES DE AUTOEVALUACIÓN -->
@@ -5732,9 +5733,12 @@
             // 5. Expansión completa de TODOS los grupos condensados (incluidos C(CH₃)₂, C(CH₃)₃, CH(CH₃)₂, C(CH₂CH₃)₂, etc.)
             const expandCondensedGroups = (rawStr) => {
                 let out = rawStr.replace(/—/g, '-');
-                // Multiplicadores de grupos idénticos unidos a un carbono o extremo:
-                out = out.replace(/^\(CH₃\)₃C-/, 'CH₃-C(CH₃)(CH₃)-');
-                out = out.replace(/^\(CH₃\)₂CH-/, 'CH₃-CH(CH₃)-');
+                // Separar paréntesis de sustituyentes pegados directamente al siguiente carbono de la cadena, ej: C(OH)CH₂ -> C(OH)-CH₂
+                out = out.replace(/\)(?=(?:CH₃|CH₂|CH|C|OH|NH₂|COOH|CHO|CN|NO₂|Cl|Br|I|F)\b)/g, ')-');
+                // Multiplicadores de grupos idénticos unidos a un carbono o extremo (con o sin guion intermedio):
+                out = out.replace(/^\(CH₃\)₃C-?/, 'CH₃-C(CH₃)(CH₃)-');
+                out = out.replace(/^\(CH₃\)₂CH-?/, 'CH₃-CH(CH₃)-');
+                out = out.replace(/^\(CH₃\)₂C\(([^()]+)\)-?/, 'CH₃-C(CH₃)($1)-');
                 out = out.replace(/-\(CH₃\)₃$/, '-C(CH₃)(CH₃)-CH₃');
                 out = out.replace(/-\(CH₃\)₂$/, '-CH(CH₃)-CH₃');
                 out = out.replace(/C\(CH₃\)₃/g, 'C(CH₃)(CH₃)(CH₃)');
@@ -6053,7 +6057,7 @@
                 if (a.isVertex) return { hw: 0, hh: 0 };
                 if (a.ring === 'phenyl') return { hw: 30, hh: 30 };
                 const txt = String(a.el || '');
-                const hw = Math.max(13, txt.length * 6.8 + 7);
+                const hw = Math.max(14, txt.length * 7.8 + 8);
                 const hh = 15;
                 return { hw, hh };
             };
