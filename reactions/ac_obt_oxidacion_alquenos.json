@@ -1,0 +1,91 @@
+{
+  "category": "obtencion",
+  "title": "9) Método Complementario: Ruptura Oxidativa de Alquenos Disustituidos (+ KMnO₄ conc., H⁺, Δ ──► Cetonas)",
+  "natureBadge": "Oxidación Enérgica • R₂C=CR'₂ + KMnO₄ (H⁺, Δ) ──► R₂C=O + R'₂C=O (Cetonas)",
+  "deltaH": "ΔH° << 0 (Fuertemente exotérmica; los carbonos vinílicos disustituidos =CR₂ se oxidan a cetonas)",
+  "description": "Cuando un alqueno posee carbonos vinílicos disustituidos (=CR₂, sin hidrógenos unidos al carbono del doble enlace), su escisión oxidativa con permanganato de potasio concentrado y caliente (KMnO₄ / H⁺, Δ) se detiene en CETONAS, ya que las cetonas no sufren oxidación posterior.",
+  "meta": {
+    "grupoFuncional": "Cetonas (R₂C=O)",
+    "reaccionMecanismo": "Escisión oxidativa enérgica del doble enlace C=C",
+    "naturaleza": "Oxidación profunda con ruptura total de C=C.",
+    "rupturaIntermediarios": "Ruptura completa de enlaces σ y π del doble enlace.",
+    "detalleMecanismo": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O (propanona)",
+    "reactivosCondiciones": "Alqueno con carbonos disustituidos (=CR₂) + KMnO₄ conc., H⁺, calor (Δ).",
+    "rolReactivos": "• Sustrato: Alqueno disustituido (=CR₂).\n• Oxidante enérgico: KMnO₄ concentrado y caliente.",
+    "reglasObs": "• Si el carbono vinílico tiene algún H (=CHR o =CH₂), con KMnO₄ caliente pasa a ácido carboxílico o CO₂, no a aldehído."
+  },
+  "substrates": [
+    {
+      "id": "kmno4_tetrametiletileno",
+      "name": "Complementario: 2,3-Dimetil-2-buteno + KMnO₄ (H⁺, Δ) ──► 2 Propanona",
+      "catalyst": "KMnO₄ concentrado / H⁺, Δ"
+    }
+  ],
+  "catalysts": [
+    "KMnO₄ concentrado / H⁺, Δ"
+  ],
+  "stepsBySubstrate": {
+    "kmno4_tetrametiletileno": [
+      {
+        "title": "Paso 1 — Estado Inicial: 2,3-Dimetil-2-buteno + KMnO₄ Caliente",
+        "semiStep": "(CH₃)₂C=C(CH₃)₂  +  KMnO₄ (H⁺, Δ)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O",
+        "desc": "Ninguno de los carbonos del doble enlace tiene hidrógenos, por lo que ambos se oxidan a cetona.",
+        "legend": {
+          "breaking": "Doble enlace C2=C3.",
+          "forming": "Sin enlaces nuevos aún.",
+          "movement": "Escisión oxidativa en caliente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "(CH₃)₂C=C(CH₃)₂",
+              "x": 310,
+              "y": 195
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / H⁺, Δ",
+              "x": 640,
+              "y": 195,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 480,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: 2 moles de Propanona",
+        "semiStep": "2 (CH₃)₂C=O  (Propanona)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O",
+        "desc": "Se obtienen 2 moles de propanona.",
+        "legend": {
+          "breaking": "Doble enlace escindido.",
+          "forming": "En VERDE sólido: 2 propanona.",
+          "movement": "Producto cetónico consolidado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "2 (CH₃)₂C=O",
+              "x": 460,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
