@@ -1,0 +1,106 @@
+{
+  "category": "obtencion",
+  "title": "8) Método Complementario: Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn/H₂O ──► Aldehídos y/o Cetonas)",
+  "natureBadge": "Escisión Oxidativa Suave • R₂C=CHR' ──(1. O₃  2. Zn/H₂O)──► R₂C=O (Cetona) + O=CHR' (Aldehído)",
+  "deltaH": "ΔH° < 0 (Exotérmica; rompe completamente el doble enlace C=C sin sobreoxidar los aldehídos a ácidos)",
+  "description": "El ozono (O₃) se adiciona al doble enlace C=C formando un ozónido que, al reducirse con zinc en agua (Zn / H₂O) o sulfuro de dimetilo ((CH₃)₂S), genera aldehídos (si el carbono vinílico tiene H) y/o cetonas (si es disustituido =CR₂).",
+  "meta": {
+    "grupoFuncional": "Aldehídos (R–CHO) y/o Cetonas (R₂C=O)",
+    "reaccionMecanismo": "Cicloadición 1,3-dipolar de ozono + escisión reductiva del ozónido",
+    "naturaleza": "Por etapas vía molozónido y ozónido cíclico.",
+    "rupturaIntermediarios": "Ruptura total de enlaces σ y π del doble enlace C=C.",
+    "detalleMecanismo": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O (propanona) + CH₃–CHO (etanal)",
+    "reactivosCondiciones": "1) O₃ (-78 °C); 2) Zn / H₂O o (CH₃)₂S.",
+    "rolReactivos": "• Sustrato: Alqueno.\n• Oxidante: Ozono (O₃).\n• Reductor: Zn / H₂O.",
+    "reglasObs": "• Permite obtener simultáneamente cetonas y aldehídos sin que estos últimos pasen a ácidos carboxílicos."
+  },
+  "substrates": [
+    {
+      "id": "oz_2metil2buteno",
+      "name": "Complementario: 2-Metil-2-buteno + 1) O₃  2) Zn/H₂O ──► Propanona + Etanal",
+      "catalyst": "1) O₃  2) Zn / H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) O₃  2) Zn / H₂O"
+  ],
+  "stepsBySubstrate": {
+    "oz_2metil2buteno": [
+      {
+        "title": "Paso 1 — Estado Inicial: 2-Metil-2-buteno + Ozono (O₃)",
+        "semiStep": "(CH₃)₂C=CH–CH₃  +  O₃  ──►  [Ozónido Cíclico]",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O + CH₃–CHO",
+        "desc": "El ozono rompe el doble enlace C2=C3 formando un ozónido intermediario.",
+        "legend": {
+          "breaking": "En ROJO punteado: doble enlace C2=C3.",
+          "forming": "Ozónido cíclico.",
+          "movement": "Cicloadición de O₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "(CH₃)₂C=CH–CH₃",
+              "x": 310,
+              "y": 195
+            },
+            {
+              "id": "O3",
+              "el": "1) O₃  2) Zn/H₂O",
+              "x": 640,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 480,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Productos Finales: Propanona (Cetona) + Etanal (Aldehído)",
+        "semiStep": "(CH₃)₂C=O  +  CH₃–CHO",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O + CH₃–CHO",
+        "desc": "Se obtiene propanona (cetona) y etanal (aldehído).",
+        "legend": {
+          "breaking": "Doble enlace escindido.",
+          "forming": "En VERDE sólido: propanona y etanal.",
+          "movement": "Productos carbonílicos consolidados."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ket",
+              "el": "(CH₃)₂C=O",
+              "x": 300,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "Ald",
+              "el": "CH₃–CHO",
+              "x": 630,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 465,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
