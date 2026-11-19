@@ -3,7 +3,7 @@
   "title": "2) Hidratación de Alquinos Terminales e Internos (+ H₂O / H₂SO₄ / HgSO₄ ──► Cetonas)",
   "natureBadge": "Adición Markovnikov + Tautomería • R–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [R–C(OH)=CH₂] ⇄ R–CO–CH₃",
   "deltaH": "ΔH° < 0 (Exotérmica; todos los alquinos distintos del etino producen cetonas)",
-  "description": "Adición de agua siguiendo la regla de Markovnikov sobre alquinos terminales o internos (Diap. 12 y 23). El grupo –OH entra en el carbono más sustituido generando un enol interno que tautomeriza rápidamente a cetona.",
+  "description": "Adición de agua siguiendo la regla de Markovnikov sobre alquinos terminales o internos. El grupo –OH entra en el carbono más sustituido generando un enol interno que tautomeriza rápidamente a cetona.",
   "meta": {
     "grupoFuncional": "Cetonas (R–CO–R')",
     "reaccionMecanismo": "Adición electrofílica Markovnikov + tautomería ceto-enólica",
@@ -12,17 +12,17 @@
     "detalleMecanismo": "CH₃CH₂–C≡CH + H₂O ──► [CH₃CH₂C(OH)=CH₂] ⇄ CH₃CH₂–CO–CH₃ (2-butanona)",
     "reactivosCondiciones": "Alquino (≥ 3 carbonos) + H₂O / H₂SO₄ / HgSO₄.",
     "rolReactivos": "• Sustrato: Alquino terminal o interno.\n• Reactivo: H₂O.\n• Catalizadores: H₂SO₄ + HgSO₄.",
-    "reglasObs": "• Diap. 12: 1-butino → 2-butanona; Diap. 23: 4-metil-1-pentino → 4-metil-2-pentanona."
+    "reglasObs": "• 1-butino → 2-butanona; 4-metil-1-pentino → 4-metil-2-pentanona."
   },
   "substrates": [
     {
       "id": "1butino_2butanona",
-      "name": "Diap. 12: 1-Butino + H₂O ──► 2-Butanona",
+      "name": "1-Butino + H₂O ──► 2-Butanona",
       "catalyst": "H₂O / H₂SO₄ / HgSO₄"
     },
     {
       "id": "4metil1pentino_cetona",
-      "name": "Ejercicio 9 (Diap. 23): 4-Metil-1-pentino + H₂O ──► 4-Metil-2-pentanona",
+      "name": "Ejercicio 9: 4-Metil-1-pentino + H₂O ──► 4-Metil-2-pentanona",
       "catalyst": "H₂O / H₂SO₄ / HgSO₄"
     }
   ],
@@ -33,7 +33,7 @@
     "1butino_2butanona": [
       {
         "title": "Paso 1 — Adición Markovnikov de H₂O al 1-Butino (Enol)",
-        "semiStep": "CH₃–CH₂–C≡CH  +  H₂O  ──►  [CH₃–CH₂–C(OH)=CH₂]",
+        "semiStep": "CH₃–CH₂–C≡CH + H₂O ──► [CH₃–CH₂–C(OH)=CH₂]",
         "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
         "desc": "El –OH se une al carbono interno C2 formando un enol inestable.",
         "legend": {
@@ -95,7 +95,7 @@
       },
       {
         "title": "Paso 2 — Tautomería Ceto-Enólica ──► 2-Butanona",
-        "semiStep": "CH₃–CH₂–CO–CH₃  (2-Butanona)",
+        "semiStep": "CH₃–CH₂–CO–CH₃ (2-Butanona)",
         "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
         "desc": "Se obtiene 2-butanona.",
         "legend": {
@@ -159,7 +159,7 @@
     "4metil1pentino_cetona": [
       {
         "title": "Paso 1 — Estado Inicial: 4-Metil-1-pentino + H₂O",
-        "semiStep": "(CH₃)₂CH–CH₂–C≡CH  +  H₂O",
+        "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H₂O",
         "semiGlobal": "4-Metil-1-pentino + H₂O ──► 4-Metil-2-pentanona",
         "desc": "Hidratación Markovnikov en C2 del 4-metil-1-pentino.",
         "legend": {
