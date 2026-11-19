@@ -166,12 +166,69 @@
                 </button>
             </div>
 
+
             <!-- ETAPA 1 DEL ASISTENTE: ELEGIR FUNCIÓN QUÍMICA -->
             <section id="wizardStep1" class="wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
                 <div class="text-center flex flex-col gap-1.5">
                     <span class="text-xs font-extrabold uppercase tracking-widest text-violet-400">Paso 1 • Selección de Unidad</span>
                     <h2 class="text-xl sm:text-2xl font-extrabold text-white">Elige la Función Química</h2>
-                    <p class="text-xs sm:text-sm text-slate-400">Selecciona la familia orgánica que deseas estudiar</p>
+                    <p class="text-xs sm:text-sm text-slate-400">Selecciona la familia orgánica que deseas estudiar o busca ejercicios de exámenes anteriores</p>
+                </div>
+
+                <!-- BUSCADOR DINÁMICO DE EXÁMENES DE AÑOS ANTERIORES + FILTRO POR AÑO -->
+                <div class="relative p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-rose-950/75 via-slate-950 to-violet-950/75 border-2 border-rose-500/55 shadow-xl shadow-rose-500/10 flex flex-col gap-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <label for="homeExamSearchInput" class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-rose-200 flex items-center gap-2">
+                            <span class="text-base">📝</span>
+                            <span>Buscador de Exámenes de Años Anteriores</span>
+                        </label>
+                        <span id="homeExamFilterCountBadge" class="px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-400/40 text-[11px] font-bold text-rose-200">
+                            🔍 Buscar o filtrar por año
+                        </span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-2.5">
+                        <div class="relative flex-1">
+                            <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-rose-300 text-sm">🔍</span>
+                            <input
+                                type="text"
+                                id="homeExamSearchInput"
+                                oninput="handleHomeExamSearchAndFilter()"
+                                onfocus="handleHomeExamSearchAndFilter()"
+                                placeholder="Buscar por tema, reacción, enunciado o código (ej. epóxido, SN2, Grignard, 2026...)"
+                                autocomplete="off"
+                                class="w-full pl-9 pr-9 py-2.5 rounded-xl bg-slate-950 border border-rose-500/50 focus:border-rose-400 focus:ring-2 focus:ring-rose-500/25 text-xs sm:text-sm font-semibold text-white placeholder-slate-400 outline-none transition"
+                            />
+                            <button
+                                type="button"
+                                id="homeExamClearBtn"
+                                onclick="clearHomeExamSearch()"
+                                class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-300 hover:text-white text-xs font-extrabold px-2 py-0.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 cursor-pointer"
+                                title="Limpiar búsqueda"
+                            >✕</button>
+                        </div>
+
+                        <select
+                            id="homeExamYearFilter"
+                            onchange="handleHomeExamSearchAndFilter()"
+                            aria-label="Filtrar exámenes por año"
+                            class="sm:w-56 bg-slate-950 border border-rose-500/50 focus:border-rose-400 text-rose-100 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-extrabold outline-none cursor-pointer"
+                        >
+                            <option value="all">📅 Todos los años</option>
+                            <option value="2026">2026 (Examen Único / Feb)</option>
+                            <option value="2024">2024 (2P / Preselección)</option>
+                            <option value="2023">2023 (Final / 1P / Rep.)</option>
+                            <option value="2022">2022 (Único / Final / Pre.)</option>
+                            <option value="2019">2019 (2P)</option>
+                            <option value="Recopilatorio CPAM">Recopilatorio CPAM 2018–2025</option>
+                        </select>
+                    </div>
+
+                    <!-- Resultados dinámicos de exámenes -->
+                    <div
+                        id="homeExamResultsList"
+                        class="hidden max-h-72 overflow-y-auto rounded-xl bg-slate-950/95 border border-rose-500/40 divide-y divide-slate-800/80 shadow-inner"
+                    ></div>
                 </div>
 
                 <div id="functionCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -246,6 +303,29 @@
                     </span>
                     <h2 id="wiz3Heading" class="text-xl sm:text-2xl font-extrabold text-white mt-1">Selecciona el Método de Obtención</h2>
                     <p id="wiz3Subheading" class="text-xs sm:text-sm text-slate-400">Toca una opción para ver sus reacciones disponibles y catalizadores</p>
+                </div>
+
+                <div id="wiz3ExamFilterBar" class="hidden flex flex-col sm:flex-row gap-2.5 bg-slate-950/80 border border-rose-500/35 p-3 rounded-2xl">
+                    <input
+                        type="text"
+                        id="wiz3ExamSearchInput"
+                        oninput="renderFilteredUnitExams()"
+                        placeholder="🔍 Filtrar ejercicios de esta unidad..."
+                        class="flex-1 bg-slate-900 border border-slate-700 focus:border-rose-400 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-semibold text-white placeholder-slate-400 outline-none"
+                    />
+                    <select
+                        id="wiz3ExamYearSelect"
+                        onchange="renderFilteredUnitExams()"
+                        class="sm:w-56 bg-slate-900 border border-slate-700 focus:border-rose-400 rounded-xl px-3 py-2 text-xs sm:text-sm font-extrabold text-rose-200 outline-none cursor-pointer"
+                    >
+                        <option value="all">📅 Todos los años</option>
+                        <option value="2026">2026</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2019">2019</option>
+                        <option value="Recopilatorio CPAM">Recopilatorio CPAM 2018–2025</option>
+                    </select>
                 </div>
 
                 <div id="reactionListGrid" class="flex flex-col gap-2.5 max-h-[55vh] overflow-y-auto pr-1"></div>
@@ -3812,16 +3892,22 @@
                     : 'Elige una Reacción Química';
             }
 
+            const filterBarEl = document.getElementById('wiz3ExamFilterBar');
+            if (filterBarEl) {
+                filterBarEl.classList.toggle('hidden', !isExam);
+                if (isExam) {
+                    const sIn = document.getElementById('wiz3ExamSearchInput');
+                    const ySel = document.getElementById('wiz3ExamYearSelect');
+                    if (sIn) sIn.value = '';
+                    if (ySel) ySel.value = 'all';
+                }
+            }
+
             const listEl = document.getElementById('reactionListGrid');
             if (items.length === 0) {
                 listEl.innerHTML = `<div class="text-center py-6 text-sm text-slate-400">No hay ejercicios registrados en esta categoría todavía.</div>`;
             } else if (isExam) {
-                listEl.innerHTML = items.map(it => `
-                    <button type="button" onclick="wizardSelectExamQuestion('${it.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/90 hover:bg-rose-950/35 border border-slate-800 hover:border-rose-400/75 transition-all flex items-center justify-between gap-3 active:scale-[0.99] cursor-pointer">
-                        <span class="text-sm sm:text-base font-extrabold text-slate-100 group-hover:text-rose-200">${it.label}</span>
-                        <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-rose-950/80 border border-rose-500/40 text-rose-200 shrink-0">Resolver ➡</span>
-                    </button>
-                `).join('');
+                renderFilteredUnitExams();
             } else if (isTest) {
                 listEl.innerHTML = items.map((it, idx) => `
                     <button type="button" onclick="wizardSelectExamQuestion('${it.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/90 hover:bg-sky-950/35 border border-slate-800 hover:border-sky-400/75 transition-all flex items-center justify-between gap-3 active:scale-[0.99] cursor-pointer">
@@ -6700,9 +6786,349 @@
             // Compatibilidad: ahora los datos viven en JSON externos (reactions/eteres_unidad.json y reactions/examenes_banco.json)
         }
 
+
+        function matchesExamYearFilter(label, selectedYear) {
+            if (!selectedYear || selectedYear === 'all') return true;
+            const lbl = String(label || '');
+            if (selectedYear === 'Recopilatorio CPAM') {
+                return lbl.includes('Recopilatorio CPAM');
+            }
+            return lbl.includes(selectedYear);
+        }
+
+        function renderFilteredUnitExams() {
+            const cfg = FUNCTION_MENUS[currentFunction] || { examenes: [] };
+            const items = cfg.examenes || [];
+            const query = normalizeSearchText(document.getElementById('wiz3ExamSearchInput')?.value || '');
+            const yearVal = document.getElementById('wiz3ExamYearSelect')?.value || 'all';
+            const listEl = document.getElementById('reactionListGrid');
+            if (!listEl) return;
+
+            const filtered = items.filter(it => {
+                if (!matchesExamYearFilter(it.label, yearVal)) return false;
+                if (!query) return true;
+                const qObj = EXAM_QUESTIONS_DB[it.value] || {};
+                const hay = normalizeSearchText(`${it.label} ${qObj.statement || ''} ${qObj.topic || ''}`);
+                return query.split(/\s+/).every(tok => hay.includes(tok));
+            });
+
+            if (filtered.length === 0) {
+                listEl.innerHTML = `<div class="text-center py-6 text-sm text-slate-400">No se encontraron ejercicios con ese filtro de año o búsqueda.</div>`;
+                return;
+            }
+
+            listEl.innerHTML = filtered.map(it => `
+                <button type="button" onclick="wizardSelectExamQuestion('${it.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/90 hover:bg-rose-950/35 border border-slate-800 hover:border-rose-400/75 transition-all flex items-center justify-between gap-3 active:scale-[0.99] cursor-pointer">
+                    <span class="text-sm sm:text-base font-extrabold text-slate-100 group-hover:text-rose-200">${it.label}</span>
+                    <span class="text-xs font-extrabold px-2.5 py-1 rounded-lg bg-rose-950/80 border border-rose-500/40 text-rose-200 shrink-0">Resolver ➡</span>
+                </button>
+            `).join('');
+        }
+
+        async function handleHomeExamSearchAndFilter() {
+            const inputEl = document.getElementById('homeExamSearchInput');
+            const yearEl = document.getElementById('homeExamYearFilter');
+            const clearBtn = document.getElementById('homeExamClearBtn');
+            const resultsEl = document.getElementById('homeExamResultsList');
+            const badgeEl = document.getElementById('homeExamFilterCountBadge');
+            if (!resultsEl) return;
+
+            const rawQuery = inputEl ? inputEl.value : '';
+            const query = normalizeSearchText(rawQuery);
+            const selectedYear = yearEl ? yearEl.value : 'all';
+
+            if (clearBtn) {
+                clearBtn.classList.toggle('hidden', rawQuery.trim().length === 0);
+            }
+
+            if (query.length === 0 && selectedYear === 'all') {
+                resultsEl.classList.add('hidden');
+                resultsEl.innerHTML = '';
+                if (badgeEl) badgeEl.innerText = '🔍 Buscar o filtrar por año';
+                return;
+            }
+
+            if (!EXTERNAL_EXAMS_LOADED) {
+                resultsEl.classList.remove('hidden');
+                resultsEl.innerHTML = `<div class="p-4 text-center text-xs text-rose-200 animate-pulse">Cargando banco completo de exámenes...</div>`;
+                await loadExternalExamsBank();
+            }
+
+            const seenIds = new Set();
+            const allEntries = [];
+            Object.entries(FUNCTION_MENUS).forEach(([unitKey, menuObj]) => {
+                const unitLabel = getFunctionLabel(unitKey);
+                (menuObj.examenes || []).forEach(it => {
+                    if (!seenIds.has(it.value)) {
+                        seenIds.add(it.value);
+                        allEntries.push({
+                            value: it.value,
+                            label: it.label,
+                            unitKey,
+                            unitLabel
+                        });
+                    }
+                });
+            });
+
+            Object.entries(EXAM_QUESTIONS_DB).forEach(([qid, qObj]) => {
+                if (!seenIds.has(qid) && qObj.category !== 'test' && !qid.startsWith('test_')) {
+                    seenIds.add(qid);
+                    const uKey = qObj.unit || 'alcanos';
+                    allEntries.push({
+                        value: qid,
+                        label: qObj.badgeLabel || qObj.shortTitle || qid,
+                        unitKey: uKey,
+                        unitLabel: getFunctionLabel(uKey)
+                    });
+                }
+            });
+
+            const terms = query.split(/\s+/).filter(Boolean);
+            const matches = allEntries.filter(entry => {
+                if (!matchesExamYearFilter(entry.label, selectedYear)) return false;
+                if (terms.length === 0) return true;
+                const qObj = EXAM_QUESTIONS_DB[entry.value] || {};
+                const optsTxt = (qObj.options || []).map(o => o.text).join(' ');
+                const haystack = normalizeSearchText(`${entry.label} ${entry.unitLabel} ${qObj.statement || ''} ${qObj.topic || ''} ${optsTxt}`);
+                return terms.every(t => haystack.includes(t));
+            });
+
+            if (badgeEl) {
+                badgeEl.innerText = `${matches.length} ejercicio${matches.length === 1 ? '' : 's'} encontrado${matches.length === 1 ? '' : 's'}`;
+            }
+
+            if (matches.length === 0) {
+                resultsEl.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">No se encontraron ejercicios que coincidan con la búsqueda o el año seleccionado.</div>`;
+                resultsEl.classList.remove('hidden');
+                return;
+            }
+
+            resultsEl.innerHTML = matches.slice(0, 60).map(m => `
+                <button
+                    type="button"
+                    onclick="openSearchedExamQuestion('${m.unitKey}', '${m.value}')"
+                    class="w-full text-left px-4 py-3 hover:bg-rose-950/45 transition flex items-center justify-between gap-3 cursor-pointer"
+                >
+                    <div class="min-w-0">
+                        <span class="text-xs sm:text-sm font-extrabold text-slate-100 block truncate">${m.label}</span>
+                        <span class="text-[11px] font-semibold text-violet-300 block truncate">${m.unitLabel}</span>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-200 text-[11px] font-extrabold shrink-0">
+                        Resolver ➡
+                    </span>
+                </button>
+            `).join('');
+            resultsEl.classList.remove('hidden');
+        }
+
+        function clearHomeExamSearch() {
+            const inputEl = document.getElementById('homeExamSearchInput');
+            const yearEl = document.getElementById('homeExamYearFilter');
+            if (inputEl) inputEl.value = '';
+            if (yearEl) yearEl.value = 'all';
+            handleHomeExamSearchAndFilter();
+        }
+
+        async function openSearchedExamQuestion(unitKey, examId) {
+            await loadExternalExamsBank();
+            currentFunction = unitKey || (EXAM_QUESTIONS_DB[examId] && EXAM_QUESTIONS_DB[examId].unit) || 'alcanos';
+            currentCategory = 'examenes';
+            await wizardSelectExamQuestion(examId);
+        }
+
+        async function wizardSelectExamQuestion(examId) {
+            await loadExternalExamsBank();
+            currentExamId = examId;
+            examAnswered = false;
+
+            const q = EXAM_QUESTIONS_DB[examId];
+            if (!q) {
+                alert('No se encontró el ejercicio seleccionado en el banco de exámenes.');
+                return;
+            }
+
+            if (!currentFunction && q.unit) {
+                currentFunction = q.unit;
+            }
+            if (!currentCategory) {
+                currentCategory = q.category || 'examenes';
+            }
+
+            const cfg = FUNCTION_MENUS[currentFunction] || { examenes: [], test: [] };
+            const list = cfg[currentCategory] || [];
+            const idxInList = list.findIndex(x => x.value === examId);
+
+            const badgeEl = document.getElementById('examSourceBadge');
+            const counterEl = document.getElementById('examCounterBadge');
+            const stmtEl = document.getElementById('examStatementText');
+            const optsEl = document.getElementById('examOptionsGrid');
+            const fbEl = document.getElementById('examFeedbackBanner');
+            const nextBtn = document.getElementById('btnNextExamItem');
+
+            if (badgeEl) badgeEl.innerText = `📝 ${q.badgeLabel || q.shortTitle || examId}`;
+            if (counterEl) counterEl.innerText = idxInList >= 0 ? `Ejercicio ${idxInList + 1} de ${list.length}` : getFunctionLabel(currentFunction);
+            if (stmtEl) stmtEl.innerText = q.statement || '';
+
+            if (fbEl) {
+                fbEl.classList.add('hidden');
+                fbEl.innerText = '';
+            }
+            if (nextBtn) {
+                nextBtn.classList.toggle('hidden', !(idxInList >= 0 && idxInList < list.length - 1));
+            }
+
+            if (optsEl) {
+                optsEl.innerHTML = (q.options || []).map(opt => `
+                    <button
+                        type="button"
+                        id="examOptBtn_${opt.letter}"
+                        onclick="selectExamOption('${opt.letter}')"
+                        class="w-full text-left p-3.5 sm:p-4 rounded-2xl bg-slate-950/90 hover:bg-slate-800/90 border-2 border-slate-800 hover:border-rose-400/60 transition-all flex items-start gap-3 cursor-pointer"
+                    >
+                        <span class="w-7 h-7 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-extrabold text-slate-200 shrink-0 uppercase">
+                            ${opt.letter}
+                        </span>
+                        <span class="text-xs sm:text-base font-semibold text-slate-100 leading-snug pt-0.5">${opt.text}</span>
+                    </button>
+                `).join('');
+            }
+
+            showWizardStage(4);
+        }
+
+        function selectExamOption(chosenLetter) {
+            const q = EXAM_QUESTIONS_DB[currentExamId];
+            if (!q) return;
+            examAnswered = true;
+            const correctLetter = String(q.correct || '').toLowerCase();
+            const isRight = String(chosenLetter).toLowerCase() === correctLetter;
+
+            (q.options || []).forEach(opt => {
+                const btn = document.getElementById(`examOptBtn_${opt.letter}`);
+                if (!btn) return;
+                const l = String(opt.letter).toLowerCase();
+                if (l === correctLetter) {
+                    btn.className = 'w-full text-left p-3.5 sm:p-4 rounded-2xl bg-emerald-950/70 border-2 border-emerald-400 text-emerald-100 flex items-start gap-3';
+                } else if (l === String(chosenLetter).toLowerCase() && !isRight) {
+                    btn.className = 'w-full text-left p-3.5 sm:p-4 rounded-2xl bg-rose-950/70 border-2 border-rose-500 text-rose-100 flex items-start gap-3';
+                } else {
+                    btn.className = 'w-full text-left p-3.5 sm:p-4 rounded-2xl bg-slate-950/60 border-2 border-slate-800/70 opacity-65 flex items-start gap-3';
+                }
+            });
+
+            const fbEl = document.getElementById('examFeedbackBanner');
+            if (fbEl) {
+                fbEl.classList.remove('hidden');
+                if (isRight) {
+                    fbEl.className = 'rounded-2xl p-4 border border-emerald-500/60 bg-emerald-950/60 text-emerald-200 text-xs sm:text-sm font-bold leading-relaxed';
+                    fbEl.innerText = q.feedbackCorrect || '¡Correcto!';
+                } else {
+                    fbEl.className = 'rounded-2xl p-4 border border-rose-500/60 bg-rose-950/60 text-rose-200 text-xs sm:text-sm font-bold leading-relaxed';
+                    fbEl.innerText = q.feedbackWrong || `Incorrecto. La opción correcta es ${correctLetter}).`;
+                }
+            }
+        }
+
+        async function launchExamAnimatedExplanation() {
+            const q = EXAM_QUESTIONS_DB[currentExamId];
+            if (!q) return;
+
+            if (q.rxnKey) {
+                currentKey = q.rxnKey;
+                currentSubIdx = Number(q.subIdx) || 0;
+                currentCatIdx = 0;
+                currentStepIdx = 0;
+                lastSceneState = null;
+                currentViewBox.initialized = false;
+                await ensureReactionLoaded(q.rxnKey);
+                openFullscreenPlayer();
+                return;
+            }
+
+            // Crear escena visual dinámica a partir de la fórmula/explicación del ítem
+            const synthKey = `exam_explain_${currentExamId}`;
+            const titleTxt = q.badgeLabel || q.shortTitle || 'Explicación del Ítem';
+            const correctOpt = (q.options || []).find(o => String(o.letter).toLowerCase() === String(q.correct).toLowerCase());
+            const answerTxt = correctOpt ? `${correctOpt.letter}) ${correctOpt.text}` : '';
+            const formulaTxt = q.semiFormula || answerTxt || titleTxt;
+
+            LAB_DATA[synthKey] = {
+                category: 'reacciones',
+                title: titleTxt,
+                natureBadge: 'Resolución Visual de Examen',
+                description: `${q.statement}
+
+Respuesta correcta: ${answerTxt}
+${q.feedbackCorrect || ''}`,
+                meta: {
+                    grupoFuncional: getFunctionLabel(currentFunction || q.unit || 'alcanos'),
+                    reaccionMecanismo: q.topic || titleTxt,
+                    naturaleza: 'Ítem oficial de examen de ingreso.',
+                    rupturaIntermediarios: q.feedbackCorrect || '',
+                    detalleMecanismo: `${q.statement} → ${answerTxt}`,
+                    reactivosCondiciones: titleTxt,
+                    rolReactivos: `Respuesta correcta: ${answerTxt}`,
+                    reglasObs: q.feedbackCorrect || ''
+                },
+                deltaH: answerTxt,
+                substrates: [{ id: `${synthKey}_sub`, name: `${titleTxt} — Respuesta: ${answerTxt}`, catalyst: titleTxt }],
+                catalysts: [titleTxt],
+                getSteps: () => expandStepsToVisualMicroSteps([
+                    {
+                        title: `Paso 1 — Enunciado: ${titleTxt}`,
+                        semiStep: q.statement,
+                        semiGlobal: `${q.statement}  ──►  ${answerTxt}`,
+                        desc: q.statement,
+                        legend: {
+                            breaking: 'Análisis del enunciado del examen.',
+                            forming: 'Identificación de la regla o reacción aplicable.',
+                            movement: 'Evaluación de las 5 opciones (a–e).'
+                        },
+                        scene: () => ({
+                            atoms: [
+                                { id: 'Q_NODE', el: (q.topic || titleTxt).substring(0, 38), x: 460, y: 185, highlight: '#38bdf8', label: titleTxt }
+                            ],
+                            bonds: []
+                        })
+                    },
+                    {
+                        title: `Paso 2 — Respuesta Correcta: ${answerTxt}`,
+                        semiStep: `RESPUESTA CORRECTA: ${answerTxt}`,
+                        semiGlobal: `${q.statement}  ──►  ${answerTxt}`,
+                        desc: q.feedbackCorrect || answerTxt,
+                        legend: {
+                            breaking: 'Opciones distractoras descartadas.',
+                            forming: `Opción correcta verificada: ${answerTxt}`,
+                            movement: 'Solución consolidada.'
+                        },
+                        scene: () => buildSemidevelopedBannerScene(formulaTxt, '#10b981', [titleTxt, answerTxt])
+                    }
+                ])
+            };
+
+            currentKey = synthKey;
+            currentSubIdx = 0;
+            currentCatIdx = 0;
+            currentStepIdx = 0;
+            lastSceneState = null;
+            currentViewBox.initialized = false;
+            openFullscreenPlayer();
+        }
+
+        function goToNextExamItem() {
+            const cfg = FUNCTION_MENUS[currentFunction] || { examenes: [], test: [] };
+            const list = cfg[currentCategory] || [];
+            const idx = list.findIndex(x => x.value === currentExamId);
+            if (idx >= 0 && idx + 1 < list.length) {
+                wizardSelectExamQuestion(list[idx + 1].value);
+            }
+        }
+
         window.onload = async () => {
             initNomenclatureCardGestures();
             await loadDatabaseFromJson();
+            await loadExternalExamsBank();
             registerBuiltinEtherUnit();
             renderFunctionCards();
             showWizardStage(1);
