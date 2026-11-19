@@ -1,0 +1,1011 @@
+{
+  "category": "obtencion",
+  "title": "4) Reducción de Amidas con LiAlH₄ (Amida 1° → Amina 1° | N-sustituida → Amina 2°)",
+  "natureBadge": "Desoxigenación Reductiva del Carbonilo Amídico • R–CO–NR'R'' ──(LiAlH₄ / H₂O)──► R–CH₂–NR'R''",
+  "deltaH": "ΔH° < 0 (Exotérmica; conversión completa del grupo C=O en grupo metileno –CH₂–)",
+  "description": "Obtención de aminas primarias, secundarias o terciarias mediante la reducción de amidas con hidruro de litio y aluminio (LiAlH₄) en éter o THF anhidro seguida de hidrólisis:\n• A diferencia de los ésteres (que rompen el enlace C–O dando dos alcoholes), las amidas NO rompen el enlace C–N: el oxígeno carbonílico (=O) es eliminado como aluminato y reemplazado por dos hidrógenos (C=O → –CH₂–).\n1) Amida Primaria (R–CONH₂) → Amina Primaria (R–CH₂–NH₂).\n2) Amida N-sustituida (R–CONHR') → Amina Secundaria (R–CH₂–NHR').\n3) Amida N,N-disustituida (R–CONR'R'') → Amina Terciaria (R–CH₂–NR'R'').",
+  "meta": {
+    "grupoFuncional": "Aminas 1° (desde Amidas 1°), Aminas 2° (desde Amidas N-sustituidas) y Aminas 3° (desde Amidas N,N-disustituidas)",
+    "reaccionMecanismo": "Reducción Nucleofílica con Hidruros (1. LiAlH₄ / Éter o THF → 2. H₂O)",
+    "naturaleza": "Por etapas vía intermediario iminio (R–CH=NR'R''⁺) que recibe un segundo ion hidruro (H⁻).",
+    "rupturaIntermediarios": "Ruptura del doble enlace C=O y eliminación del oxígeno coordinado al aluminio (–O–AlH₃⁻), conservando intacto el enlace C–N.",
+    "detalleMecanismo": "El primer hidruro H⁻ ataca al carbonilo C=O; luego el oxígeno se coordina con AlH₃ y sale formando un ion iminio (R–CH=NH₂⁺), el cual recibe un segundo hidruro H⁻ dando la amina final (R–CH₂–NH₂).",
+    "reactivosCondiciones": "1) LiAlH₄ en éter dietílico o THF anhidro, reflujo → 2) H₂O / NaOH diluido.",
+    "rolReactivos": "• Amida (1°, 2° o 3°): Sustrato carbonílico.\n• LiAlH₄: Agente reductor fuerte donador de 2 equivalentes de hidruro (H⁻).",
+    "reglasObs": "• Conserva el mismo número de átomos de carbono y la misma sustitución sobre el nitrógeno de la amida de partida.\n• NaBH₄ NO reduce amidas; es obligatorio emplear LiAlH₄."
+  },
+  "substrates": [
+    {
+      "id": "ami_amid_propanamida",
+      "name": "Amida 1° → Amina 1°: Propanamida (CH₃CH₂CONH₂) + LiAlH₄ (luego H₂O) ──► 1-Propanamina",
+      "catalyst": "1) LiAlH₄ / Éter → 2) H₂O"
+    },
+    {
+      "id": "ami_amid_etanamida",
+      "name": "Amida 1° → Amina 1°: Etanamida (CH₃CONH₂) + LiAlH₄ (luego H₂O) ──► Etilamina",
+      "catalyst": "1) LiAlH₄ / Éter → 2) H₂O"
+    },
+    {
+      "id": "ami_amid_benzamida",
+      "name": "Amida Aromática 1° → Amina 1°: Benzamida (C₆H₅CONH₂) + LiAlH₄ (luego H₂O) ──► Bencilamina",
+      "catalyst": "1) LiAlH₄ / THF → 2) H₂O"
+    },
+    {
+      "id": "ami_amid_netiletanamida",
+      "name": "Amida N-sustituida → Amina 2°: N-Etiletanamida (CH₃CONHCH₂CH₃) + LiAlH₄ ──► Dietilamina",
+      "catalyst": "1) LiAlH₄ / Éter → 2) H₂O"
+    },
+    {
+      "id": "ami_amid_nmetilbenzamida",
+      "name": "Amida N-sustituida → Amina 2°: N-Metilbenzamida (C₆H₅CONHCH₃) + LiAlH₄ ──► N-Metilbencilamina",
+      "catalyst": "1) LiAlH₄ / THF → 2) H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) LiAlH₄ / Éter → 2) H₂O",
+    "1) LiAlH₄ / THF → 2) H₂O"
+  ],
+  "stepsBySubstrate": {
+    "ami_amid_propanamida": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Propanamida + LiAlH₄",
+        "semiStep": "CH₃—CH₂—CO—NH₂  +  1) LiAlH₄ / 2) H₂O",
+        "semiGlobal": "CH₃—CH₂—CO—NH₂ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—CH₂—NH₂ + H₂O",
+        "desc": "La propanamida presenta su grupo carbonilo C=O unido al grupo amino –NH₂ frente al reductor fuerte LiAlH₄.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Aproximación de hidruros (H⁻) al carbonilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 185,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 355,
+              "y": 215,
+              "label": "Propanamida"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 355,
+              "y": 95
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 515,
+              "y": 215
+            },
+            {
+              "id": "Red",
+              "el": "LiAlH₄ / H₂O",
+              "x": 735,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 625,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Eliminación del Oxígeno Carbonílico y Entrada de 2 Hidruros (H⁻)",
+        "semiStep": "CH₃—CH₂—C(OAlH₃⁻)(H)—NH₂  ──►  CH₃—CH₂—CH₂—NH₂",
+        "semiGlobal": "CH₃—CH₂—CO—NH₂ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—CH₂—NH₂ + H₂O",
+        "desc": "Se rompe en rojo punteado el doble enlace C=O saliendo el oxígeno coordinado al aluminio, mientras dos hidruros H⁻ se enlazan al carbono (verde punteado) conservando el enlace C—N.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C=O.",
+          "forming": "En VERDE punteado: dos nuevos enlaces C—H.",
+          "movement": "Desoxigenación reductiva C=O → CH₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 345,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 345,
+              "y": 325,
+              "border": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 275,
+              "y": 115,
+              "border": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 455,
+              "y": 95,
+              "border": "#ef4444",
+              "label": "Sale como H₂O"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 525,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: 1-Propanamina (Amina Primaria 1°) + H₂O",
+        "semiStep": "CH₃—CH₂—CH₂—NH₂  +  H₂O",
+        "semiGlobal": "CH₃—CH₂—CO—NH₂ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—CH₂—NH₂ + H₂O",
+        "desc": "Se obtiene 1-propanamina (propilamina) con el grupo metileno –CH₂– consolidado en verde sólido.",
+        "legend": {
+          "breaking": "Oxígeno carbonílico eliminado.",
+          "forming": "En VERDE sólido: 1-propanamina (amina 1°).",
+          "movement": "Producto final estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 345,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 345,
+              "y": 105,
+              "border": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 345,
+              "y": 325,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 515,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "1-Propanamina (1°)"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_amid_etanamida": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Etanamida (Acetamida) + LiAlH₄",
+        "semiStep": "CH₃—CO—NH₂  +  1) LiAlH₄ / 2) H₂O",
+        "semiGlobal": "CH₃—CO—NH₂ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—NH₂ + H₂O",
+        "desc": "La etanamida se trata con LiAlH₄ en éter anhidro seguido de hidrólisis.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reducción del grupo carbonilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 195,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 355,
+              "y": 215,
+              "label": "Etanamida"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 355,
+              "y": 95
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 515,
+              "y": 215
+            },
+            {
+              "id": "Red",
+              "el": "LiAlH₄ / H₂O",
+              "x": 735,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 625,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Etilamina (Amina Primaria 1°) + H₂O",
+        "semiStep": "CH₃—CH₂—NH₂  +  H₂O",
+        "semiGlobal": "CH₃—CO—NH₂ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—NH₂ + H₂O",
+        "desc": "Se obtiene etilamina consolidada en verde sólido.",
+        "legend": {
+          "breaking": "Oxígeno carbonílico eliminado.",
+          "forming": "En VERDE sólido: etilamina.",
+          "movement": "Amina primaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 175,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 345,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 345,
+              "y": 105,
+              "border": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 345,
+              "y": 325,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 515,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Etilamina (1°)"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_amid_benzamida": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Benzamida + LiAlH₄",
+        "semiStep": "C₆H₅—CO—NH₂  +  1) LiAlH₄ / 2) H₂O",
+        "semiGlobal": "C₆H₅—CO—NH₂ ──(LiAlH₄ / H₂O)──► C₆H₅—CH₂—NH₂ + H₂O",
+        "desc": "La benzamida presenta el grupo carboxamida unido al anillo aromático frente a LiAlH₄.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reducción del carbonilo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 195,
+              "y": 215,
+              "label": "Benzamida"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 355,
+              "y": 215
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 355,
+              "y": 95
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 515,
+              "y": 215
+            },
+            {
+              "id": "Red",
+              "el": "LiAlH₄ / H₂O",
+              "x": 735,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 625,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Bencilamina (Amina Primaria 1°)",
+        "semiStep": "C₆H₅—CH₂—NH₂  +  H₂O",
+        "semiGlobal": "C₆H₅—CO—NH₂ ──(LiAlH₄ / H₂O)──► C₆H₅—CH₂—NH₂ + H₂O",
+        "desc": "Se obtiene bencilamina (fenilmetanamina) consolidada en verde sólido.",
+        "legend": {
+          "breaking": "Oxígeno carbonílico eliminado.",
+          "forming": "En VERDE sólido: bencilamina.",
+          "movement": "Amina primaria bencílica obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 195,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 365,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 525,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Bencilamina (1°)"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_amid_netiletanamida": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: N-Etiletanamida + LiAlH₄",
+        "semiStep": "CH₃—CO—NH—CH₂—CH₃  +  1) LiAlH₄ / 2) H₂O",
+        "semiGlobal": "CH₃—CO—NH—CH₂—CH₃ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—NH—CH₂—CH₃ + H₂O",
+        "desc": "La N-etiletanamida (amida N-sustituida) conserva el grupo etilo unido al nitrógeno durante la reducción del carbonilo.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reducción del carbonilo de la amida N-sustituida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 315,
+              "y": 215,
+              "label": "N-Etiletanamida"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 315,
+              "y": 95
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 465,
+              "y": 215
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 625,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Ruptura del C=O y Entrada de 2 Hidruros en el Carbono Acílico",
+        "semiStep": "CH₃—CH₂—NH—CH₂—CH₃",
+        "semiGlobal": "CH₃—CO—NH—CH₂—CH₃ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—NH—CH₂—CH₃ + H₂O",
+        "desc": "Se rompe en rojo punteado el doble enlace C=O y entran dos hidruros H⁻ formando el grupo –CH₂– en verde punteado.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace C=O.",
+          "forming": "En VERDE punteado: dos enlaces C—H.",
+          "movement": "Conversión de acilo a grupo etilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 325,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "border": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 255,
+              "y": 115,
+              "border": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 425,
+              "y": 95,
+              "border": "#ef4444"
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 495,
+              "y": 215
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 655,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: Dietilamina (Amina Secundaria 2°)",
+        "semiStep": "CH₃—CH₂—NH—CH₂—CH₃",
+        "semiGlobal": "CH₃—CO—NH—CH₂—CH₃ ──(LiAlH₄ / H₂O)──► CH₃—CH₂—NH—CH₂—CH₃ + H₂O",
+        "desc": "Se obtiene dietilamina (N-etiletanamina), una amina secundaria simétrica.",
+        "legend": {
+          "breaking": "Oxígeno carbonílico eliminado.",
+          "forming": "En VERDE sólido: dietilamina (amina 2°).",
+          "movement": "Amina secundaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 325,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 325,
+              "y": 105,
+              "border": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "border": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 495,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Dietilamina (2°)"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 665,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_amid_nmetilbenzamida": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: N-Metilbenzamida + LiAlH₄",
+        "semiStep": "C₆H₅—CO—NH—CH₃  +  1) LiAlH₄ / 2) H₂O",
+        "semiGlobal": "C₆H₅—CO—NH—CH₃ ──(LiAlH₄ / H₂O)──► C₆H₅—CH₂—NH—CH₃ + H₂O",
+        "desc": "La N-metilbenzamida presenta el carbonilo entre el anillo fenilo y el grupo –NH–CH₃.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reducción del carbonilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 185,
+              "y": 215,
+              "label": "N-Metilbenzamida"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 345,
+              "y": 215
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 345,
+              "y": 95
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 495,
+              "y": 215
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 645,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: N-Metilbencilamina (Amina Secundaria 2°)",
+        "semiStep": "C₆H₅—CH₂—NH—CH₃",
+        "semiGlobal": "C₆H₅—CO—NH—CH₃ ──(LiAlH₄ / H₂O)──► C₆H₅—CH₂—NH—CH₃ + H₂O",
+        "desc": "Se obtiene N-metilbencilamina consolidada en verde sólido.",
+        "legend": {
+          "breaking": "Oxígeno carbonílico eliminado.",
+          "forming": "En VERDE sólido: N-metilbencilamina (amina 2°).",
+          "movement": "Amina secundaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 195,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 365,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 525,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Metilbencilamina (2°)"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 685,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
