@@ -1,0 +1,875 @@
+{
+  "category": "obtencion",
+  "title": "2) Reducción Catalítica o Química de Compuestos Nitro Aromáticos (p-nitrotolueno + 3 H₂/Pt → p-metilanilina)",
+  "natureBadge": "Reducción de Nitroarenos • Ar–NO₂ + 3 H₂ / Pt (o Fe / HCl) ──► Ar–NH₂ + 2 H₂O",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica; ruptura de enlaces N–O y formación de enlaces N–H y 2 H₂O)",
+  "description": "Obtención de aminas aromáticas primarias (anilinas sustituidas) mediante la reducción del grupo nitro (–NO₂) unido a un anillo aromático:\n1) Hidrogenación catalítica: el nitrocompuesto aromático reacciona con 3 equivalentes de hidrógeno molecular (3 H₂) sobre catalizadores metálicos de Platino (Pt), Paladio (Pd/C) o Níquel Raney (Ni) a temperatura y presión moderadas.\n2) Reducción química en medio ácido: empleo de metales activos como Hierro (Fe) o Estaño (Sn) en ácido clorhídrico concentrado (HCl), formando inicialmente la sal de anilinio (Ar–NH₃⁺ Cl⁻), que luego se neutraliza con NaOH acuoso para liberar la amina aromática neutra (Ar–NH₂) y 2 moléculas de agua.",
+  "meta": {
+    "grupoFuncional": "Aminas Aromáticas Primarias (Ar–NH₂: p-metilanilina, anilina, m-nitroanilina)",
+    "reaccionMecanismo": "Reducción Catalítica (3 H₂ / Pt, Pd o Ni) o Reducción Química (Fe o Sn / HCl, luego NaOH)",
+    "naturaleza": "Por etapas vía intermediarios nitroso (Ar–N=O) e hidroxilamina (Ar–NHOH) hasta completar la reducción del nitrógeno (estado de oxidación +3 → -3).",
+    "rupturaIntermediarios": "Ruptura heterolítica/superficial de los enlaces N–O del grupo nitro con eliminación de 2 moléculas de H₂O y formación de 2 nuevos enlaces N–H.",
+    "detalleMecanismo": "En la superficie del catalizador de Pt (o por transferencia electrónica de Fe⁰/Sn⁰ en HCl), los átomos de hidrógeno reducen secuencialmente el grupo –NO₂ a –N=O, luego a –NHOH y finalmente al grupo amino –NH₂ liberando 2 H₂O.",
+    "reactivosCondiciones": "• Vía catalítica: 3 H₂ / Pt, Pd/C o Ni Raney, etanol, 25–50 °C.\n• Vía química: 1) Fe o Sn / HCl conc., Δ → 2) NaOH ac.",
+    "rolReactivos": "• Nitrocompuesto aromático (Ar–NO₂): Sustrato oxidante cuyo grupo nitro se reduce.\n• Hidrógeno (3 H₂) / Pt o Fe/HCl: Agente reductor donador de electrones y protones.",
+    "reglasObs": "• El anillo bencénico permanece intacto bajo condiciones suaves de reducción de –NO₂.\n• Con sulfuro de amonio ((NH₄)₂S) o NaSH es posible reducir selectivamente solo uno de los grupos nitro en el m-dinitrobenceno para obtener m-nitroanilina."
+  },
+  "substrates": [
+    {
+      "id": "ami_nitro_pnitrotolueno",
+      "name": "Ejemplo Principal del Programa: p-Nitrotolueno + 3 H₂ (Pt) ──► p-Metilanilina (p-Toluidina) + 2 H₂O",
+      "catalyst": "3 H₂ / Pt (Reducción catalítica)"
+    },
+    {
+      "id": "ami_nitro_nitrobenceno_cat",
+      "name": "Hidrogenación Catalítica: Nitrobenceno (C₆H₅–NO₂) + 3 H₂ (Pd/C) ──► Anilina (C₆H₅–NH₂) + 2 H₂O",
+      "catalyst": "3 H₂ / Pd-C (Reducción catalítica)"
+    },
+    {
+      "id": "ami_nitro_nitrobenceno_fe",
+      "name": "Reducción Química en Medio Ácido: Nitrobenceno + Fe / HCl (luego NaOH) ──► Anilina + 2 H₂O",
+      "catalyst": "1) Fe / HCl, Δ → 2) NaOH ac."
+    },
+    {
+      "id": "ami_nitro_mdinitrobenceno",
+      "name": "Reducción Parcial Selectiva: m-Dinitrobenceno + (NH₄)₂S / NaSH ──► m-Nitroanilina",
+      "catalyst": "(NH₄)₂S o NaSH acuoso (selectivo)"
+    }
+  ],
+  "catalysts": [
+    "3 H₂ / Pt (Reducción catalítica)",
+    "3 H₂ / Pd-C (Reducción catalítica)",
+    "1) Fe / HCl, Δ → 2) NaOH ac.",
+    "(NH₄)₂S o NaSH acuoso (selectivo)"
+  ],
+  "stepsBySubstrate": {
+    "ami_nitro_pnitrotolueno": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: p-Nitrotolueno + 3 H₂ / Pt",
+        "semiStep": "p-CH₃—C₆H₄—NO₂  +  3 H₂ (Pt)",
+        "semiGlobal": "p-CH₃—C₆H₄—NO₂ + 3 H₂ ──(Pt)──► p-CH₃—C₆H₄—NH₂ + 2 H₂O",
+        "desc": "El p-nitrotolueno (1-metil-4-nitrobenceno) se aproxima a la superficie catalítica de platino (Pt) donde se adsorben 3 moléculas de H₂.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Adsorción de p-nitrotolueno y 3 H₂ sobre Pt."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 155,
+              "y": 205
+            },
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 295,
+              "y": 205,
+              "label": "p-Nitrotolueno"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 445,
+              "y": 205
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 545,
+              "y": 130
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 545,
+              "y": 280
+            },
+            {
+              "id": "H2_cat",
+              "el": "3 H₂ / Pt",
+              "x": 745,
+              "y": 205,
+              "highlight": "#38bdf8",
+              "label": "Catalizador Pt"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "Ph1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Ruptura de Enlaces N—O y Transferencia de Hidrógenos sobre Pt",
+        "semiStep": "p-CH₃—C₆H₄—N(O)₂ + 6 [H] ──► eliminación de 2 H₂O",
+        "semiGlobal": "p-CH₃—C₆H₄—NO₂ + 3 H₂ ──(Pt)──► p-CH₃—C₆H₄—NH₂ + 2 H₂O",
+        "desc": "Sobre el platino se rompen los enlaces N—O en rojo punteado mientras los átomos de hidrógeno se unen al oxígeno (formando 2 H₂O) y al nitrógeno (formando 2 enlaces N—H en verde punteado).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces N=O y N—O.",
+          "forming": "En VERDE punteado: formación de los enlaces N—H.",
+          "movement": "Transferencia de 6 átomos de H sobre el catalizador de Pt."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 145,
+              "y": 205
+            },
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 285,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 435,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 515,
+              "y": 125,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 515,
+              "y": 285,
+              "border": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 655,
+              "y": 125,
+              "border": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 655,
+              "y": 285,
+              "border": "#ef4444",
+              "label": "Sale H₂O"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "Ph1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "O1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "N1",
+              "to": "O2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "x1": 545,
+              "y1": 165,
+              "cx": 595,
+              "cy": 135,
+              "x2": 635,
+              "y2": 135,
+              "type": "full",
+              "label": "Forma H₂O"
+            },
+            {
+              "x1": 545,
+              "y1": 245,
+              "cx": 595,
+              "cy": 275,
+              "x2": 635,
+              "y2": 275,
+              "type": "full",
+              "label": "Forma H₂O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Productos Finales Consolidados: p-Metilanilina (p-Toluidina) + 2 H₂O",
+        "semiStep": "p-CH₃—C₆H₄—NH₂  +  2 H₂O",
+        "semiGlobal": "p-CH₃—C₆H₄—NO₂ + 3 H₂ ──(Pt)──► p-CH₃—C₆H₄—NH₂ + 2 H₂O",
+        "desc": "Se consolida en verde sólido la p-metilanilina (p-toluidina) junto con 2 moléculas de agua.",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: p-metilanilina + 2 H₂O.",
+          "movement": "Productos finales estables."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 145,
+              "y": 205
+            },
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 285,
+              "y": 205,
+              "label": "p-Metilanilina"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 435,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 525,
+              "y": 130,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 525,
+              "y": 280,
+              "border": "#10b981"
+            },
+            {
+              "id": "W_out",
+              "el": "2 H₂O",
+              "x": 745,
+              "y": 205,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "Ph1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nitro_nitrobenceno_cat": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Nitrobenceno + 3 H₂ / Pd-C",
+        "semiStep": "C₆H₅—NO₂  +  3 H₂ (Pd/C)",
+        "semiGlobal": "C₆H₅—NO₂ + 3 H₂ ──(Pd/C)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "El nitrobenceno se adsorbe sobre paladio en carbono (Pd/C) en presencia de 3 equivalentes de H₂.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Adsorción sobre Pd/C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 205,
+              "label": "Nitrobenceno"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 395,
+              "y": 205
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 495,
+              "y": 130
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 495,
+              "y": 280
+            },
+            {
+              "id": "H2_cat",
+              "el": "3 H₂ / Pd",
+              "x": 715,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 605,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Ruptura de Enlaces N—O y Formación de N—H",
+        "semiStep": "C₆H₅—N(O)₂ + 6 [H] ──► eliminación de 2 H₂O",
+        "semiGlobal": "C₆H₅—NO₂ + 3 H₂ ──(Pd/C)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "Se rompen en rojo punteado los enlaces N—O mientras se forman en verde punteado los enlaces N—H.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlaces N—O.",
+          "forming": "En VERDE punteado: enlaces N—H.",
+          "movement": "Reducción catalítica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 395,
+              "y": 205,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 475,
+              "y": 125,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 475,
+              "y": 285,
+              "border": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 625,
+              "y": 125,
+              "border": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 625,
+              "y": 285,
+              "border": "#ef4444",
+              "label": "Sale H₂O"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N1",
+              "to": "O1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "N1",
+              "to": "O2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Productos Finales Consolidados: Anilina (Fenilamina) + 2 H₂O",
+        "semiStep": "C₆H₅—NH₂  +  2 H₂O",
+        "semiGlobal": "C₆H₅—NO₂ + 3 H₂ ──(Pd/C)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "Se obtiene anilina (bencenamina) pura junto con 2 moléculas de agua.",
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: anilina + 2 H₂O.",
+          "movement": "Productos finales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 205,
+              "label": "Anilina"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 395,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 485,
+              "y": 130,
+              "border": "#10b981"
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 485,
+              "y": 280,
+              "border": "#10b981"
+            },
+            {
+              "id": "W_out",
+              "el": "2 H₂O",
+              "x": 715,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 605,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nitro_nitrobenceno_fe": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Nitrobenceno + Fe / HCl",
+        "semiStep": "C₆H₅—NO₂  +  Fe / HCl",
+        "semiGlobal": "C₆H₅—NO₂ ──(1. Fe/HCl; 2. NaOH)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "El hierro metálico (Fe⁰) cede electrones en medio ácido clorhídrico para reducir el grupo nitro.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Transferencia electrónica desde Fe⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 205,
+              "label": "Nitrobenceno"
+            },
+            {
+              "id": "N1",
+              "el": "NO₂",
+              "x": 405,
+              "y": 205
+            },
+            {
+              "id": "Fe_cat",
+              "el": "Fe / HCl",
+              "x": 665,
+              "y": 205,
+              "highlight": "#38bdf8",
+              "label": "Reductor químico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 535,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Intermediario Sal: Cloruro de Fenilamonio (Anilinio) + NaOH",
+        "semiStep": "[C₆H₅—NH₃⁺] Cl⁻  +  NaOH",
+        "semiGlobal": "C₆H₅—NO₂ ──(1. Fe/HCl; 2. NaOH)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "En medio ácido se forma inicialmente el cloruro de anilinio (soluble en agua); al agregar NaOH se libera la anilina neutra.",
+        "legend": {
+          "breaking": "En ROJO punteado: desprotonación con OH⁻.",
+          "forming": "Ion anilinio protonado.",
+          "movement": "Neutralización con NaOH."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 205
+            },
+            {
+              "id": "N1",
+              "el": "NH₃⁺ Cl⁻",
+              "x": 415,
+              "y": 205,
+              "highlight": "#fbbf24",
+              "label": "Cloruro de anilinio"
+            },
+            {
+              "id": "Base",
+              "el": "NaOH",
+              "x": 685,
+              "y": 205,
+              "highlight": "#38bdf8",
+              "label": "Basificación"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 555,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: Anilina Libre + NaCl + H₂O",
+        "semiStep": "C₆H₅—NH₂  +  NaCl + H₂O",
+        "semiGlobal": "C₆H₅—NO₂ ──(1. Fe/HCl; 2. NaOH)──► C₆H₅—NH₂ + 2 H₂O",
+        "desc": "Queda consolidada en verde sólido la anilina libre lista para extraer.",
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: anilina libre.",
+          "movement": "Productos finales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 205,
+              "label": "Anilina libre"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 405,
+              "y": 205,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Sal",
+              "el": "NaCl + H₂O",
+              "x": 685,
+              "y": 205,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 545,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_nitro_mdinitrobenceno": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: m-Dinitrobenceno + (NH₄)₂S",
+        "semiStep": "m-C₆H₄(NO₂)₂  +  (NH₄)₂S",
+        "semiGlobal": "m-C₆H₄(NO₂)₂ + (NH₄)₂S ──► m-O₂N—C₆H₄—NH₂ + S + 2 NH₃ + 2 H₂O",
+        "desc": "El sulfuro de amonio ((NH₄)₂S) o NaSH reduce selectivamente uno de los dos grupos nitro del m-dinitrobenceno.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reducción selectiva de un solo grupo –NO₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 265,
+              "y": 205,
+              "label": "m-Dinitrobenceno"
+            },
+            {
+              "id": "N1",
+              "el": "NO₂",
+              "x": 425,
+              "y": 145
+            },
+            {
+              "id": "N2",
+              "el": "NO₂",
+              "x": 425,
+              "y": 265,
+              "border": "#ef4444"
+            },
+            {
+              "id": "Red",
+              "el": "(NH₄)₂S",
+              "x": 675,
+              "y": 205,
+              "highlight": "#38bdf8",
+              "label": "Reductor selectivo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph1",
+              "to": "N2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 545,
+              "y": 212,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: m-Nitroanilina (3-Nitroanilina)",
+        "semiStep": "m-O₂N—C₆H₄—NH₂",
+        "semiGlobal": "m-C₆H₄(NO₂)₂ + (NH₄)₂S ──► m-O₂N—C₆H₄—NH₂",
+        "desc": "Se obtiene m-nitroanilina manteniendo intacto el segundo grupo –NO₂.",
+        "legend": {
+          "breaking": "Un grupo nitro reducido.",
+          "forming": "En VERDE sólido: grupo –NH₂ en posición meta.",
+          "movement": "Producto selectivo obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 315,
+              "y": 205,
+              "label": "m-Nitroanilina"
+            },
+            {
+              "id": "N1",
+              "el": "NO₂",
+              "x": 485,
+              "y": 145
+            },
+            {
+              "id": "N2",
+              "el": "NH₂",
+              "x": 485,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph1",
+              "to": "N2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
