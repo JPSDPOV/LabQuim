@@ -136,7 +136,7 @@
                     </h1>
                 </div>
 
-                <span id="jsonStatusPill" class="hidden"></span>
+                
             </div>
         </header>
 
@@ -3832,23 +3832,8 @@
         }
 
         function setJsonStatus(status, pillText, diagnosticHtml = '') {
-            const pill = document.getElementById('jsonStatusPill');
             const banner = document.getElementById('jsonDiagnosticBanner');
             const detail = document.getElementById('jsonDiagnosticDetail');
-
-            if (pill) {
-                if (status === 'ok') {
-                    pill.className = 'px-3 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-500/40 text-xs font-bold text-emerald-300';
-                } else if (status === 'warn') {
-                    pill.className = 'px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/40 text-xs font-bold text-amber-300';
-                } else if (status === 'error') {
-                    pill.className = 'px-3 py-1.5 rounded-xl bg-rose-500/15 border border-rose-500/40 text-xs font-bold text-rose-300';
-                } else {
-                    pill.className = 'px-3 py-1.5 rounded-xl bg-cyan-500/15 border border-cyan-500/40 text-xs font-bold text-cyan-300';
-                }
-                pill.innerText = pillText;
-            }
-
             if (banner && detail) {
                 if (diagnosticHtml) {
                     detail.innerHTML = diagnosticHtml;
