@@ -28,7 +28,7 @@
     "etino_etanal": [
       {
         "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–OH)",
-        "semiStep": "H–C≡C–H + H–OH (Reactivos intactos)",
+        "semiStep": "H–C≡C–H + H–OH",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Se observan las dos moléculas iniciales intactas antes de reaccionar: el etino lineal con su triple enlace C≡C y la molécula de agua H–OH.",
         "legend": {
