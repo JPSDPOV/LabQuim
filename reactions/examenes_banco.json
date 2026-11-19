@@ -1,0 +1,3041 @@
+{
+  "unitExamsMenus": {
+    "eteres": {
+      "examenes": [
+        {
+          "value": "exam_epox_2026_unico",
+          "label": "2026 - Examen único"
+        },
+        {
+          "value": "exam_eter_2023_rep_sr",
+          "label": "2023 - Repechaje SR"
+        },
+        {
+          "value": "exam_epox_2022_unico",
+          "label": "2022 - Examen único"
+        },
+        {
+          "value": "exam_eter_2022_final",
+          "label": "2022 - Final"
+        },
+        {
+          "value": "exam_eter_2019_2p",
+          "label": "2019 - 2P"
+        }
+      ],
+      "test": [
+        {
+          "value": "test_eter_sn1_hbr",
+          "label": "Ejercicio 1"
+        },
+        {
+          "value": "test_eter_dipropil_williamson",
+          "label": "Ejercicio 2"
+        },
+        {
+          "value": "test_eter_anisol_williamson",
+          "label": "Ejercicio 3"
+        }
+      ]
+    },
+    "fenoles": {
+      "examenes": [
+        {
+          "value": "exam_fenol_2026_unico",
+          "label": "2026 - Examen único"
+        },
+        {
+          "value": "exam_fenol_2024_2p",
+          "label": "2024 - 2P"
+        },
+        {
+          "value": "exam_fenol_2023_final",
+          "label": "2023 - Final"
+        },
+        {
+          "value": "exam_fenol_2023_rep_sr",
+          "label": "2023 - Repechaje SR"
+        },
+        {
+          "value": "exam_fenol_2023_1p_sr",
+          "label": "2023 - 1P SR"
+        }
+      ],
+      "test": []
+    }
+  },
+  "questions": {
+    "exam_epox_2026_unico": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "2026 - Examen único",
+      "badgeLabel": "2026 - Examen único",
+      "statement": "La reacción del 2-buteno con el ácido metacloroperbenzoico genera:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ozónido"
+        },
+        {
+          "letter": "b",
+          "text": "epóxido"
+        },
+        {
+          "letter": "c",
+          "text": "alcohol"
+        },
+        {
+          "letter": "d",
+          "text": "hemiacetal"
+        },
+        {
+          "letter": "e",
+          "text": "éter"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! Los alquenos (como el 2-buteno) reaccionan con peroxiácidos como el ácido meta-cloroperoxibenzoico (AMCPB) formando un anillo heterocíclico de 3 miembros llamado epóxido (2,3-dimetiloxirano).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) epóxido. El ácido meta-cloroperoxibenzoico transfiere un átomo de oxígeno al doble enlace del 2-buteno generando un epóxido (2,3-dimetiloxirano).",
+      "rxnKey": "exam_rxn_epox_amcpb",
+      "subIdx": 0
+    },
+    "exam_eter_2019_2p": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "2019 - 2P",
+      "badgeLabel": "2019 - 2P",
+      "statement": "Se obtendrá éter por reacción:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "De 2 moléculas de ácido etanoico"
+        },
+        {
+          "letter": "b",
+          "text": "Entre un ácido carboxílico y una amina"
+        },
+        {
+          "letter": "c",
+          "text": "Entre un alcóxido y un halogenuro de alquilo"
+        },
+        {
+          "letter": "d",
+          "text": "Entre un alcohol y un halogenuro de alquilo"
+        },
+        {
+          "letter": "e",
+          "text": "De 2 moléculas de halogenuros de alquilo"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! La síntesis de Williamson hace reaccionar un ion alcóxido (R–O⁻ Na⁺, nucleófilo fuerte) con un halogenuro de alquilo primario o metílico (R'–X) vía SN2 para obtener un éter (R–O–R') más la sal NaX.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es c) Entre un alcóxido y un halogenuro de alquilo (Síntesis de Williamson).",
+      "rxnKey": "eteres_obt_williamson",
+      "subIdx": 0
+    },
+    "exam_eter_2022_final": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "2022 - Final",
+      "badgeLabel": "2022 - Final",
+      "statement": "Se obtendrá éter por reacción:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "de 2 moléculas de ácido etanoico"
+        },
+        {
+          "letter": "b",
+          "text": "del ácido propanoico y la etilamina"
+        },
+        {
+          "letter": "c",
+          "text": "entre un alcóxido y un halogenuro de alquilo"
+        },
+        {
+          "letter": "d",
+          "text": "entre un alcohol y un halogenuro de alquilo"
+        },
+        {
+          "letter": "e",
+          "text": "de 2 moléculas de halogenuros de alquilo"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! Mediante la síntesis de Williamson, un alcóxido reacciona con un halogenuro de alquilo primario para formar un éter y una sal inorgánica.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es c) entre un alcóxido y un halogenuro de alquilo (Síntesis de Williamson).",
+      "rxnKey": "eteres_obt_williamson",
+      "subIdx": 0
+    },
+    "test_eter_sn1_hbr": {
+      "unit": "eteres",
+      "category": "test",
+      "shortTitle": "Ejercicio 1",
+      "badgeLabel": "Test • Ejercicio 1",
+      "statement": "Considerando los siguientes éteres:\nI. 2-metoxipropano\nII. 1-propoxipropano\nIII. tert-butil etiléter\nEl/los que reaccionará/n por un mecanismo SN1, al tratarlo con HBr, es/son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "I, II y III"
+        },
+        {
+          "letter": "b",
+          "text": "I y III"
+        },
+        {
+          "letter": "c",
+          "text": "II y III"
+        },
+        {
+          "letter": "d",
+          "text": "solo I"
+        },
+        {
+          "letter": "e",
+          "text": "solo III"
+        }
+      ],
+      "correct": "e",
+      "feedbackCorrect": "¡Correcto! Solo el tert-butil etiléter (III) posee un grupo alquilo terciario capaz de formar un carbocatión terc-butilo estable, por lo que rompe por mecanismo SN1. Los éteres primarios y secundarios (I y II) rompen por SN2.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es e) solo III. Los éteres rompen por SN1 únicamente si generan un carbocatión terciario estable (como el grupo tert-butilo del compuesto III).",
+      "rxnKey": "exam_rxn_tertbutil_hbr_sn1",
+      "subIdx": 0
+    },
+    "test_eter_dipropil_williamson": {
+      "unit": "eteres",
+      "category": "test",
+      "shortTitle": "Ejercicio 2",
+      "badgeLabel": "Test • Ejercicio 2",
+      "statement": "Para obtener dipropil éter, debe reaccionar el propóxido de potasio con:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-bromopropano"
+        },
+        {
+          "letter": "b",
+          "text": "1-bromopropano"
+        },
+        {
+          "letter": "c",
+          "text": "1-propanol"
+        },
+        {
+          "letter": "d",
+          "text": "ácido propanoico"
+        },
+        {
+          "letter": "e",
+          "text": "propano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! El propóxido de potasio (CH₃CH₂CH₂–O⁻ K⁺) ataca por mecanismo SN2 al carbono C1 del 1-bromopropano (CH₃CH₂CH₂–Br), formando el dipropiléter simétrico y KBr.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 1-bromopropano. Si se usara 2-bromopropano se obtendría un éter ramificado o eliminación E2, no dipropiléter.",
+      "rxnKey": "exam_rxn_dipropil_williamson",
+      "subIdx": 0
+    },
+    "test_eter_anisol_williamson": {
+      "unit": "eteres",
+      "category": "test",
+      "shortTitle": "Ejercicio 3",
+      "badgeLabel": "Test • Ejercicio 3",
+      "statement": "Al hacer reaccionar fenóxido de sodio con yodometano mediante una sustitución nucleofílica SN2, el producto orgánico principal obtenido es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "fenol"
+        },
+        {
+          "letter": "b",
+          "text": "benzaldehído"
+        },
+        {
+          "letter": "c",
+          "text": "anisol (metoxibenceno)"
+        },
+        {
+          "letter": "d",
+          "text": "ácido benzoico"
+        },
+        {
+          "letter": "e",
+          "text": "alcohol bencílico"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! El ion fenóxido (C₆H₅–O⁻) ataca al carbono metílico del yodometano (CH₃–I) vía SN2 formando metoxibenceno (anisol) y yoduro de sodio (NaI).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es c) anisol (metoxibenceno). Es una aplicación clásica de la síntesis de Williamson sobre un fenóxido.",
+      "rxnKey": "eteres_obt_williamson",
+      "subIdx": 2
+    },
+    "exam_epox_2022_unico": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "2022 - Examen único",
+      "badgeLabel": "2022 - Examen único",
+      "statement": "El compuesto que puede reaccionar con el ácido-m-cloro-perbenzoico, para obtener un epóxido, es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "ácido málico"
+        },
+        {
+          "letter": "b",
+          "text": "ácido maleico"
+        },
+        {
+          "letter": "c",
+          "text": "ácido succínico"
+        },
+        {
+          "letter": "d",
+          "text": "ácido acético"
+        },
+        {
+          "letter": "e",
+          "text": "ciclohexano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! El ácido maleico (ácido cis-2-butenodioico) posee un doble enlace C=C capaz de reaccionar con el ácido meta-cloroperoxibenzoico (AMCPB) para formar un epóxido.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) ácido maleico. Para formar un epóxido con AMCPB se requiere un alqueno (doble enlace C=C); las demás opciones son compuestos saturados.",
+      "rxnKey": "exam_rxn_maleico_epox",
+      "subIdx": 0
+    },
+    "exam_eter_2023_rep_sr": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "2023 - Repechaje SR",
+      "badgeLabel": "2023 - Repechaje SR",
+      "statement": "La reacción entre el dimetiléter y ácido yodhídrico sin la posterior hidrólisis genera:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Yoduro de metilo y metanol"
+        },
+        {
+          "letter": "b",
+          "text": "Yoduro de metilo y gas metano"
+        },
+        {
+          "letter": "c",
+          "text": "Yoduro de dimetiloxonio"
+        },
+        {
+          "letter": "d",
+          "text": "Yoduro de metilo y yoduro de metilo"
+        },
+        {
+          "letter": "e",
+          "text": "Metanol y metanol"
+        }
+      ],
+      "correct": "c",
+      "feedbackCorrect": "¡Correcto! En la etapa inicial ácido-base (sin ruptura/hidrólisis posterior), el oxígeno del dimetiléter acepta un protón H⁺ del HI formando la sal de oxonio: yoduro de dimetiloxonio ([CH₃–OH⁺–CH₃] I⁻).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es c) Yoduro de dimetiloxonio. Sin posterior ruptura ni hidrólisis, el éter protonado con HI forma la sal de oxonio.",
+      "rxnKey": "exam_rxn_dimetil_hi_oxonio",
+      "subIdx": 0
+    },
+    "exam_fenol_2026_unico": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2026 - Examen único",
+      "badgeLabel": "2026 - Examen único",
+      "statement": "Considerando como estructura al fenol, el agregado de un sustituyente y posición que disminuya fuertemente su acidez respectivamente es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "cloro y posición meta"
+        },
+        {
+          "letter": "b",
+          "text": "nitro y posición orto"
+        },
+        {
+          "letter": "c",
+          "text": "nitro y posición meta"
+        },
+        {
+          "letter": "d",
+          "text": "metil y posición orto"
+        },
+        {
+          "letter": "e",
+          "text": "amino y posición meta"
+        }
+      ],
+      "correct": "d",
+      "feedbackCorrect": "¡Correcto! El grupo metilo (–CH₃) en posición orto es dador de electrones (+I e hiperconjugación), lo que intensifica la carga negativa del ion fenóxido, desestabiliza la base conjugada y disminuye la acidez del fenol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es d) metil y posición orto. Los grupos atractores (como –NO₂ o –Cl en meta) aumentan la acidez; el –CH₃ en orto cede electrones y disminuye la acidez.",
+      "rxnKey": "exam_rxn_fenol_acidez_metil",
+      "subIdx": 0
+    },
+    "exam_fenol_2024_2p": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2024 - 2P",
+      "badgeLabel": "2024 - 2P",
+      "statement": "La reacción de sustitución electrofílica aromática del fenol es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Fenol + ácido nítrico / ácido sulfúrico"
+        },
+        {
+          "letter": "b",
+          "text": "Benceno + ácido nítrico / ácido sulfúrico"
+        },
+        {
+          "letter": "c",
+          "text": "Tolueno + ácido nítrico / ácido sulfúrico"
+        },
+        {
+          "letter": "d",
+          "text": "Fenol + ácido clorhídrico / agua"
+        },
+        {
+          "letter": "e",
+          "text": "Anilina + ácido sulfúrico / ácido sulfúrico"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! El fenol reacciona con ácido nítrico y ácido sulfúrico (HNO₃ / H₂SO₄) mediante sustitución electrofílica aromática (SEA) para formar o-nitrofenol y p-nitrofenol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a) Fenol + ácido nítrico / ácido sulfúrico. El fenol no sufre sustitución nucleofílica con HCl/H₂O.",
+      "rxnKey": "exam_rxn_fenol_nitracion",
+      "subIdx": 0
+    },
+    "exam_fenol_2023_final": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2023 - Final",
+      "badgeLabel": "2023 - Final",
+      "statement": "Por reducción de la m-quinona se obtiene:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Resorcinol"
+        },
+        {
+          "letter": "b",
+          "text": "Hidroquinona"
+        },
+        {
+          "letter": "c",
+          "text": "Catecol"
+        },
+        {
+          "letter": "d",
+          "text": "m-cresol"
+        },
+        {
+          "letter": "e",
+          "text": "m-xileno"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! La reducción de la m-quinona regenera el anillo aromático generando el difenol correspondiente: resorcinol (1,3-bencenodiol).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a) Resorcinol (1,3-bencenodiol).",
+      "rxnKey": "exam_rxn_mquinona_reduccion",
+      "subIdx": 0
+    },
+    "exam_fenol_2023_rep_sr": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2023 - Repechaje SR",
+      "badgeLabel": "2023 - Repechaje SR",
+      "statement": "Corresponde a un proceso de sustitución electrofílica aromática del fenol:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Fenol + ácido nítrico / ácido sulfúrico"
+        },
+        {
+          "letter": "b",
+          "text": "Benceno + ácido / ácido sulfúrico"
+        },
+        {
+          "letter": "c",
+          "text": "Tolueno + ácido nítrico / ácido sulfúrico"
+        },
+        {
+          "letter": "d",
+          "text": "Fenol + ácido clorhídrico / agua"
+        },
+        {
+          "letter": "e",
+          "text": "Anilina + ácido sulfúrico / ácido sulfúrico"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "¡Correcto! La nitración del fenol con ácido nítrico / ácido sulfúrico es una sustitución electrofílica aromática (SEA) orientada a posiciones orto y para.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a) Fenol + ácido nítrico / ácido sulfúrico.",
+      "rxnKey": "exam_rxn_fenol_nitracion",
+      "subIdx": 0
+    },
+    "exam_fenol_2023_1p_sr": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "2023 - 1P SR",
+      "badgeLabel": "2023 - 1P SR",
+      "statement": "Considerando el fenol, para aumentar la acidez, el sustituyente y la posición respectivamente deberá ser:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "amino y meta"
+        },
+        {
+          "letter": "b",
+          "text": "nitro y orto"
+        },
+        {
+          "letter": "c",
+          "text": "metil y orto"
+        },
+        {
+          "letter": "d",
+          "text": "cloro y meta"
+        },
+        {
+          "letter": "e",
+          "text": "nitro y meta"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "¡Correcto! El grupo nitro (–NO₂) en posición orto estabiliza fuertemente al ion fenóxido por efecto resonante (–M) e inductivo (–I), aumentando notablemente la acidez del fenol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) nitro y orto. En posición orto (o para), el –NO₂ deslocaliza la carga negativa por resonancia además del efecto inductivo.",
+      "rxnKey": "exam_rxn_fenol_acidez_nitro",
+      "subIdx": 0
+    }
+  },
+  "reactions": {
+    "exam_rxn_epox_amcpb": {
+      "category": "reacciones",
+      "title": "Epoxidación de 2-buteno con AMCPB (MCPBA) → 2,3-Dimetiloxirano (Epóxido)",
+      "natureBadge": "Adición Electrofílica Concertada (Epoxidación de Prilezhaev)",
+      "description": "Los alquenos como el 2-buteno reaccionan con peroxiácidos (como el ácido meta-cloroperoxibenzoico, AMCPB) transfiriendo el oxígeno electrófilo del puente peróxido –O–O– al doble enlace C=C en un solo paso concertado (estado de transición tipo mariposa), formando un anillo de tres miembros tensionado llamado epóxido (2,3-dimetiloxirano) más ácido meta-clorobenzoico.",
+      "deltaH": "CH₃–CH=CH–CH₃ + Ar–CO₃H (AMCPB) ──► 2,3-Dimetiloxirano (Epóxido) + Ar–CO₂H",
+      "meta": {
+        "grupoFuncional": "Epóxido / Oxirano (2,3-Dimetiloxirano)",
+        "reaccionMecanismo": "Epoxidación concertada (Adición electrofílica sin estereoespecífica)",
+        "naturaleza": "Concertada en una sola etapa (sin carbocatión intermediario).",
+        "rupturaIntermediarios": "Ruptura del enlace π (C=C) y del enlace débil O–O del peroxiácido.",
+        "detalleMecanismo": "2-Buteno + AMCPB → 2,3-Dimetiloxirano (Epóxido) + Ácido m-clorobenzoico",
+        "reactivosCondiciones": "2-Buteno + Ácido meta-cloroperoxibenzoico (AMCPB / MCPBA)",
+        "rolReactivos": "• Sustrato nucleofílico: 2-Buteno (enlace π rico en electrones).\n• Reactivo electrófilo: AMCPB (dona un átomo de oxígeno).\n• Subproducto: Ácido m-clorobenzoico.",
+        "reglasObs": "La epoxidación con AMCPB es estereoespecífica sin: un alqueno cis da un epóxido cis y un alqueno trans da un epóxido trans."
+      },
+      "substrates": [
+        {
+          "id": "epox_2buteno_amcpb",
+          "name": "2-Buteno + AMCPB → 2,3-Dimetiloxirano (Epóxido)",
+          "catalyst": "Ácido meta-cloroperoxibenzoico (AMCPB)"
+        }
+      ],
+      "catalysts": [
+        "Ácido meta-cloroperoxibenzoico (AMCPB)"
+      ],
+      "stepsBySubstrate": {
+        "epox_2buteno_amcpb": [
+          {
+            "title": "Paso 1 — Estado Inicial: 2-Buteno + AMCPB (Peroxiácido)",
+            "semiStep": "CH₃–CH=CH–CH₃  +  Ar–CO–O–OH (AMCPB)",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "El doble enlace π del 2-buteno actúa como nucleófilo frente al oxígeno terminal electrófilo del enlace peróxido (–O–OH) del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Aproximación del peroxiácido al doble enlace C=C.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del oxígeno electrófilo del AMCPB sobre el enlace π."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 165,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "label": "2-Buteno"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 565,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 95,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "O",
+                  "x": 500,
+                  "y": 95
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 645,
+                  "y": 95,
+                  "label": "AMCPB"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno (Ruptura π y O–O)",
+            "semiStep": "CH₃–CH═CH–CH₃ ··· [O] ··· O–CO–Ar",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "De forma concertada se rompe el enlace π del 2-buteno y el enlace débil O–O del peroxiácido (en rojo), mientras se forman simultáneamente los dos enlaces C–O del anillo epóxido (en verde punteado).",
+            "legend": {
+              "breaking": "Enlace π (C=C) y enlace peróxido O–O rompiéndose (en rojo punteado).",
+              "forming": "Dos nuevos enlaces C–O del anillo de 3 miembros formándose (en verde punteado).",
+              "movement": "Transferencia concertada del átomo de oxígeno sin formar carbocatión."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 165,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 565,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 115,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "HO",
+                  "x": 535,
+                  "y": 95,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 675,
+                  "y": 95
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 345,
+                  "y1": 210,
+                  "cx": 315,
+                  "cy": 165,
+                  "x2": 348,
+                  "y2": 130,
+                  "label": "Enlace C–O"
+                },
+                {
+                  "type": "full",
+                  "x1": 382,
+                  "y1": 130,
+                  "cx": 415,
+                  "cy": 165,
+                  "x2": 422,
+                  "y2": 208,
+                  "label": "Enlace C–O"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: 2,3-Dimetiloxirano (Epóxido) + Ácido m-clorobenzoico",
+            "semiStep": "2,3-Dimetiloxirano (Epóxido)  +  Ar–COOH",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "Se obtiene el anillo heterocíclico de 3 miembros (epóxido: 2,3-dimetiloxirano) con ambos enlaces C–O consolidados en verde sólido, más ácido meta-clorobenzoico.",
+            "legend": {
+              "breaking": "Enlace peróxido completamente disociado.",
+              "forming": "Anillo de epóxido (oxirano) consolidado en verde sólido.",
+              "movement": "Productos finales obtenidos."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 150,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 280,
+                  "y": 225
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 420,
+                  "y": 225
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 550,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 350,
+                  "y": 115,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Epóxido (2,3-Dimetiloxirano)"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "Ar–COOH",
+                  "x": 745,
+                  "y": 185,
+                  "highlight": "#38bdf8",
+                  "label": "Ác. m-clorobenzoico"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar",
+                  "x": 745,
+                  "y": 185,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 640,
+                  "y": 193,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_tertbutil_hbr_sn1": {
+      "category": "reacciones",
+      "title": "Ruptura ácida SN1 de tert-Butil etiléter con HBr → 2-Bromo-2-metilpropano + Etanol",
+      "natureBadge": "Sustitución Nucleofílica Unimolecular (SN1 vía Carbocatión 3°)",
+      "description": "Al tratar el tert-butil etiléter ((CH₃)₃C–O–CH₂CH₃) con HBr, primero se protona el oxígeno formando la sal de oxonio. Como la ruptura del enlace C(3°)–O⁺ genera el carbocatión terc-butilo ((CH₃)₃C⁺, terciario y muy estable), la reacción procede por mecanismo SN1, a diferencia de los éteres primarios (1-propoxipropano) o secundarios (2-metoxipropano) que reaccionan por SN2.",
+      "deltaH": "(CH₃)₃C–O–CH₂CH₃ + HBr ──(SN1)──► (CH₃)₃C–Br + CH₃CH₂–OH",
+      "meta": {
+        "grupoFuncional": "Halogenuro terciario (2-Bromo-2-metilpropano) + Alcohol (Etanol)",
+        "reaccionMecanismo": "Sustitución Nucleofílica Unimolecular (SN1)",
+        "naturaleza": "Por etapas: 1) Protonación rápida + 2) Heterólisis lenta a carbocatión 3° + 3) Captura rápida por Br⁻.",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace C(3°)–O⁺; intermediario carbocatión terc-butilo.",
+        "detalleMecanismo": "(CH₃)₃C–O–CH₂CH₃ + HBr → [(CH₃)₃C–OH⁺–CH₂CH₃] Br⁻ → (CH₃)₃C⁺ + CH₃CH₂OH + Br⁻ → (CH₃)₃C–Br + CH₃CH₂OH",
+        "reactivosCondiciones": "tert-Butil etiléter + HBr concentrado",
+        "rolReactivos": "• Sustrato: tert-Butil etiléter (éter mixto con grupo alquilo terciario).\n• Reactivo: HBr (protona al oxígeno y aporta el nucleófilo Br⁻).",
+        "reglasObs": "Los éteres se rompen por SN1 únicamente cuando poseen un grupo alquilo terciario (o bencílico/alílico); los primarios y secundarios reaccionan por SN2."
+      },
+      "substrates": [
+        {
+          "id": "tert_etil_hbr",
+          "name": "tert-Butil etiléter + HBr → 2-Bromo-2-metilpropano + Etanol (SN1)",
+          "catalyst": "HBr concentrado (Mecanismo SN1)"
+        }
+      ],
+      "catalysts": [
+        "HBr concentrado (Mecanismo SN1)"
+      ],
+      "stepsBySubstrate": {
+        "tert_etil_hbr": [
+          {
+            "title": "Paso 1 — Estado Inicial: tert-Butil etiléter + HBr",
+            "semiStep": "(CH₃)₃C–O–CH₂–CH₃  +  HBr",
+            "semiGlobal": "(CH₃)₃C–O–CH₂CH₃ + HBr ──(SN1)──► (CH₃)₃C–Br + CH₃CH₂OH",
+            "desc": "El tert-butil etiléter posee un grupo terc-butilo (3°) y un grupo etilo (1°) unidos al oxígeno. El ácido bromhídrico (HBr) protona primero al oxígeno.",
+            "legend": {
+              "breaking": "Aproximación inicial del HBr al oxígeno etéreo.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Protonación del oxígeno para convertir al etanol en buen grupo saliente."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C_TERT",
+                  "el": "(CH₃)₃C",
+                  "x": 205,
+                  "y": 195,
+                  "label": "tert-Butil etiléter"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 365,
+                  "y": 195,
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ]
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 495,
+                  "y": 195
+                },
+                {
+                  "id": "C3",
+                  "el": "CH₃",
+                  "x": 620,
+                  "y": 195
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 365,
+                  "y": 80
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 500,
+                  "y": 80
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C_TERT",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "H1",
+                  "to": "Br1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Etapa Determinante SN1: Heterólisis a Carbocatión terc-Butilo (3°)",
+            "semiStep": "[(CH₃)₃C–OH⁺–CH₂CH₃] Br⁻  ──(lenta SN1)──►  (CH₃)₃C⁺ + CH₃CH₂OH + Br⁻",
+            "semiGlobal": "(CH₃)₃C–O–CH₂CH₃ + HBr ──(SN1)──► (CH₃)₃C–Br + CH₃CH₂OH",
+            "desc": "Se rompe heterolíticamente el enlace C(3°)–O⁺ (en rojo) liberando etanol neutro y formando el carbocatión terciario (CH₃)₃C⁺, que es capturado rápidamente por el Br⁻.",
+            "legend": {
+              "breaking": "Ruptura heterolítica SN1 del enlace (CH₃)₃C–O⁺ (en rojo).",
+              "forming": "Ataque del nucleófilo Br⁻ al carbocatión terciario (en verde punteado).",
+              "movement": "Formación del intermediario carbocatión terc-butilo estabilizado por hiperconjugación."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C_TERT",
+                  "el": "(CH₃)₃C",
+                  "x": 190,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#fbbf24",
+                  "label": "Carbocatión 3°"
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 355,
+                  "y": 195,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 525,
+                  "y": 195,
+                  "lonePairs": [
+                    "bottom"
+                  ]
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 525,
+                  "y": 95
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 650,
+                  "y": 195
+                },
+                {
+                  "id": "C3",
+                  "el": "CH₃",
+                  "x": 775,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C_TERT",
+                  "to": "Br1",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 318,
+                  "y1": 182,
+                  "cx": 280,
+                  "cy": 152,
+                  "x2": 245,
+                  "y2": 182,
+                  "label": "Captura SN1"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Productos Finales: 2-Bromo-2-metilpropano + Etanol",
+            "semiStep": "(CH₃)₃C–Br  +  CH₃–CH₂–OH",
+            "semiGlobal": "(CH₃)₃C–O–CH₂CH₃ + HBr ──(SN1)──► (CH₃)₃C–Br + CH₃CH₂OH",
+            "desc": "Se obtiene 2-bromo-2-metilpropano (el halógeno queda unido al carbono terciario) y etanol.",
+            "legend": {
+              "breaking": "Ruptura C(3°)–O completada.",
+              "forming": "Enlace C(3°)–Br consolidado en verde sólido.",
+              "movement": "Productos finales estabilizados."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C_TERT",
+                  "el": "(CH₃)₃C",
+                  "x": 190,
+                  "y": 195,
+                  "label": "2-Bromo-2-metilpropano"
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 345,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O1",
+                  "el": "HO",
+                  "x": 525,
+                  "y": 195,
+                  "highlight": "#10b981",
+                  "label": "Etanol"
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 525,
+                  "y": 195,
+                  "opacity": 0
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 645,
+                  "y": 195
+                },
+                {
+                  "id": "C3",
+                  "el": "CH₃",
+                  "x": 765,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C_TERT",
+                  "to": "Br1",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 438,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_dipropil_williamson": {
+      "category": "obtencion",
+      "title": "Síntesis de Williamson: Propóxido de potasio + 1-Bromopropano → Dipropiléter + KBr",
+      "natureBadge": "Sustitución Nucleofílica Bimolecular (SN2 Concertada)",
+      "description": "Para obtener dipropiléter (CH₃CH₂CH₂–O–CH₂CH₂CH₃) por síntesis de Williamson se hace reaccionar el alcóxido (propóxido de potasio, CH₃CH₂CH₂–O⁻ K⁺) con un halogenuro de propilo primario (1-bromopropano, CH₃CH₂CH₂–Br) mediante un ataque SN2 concertado.",
+      "deltaH": "CH₃CH₂CH₂–O⁻ K⁺ + CH₃CH₂CH₂–Br ──(SN2)──► CH₃CH₂CH₂–O–CH₂CH₂CH₃ + KBr",
+      "meta": {
+        "grupoFuncional": "Éter simétrico (Dipropiléter / 1-Propoxipropano)",
+        "reaccionMecanismo": "Sustitución Nucleofílica Bimolecular (SN2)",
+        "naturaleza": "Concertada en una sola etapa.",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace C–Br y formación simultánea del enlace O–C.",
+        "detalleMecanismo": "CH₃CH₂CH₂–O⁻ K⁺ + Br–CH₂CH₂CH₃ → CH₃CH₂CH₂–O–CH₂CH₂CH₃ + KBr",
+        "reactivosCondiciones": "Propóxido de potasio + 1-Bromopropano",
+        "rolReactivos": "• Nucleófilo atacante: Ion propóxido (CH₃CH₂CH₂–O⁻).\n• Sustrato electrófilo: 1-Bromopropano (halogenuro primario).\n• Subproducto salino: Bromuro de potasio (KBr).",
+        "reglasObs": "No se usa 2-bromopropano porque produciría isopropilpropiléter (o eliminación E2) en lugar de dipropiléter lineal."
+      },
+      "substrates": [
+        {
+          "id": "will_dipropil_kbr",
+          "name": "Propóxido de potasio + 1-Bromopropano → Dipropiléter + KBr",
+          "catalyst": "SN2 en 1-propanol anhidro"
+        }
+      ],
+      "catalysts": [
+        "SN2 en 1-propanol anhidro"
+      ],
+      "stepsBySubstrate": {
+        "will_dipropil_kbr": [
+          {
+            "title": "Paso 1 — Estado Inicial: Propóxido de potasio + 1-Bromopropano",
+            "semiStep": "CH₃CH₂–CH₂–O⁻ K⁺  +  CH₃CH₂–CH₂–Br",
+            "semiGlobal": "CH₃CH₂CH₂–O⁻ K⁺ + CH₃CH₂CH₂–Br ──(SN2)──► CH₃CH₂CH₂–O–CH₂CH₂CH₃ + KBr",
+            "desc": "El propóxido de potasio aporta el nucleófilo (CH₃CH₂CH₂–O⁻) y el 1-bromopropano aporta la cadena propílica primaria electrófila.",
+            "legend": {
+              "breaking": "Aproximación inicial sin ruptura.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del oxígeno negativo hacia el carbono C1 del 1-bromopropano."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 115,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 355,
+                  "y": 195,
+                  "charge": "-",
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ],
+                  "label": "Propóxido de potasio"
+                },
+                {
+                  "id": "K1",
+                  "el": "K",
+                  "x": 355,
+                  "y": 95,
+                  "charge": "+"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 545,
+                  "y": 195,
+                  "label": "1-Bromopropano"
+                },
+                {
+                  "id": "R2",
+                  "el": "CH₂CH₃",
+                  "x": 670,
+                  "y": 195
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 790,
+                  "y": 195
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "R2",
+                  "to": "Br1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 450,
+                  "y": 203,
+                  "text": "+",
+                  "size": 24,
+                  "color": "#38bdf8"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Ataque SN2 Concertado y Desplazamiento de Br⁻",
+            "semiStep": "[CH₃CH₂CH₂–O ··· CH₂CH₂CH₃ ··· Br]‡  +  K⁺",
+            "semiGlobal": "CH₃CH₂CH₂–O⁻ K⁺ + CH₃CH₂CH₂–Br ──(SN2)──► CH₃CH₂CH₂–O–CH₂CH₂CH₃ + KBr",
+            "desc": "El oxígeno del propóxido ataca al carbono C1 formando el nuevo enlace O–CH₂ (en verde punteado) y expulsando simultáneamente al ion bromuro Br⁻ (en rojo).",
+            "legend": {
+              "breaking": "Enlace C–Br rompiéndose heterolíticamente (en rojo punteado).",
+              "forming": "Enlace O–CH₂ formándose concertadamente (en verde punteado).",
+              "movement": "Sustitución nucleofílica SN2."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 115,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 355,
+                  "y": 195,
+                  "lonePairs": [
+                    "bottom"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 495,
+                  "y": 195,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "R2",
+                  "el": "CH₂CH₃",
+                  "x": 620,
+                  "y": 195
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 755,
+                  "y": 195,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "K1",
+                  "el": "K",
+                  "x": 755,
+                  "y": 90,
+                  "charge": "+"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C2",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "R2",
+                  "to": "Br1",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 385,
+                  "y1": 182,
+                  "cx": 428,
+                  "cy": 152,
+                  "x2": 470,
+                  "y2": 182,
+                  "label": "Ataque SN2"
+                },
+                {
+                  "type": "full",
+                  "x1": 675,
+                  "y1": 182,
+                  "cx": 710,
+                  "cy": 155,
+                  "x2": 738,
+                  "y2": 182,
+                  "label": "Salida Br⁻"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Productos Finales: Dipropiléter + KBr",
+            "semiStep": "CH₃–CH₂–CH₂–O–CH₂–CH₂–CH₃  +  KBr",
+            "semiGlobal": "CH₃CH₂CH₂–O⁻ K⁺ + CH₃CH₂CH₂–Br ──(SN2)──► CH₃CH₂CH₂–O–CH₂CH₂CH₃ + KBr",
+            "desc": "Se obtiene el dipropiléter (1-propoxipropano) y bromuro de potasio (KBr).",
+            "legend": {
+              "breaking": "Enlace C–Br roto.",
+              "forming": "Puente éter O–CH₂ consolidado en verde sólido.",
+              "movement": "Productos finales estabilizados."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "R1",
+                  "el": "CH₃CH₂",
+                  "x": 115,
+                  "y": 195
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 355,
+                  "y": 195,
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Dipropiléter"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 470,
+                  "y": 195
+                },
+                {
+                  "id": "R2",
+                  "el": "CH₂CH₃",
+                  "x": 595,
+                  "y": 195
+                },
+                {
+                  "id": "K1",
+                  "el": "KBr",
+                  "x": 775,
+                  "y": 195,
+                  "highlight": "#38bdf8",
+                  "label": "Sal inorgánica"
+                },
+                {
+                  "id": "Br1",
+                  "el": "Br",
+                  "x": 775,
+                  "y": 195,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "R1",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C2",
+                  "to": "R2",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 685,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_maleico_epox": {
+      "category": "reacciones",
+      "title": "Epoxidación del Ácido Maleico con AMCPB → Ácido cis-oxirano-2,3-dicarboxílico (Epóxido)",
+      "natureBadge": "Epoxidación Concertada de Alquenos (AMCPB)",
+      "description": "Para obtener un epóxido al reaccionar con el ácido meta-cloroperoxibenzoico (AMCPB), el sustrato debe poseer un doble enlace carbono-carbono (C=C). De las opciones dadas (ácido málico, ácido maleico, ácido succínico, ácido acético y ciclohexano), únicamente el ácido maleico (ácido cis-2-butenodioico) posee un enlace π C=C capaz de epoxidarse con AMCPB.",
+      "deltaH": "HOOC–CH=CH–COOH + AMCPB ──► Ácido cis-2,3-epoxibutanodioico + Ar–COOH",
+      "meta": {
+        "grupoFuncional": "Epóxido / Oxirano (Ácido oxirano-2,3-dicarboxílico)",
+        "reaccionMecanismo": "Epoxidación concertada de alquenos con peroxiácidos (AMCPB)",
+        "naturaleza": "Concertada en una sola etapa.",
+        "rupturaIntermediarios": "Ruptura del enlace π (C=C) del ácido maleico y del enlace O–O del peroxiácido.",
+        "detalleMecanismo": "Ácido maleico (HOOC–CH=CH–COOH) + AMCPB → Epóxido + Ácido m-clorobenzoico",
+        "reactivosCondiciones": "Ácido maleico (alqueno) + Ácido meta-cloroperoxibenzoico (AMCPB)",
+        "rolReactivos": "• Sustrato: Ácido maleico (único compuesto insaturado C=C de las opciones).\n• Reactivo: AMCPB (dona el átomo de oxígeno del puente peróxido).",
+        "reglasObs": "Los alcanos/cicloalcanos (ciclohexano) y los ácidos saturados (málico, succínico, acético) carecen de doble enlace C=C y no forman epóxidos con AMCPB."
+      },
+      "substrates": [
+        {
+          "id": "epox_maleico_amcpb",
+          "name": "Ácido maleico + AMCPB → Epóxido (Ácido 2,3-epoxibutanodioico)",
+          "catalyst": "Ácido meta-cloroperoxibenzoico (AMCPB)"
+        }
+      ],
+      "catalysts": [
+        "Ácido meta-cloroperoxibenzoico (AMCPB)"
+      ],
+      "stepsBySubstrate": {
+        "epox_maleico_amcpb": [
+          {
+            "title": "Paso 1 — Estado Inicial: Ácido Maleico (HOOC–CH=CH–COOH) + AMCPB",
+            "semiStep": "HOOC–CH=CH–COOH  +  Ar–CO–O–OH (AMCPB)",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "El ácido maleico (ácido cis-2-butenodioico) posee un doble enlace C=C rico en electrones π que reacciona con el oxígeno electrófilo del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Aproximación del peroxiácido al doble enlace C=C del ácido maleico.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Interacción entre el enlace π del ácido maleico y el oxígeno peróxido del AMCPB."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 160,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "label": "Ácido maleico (C=C)"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 570,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 95,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "O",
+                  "x": 500,
+                  "y": 95
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 645,
+                  "y": 95,
+                  "label": "AMCPB"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno al Doble Enlace",
+            "semiStep": "HOOC–CH═CH–COOH ··· [O] ··· O–CO–Ar",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "Se rompe concertadamente el enlace π (C=C) del ácido maleico y el enlace débil O–O del AMCPB (en rojo), formándose los dos enlaces C–O del anillo epóxido (en verde punteado).",
+            "legend": {
+              "breaking": "Enlace π (C=C) y enlace O–O rompiéndose (en rojo punteado).",
+              "forming": "Nuevos enlaces C–O del ciclo oxirano en formación (en verde punteado).",
+              "movement": "Adición sin concertada del átomo de oxígeno."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 160,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 570,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 115,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "HO",
+                  "x": 535,
+                  "y": 95,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 675,
+                  "y": 95
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 345,
+                  "y1": 210,
+                  "cx": 315,
+                  "cy": 165,
+                  "x2": 348,
+                  "y2": 130,
+                  "label": "Enlace C–O"
+                },
+                {
+                  "type": "full",
+                  "x1": 382,
+                  "y1": 130,
+                  "cx": 415,
+                  "cy": 165,
+                  "x2": 422,
+                  "y2": 208,
+                  "label": "Enlace C–O"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Epóxido (Ácido 2,3-epoxibutanodioico) + Ácido m-clorobenzoico",
+            "semiStep": "Ácido 2,3-epoxibutanodioico (Epóxido)  +  Ar–COOH",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "Se obtiene el anillo epóxido consolidado en verde sólido junto con el ácido meta-clorobenzoico.",
+            "legend": {
+              "breaking": "Enlace peróxido O–O roto.",
+              "forming": "Anillo de epóxido consolidado en verde sólido.",
+              "movement": "Productos finales obtenidos."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 145,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 280,
+                  "y": 225
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 420,
+                  "y": 225
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 555,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 350,
+                  "y": 115,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Epóxido obtenido"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "Ar–COOH",
+                  "x": 755,
+                  "y": 185,
+                  "highlight": "#38bdf8",
+                  "label": "Ác. m-clorobenzoico"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar",
+                  "x": 755,
+                  "y": 185,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 650,
+                  "y": 193,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_dimetil_hi_oxonio": {
+      "category": "reacciones",
+      "title": "Dimetiléter + HI (sin ruptura/hidrólisis posterior) → Yoduro de dimetiloxonio",
+      "natureBadge": "Protonación Ácido-Base de Éteres (Formación de Sal de Oxonio)",
+      "description": "En la primera etapa de la reacción entre el dimetiléter (CH₃–O–CH₃) y el ácido yodhídrico (HI), antes de que ocurra ruptura de enlaces C–O o hidrólisis posterior, el oxígeno básico del éter acepta un protón (H⁺) formando la sal de oxonio llamada yoduro de dimetiloxonio ([CH₃–OH⁺–CH₃] I⁻).",
+      "deltaH": "CH₃–O–CH₃ + HI ──► [CH₃–OH⁺–CH₃] I⁻ (Yoduro de dimetiloxonio)",
+      "meta": {
+        "grupoFuncional": "Sal de dialquiloxonio (Yoduro de dimetiloxonio)",
+        "reaccionMecanismo": "Reacción ácido-base (Protonación del oxígeno etéreo)",
+        "naturaleza": "Transferencia protónica inicial (etapa 1 antes de la sustitución).",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace H–I; formación del ion dimetiloxonio.",
+        "detalleMecanismo": "CH₃–O–CH₃ + HI → [CH₃–OH⁺–CH₃] I⁻",
+        "reactivosCondiciones": "Dimetiléter + Ácido yodhídrico (HI)",
+        "rolReactivos": "• Base de Brønsted/Lewis: Dimetiléter (par libre del oxígeno).\n• Ácido: HI (cede el protón H⁺ y libera el contraión I⁻).",
+        "reglasObs": "Sin posterior calentamiento/ruptura o hidrólisis, la protonación del éter produce directamente la sal de oxonio."
+      },
+      "substrates": [
+        {
+          "id": "dimetil_hi_oxonio",
+          "name": "Dimetiléter + HI → Yoduro de dimetiloxonio",
+          "catalyst": "Ácido yodhídrico (HI)"
+        }
+      ],
+      "catalysts": [
+        "Ácido yodhídrico (HI)"
+      ],
+      "stepsBySubstrate": {
+        "dimetil_hi_oxonio": [
+          {
+            "title": "Paso 1 — Estado Inicial: Dimetiléter + Ácido yodhídrico (HI)",
+            "semiStep": "CH₃–O–CH₃  +  H–I",
+            "semiGlobal": "CH₃–O–CH₃ + HI ──► [CH₃–OH⁺–CH₃] I⁻",
+            "desc": "El dimetiléter posee dos pares electrónicos libres sobre el átomo de oxígeno, comportándose como base de Brønsted-Lowry frente al ácido yodhídrico (HI).",
+            "legend": {
+              "breaking": "Aproximación inicial de HI al oxígeno del dimetiléter.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del protón ácido δ⁺ del HI hacia el oxígeno del éter."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 380,
+                  "y": 195,
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ],
+                  "label": "Dimetiléter"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₃",
+                  "x": 520,
+                  "y": 195
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 380,
+                  "y": 80
+                },
+                {
+                  "id": "I1",
+                  "el": "I",
+                  "x": 510,
+                  "y": 80
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "H1",
+                  "to": "I1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Protónica (Ruptura H–I)",
+            "semiStep": "CH₃–Ö–CH₃  ↷  H–I",
+            "semiGlobal": "CH₃–O–CH₃ + HI ──► [CH₃–OH⁺–CH₃] I⁻",
+            "desc": "Un par libre del oxígeno captura al protón H⁺ del HI rompiendo heterolíticamente el enlace H–I (en rojo) sin romper aún los enlaces C–O.",
+            "legend": {
+              "breaking": "Enlace H–I rompiéndose heterolíticamente (en rojo punteado).",
+              "forming": "Enlace O–H formándose (en verde punteado).",
+              "movement": "Protonación del oxígeno etéreo y salida del anión yoduro I⁻."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 380,
+                  "y": 195,
+                  "lonePairs": [
+                    "bottom"
+                  ],
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₃",
+                  "x": 520,
+                  "y": 195
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 380,
+                  "y": 95,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "I1",
+                  "el": "I",
+                  "x": 540,
+                  "y": 95
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "H1",
+                  "to": "I1",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 365,
+                  "y1": 170,
+                  "cx": 350,
+                  "cy": 135,
+                  "x2": 372,
+                  "y2": 112,
+                  "label": "Protonación"
+                },
+                {
+                  "type": "full",
+                  "x1": 445,
+                  "y1": 95,
+                  "cx": 485,
+                  "cy": 72,
+                  "x2": 522,
+                  "y2": 88,
+                  "label": "Par → I⁻"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Yoduro de dimetiloxonio ([CH₃–OH⁺–CH₃] I⁻)",
+            "semiStep": "[CH₃–OH⁺–CH₃] I⁻",
+            "semiGlobal": "CH₃–O–CH₃ + HI ──► [CH₃–OH⁺–CH₃] I⁻",
+            "desc": "Se obtiene la sal de oxonio llamada yoduro de dimetiloxonio ([CH₃–OH⁺–CH₃] I⁻).",
+            "legend": {
+              "breaking": "Enlace H–I disociado.",
+              "forming": "Enlace O–H consolidado en verde sólido formando el catión dimetiloxonio.",
+              "movement": "Sal de oxonio estabilizada."
+            },
+            "scene": {
+              "brackets": [
+                {
+                  "x1": 195,
+                  "y1": 52,
+                  "x2": 570,
+                  "y2": 240,
+                  "color": "#38bdf8",
+                  "superscript": "+",
+                  "supColor": "#38bdf8",
+                  "label": "Yoduro de dimetiloxonio"
+                }
+              ],
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₃",
+                  "x": 240,
+                  "y": 195
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 380,
+                  "y": 195,
+                  "charge": "+",
+                  "lonePairs": [
+                    "bottom"
+                  ],
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₃",
+                  "x": 520,
+                  "y": 195
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 380,
+                  "y": 95,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "I1",
+                  "el": "I",
+                  "x": 655,
+                  "y": 145,
+                  "charge": "-",
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "new"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_fenol_nitracion": {
+      "category": "reacciones",
+      "title": "Sustitución Electrofílica Aromática (SEA) del Fenol: Nitración (HNO₃ / H₂SO₄)",
+      "natureBadge": "Sustitución Electrofílica Aromática (Activación Orto / Para)",
+      "description": "El grupo hidroxilo (–OH) del fenol es un fuerte activante y orientador orto/para por resonancia (+M). Al tratar fenol con ácido nítrico en presencia de ácido sulfúrico (HNO₃ / H₂SO₄), el ion nitronio (⁺NO₂) ataca el anillo aromático sustituyendo un hidrógeno en posición orto o para para generar o-nitrofenol y p-nitrofenol más agua.",
+      "deltaH": "C₆H₅–OH + HNO₃ ──(H₂SO₄)──► o-O₂N–C₆H₄–OH + p-O₂N–C₆H₄–OH + H₂O",
+      "meta": {
+        "grupoFuncional": "Nitrofenoles (o-Nitrofenol y p-Nitrofenol)",
+        "reaccionMecanismo": "Sustitución Electrofílica Aromática (SEA — Nitración)",
+        "naturaleza": "Por etapas: 1) Generación del electrófilo ⁺NO₂ + 2) Ataque electrofílico (ion arenio) + 3) Desprotonación.",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace C–H aromático; intermediario catión ciclohexadienilo (ion arenio).",
+        "detalleMecanismo": "Fenol + HNO₃ / H₂SO₄ → o-Nitrofenol + p-Nitrofenol + H₂O",
+        "reactivosCondiciones": "Fenol + Ácido nítrico (HNO₃) / Ácido sulfúrico (H₂SO₄)",
+        "rolReactivos": "• Sustrato aromático activado: Fenol (–OH orientador orto/para).\n• Electrófilo atacante: Ion nitronio (⁺NO₂) generado por HNO₃ / H₂SO₄.",
+        "reglasObs": "El fenol no sufre sustitución nucleofílica con HCl/H₂O (porque el enlace C(sp²)–OH no rompe por SN1/SN2); su reacción característica en el anillo es la SEA."
+      },
+      "substrates": [
+        {
+          "id": "fenol_nitracion_sea",
+          "name": "Fenol + HNO₃ / H₂SO₄ → p-Nitrofenol + o-Nitrofenol + H₂O",
+          "catalyst": "HNO₃ / H₂SO₄ (Sustitución Electrofílica Aromática)"
+        }
+      ],
+      "catalysts": [
+        "HNO₃ / H₂SO₄ (Sustitución Electrofílica Aromática)"
+      ],
+      "stepsBySubstrate": {
+        "fenol_nitracion_sea": [
+          {
+            "title": "Paso 1 — Estado Inicial: Fenol + Electrófilo Nitronio (⁺NO₂ / HNO₃-H₂SO₄)",
+            "semiStep": "C₆H₅–OH  +  HNO₃ / H₂SO₄ (⁺NO₂)",
+            "semiGlobal": "C₆H₅–OH + HNO₃ ──(H₂SO₄)──► p-O₂N–C₆H₄–OH + H₂O",
+            "desc": "El fenol presenta el grupo –OH fuertemente activante del anillo aromático frente al electrófilo nitronio (⁺NO₂) generado por la mezcla sulfonítrica (HNO₃ / H₂SO₄).",
+            "legend": {
+              "breaking": "Aproximación del electrófilo ⁺NO₂ al anillo del fenol.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Densidad electrónica π del anillo orientada hacia posiciones orto y para."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "OH1",
+                  "el": "HO",
+                  "x": 195,
+                  "y": 195
+                },
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 345,
+                  "y": 195,
+                  "label": "Fenol"
+                },
+                {
+                  "id": "H4",
+                  "el": "H",
+                  "x": 490,
+                  "y": 195
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 655,
+                  "y": 195,
+                  "charge": "+",
+                  "highlight": "#38bdf8",
+                  "label": "Electrófilo (HNO₃/H₂SO₄)"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "OH1",
+                  "to": "Ph",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "H4",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Ataque Electrofílico (SEA) y Salida de Protón (H⁺)",
+            "semiStep": "[HO–C₆H₄(H)(NO₂)]⁺  ──►  p-O₂N–C₆H₄–OH + H⁺",
+            "semiGlobal": "C₆H₅–OH + HNO₃ ──(H₂SO₄)──► p-O₂N–C₆H₄–OH + H₂O",
+            "desc": "El par electrónico π del anillo ataca al ion nitronio ⁺NO₂ formando el enlace C–NO₂ (en verde punteado) y liberando el protón H⁺ (en rojo) para regenerar la aromaticidad.",
+            "legend": {
+              "breaking": "Enlace C–H rompiéndose heterolíticamente (en rojo punteado).",
+              "forming": "Enlace C–NO₂ formándose en posición para/orto (en verde punteado).",
+              "movement": "Sustitución electrofílica aromática con recuperación del sexteto aromático."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "OH1",
+                  "el": "HO",
+                  "x": 195,
+                  "y": 195
+                },
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 345,
+                  "y": 195,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 495,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "H4",
+                  "el": "H",
+                  "x": 495,
+                  "y": 95,
+                  "charge": "+",
+                  "highlight": "#ef4444"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "OH1",
+                  "to": "Ph",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "Ph",
+                  "to": "H4",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 395,
+                  "y1": 182,
+                  "cx": 438,
+                  "cy": 152,
+                  "x2": 475,
+                  "y2": 182,
+                  "label": "Ataque SEA"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: p-Nitrofenol (y o-Nitrofenol) + H₂O",
+            "semiStep": "p-O₂N–C₆H₄–OH  +  H₂O",
+            "semiGlobal": "C₆H₅–OH + HNO₃ ──(H₂SO₄)──► p-O₂N–C₆H₄–OH + H₂O",
+            "desc": "Se obtiene el producto nitrado (p-nitrofenol y o-nitrofenol) más agua.",
+            "legend": {
+              "breaking": "Enlace C–H sustituido.",
+              "forming": "Enlace C–NO₂ consolidado en verde sólido.",
+              "movement": "Productos finales estabilizados."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "OH1",
+                  "el": "HO",
+                  "x": 195,
+                  "y": 195
+                },
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 345,
+                  "y": 195,
+                  "label": "p-Nitrofenol (+ o-isómero)"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 495,
+                  "y": 195,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "H4",
+                  "el": "H₂O",
+                  "x": 705,
+                  "y": 195,
+                  "highlight": "#38bdf8",
+                  "label": "Subproducto"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "OH1",
+                  "to": "Ph",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 605,
+                  "y": 203,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_fenol_acidez_nitro": {
+      "category": "reacciones",
+      "title": "Aumento de la Acidez del Fenol: Grupo Nitro (–NO₂) en posición orto",
+      "natureBadge": "Equilibrio Ácido-Base y Estabilización de Base Conjugada",
+      "description": "Al incorporar un grupo fuertemente atractor de electrones por efecto resonante (–M) e inductivo (–I) como el grupo nitro (–NO₂) en posición orto (o para), la carga negativa del ion o-nitrofenóxido se deslocaliza directamente sobre el grupo –NO₂, estabilizando la base conjugada y aumentando fuertemente la acidez del fenol (pKa baja de 10,0 a 7,2).",
+      "deltaH": "o-O₂N–C₆H₄–OH + H₂O ⇄ o-O₂N–C₆H₄–O⁻ + H₃O⁺  (Mayor acidez)",
+      "meta": {
+        "grupoFuncional": "o-Nitrofenol / Ion o-nitrofenóxido",
+        "reaccionMecanismo": "Ionización ácida y estabilización resonante (–M / –I)",
+        "naturaleza": "Equilibrio ácido-base desplazado hacia la ionización.",
+        "rupturaIntermediarios": "Ruptura heterolítica del enlace O–H; base conjugada estabilizada por –NO₂ en orto.",
+        "detalleMecanismo": "o-O₂N–C₆H₄–OH + H₂O ⇄ o-O₂N–C₆H₄–O⁻ + H₃O⁺",
+        "reactivosCondiciones": "o-Nitrofenol en medio acuoso",
+        "rolReactivos": "• Sustituyente atractor: –NO₂ en posición orto (retira densidad electrónica del –O⁻).\n• Efecto: Disminuye el pKa y aumenta la constante de acidez Ka.",
+        "reglasObs": "En posición orto o para el grupo –NO₂ actúa tanto por inducción (–I) como por resonancia (–M), siendo mucho más ácido que en posición meta."
+      },
+      "substrates": [
+        {
+          "id": "fenol_nitro_orto",
+          "name": "o-Nitrofenol + H₂O ⇄ Ion o-nitrofenóxido + H₃O⁺",
+          "catalyst": "Efecto atractor –NO₂ en posición orto"
+        }
+      ],
+      "catalysts": [
+        "Efecto atractor –NO₂ en posición orto"
+      ],
+      "stepsBySubstrate": {
+        "fenol_nitro_orto": [
+          {
+            "title": "Paso 1 — Estado Inicial: o-Nitrofenol (–NO₂ en posición orto) + H₂O",
+            "semiStep": "o-O₂N–C₆H₄–OH  +  H₂O",
+            "semiGlobal": "o-O₂N–C₆H₄–OH + H₂O ⇄ o-O₂N–C₆H₄–O⁻ + H₃O⁺",
+            "desc": "El grupo nitro (–NO₂) ubicado en posición orto (adyacente al –OH) ejerce un potente efecto atractor de electrones por inducción y resonancia, polarizando y debilitando el enlace O–H.",
+            "legend": {
+              "breaking": "Polarización fuerte del enlace O–H por el grupo –NO₂ en orto.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Aproximación de la molécula de agua para aceptar el protón ácido."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 295,
+                  "y": 210,
+                  "label": "o-Nitrofenol"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 295,
+                  "y": 100,
+                  "highlight": "#38bdf8",
+                  "label": "Atractor (–M, –I)"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 430,
+                  "y": 155,
+                  "lonePairs": [
+                    "bottom"
+                  ]
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 540,
+                  "y": 155
+                },
+                {
+                  "id": "H2O",
+                  "el": "H₂O",
+                  "x": 695,
+                  "y": 155
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Cesión Facilitada del Protón (Ruptura O–H)",
+            "semiStep": "o-O₂N–C₆H₄–O–H  ↷  H₂O",
+            "semiGlobal": "o-O₂N–C₆H₄–OH + H₂O ⇄ o-O₂N–C₆H₄–O⁻ + H₃O⁺",
+            "desc": "La base (H₂O) abstrae fácilmente el protón H⁺ (enlace O–H rompiéndose en rojo) gracias a que el grupo –NO₂ en orto atrae la densidad electrónica.",
+            "legend": {
+              "breaking": "Ruptura heterolítica del enlace O–H (en rojo punteado).",
+              "forming": "Formación del enlace H–OH₂⁺ (en verde punteado).",
+              "movement": "Transferencia protónica favorecida por el sustituyente nitro en orto."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 295,
+                  "y": 210
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 295,
+                  "y": 100,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 430,
+                  "y": 155,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 565,
+                  "y": 155,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "H2O",
+                  "el": "H₂O",
+                  "x": 695,
+                  "y": 155,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "H1",
+                  "to": "H2O",
+                  "order": 1,
+                  "state": "forming"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 665,
+                  "y1": 142,
+                  "cx": 620,
+                  "cy": 115,
+                  "x2": 585,
+                  "y2": 142,
+                  "label": "Captura H⁺"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Base Conjugada Estabilizada: Ion o-Nitrofenóxido + H₃O⁺",
+            "semiStep": "o-O₂N–C₆H₄–O⁻  +  H₃O⁺",
+            "semiGlobal": "o-O₂N–C₆H₄–OH + H₂O ⇄ o-O₂N–C₆H₄–O⁻ + H₃O⁺",
+            "desc": "El ion o-nitrofenóxido queda altamente estabilizado por deslocalización resonante hacia el grupo –NO₂ en orto, incrementando notablemente la acidez.",
+            "legend": {
+              "breaking": "Enlace O–H disociado.",
+              "forming": "Ion hidronio (H₃O⁺) formado (en verde sólido) y base conjugada estabilizada.",
+              "movement": "Equilibrio desplazado hacia la liberación de H₃O⁺."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 280,
+                  "y": 210,
+                  "label": "Ion o-nitrofenóxido (estabilizado)"
+                },
+                {
+                  "id": "NO2",
+                  "el": "NO₂",
+                  "x": 280,
+                  "y": 100,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 415,
+                  "y": 155,
+                  "charge": "-",
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ],
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "H1",
+                  "el": "H₃O",
+                  "x": 675,
+                  "y": 175,
+                  "charge": "+",
+                  "highlight": "#38bdf8",
+                  "label": "Protón liberado"
+                },
+                {
+                  "id": "H2O",
+                  "el": "H₂O",
+                  "x": 675,
+                  "y": 175,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "NO2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 545,
+                  "y": 183,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_fenol_acidez_metil": {
+      "category": "reacciones",
+      "title": "Disminución de la Acidez del Fenol: Grupo Metilo (–CH₃) en posición orto",
+      "natureBadge": "Efecto Dador de Electrones (+I / Hiperconjugación) en Fenoles",
+      "description": "Al agregar un grupo dador de electrones como el metilo (–CH₃) en posición orto (formando o-cresol), este cede densidad electrónica al anillo e intensifica la carga negativa sobre el oxígeno del ion o-metilfenóxido, desestabilizando la base conjugada y disminuyendo la acidez del fenol (pKa sube de 10,0 a 10,3).",
+      "deltaH": "o-CH₃–C₆H₄–OH + H₂O ⇄ o-CH₃–C₆H₄–O⁻ + H₃O⁺  (Menor acidez)",
+      "meta": {
+        "grupoFuncional": "o-Metilfenol (o-Cresol)",
+        "reaccionMecanismo": "Desestabilización de la base conjugada por efecto dador (+I)",
+        "naturaleza": "Equilibrio desplazado hacia la forma molecular no disociada.",
+        "rupturaIntermediarios": "El grupo –CH₃ en orto cede electrones, dificultando la salida del H⁺.",
+        "detalleMecanismo": "o-CH₃–C₆H₄–OH (pKa = 10,3) es menos ácido que el fenol (pKa = 10,0)",
+        "reactivosCondiciones": "o-Metilfenol (o-cresol) en solución acuosa",
+        "rolReactivos": "• Sustituyente dador: –CH₃ en posición orto (cede densidad electrónica al anillo).\n• Efecto: Desestabiliza al ion fenóxido y reduce la acidez.",
+        "reglasObs": "Un grupo –NH₂ o –Cl en posición meta ejerce efecto inductivo atractor (–I), por lo que en meta aumentan ligeramente la acidez; en cambio, –CH₃ en orto cede electrones y disminuye la acidez."
+      },
+      "substrates": [
+        {
+          "id": "fenol_metil_orto",
+          "name": "o-Metilfenol (o-Cresol) — Disminución de acidez por –CH₃ en orto",
+          "catalyst": "Efecto dador +I del grupo metilo en orto"
+        }
+      ],
+      "catalysts": [
+        "Efecto dador +I del grupo metilo en orto"
+      ],
+      "stepsBySubstrate": {
+        "fenol_metil_orto": [
+          {
+            "title": "Paso 1 — Estructura del o-Metilfenol (–CH₃ en posición orto)",
+            "semiStep": "o-CH₃–C₆H₄–OH",
+            "semiGlobal": "o-CH₃–C₆H₄–OH + H₂O ⇄ o-CH₃–C₆H₄–O⁻ + H₃O⁺  (Menor acidez)",
+            "desc": "El grupo metilo (–CH₃) en posición orto cede densidad electrónica (+I e hiperconjugación) hacia el carbono unido al oxígeno fenólico.",
+            "legend": {
+              "breaking": "Enlace O–H reforzado por el aporte electrónico del –CH₃ en orto.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Empuje electrónico desde el grupo –CH₃ hacia el anillo."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 310,
+                  "y": 210,
+                  "label": "o-Metilfenol (o-Cresol)"
+                },
+                {
+                  "id": "CH3",
+                  "el": "CH₃",
+                  "x": 310,
+                  "y": 100,
+                  "highlight": "#fbbf24",
+                  "label": "Dador (+I)"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 445,
+                  "y": 155,
+                  "lonePairs": [
+                    "bottom"
+                  ]
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 555,
+                  "y": 155
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "CH3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 335,
+                  "y1": 115,
+                  "cx": 380,
+                  "cy": 115,
+                  "x2": 415,
+                  "y2": 142,
+                  "label": "Cede e⁻ (+I)"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Desestabilización del Ion o-Metilfenóxido",
+            "semiStep": "o-CH₃–C₆H₄–O⁻  (Carga negativa intensificada / menos estable)",
+            "semiGlobal": "o-CH₃–C₆H₄–OH + H₂O ⇄ o-CH₃–C₆H₄–O⁻ + H₃O⁺  (Menor acidez)",
+            "desc": "Si pierde el protón, el grupo –CH₃ en orto concentra aún más carga negativa sobre el oxígeno (–O⁻), desestabilizando al anión y haciendo que retenga con más fuerza al H⁺ (disminuye su acidez).",
+            "legend": {
+              "breaking": "Disociación ácida desfavorecida.",
+              "forming": "Base conjugada desestabilizada por repulsión electrónica.",
+              "movement": "Disminución de la fuerza ácida respecto al fenol sin sustituir."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Ph",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 310,
+                  "y": 210,
+                  "label": "Ion o-metilfenóxido (desestabilizado)"
+                },
+                {
+                  "id": "CH3",
+                  "el": "CH₃",
+                  "x": 310,
+                  "y": 100,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 445,
+                  "y": 155,
+                  "charge": "-",
+                  "lonePairs": [
+                    "top",
+                    "bottom"
+                  ],
+                  "highlight": "#ef4444"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Ph",
+                  "to": "CH3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "Ph",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "exam_rxn_mquinona_reduccion": {
+      "category": "reacciones",
+      "title": "Reducción de Quinona → Bencenodiol (Resorcinol / Difenol)",
+      "natureBadge": "Reducción Química de Quinonas a Bencenodioles",
+      "description": "Las quinonas (ciclohexadienodionas) experimentan fácilmente reacciones de reducción (ganancia de 2 H⁺ y 2 e⁻) transformando sus dos grupos carbonilo (C=O) en grupos hidroxilo fenólicos (–OH) y recuperando la aromaticidad del anillo bencénico (bencenodiol).",
+      "deltaH": "Quinona + [H] (2 H⁺ + 2 e⁻) ──► Bencenodiol (Resorcinol)",
+      "meta": {
+        "grupoFuncional": "Bencenodiol (Resorcinol / 1,3-Bencenodiol)",
+        "reaccionMecanismo": "Reducción redox de quinona a difenol aromático",
+        "naturaleza": "Transferencia de 2 electrones y 2 protones (aromatización).",
+        "rupturaIntermediarios": "Reducción de enlaces C=O a enlaces C–OH con regeneración del anillo bencénico.",
+        "detalleMecanismo": "m-Quinona + 2 [H] → Resorcinol (1,3-Bencenodiol)",
+        "reactivosCondiciones": "Quinona + Agente reductor ([H] / NaBH₄ / SnCl₂)",
+        "rolReactivos": "• Sustrato oxidado: Quinona (aceptor de electrones e hidrógenos).\n• Producto reducido: Bencenodiol (resorcinol).",
+        "reglasObs": "La reducción de quinonas regenera el anillo aromático con dos grupos –OH fenólicos."
+      },
+      "substrates": [
+        {
+          "id": "mquinona_resorcinol",
+          "name": "Reducción de m-Quinona → Resorcinol (1,3-Bencenodiol)",
+          "catalyst": "Agente reductor ([H] / 2 H⁺, 2 e⁻)"
+        }
+      ],
+      "catalysts": [
+        "Agente reductor ([H] / 2 H⁺, 2 e⁻)"
+      ],
+      "stepsBySubstrate": {
+        "mquinona_resorcinol": [
+          {
+            "title": "Paso 1 — Estado Inicial: Quinona + Agente Reductor (2 [H])",
+            "semiStep": "Quinona (C₆H₄O₂)  +  2 [H]",
+            "semiGlobal": "m-Quinona + 2 [H] ──► Resorcinol (1,3-Bencenodiol)",
+            "desc": "La quinona presenta dos grupos carbonilo conjugados que aceptan electrones y protones del agente reductor.",
+            "legend": {
+              "breaking": "Aproximación de los hidrógenos reductores a los oxígenos carbonílicos.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Preparación para la reducción de los enlaces C=O."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 335,
+                  "y": 95,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "RING",
+                  "el": "Núcleo Quinona",
+                  "x": 335,
+                  "y": 205,
+                  "label": "m-Quinona"
+                },
+                {
+                  "id": "O3",
+                  "el": "O",
+                  "x": 495,
+                  "y": 205,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "RED",
+                  "el": "2 [H]",
+                  "x": 665,
+                  "y": 150,
+                  "highlight": "#fbbf24",
+                  "label": "Reductor"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "RING",
+                  "to": "O1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "RING",
+                  "to": "O3",
+                  "order": 2,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Reducción de Carbonilos y Aromatización del Anillo",
+            "semiStep": "C=O + [H]  ──►  C–OH (regeneración del anillo bencénico)",
+            "semiGlobal": "m-Quinona + 2 [H] ──► Resorcinol (1,3-Bencenodiol)",
+            "desc": "Se rompen los enlaces π C=O (en rojo) y se forman los nuevos enlaces O–H fenólicos (en verde punteado) recuperando el anillo aromático.",
+            "legend": {
+              "breaking": "Enlaces π (C=O) reduciéndose (en rojo punteado).",
+              "forming": "Enlaces O–H fenólicos en formación (en verde punteado).",
+              "movement": "Aromatización del ciclo de 6 carbonos."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "O1",
+                  "el": "O",
+                  "x": 335,
+                  "y": 95,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "H1",
+                  "el": "H",
+                  "x": 430,
+                  "y": 95,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "RING",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 335,
+                  "y": 205
+                },
+                {
+                  "id": "O3",
+                  "el": "O",
+                  "x": 485,
+                  "y": 205,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "H3",
+                  "el": "H",
+                  "x": 580,
+                  "y": 205,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "RING",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O1",
+                  "to": "H1",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "RING",
+                  "to": "O3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O3",
+                  "to": "H3",
+                  "order": 1,
+                  "state": "forming"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Resorcinol (1,3-Bencenodiol)",
+            "semiStep": "1,3-C₆H₄(OH)₂  (Resorcinol)",
+            "semiGlobal": "m-Quinona + 2 [H] ──► Resorcinol (1,3-Bencenodiol)",
+            "desc": "Se obtiene el difenol aromático resorcinol (1,3-bencenodiol) con ambos grupos hidroxilo consolidados en verde sólido.",
+            "legend": {
+              "breaking": "Reducción completada.",
+              "forming": "Grupos hidroxilo fenólicos consolidados en verde sólido.",
+              "movement": "Anillo bencénico aromático estabilizado."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "O1",
+                  "el": "OH",
+                  "x": 335,
+                  "y": 95,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "RING",
+                  "el": "Ph",
+                  "ring": "phenyl",
+                  "x": 335,
+                  "y": 205,
+                  "label": "Resorcinol (1,3-Bencenodiol)"
+                },
+                {
+                  "id": "O3",
+                  "el": "OH",
+                  "x": 485,
+                  "y": 205,
+                  "highlight": "#10b981"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "RING",
+                  "to": "O1",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "RING",
+                  "to": "O3",
+                  "order": 1,
+                  "state": "new"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
