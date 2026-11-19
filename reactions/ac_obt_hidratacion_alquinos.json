@@ -3,15 +3,15 @@
   "title": "2) Hidratación de Alquinos Terminales e Internos (+ H₂O / H₂SO₄ / HgSO₄ ──► Cetonas)",
   "natureBadge": "Adición Markovnikov + Tautomería • R–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [R–C(OH)=CH₂] ⇄ R–CO–CH₃",
   "deltaH": "ΔH° < 0 (Exotérmica; todos los alquinos distintos del etino producen cetonas)",
-  "description": "Adición de agua siguiendo la regla de Markovnikov sobre alquinos terminales o internos. El grupo –OH entra en el carbono más sustituido generando un enol interno que tautomeriza rápidamente a cetona.",
+  "description": "Adición de agua siguiendo la regla de Markovnikov sobre alquinos terminales o internos:\n1) Se rompe un enlace π del triple enlace C≡C y el enlace H–OH del agua.\n2) El –OH se une al carbono más sustituido (C2) y el –H al carbono terminal (C1), generando un enol interno inestable.\n3) Por tautomería ceto-enólica, el hidrógeno del –OH migra hacia =CH₂ mientras se consolida el doble enlace C=O de la cetona.",
   "meta": {
     "grupoFuncional": "Cetonas (R–CO–R')",
     "reaccionMecanismo": "Adición electrofílica Markovnikov + tautomería ceto-enólica",
-    "naturaleza": "Por etapas vía enol interno.",
-    "rupturaIntermediarios": "Ruptura de π C≡C; intermedio enol R–C(OH)=CH₂.",
-    "detalleMecanismo": "CH₃CH₂–C≡CH + H₂O ──► [CH₃CH₂C(OH)=CH₂] ⇄ CH₃CH₂–CO–CH₃ (2-butanona)",
+    "naturaleza": "Por etapas vía enol interno inestable.",
+    "rupturaIntermediarios": "1) Ruptura de π C≡C y H–OH → intermedio enol R–C(OH)=CH₂; 2) Tautomería O–H → C=O.",
+    "detalleMecanismo": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₃–CH₂–C(OH)=CH₂] ⇄ CH₃–CH₂–CO–CH₃ (2-butanona)",
     "reactivosCondiciones": "Alquino (≥ 3 carbonos) + H₂O / H₂SO₄ / HgSO₄.",
-    "rolReactivos": "• Sustrato: Alquino terminal o interno.\n• Reactivo: H₂O.\n• Catalizadores: H₂SO₄ + HgSO₄.",
+    "rolReactivos": "• Sustrato: Alquino terminal o interno.\n• Reactivo: Agua (H₂O).\n• Catalizadores: H₂SO₄ + HgSO₄.",
     "reglasObs": "• 1-butino → 2-butanona; 4-metil-1-pentino → 4-metil-2-pentanona."
   },
   "substrates": [
@@ -32,43 +32,56 @@
   "stepsBySubstrate": {
     "1butino_2butanona": [
       {
-        "title": "Paso 1 — Adición Markovnikov de H₂O al 1-Butino (Enol)",
-        "semiStep": "CH₃–CH₂–C≡CH + H₂O ──► [CH₃–CH₂–C(OH)=CH₂]",
+        "title": "Estado Inicial Desarrollado: 1-Butino (CH₃–CH₂–C≡C–H) + Agua (H–OH)",
+        "semiStep": "CH₃–CH₂–C≡CH + H–OH",
         "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
-        "desc": "El –OH se une al carbono interno C2 formando un enol inestable.",
+        "desc": "Se observan las dos moléculas iniciales intactas antes de reaccionar: el 1-butino con su triple enlace terminal C2≡C1 y la molécula de agua H–OH.",
         "legend": {
-          "breaking": "Enlace π C≡C.",
-          "forming": "Enlace C2–OH.",
-          "movement": "Adición Markovnikov."
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación de la molécula de agua al triple enlace del 1-butino."
         },
         "scene": {
           "atoms": [
             {
               "id": "Et",
               "el": "CH₃–CH₂",
-              "x": 230,
+              "x": 165,
               "y": 210
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 440,
+              "x": 335,
               "y": 210,
-              "highlight": "#fbbf24",
-              "label": "Enol inestable"
-            },
-            {
-              "id": "OH",
-              "el": "OH",
-              "x": 440,
-              "y": 100,
-              "highlight": "#38bdf8"
+              "label": "1-Butino"
             },
             {
               "id": "C1",
-              "el": "CH₂",
-              "x": 640,
+              "el": "C",
+              "x": 490,
               "y": 210
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 610,
+              "y": 210
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 725,
+              "y": 135,
+              "highlight": "#38bdf8",
+              "label": "Agua (H–OH)"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 845,
+              "y": 135,
+              "highlight": "#38bdf8"
             }
           ],
           "bonds": [
@@ -80,56 +93,414 @@
             },
             {
               "from": "C2",
-              "to": "OH",
+              "to": "C1",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_agua",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 665,
+              "y": 175,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Apertura de Enlace π (C≡C) y Adición Markovnikov de H–OH",
+        "semiStep": "CH₃–CH₂–C≡CH + H–OH (Adición Markovnikov)",
+        "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
+        "desc": "Se rompe un enlace π del triple enlace y el enlace H–OH del agua. Siguiendo la regla de Markovnikov, el –OH se dirige al carbono interno C2 (más sustituido) y el –H al carbono terminal C1.",
+        "legend": {
+          "breaking": "En ROJO punteado: un enlace π del triple enlace C2≡C1 y el enlace H–OH.",
+          "forming": "En VERDE punteado: enlaces C2–OH y C1–H según Markovnikov.",
+          "movement": "Ataque nucleofílico del agua sobre C2 y captura de H⁺ por C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 165,
+              "y": 225
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 340,
+              "y": 225
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 500,
+              "y": 225
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 635,
+              "y": 225
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 340,
+              "y": 105,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 500,
+              "y": 105,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C2",
               "order": 1,
               "state": "normal"
             },
             {
               "from": "C2",
               "to": "C1",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_agua",
+              "to": "H_agua",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 340,
+              "y1": 125,
+              "cx": 315,
+              "cy": 165,
+              "x2": 335,
+              "y2": 205,
+              "label": "Ataque OH (C2)"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 215,
+              "cx": 475,
+              "cy": 165,
+              "x2": 495,
+              "y2": 122,
+              "label": "Captura H⁺ (C1)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Formado: Enol Interno Inestable ([CH₃–CH₂–C(OH)=CH₂])",
+        "semiStep": "[CH₃–CH₂–C(OH)=CH₂] (Enol inestable)",
+        "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
+        "desc": "Se forma el enol interno inestable con el grupo –OH unido al carbono C2 del doble enlace C2=C1.",
+        "legend": {
+          "breaking": "Enlace π C≡C y enlace H–OH ya rotos.",
+          "forming": "Nuevos enlaces C2–OH y C1–H consolidados en el enol.",
+          "movement": "Intermediario listo para experimentar tautomería ceto-enólica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 165,
+              "y": 230
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 340,
+              "y": 230,
+              "highlight": "#fbbf24",
+              "label": "Enol inestable"
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 340,
+              "y": 110,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 510,
+              "y": 230,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 510,
+              "y": 110,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 650,
+              "y": 230
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
               "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
               "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Tautomería Ceto-Enólica ──► 2-Butanona",
-        "semiStep": "CH₃–CH₂–CO–CH₃ (2-Butanona)",
+        "title": "Tautomería Ceto-Enólica: Migración del Protón y Formación del Carbonilo C=O",
+        "semiStep": "[CH₃–CH₂–C(O–H)=CH₂] ⇄ CH₃–CH₂–CO–CH₃",
         "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
-        "desc": "Se obtiene 2-butanona.",
+        "desc": "Se rompe el enlace π C2=C1 y el enlace O–H: el protón migra hacia el carbono terminal C1 (=CH₂ → –CH₃) mientras se forma el doble enlace carbonilo C2=O.",
         "legend": {
-          "breaking": "Enol reorganizado.",
-          "forming": "En VERDE sólido: 2-butanona.",
-          "movement": "Producto cetónico consolidado."
+          "breaking": "En ROJO punteado: enlace π C2=C1 y enlace O–H.",
+          "forming": "En VERDE punteado: enlace C1–H y doble enlace carbonilo C2=O.",
+          "movement": "Reorganización tautomérica hacia la cetona estable."
         },
         "scene": {
           "atoms": [
             {
               "id": "Et",
               "el": "CH₃–CH₂",
-              "x": 230,
+              "x": 165,
+              "y": 225
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 340,
+              "y": 225
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 340,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 430,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 510,
+              "y": 225
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 510,
+              "y": 105
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 655,
+              "y": 225
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_carb",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_carb",
+              "to": "H_mig",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_mig",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 358,
+              "y1": 115,
+              "cx": 400,
+              "cy": 108,
+              "x2": 425,
+              "y2": 135,
+              "label": "Migra H⁺"
+            },
+            {
+              "type": "full",
+              "x1": 425,
+              "y1": 215,
+              "cx": 380,
+              "cy": 175,
+              "x2": 348,
+              "y2": 125,
+              "label": "Forma C=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Butanona (CH₃–CH₂–CO–CH₃)",
+        "semiStep": "CH₃–CH₂–CO–CH₃ (2-Butanona)",
+        "semiGlobal": "CH₃–CH₂–C≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CH₂–CO–CH₃",
+        "desc": "Queda consolidada la 2-butanona (metiletilcetona), con el grupo carbonilo C=O en el carbono C2.",
+        "legend": {
+          "breaking": "Tautomería completada.",
+          "forming": "En VERDE sólido: grupo carbonilo C2=O y grupo metilo terminal CH₃.",
+          "movement": "Producto cetónico estable obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 165,
               "y": 215
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 450,
+              "x": 345,
               "y": 215,
               "highlight": "#10b981",
-              "label": "2-Butanona"
+              "label": "2-Butanona (Cetona)"
             },
             {
-              "id": "O1",
+              "id": "O_carb",
               "el": "O",
-              "x": 450,
-              "y": 100,
+              "x": 345,
+              "y": 95,
               "highlight": "#10b981"
             },
             {
               "id": "C1",
-              "el": "CH₃",
-              "x": 650,
+              "el": "C",
+              "x": 515,
+              "y": 215
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 515,
+              "y": 100
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 515,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 665,
               "y": 215
             }
           ],
@@ -142,13 +513,31 @@
             },
             {
               "from": "C2",
-              "to": "O1",
+              "to": "O_carb",
               "order": 2,
               "state": "new"
             },
             {
               "from": "C2",
               "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_mig",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
               "order": 1,
               "state": "normal"
             }
@@ -158,62 +547,516 @@
     ],
     "4metil1pentino_cetona": [
       {
-        "title": "Paso 1 — Estado Inicial: 4-Metil-1-pentino + H₂O",
-        "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H₂O",
-        "semiGlobal": "4-Metil-1-pentino + H₂O ──► 4-Metil-2-pentanona",
-        "desc": "Hidratación Markovnikov en C2 del 4-metil-1-pentino.",
+        "title": "Estado Inicial Desarrollado: 4-Metil-1-pentino + Agua (H–OH)",
+        "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H–OH",
+        "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
+        "desc": "Se observan las moléculas iniciales intactas: el 4-metil-1-pentino con su triple enlace terminal C2≡C1 y el agua H–OH.",
         "legend": {
-          "breaking": "Enlace π C≡C.",
-          "forming": "Enol en C2.",
-          "movement": "Tautomería ceto-enólica."
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del agua al triple enlace."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Sub",
-              "el": "4-Metil-1-pentino",
-              "x": 310,
-              "y": 195
+              "id": "IsoBu",
+              "el": "(CH₃)₂CH–CH₂",
+              "x": 165,
+              "y": 210
             },
             {
-              "id": "H2O",
-              "el": "H₂O / H⁺ / Hg²⁺",
-              "x": 640,
-              "y": 195,
+              "id": "C2",
+              "el": "C",
+              "x": 355,
+              "y": 210,
+              "label": "4-Metil-1-pentino"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 500,
+              "y": 210
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 615,
+              "y": 210
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 730,
+              "y": 135,
+              "highlight": "#38bdf8",
+              "label": "Agua (H–OH)"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 850,
+              "y": 135,
               "highlight": "#38bdf8"
             }
           ],
-          "bonds": [],
+          "bonds": [
+            {
+              "from": "IsoBu",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_agua",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
           "texts": [
             {
-              "x": 480,
-              "y": 202,
+              "x": 670,
+              "y": 175,
               "text": "+"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: 4-Metil-2-pentanona",
-        "semiStep": "(CH₃)₂CH–CH₂–CO–CH₃",
-        "semiGlobal": "4-Metil-1-pentino + H₂O ──► 4-Metil-2-pentanona",
-        "desc": "Se obtiene 4-metil-2-pentanona (Ejercicio 9).",
+        "title": "Ruptura en Rojo: Apertura de Enlace π (C≡C) y Adición Markovnikov de H–OH",
+        "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H–OH (Adición Markovnikov)",
+        "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
+        "desc": "Se rompe un enlace π del triple enlace C2≡C1 y el enlace H–OH. El –OH ataca al carbono interno C2 y el –H se une al carbono terminal C1.",
         "legend": {
-          "breaking": "Enol tautomerizado.",
-          "forming": "En VERDE sólido: 4-metil-2-pentanona.",
-          "movement": "Producto final obtenido."
+          "breaking": "En ROJO punteado: enlace π C2≡C1 y enlace H–OH.",
+          "forming": "En VERDE punteado: enlaces C2–OH y C1–H.",
+          "movement": "Adición electrofílica Markovnikov."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "4-Metil-2-pentanona",
-              "x": 460,
-              "y": 195,
-              "highlight": "#10b981"
+              "id": "IsoBu",
+              "el": "(CH₃)₂CH–CH₂",
+              "x": 165,
+              "y": 225
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 355,
+              "y": 225
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 510,
+              "y": 225
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 640,
+              "y": 225
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 355,
+              "y": 105,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 510,
+              "y": 105,
+              "highlight": "#fbbf24"
             }
           ],
-          "bonds": []
+          "bonds": [
+            {
+              "from": "IsoBu",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_agua",
+              "to": "H_agua",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 355,
+              "y1": 125,
+              "cx": 330,
+              "cy": 165,
+              "x2": 350,
+              "y2": 205,
+              "label": "Ataque OH (C2)"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 215,
+              "cx": 485,
+              "cy": 165,
+              "x2": 505,
+              "y2": 122,
+              "label": "Captura H⁺ (C1)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Formado: Enol Interno Inestable ([(CH₃)₂CH–CH₂–C(OH)=CH₂])",
+        "semiStep": "[(CH₃)₂CH–CH₂–C(OH)=CH₂] (Enol inestable)",
+        "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
+        "desc": "Se forma el enol interno inestable con el grupo –OH en C2.",
+        "legend": {
+          "breaking": "Enlace π C≡C y enlace H–OH ya rotos.",
+          "forming": "Nuevos enlaces C2–OH y C1–H consolidados.",
+          "movement": "Intermediario listo para tautomería ceto-enólica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "IsoBu",
+              "el": "(CH₃)₂CH–CH₂",
+              "x": 165,
+              "y": 230
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 355,
+              "y": 230,
+              "highlight": "#fbbf24",
+              "label": "Enol inestable"
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 355,
+              "y": 110,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 520,
+              "y": 230,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 520,
+              "y": 110,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 655,
+              "y": 230
+            }
+          ],
+          "bonds": [
+            {
+              "from": "IsoBu",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Tautomería Ceto-Enólica: Migración del Protón y Formación del Carbonilo C=O",
+        "semiStep": "[(CH₃)₂CH–CH₂–C(O–H)=CH₂] ⇄ (CH₃)₂CH–CH₂–CO–CH₃",
+        "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
+        "desc": "El hidrógeno del –OH migra hacia el carbono terminal C1 mientras se forma el doble enlace C2=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace π C2=C1 y enlace O–H.",
+          "forming": "En VERDE punteado: enlace C1–H y doble enlace carbonilo C2=O.",
+          "movement": "Reorganización tautomérica hacia la cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "IsoBu",
+              "el": "(CH₃)₂CH–CH₂",
+              "x": 165,
+              "y": 225
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 355,
+              "y": 225
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 355,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 440,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 520,
+              "y": 225
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 520,
+              "y": 105
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 660,
+              "y": 225
+            }
+          ],
+          "bonds": [
+            {
+              "from": "IsoBu",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_carb",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_carb",
+              "to": "H_mig",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_mig",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 373,
+              "y1": 115,
+              "cx": 412,
+              "cy": 108,
+              "x2": 435,
+              "y2": 135,
+              "label": "Migra H⁺"
+            },
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 215,
+              "cx": 392,
+              "cy": 175,
+              "x2": 363,
+              "y2": 125,
+              "label": "Forma C=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 4-Metil-2-pentanona ((CH₃)₂CH–CH₂–CO–CH₃)",
+        "semiStep": "(CH₃)₂CH–CH₂–CO–CH₃ (4-Metil-2-pentanona)",
+        "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
+        "desc": "Queda consolidada la 4-metil-2-pentanona (Ejercicio 9).",
+        "legend": {
+          "breaking": "Tautomería completada.",
+          "forming": "En VERDE sólido: grupo carbonilo C2=O y grupo metilo terminal CH₃.",
+          "movement": "Producto cetónico estable obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "IsoBu",
+              "el": "(CH₃)₂CH–CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 355,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "4-Metil-2-pentanona"
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 355,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 215
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 525,
+              "y": 100
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 670,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "IsoBu",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_mig",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
         }
       }
     ]
