@@ -141,13 +141,15 @@
               "id": "C2",
               "el": "C",
               "x": 340,
-              "y": 225
+              "y": 225,
+              "label": "C2 (más sustituido) → recibe –OH"
             },
             {
               "id": "C1",
               "el": "C",
               "x": 500,
-              "y": 225
+              "y": 225,
+              "label": "C1 (más H) → recibe –H"
             },
             {
               "id": "H_der",
@@ -228,6 +230,15 @@
               "x2": 495,
               "y2": 122,
               "label": "Captura H⁺ (C1)"
+            }
+          ],
+          "texts": [
+            {
+              "x": 420,
+              "y": 44,
+              "text": "Regla de Markovnikov: –OH al C más sustituido (C2) y –H al terminal (C1)",
+              "size": 14,
+              "color": "#fbbf24"
             }
           ]
         }
@@ -550,7 +561,7 @@
         "title": "Estado Inicial Desarrollado: 4-Metil-1-pentino + Agua (H–OH)",
         "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H–OH",
         "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
-        "desc": "Se observan las moléculas iniciales intactas: el 4-metil-1-pentino con su triple enlace terminal C2≡C1 y el agua H–OH.",
+        "desc": "Se observan las moléculas iniciales intactas: el 4-metil-1-pentino con cada carbono de la cadena separado y su triple enlace terminal C2≡C1, junto con el agua H–OH.",
         "legend": {
           "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
           "forming": "Ningún enlace formado todavía.",
@@ -559,34 +570,52 @@
         "scene": {
           "atoms": [
             {
-              "id": "IsoBu",
-              "el": "(CH₃)₂CH–CH₂",
-              "x": 165,
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 195,
+              "y": 305
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
               "y": 210
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 355,
+              "x": 420,
               "y": 210,
               "label": "4-Metil-1-pentino"
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 500,
+              "x": 545,
               "y": 210
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 615,
+              "x": 650,
               "y": 210
             },
             {
               "id": "OH_agua",
               "el": "OH",
-              "x": 730,
+              "x": 755,
               "y": 135,
               "highlight": "#38bdf8",
               "label": "Agua (H–OH)"
@@ -594,14 +623,32 @@
             {
               "id": "H_agua",
               "el": "H",
-              "x": 850,
+              "x": 865,
               "y": 135,
               "highlight": "#38bdf8"
             }
           ],
           "bonds": [
             {
-              "from": "IsoBu",
+              "from": "Me_izq",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
               "to": "C2",
               "order": 1,
               "state": "normal"
@@ -627,7 +674,7 @@
           ],
           "texts": [
             {
-              "x": 670,
+              "x": 700,
               "y": 175,
               "text": "+"
             }
@@ -635,59 +682,97 @@
         }
       },
       {
-        "title": "Ruptura en Rojo: Apertura de Enlace π (C≡C) y Adición Markovnikov de H–OH",
+        "title": "Ruptura en Rojo: Adición Markovnikov de H–OH sobre el Triple Enlace (C2≡C1)",
         "semiStep": "(CH₃)₂CH–CH₂–C≡CH + H–OH (Adición Markovnikov)",
         "semiGlobal": "4-Metil-1-pentino + H₂O ──(H₂SO₄/HgSO₄)──► 4-Metil-2-pentanona",
-        "desc": "Se rompe un enlace π del triple enlace C2≡C1 y el enlace H–OH. El –OH ataca al carbono interno C2 y el –H se une al carbono terminal C1.",
+        "desc": "Se rompe un enlace π del triple enlace C2≡C1 y el enlace H–OH. Por la Regla de Markovnikov, el –OH se une al carbono interno más sustituido (C2) y el –H al carbono terminal con más hidrógenos (C1).",
         "legend": {
           "breaking": "En ROJO punteado: enlace π C2≡C1 y enlace H–OH.",
-          "forming": "En VERDE punteado: enlaces C2–OH y C1–H.",
-          "movement": "Adición electrofílica Markovnikov."
+          "forming": "En VERDE punteado: enlaces C2–OH y C1–H (Regla de Markovnikov).",
+          "movement": "Adición electrofílica regioselectiva de Markovnikov."
         },
         "scene": {
           "atoms": [
             {
-              "id": "IsoBu",
-              "el": "(CH₃)₂CH–CH₂",
-              "x": 165,
-              "y": 225
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 230
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 195,
+              "y": 230
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 195,
+              "y": 320
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
+              "y": 230
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 355,
-              "y": 225
+              "x": 430,
+              "y": 230,
+              "label": "C2 (más sustituido) → –OH"
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 510,
-              "y": 225
+              "x": 585,
+              "y": 230,
+              "label": "C1 (más H) → –H"
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 640,
-              "y": 225
+              "x": 715,
+              "y": 230
             },
             {
               "id": "OH_agua",
               "el": "OH",
-              "x": 355,
-              "y": 105,
+              "x": 430,
+              "y": 110,
               "highlight": "#38bdf8"
             },
             {
               "id": "H_agua",
               "el": "H",
-              "x": 510,
-              "y": 105,
+              "x": 585,
+              "y": 110,
               "highlight": "#fbbf24"
             }
           ],
           "bonds": [
             {
-              "from": "IsoBu",
+              "from": "Me_izq",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
               "to": "C2",
               "order": 1,
               "state": "normal"
@@ -726,23 +811,32 @@
           "arrows": [
             {
               "type": "full",
-              "x1": 355,
-              "y1": 125,
-              "cx": 330,
-              "cy": 165,
-              "x2": 350,
-              "y2": 205,
-              "label": "Ataque OH (C2)"
+              "x1": 430,
+              "y1": 130,
+              "cx": 405,
+              "cy": 170,
+              "x2": 425,
+              "y2": 210,
+              "label": "Markovnikov: OH → C2"
             },
             {
               "type": "full",
-              "x1": 430,
-              "y1": 215,
-              "cx": 485,
-              "cy": 165,
-              "x2": 505,
-              "y2": 122,
-              "label": "Captura H⁺ (C1)"
+              "x1": 505,
+              "y1": 220,
+              "cx": 560,
+              "cy": 170,
+              "x2": 580,
+              "y2": 127,
+              "label": "Markovnikov: H⁺ → C1"
+            }
+          ],
+          "texts": [
+            {
+              "x": 460,
+              "y": 42,
+              "text": "Regla de Markovnikov: –OH al C más sustituido (C2) y –H al terminal (C1)",
+              "size": 14,
+              "color": "#fbbf24"
             }
           ]
         }
@@ -760,15 +854,33 @@
         "scene": {
           "atoms": [
             {
-              "id": "IsoBu",
-              "el": "(CH₃)₂CH–CH₂",
-              "x": 165,
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 230
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 195,
+              "y": 230
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 195,
+              "y": 320
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
               "y": 230
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 355,
+              "x": 430,
               "y": 230,
               "highlight": "#fbbf24",
               "label": "Enol inestable"
@@ -776,34 +888,52 @@
             {
               "id": "OH_agua",
               "el": "OH",
-              "x": 355,
+              "x": 430,
               "y": 110,
               "highlight": "#38bdf8"
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 520,
+              "x": 585,
               "y": 230,
               "highlight": "#fbbf24"
             },
             {
               "id": "H_agua",
               "el": "H",
-              "x": 520,
+              "x": 585,
               "y": 110,
               "highlight": "#fbbf24"
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 655,
+              "x": 715,
               "y": 230
             }
           ],
           "bonds": [
             {
-              "from": "IsoBu",
+              "from": "Me_izq",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
               "to": "C2",
               "order": 1,
               "state": "normal"
@@ -848,53 +978,89 @@
         "scene": {
           "atoms": [
             {
-              "id": "IsoBu",
-              "el": "(CH₃)₂CH–CH₂",
-              "x": 165,
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 225
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 195,
+              "y": 225
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 195,
+              "y": 315
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
               "y": 225
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 355,
+              "x": 430,
               "y": 225
             },
             {
               "id": "O_carb",
               "el": "O",
-              "x": 355,
+              "x": 430,
               "y": 105,
               "highlight": "#10b981"
             },
             {
               "id": "H_mig",
               "el": "H",
-              "x": 440,
+              "x": 510,
               "y": 145,
               "highlight": "#10b981"
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 520,
+              "x": 585,
               "y": 225
             },
             {
               "id": "H_agua",
               "el": "H",
-              "x": 520,
+              "x": 585,
               "y": 105
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 660,
+              "x": 715,
               "y": 225
             }
           ],
           "bonds": [
             {
-              "from": "IsoBu",
+              "from": "Me_izq",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
               "to": "C2",
               "order": 1,
               "state": "normal"
@@ -939,21 +1105,21 @@
           "arrows": [
             {
               "type": "full",
-              "x1": 373,
+              "x1": 448,
               "y1": 115,
-              "cx": 412,
+              "cx": 485,
               "cy": 108,
-              "x2": 435,
+              "x2": 505,
               "y2": 135,
               "label": "Migra H⁺"
             },
             {
               "type": "full",
-              "x1": 435,
+              "x1": 505,
               "y1": 215,
-              "cx": 392,
+              "cx": 465,
               "cy": 175,
-              "x2": 363,
+              "x2": 438,
               "y2": 125,
               "label": "Forma C=O"
             }
@@ -973,15 +1139,33 @@
         "scene": {
           "atoms": [
             {
-              "id": "IsoBu",
-              "el": "(CH₃)₂CH–CH₂",
-              "x": 165,
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 215
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 195,
+              "y": 215
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 195,
+              "y": 315
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
               "y": 215
             },
             {
               "id": "C2",
               "el": "C",
-              "x": 355,
+              "x": 430,
               "y": 215,
               "highlight": "#10b981",
               "label": "4-Metil-2-pentanona"
@@ -989,39 +1173,57 @@
             {
               "id": "O_carb",
               "el": "O",
-              "x": 355,
+              "x": 430,
               "y": 95,
               "highlight": "#10b981"
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 525,
+              "x": 585,
               "y": 215
             },
             {
               "id": "H_agua",
               "el": "H",
-              "x": 525,
+              "x": 585,
               "y": 100
             },
             {
               "id": "H_mig",
               "el": "H",
-              "x": 525,
+              "x": 585,
               "y": 325,
               "highlight": "#10b981"
             },
             {
               "id": "H_der",
               "el": "H",
-              "x": 670,
+              "x": 715,
               "y": 215
             }
           ],
           "bonds": [
             {
-              "from": "IsoBu",
+              "from": "Me_izq",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
               "to": "C2",
               "order": 1,
               "state": "normal"
