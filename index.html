@@ -2068,6 +2068,13 @@
                 }
             }
 
+            // Normalizar aldehídos semidesarrollados (-CH=O, -C(=O)H, H-CH=O) a formato estándar -CHO / H-CHO
+            formula = formula
+                .replace(/^H[-—]CH=O$/i, 'H—CHO')
+                .replace(/([-—])CH=O(?=$|[^A-Za-z0-9₀-₉])/g, '$1CHO')
+                .replace(/([-—])C\(=O\)H(?=$|[^A-Za-z0-9₀-₉])/g, '$1CHO')
+                .replace(/^O=CH([-—])/g, 'OHC$1');
+
             if (!compoundName) {
                 compoundName = inferNameFromContext(formula, contextHints);
             }
