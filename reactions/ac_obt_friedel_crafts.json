@@ -1,0 +1,204 @@
+{
+  "category": "obtencion",
+  "title": "7) Acilación de Friedel-Crafts (+ R–COCl ó Cl–CHO / AlCl₃ ──► Aldehído o Cetona Aromática)",
+  "natureBadge": "Sustitución Electrofílica Aromática (SEA) • C₆H₆ + R–COCl ──(AlCl₃)──► C₆H₅–CO–R + HCl",
+  "deltaH": "ΔH° < 0 (Exotérmica; sintetiza benzaldehído, benzofenona o acetofenona sin transposiciones)",
+  "description": "Reacción del benceno con un halogenuro de acilo o anhídrido en presencia de cloruro de aluminio anhidro (AlCl₃) (Diap. 14 y 21):\n• Con cloruro de formilo (Cl–CHO / AlCl₃): forma BENZALDEHÍDO.\n• Con cloruro de benzoílo (C₆H₅COCl / AlCl₃): forma BENZOFENONA (difenilcetona).\n• Con cloruro de etanoílo (CH₃COCl / AlCl₃): forma ACETOFENONA.",
+  "meta": {
+    "grupoFuncional": "Benzaldehído y Cetonas aromáticas (Benzofenona, Acetofenona)",
+    "reaccionMecanismo": "Sustitución Electrofílica Aromática (SEA — Acilación de Friedel-Crafts)",
+    "naturaleza": "Por etapas vía ion acilio y complejo σ de arenio.",
+    "rupturaIntermediarios": "Ruptura de C–Cl y C(ar)–H; intermedio complejo σ arenio.",
+    "detalleMecanismo": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl | C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+    "reactivosCondiciones": "Benceno + Halogenuro de acilo (o anhídrido) + AlCl₃ anhidro.",
+    "rolReactivos": "• Sustrato: Benceno (C₆H₆).\n• Reactivos acilantes: Cl–CHO, C₆H₅COCl o CH₃COCl.\n• Catalizador ácido de Lewis: AlCl₃.",
+    "reglasObs": "• Diap. 14: Benceno + Cl–CHO → benzaldehído; Diap. 21 (Ej. 3): Benceno + cloruro de benzoílo → benzofenona."
+  },
+  "substrates": [
+    {
+      "id": "fc_benzaldehido",
+      "name": "Diap. 14: Benceno + Cl–CHO (AlCl₃) ──► Benzaldehído + HCl",
+      "catalyst": "AlCl₃ anhidro"
+    },
+    {
+      "id": "fc_benzofenona",
+      "name": "Ejercicio 3 (Diap. 21): Benceno + Cloruro de Benzoílo (AlCl₃) ──► Benzofenona",
+      "catalyst": "AlCl₃ anhidro"
+    }
+  ],
+  "catalysts": [
+    "AlCl₃ anhidro"
+  ],
+  "stepsBySubstrate": {
+    "fc_benzaldehido": [
+      {
+        "title": "Paso 1 — Estado Inicial: Benceno + Cl–CHO (AlCl₃)",
+        "semiStep": "C₆H₆  +  Cl–CHO  (AlCl₃)",
+        "semiGlobal": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl",
+        "desc": "El anillo aromático ataca al carbono carbonílico formando el complejo σ arenio.",
+        "legend": {
+          "breaking": "Enlace C–Cl.",
+          "forming": "Enlace Ar–CHO.",
+          "movement": "Sustitución electrofílica aromática."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 300,
+              "y": 195,
+              "label": "Benceno"
+            },
+            {
+              "id": "Reag",
+              "el": "Cl–CHO / AlCl₃",
+              "x": 640,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 470,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Benzaldehído + HCl",
+        "semiStep": "C₆H₅–CHO  (Benzaldehído)  +  HCl",
+        "semiGlobal": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl",
+        "desc": "Se obtiene benzaldehído + HCl.",
+        "legend": {
+          "breaking": "Protón del complejo σ eliminado.",
+          "forming": "En VERDE sólido: benzaldehído.",
+          "movement": "Aromaticidad restaurada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 280,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CHO",
+              "el": "CHO",
+              "x": 450,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "HCl",
+              "el": "HCl",
+              "x": 680,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "CHO",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 565,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "fc_benzofenona": [
+      {
+        "title": "Paso 1 — Estado Inicial: Benceno + Cloruro de Benzoílo (AlCl₃)",
+        "semiStep": "C₆H₆  +  C₆H₅–COCl  (AlCl₃)",
+        "semiGlobal": "C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "El cloruro de benzoílo forma el ion acilio frente al benceno.",
+        "legend": {
+          "breaking": "Enlace C–Cl.",
+          "forming": "Sin enlaces nuevos aún.",
+          "movement": "Acilación de Friedel-Crafts."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 300,
+              "y": 195
+            },
+            {
+              "id": "Reag",
+              "el": "C₆H₅–COCl / AlCl₃",
+              "x": 650,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 470,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Benzofenona (Difenilcetona) + HCl",
+        "semiStep": "C₆H₅–CO–C₆H₅  +  HCl",
+        "semiGlobal": "C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "Se obtiene benzofenona (difenilcetona) + HCl.",
+        "legend": {
+          "breaking": "Enlace C–Cl roto.",
+          "forming": "En VERDE sólido: benzofenona.",
+          "movement": "Producto final obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "C₆H₅–CO–C₆H₅",
+              "x": 320,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Benzofenona"
+            },
+            {
+              "id": "HCl",
+              "el": "HCl",
+              "x": 670,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [],
+          "texts": [
+            {
+              "x": 510,
+              "y": 202,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
