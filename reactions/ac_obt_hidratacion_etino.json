@@ -3,7 +3,7 @@
   "title": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)",
   "natureBadge": "Adición + Tautomería Ceto-Enólica • HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₂=CH–OH] ⇄ CH₃–CHO",
   "deltaH": "ΔH° < 0 (Exotérmica; el etino es el ÚNICO alquino que produce un aldehído)",
-  "description": "Adición de agua al triple enlace del etino (acetileno) catalizada por ácido sulfúrico y sulfato mercúrico (Diap. 12):\n1) El triple enlace H–C≡C–H y la molécula de agua H–OH rompen un enlace π y el enlace O–H respectivamente.\n2) Se adicionan H y OH formando el intermediario enol inestable (alcohol vinílico, CH₂=CH–OH).\n3) Por tautomería ceto-enólica, el protón del –OH migra hacia el carbono =CH₂ mientras se forma el doble enlace C=O del etanal (CH₃–CHO).",
+  "description": "Adición de agua al triple enlace del etino (acetileno) catalizada por ácido sulfúrico y sulfato mercúrico:\n1) El triple enlace H–C≡C–H y la molécula de agua H–OH rompen un enlace π y el enlace O–H respectivamente.\n2) Se adicionan H y OH formando el intermediario enol inestable (alcohol vinílico, CH₂=CH–OH).\n3) Por tautomería ceto-enólica, el protón del –OH migra hacia el carbono =CH₂ mientras se forma el doble enlace C=O del etanal (CH₃–CHO).",
   "meta": {
     "grupoFuncional": "Aldehído (Etanal / Acetaldehído, CH₃–CHO)",
     "reaccionMecanismo": "Adición electrofílica catalizada por Hg²⁺/H⁺ seguida de tautomería ceto-enólica",
@@ -17,7 +17,7 @@
   "substrates": [
     {
       "id": "etino_etanal",
-      "name": "Diap. 12: Etino (HC≡CH) + H₂O ──► Etanal",
+      "name": "Etino (HC≡CH) + H₂O ──► Etanal",
       "catalyst": "H₂O / H₂SO₄ / HgSO₄"
     }
   ],
@@ -28,7 +28,7 @@
     "etino_etanal": [
       {
         "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–OH)",
-        "semiStep": "H–C≡C–H  +  H–OH  (Reactivos intactos)",
+        "semiStep": "H–C≡C–H + H–OH (Reactivos intactos)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Se observan las dos moléculas iniciales intactas antes de reaccionar: el etino lineal con su triple enlace C≡C y la molécula de agua H–OH.",
         "legend": {
@@ -116,7 +116,7 @@
       },
       {
         "title": "Ruptura en Rojo: Apertura de un Enlace π (C≡C) y Disociación de H–OH",
-        "semiStep": "H–C≡C–H  +  H–OH  (Ruptura de π C≡C y enlace O–H)",
+        "semiStep": "H–C≡C–H + H–OH (Ruptura de π C≡C y enlace O–H)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Por catálisis de H⁺ y Hg²⁺, se rompe uno de los enlaces π del triple enlace del etino y se disocia el enlace H–OH del agua.",
         "legend": {
@@ -229,7 +229,7 @@
       },
       {
         "title": "Intermediario Formado: Enol Inestable (Alcohol Vinílico, CH₂=CH–OH)",
-        "semiStep": "[CH₂=CH–OH]  (Enol inestable / Alcohol vinílico)",
+        "semiStep": "[CH₂=CH–OH] (Enol inestable / Alcohol vinílico)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Se forma el alcohol vinílico (CH₂=CH–OH). Este enol es termodinámicamente inestable porque el grupo –OH está unido directamente a un carbono con doble enlace C=C.",
         "legend": {
@@ -317,7 +317,7 @@
       },
       {
         "title": "Tautomería Ceto-Enólica: Migración del Protón y Formación del Carbonilo C=O",
-        "semiStep": "[CH₂=CH–O–H]  ⇄  CH₃–CH=O",
+        "semiStep": "[CH₂=CH–O–H] ⇄ CH₃–CH=O",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "En la tautomería ceto-enólica, el enlace π del C=C y el enlace O–H se rompen simultáneamente: el hidrógeno migra hacia el carbono C1 (=CH₂ → –CH₃) mientras se forma el doble enlace C2=O.",
         "legend": {
@@ -442,7 +442,7 @@
       },
       {
         "title": "Producto Consolidado: Etanal / Acetaldehído (CH₃–CHO)",
-        "semiStep": "CH₃–CH=O  (Etanal)",
+        "semiStep": "CH₃–CH=O (Etanal)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Queda consolidado el etanal (acetaldehído, CH₃–CHO), único aldehído obtenido por hidratación de un alquino.",
         "legend": {
