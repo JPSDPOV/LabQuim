@@ -45,6 +45,22 @@
         {
           "value": "rxn_59",
           "label": "Reacciones 59 (Apertura de epóxidos con reactivos de Grignard)"
+        },
+        {
+          "value": "nom_24",
+          "label": "Nomenclatura 24 (Éter sustituido — IUPAC)"
+        },
+        {
+          "value": "nom_25",
+          "label": "Nomenclatura 25 (Anisol y Fenetol)"
+        },
+        {
+          "value": "nom_26",
+          "label": "Nomenclatura 26 (Epóxidos — Oxiranos)"
+        },
+        {
+          "value": "nom_51",
+          "label": "Nomenclatura 51 (Tetrahidrofurano — THF)"
         }
       ],
       "test": [
@@ -107,6 +123,18 @@
         {
           "value": "rxn_56",
           "label": "Reacciones 56 (Identificación de fenoles con FeCl₃)"
+        },
+        {
+          "value": "nom_21",
+          "label": "Nomenclatura 21 (Ácido pícrico — 2,4,6-Trinitrofenol)"
+        },
+        {
+          "value": "nom_22",
+          "label": "Nomenclatura 22 (Cresoles — o-, m- y p-Metilfenol)"
+        },
+        {
+          "value": "nom_23",
+          "label": "Nomenclatura 23 (Catecol, Resorcinol e Hidroquinona)"
         }
       ],
       "test": []
@@ -268,6 +296,22 @@
         {
           "value": "rxn_112",
           "label": "Reacciones 112 (Síntesis de Corey-House — Dialquilcupratos de litio)"
+        },
+        {
+          "value": "nom_01",
+          "label": "Nomenclatura 1 (Alcano ramificado — Pág. 110)"
+        },
+        {
+          "value": "nom_02",
+          "label": "Nomenclatura 2 (Alcano con sustituyentes etilo e isopropilo)"
+        },
+        {
+          "value": "nom_03",
+          "label": "Nomenclatura 3 (3-Etil-2,4-dimetilhexano)"
+        },
+        {
+          "value": "nom_57",
+          "label": "Nomenclatura 57 (Ítem con clave Z en grilla oficial)"
         }
       ],
       "test": []
@@ -309,6 +353,14 @@
         {
           "value": "rxn_10",
           "label": "Reacciones 10 (Cloración del ciclohexano)"
+        },
+        {
+          "value": "nom_04",
+          "label": "Nomenclatura 4 (Cicloalcano trisustituido)"
+        },
+        {
+          "value": "nom_05",
+          "label": "Nomenclatura 5 (Cicloalcano como sustituyente — 2-Ciclopentilhexano)"
         }
       ],
       "test": []
@@ -410,6 +462,26 @@
         {
           "value": "rxn_111",
           "label": "Reacciones 111 (Polimerización por adición de alquenos)"
+        },
+        {
+          "value": "nom_06",
+          "label": "Nomenclatura 6 (Alqueno ramificado — Prioridad del doble enlace)"
+        },
+        {
+          "value": "nom_07",
+          "label": "Nomenclatura 7 (Cicloalqueno sustituido — 3-Metilciclohexeno)"
+        },
+        {
+          "value": "nom_08",
+          "label": "Nomenclatura 8 (Alcadieno ramificado — Isopreno)"
+        },
+        {
+          "value": "nom_09",
+          "label": "Nomenclatura 9 (Alqueno con estereoquímica E/Z)"
+        },
+        {
+          "value": "nom_58",
+          "label": "Nomenclatura 58 (Ítem con clave Z en grilla oficial)"
         }
       ],
       "test": []
@@ -455,6 +527,14 @@
         {
           "value": "rxn_114",
           "label": "Reacciones 114 (Hidrohalogenación completa de alquinos)"
+        },
+        {
+          "value": "nom_10",
+          "label": "Nomenclatura 10 (Alquino ramificado)"
+        },
+        {
+          "value": "nom_11",
+          "label": "Nomenclatura 11 (Alquenino — Doble y triple enlace)"
         }
       ],
       "test": []
@@ -520,6 +600,26 @@
         {
           "value": "rxn_34",
           "label": "Reacciones 34 (Nitración del nitrobenceno)"
+        },
+        {
+          "value": "nom_12",
+          "label": "Nomenclatura 12 (Aromático disustituido — p-Nitrotolueno)"
+        },
+        {
+          "value": "nom_13",
+          "label": "Nomenclatura 13 (Aromático trisustituido — TNT)"
+        },
+        {
+          "value": "nom_14",
+          "label": "Nomenclatura 14 (Mesitileno)"
+        },
+        {
+          "value": "nom_15",
+          "label": "Nomenclatura 15 (Estireno)"
+        },
+        {
+          "value": "nom_56",
+          "label": "Nomenclatura 56 (Numeración del Naftaleno)"
         }
       ],
       "test": []
@@ -573,6 +673,14 @@
         {
           "value": "rxn_42",
           "label": "Reacciones 42 (Reacción con amoniaco — Síntesis de aminas)"
+        },
+        {
+          "value": "nom_16",
+          "label": "Nomenclatura 16 (Halogenuro de alquilo ramificado)"
+        },
+        {
+          "value": "nom_17",
+          "label": "Nomenclatura 17 (Halogenuro alílico / insaturado)"
         }
       ],
       "test": []
@@ -690,6 +798,22 @@
         {
           "value": "rxn_115",
           "label": "Reacciones 115 (Reacción de alcoholes con ácidos hidrácidos HX)"
+        },
+        {
+          "value": "nom_18",
+          "label": "Nomenclatura 18 (Alcohol ramificado — Prioridad del –OH)"
+        },
+        {
+          "value": "nom_19",
+          "label": "Nomenclatura 19 (Alcohol insaturado — Enol)"
+        },
+        {
+          "value": "nom_20",
+          "label": "Nomenclatura 20 (Diol — Etilenglicol y Propilenglicol)"
+        },
+        {
+          "value": "nom_59",
+          "label": "Nomenclatura 59 (Ítem con clave Z en grilla oficial)"
         }
       ],
       "test": []
@@ -759,6 +883,22 @@
         {
           "value": "rxn_100",
           "label": "Reacciones 100 (Acilación de anilina — Protección del grupo amino)"
+        },
+        {
+          "value": "nom_28",
+          "label": "Nomenclatura 28 (Amina secundaria/terciaria N-sustituida)"
+        },
+        {
+          "value": "nom_29",
+          "label": "Nomenclatura 29 (Toluidinas y Anilinas sustituidas)"
+        },
+        {
+          "value": "nom_50",
+          "label": "Nomenclatura 50 (Heterociclos aromáticos: Piridina, Pirrol, Furano, Tiofeno)"
+        },
+        {
+          "value": "nom_52",
+          "label": "Nomenclatura 52 (Piridina y Pirimidina)"
         }
       ],
       "test": []
@@ -772,6 +912,10 @@
         {
           "value": "rxn_60",
           "label": "Reacciones 60 (Oxidación suave de tioles a disulfuros)"
+        },
+        {
+          "value": "nom_27",
+          "label": "Nomenclatura 27 (Tioles y grupo mercapto)"
         }
       ],
       "test": []
@@ -837,6 +981,18 @@
         {
           "value": "rxn_116",
           "label": "Reacciones 116 (Reacción de Wittig — Síntesis de alquenos)"
+        },
+        {
+          "value": "nom_30",
+          "label": "Nomenclatura 30 (Aldehído ramificado — C1 siempre es –CHO)"
+        },
+        {
+          "value": "nom_31",
+          "label": "Nomenclatura 31 (Grupo formilo como sustituyente — Ácido 3-formilpropanoico)"
+        },
+        {
+          "value": "nom_32",
+          "label": "Nomenclatura 32 (Acroleína — Propenal)"
         }
       ],
       "test": []
@@ -870,6 +1026,26 @@
         {
           "value": "rxn_117",
           "label": "Reacciones 117 (Halogenación α de cetonas)"
+        },
+        {
+          "value": "nom_33",
+          "label": "Nomenclatura 33 (Cetona insaturada — Óxido de mesitilo)"
+        },
+        {
+          "value": "nom_34",
+          "label": "Nomenclatura 34 (Grupo oxo- como sustituyente en cetoácidos)"
+        },
+        {
+          "value": "nom_35",
+          "label": "Nomenclatura 35 (Benzofenona y Acetofenona)"
+        },
+        {
+          "value": "nom_55",
+          "label": "Nomenclatura 55 (1,4-Benzoquinona)"
+        },
+        {
+          "value": "nom_60",
+          "label": "Nomenclatura 60 (Ítem con clave Z en grilla oficial)"
         }
       ],
       "test": []
@@ -923,6 +1099,38 @@
         {
           "value": "rxn_119",
           "label": "Reacciones 119 (Descarboxilación térmica de β-cetoácidos y ácidos malónicos)"
+        },
+        {
+          "value": "nom_36",
+          "label": "Nomenclatura 36 (Ácidos dicarboxílicos — Regla mnemotécnica OMSGAP)"
+        },
+        {
+          "value": "nom_37",
+          "label": "Nomenclatura 37 (Ácidos grasos saturados e insaturados)"
+        },
+        {
+          "value": "nom_38",
+          "label": "Nomenclatura 38 (Hidroxiácidos — Ácido cítrico y málico)"
+        },
+        {
+          "value": "nom_39",
+          "label": "Nomenclatura 39 (Sales de ácidos orgánicos)"
+        },
+        {
+          "value": "nom_46",
+          "label": "Nomenclatura 46 (Compuesto polifuncional con –COOH, –OH y –NH₂)"
+        },
+        {
+          "value": "nom_47",
+          "label": "Nomenclatura 47 (Grupo ciano- como sustituyente en ácidos)"
+        },
+        {
+          "value": "nom_53",
+          "label": "Nomenclatura 53 (Ácido ftálico, isoftálico y tereftálico)"
+        },
+        {
+          "value": "nom_54",
+          "label": "Nomenclatura 54 (Ácido cinámico)"
         }
       ],
       "test": []
@@ -988,6 +1196,42 @@
         {
           "value": "rxn_90",
           "label": "Reacciones 90 (Reducción de nitrilos a aminas primarias)"
+        },
+        {
+          "value": "nom_40",
+          "label": "Nomenclatura 40 (Ésteres — Parte ácida + parte alcohólica)"
+        },
+        {
+          "value": "nom_41",
+          "label": "Nomenclatura 41 (Salicilato de metilo)"
+        },
+        {
+          "value": "nom_42",
+          "label": "Nomenclatura 42 (Amidas N-sustituidas — Acetanilida)"
+        },
+        {
+          "value": "nom_43",
+          "label": "Nomenclatura 43 (Anhídridos simétricos y mixtos)"
+        },
+        {
+          "value": "nom_44",
+          "label": "Nomenclatura 44 (Halogenuros de acilo)"
+        },
+        {
+          "value": "nom_45",
+          "label": "Nomenclatura 45 (Nitrilos — Numeración incluye al carbono del –CN)"
+        },
+        {
+          "value": "nom_48",
+          "label": "Nomenclatura 48 (Grupo alcoxicarbonil- en polifuncionales)"
+        },
+        {
+          "value": "nom_49",
+          "label": "Nomenclatura 49 (Grupo carbamoil- en polifuncionales)"
+        },
+        {
+          "value": "nom_61",
+          "label": "Nomenclatura 61 (Ítem con clave Z en grilla oficial)"
         }
       ],
       "test": []
@@ -1025,6 +1269,14 @@
         {
           "value": "rxn_105",
           "label": "Reacciones 105 (Mutarrotación — Ítem con sello)"
+        },
+        {
+          "value": "bio_01",
+          "label": "Biomoléculas 1 (Clasificación de monosacáridos — Aldohexosas y Cetohexosas)"
+        },
+        {
+          "value": "bio_02",
+          "label": "Biomoléculas 2 (Enlaces glucosídicos en polisacáridos: Almidón, Glucógeno y Celulosa)"
         }
       ],
       "test": []
@@ -1042,6 +1294,10 @@
         {
           "value": "rxn_107",
           "label": "Reacciones 107 (Índice de yodo en lípidos)"
+        },
+        {
+          "value": "bio_03",
+          "label": "Biomoléculas 3 (Fosfolípidos — Fosfatidilcolina / Lecitina)"
         }
       ],
       "test": []
@@ -1063,6 +1319,10 @@
         {
           "value": "rxn_110",
           "label": "Reacciones 110 (Reacción de Biuret)"
+        },
+        {
+          "value": "bio_04",
+          "label": "Biomoléculas 4 (Aminoácidos esenciales, glicina aquiral y cisteína)"
         }
       ],
       "test": []
@@ -9215,6 +9475,2215 @@
       "correct": "b",
       "feedbackCorrect": "Correcto: El estado de transición cíclico de 6 miembros facilita la descarboxilación térmica de β-cetoácidos (→ cetonas) y diácidos 1,3 (→ monoácidos).",
       "feedbackWrong": "Incorrecto. La respuesta correcta es b) Una cetona y un ácido monocarboxílico."
+    },
+    "nom_01": {
+      "unit": "alcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 1 (Alcano ramificado — Pág. 110)",
+      "badgeLabel": "Nomenclatura 1 (Alcano ramificado — Pág. 110)",
+      "topic": "Nomenclatura • Alcanos",
+      "statement": "1. [Estructura parcialmente cubierta por marca de agua] El nombre sistemático IUPAC del alcano ramificado mostrado en el ítem 1 es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-etil-4-metilpentano"
+        },
+        {
+          "letter": "b",
+          "text": "2,4-dimetilhexano"
+        },
+        {
+          "letter": "c",
+          "text": "3,5-dimetilhexano"
+        },
+        {
+          "letter": "d",
+          "text": "2-metil-4-etilpentano"
+        },
+        {
+          "letter": "e",
+          "text": "octano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La cadena continua más larga tiene 6 carbonos (hexano) con sustituyentes metilo en C2 y C4: 2,4-dimetilhexano.",
+      "feedbackWrong": "Incorrecto. La clave correcta es b) 2,4-dimetilhexano.",
+      "semiFormula": "CH3-CH(CH3)-CH2-CH(CH3)-CH2-CH3",
+      "ambiguousNote": "Ítem 1 de Nomenclatura (pág. 110): sello 'Univ. Elson González' sobre los trazos de la cadena; confirmar ramificaciones exactas."
+    },
+    "nom_02": {
+      "unit": "alcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 2 (Alcano con sustituyentes etilo e isopropilo)",
+      "badgeLabel": "Nomenclatura 2 (Alcano con sustituyentes etilo e isopropilo)",
+      "topic": "Nomenclatura • Alcanos",
+      "statement": "2. [Estructura parcialmente cubierta por sello] Según las reglas IUPAC, al numerar una cadena de alcano donde dos extremos equidistan de los primeros sustituyentes:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Se da el localizador más bajo al sustituyente que aparece primero en orden alfabético (ej. 3-etil-5-metilheptano)"
+        },
+        {
+          "letter": "b",
+          "text": "Se numera siempre de izquierda a derecha"
+        },
+        {
+          "letter": "c",
+          "text": "Se da prioridad al grupo metilo sobre el etilo"
+        },
+        {
+          "letter": "d",
+          "text": "Los prefijos di-, tri- se alfabetizan antes de 'etil'"
+        },
+        {
+          "letter": "e",
+          "text": "Se elige la cadena con menos sustituyentes"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto: Ante igualdad de localizadores desde ambos extremos, decide el orden alfabético (etil antes que metil).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "semiFormula": "CH3-CH2-CH(CH2CH3)-CH2-CH(CH3)-CH2-CH3",
+      "ambiguousNote": "Ítem 2 de Nomenclatura (pág. 110): fórmula topológica parcialmente cubierta por marca de agua."
+    },
+    "nom_03": {
+      "unit": "alcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 3 (3-Etil-2,4-dimetilhexano)",
+      "badgeLabel": "Nomenclatura 3 (3-Etil-2,4-dimetilhexano)",
+      "topic": "Nomenclatura • Alcanos",
+      "statement": "3. El nombre IUPAC del compuesto CH₃–CH(CH₃)–CH(CH₂CH₃)–CH(CH₃)–CH₂–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "4-etil-3,5-dimetilhexano"
+        },
+        {
+          "letter": "b",
+          "text": "3-etil-2,4-dimetilhexano"
+        },
+        {
+          "letter": "c",
+          "text": "2,4-dimetil-3-etilhexano"
+        },
+        {
+          "letter": "d",
+          "text": "3-isopropil-4-metilhexano"
+        },
+        {
+          "letter": "e",
+          "text": "3-etil-2,4-dimetilpentano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Numerando desde la izquierda se obtienen los localizadores más bajos (2,3,4 vs 3,4,5) y se ordena alfabéticamente: 3-etil-2,4-dimetilhexano.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-etil-2,4-dimetilhexano.",
+      "semiFormula": "CH3-CH(CH3)-CH(CH2CH3)-CH(CH3)-CH2-CH3"
+    },
+    "nom_04": {
+      "unit": "cicloalcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 4 (Cicloalcano trisustituido)",
+      "badgeLabel": "Nomenclatura 4 (Cicloalcano trisustituido)",
+      "topic": "Nomenclatura • Cicloalcanos",
+      "statement": "4. [Estructura parcialmente cubierta por sello] Para nombrar el anillo de ciclohexano con sustituyentes en C1, C2 y C4 (1-etil-2,4-dimetilciclohexano):",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-etil-2,4-dimetilciclohexano"
+        },
+        {
+          "letter": "b",
+          "text": "4-etil-1,3-dimetilciclohexano"
+        },
+        {
+          "letter": "c",
+          "text": "2-etil-1,5-dimetilciclohexano"
+        },
+        {
+          "letter": "d",
+          "text": "1,3-dimetil-4-etilciclohexano"
+        },
+        {
+          "letter": "e",
+          "text": "1-etil-4,6-dimetilciclohexano"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto: La secuencia (1,2,4) da la combinación de localizadores más baja y asigna C1 al etilo.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a) 1-etil-2,4-dimetilciclohexano.",
+      "semiFormula": "CICLO-6-1-CH2CH3-2-CH3-4-CH3",
+      "ambiguousNote": "Ítem 4 de Nomenclatura (pág. 110): sello encima del ciclohexano; verificar posiciones exactas."
+    },
+    "nom_05": {
+      "unit": "cicloalcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 5 (Cicloalcano como sustituyente — 2-Ciclopentilhexano)",
+      "badgeLabel": "Nomenclatura 5 (Cicloalcano como sustituyente — 2-Ciclopentilhexano)",
+      "topic": "Nomenclatura • Cicloalcanos",
+      "statement": "5. Cuando una cadena acíclica tiene mayor número de carbonos que el anillo unido a ella (ej. anillo de 5 carbonos unido al C2 de una cadena de 6 carbonos), el compuesto se nombra como:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-hexilciclopentano"
+        },
+        {
+          "letter": "b",
+          "text": "2-ciclopentilhexano"
+        },
+        {
+          "letter": "c",
+          "text": "1-metilpentilciclopentano"
+        },
+        {
+          "letter": "d",
+          "text": "ciclopentilciclohexano"
+        },
+        {
+          "letter": "e",
+          "text": "5-ciclopentilhexano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La cadena de 6 carbonos es principal (hexano) y el anillo de 5 es sustituyente (2-ciclopentilhexano).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-ciclopentilhexano."
+    },
+    "nom_06": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 6 (Alqueno ramificado — Prioridad del doble enlace)",
+      "badgeLabel": "Nomenclatura 6 (Alqueno ramificado — Prioridad del doble enlace)",
+      "topic": "Nomenclatura • Alquenos",
+      "statement": "6. [Estructura parcialmente cubierta por sello] En la nomenclatura IUPAC de alquenos ramificados (ej. 4-metil-2-penteno), la cadena principal se numera de modo que:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "El doble enlace C=C reciba el localizador más bajo posible, por encima de los grupos alquilo"
+        },
+        {
+          "letter": "b",
+          "text": "Los grupos alquilo reciban el localizador más bajo"
+        },
+        {
+          "letter": "c",
+          "text": "Se elija la cadena más larga aunque no contenga el doble enlace"
+        },
+        {
+          "letter": "d",
+          "text": "El doble enlace quede siempre al final"
+        },
+        {
+          "letter": "e",
+          "text": "Se numere siempre desde el extremo más ramificado"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto: Las insaturaciones tienen prioridad sobre los sustituyentes alquilo para recibir los localizadores más bajos.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "semiFormula": "CH3-CH=CH-CH(CH3)-CH3",
+      "ambiguousNote": "Ítem 6 de Nomenclatura (pág. 110): fórmula del alqueno parcialmente cubierta por marca de agua."
+    },
+    "nom_07": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 7 (Cicloalqueno sustituido — 3-Metilciclohexeno)",
+      "badgeLabel": "Nomenclatura 7 (Cicloalqueno sustituido — 3-Metilciclohexeno)",
+      "topic": "Nomenclatura • Cicloalquenos",
+      "statement": "7. En un cicloalqueno monosustituido donde el grupo metilo está en el carbono adyacente al doble enlace, los carbonos del doble enlace son obligatoriamente C1 y C2, por lo que su nombre es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-metilciclohexeno"
+        },
+        {
+          "letter": "b",
+          "text": "3-metilciclohexeno"
+        },
+        {
+          "letter": "c",
+          "text": "2-metilciclohexeno"
+        },
+        {
+          "letter": "d",
+          "text": "6-metilciclohexeno"
+        },
+        {
+          "letter": "e",
+          "text": "4-metilciclohexeno"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El doble enlace ocupa C1=C2 atravesando el enlace múltiple hacia el sustituyente más cercano (C3).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-metilciclohexeno.",
+      "semiFormula": "CICLOENO-6-3-CH3"
+    },
+    "nom_08": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 8 (Alcadieno ramificado — Isopreno)",
+      "badgeLabel": "Nomenclatura 8 (Alcadieno ramificado — Isopreno)",
+      "topic": "Nomenclatura • Dienos",
+      "statement": "8. El nombre sistemático IUPAC del isopreno (CH₂=C(CH₃)–CH=CH₂) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "3-metil-1,3-butadieno"
+        },
+        {
+          "letter": "b",
+          "text": "2-metil-1,3-butadieno"
+        },
+        {
+          "letter": "c",
+          "text": "2-metil-2,3-butadieno"
+        },
+        {
+          "letter": "d",
+          "text": "1-metil-1,3-butadieno"
+        },
+        {
+          "letter": "e",
+          "text": "pentadieno"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Numerando desde la izquierda los dobles enlaces quedan en 1,3 y el metilo en C2: 2-metil-1,3-butadieno.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-metil-1,3-butadieno.",
+      "semiFormula": "CH2=C(CH3)-CH=CH2"
+    },
+    "nom_09": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 9 (Alqueno con estereoquímica E/Z)",
+      "badgeLabel": "Nomenclatura 9 (Alqueno con estereoquímica E/Z)",
+      "topic": "Nomenclatura • Sistema E/Z",
+      "statement": "9. [Estructura parcialmente cubierta por sello] Para el compuesto (E)-3-metil-2-penteno, el grupo de mayor prioridad en C2 (–CH₃) y en C3 (–CH₂CH₃) están:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Del mismo lado (Z)"
+        },
+        {
+          "letter": "b",
+          "text": "En lados opuestos del doble enlace (E)"
+        },
+        {
+          "letter": "c",
+          "text": "En conformación silla"
+        },
+        {
+          "letter": "d",
+          "text": "En un anillo aromático"
+        },
+        {
+          "letter": "e",
+          "text": "En el mismo carbono"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: (E) (entgegen = opuestos) indica que las prioridades CIP en C2 y C3 se encuentran en lados opuestos.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) En lados opuestos del doble enlace (E).",
+      "semiFormula": "E-CH3-CH=C(CH2CH3)-CH3",
+      "ambiguousNote": "Ítem 9 de Nomenclatura (pág. 111): fórmula estereoquímica parcialmente tapada por el sello."
+    },
+    "nom_10": {
+      "unit": "alquinos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 10 (Alquino ramificado)",
+      "badgeLabel": "Nomenclatura 10 (Alquino ramificado)",
+      "topic": "Nomenclatura • Alquinos",
+      "statement": "10. El nombre IUPAC del compuesto HC≡C–CH(CH₃)–CH₂–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "3-metil-4-pentino"
+        },
+        {
+          "letter": "b",
+          "text": "3-metil-1-pentino"
+        },
+        {
+          "letter": "c",
+          "text": "2-etil-3-butino"
+        },
+        {
+          "letter": "d",
+          "text": "3-metilpentino"
+        },
+        {
+          "letter": "e",
+          "text": "4-metil-1-pentino"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El triple enlace recibe el localizador 1 (1-pentino) y el sustituyente metilo queda en C3.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-metil-1-pentino.",
+      "semiFormula": "HC≡C-CH(CH3)-CH2-CH3"
+    },
+    "nom_11": {
+      "unit": "alquinos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 11 (Alquenino — Doble y triple enlace)",
+      "badgeLabel": "Nomenclatura 11 (Alquenino — Doble y triple enlace)",
+      "topic": "Nomenclatura • Eninos",
+      "statement": "11. [Estructura parcialmente cubierta por sello] El nombre IUPAC del compuesto CH₂=CH–CH₂–C≡CH es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "4-penten-1-ino"
+        },
+        {
+          "letter": "b",
+          "text": "1-penten-4-ino (ante igualdad de localizadores, el doble enlace tiene preferencia sobre el triple)"
+        },
+        {
+          "letter": "c",
+          "text": "1-pentin-4-eno"
+        },
+        {
+          "letter": "d",
+          "text": "2-penten-4-ino"
+        },
+        {
+          "letter": "e",
+          "text": "pentadiino"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Cuando doble y triple enlace equidistan de los extremos (1 y 4), el doble enlace recibe el número más bajo: 1-penten-4-ino.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 1-penten-4-ino.",
+      "semiFormula": "CH2=CH-CH2-C≡CH",
+      "ambiguousNote": "Ítem 11 de Nomenclatura (pág. 111): fórmula de enino cubierta parcialmente por sello."
+    },
+    "nom_12": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 12 (Aromático disustituido — p-Nitrotolueno)",
+      "badgeLabel": "Nomenclatura 12 (Aromático disustituido — p-Nitrotolueno)",
+      "topic": "Nomenclatura • Aromáticos",
+      "statement": "12. El compuesto aromático con un grupo metilo en C1 y un grupo nitro en C4 se denomina:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "o-nitrotolueno"
+        },
+        {
+          "letter": "b",
+          "text": "p-nitrotolueno (1-metil-4-nitrobenceno)"
+        },
+        {
+          "letter": "c",
+          "text": "m-nitrotolueno"
+        },
+        {
+          "letter": "d",
+          "text": "p-nitroanilina"
+        },
+        {
+          "letter": "e",
+          "text": "2,4-dinitrotolueno"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Las posiciones 1,4 en el benceno corresponden al prefijo para (p-).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) p-nitrotolueno.",
+      "semiFormula": "AROM-1-CH3-4-NO2"
+    },
+    "nom_13": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 13 (Aromático trisustituido — TNT)",
+      "badgeLabel": "Nomenclatura 13 (Aromático trisustituido — TNT)",
+      "topic": "Nomenclatura • Aromáticos",
+      "statement": "13. El nombre sistemático IUPAC del explosivo TNT es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1,3,5-trinitrobenceno"
+        },
+        {
+          "letter": "b",
+          "text": "2,4,6-trinitrotolueno (2-metil-1,3,5-trinitrobenceno)"
+        },
+        {
+          "letter": "c",
+          "text": "2,4,6-trinitrofenol"
+        },
+        {
+          "letter": "d",
+          "text": "1,2,3-trinitrotolueno"
+        },
+        {
+          "letter": "e",
+          "text": "p-trinitrotolueno"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El tolueno asigna C1 al grupo –CH₃ y los tres grupos nitro quedan en posiciones 2, 4 y 6.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2,4,6-trinitrotolueno.",
+      "semiFormula": "AROM-1-CH3-2,4,6-NO2"
+    },
+    "nom_14": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 14 (Mesitileno)",
+      "badgeLabel": "Nomenclatura 14 (Mesitileno)",
+      "topic": "Nomenclatura • Derivados del Benceno",
+      "statement": "14. El 1,3,5-trimetilbenceno recibe el nombre común aceptado por la IUPAC de:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cumeno"
+        },
+        {
+          "letter": "b",
+          "text": "Mesitileno"
+        },
+        {
+          "letter": "c",
+          "text": "Estireno"
+        },
+        {
+          "letter": "d",
+          "text": "Xileno"
+        },
+        {
+          "letter": "e",
+          "text": "Naftaleno"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El 1,3,5-trimetilbenceno se conoce como mesitileno.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Mesitileno.",
+      "semiFormula": "AROM-1,3,5-CH3"
+    },
+    "nom_15": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 15 (Estireno)",
+      "badgeLabel": "Nomenclatura 15 (Estireno)",
+      "topic": "Nomenclatura • Derivados del Benceno",
+      "statement": "15. El etenilbenceno o vinilbenceno (C₆H₅–CH=CH₂) se denomina comúnmente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cumeno"
+        },
+        {
+          "letter": "b",
+          "text": "Estireno"
+        },
+        {
+          "letter": "c",
+          "text": "Anisol"
+        },
+        {
+          "letter": "d",
+          "text": "Tolueno"
+        },
+        {
+          "letter": "e",
+          "text": "Fenetol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: C₆H₅–CH=CH₂ es el estireno (monómero del poliestireno).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Estireno.",
+      "semiFormula": "AROM-1-CH=CH2"
+    },
+    "nom_16": {
+      "unit": "haluros",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 16 (Halogenuro de alquilo ramificado)",
+      "badgeLabel": "Nomenclatura 16 (Halogenuro de alquilo ramificado)",
+      "topic": "Nomenclatura • Halogenuros",
+      "statement": "16. [Estructura parcialmente cubierta por sello] El nombre IUPAC de CH₃–CH(Cl)–CH(CH₃)–CH₂–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "4-cloro-3-metilpentano"
+        },
+        {
+          "letter": "b",
+          "text": "2-cloro-3-metilpentano"
+        },
+        {
+          "letter": "c",
+          "text": "3-metil-2-cloropentano"
+        },
+        {
+          "letter": "d",
+          "text": "2-cloro-3-etilbutano"
+        },
+        {
+          "letter": "e",
+          "text": "1-cloro-2-metilpentano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Los halógenos tienen igual jerarquía que los grupos alquilo; numerando desde la izquierda se obtienen los localizadores más bajos (2,3 vs 3,4).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-cloro-3-metilpentano.",
+      "semiFormula": "CH3-CH(Cl)-CH(CH3)-CH2-CH3",
+      "ambiguousNote": "Ítem 16 de Nomenclatura (pág. 111): sello parcial sobre los sustituyentes."
+    },
+    "nom_17": {
+      "unit": "haluros",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 17 (Halogenuro alílico / insaturado)",
+      "badgeLabel": "Nomenclatura 17 (Halogenuro alílico / insaturado)",
+      "topic": "Nomenclatura • Halogenuros Insaturados",
+      "statement": "17. El nombre IUPAC del compuesto Br–CH₂–CH=CH₂ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-bromo-2-propeno"
+        },
+        {
+          "letter": "b",
+          "text": "3-bromo-1-propeno (bromuro de alilo)"
+        },
+        {
+          "letter": "c",
+          "text": "bromopropeno"
+        },
+        {
+          "letter": "d",
+          "text": "2-bromo-1-propeno"
+        },
+        {
+          "letter": "e",
+          "text": "bromuro de vinilo"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El doble enlace tiene prioridad sobre el halógeno para recibir el localizador 1, quedando el bromo en C3.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-bromo-1-propeno.",
+      "semiFormula": "CH2=CH-CH2-Br"
+    },
+    "nom_18": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 18 (Alcohol ramificado — Prioridad del –OH)",
+      "badgeLabel": "Nomenclatura 18 (Alcohol ramificado — Prioridad del –OH)",
+      "topic": "Nomenclatura • Alcoholes",
+      "statement": "18. El nombre sistemático IUPAC del compuesto CH₃–CH(CH₃)–CH₂–CH(OH)–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-metil-4-pentanol"
+        },
+        {
+          "letter": "b",
+          "text": "4-metil-2-pentanol"
+        },
+        {
+          "letter": "c",
+          "text": "4-hidroxi-2-metilpentano"
+        },
+        {
+          "letter": "d",
+          "text": "isobutilmetilcarbinol"
+        },
+        {
+          "letter": "e",
+          "text": "3-metil-2-pentanol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El grupo –OH tiene prioridad sobre los radicales alquilo para recibir el menor localizador (C2).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 4-metil-2-pentanol.",
+      "semiFormula": "CH3-CH(CH3)-CH2-CH(OH)-CH3"
+    },
+    "nom_19": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 19 (Alcohol insaturado — Enol)",
+      "badgeLabel": "Nomenclatura 19 (Alcohol insaturado — Enol)",
+      "topic": "Nomenclatura • Alcoholes Insaturados",
+      "statement": "19. [Estructura parcialmente cubierta por sello] El nombre IUPAC de CH₃–CH=CH–CH₂–OH es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1-hidroxi-2-buteno"
+        },
+        {
+          "letter": "b",
+          "text": "2-buten-1-ol (but-2-en-1-ol)"
+        },
+        {
+          "letter": "c",
+          "text": "3-buten-1-ol"
+        },
+        {
+          "letter": "d",
+          "text": "2-buten-4-ol"
+        },
+        {
+          "letter": "e",
+          "text": "alcohol alílico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El grupo principal –OH recibe el localizador 1 y el doble enlace queda en C2: 2-buten-1-ol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-buten-1-ol.",
+      "semiFormula": "CH3-CH=CH-CH2-OH",
+      "ambiguousNote": "Ítem 19 de Nomenclatura (pág. 112): verificar cadena exacta del alcohol insaturado bajo marca de agua."
+    },
+    "nom_20": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 20 (Diol — Etilenglicol y Propilenglicol)",
+      "badgeLabel": "Nomenclatura 20 (Diol — Etilenglicol y Propilenglicol)",
+      "topic": "Nomenclatura • Polioles",
+      "statement": "20. El nombre sistemático IUPAC de la glicerina (HO–CH₂–CH(OH)–CH₂–OH) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "1,2-propanodiol"
+        },
+        {
+          "letter": "b",
+          "text": "1,2,3-propanotriol"
+        },
+        {
+          "letter": "c",
+          "text": "trihidroxipropano"
+        },
+        {
+          "letter": "d",
+          "text": "1,2,3-etanotriol"
+        },
+        {
+          "letter": "e",
+          "text": "2-hidroxi-1,3-propanodiol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Cadena de 3 carbonos con tres grupos hidroxilo en C1, C2 y C3: 1,2,3-propanotriol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 1,2,3-propanotriol.",
+      "semiFormula": "HO-CH2-CH(OH)-CH2-OH"
+    },
+    "nom_21": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 21 (Ácido pícrico — 2,4,6-Trinitrofenol)",
+      "badgeLabel": "Nomenclatura 21 (Ácido pícrico — 2,4,6-Trinitrofenol)",
+      "topic": "Nomenclatura • Fenoles",
+      "statement": "21. El compuesto 2,4,6-trinitrofenol se conoce tradicionalmente como:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido salicílico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido pícrico"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido ftálico"
+        },
+        {
+          "letter": "d",
+          "text": "Hidroquinona"
+        },
+        {
+          "letter": "e",
+          "text": "Pirogalol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El 2,4,6-trinitrofenol es el ácido pícrico (un fenol fuertemente ácido por los tres grupos –NO₂).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido pícrico.",
+      "semiFormula": "AROM-1-OH-2,4,6-NO2"
+    },
+    "nom_22": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 22 (Cresoles — o-, m- y p-Metilfenol)",
+      "badgeLabel": "Nomenclatura 22 (Cresoles — o-, m- y p-Metilfenol)",
+      "topic": "Nomenclatura • Fenoles",
+      "statement": "22. El 3-metilfenol recibe el nombre común de:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "o-cresol"
+        },
+        {
+          "letter": "b",
+          "text": "m-cresol"
+        },
+        {
+          "letter": "c",
+          "text": "p-cresol"
+        },
+        {
+          "letter": "d",
+          "text": "resorcinol"
+        },
+        {
+          "letter": "e",
+          "text": "catecol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Los metilfenoles se llaman cresoles; la posición 1,3 corresponde a m-cresol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) m-cresol.",
+      "semiFormula": "AROM-1-OH-3-CH3"
+    },
+    "nom_23": {
+      "unit": "fenoles",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 23 (Catecol, Resorcinol e Hidroquinona)",
+      "badgeLabel": "Nomenclatura 23 (Catecol, Resorcinol e Hidroquinona)",
+      "topic": "Nomenclatura • Difenoles",
+      "statement": "23. Los nombres comunes de 1,2-bencenodiol, 1,3-bencenodiol y 1,4-bencenodiol son respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Hidroquinona, catecol y resorcinol"
+        },
+        {
+          "letter": "b",
+          "text": "Pirocatecol (catecol), resorcinol e hidroquinona"
+        },
+        {
+          "letter": "c",
+          "text": "Resorcinol, hidroquinona y catecol"
+        },
+        {
+          "letter": "d",
+          "text": "o-, m- y p-cresol"
+        },
+        {
+          "letter": "e",
+          "text": "Pirogalol, floroglucinol e hidroxihidroquinona"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: 1,2 = pirocatecol (catecol); 1,3 = resorcinol; 1,4 = hidroquinona.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b).",
+      "semiFormula": "AROM-1,2-OH"
+    },
+    "nom_24": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 24 (Éter sustituido — IUPAC)",
+      "badgeLabel": "Nomenclatura 24 (Éter sustituido — IUPAC)",
+      "topic": "Nomenclatura • Éteres",
+      "statement": "24. [Estructura parcialmente cubierta por sello] El nombre sustitutivo IUPAC del éter CH₃–CH₂–O–CH(CH₃)–CH₂–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-etoxipentano"
+        },
+        {
+          "letter": "b",
+          "text": "2-etoxibutano"
+        },
+        {
+          "letter": "c",
+          "text": "etil-sec-butiléter"
+        },
+        {
+          "letter": "d",
+          "text": "3-etoxibutano"
+        },
+        {
+          "letter": "e",
+          "text": "1-metil-1-etoxipropano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La cadena más larga tiene 4 carbonos (butano) con un grupo etoxi (–OCH₂CH₃) en C2: 2-etoxibutano.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-etoxibutano.",
+      "semiFormula": "CH3-CH2-O-CH(CH3)-CH2-CH3",
+      "ambiguousNote": "Ítem 24 de Nomenclatura (pág. 112): confirmar radicales del éter bajo marca de agua."
+    },
+    "nom_25": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 25 (Anisol y Fenetol)",
+      "badgeLabel": "Nomenclatura 25 (Anisol y Fenetol)",
+      "topic": "Nomenclatura • Éteres Aromáticos",
+      "statement": "25. El metoxibenceno (C₆H₅–OCH₃) y el etoxibenceno (C₆H₅–OCH₂CH₃) se denominan comúnmente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Tolueno y etilbenceno"
+        },
+        {
+          "letter": "b",
+          "text": "Anisol y fenetol"
+        },
+        {
+          "letter": "c",
+          "text": "Estireno y cumeno"
+        },
+        {
+          "letter": "d",
+          "text": "Benzaldehído y acetofenona"
+        },
+        {
+          "letter": "e",
+          "text": "Fenol y catecol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Metoxibenceno = anisol; etoxibenceno = fenetol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Anisol y fenetol.",
+      "semiFormula": "AROM-1-OCH3"
+    },
+    "nom_26": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 26 (Epóxidos — Oxiranos)",
+      "badgeLabel": "Nomenclatura 26 (Epóxidos — Oxiranos)",
+      "topic": "Nomenclatura • Epóxidos",
+      "statement": "26. El nombre sistemático IUPAC del óxido de etileno (anillo de 3 miembros con un átomo de oxígeno y dos carbonos) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Oxolano"
+        },
+        {
+          "letter": "b",
+          "text": "Oxirano"
+        },
+        {
+          "letter": "c",
+          "text": "Oxetano"
+        },
+        {
+          "letter": "d",
+          "text": "Dioxano"
+        },
+        {
+          "letter": "e",
+          "text": "Furano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Oxirano (3 miembros), oxetano (4 miembros), oxolano / THF (5 miembros).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Oxirano.",
+      "semiFormula": "HETERO-3-O"
+    },
+    "nom_27": {
+      "unit": "tioles",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 27 (Tioles y grupo mercapto)",
+      "badgeLabel": "Nomenclatura 27 (Tioles y grupo mercapto)",
+      "topic": "Nomenclatura • Tioles",
+      "statement": "27. En el compuesto HO–CH₂–CH₂–SH, como el grupo –OH tiene mayor prioridad que –SH, su nombre IUPAC es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-hidroxietanotiol"
+        },
+        {
+          "letter": "b",
+          "text": "2-mercaptoetanol (2-sulfaniletanol)"
+        },
+        {
+          "letter": "c",
+          "text": "etilentiol"
+        },
+        {
+          "letter": "d",
+          "text": "tioetanol"
+        },
+        {
+          "letter": "e",
+          "text": "1-mercapto-2-hidroxietano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Cuando –SH actúa como sustituyente se nombra 'mercapto-' (o 'sulfanil-'): 2-mercaptoetanol.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 2-mercaptoetanol."
+    },
+    "nom_28": {
+      "unit": "aminas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 28 (Amina secundaria/terciaria N-sustituida)",
+      "badgeLabel": "Nomenclatura 28 (Amina secundaria/terciaria N-sustituida)",
+      "topic": "Nomenclatura • Aminas",
+      "statement": "28. El nombre sistemático IUPAC de la amina CH₃–CH₂–N(CH₃)–CH₂–CH₂–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "etilmetilpropilamina"
+        },
+        {
+          "letter": "b",
+          "text": "N-etil-N-metil-1-propanamina"
+        },
+        {
+          "letter": "c",
+          "text": "N-metil-N-propiletanamina"
+        },
+        {
+          "letter": "d",
+          "text": "2-aminohexano"
+        },
+        {
+          "letter": "e",
+          "text": "N,N-dietilmetanamina"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La cadena más larga de 3 carbonos da la raíz '1-propanamina' y los grupos menores sobre el N se citan como N-etil-N-metil.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) N-etil-N-metil-1-propanamina."
+    },
+    "nom_29": {
+      "unit": "aminas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 29 (Toluidinas y Anilinas sustituidas)",
+      "badgeLabel": "Nomenclatura 29 (Toluidinas y Anilinas sustituidas)",
+      "topic": "Nomenclatura • Aminas Aromáticas",
+      "statement": "29. La 4-metilanilina (p-aminotolueno) recibe el nombre común de:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "p-cresol"
+        },
+        {
+          "letter": "b",
+          "text": "p-toluidina"
+        },
+        {
+          "letter": "c",
+          "text": "p-anisidina"
+        },
+        {
+          "letter": "d",
+          "text": "acetanilida"
+        },
+        {
+          "letter": "e",
+          "text": "benzidina"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Las metilanilinas se denominan toluidinas (o-, m- y p-toluidina).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) p-toluidina.",
+      "semiFormula": "AROM-1-NH2-4-CH3"
+    },
+    "nom_30": {
+      "unit": "aldehidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 30 (Aldehído ramificado — C1 siempre es –CHO)",
+      "badgeLabel": "Nomenclatura 30 (Aldehído ramificado — C1 siempre es –CHO)",
+      "topic": "Nomenclatura • Aldehídos",
+      "statement": "30. [Estructura parcialmente cubierta por sello] El nombre IUPAC del aldehído CH₃–CH(Br)–CH(CH₃)–CHO es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-bromo-3-metilbutanal"
+        },
+        {
+          "letter": "b",
+          "text": "3-bromo-2-metilbutanal"
+        },
+        {
+          "letter": "c",
+          "text": "3-bromo-2-metil-1-butanal"
+        },
+        {
+          "letter": "d",
+          "text": "2-metil-3-bromobutanal"
+        },
+        {
+          "letter": "e",
+          "text": "3-bromo-2-formilbutano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El carbono del grupo aldehído (–CHO) es obligatoriamente C1; en C2 va metil y en C3 bromo (orden alfabético: 3-bromo-2-metilbutanal).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-bromo-2-metilbutanal.",
+      "semiFormula": "CH3-CH(Br)-CH(CH3)-CHO",
+      "ambiguousNote": "Ítem 30 de Nomenclatura (pág. 113): confirmar sustituyentes exactos del aldehído bajo sello."
+    },
+    "nom_31": {
+      "unit": "aldehidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 31 (Grupo formilo como sustituyente — Ácido 3-formilpropanoico)",
+      "badgeLabel": "Nomenclatura 31 (Grupo formilo como sustituyente — Ácido 3-formilpropanoico)",
+      "topic": "Nomenclatura • Prioridad –COOH > –CHO",
+      "statement": "31. En un compuesto que contiene simultáneamente un grupo ácido carboxílico (–COOH) y un grupo aldehído (–CHO), el aldehído se nombra como prefijo:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "hidroxi-"
+        },
+        {
+          "letter": "b",
+          "text": "formil- (o oxo- si el carbono forma parte de la cadena principal)"
+        },
+        {
+          "letter": "c",
+          "text": "carboxi-"
+        },
+        {
+          "letter": "d",
+          "text": "alcoxi-"
+        },
+        {
+          "letter": "e",
+          "text": "acil-"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Cuando –CHO es grupo secundario fuera de la cadena principal se usa 'formil-'; si su carbono se incluye en la cadena principal se usa 'oxo-'.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b)."
+    },
+    "nom_32": {
+      "unit": "aldehidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 32 (Acroleína — Propenal)",
+      "badgeLabel": "Nomenclatura 32 (Acroleína — Propenal)",
+      "topic": "Nomenclatura • Aldehídos Insaturados",
+      "statement": "32. El nombre sistemático IUPAC de la acroleína (CH₂=CH–CHO) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-propen-1-al"
+        },
+        {
+          "letter": "b",
+          "text": "Propenal (2-propenal)"
+        },
+        {
+          "letter": "c",
+          "text": "1-propenal"
+        },
+        {
+          "letter": "d",
+          "text": "etenal"
+        },
+        {
+          "letter": "e",
+          "text": "butenal"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: En el propenal no hace falta indicar el 1 para el aldehído porque siempre es terminal.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Propenal.",
+      "semiFormula": "CH2=CH-CHO"
+    },
+    "nom_33": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 33 (Cetona insaturada — Óxido de mesitilo)",
+      "badgeLabel": "Nomenclatura 33 (Cetona insaturada — Óxido de mesitilo)",
+      "topic": "Nomenclatura • Cetonas",
+      "statement": "33. El nombre sistemático IUPAC de (CH₃)₂C=CH–CO–CH₃ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "2-metil-2-penten-4-ona"
+        },
+        {
+          "letter": "b",
+          "text": "4-metil-3-penten-2-ona"
+        },
+        {
+          "letter": "c",
+          "text": "4-metil-4-penten-2-ona"
+        },
+        {
+          "letter": "d",
+          "text": "2-metil-3-penten-2-ona"
+        },
+        {
+          "letter": "e",
+          "text": "hexenona"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El grupo principal cetona (C=O) recibe el localizador más bajo (C2), el doble enlace queda en C3 y el metilo en C4.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 4-metil-3-penten-2-ona.",
+      "semiFormula": "CH3-C(CH3)=CH-CO-CH3"
+    },
+    "nom_34": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 34 (Grupo oxo- como sustituyente en cetoácidos)",
+      "badgeLabel": "Nomenclatura 34 (Grupo oxo- como sustituyente en cetoácidos)",
+      "topic": "Nomenclatura • Cetonas Secundarias",
+      "statement": "34. El nombre sistemático IUPAC del ácido pirúvico (CH₃–CO–COOH) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido 2-formilpropanoico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido 2-oxopropanoico"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido 3-oxopropanoico"
+        },
+        {
+          "letter": "d",
+          "text": "Ácido 2-hidroxipropanoico"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido acetilfórmico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El oxígeno cetónico en C2 dentro de la cadena principal se nombra con el prefijo '2-oxo-'.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido 2-oxopropanoico.",
+      "semiFormula": "CH3-CO-COOH"
+    },
+    "nom_35": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 35 (Benzofenona y Acetofenona)",
+      "badgeLabel": "Nomenclatura 35 (Benzofenona y Acetofenona)",
+      "topic": "Nomenclatura • Cetonas Aromáticas",
+      "statement": "35. La difenilmetanona (C₆H₅–CO–C₆H₅) recibe el nombre común de:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Acetofenona"
+        },
+        {
+          "letter": "b",
+          "text": "Benzofenona"
+        },
+        {
+          "letter": "c",
+          "text": "Benzaldehído"
+        },
+        {
+          "letter": "d",
+          "text": "Benzoquinona"
+        },
+        {
+          "letter": "e",
+          "text": "Difeniléter"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: C₆H₅–CO–C₆H₅ = benzofenona; C₆H₅–CO–CH₃ = acetofenona.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Benzofenona.",
+      "semiFormula": "AROM-1-COC6H5"
+    },
+    "nom_36": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 36 (Ácidos dicarboxílicos — Regla mnemotécnica OMSGAP)",
+      "badgeLabel": "Nomenclatura 36 (Ácidos dicarboxílicos — Regla mnemotécnica OMSGAP)",
+      "topic": "Nomenclatura • Diácidos",
+      "statement": "36. Los nombres comunes de los ácidos dicarboxílicos saturados de 2, 3, 4, 5 y 6 carbonos (HOOC–(CH₂)ₙ–COOH) son respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Malónico, oxálico, glutárico, succínico y adípico"
+        },
+        {
+          "letter": "b",
+          "text": "Oxálico (2C), malónico (3C), succínico (4C), glutárico (5C) y adípico (6C)"
+        },
+        {
+          "letter": "c",
+          "text": "Fórmico, acético, propiónico, butírico y valérico"
+        },
+        {
+          "letter": "d",
+          "text": "Maleico, fumárico, málico, tartárico y cítrico"
+        },
+        {
+          "letter": "e",
+          "text": "Ftálico, isoftálico y tereftálico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Regla O-M-S-G-A: Oxálico (2), Malónico (3), Succínico (4), Glutárico (5), Adípico (6).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b)."
+    },
+    "nom_37": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 37 (Ácidos grasos saturados e insaturados)",
+      "badgeLabel": "Nomenclatura 37 (Ácidos grasos saturados e insaturados)",
+      "topic": "Nomenclatura • Ácidos Grasos",
+      "statement": "37. El ácido hexadecanoico (C₁₅H₃₁COOH) y el ácido octadecanoico (C₁₇H₃₅COOH) se denominan respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido esteárico y ácido palmítico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido palmítico (16C) y ácido esteárico (18C)"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido láurico y ácido mirístico"
+        },
+        {
+          "letter": "d",
+          "text": "Ácido oleico y ácido linoleico"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido cáprico y ácido caprílico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: 12C = láurico, 14C = mirístico, 16C = palmítico, 18C = esteárico.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido palmítico y ácido esteárico."
+    },
+    "nom_38": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 38 (Hidroxiácidos — Ácido cítrico y málico)",
+      "badgeLabel": "Nomenclatura 38 (Hidroxiácidos — Ácido cítrico y málico)",
+      "topic": "Nomenclatura • Hidroxiácidos",
+      "statement": "38. El ácido 2-hidroxibutanodioico (HOOC–CH(OH)–CH₂–COOH) se conoce comúnmente como:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido tartárico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido málico"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido láctico"
+        },
+        {
+          "letter": "d",
+          "text": "Ácido glicólico"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido cítrico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Ácido málico = 2-hidroxibutanodioico; ácido tartárico = 2,3-dihidroxibutanodioico.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido málico."
+    },
+    "nom_39": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 39 (Sales de ácidos orgánicos)",
+      "badgeLabel": "Nomenclatura 39 (Sales de ácidos orgánicos)",
+      "topic": "Nomenclatura • Sales Carboxilato",
+      "statement": "39. La sal (CH₃–CH₂–COO)₂Ca se denomina:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Etanoato de calcio"
+        },
+        {
+          "letter": "b",
+          "text": "Propanoato de calcio (propionato de calcio)"
+        },
+        {
+          "letter": "c",
+          "text": "Butanoato de calcio"
+        },
+        {
+          "letter": "d",
+          "text": "Carbonato de propilo"
+        },
+        {
+          "letter": "e",
+          "text": "Propóxido de calcio"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El anión CH₃CH₂COO⁻ procede del ácido propanoico (propanoato) unido al catión Ca²⁺.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Propanoato de calcio."
+    },
+    "nom_40": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 40 (Ésteres — Parte ácida + parte alcohólica)",
+      "badgeLabel": "Nomenclatura 40 (Ésteres — Parte ácida + parte alcohólica)",
+      "topic": "Nomenclatura • Ésteres",
+      "statement": "40. [Estructura parcialmente cubierta por sello] El nombre IUPAC del éster CH₃–CH₂–CH₂–COO–CH(CH₃)₂ es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Propanoato de isobutilo"
+        },
+        {
+          "letter": "b",
+          "text": "Butanoato de 1-metiletilo (butanoato de isopropilo)"
+        },
+        {
+          "letter": "c",
+          "text": "2-metilpropanoato de butilo"
+        },
+        {
+          "letter": "d",
+          "text": "Pentanoato de etilo"
+        },
+        {
+          "letter": "e",
+          "text": "Butanoato de propilo"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La porción acilo tiene 4 carbonos (butanoato) y el radical unido al oxígeno es isopropilo (1-metiletilo).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Butanoato de 1-metiletilo (butanoato de isopropilo).",
+      "semiFormula": "CH3-CH2-CH2-COO-CH(CH3)2",
+      "ambiguousNote": "Ítem 40 de Nomenclatura (pág. 114): confirmar si el éster bajo sello era butanoato de isopropilo o propanoato de isobutilo."
+    },
+    "nom_41": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 41 (Salicilato de metilo)",
+      "badgeLabel": "Nomenclatura 41 (Salicilato de metilo)",
+      "topic": "Nomenclatura • Ésteres Aromáticos",
+      "statement": "41. El éster metílico del ácido 2-hidroxibenzoico (esencia de gaulteria) se llama:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido acetilsalicílico"
+        },
+        {
+          "letter": "b",
+          "text": "Salicilato de metilo (2-hidroxibenzoato de metilo)"
+        },
+        {
+          "letter": "c",
+          "text": "Benzoato de metilo"
+        },
+        {
+          "letter": "d",
+          "text": "Anisato de metilo"
+        },
+        {
+          "letter": "e",
+          "text": "Salicilato de fenilo"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: o-HO–C₆H₄–COOCH₃ = salicilato de metilo.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Salicilato de metilo.",
+      "semiFormula": "AROM-1-COOCH3-2-OH"
+    },
+    "nom_42": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 42 (Amidas N-sustituidas — Acetanilida)",
+      "badgeLabel": "Nomenclatura 42 (Amidas N-sustituidas — Acetanilida)",
+      "topic": "Nomenclatura • Amidas",
+      "statement": "42. El nombre sistemático IUPAC de la acetanilida (CH₃–CO–NH–C₆H₅) es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Benzamida"
+        },
+        {
+          "letter": "b",
+          "text": "N-feniletanamida"
+        },
+        {
+          "letter": "c",
+          "text": "N-metilbenzamida"
+        },
+        {
+          "letter": "d",
+          "text": "Fenilamina"
+        },
+        {
+          "letter": "e",
+          "text": "Aminobenzoato"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La cadena acilo de 2 carbonos es etanamida y el grupo fenilo está unido al nitrógeno (N-feniletanamida).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) N-feniletanamida."
+    },
+    "nom_43": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 43 (Anhídridos simétricos y mixtos)",
+      "badgeLabel": "Nomenclatura 43 (Anhídridos simétricos y mixtos)",
+      "topic": "Nomenclatura • Anhídridos",
+      "statement": "43. El compuesto CH₃–CO–O–CO–CH₂–CH₃ se denomina:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Anhídrido pentanoico"
+        },
+        {
+          "letter": "b",
+          "text": "Anhídrido etanoico propanoico (anhídrido acético propiónico)"
+        },
+        {
+          "letter": "c",
+          "text": "Propanoato de etanoílo"
+        },
+        {
+          "letter": "d",
+          "text": "Anhídrido butanoico"
+        },
+        {
+          "letter": "e",
+          "text": "3-oxopentanoato"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Los anhídridos mixtos se nombran citando ambos ácidos en orden alfabético: anhídrido etanoico propanoico.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Anhídrido etanoico propanoico.",
+      "semiFormula": "CH3-CO-O-CO-CH2-CH3"
+    },
+    "nom_44": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 44 (Halogenuros de acilo)",
+      "badgeLabel": "Nomenclatura 44 (Halogenuros de acilo)",
+      "topic": "Nomenclatura • Halogenuros de Ácido",
+      "statement": "44. El compuesto C₆H₅–CO–Cl se nombra como:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cloruro de bencilo"
+        },
+        {
+          "letter": "b",
+          "text": "Cloruro de benzoílo (cloruro de bencenocarbonilo)"
+        },
+        {
+          "letter": "c",
+          "text": "Clorobenceno"
+        },
+        {
+          "letter": "d",
+          "text": "Cloroacetofenona"
+        },
+        {
+          "letter": "e",
+          "text": "Cloruro de fenilo"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: C₆H₅–CO–Cl es cloruro de benzoílo (mientras que C₆H₅–CH₂–Cl es cloruro de bencilo).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Cloruro de benzoílo.",
+      "semiFormula": "AROM-1-COCl"
+    },
+    "nom_45": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 45 (Nitrilos — Numeración incluye al carbono del –CN)",
+      "badgeLabel": "Nomenclatura 45 (Nitrilos — Numeración incluye al carbono del –CN)",
+      "topic": "Nomenclatura • Nitrilos",
+      "statement": "45. El nombre sistemático IUPAC de CH₃–CH(CH₃)–CH₂–C≡N es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Cianuro de isobutilo"
+        },
+        {
+          "letter": "b",
+          "text": "3-metilbutanonitrilo"
+        },
+        {
+          "letter": "c",
+          "text": "2-metilbutanonitrilo"
+        },
+        {
+          "letter": "d",
+          "text": "3-metil-1-cianopropano"
+        },
+        {
+          "letter": "e",
+          "text": "isovaleronitrilo únicamente"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El carbono del grupo –C≡N es C1, por lo que la cadena tiene 4 carbonos (butanonitrilo) y el metilo queda en C3.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 3-metilbutanonitrilo.",
+      "semiFormula": "CH3-CH(CH3)-CH2-CN"
+    },
+    "nom_46": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 46 (Compuesto polifuncional con –COOH, –OH y –NH₂)",
+      "badgeLabel": "Nomenclatura 46 (Compuesto polifuncional con –COOH, –OH y –NH₂)",
+      "topic": "Nomenclatura • Polifuncionales",
+      "statement": "46. [Estructura parcialmente cubierta por sello] En el compuesto H₂N–CH₂–CH(OH)–COOH, la función principal y el nombre IUPAC son:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "3-amino-2-hidroxipropanal"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido 3-amino-2-hidroxipropanoico"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido 2-hidroxi-3-aminopropanoico"
+        },
+        {
+          "letter": "d",
+          "text": "2-hidroxi-3-aminopropanamida"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido 1-amino-2-hidroxipropanoico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: –COOH es C1; los sustituyentes se ordenan alfabéticamente: 3-amino antes que 2-hidroxi.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido 3-amino-2-hidroxipropanoico.",
+      "semiFormula": "NH2-CH2-CH(OH)-COOH",
+      "ambiguousNote": "Ítem 46 de Nomenclatura (pág. 114): verificar posiciones de –NH₂ y –OH bajo el sello."
+    },
+    "nom_47": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 47 (Grupo ciano- como sustituyente en ácidos)",
+      "badgeLabel": "Nomenclatura 47 (Grupo ciano- como sustituyente en ácidos)",
+      "topic": "Nomenclatura • Prioridad –COOH > –CN",
+      "statement": "47. Cuando el grupo nitrilo (–C≡N) actúa como sustituyente secundario frente a un ácido carboxílico (ej. NC–CH₂–COOH), se nombra con el prefijo:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "nitrilo-"
+        },
+        {
+          "letter": "b",
+          "text": "ciano- (ácido cianoetanoico)"
+        },
+        {
+          "letter": "c",
+          "text": "amino-"
+        },
+        {
+          "letter": "d",
+          "text": "imino-"
+        },
+        {
+          "letter": "e",
+          "text": "azo-"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El grupo –C≡N como sustituyente recibe el prefijo 'ciano-'.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) ciano- (ácido cianoetanoico)."
+    },
+    "nom_48": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 48 (Grupo alcoxicarbonil- en polifuncionales)",
+      "badgeLabel": "Nomenclatura 48 (Grupo alcoxicarbonil- en polifuncionales)",
+      "topic": "Nomenclatura • Prioridad –COOH > –COOR",
+      "statement": "48. En un compuesto que contiene un grupo ácido carboxílico (–COOH) y un grupo éster (–COOCH₃), el grupo éster se nombra como sustituyente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "hidroxicarbonil-"
+        },
+        {
+          "letter": "b",
+          "text": "metoxicarbonil-"
+        },
+        {
+          "letter": "c",
+          "text": "acetoxi-"
+        },
+        {
+          "letter": "d",
+          "text": "formil-"
+        },
+        {
+          "letter": "e",
+          "text": "oxo-"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: –COOCH₃ como sustituyente secundario se denomina 'metoxicarbonil-'.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) metoxicarbonil-."
+    },
+    "nom_49": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 49 (Grupo carbamoil- en polifuncionales)",
+      "badgeLabel": "Nomenclatura 49 (Grupo carbamoil- en polifuncionales)",
+      "topic": "Nomenclatura • Prioridad –COOH > –CONH₂",
+      "statement": "49. Cuando el grupo amida (–CONH₂) está presente junto a un grupo ácido carboxílico de mayor prioridad, se nombra con el prefijo:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "amido-"
+        },
+        {
+          "letter": "b",
+          "text": "carbamoil-"
+        },
+        {
+          "letter": "c",
+          "text": "amino-"
+        },
+        {
+          "letter": "d",
+          "text": "ciano-"
+        },
+        {
+          "letter": "e",
+          "text": "imido-"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: El sustituyente –CONH₂ se denomina 'carbamoil-'.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) carbamoil-."
+    },
+    "nom_50": {
+      "unit": "aminas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 50 (Heterociclos aromáticos: Piridina, Pirrol, Furano, Tiofeno)",
+      "badgeLabel": "Nomenclatura 50 (Heterociclos aromáticos: Piridina, Pirrol, Furano, Tiofeno)",
+      "topic": "Nomenclatura • Heterociclos",
+      "statement": "50. Los heterociclos aromáticos de 5 miembros con un átomo de oxígeno, nitrógeno o azufre se denominan respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Pirano, piridina y tiopirano"
+        },
+        {
+          "letter": "b",
+          "text": "Furano (O), pirrol (NH) y tiofeno (S)"
+        },
+        {
+          "letter": "c",
+          "text": "Oxirano, aziridina y tiirano"
+        },
+        {
+          "letter": "d",
+          "text": "Tetrahidrofurano, pirrolidina y tiolano"
+        },
+        {
+          "letter": "e",
+          "text": "Imidazol, pirazol y tiazol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Anillos aromáticos de 5 miembros con 6 electrones π: furano (O), pirrol (NH) y tiofeno (S).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Furano, pirrol y tiofeno."
+    },
+    "nom_51": {
+      "unit": "eteres",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 51 (Tetrahidrofurano — THF)",
+      "badgeLabel": "Nomenclatura 51 (Tetrahidrofurano — THF)",
+      "topic": "Nomenclatura • Heterociclos Saturados",
+      "statement": "51. El heterociclo saturado de 5 miembros con un átomo de oxígeno (C₄H₈O), muy usado como disolvente anhidro en reacciones de Grignard, es:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Furano"
+        },
+        {
+          "letter": "b",
+          "text": "Tetrahidrofurano (oxolano / THF)"
+        },
+        {
+          "letter": "c",
+          "text": "Oxirano"
+        },
+        {
+          "letter": "d",
+          "text": "1,4-Dioxano"
+        },
+        {
+          "letter": "e",
+          "text": "Pirano"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La hidrogenación total del furano produce tetrahidrofurano (oxolano).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Tetrahidrofurano (oxolano).",
+      "semiFormula": "HETERO-5-O"
+    },
+    "nom_52": {
+      "unit": "aminas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 52 (Piridina y Pirimidina)",
+      "badgeLabel": "Nomenclatura 52 (Piridina y Pirimidina)",
+      "topic": "Nomenclatura • Heterociclos Nitrogenados",
+      "statement": "52. El anillo hexagonal aromático con un átomo de nitrógeno (C₅H₅N) se denomina piridina, mientras que el anillo hexagonal aromático con dos átomos de nitrógeno en posiciones 1 y 3 (base de citosina, timina y uracilo) es la:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Piridazina (1,2)"
+        },
+        {
+          "letter": "b",
+          "text": "Pirimidina (1,3)"
+        },
+        {
+          "letter": "c",
+          "text": "Pirazina (1,4)"
+        },
+        {
+          "letter": "d",
+          "text": "Purina"
+        },
+        {
+          "letter": "e",
+          "text": "Quinolina"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Diazinas aromáticas: 1,2 = piridazina; 1,3 = pirimidina; 1,4 = pirazina.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Pirimidina (1,3)."
+    },
+    "nom_53": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 53 (Ácido ftálico, isoftálico y tereftálico)",
+      "badgeLabel": "Nomenclatura 53 (Ácido ftálico, isoftálico y tereftálico)",
+      "topic": "Nomenclatura • Diácidos Aromáticos",
+      "statement": "53. Los ácidos 1,2-bencenodicarboxílico, 1,3-bencenodicarboxílico y 1,4-bencenodicarboxílico se llaman respectivamente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido tereftálico, isoftálico y ftálico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido ftálico (1,2), ácido isoftálico (1,3) y ácido tereftálico (1,4)"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido salicílico, benzoico y cinámico"
+        },
+        {
+          "letter": "d",
+          "text": "Ácido oxálico, malónico y succínico"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido pícrico, gálico y tánico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: 1,2 = ftálico; 1,3 = isoftálico; 1,4 = tereftálico.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b).",
+      "semiFormula": "AROM-1,2-COOH"
+    },
+    "nom_54": {
+      "unit": "acidos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 54 (Ácido cinámico)",
+      "badgeLabel": "Nomenclatura 54 (Ácido cinámico)",
+      "topic": "Nomenclatura • Ácidos Insaturados Aromáticos",
+      "statement": "54. El ácido trans-3-fenil-2-propenoico (C₆H₅–CH=CH–COOH) recibe el nombre común de:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Ácido benzoico"
+        },
+        {
+          "letter": "b",
+          "text": "Ácido cinámico"
+        },
+        {
+          "letter": "c",
+          "text": "Ácido acrílico"
+        },
+        {
+          "letter": "d",
+          "text": "Ácido mandélico"
+        },
+        {
+          "letter": "e",
+          "text": "Ácido hipúrico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: C₆H₅–CH=CH–COOH es el ácido cinámico.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Ácido cinámico."
+    },
+    "nom_55": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 55 (1,4-Benzoquinona)",
+      "badgeLabel": "Nomenclatura 55 (1,4-Benzoquinona)",
+      "topic": "Nomenclatura • Quinonas",
+      "statement": "55. El compuesto cíclico insaturado 2,5-ciclohexadieno-1,4-diona se denomina comúnmente:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Hidroquinona"
+        },
+        {
+          "letter": "b",
+          "text": "1,4-Benzoquinona (p-benzoquinona)"
+        },
+        {
+          "letter": "c",
+          "text": "Ciclohexanona"
+        },
+        {
+          "letter": "d",
+          "text": "Catecol"
+        },
+        {
+          "letter": "e",
+          "text": "Fenol"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Es la p-benzoquinona.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) 1,4-Benzoquinona.",
+      "semiFormula": "AROM-QUINONA"
+    },
+    "nom_56": {
+      "unit": "aromaticos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 56 (Numeración del Naftaleno)",
+      "badgeLabel": "Nomenclatura 56 (Numeración del Naftaleno)",
+      "topic": "Nomenclatura • Policíclicos",
+      "statement": "56. En el naftaleno monosustituido, la posición 1 corresponde también al prefijo griego α- y la posición 2 corresponde al prefijo:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "γ- (gamma)"
+        },
+        {
+          "letter": "b",
+          "text": "β- (beta, ej. β-naftol = 2-naftol)"
+        },
+        {
+          "letter": "c",
+          "text": "δ- (delta)"
+        },
+        {
+          "letter": "d",
+          "text": "ω- (omega)"
+        },
+        {
+          "letter": "e",
+          "text": "ipso-"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Posiciones 1, 4, 5, 8 son α; posiciones 2, 3, 6, 7 son β.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) β- (beta).",
+      "semiFormula": "NAFTALENO-2-OH"
+    },
+    "nom_57": {
+      "unit": "alcanos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 57 (Ítem con clave Z en grilla oficial)",
+      "badgeLabel": "Nomenclatura 57 (Ítem con clave Z en grilla oficial)",
+      "topic": "Nomenclatura • Revisión de Clave Oficial",
+      "statement": "57. [Clave marcada como 'Z' en la tabla de respuestas del recopilatorio pág. 171 — estructura con sello] Respecto a la numeración de cadenas hidrocarbonadas con múltiples sustituyentes:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Se busca el primer punto de diferencia en los localizadores (conjunto de localizadores más bajo)"
+        },
+        {
+          "letter": "b",
+          "text": "Se suman los localizadores sin importar el primer punto de diferencia"
+        },
+        {
+          "letter": "c",
+          "text": "Se numera siempre desde el grupo metilo"
+        },
+        {
+          "letter": "d",
+          "text": "Se ignoran los halógenos"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna de las anteriores"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto (revisado): La regla IUPAC oficial aplica el criterio del 'primer punto de diferencia' en los localizadores (clave 'Z' por anulación de imprenta en el PDF).",
+      "feedbackWrong": "Incorrecto. La regla IUPAC correcta es a) Primer punto de diferencia.",
+      "ambiguousNote": "Ítem 57 de Nomenclatura (pág. 115 / clave pág. 171): aparece con clave 'Z' en el recopilatorio."
+    },
+    "nom_58": {
+      "unit": "alquenos",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 58 (Ítem con clave Z en grilla oficial)",
+      "badgeLabel": "Nomenclatura 58 (Ítem con clave Z en grilla oficial)",
+      "topic": "Nomenclatura • Revisión de Clave Oficial",
+      "statement": "58. [Clave marcada como 'Z' en la tabla de respuestas del recopilatorio pág. 171 — estructura con sello] En un cicloalqueno disustituido como el 1,3-dimetilciclopenteno:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Los carbonos del doble enlace son obligatoriamente C1 y C2, asignando C1 al carbono del doble enlace que lleva el sustituyente"
+        },
+        {
+          "letter": "b",
+          "text": "Se empieza a numerar por el sustituyente en C3"
+        },
+        {
+          "letter": "c",
+          "text": "El doble enlace lleva el localizador 3"
+        },
+        {
+          "letter": "d",
+          "text": "Se nombra como ciclopentano"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna es correcta"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto (revisado): El doble enlace lleva los números 1 y 2, y el sustituyente sobre el doble enlace recibe el 1: 1,3-dimetilciclopenteno.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "semiFormula": "CICLOENO-5-1,3-CH3",
+      "ambiguousNote": "Ítem 58 de Nomenclatura (pág. 115 / clave pág. 171): aparece con clave 'Z' en el recopilatorio."
+    },
+    "nom_59": {
+      "unit": "alcoholes",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 59 (Ítem con clave Z en grilla oficial)",
+      "badgeLabel": "Nomenclatura 59 (Ítem con clave Z en grilla oficial)",
+      "topic": "Nomenclatura • Revisión de Clave Oficial",
+      "statement": "59. [Clave marcada como 'Z' en la tabla de respuestas del recopilatorio pág. 171 — estructura con sello] En la nomenclatura de alcoholes cíclicos sustituidos (ej. 3-metilciclohexanol):",
+      "options": [
+        {
+          "letter": "a",
+          "text": "El carbono unido al grupo principal –OH recibe obligatoriamente el localizador 1"
+        },
+        {
+          "letter": "b",
+          "text": "El grupo metilo recibe el localizador 1"
+        },
+        {
+          "letter": "c",
+          "text": "Se numera en el sentido que dé el número más alto al sustituyente"
+        },
+        {
+          "letter": "d",
+          "text": "Se nombra como hidroxiciclohexano"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna es correcta"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto (revisado): En ciclos con grupo principal (–OH), dicho carbono es C1 y se numera hacia el sustituyente más cercano.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "semiFormula": "CICLO-6-1-OH-3-CH3",
+      "ambiguousNote": "Ítem 59 de Nomenclatura (pág. 115 / clave pág. 171): aparece con clave 'Z' en el recopilatorio."
+    },
+    "nom_60": {
+      "unit": "cetonas",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 60 (Ítem con clave Z en grilla oficial)",
+      "badgeLabel": "Nomenclatura 60 (Ítem con clave Z en grilla oficial)",
+      "topic": "Nomenclatura • Revisión de Clave Oficial",
+      "statement": "60. [Clave marcada como 'Z' en la tabla de respuestas del recopilatorio pág. 171] En la nomenclatura IUPAC de dicetonas cíclicas como la 1,4-ciclohexanodiona:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Los grupos carbonilo reciben los localizadores más bajos posibles (1,4) con terminación -diona"
+        },
+        {
+          "letter": "b",
+          "text": "Se nombra como dihidroxiciclohexano"
+        },
+        {
+          "letter": "c",
+          "text": "Los carbonilos reciben localizadores 3,6"
+        },
+        {
+          "letter": "d",
+          "text": "Se usa la terminación -dial"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna es correcta"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto (revisado): Los dos carbonilos del anillo reciben los localizadores 1 y 4 con sufijo -diona.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "semiFormula": "CICLO-6-1,4-O",
+      "ambiguousNote": "Ítem 60 de Nomenclatura (pág. 115 / clave pág. 171): aparece con clave 'Z' en el recopilatorio."
+    },
+    "nom_61": {
+      "unit": "derivados",
+      "category": "examenes",
+      "shortTitle": "Nomenclatura 61 (Ítem con clave Z en grilla oficial)",
+      "badgeLabel": "Nomenclatura 61 (Ítem con clave Z en grilla oficial)",
+      "topic": "Nomenclatura • Revisión de Clave Oficial",
+      "statement": "61. [Clave marcada como 'Z' en la tabla de respuestas del recopilatorio pág. 171] En las amidas terciarias con dos sustituyentes distintos unidos al nitrógeno (ej. N-etil-N-metilbutanamida):",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Los sustituyentes sobre el nitrógeno se anteponen con el localizador N- en orden alfabético"
+        },
+        {
+          "letter": "b",
+          "text": "Se numeran con 1-etil-1-metil"
+        },
+        {
+          "letter": "c",
+          "text": "Se omiten los prefijos N-"
+        },
+        {
+          "letter": "d",
+          "text": "Se nombran como aminas"
+        },
+        {
+          "letter": "e",
+          "text": "Ninguna es correcta"
+        }
+      ],
+      "correct": "a",
+      "feedbackCorrect": "Correcto (revisado): Cada sustituyente unido al átomo de nitrógeno se indica con 'N-' en orden alfabético.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es a).",
+      "ambiguousNote": "Ítem 61 de Nomenclatura (pág. 115 / clave pág. 171): aparece con clave 'Z' en el recopilatorio."
+    },
+    "bio_01": {
+      "unit": "carbohidratos",
+      "category": "examenes",
+      "shortTitle": "Biomoléculas 1 (Clasificación de monosacáridos — Aldohexosas y Cetohexosas)",
+      "badgeLabel": "Biomoléculas 1 (Clasificación de monosacáridos — Aldohexosas y Cetohexosas)",
+      "topic": "Biomoléculas • Carbohidratos",
+      "statement": "1. La D-glucosa y la D-galactosa son aldohexosas, mientras que la D-fructosa es una:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Aldopentosa"
+        },
+        {
+          "letter": "b",
+          "text": "Cetohexosa (posee 6 carbonos y un grupo cetona en C2)"
+        },
+        {
+          "letter": "c",
+          "text": "Aldotriosa"
+        },
+        {
+          "letter": "d",
+          "text": "Disacárido no reductor"
+        },
+        {
+          "letter": "e",
+          "text": "Polisacárido estructural"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: La fructosa tiene fórmula C₆H₁₂O₆ con función cetona en C2 (cetohexosa).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Cetohexosa.",
+      "semiFormula": "HAWORTH-FURANOSA-FRUCTOSA"
+    },
+    "bio_02": {
+      "unit": "carbohidratos",
+      "category": "examenes",
+      "shortTitle": "Biomoléculas 2 (Enlaces glucosídicos en polisacáridos: Almidón, Glucógeno y Celulosa)",
+      "badgeLabel": "Biomoléculas 2 (Enlaces glucosídicos en polisacáridos: Almidón, Glucógeno y Celulosa)",
+      "topic": "Biomoléculas • Polisacáridos",
+      "statement": "2. La celulosa es un homopolisacárido lineal de β-D-glucosa unida por enlaces glucosídicos β(1→4), mientras que la amilosa (almidón) y el glucógeno poseen cadenas de α-D-glucosa con enlaces:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "β(1→2)"
+        },
+        {
+          "letter": "b",
+          "text": "α(1→4) en las cadenas lineales (y ramificaciones α(1→6) en amilopectina y glucógeno)"
+        },
+        {
+          "letter": "c",
+          "text": "β(1→6) exclusivamente"
+        },
+        {
+          "letter": "d",
+          "text": "α(1→1)"
+        },
+        {
+          "letter": "e",
+          "text": "Peptídicos"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Almidón y glucógeno usan enlaces α(1→4) (digeribles por α-amilasa) y ramificaciones α(1→6).",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b).",
+      "semiFormula": "POLISACARIDO-GLUCOGENO"
+    },
+    "bio_03": {
+      "unit": "lipidos",
+      "category": "examenes",
+      "shortTitle": "Biomoléculas 3 (Fosfolípidos — Fosfatidilcolina / Lecitina)",
+      "badgeLabel": "Biomoléculas 3 (Fosfolípidos — Fosfatidilcolina / Lecitina)",
+      "topic": "Biomoléculas • Lípidos Complejos",
+      "statement": "3. Los glicerofosfolípidos (como la fosfatidilcolina o lecitina) están compuestos por glicerol esterificado con dos ácidos grasos (en C1 y C2) y un grupo fosfato en C3 unido a un alcohol polar (colina), lo que les confiere carácter:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Hidrófobo puro"
+        },
+        {
+          "letter": "b",
+          "text": "Anfipático (cabeza polar hidrófila y dos colas apolares hidrófobas, base de las bicapas lipídicas)"
+        },
+        {
+          "letter": "c",
+          "text": "Catiónico insoluble"
+        },
+        {
+          "letter": "d",
+          "text": "Polisacárido"
+        },
+        {
+          "letter": "e",
+          "text": "Inorgánico"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: Su naturaleza anfipática permite la formación espontánea de bicapas lipídicas en las membranas celulares.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b).",
+      "semiFormula": "LIPIDO-FOSFOLIPIDO-COLINA"
+    },
+    "bio_04": {
+      "unit": "aminoacidos",
+      "category": "examenes",
+      "shortTitle": "Biomoléculas 4 (Aminoácidos esenciales, glicina aquiral y cisteína)",
+      "badgeLabel": "Biomoléculas 4 (Aminoácidos esenciales, glicina aquiral y cisteína)",
+      "topic": "Biomoléculas • Aminoácidos y Proteínas",
+      "statement": "4. De los 20 α-aminoácidos proteicos estándar, el ÚNICO que es aquiral (no posee carbono asimétrico porque su cadena lateral R es –H) es la:",
+      "options": [
+        {
+          "letter": "a",
+          "text": "Alanina"
+        },
+        {
+          "letter": "b",
+          "text": "Glicina (ácido aminoetanoico)"
+        },
+        {
+          "letter": "c",
+          "text": "Prolina"
+        },
+        {
+          "letter": "d",
+          "text": "Cisteína"
+        },
+        {
+          "letter": "e",
+          "text": "Fenilalanina"
+        }
+      ],
+      "correct": "b",
+      "feedbackCorrect": "Correcto: En la glicina (H₂N–CH₂–COOH) el carbono α tiene dos hidrógenos idénticos, por lo que es aquiral.",
+      "feedbackWrong": "Incorrecto. La respuesta correcta es b) Glicina."
     }
   },
   "reactions": {
