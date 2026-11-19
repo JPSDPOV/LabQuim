@@ -1,0 +1,150 @@
+{
+  "category": "obtencion",
+  "title": "4) Oxidación Suave de Alcoholes Primarios (+ [O] débil / PCC ──► Aldehído)",
+  "natureBadge": "Deshidrogenación Oxidativa Controlada • R–CH₂OH + [O]débil (PCC) ──► R–CHO + H₂O",
+  "deltaH": "ΔH° < 0 (Exotérmica; el medio anhidro con PCC evita la oxidación posterior hasta ácido carboxílico)",
+  "description": "Oxidación suave de alcoholes primarios mediante reactivos anhidros como el clorocromato de piridinio (PCC en CH₂Cl₂, representado como [O]débil en Diap. 13), eliminando dos hidrógenos para obtener un aldehído.",
+  "meta": {
+    "grupoFuncional": "Aldehídos (R–CHO)",
+    "reaccionMecanismo": "Eliminación oxidativa E2 sobre éster cromato intermediario",
+    "naturaleza": "Por etapas en medio anhidro.",
+    "rupturaIntermediarios": "Ruptura de enlaces O–H y Cα–H; formación de enlace π C=O.",
+    "detalleMecanismo": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
+    "reactivosCondiciones": "Alcohol primario (R–CH₂OH) + [O]débil (PCC en CH₂Cl₂ anhidro).",
+    "rolReactivos": "• Sustrato: Alcohol primario.\n• Oxidante débil: PCC en diclorometano anhidro.",
+    "reglasObs": "• Diap. 13: 1-butanol + [O]débil → butanal."
+  },
+  "substrates": [
+    {
+      "id": "1butanol_butanal",
+      "name": "Diap. 13: 1-Butanol + [O]débil ──► Butanal",
+      "catalyst": "[O]débil (PCC en CH₂Cl₂ anhidro)"
+    }
+  ],
+  "catalysts": [
+    "[O]débil (PCC en CH₂Cl₂ anhidro)"
+  ],
+  "stepsBySubstrate": {
+    "1butanol_butanal": [
+      {
+        "title": "Paso 1 — Estado Inicial: 1-Butanol + [O]débil (PCC)",
+        "semiStep": "CH₃–CH₂–CH₂–CH₂–OH  +  [O]débil",
+        "semiGlobal": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
+        "desc": "Se eliminan un H del hidroxilo y un H del carbono C1.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlaces C1–H y O–H.",
+          "forming": "En VERDE punteado: doble enlace C1=O.",
+          "movement": "Oxidación controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃–CH₂–CH₂",
+              "x": 230,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 450,
+              "y": 210,
+              "label": "1-Butanol"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 450,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox",
+              "el": "[O]débil (PCC)",
+              "x": 700,
+              "y": 160,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Butanal + H₂O",
+        "semiStep": "CH₃–CH₂–CH₂–CH=O  +  H₂O",
+        "semiGlobal": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
+        "desc": "Se obtiene butanal.",
+        "legend": {
+          "breaking": "2 H eliminados como H₂O.",
+          "forming": "En VERDE sólido: butanal.",
+          "movement": "Producto aldehído consolidado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃–CH₂–CH₂",
+              "x": 220,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 440,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Butanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 440,
+              "y": 100,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 620,
+              "y": 215,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
