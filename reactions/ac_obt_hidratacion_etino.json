@@ -560,7 +560,7 @@
       },
       {
         "title": "Producto Consolidado: Etanal / Acetaldehído (CH₃–CHO)",
-        "semiStep": "CH₃–CH=O (Etanal)",
+        "semiStep": "CH₃–CHO (Etanal)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
         "desc": "Queda consolidado el etanal (acetaldehído, CH₃–CHO), único aldehído obtenido por hidratación de un alquino.",
         "legend": {
