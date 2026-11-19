@@ -3,12 +3,12 @@
   "title": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)",
   "natureBadge": "Adición + Tautomería Ceto-Enólica • HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₂=CH–OH] ⇄ CH₃–CHO",
   "deltaH": "ΔH° < 0 (Exotérmica; el etino es el ÚNICO alquino que produce un aldehído)",
-  "description": "Adición de agua al triple enlace del etino (acetileno) catalizada por ácido sulfúrico y sulfato mercúrico (Diap. 12). Se forma primero el alcohol vinílico (enol inestable), que se tautomeriza espontáneamente al grupo carbonilo formando etanal (acetaldehído).",
+  "description": "Adición de agua al triple enlace del etino (acetileno) catalizada por ácido sulfúrico y sulfato mercúrico (Diap. 12):\n1) El triple enlace H–C≡C–H y la molécula de agua H–OH rompen un enlace π y el enlace O–H respectivamente.\n2) Se adicionan H y OH formando el intermediario enol inestable (alcohol vinílico, CH₂=CH–OH).\n3) Por tautomería ceto-enólica, el protón del –OH migra hacia el carbono =CH₂ mientras se forma el doble enlace C=O del etanal (CH₃–CHO).",
   "meta": {
     "grupoFuncional": "Aldehído (Etanal / Acetaldehído, CH₃–CHO)",
     "reaccionMecanismo": "Adición electrofílica catalizada por Hg²⁺/H⁺ seguida de tautomería ceto-enólica",
-    "naturaleza": "Por etapas vía intermediario enol inestable.",
-    "rupturaIntermediarios": "Ruptura de enlace π C≡C y H–OH; intermedio enol [CH₂=CH–OH].",
+    "naturaleza": "Por etapas vía intermediario enol inestable (alcohol vinílico).",
+    "rupturaIntermediarios": "1) Ruptura de enlace π C≡C y H–OH → intermedio enol [CH₂=CH–OH]; 2) Tautomería O–H → C=O.",
     "detalleMecanismo": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► [CH₂=CH–OH] ⇄ CH₃–CHO",
     "reactivosCondiciones": "Etino (HC≡CH) + H₂O / H₂SO₄ acuoso + HgSO₄.",
     "rolReactivos": "• Sustrato: Etino (acetileno).\n• Reactivo: Agua (H₂O).\n• Catalizadores: H₂SO₄ + HgSO₄.",
@@ -27,97 +27,497 @@
   "stepsBySubstrate": {
     "etino_etanal": [
       {
-        "title": "Paso 1 — Adición de H₂O al Etino: Formación del Enol (Alcohol Vinílico)",
-        "semiStep": "HC≡CH  +  H–OH  ──(H⁺/Hg²⁺)──►  [CH₂=CH–OH]",
+        "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–OH)",
+        "semiStep": "H–C≡C–H  +  H–OH  (Reactivos intactos)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-        "desc": "Se adiciona H y OH al triple enlace formando el alcohol vinílico intermediario.",
+        "desc": "Se observan las dos moléculas iniciales intactas antes de reaccionar: el etino lineal con su triple enlace C≡C y la molécula de agua H–OH.",
         "legend": {
-          "breaking": "En ROJO punteado: enlace π C≡C.",
-          "forming": "Enlace C–OH del enol.",
-          "movement": "Adición electrofílica."
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación de la molécula de agua al triple enlace del etino."
         },
         "scene": {
           "atoms": [
             {
-              "id": "C1",
-              "el": "CH₂",
-              "x": 300,
+              "id": "H_izq",
+              "el": "H",
+              "x": 160,
               "y": 210
             },
             {
-              "id": "C2",
-              "el": "CH",
-              "x": 500,
+              "id": "C1",
+              "el": "C",
+              "x": 295,
               "y": 210,
-              "highlight": "#fbbf24",
-              "label": "Enol inestable"
+              "label": "Etino"
             },
             {
-              "id": "OH",
+              "id": "C2",
+              "el": "C",
+              "x": 455,
+              "y": 210
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 710,
+              "y": 135,
+              "highlight": "#38bdf8",
+              "label": "Agua (H–OH)"
+            },
+            {
+              "id": "OH_agua",
               "el": "OH",
-              "x": 500,
-              "y": 100,
+              "x": 830,
+              "y": 135,
               "highlight": "#38bdf8"
             }
           ],
           "bonds": [
             {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
               "from": "C1",
               "to": "C2",
-              "order": 2,
+              "order": 3,
               "state": "normal"
             },
             {
               "from": "C2",
-              "to": "OH",
+              "to": "H_der",
               "order": 1,
               "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 645,
+              "y": 175,
+              "text": "+"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Tautomería Ceto-Enólica ──► Etanal (CH₃–CHO)",
-        "semiStep": "[CH₂=CH–OH]  ⇄  CH₃–CH=O  (Etanal)",
+        "title": "Ruptura en Rojo: Apertura de un Enlace π (C≡C) y Disociación de H–OH",
+        "semiStep": "H–C≡C–H  +  H–OH  (Ruptura de π C≡C y enlace O–H)",
         "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-        "desc": "El protón del –OH migra al =CH₂ y se forma el doble enlace C=O del etanal.",
+        "desc": "Por catálisis de H⁺ y Hg²⁺, se rompe uno de los enlaces π del triple enlace del etino y se disocia el enlace H–OH del agua.",
         "legend": {
-          "breaking": "Enlace O–H y π C=C reorganizados.",
-          "forming": "En VERDE sólido: etanal.",
-          "movement": "Tautomería ceto-enólica."
+          "breaking": "En ROJO punteado: un enlace π del triple enlace y el enlace H–OH del agua.",
+          "forming": "En VERDE punteado: aproximación de H hacia C1 y de OH hacia C2.",
+          "movement": "Ataque electrofílico y nucleofílico sobre el triple enlace."
         },
         "scene": {
           "atoms": [
             {
+              "id": "H_izq",
+              "el": "H",
+              "x": 170,
+              "y": 225
+            },
+            {
               "id": "C1",
-              "el": "CH₃",
-              "x": 280,
-              "y": 215
+              "el": "C",
+              "x": 310,
+              "y": 225
             },
             {
               "id": "C2",
               "el": "C",
               "x": 470,
-              "y": 215,
-              "highlight": "#10b981",
-              "label": "Etanal"
+              "y": 225
             },
             {
-              "id": "O1",
-              "el": "O",
+              "id": "H_der",
+              "el": "H",
+              "x": 610,
+              "y": 225
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 310,
+              "y": 105,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
               "x": 470,
-              "y": 100,
+              "y": 105,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 3,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_agua",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 390,
+              "y1": 215,
+              "cx": 335,
+              "cy": 165,
+              "x2": 315,
+              "y2": 122,
+              "label": "Captura H⁺"
+            },
+            {
+              "type": "full",
+              "x1": 470,
+              "y1": 125,
+              "cx": 495,
+              "cy": 165,
+              "x2": 475,
+              "y2": 205,
+              "label": "Ataque OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Formado: Enol Inestable (Alcohol Vinílico, CH₂=CH–OH)",
+        "semiStep": "[CH₂=CH–OH]  (Enol inestable / Alcohol vinílico)",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "Se forma el alcohol vinílico (CH₂=CH–OH). Este enol es termodinámicamente inestable porque el grupo –OH está unido directamente a un carbono con doble enlace C=C.",
+        "legend": {
+          "breaking": "Enlace π C≡C y enlace H–OH ya rotos.",
+          "forming": "Nuevos enlaces C1–H y C2–OH consolidados en el enol.",
+          "movement": "Intermediario listo para experimentar tautomería ceto-enólica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_izq",
+              "el": "H",
+              "x": 180,
+              "y": 230
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 310,
+              "y": 110,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 310,
+              "y": 230,
+              "highlight": "#fbbf24",
+              "label": "Enol inestable"
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 490,
+              "y": 230,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 635,
+              "y": 230
+            },
+            {
+              "id": "OH_agua",
+              "el": "OH",
+              "x": 490,
+              "y": 110,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "OH_agua",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Tautomería Ceto-Enólica: Migración del Protón y Formación del Carbonilo C=O",
+        "semiStep": "[CH₂=CH–O–H]  ⇄  CH₃–CH=O",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "En la tautomería ceto-enólica, el enlace π del C=C y el enlace O–H se rompen simultáneamente: el hidrógeno migra hacia el carbono C1 (=CH₂ → –CH₃) mientras se forma el doble enlace C2=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace π C1=C2 y enlace O–H.",
+          "forming": "En VERDE punteado: enlace C1–H y doble enlace carbonilo C2=O.",
+          "movement": "Reorganización tautomérica hacia el aldehído estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_izq",
+              "el": "H",
+              "x": 180,
+              "y": 235
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 310,
+              "y": 115
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 310,
+              "y": 235
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 500,
+              "y": 235
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 655,
+              "y": 235
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 500,
+              "y": 115,
               "highlight": "#10b981"
             },
             {
-              "id": "H1",
+              "id": "H_mig",
               "el": "H",
-              "x": 650,
-              "y": 215,
+              "x": 385,
+              "y": 155,
               "highlight": "#10b981"
             }
           ],
           "bonds": [
+            {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "H_der",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_carb",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_carb",
+              "to": "H_mig",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_mig",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 125,
+              "cx": 430,
+              "cy": 115,
+              "x2": 395,
+              "y2": 145,
+              "label": "Migra H⁺"
+            },
+            {
+              "type": "full",
+              "x1": 405,
+              "y1": 225,
+              "cx": 455,
+              "cy": 180,
+              "x2": 495,
+              "y2": 135,
+              "label": "Forma C=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal / Acetaldehído (CH₃–CHO)",
+        "semiStep": "CH₃–CH=O  (Etanal)",
+        "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+        "desc": "Queda consolidado el etanal (acetaldehído, CH₃–CHO), único aldehído obtenido por hidratación de un alquino.",
+        "legend": {
+          "breaking": "Tautomería completada.",
+          "forming": "En VERDE sólido: grupo carbonilo C=O y grupo metilo CH₃ del etanal.",
+          "movement": "Producto aldehído estable obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_izq",
+              "el": "H",
+              "x": 175,
+              "y": 235
+            },
+            {
+              "id": "H_agua",
+              "el": "H",
+              "x": 310,
+              "y": 115
+            },
+            {
+              "id": "H_mig",
+              "el": "H",
+              "x": 310,
+              "y": 320,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 310,
+              "y": 235
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 510,
+              "y": 235,
+              "highlight": "#10b981",
+              "label": "Etanal (Aldehído)"
+            },
+            {
+              "id": "O_carb",
+              "el": "O",
+              "x": 510,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_der",
+              "el": "H",
+              "x": 670,
+              "y": 235
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_izq",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_agua",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_mig",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            },
             {
               "from": "C1",
               "to": "C2",
@@ -126,13 +526,13 @@
             },
             {
               "from": "C2",
-              "to": "O1",
+              "to": "O_carb",
               "order": 2,
               "state": "new"
             },
             {
               "from": "C2",
-              "to": "H1",
+              "to": "H_der",
               "order": 1,
               "state": "normal"
             }
