@@ -647,6 +647,9 @@
             </div>
 
             <div class="flex items-center gap-2 shrink-0">
+                <button type="button" id="btnToggleStageTheme" onclick="toggleStageLightMode()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/50 text-xs font-extrabold text-amber-200 flex items-center gap-1.5 transition active:scale-95 cursor-pointer" title="Cambiar entre fondo blanco (Sol) y fondo oscuro (Luna)">
+                    <span id="stageThemeIcon">☀️</span> <span id="stageThemeText" class="hidden sm:inline">Fondo Blanco</span>
+                </button>
                 <button type="button" onclick="returnToReactionExamples()" class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 flex items-center gap-1 transition active:scale-95" title="Cambiar reacción o volver al menú">
                     <span>⬅</span> <span class="hidden sm:inline">Cambiar</span>
                 </button>
@@ -664,6 +667,12 @@
                 <span class="rotate-phone-icon text-sm">📱</span>
                 <span>Modo horizontal activo</span>
             </div>
+
+            <!-- Botón flotante Sol / Luna en el Paso 1 para alternar fondo blanco / oscuro -->
+            <button type="button" id="floatingStep1ThemeBtn" onclick="toggleStageLightMode()" class="hidden absolute top-3 right-3 z-20 px-3.5 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-amber-400/60 text-amber-200 text-xs font-extrabold shadow-lg flex items-center gap-1.5 transition active:scale-95 cursor-pointer" title="Cambiar fondo del pizarrón">
+                <span id="floatingThemeIcon" class="text-sm">☀️</span>
+                <span id="floatingThemeLabel">Fondo Blanco</span>
+            </button>
 
             <!-- PESTAÑA LATERAL IZQUIERDA: FICHA DE LOS 8 PARÁMETROS -->
             <button type="button" id="tabLeftParams" onclick="toggleSideDrawer('left')" class="fixed left-0 top-1/2 -translate-y-1/2 z-30 bg-cyan-600/95 hover:bg-cyan-500 text-white border-y border-r border-cyan-300/50 rounded-r-xl py-3.5 px-1.5 shadow-xl shadow-cyan-950/60 flex items-center gap-1 transition active:scale-95 cursor-pointer" title="Ver Ficha de 8 Parámetros">
@@ -800,6 +809,10 @@
                 <pattern id="labGrid" width="30" height="30" patternUnits="userSpaceOnUse">
                     <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(148, 163, 184, 0.06)" stroke-width="1"/>
                 </pattern>
+                <pattern id="labGridLight" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(15, 23, 42, 0.06)" stroke-width="1"/>
+                </pattern>
+                <rect id="svgBgBase" x="-500" y="-500" width="2500" height="1500" fill="#020617" />
                 <rect id="svgBgGrid" x="-500" y="-500" width="2500" height="1500" fill="url(#labGrid)" />
                 <g id="svgDynamicStage"></g>
             </svg>
@@ -878,7 +891,67 @@
         let currentStepIdx = 0;
         let autoPlayTimer = null;
         let isStageFullscreen = false;
+        let isStageLightMode = false;
         let wizardStage = 1;
+
+        function toggleStageLightMode() {
+            isStageLightMode = !isStageLightMode;
+            applyStageThemeUI();
+            if (currentTargetSceneForScrub && !animFrameId) {
+                renderInterpolatedFrame(currentPrevSceneForScrub || currentTargetSceneForScrub, currentTargetSceneForScrub, 1);
+            }
+        }
+
+        function applyStageThemeUI() {
+            const wrapper = document.getElementById('svgScrollWrapper');
+            const bgBase = document.getElementById('svgBgBase');
+            const bgGrid = document.getElementById('svgBgGrid');
+            const iconEl = document.getElementById('stageThemeIcon');
+            const textEl = document.getElementById('stageThemeText');
+            const btnHeader = document.getElementById('btnToggleStageTheme');
+            const floatBtn = document.getElementById('floatingStep1ThemeBtn');
+            const floatIcon = document.getElementById('floatingThemeIcon');
+            const floatLabel = document.getElementById('floatingThemeLabel');
+
+            if (isStageLightMode) {
+                if (wrapper) {
+                    wrapper.classList.remove('bg-slate-950');
+                    wrapper.classList.add('bg-white');
+                }
+                if (bgBase) bgBase.setAttribute('fill', '#ffffff');
+                if (bgGrid) bgGrid.setAttribute('fill', 'url(#labGridLight)');
+                if (iconEl) iconEl.innerText = '🌙';
+                if (textEl) textEl.innerText = 'Fondo Oscuro';
+                if (btnHeader) {
+                    btnHeader.className = 'px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-600 text-xs font-extrabold text-cyan-200 flex items-center gap-1.5 transition active:scale-95 cursor-pointer';
+                }
+                if (floatIcon) floatIcon.innerText = '🌙';
+                if (floatLabel) floatLabel.innerText = 'Fondo Oscuro';
+                if (floatBtn) {
+                    floatBtn.className = 'absolute top-3 right-3 z-20 px-3.5 py-1.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-700 text-cyan-200 text-xs font-extrabold shadow-lg flex items-center gap-1.5 transition active:scale-95 cursor-pointer';
+                }
+            } else {
+                if (wrapper) {
+                    wrapper.classList.remove('bg-white');
+                    wrapper.classList.add('bg-slate-950');
+                }
+                if (bgBase) bgBase.setAttribute('fill', '#020617');
+                if (bgGrid) bgGrid.setAttribute('fill', 'url(#labGrid)');
+                if (iconEl) iconEl.innerText = '☀️';
+                if (textEl) textEl.innerText = 'Fondo Blanco';
+                if (btnHeader) {
+                    btnHeader.className = 'px-2.5 sm:px-3 py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/50 text-xs font-extrabold text-amber-200 flex items-center gap-1.5 transition active:scale-95 cursor-pointer';
+                }
+                if (floatIcon) floatIcon.innerText = '☀️';
+                if (floatLabel) floatLabel.innerText = 'Fondo Blanco';
+                if (floatBtn) {
+                    floatBtn.className = 'absolute top-3 right-3 z-20 px-3.5 py-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-amber-400/60 text-amber-200 text-xs font-extrabold shadow-lg flex items-center gap-1.5 transition active:scale-95 cursor-pointer';
+                }
+            }
+            if (floatBtn) {
+                floatBtn.classList.toggle('hidden', currentStepIdx !== 0);
+            }
+        }
 
         function isCompactMobile() {
             return window.innerWidth < 640 && !isStageFullscreen;
@@ -2815,6 +2888,7 @@
 
         function renderInterpolatedFrame(prevScene, targetScene, rawT) {
             const mobile = isCompactMobile();
+            const lightMode = Boolean(isStageLightMode);
             const clampedRaw = Math.min(1, Math.max(0, rawT));
             const t = easeInOutQuint(clampedRaw);
             const fadeT = easeOutQuart(clampedRaw);
@@ -2840,14 +2914,14 @@
                     const x2 = mapStageX(br.x2);
                     const y2 = mapStageY(br.y2);
                     const hook = mobile ? 16 : 12;
-                    const col = br.color || '#94a3b8';
+                    const col = br.color || (lightMode ? '#334155' : '#94a3b8');
                     expandBounds(x1 - 10, y1 - 10, x2 + 24, y2 + 28);
                     svgOut += `
                         <g opacity="${op}">
                             <path d="M ${x1 + hook} ${y1} L ${x1} ${y1} L ${x1} ${y2} L ${x1 + hook} ${y2}" fill="none" stroke="${col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M ${x2 - hook} ${y1} L ${x2} ${y1} L ${x2} ${y2} L ${x2 - hook} ${y2}" fill="none" stroke="${col}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
                             ${(br.superscript !== undefined ? br.superscript : '‡') ? `<text x="${x2 + 6}" y="${y1 + 10}" fill="${br.supColor || '#fbbf24'}" font-size="${mobile ? 19 : 14}" font-weight="800">${br.superscript !== undefined ? br.superscript : '‡'}</text>` : ''}
-                            ${br.label ? `<text x="${(x1 + x2) / 2}" y="${y2 + (mobile ? 22 : 16)}" text-anchor="middle" fill="#e2e8f0" font-size="${brFont}" font-weight="800">${br.label}</text>` : ''}
+                            ${br.label ? `<text x="${(x1 + x2) / 2}" y="${y2 + (mobile ? 22 : 16)}" text-anchor="middle" fill="${lightMode ? '#0f172a' : '#e2e8f0'}" font-size="${brFont}" font-weight="800">${br.label}</text>` : ''}
                         </g>
                     `;
                 });
@@ -2969,7 +3043,7 @@
                 const prevOrder = existedBefore ? (prevBondMap[key].order || 1) : 0;
                 const targetOrder = b.order || 1;
 
-                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null);
+                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null, null, lightMode);
             });
 
             if (prevScene && prevScene.bonds) {
@@ -3054,10 +3128,12 @@
 
                 pendingArrowLabels.forEach(L => {
                     expandBounds(L.lx - L.bw / 2, L.ly - 2, L.lx + L.bw / 2, L.ly + L.bh + 2);
+                    const arrBg = lightMode ? 'rgba(255,255,255,0.96)' : 'rgba(15,23,42,0.94)';
+                    const arrTxtCol = (lightMode && L.col === '#38bdf8') ? '#0369a1' : ((lightMode && L.col === '#f97316') ? '#c2410c' : L.col);
                     svgOut += `
                         <g opacity="${op}">
-                            <rect x="${L.lx - L.bw / 2}" y="${L.ly}" width="${L.bw}" height="${L.bh}" rx="5" fill="rgba(15,23,42,0.94)" stroke="${L.col}" stroke-width="1"/>
-                            <text x="${L.lx}" y="${L.ly + L.bh * 0.72}" text-anchor="middle" fill="${L.col}" font-size="${arrFont}" font-weight="800">${L.text}</text>
+                            <rect x="${L.lx - L.bw / 2}" y="${L.ly}" width="${L.bw}" height="${L.bh}" rx="5" fill="${arrBg}" stroke="${arrTxtCol}" stroke-width="1.3"/>
+                            <text x="${L.lx}" y="${L.ly + L.bh * 0.72}" text-anchor="middle" fill="${arrTxtCol}" font-size="${arrFont}" font-weight="800">${L.text}</text>
                         </g>
                     `;
                 });
@@ -3070,7 +3146,8 @@
                     const baseSize = tx.size || 20;
                     const finalSize = mobile ? Math.round(baseSize * 1.45) : baseSize;
                     expandBounds(txX - 15, txY - finalSize, txX + 15, txY + 8);
-                    svgOut += `<text x="${txX}" y="${txY}" text-anchor="middle" fill="${tx.color || '#cbd5e1'}" font-size="${finalSize}" font-weight="800" opacity="${fadeT}">${tx.text}</text>`;
+                    const txCol = (lightMode && (!tx.color || tx.color === '#cbd5e1' || tx.color === '#38bdf8')) ? '#0f172a' : (tx.color || '#cbd5e1');
+                    svgOut += `<text x="${txX}" y="${txY}" text-anchor="middle" fill="${txCol}" font-size="${finalSize}" font-weight="800" opacity="${fadeT}">${tx.text}</text>`;
                 });
             }
 
@@ -3086,7 +3163,7 @@
                 const valenceInfo = computeAutomaticValenceDots(a, bondsByAtomId[a.id] || []);
                 const extraRad = (a.radical || valenceInfo.pairs.length > 0 || valenceInfo.singleDot) ? (mobile ? 20 : 15) : 4;
                 expandBounds(a.x - geom.halfW - extraRad, a.y - geom.halfH - extraRad, a.x + geom.halfW + extraRad, a.y + geom.halfH + extraRad);
-                svgOut += renderSingleAtomNode(a, geom, valenceInfo);
+                svgOut += renderSingleAtomNode(lightMode ? { ...a, lightTheme: true } : a, geom, valenceInfo);
                 if (a.label) {
                     const isTop = a.labelPos === 'top';
                     const rawLy = isTop ? (a.y - geom.halfH - (mobile ? 17 : 12)) : (a.y + geom.halfH + (mobile ? 21 : 15));
@@ -3125,10 +3202,13 @@
 
             pendingLabels.forEach(L => {
                 expandBounds(L.lx - L.lw / 2, L.ly - lblBoxH * 0.68, L.lx + L.lw / 2, L.ly + lblBoxH * 0.35);
+                const lblBg = lightMode ? 'rgba(241, 245, 249, 0.96)' : 'rgba(15, 23, 42, 0.94)';
+                const lblStroke = lightMode ? 'rgba(15, 23, 42, 0.35)' : 'rgba(148, 163, 184, 0.4)';
+                const lblTxtCol = lightMode ? '#0f172a' : '#e2e8f0';
                 svgOut += `
                     <g opacity="${L.opacity}">
-                        <rect x="${L.lx - L.lw / 2}" y="${L.ly - lblBoxH * 0.68}" width="${L.lw}" height="${lblBoxH}" rx="5" fill="rgba(15, 23, 42, 0.94)" stroke="rgba(148, 163, 184, 0.4)" stroke-width="1"/>
-                        <text x="${L.lx}" y="${L.ly + (mobile ? 2.5 : 0.5)}" text-anchor="middle" fill="#e2e8f0" font-size="${lblFont}" font-weight="700">${L.text}</text>
+                        <rect x="${L.lx - L.lw / 2}" y="${L.ly - lblBoxH * 0.68}" width="${L.lw}" height="${lblBoxH}" rx="5" fill="${lblBg}" stroke="${lblStroke}" stroke-width="1.2"/>
+                        <text x="${L.lx}" y="${L.ly + (mobile ? 2.5 : 0.5)}" text-anchor="middle" fill="${lblTxtCol}" font-size="${lblFont}" font-weight="700">${L.text}</text>
                     </g>
                 `;
             });
@@ -3323,7 +3403,7 @@
             const g = geom || getNodeGeometry(a);
             const cfg = g.cfg;
             const bg = a.lightTheme ? '#ffffff' : (a.bg || cfg.bg);
-            const border = a.lightTheme ? '#0f172a' : (a.border || cfg.border);
+            const border = a.lightTheme ? (a.highlight || '#0f172a') : (a.border || cfg.border);
             const textCol = a.lightTheme ? '#0f172a' : (a.text || cfg.text);
 
             if (a.isVertex) {
@@ -3552,6 +3632,7 @@
             document.getElementById('stepCounterText').innerText = `Paso ${currentStepIdx + 1} de ${steps.length}`;
             document.getElementById('stepNumberBadge').innerText = `PASO ${currentStepIdx + 1} DE ${steps.length}`;
             document.getElementById('stepTitleText').innerText = step.title;
+            applyStageThemeUI();
             if (step.legend) {
                 document.getElementById('legendBreakingText').innerText = step.legend.breaking;
                 document.getElementById('legendFormingText').innerText = step.legend.forming;
@@ -4205,6 +4286,7 @@
             document.getElementById('stepCounterText').innerText = `${currentStepIdx + 1}/${steps.length}`;
             document.getElementById('stepNumberBadge').innerText = `PASO ${currentStepIdx + 1} DE ${steps.length}`;
             document.getElementById('stepTitleText').innerText = step.title;
+            applyStageThemeUI();
 
             if (step.legend) {
                 document.getElementById('legendBreakingText').innerText = step.legend.breaking;
