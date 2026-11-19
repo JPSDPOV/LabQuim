@@ -5860,10 +5860,10 @@
 
                     if (cleanEl === 'CH(CH3)2' || cleanEl === '(CH3)2CH') {
                         const bid = `BR_${uniqueTag}`;
-                        const vStep = 74;
+                        const vStep = 96;
                         const by1 = goUp ? (py - vStep) : (py + vStep);
                         const by2 = goUp ? (by1 - vStep) : (by1 + vStep);
-                        const sideOffset = uniqueTag.includes('_L') ? -102 : 102;
+                        const sideOffset = uniqueTag.includes('_L') ? -108 : 108;
                         atoms.push(
                             { id: bid, el: 'CH', x: px, y: by1 },
                             { id: `${bid}_V`, el: 'CH₃', x: px, y: by2 },
@@ -5924,31 +5924,30 @@
                     bonds.push({ from: parentId, to: `SR_${uniqueTag}_0`, order: 1 });
                 };
 
-                // Calcular el semiancho izquierdo (leftW) y derecho (rightW) de cada nodo para que los enlaces de la cadena sean uniformes y cortos
+                // Calcular el semiancho exacto de cada nodo en la fila principal para que TODOS los enlaces horizontales tengan exactamente la misma longitud
                 const parsedNodes = chainNodes.map((nd, idx) => {
                     const txt = nd.text;
                     const nested = parseNodeWithNestedBranches(txt);
                     const normTxt = normalizeFormulaLookupKey(txt);
-                    let leftW = 30;
-                    let rightW = 30;
+                    let leftW = 24;
+                    let rightW = 24;
                     if (nested) {
                         const hasIsoSub = nested.branches.some(b => {
                             const cb = normalizeFormulaLookupKey(b);
                             return cb === 'CH(CH3)2' || cb === '(CH3)2CH';
                         });
-                        const maxSubLen = Math.max(...nested.branches.map(b => b.length));
-                        const baseHalf = Math.max(46, maxSubLen * 8.4);
+                        const baseHalf = Math.max(22, nested.baseEl.length * 10.5);
                         leftW = baseHalf;
-                        // El isopropilo lleva un CH₃ vertical y el otro CH₃ hacia la derecha (+102), por lo que solo necesita margen extra a la derecha
-                        rightW = hasIsoSub ? 124 : baseHalf;
+                        // Si lleva isopropilo abajo-derecha, dar solo el margen justo para que el CH₃ lateral no toque el enlace siguiente
+                        rightW = hasIsoSub ? 76 : baseHalf;
                     } else if ((normTxt === 'CH(CH3)2' || normTxt === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
-                        leftW = idx === 0 ? 132 : 34;
-                        rightW = idx === 0 ? 34 : 132;
+                        leftW = idx === 0 ? 128 : 24;
+                        rightW = idx === 0 ? 24 : 128;
                     } else if (normTxt === 'C6H5' && (idx === 0 || idx === chainNodes.length - 1)) {
                         leftW = 62;
                         rightW = 62;
                     } else {
-                        const w = Math.max(28, txt.length * 10.6);
+                        const w = Math.max(20, txt.length * 10.5);
                         leftW = w;
                         rightW = w;
                     }
@@ -5961,7 +5960,7 @@
                         nodeXList.push(0);
                     } else {
                         const prev = parsedNodes[idx - 1];
-                        const gap = prev.rightW + pn.leftW + 44;
+                        const gap = prev.rightW + pn.leftW + 46;
                         nodeXList.push(nodeXList[idx - 1] + gap);
                     }
                 });
@@ -6177,15 +6176,16 @@
             const nameStr = String(item.name || '');
             primaryEl.innerText = nameStr;
             const maxWordLen = Math.max(...nameStr.split(/[\s\-]/).map(w => w.length));
-            primaryEl.className = 'font-extrabold text-white leading-snug max-w-full px-0.5 text-center';
-            if (window.innerWidth < 640) {
-                // Calcular tamaño exacto en px para que la palabra más larga (ej. 28-34 letras) quepa entera en una sola línea sin partir letras
-                const availW = Math.max(210, window.innerWidth - 116);
-                const fitPx = Math.floor(availW / Math.max(10, maxWordLen * 0.58));
-                const finalPx = Math.max(12.5, Math.min(24, fitPx));
-                primaryEl.style.fontSize = finalPx + 'px';
-            } else {
-                primaryEl.style.fontSize = maxWordLen >= 24 ? '24px' : '30px';
+            primaryEl.className = 'font-extrabold text-white leading-snug max-w-full text-center';
+            const cardBox = document.getElementById('nomCardWrapper');
+            const cardW = (cardBox && cardBox.clientWidth > 100) ? cardBox.clientWidth : Math.min(480, window.innerWidth - 64);
+            const innerAvailW = Math.max(180, cardW - 56);
+            const maxStartPx = window.innerWidth < 640 ? 23 : 30;
+            let fitPx = Math.min(maxStartPx, Math.max(11, Math.floor(innerAvailW / Math.max(8, maxWordLen * 0.68))));
+            primaryEl.style.fontSize = fitPx + 'px';
+            while (fitPx > 10.5 && primaryEl.scrollWidth > innerAvailW) {
+                fitPx -= 0.5;
+                primaryEl.style.fontSize = fitPx + 'px';
             }
             const synBox = document.getElementById('nomAnswerSynonymsBox');
             if (item.synonyms) {
@@ -6373,6 +6373,16 @@
             if (nomIsFlipped) {
                 document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
                 document.getElementById('nomControlsGradeRow')?.classList.remove('hidden');
+                const primaryEl = document.getElementById('nomAnswerPrimary');
+                const cardBox = document.getElementById('nomCardWrapper');
+                if (primaryEl && cardBox && cardBox.clientWidth > 100) {
+                    const innerAvailW = cardBox.clientWidth - 56;
+                    let curPx = parseFloat(primaryEl.style.fontSize) || 20;
+                    while (curPx > 10.5 && primaryEl.scrollWidth > innerAvailW) {
+                        curPx -= 0.5;
+                        primaryEl.style.fontSize = curPx + 'px';
+                    }
+                }
             }
         }
 
