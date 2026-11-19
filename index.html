@@ -2409,7 +2409,7 @@
             }
 
             // Caso lineal con múltiples grupos unidos por enlaces (ej. CH₃—CH₂—C≡CH, CH₃—CH₂—CO—CH₃) -> nodos separados
-            if (!/[()]/.test(f) && /[-—=≡]/.test(f) && !/^(H-OH|H-O-H|H-Cl|H-Br|H-I|H-CN|H-NH2|H-C≡C-H)$/i.test(norm)) {
+            if (!/[()]/.test(f) && /[-—=≡]/.test(f) && !/^(H-OH|H-O-H|H-Cl|H-Br|H-I|H-CN|H-NH2)$/i.test(norm)) {
                 const segs = [];
                 let buf = '';
                 let pendingOrd = 1;
@@ -2583,7 +2583,72 @@
                 scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints, catalystLabel)
             };
 
-            const middleSteps = stepsArray.map((st, idx) => ({
+            const buildCondensedCarbonHydrogensScene = (rawScene) => {
+                if (!rawScene || !Array.isArray(rawScene.atoms) || !Array.isArray(rawScene.bonds)) return null;
+                const sc = JSON.parse(JSON.stringify(rawScene));
+                const atomById = {};
+                sc.atoms.forEach(a => { atomById[a.id] = a; });
+
+                const hToRemove = new Set();
+                let condensedAny = false;
+
+                sc.atoms.forEach(cAtom => {
+                    const elClean = String(cAtom.el || '').trim();
+                    const baseHCount = elClean === 'C' ? 0 : (elClean === 'CH' ? 1 : (elClean === 'CH₂' ? 2 : -1));
+                    if (baseHCount < 0) return;
+
+                    const attachedHs = [];
+                    sc.bonds.forEach(b => {
+                        if ((b.order || 1) !== 1 || b.stereo) return;
+                        let otherId = null;
+                        if (b.from === cAtom.id) otherId = b.to;
+                        else if (b.to === cAtom.id) otherId = b.from;
+                        if (!otherId) return;
+                        const otherAtom = atomById[otherId];
+                        if (otherAtom && String(otherAtom.el || '').trim() === 'H') {
+                            attachedHs.push(otherAtom.id);
+                        }
+                    });
+
+                    if (attachedHs.length > 0) {
+                        const totalH = baseHCount + attachedHs.length;
+                        if (totalH === 1) cAtom.el = 'CH';
+                        else if (totalH === 2) cAtom.el = 'CH₂';
+                        else if (totalH === 3) cAtom.el = 'CH₃';
+                        else if (totalH >= 4) cAtom.el = 'CH₄';
+                        attachedHs.forEach(hid => hToRemove.add(hid));
+                        condensedAny = true;
+                    }
+                });
+
+                if (!condensedAny) return null;
+
+                sc.atoms = sc.atoms.filter(a => !hToRemove.has(a.id));
+                sc.bonds = sc.bonds.filter(b => !hToRemove.has(b.from) && !hToRemove.has(b.to));
+                return sc;
+            };
+
+            const expandedDevelopedSteps = [...stepsArray];
+            try {
+                const lastDevScene = typeof lastStep.scene === 'function' ? lastStep.scene() : lastStep.scene;
+                const condensedScene = buildCondensedCarbonHydrogensScene(lastDevScene);
+                if (condensedScene) {
+                    expandedDevelopedSteps.push({
+                        title: 'Agrupación de Hidrógenos en los Carbonos (CH / CH₂ / CH₃)',
+                        semiStep: lastStep.semiStep || '',
+                        semiGlobal: lastStep.semiGlobal || '',
+                        desc: 'Los hidrógenos unidos a cada carbono se agrupan de forma condensada (CH, CH₂ o CH₃) antes de la fórmula semidesarrollada final.',
+                        legend: {
+                            breaking: 'Hidrógenos condensados sobre sus respectivos átomos de carbono.',
+                            forming: 'Grupos CH, CH₂ y CH₃ consolidados en la estructura.',
+                            movement: 'Simplificación estructural hacia la representación semidesarrollada.'
+                        },
+                        scene: () => JSON.parse(JSON.stringify(condensedScene))
+                    });
+                }
+            } catch (e) {}
+
+            const middleSteps = expandedDevelopedSteps.map((st, idx) => ({
                 ...st,
                 title: `Paso ${idx + 2} — ${cleanOldNumbering(st.title)}`
             }));
