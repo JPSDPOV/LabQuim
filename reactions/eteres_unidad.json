@@ -6997,6 +6997,1281 @@
           }
         ]
       }
+    },
+    "epoxidos_obt_peracidos": {
+      "category": "obtencion",
+      "title": "3) Obtención de Epóxidos por Epoxidación de Alquenos con AMCPB (Ácido meta-cloroperoxibenzoico)",
+      "natureBadge": "Adición Electrofílica Concertada sin (Prilezhaev) • Alqueno + Ar–CO₃H (AMCPB) ──► Epóxido (Oxirano) + Ar–CO₂H",
+      "deltaH": "ΔH° < 0 (Fuertemente exotérmica; transferencia concertada de un átomo de oxígeno electrófilo al doble enlace C=C)",
+      "description": "Obtención directa de éteres cíclicos tensionados de 3 miembros (epóxidos u oxiranos) mediante la reacción de alquenos con peroxiácidos orgánicos como el ácido meta-cloroperoxibenzoico (AMCPB / MCPBA):\n1) Mecanismo concertado en un solo paso (estado de transición tipo 'mariposa'): el doble enlace π nucleofílico del alqueno ataca al oxígeno electrófilo terminal del puente peróxido (–O–O–H) mientras se rompe simultáneamente el enlace débil O–O y se transfiere el protón al oxígeno carbonílico.\n2) Estereoespecificidad sin: al no formarse ningún carbocatión intermediario, se conserva íntegramente la estereoquímica cis o trans del alqueno de partida (ej. 2-buteno → 2,3-dimetiloxirano; ácido maleico → epóxido cis; eteno → oxirano).",
+      "meta": {
+        "grupoFuncional": "Epóxidos / Oxiranos (2,3-Dimetiloxirano, Ácido cis-oxirano-2,3-dicarboxílico, Oxirano, 1,2-Epoxiciclohexano)",
+        "reaccionMecanismo": "Epoxidación Concertada de Alquenos con Peroxiácidos (Reacción de Prilezhaev)",
+        "naturaleza": "Concertada en una sola etapa sin intermediarios iónicos (estado de transición cíclico tipo mariposa).",
+        "rupturaIntermediarios": "Ruptura simultánea del enlace π (C=C) del alqueno y del enlace peróxido O–O del AMCPB, formando dos nuevos enlaces simples C–O en el anillo de tres miembros.",
+        "detalleMecanismo": "El par π del alqueno ataca al oxígeno electrófilo del grupo peróxido (–CO₃H) mientras el par O–H cierra el segundo enlace C–O sobre el otro carbono sp², liberando ácido meta-clorobenzoico (Ar–COOH).",
+        "reactivosCondiciones": "Alqueno + Ácido meta-cloroperoxibenzoico (AMCPB / MCPBA) en disolvente aprótico (CH₂Cl₂ o CHCl₃), 0–25 °C.",
+        "rolReactivos": "• Alqueno (2-buteno, ácido maleico, eteno, ciclohexeno): Sustrato nucleofílico que aporta el doble enlace C=C.\n• AMCPB (Ar–CO₃H): Agente epoxidante donador electrófilo de un átomo de oxígeno.",
+        "reglasObs": "• Solo los compuestos con doble enlace C=C (alquenos) forman epóxidos con AMCPB (los ácidos saturados como málico, succínico o acético y los cicloalcanos no reaccionan).\n• Conserva la estereoquímica cis/trans del alqueno original."
+      },
+      "substrates": [
+        {
+          "id": "epox_eteno_oxirano",
+          "name": "1) Ejemplo Básico (Alqueno más simple): Eteno (CH₂=CH₂) + AMCPB ──► Oxirano (Óxido de Etileno)",
+          "catalyst": "AMCPB / CH₂Cl₂, 0–25 °C"
+        },
+        {
+          "id": "epox_propeno_metiloxirano",
+          "name": "2) Ejemplo Básico (Alqueno terminal): Propeno (CH₃–CH=CH₂) + AMCPB ──► Metiloxirano (Óxido de propileno)",
+          "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
+        },
+        {
+          "id": "epox_ciclohexeno_amcpb",
+          "name": "3) Ejemplo Básico (Cicloalqueno): Ciclohexeno + AMCPB ──► 1,2-Epoxiciclohexano (Óxido de Ciclohexeno)",
+          "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
+        },
+        {
+          "id": "epox_2buteno_amcpb",
+          "name": "4) Examen Único 2026: 2-Buteno + Ácido meta-cloroperoxibenzoico (AMCPB) ──► 2,3-Dimetiloxirano (Epóxido)",
+          "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
+        },
+        {
+          "id": "epox_maleico_amcpb",
+          "name": "5) Examen Único 2022: Ácido Maleico + Ácido meta-cloroperoxibenzoico (AMCPB) ──► Epóxido Dicarboxílico",
+          "catalyst": "AMCPB / CH₂Cl₂, 25 °C"
+        }
+      ],
+      "catalysts": [
+        "AMCPB / CH₂Cl₂, 0–25 °C",
+        "AMCPB / CH₂Cl₂, 25 °C",
+        "AMCPB / CH₂Cl₂, 25 °C",
+        "AMCPB / CH₂Cl₂, 25 °C",
+        "AMCPB / CH₂Cl₂, 25 °C"
+      ],
+      "stepsBySubstrate": {
+        "epox_2buteno_amcpb": [
+          {
+            "title": "Paso 1 — Estado Inicial: 2-Buteno + AMCPB (Peroxiácido)",
+            "semiStep": "CH₃–CH=CH–CH₃  +  Ar–CO–O–OH (AMCPB)",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "El doble enlace π del 2-buteno actúa como nucleófilo frente al oxígeno terminal electrófilo del enlace peróxido (–O–OH) del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Aproximación del peroxiácido al doble enlace C=C.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Orientación del oxígeno electrófilo del AMCPB sobre el enlace π."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 165,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "label": "2-Buteno"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 565,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 95,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "O",
+                  "x": 500,
+                  "y": 95
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 645,
+                  "y": 95,
+                  "label": "AMCPB"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno (Ruptura π y O–O)",
+            "semiStep": "CH₃–CH═CH–CH₃ ··· [O] ··· O–CO–Ar",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "De forma concertada se rompe el enlace π del 2-buteno y el enlace débil O–O del peroxiácido (en rojo), mientras se forman simultáneamente los dos enlaces C–O del anillo epóxido (en verde punteado).",
+            "legend": {
+              "breaking": "Enlace π (C=C) y enlace peróxido O–O rompiéndose (en rojo punteado).",
+              "forming": "Dos nuevos enlaces C–O del anillo de 3 miembros formándose (en verde punteado).",
+              "movement": "Transferencia concertada del átomo de oxígeno sin formar carbocatión."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 165,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 565,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 115,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "HO",
+                  "x": 535,
+                  "y": 95,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 675,
+                  "y": 95
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 345,
+                  "y1": 210,
+                  "cx": 315,
+                  "cy": 165,
+                  "x2": 348,
+                  "y2": 130,
+                  "label": "Enlace C–O"
+                },
+                {
+                  "type": "full",
+                  "x1": 382,
+                  "y1": 130,
+                  "cx": 415,
+                  "cy": 165,
+                  "x2": 422,
+                  "y2": 208,
+                  "label": "Enlace C–O"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: 2,3-Dimetiloxirano (Epóxido) + Ácido m-clorobenzoico",
+            "semiStep": "2,3-Dimetiloxirano (Epóxido)  +  Ar–COOH",
+            "semiGlobal": "CH₃–CH=CH–CH₃ + AMCPB ──► 2,3-Dimetiloxirano (Epóxido) + Ar–COOH",
+            "desc": "Se obtiene el anillo heterocíclico de 3 miembros (epóxido: 2,3-dimetiloxirano) con ambos enlaces C–O consolidados en verde sólido, más ácido meta-clorobenzoico.",
+            "legend": {
+              "breaking": "Enlace peróxido completamente disociado.",
+              "forming": "Anillo de epóxido (oxirano) consolidado en verde sólido.",
+              "movement": "Productos finales obtenidos."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 150,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 280,
+                  "y": 225
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 420,
+                  "y": 225
+                },
+                {
+                  "id": "Me4",
+                  "el": "CH₃",
+                  "x": 550,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 350,
+                  "y": 115,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Epóxido (2,3-Dimetiloxirano)"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "Ar–COOH",
+                  "x": 745,
+                  "y": 185,
+                  "highlight": "#38bdf8",
+                  "label": "Ác. m-clorobenzoico"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar",
+                  "x": 745,
+                  "y": 185,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "Me4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 640,
+                  "y": 193,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "epox_maleico_amcpb": [
+          {
+            "title": "Paso 1 — Estado Inicial: Ácido Maleico (HOOC–CH=CH–COOH) + AMCPB",
+            "semiStep": "HOOC–CH=CH–COOH  +  Ar–CO–O–OH (AMCPB)",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "El ácido maleico (ácido cis-2-butenodioico) posee un doble enlace C=C rico en electrones π que reacciona con el oxígeno electrófilo del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Aproximación del peroxiácido al doble enlace C=C del ácido maleico.",
+              "forming": "Sin enlaces formados todavía.",
+              "movement": "Interacción entre el enlace π del ácido maleico y el oxígeno peróxido del AMCPB."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 160,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "label": "Ácido maleico (C=C)"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 570,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 95,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "O",
+                  "x": 500,
+                  "y": 95
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 645,
+                  "y": 95,
+                  "label": "AMCPB"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno al Doble Enlace",
+            "semiStep": "HOOC–CH═CH–COOH ··· [O] ··· O–CO–Ar",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "Se rompe concertadamente el enlace π (C=C) del ácido maleico y el enlace débil O–O del AMCPB (en rojo), formándose los dos enlaces C–O del anillo epóxido (en verde punteado).",
+            "legend": {
+              "breaking": "Enlace π (C=C) y enlace O–O rompiéndose (en rojo punteado).",
+              "forming": "Nuevos enlaces C–O del ciclo oxirano en formación (en verde punteado).",
+              "movement": "Adición sin concertada del átomo de oxígeno."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 160,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 225,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 570,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 365,
+                  "y": 115,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "HO",
+                  "x": 535,
+                  "y": 95,
+                  "highlight": "#ef4444"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar–CO",
+                  "x": 675,
+                  "y": 95
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_EP",
+                  "to": "O_AC",
+                  "order": 1,
+                  "state": "breaking"
+                },
+                {
+                  "from": "O_AC",
+                  "to": "AR",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "x1": 345,
+                  "y1": 210,
+                  "cx": 315,
+                  "cy": 165,
+                  "x2": 348,
+                  "y2": 130,
+                  "label": "Enlace C–O"
+                },
+                {
+                  "type": "full",
+                  "x1": 382,
+                  "y1": 130,
+                  "cx": 415,
+                  "cy": 165,
+                  "x2": 422,
+                  "y2": 208,
+                  "label": "Enlace C–O"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final: Epóxido (Ácido 2,3-epoxibutanodioico) + Ácido m-clorobenzoico",
+            "semiStep": "Ácido 2,3-epoxibutanodioico (Epóxido)  +  Ar–COOH",
+            "semiGlobal": "HOOC–CH=CH–COOH + AMCPB ──► Ácido 2,3-epoxibutanodioico (Epóxido) + Ar–COOH",
+            "desc": "Se obtiene el anillo epóxido consolidado en verde sólido junto con el ácido meta-clorobenzoico.",
+            "legend": {
+              "breaking": "Enlace peróxido O–O roto.",
+              "forming": "Anillo de epóxido consolidado en verde sólido.",
+              "movement": "Productos finales obtenidos."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "AC1",
+                  "el": "HOOC",
+                  "x": 145,
+                  "y": 225
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 280,
+                  "y": 225
+                },
+                {
+                  "id": "C3",
+                  "el": "CH",
+                  "x": 420,
+                  "y": 225
+                },
+                {
+                  "id": "AC4",
+                  "el": "COOH",
+                  "x": 555,
+                  "y": 225
+                },
+                {
+                  "id": "O_EP",
+                  "el": "O",
+                  "x": 350,
+                  "y": 115,
+                  "lonePairs": [
+                    "top"
+                  ],
+                  "highlight": "#10b981",
+                  "label": "Epóxido obtenido"
+                },
+                {
+                  "id": "O_AC",
+                  "el": "Ar–COOH",
+                  "x": 755,
+                  "y": 185,
+                  "highlight": "#38bdf8",
+                  "label": "Ác. m-clorobenzoico"
+                },
+                {
+                  "id": "AR",
+                  "el": "Ar",
+                  "x": 755,
+                  "y": 185,
+                  "opacity": 0
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "AC1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C3",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C3",
+                  "to": "AC4",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C3",
+                  "to": "O_EP",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 650,
+                  "y": 193,
+                  "text": "+",
+                  "size": 26,
+                  "color": "#10b981"
+                }
+              ]
+            }
+          }
+        ],
+        "epox_eteno_oxirano": [
+          {
+            "title": "Paso 1 — Estado Inicial Intacto: Eteno (CH₂=CH₂) + AMCPB",
+            "semiStep": "CH₂=CH₂  +  Ar—CO₃H (AMCPB)",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "desc": "El eteno presenta su doble enlace C=C frente al oxígeno electrófilo del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Sin ruptura inicial.",
+              "forming": "Sin enlace nuevo.",
+              "movement": "Aproximación concertada del peroxiácido al doble enlace C=C."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 255,
+                  "y": 235,
+                  "label": "Eteno"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 435,
+                  "y": 235
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 345,
+                  "y": 105,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo (AMCPB)"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 685,
+                  "y": 105,
+                  "highlight": "#94a3b8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_ep",
+                  "to": "Ar_out",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno (Ruptura π C=C y O—O)",
+            "semiStep": "[CH₂ ··· O ··· CH₂]  +  Ar—CO₂H",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "desc": "Se rompe en rojo punteado el enlace π C=C y el enlace peróxido O—O mientras se forman simultáneamente en verde punteado los dos enlaces C—O del anillo de 3 miembros.",
+            "legend": {
+              "breaking": "En ROJO punteado: enlace π C=C y enlace peróxido O—O.",
+              "forming": "En VERDE punteado: dos enlaces simples C—O formando el anillo oxirano.",
+              "movement": "Estado de transición concertado tipo mariposa."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 265,
+                  "y": 245,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 445,
+                  "y": 245,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 355,
+                  "y": 115,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 705,
+                  "y": 115,
+                  "border": "#ef4444",
+                  "label": "Sale ácido m-clorobenzoico"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 2,
+                  "state": "breaking-pi"
+                },
+                {
+                  "from": "C1",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_ep",
+                  "to": "Ar_out",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final Consolidado: Oxirano (Óxido de Etileno) + Ar—CO₂H",
+            "semiStep": "C₂H₄O (Oxirano)  +  Ar—CO₂H",
+            "semiGlobal": "CH₂=CH₂ + Ar—CO₃H ──► C₂H₄O (Oxirano) + Ar—CO₂H",
+            "desc": "Queda consolidado en verde sólido el anillo heterocíclico de 3 miembros oxirano (óxido de etileno).",
+            "legend": {
+              "breaking": "Ruptura completada.",
+              "forming": "En VERDE sólido: anillo oxirano (epóxido).",
+              "movement": "Producto final obtenido."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 265,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH₂",
+                  "x": 445,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 355,
+                  "y": 115,
+                  "highlight": "#10b981",
+                  "label": "Oxirano (Óxido de etileno)"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 715,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 580,
+                  "y": 202,
+                  "text": "+"
+                }
+              ]
+            }
+          }
+        ],
+        "epox_ciclohexeno_amcpb": [
+          {
+            "title": "Paso 1 — Estado Inicial Intacto: Ciclohexeno + AMCPB",
+            "semiStep": "C₆H₁₀ (Ciclohexeno)  +  Ar—CO₃H (AMCPB)",
+            "semiGlobal": "C₆H₁₀ + Ar—CO₃H ──► 1,2-Epoxiciclohexano + Ar—CO₂H",
+            "desc": "El doble enlace C=C del ciclohexeno se aproxima al oxígeno electrófilo del ácido meta-cloroperoxibenzoico.",
+            "legend": {
+              "breaking": "Sin ruptura inicial.",
+              "forming": "Sin enlace nuevo.",
+              "movement": "Epoxidación sin sobre la misma cara del ciclo."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH",
+                  "x": 255,
+                  "y": 235,
+                  "label": "Ciclohexeno"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 435,
+                  "y": 235
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 345,
+                  "y": 105,
+                  "highlight": "#38bdf8",
+                  "label": "AMCPB"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 685,
+                  "y": 105,
+                  "highlight": "#94a3b8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_ep",
+                  "to": "Ar_out",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Producto Final Consolidado: 1,2-Epoxiciclohexano + Ar—CO₂H",
+            "semiStep": "1,2-Epoxiciclohexano (cis)  +  Ar—CO₂H",
+            "semiGlobal": "C₆H₁₀ + Ar—CO₃H ──► 1,2-Epoxiciclohexano + Ar—CO₂H",
+            "desc": "Se obtiene el óxido de ciclohexeno (1,2-epoxiciclohexano) consolidado en verde sólido.",
+            "legend": {
+              "breaking": "Enlace π C=C convertido en puente epóxido.",
+              "forming": "En VERDE sólido: 1,2-epoxiciclohexano.",
+              "movement": "Producto final obtenido."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "C1",
+                  "el": "CH",
+                  "x": 265,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 445,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 355,
+                  "y": 115,
+                  "highlight": "#10b981",
+                  "label": "1,2-Epoxiciclohexano"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 715,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 580,
+                  "y": 202,
+                  "text": "+"
+                }
+              ]
+            }
+          }
+        ],
+        "epox_propeno_metiloxirano": [
+          {
+            "title": "Paso 1 — Estado Inicial Intacto: Propeno (CH₃–CH=CH₂) + AMCPB",
+            "semiStep": "CH₃–CH=CH₂  +  Ar—CO₃H (AMCPB)",
+            "semiGlobal": "CH₃–CH=CH₂ + Ar—CO₃H ──► Metiloxirano (Óxido de propileno) + Ar—CO₂H",
+            "desc": "El propeno (alqueno monosustituido) aproxima su doble enlace C=C al oxígeno electrófilo del puente peróxido del ácido meta-cloroperoxibenzoico (AMCPB).",
+            "legend": {
+              "breaking": "Sin ruptura inicial.",
+              "forming": "Sin enlace nuevo.",
+              "movement": "Aproximación concertada del AMCPB al doble enlace del propeno."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 155,
+                  "y": 235
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 235,
+                  "label": "Propeno"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 455,
+                  "y": 235
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 375,
+                  "y": 105,
+                  "highlight": "#38bdf8",
+                  "label": "O electrófilo (AMCPB)"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 705,
+                  "y": 105,
+                  "highlight": "#94a3b8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C1",
+                  "order": 2,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_ep",
+                  "to": "Ar_out",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 2 — Transferencia Concertada de Oxígeno (Ruptura π C=C y O—O)",
+            "semiStep": "CH₃–CH ··· O ··· CH₂  +  Ar—CO₂H",
+            "semiGlobal": "CH₃–CH=CH₂ + Ar—CO₃H ──► Metiloxirano (Óxido de propileno) + Ar—CO₂H",
+            "desc": "Se rompe en rojo punteado el enlace π C=C del propeno y el enlace peróxido O—O del AMCPB, mientras se forman simultáneamente en verde punteado ambos enlaces C—O del ciclo de 3 miembros.",
+            "legend": {
+              "breaking": "En ROJO punteado: enlace π C=C y enlace peróxido O—O.",
+              "forming": "En VERDE punteado: dos nuevos enlaces C—O formando el anillo metiloxirano.",
+              "movement": "Transferencia concertada en un solo paso sin carbocatión."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 155,
+                  "y": 245
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 295,
+                  "y": 245,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 455,
+                  "y": 245,
+                  "highlight": "#fbbf24"
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 375,
+                  "y": 115,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 715,
+                  "y": 115,
+                  "border": "#ef4444",
+                  "label": "Sale ácido m-clorobenzoico"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C1",
+                  "order": 2,
+                  "state": "breaking-pi"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "C1",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "forming"
+                },
+                {
+                  "from": "O_ep",
+                  "to": "Ar_out",
+                  "order": 1,
+                  "state": "breaking"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Paso 3 — Producto Final Consolidado: Metiloxirano (Óxido de Propileno) + Ar—CO₂H",
+            "semiStep": "Metiloxirano (C₃H₆O)  +  Ar—CO₂H",
+            "semiGlobal": "CH₃–CH=CH₂ + Ar—CO₃H ──► Metiloxirano (Óxido de propileno) + Ar—CO₂H",
+            "desc": "Queda consolidado en verde sólido el metiloxirano (óxido de propileno) junto con el ácido meta-clorobenzoico.",
+            "legend": {
+              "breaking": "Enlace peróxido disociado.",
+              "forming": "En VERDE sólido: anillo metiloxirano (epóxido).",
+              "movement": "Producto final estable."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "Me1",
+                  "el": "CH₃",
+                  "x": 145,
+                  "y": 245
+                },
+                {
+                  "id": "C2",
+                  "el": "CH",
+                  "x": 285,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "C1",
+                  "el": "CH₂",
+                  "x": 445,
+                  "y": 245,
+                  "highlight": "#10b981"
+                },
+                {
+                  "id": "O_ep",
+                  "el": "O",
+                  "x": 365,
+                  "y": 115,
+                  "highlight": "#10b981",
+                  "label": "Metiloxirano (Óxido de propileno)"
+                },
+                {
+                  "id": "Ar_out",
+                  "el": "Ar—CO₂H",
+                  "x": 725,
+                  "y": 195,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Me1",
+                  "to": "C2",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                },
+                {
+                  "from": "C1",
+                  "to": "O_ep",
+                  "order": 1,
+                  "state": "new"
+                }
+              ],
+              "texts": [
+                {
+                  "x": 585,
+                  "y": 202,
+                  "text": "+"
+                }
+              ]
+            }
+          }
+        ]
+      }
     }
   }
 }
