@@ -1890,15 +1890,15 @@
                 // En reactivo (X a derecha, R a izquierda): (R) lleva H arriba (dash) y CH3 abajo (wedge); (S) lleva CH3 arriba (wedge) y H abajo (dash)
                 // En producto (OH a izquierda, R a derecha): (S) lleva H arriba (dash) y CH3 abajo (wedge); (R) lleva CH3 arriba (wedge) y H abajo (dash)
                 const hOnTop = (!isProductOH && config === 'S') || (isProductOH && config === 'R');
-                const topY = centerY - 104;
-                const botY = centerY + 104;
+                const topY = centerY - 138;
+                const botY = centerY + 138;
 
                 if (!isProductOH) {
                     const cX = centerX + 35;
                     atoms.push(
                         { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
-                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined },
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX + 19, bondTargetX: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined },
                         { id: `${prefixId}_X`, el: subGroup, x: cX + 108, y: centerY, highlight: accentColor, border: accentColor }
                     );
                     bonds.push(
@@ -1964,7 +1964,7 @@
                         { id: `${prefixId}_OH`, el: 'OH', x: cX - 108, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_C`, el: 'C', x: cX, y: centerY, highlight: accentColor, border: accentColor },
                         { id: `${prefixId}_H`, el: 'H', x: cX, y: hOnTop ? topY : botY, label: !hOnTop ? lbl : undefined },
-                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined }
+                        { id: `${prefixId}_Me`, el: 'CH₃', x: cX + 19, bondTargetX: cX, y: hOnTop ? botY : topY, label: hOnTop ? lbl : undefined }
                     );
                     bonds.push(
                         { from: `${prefixId}_OH`, to: `${prefixId}_C`, order: 1, state: 'normal' },
@@ -3015,31 +3015,31 @@
             let html = `<g opacity="${bondFadeOp}" ${glow}>`;
 
             if (order === 1 && stereo === 'wedge') {
-                const startOff = trim1 === 0 ? 0 : Math.min(trim1, mobile ? 10 : 7);
-                const endOff = trim2 === 0 ? 0 : Math.min(trim2, mobile ? 10 : 7);
+                const startOff = trim1 === 0 ? 0 : Math.min(trim1, lightTheme ? 2 : (mobile ? 10 : 7));
+                const endOff = trim2 === 0 ? 0 : Math.min(trim2, lightTheme ? 2 : (mobile ? 10 : 7));
                 const sx = x1 + ux * startOff;
                 const sy = y1 + uy * startOff;
                 const ex = drawX2 - ux * endOff;
                 const ey = drawY2 - uy * endOff;
-                const halfBase = mobile ? 6.8 : 5.4;
+                const halfBase = lightTheme ? 4.2 : (mobile ? 6.8 : 5.4);
                 const fillCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : (lightTheme ? '#0f172a' : '#e2e8f0'));
                 html += `<polygon points="${sx.toFixed(1)},${sy.toFixed(1)} ${(ex + nx * halfBase).toFixed(1)},${(ey + ny * halfBase).toFixed(1)} ${(ex - nx * halfBase).toFixed(1)},${(ey - ny * halfBase).toFixed(1)}" fill="${fillCol}" ${state === 'forming' || state === 'breaking' ? 'fill-opacity="0.45" stroke="' + fillCol + '" stroke-width="1.6" ' + dash : ''}/>`;
             } else if (order === 1 && stereo === 'dash') {
-                const startOff = trim1 === 0 ? 0 : Math.min(trim1, mobile ? 10 : 7);
-                const endOff = trim2 === 0 ? 0 : Math.min(trim2, mobile ? 10 : 7);
+                const startOff = trim1 === 0 ? 0 : Math.min(trim1, lightTheme ? 2 : (mobile ? 10 : 7));
+                const endOff = trim2 === 0 ? 0 : Math.min(trim2, lightTheme ? 2 : (mobile ? 10 : 7));
                 const sx = x1 + ux * startOff;
                 const sy = y1 + uy * startOff;
                 const ex = drawX2 - ux * endOff;
                 const ey = drawY2 - uy * endOff;
-                const steps = 4;
-                const maxHalf = mobile ? 6.8 : 5.6;
+                const steps = lightTheme ? 5 : 4;
+                const maxHalf = lightTheme ? 4.4 : (mobile ? 6.8 : 5.6);
                 const dashCol = (state === 'new' || state === 'forming') ? '#10b981' : (state === 'breaking' ? '#ef4444' : (lightTheme ? '#0f172a' : '#cbd5e1'));
                 for (let k = 1; k <= steps; k++) {
-                    const frac = k / (steps + 0.6);
+                    const frac = (k - 0.15) / steps;
                     const px = lerp(sx, ex, frac);
                     const py = lerp(sy, ey, frac);
-                    const hw = Math.max(1.8, maxHalf * frac);
-                    html += `<line x1="${(px + nx * hw).toFixed(1)}" y1="${(py + ny * hw).toFixed(1)}" x2="${(px - nx * hw).toFixed(1)}" y2="${(py - ny * hw).toFixed(1)}" stroke="${dashCol}" stroke-width="${mobile ? 1.8 : 1.5}" stroke-linecap="butt"/>`;
+                    const hw = Math.max(1.2, maxHalf * frac);
+                    html += `<line x1="${(px + nx * hw).toFixed(1)}" y1="${(py + ny * hw).toFixed(1)}" x2="${(px - nx * hw).toFixed(1)}" y2="${(py - ny * hw).toFixed(1)}" stroke="${dashCol}" stroke-width="${lightTheme ? 1.6 : (mobile ? 1.8 : 1.5)}" stroke-linecap="butt"/>`;
                 }
             } else if (order === 1) {
                 html += `<line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${stroke}" stroke-width="${width}" ${dash} stroke-linecap="round"/>`;
