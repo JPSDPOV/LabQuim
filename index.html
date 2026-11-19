@@ -2582,10 +2582,26 @@
                 const atomById = {};
                 sc.atoms.forEach(a => { atomById[a.id] = a; });
 
+                // Detectar carbonos carbonílicos (C=O) para no condensar el H aldehídico (se mantiene en 120° separado)
+                const carbonylCarbonIds = new Set();
+                sc.bonds.forEach(b => {
+                    if ((b.order || 1) === 2) {
+                        const a1 = atomById[b.from];
+                        const a2 = atomById[b.to];
+                        if (a1 && a2) {
+                            const el1 = String(a1.el || '').trim();
+                            const el2 = String(a2.el || '').trim();
+                            if (el1 === 'C' && el2 === 'O') carbonylCarbonIds.add(a1.id);
+                            if (el2 === 'C' && el1 === 'O') carbonylCarbonIds.add(a2.id);
+                        }
+                    }
+                });
+
                 const hToRemove = new Set();
                 let condensedAny = false;
 
                 sc.atoms.forEach(cAtom => {
+                    if (carbonylCarbonIds.has(cAtom.id)) return;
                     const elClean = String(cAtom.el || '').trim();
                     const baseHCount = elClean === 'C' ? 0 : (elClean === 'CH' ? 1 : (elClean === 'CH₂' ? 2 : -1));
                     if (baseHCount < 0) return;
