@@ -3655,6 +3655,7 @@
             currentCategory = '';
             currentKey = '';
             await ensureUnitLoaded(funcKey);
+            if (funcKey === 'eteres') registerBuiltinEtherUnit();
 
             const cfg = FUNCTION_MENUS[funcKey] || { obtencion: [], reacciones: [] };
             const obtCount = (cfg.obtencion || []).length;
@@ -6464,10 +6465,6 @@
             if (!FUNCTION_MENUS['eteres']) {
                 FUNCTION_MENUS['eteres'] = { obtencion: [], reacciones: [] };
             }
-            if (!Array.isArray(FUNCTION_MENUS['eteres'].reacciones)) {
-                FUNCTION_MENUS['eteres'].reacciones = [];
-            }
-
             const etherMenuItems = [
                 { value: 'eteres_hcl_acido_base', label: '1a) Éteres + HCl → Reacción ácido-base (Sal de oxonio)' },
                 { value: 'eteres_ruptura_hidracidos', label: '1b) Éteres + HBr / HI → Alcohol + Halogenuro de alquilo' },
@@ -6476,11 +6473,7 @@
                 { value: 'epoxidos_apertura_basica', label: '4) Epóxidos — Apertura nucleofílica del anillo (NaOH, H₂O)' }
             ];
 
-            etherMenuItems.forEach(mi => {
-                if (!FUNCTION_MENUS['eteres'].reacciones.some(x => x.value === mi.value)) {
-                    FUNCTION_MENUS['eteres'].reacciones.push(mi);
-                }
-            });
+            FUNCTION_MENUS['eteres'].reacciones = [...etherMenuItems];
 
             Object.entries(BUILTIN_ETHER_REACTIONS).forEach(([rxnKey, rxnData]) => {
                 hydrateReactionFromJson(rxnKey, rxnData);
