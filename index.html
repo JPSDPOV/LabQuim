@@ -5924,13 +5924,15 @@
                     bonds.push({ from: parentId, to: `SR_${uniqueTag}_0`, order: 1 });
                 };
 
-                // Calcular el semiancho exacto de cada nodo en la fila principal para que TODOS los enlaces horizontales tengan exactamente la misma longitud
+                // Precalcular orientación vertical (arriba/abajo) de cada rama para evitar colisiones entre sustituyentes vecinos
                 const parsedNodes = chainNodes.map((nd, idx) => {
                     const txt = nd.text;
                     const nested = parseNodeWithNestedBranches(txt);
                     const normTxt = normalizeFormulaLookupKey(txt);
                     let leftW = 24;
                     let rightW = 24;
+                    let topBranch = null;
+                    let botBranch = null;
                     if (nested) {
                         const hasIsoSub = nested.branches.some(b => {
                             const cb = normalizeFormulaLookupKey(b);
@@ -5938,8 +5940,11 @@
                         });
                         const baseHalf = Math.max(22, nested.baseEl.length * 10.5);
                         leftW = baseHalf;
-                        // Si lleva isopropilo abajo-derecha, dar solo el margen justo para que el CH₃ lateral no toque el enlace siguiente
                         rightW = hasIsoSub ? 76 : baseHalf;
+                        if (nested.branches.length >= 2) {
+                            topBranch = nested.branches[0];
+                            botBranch = nested.branches[1];
+                        }
                     } else if ((normTxt === 'CH(CH3)2' || normTxt === '(CH3)2CH') && (idx === 0 || idx === chainNodes.length - 1)) {
                         leftW = idx === 0 ? 128 : 24;
                         rightW = idx === 0 ? 24 : 128;
@@ -5951,8 +5956,37 @@
                         leftW = w;
                         rightW = w;
                     }
-                    return { ...nd, nested, normTxt, leftW, rightW };
+                    return { ...nd, nested, normTxt, leftW, rightW, topBranch, botBranch, singleUp: null };
                 });
+
+                // Asignar arriba/abajo inteligente a ramas simples y ampliar separación si dos sustituyentes contiguos comparten lado
+                parsedNodes.forEach((pn, idx) => {
+                    if (pn.nested && pn.nested.branches.length === 1) {
+                        const bSingle = parseBranchSpec(pn.nested.branches[0]);
+                        const prev = idx > 0 ? parsedNodes[idx - 1] : null;
+                        let up = bSingle.order === 2 ? true : (idx % 2 === 1);
+                        if (bSingle.order !== 2 && prev) {
+                            if (prev.botBranch && prev.botBranch.length > 3 && !prev.topBranch) up = true;
+                            else if (prev.topBranch && prev.topBranch.length > 3 && !prev.botBranch) up = false;
+                            else if (prev.botBranch && !prev.topBranch) up = true;
+                            else if (prev.topBranch && !prev.botBranch) up = false;
+                        }
+                        pn.singleUp = up;
+                        if (up) pn.topBranch = pn.nested.branches[0];
+                        else pn.botBranch = pn.nested.branches[0];
+                    }
+                });
+
+                for (let idx = 0; idx < parsedNodes.length - 1; idx++) {
+                    const cur = parsedNodes[idx];
+                    const nxt = parsedNodes[idx + 1];
+                    if (cur.botBranch && nxt.botBranch && cur.botBranch.length > 3) {
+                        cur.rightW = Math.max(cur.rightW, (cur.botBranch.length - 1) * 14);
+                    }
+                    if (cur.topBranch && nxt.topBranch && cur.topBranch.length > 3) {
+                        cur.rightW = Math.max(cur.rightW, (cur.topBranch.length - 1) * 14);
+                    }
+                }
 
                 const nodeXList = [];
                 parsedNodes.forEach((pn, idx) => {
@@ -5997,9 +6031,8 @@
                             }
                         }
                     } else if (pn.nested && pn.nested.branches.length === 1) {
-                        const bSingle = parseBranchSpec(pn.nested.branches[0]);
                         atoms.push({ id: nid, el: pn.nested.baseEl, x: nx, y: 185 });
-                        const up = bSingle.order === 2 ? true : (idx % 2 === 1);
+                        const up = pn.singleUp !== null ? pn.singleUp : (idx % 2 === 1);
                         attachSubstituentNode(nid, nx, 185, pn.nested.branches[0], up, `S_${idx}`);
                     } else if ((pn.normTxt === 'CH(CH3)2' || pn.normTxt === '(CH3)2CH') && (idx === 0 || idx === parsedNodes.length - 1)) {
                         const isLeftEnd = (idx === 0);
