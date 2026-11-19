@@ -1,0 +1,952 @@
+{
+  "category": "reacciones",
+  "title": "A.2- Sustitución Nucleofílica de Acilo con Cloruros de Ácido, Anhídridos o Ésteres (→ Amidas)",
+  "natureBadge": "Sustitución Nucleofílica Acílica (Adición-Eliminación) • Amina 1°/2° + Derivado de Ácido ──► Amida",
+  "deltaH": "ΔH° < 0 (Exotérmica; formación del enlace amida C(=O)–N estabilizado por resonancia)",
+  "description": "Las aminas primarias (R–NH₂) y secundarias (R₂NH) atacan nucleofílicamente al carbono carbonílico de cloruros de acilo, anhídridos de ácido o ésteres mediante un mecanismo de adición-eliminación para sintetizar amidas:\n1) Con Cloruros de Ácido (R'–COCl): reacción muy rápida que genera la amida N-sustituida + HCl.\n2) Con Anhídridos de Ácido ((R'–CO)₂O): método clásico de acetilación (ej. anilina + anhídrido acético → acetanilida + ácido acético; p-aminofenol + anhídrido acético → paracetamol).\n3) Con Ésteres (R'–COOR''): aminólisis que produce la amida + el alcohol desplazado (R''–OH).\n• Nota: Las aminas terciarias (R₃N) NO forman amidas porque carecen de hidrógenos unidos al nitrógeno para desprotonarse.",
+  "meta": {
+    "grupoFuncional": "Amidas N-sustituidas y N,N-disustituidas (ej. N-Etiletanamida, Acetanilida, N,N-Dietilpropanamida)",
+    "reaccionMecanismo": "Sustitución Nucleofílica en el Grupo Acilo (Adición al C=O + Eliminación del Grupo Saliente)",
+    "naturaleza": "Por etapas: 1° Ataque del par libre del N al C=O formando un intermediario tetraédrico → 2° Restitución del doble enlace C=O con expulsión de Cl⁻, R'COO⁻ o R''O⁻ y transferencia protónica.",
+    "rupturaIntermediarios": "Ruptura heterolítica del enlace C–Cl (en cloruros de acilo), C–O acílico (en anhídridos) o C–OR'' (en ésteres) a través de un intermediario tetraédrico dipolar.",
+    "detalleMecanismo": "El nitrógeno nucleofílico ataca al carbono carbonílico δ⁺ abriendo el enlace π C=O. Al cerrarse nuevamente el carbonilo, se expulsa el grupo saliente (Cl⁻, acetato o alcóxido) y el nitrógeno cede un protón formando el enlace amida plano y resonante.",
+    "reactivosCondiciones": "Amina 1° o 2° + Cloruro de acilo (R–COCl), Anhídrido ((R–CO)₂O) o Éster (R–COOR').",
+    "rolReactivos": "• Amina 1° / 2°: Nucleófilo atacante.\n• Cloruro de acilo / Anhídrido / Éster: Agente acilante electrofílico.",
+    "reglasObs": "• Reactividad acilante: Cloruro de acilo > Anhídrido > Éster.\n• Las aminas terciarias no reaccionan formando amidas por falta de enlace N–H."
+  },
+  "substrates": [
+    {
+      "id": "ami_acil_cloruro_etilamina",
+      "name": "Con Cloruro de Ácido: Etilamina + Cloruro de etanoílo ──► N-Etiletanamida + HCl",
+      "catalyst": "Sustitución nucleofílica acílica (rápida)"
+    },
+    {
+      "id": "ami_acil_anhidrido_anilina",
+      "name": "Con Anhídrido (Síntesis Acetanilida): Anilina + Anhídrido acético ──► N-Feniletanamida + CH₃COOH",
+      "catalyst": "Acetilación de aminas aromáticas"
+    },
+    {
+      "id": "ami_acil_cloruro_dietilamina",
+      "name": "Con Amina Secundaria (2°): Dietilamina + Cloruro de propanoílo ──► N,N-Dietilpropanamida + HCl",
+      "catalyst": "Obtención de amida terciaria"
+    },
+    {
+      "id": "ami_acil_ester_metilamina",
+      "name": "Con Éster (Aminólisis): Metilamina + Etanoato de etilo ──► N-Metiletanamida + Etanol",
+      "catalyst": "Aminólisis de ésteres"
+    }
+  ],
+  "catalysts": [
+    "Sustitución nucleofílica acílica (rápida)",
+    "Acetilación de aminas aromáticas",
+    "Obtención de amida terciaria",
+    "Aminólisis de ésteres"
+  ],
+  "stepsBySubstrate": {
+    "ami_acil_cloruro_etilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Etilamina + Cloruro de Etanoílo",
+        "semiStep": "CH₃—CH₂—NH₂  +  CH₃—CO—Cl",
+        "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CO—Cl ──► CH₃—CO—NH—CH₂—CH₃ + HCl",
+        "desc": "La etilamina orienta su par de electrones libres hacia el carbono carbonílico altamente electrofílico del cloruro de etanoílo.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Aproximación del par libre del N al carbono C=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 145,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 305,
+              "y": 215,
+              "label": "Etilamina"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 305,
+              "y": 110
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 305,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 215,
+              "label": "Cloruro de etanoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 525,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 525,
+              "y": 325
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 685,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 415,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Adición Nucleofílica y Eliminación del Grupo Saliente (Cl⁻)",
+        "semiStep": "[CH₃—C(O⁻)(Cl)—NH₂⁺—CH₂CH₃]  ──►  expulsión de Cl⁻",
+        "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CO—Cl ──► CH₃—CO—NH—CH₂—CH₃ + HCl",
+        "desc": "Se forma el enlace N—C en verde punteado mientras se rompe en rojo punteado el enlace C—Cl saliendo el ion cloruro hacia la derecha.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C—Cl.",
+          "forming": "En VERDE punteado: formación del enlace amida N—C.",
+          "movement": "Adición-eliminación acílica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 325,
+              "y": 215,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 325,
+              "y": 110
+            },
+            {
+              "id": "Hn2",
+              "el": "H",
+              "x": 325,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 515,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 515,
+              "y": 325
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 715,
+              "y": 215,
+              "charge": "-",
+              "border": "#ef4444",
+              "label": "Sale Cl⁻"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "x1": 365,
+              "y1": 195,
+              "cx": 420,
+              "cy": 165,
+              "x2": 475,
+              "y2": 195,
+              "type": "full",
+              "label": "Ataque (:N → C=O)"
+            },
+            {
+              "x1": 575,
+              "y1": 195,
+              "cx": 625,
+              "cy": 165,
+              "x2": 675,
+              "y2": 195,
+              "type": "full",
+              "label": "Sale Cl⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Productos Finales Consolidados: N-Etiletanamida + HCl",
+        "semiStep": "CH₃—CO—NH—CH₂—CH₃  +  HCl",
+        "semiGlobal": "CH₃—CH₂—NH₂ + CH₃—CO—Cl ──► CH₃—CO—NH—CH₂—CH₃ + HCl",
+        "desc": "Queda consolidada en verde sólido la N-etiletanamida (N-etilacetamida) junto con HCl.",
+        "legend": {
+          "breaking": "Enlace C—Cl roto.",
+          "forming": "En VERDE sólido: enlace amida C(=O)—NH.",
+          "movement": "Amida secundaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 145,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 285,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 285,
+              "y": 100
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 435,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Etiletanamida"
+            },
+            {
+              "id": "R1",
+              "el": "CH₂CH₃",
+              "x": 585,
+              "y": 215
+            },
+            {
+              "id": "HCl_out",
+              "el": "HCl",
+              "x": 795,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "N1",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 695,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_acil_anhidrido_anilina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Anilina + Anhídrido Etanoico (Acético)",
+        "semiStep": "C₆H₅—NH₂  +  CH₃—CO—O—CO—CH₃",
+        "semiGlobal": "C₆H₅—NH₂ + (CH₃CO)₂O ──► C₆H₅—NH—CO—CH₃ + CH₃—COOH",
+        "desc": "La anilina ataca a uno de los grupos carbonilo del anhídrido acético para moderar su reactividad formando acetanilida.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Aproximación de la anilina al anhídrido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 155,
+              "y": 215,
+              "label": "Anilina"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 305,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 505,
+              "y": 215
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 505,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 505,
+              "y": 325
+            },
+            {
+              "id": "O_br",
+              "el": "O—COCH₃",
+              "x": 695,
+              "y": 215,
+              "label": "Anhídrido acético"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_br",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 405,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Ruptura del Enlace Acilo—Oxígeno y Formación del Enlace Amida",
+        "semiStep": "C₆H₅—NH ··· C(=O)(CH₃) ┆—┆ O—COCH₃",
+        "semiGlobal": "C₆H₅—NH₂ + (CH₃CO)₂O ──► C₆H₅—NH—CO—CH₃ + CH₃—COOH",
+        "desc": "Se forma el enlace N—C en verde punteado y se rompe en rojo punteado el enlace C—O del anhídrido saliendo el ion acetato.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace acilo—oxígeno.",
+          "forming": "En VERDE punteado: enlace amida N—C.",
+          "movement": "Salida de ácido acético."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 315,
+              "y": 215,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 495,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 495,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 495,
+              "y": 325
+            },
+            {
+              "id": "O_br",
+              "el": "CH₃COO⁻",
+              "x": 715,
+              "y": 215,
+              "border": "#ef4444",
+              "label": "Grupo saliente"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_br",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Productos Finales Consolidados: Acetanilida (N-Feniletanamida) + Ácido Etanoico",
+        "semiStep": "C₆H₅—NH—CO—CH₃  +  CH₃—COOH",
+        "semiGlobal": "C₆H₅—NH₂ + (CH₃CO)₂O ──► C₆H₅—NH—CO—CH₃ + CH₃—COOH",
+        "desc": "Se obtiene acetanilida (N-feniletanamida) consolidada en verde sólido junto con ácido etanoico.",
+        "legend": {
+          "breaking": "Enlace acilo-oxígeno roto.",
+          "forming": "En VERDE sólido: acetanilida + CH₃COOH.",
+          "movement": "Productos finales estables."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "NH",
+              "x": 315,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "Acetanilida"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 465,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 595,
+              "y": 215
+            },
+            {
+              "id": "AcOH",
+              "el": "CH₃COOH",
+              "x": 805,
+              "y": 215,
+              "highlight": "#38bdf8",
+              "label": "Ácido acético"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 700,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_acil_cloruro_dietilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Dietilamina (2°) + Cloruro de Propanoílo",
+        "semiStep": "(CH₃CH₂)₂NH  +  CH₃—CH₂—CO—Cl",
+        "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂COCl ──► CH₃CH₂CON(CH₂CH₃)₂ + HCl",
+        "desc": "La dietilamina (amina secundaria) posee un hidrógeno N—H y reacciona con cloruro de propanoílo.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Ataque nucleofílico acílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N1",
+              "el": "(CH₃CH₂)₂NH",
+              "x": 225,
+              "y": 215,
+              "label": "Dietilamina (2°)"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 485,
+              "y": 215
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 485,
+              "y": 100
+            },
+            {
+              "id": "R1",
+              "el": "CH₂CH₃",
+              "x": 485,
+              "y": 325
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 655,
+              "y": 215
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 365,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: N,N-Dietilpropanamida (Amida 3°) + HCl",
+        "semiStep": "CH₃—CH₂—CO—N(CH₂—CH₃)₂  +  HCl",
+        "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂COCl ──► CH₃CH₂CON(CH₂CH₃)₂ + HCl",
+        "desc": "Se obtiene una amida terciaria (N,N-dietilpropanamida) más HCl.",
+        "legend": {
+          "breaking": "Enlace C—Cl roto.",
+          "forming": "En VERDE sólido: N,N-dietilpropanamida.",
+          "movement": "Amida terciaria obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 315,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 315,
+              "y": 100
+            },
+            {
+              "id": "N1",
+              "el": "N(CH₂CH₃)₂",
+              "x": 505,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N,N-Dietilpropanamida"
+            },
+            {
+              "id": "HCl_out",
+              "el": "HCl",
+              "x": 765,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 665,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_acil_ester_metilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Metilamina + Etanoato de Etilo",
+        "semiStep": "CH₃—NH₂  +  CH₃—CO—OCH₂CH₃",
+        "semiGlobal": "CH₃—NH₂ + CH₃—CO—OCH₂CH₃ ──► CH₃—CO—NH—CH₃ + CH₃—CH₂—OH",
+        "desc": "En la aminólisis de ésteres, la amina desplaza al grupo alcoxi (–OCH₂CH₃) formando una amida y liberando etanol.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Ataque nucleofílico de metilamina al éster."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N1",
+              "el": "CH₃NH₂",
+              "x": 205,
+              "y": 215,
+              "label": "Metilamina"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 215
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 455,
+              "y": 100
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 455,
+              "y": 325
+            },
+            {
+              "id": "OR1",
+              "el": "OCH₂CH₃",
+              "x": 645,
+              "y": 215,
+              "label": "Etanoato de etilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OR1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 335,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: N-Metiletanamida + Etanol",
+        "semiStep": "CH₃—CO—NH—CH₃  +  CH₃—CH₂—OH",
+        "semiGlobal": "CH₃—NH₂ + CH₃—CO—OCH₂CH₃ ──► CH₃—CO—NH—CH₃ + CH₃—CH₂—OH",
+        "desc": "Se obtiene N-metiletanamida consolidada en verde sólido junto con etanol.",
+        "legend": {
+          "breaking": "Enlace acilo-alcoxi roto.",
+          "forming": "En VERDE sólido: N-metiletanamida + Etanol.",
+          "movement": "Aminólisis completada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 295,
+              "y": 215,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 295,
+              "y": 100
+            },
+            {
+              "id": "N1",
+              "el": "NHCH₃",
+              "x": 455,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Metiletanamida"
+            },
+            {
+              "id": "Alc",
+              "el": "CH₃CH₂OH",
+              "x": 735,
+              "y": 215,
+              "highlight": "#38bdf8",
+              "label": "Etanol"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 605,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
