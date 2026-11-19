@@ -1,0 +1,953 @@
+{
+  "category": "reacciones",
+  "title": "B.3- Con Ácido Nitroso (HNO₂): Amina Secundaria (→ N-Nitrosamina) vs. Amina Terciaria (→ Sal Nitrito)",
+  "natureBadge": "Contraste Analítico con HNO₂ • Amina 2° (R₂N–N=O Aceite Amarillo) vs. Amina 3° ([R₃NH⁺] NO₂⁻ Soluble)",
+  "deltaH": "ΔH° < 0 (Exotérmica; N-nitrosación irreversible en aminas 2° vs. equilibrio ácido-base soluble en aminas 3°)",
+  "description": "Comportamiento diferencial de las aminas secundarias y terciarias frente al ácido nitroso (HNO₂ = NaNO₂ + HCl):\n1) Aminas Secundarias (R₂NH, tanto alifáticas como aromáticas): poseen 1 enlace N–H, por lo que reaccionan con el ion nitrosonio (⁺N=O) sustituyendo el protón por un grupo nitroso (–N=O) y formando N-NITROSAMINAS (R₂N–N=O + H₂O), compuestos líquidos aceitosos de color amarillo insolubles en agua (compuestos carcinógenos).\n2) Aminas Terciarias (R₃N): carecen de enlaces N–H, por lo que NO pueden formar N-nitrosaminas estables; únicamente experimentan una neutralización ácido-base formando la sal soluble NITRITO DE TRIALQUILAMONIO ([R₃NH⁺] NO₂⁻).",
+  "meta": {
+    "grupoFuncional": "N-Nitrosaminas (R₂N–N=O, desde Aminas 2°) vs. Sales Nitrito de Trialquilamonio ([R₃NH⁺] NO₂⁻, desde Aminas 3°)",
+    "reaccionMecanismo": "Sustitución Electrofílica en el Nitrógeno / N-Nitrosación (Aminas 2°) vs. Reacción Ácido-Base (Aminas 3°)",
+    "naturaleza": "Aminas 2°: Ataque del par libre del N al electrófilo ⁺N=O seguido de pérdida de H⁺ (deshidratación neta). Aminas 3°: Transferencia protónica simple.",
+    "rupturaIntermediarios": "En aminas 2°: ruptura heterolítica del único enlace N–H y formación del enlace covalente N–N=O + H₂O. En aminas 3°: ruptura del enlace H–ONO del ácido nitroso.",
+    "detalleMecanismo": "En R₂NH, el par libre del nitrógeno ataca al ion nitrosonio (⁺N=O) formando [R₂NH⁺–N=O], que pierde su protón H⁺ generando la N-nitrosamina neutra (R₂N–N=O). En R₃N, al no haber H en el N, solo ocurre protonación a [R₃NH⁺] NO₂⁻.",
+    "reactivosCondiciones": "Amina 2° o Amina 3° + NaNO₂ / HCl acuoso (HNO₂), 0–25 °C.",
+    "rolReactivos": "• Amina 2° (R₂NH) / Amina 3° (R₃N): Sustrato nitrogenado.\n• Ácido nitroso (HNO₂): Agente nitrosante (para 2°) o ácido débil (para 3°).",
+    "reglasObs": "• Resumen del ensayo con HNO₂:\n  - Amina 1° alifática → Alcohol + Burbujas N₂↑.\n  - Amina 1° aromática (frío) → Sal de diazonio.\n  - Amina 2° → N-Nitrosamina (aceite amarillo insoluble).\n  - Amina 3° → Sal nitrito soluble en agua (sin gas ni aceite)."
+  },
+  "substrates": [
+    {
+      "id": "ami_2y3_dietilamina",
+      "name": "Amina 2° Alifática: Dietilamina ((CH₃CH₂)₂NH) + HNO₂ ──► N-Nitrosodietilamina + H₂O",
+      "catalyst": "HNO₂ (NaNO₂ + HCl) • Aceite amarillo"
+    },
+    {
+      "id": "ami_2y3_dimetilamina",
+      "name": "Amina 2° Alifática: Dimetilamina ((CH₃)₂NH) + HNO₂ ──► N-Nitrosodimetilamina + H₂O",
+      "catalyst": "HNO₂ (NaNO₂ + HCl) • Aceite amarillo"
+    },
+    {
+      "id": "ami_2y3_nmetilanilina",
+      "name": "Amina 2° Aromática: N-Metilanilina (C₆H₅NHCH₃) + HNO₂ ──► N-Nitroso-N-metilanilina + H₂O",
+      "catalyst": "HNO₂ (NaNO₂ + HCl) • N-Nitrosación"
+    },
+    {
+      "id": "ami_2y3_trietilamina",
+      "name": "Amina 3° (Sin H en N): Trietilamina ((CH₃CH₂)₃N) + HNO₂ ──► Nitrito de trietilamonio (Soluble)",
+      "catalyst": "HNO₂ (NaNO₂ + HCl) • Solo Ácido-Base"
+    },
+    {
+      "id": "ami_2y3_trimetilamina",
+      "name": "Amina 3° (Sin H en N): Trimetilamina ((CH₃)₃N) + HNO₂ ──► Nitrito de trimetilamonio (Soluble)",
+      "catalyst": "HNO₂ (NaNO₂ + HCl) • Solo Ácido-Base"
+    }
+  ],
+  "catalysts": [
+    "HNO₂ (NaNO₂ + HCl) • Aceite amarillo",
+    "HNO₂ (NaNO₂ + HCl) • N-Nitrosación",
+    "HNO₂ (NaNO₂ + HCl) • Solo Ácido-Base"
+  ],
+  "stepsBySubstrate": {
+    "ami_2y3_dietilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Dietilamina (Amina 2°) + HNO₂",
+        "semiStep": "(CH₃—CH₂)₂NH  +  HO—N=O",
+        "semiGlobal": "(CH₃—CH₂)₂NH + HNO₂ ──► (CH₃—CH₂)₂N—N=O + H₂O",
+        "desc": "La dietilamina posee un único enlace N—H y un par electrónico libre listo para reaccionar con el ácido nitroso.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Aproximación del HNO₂ al nitrógeno secundario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 325,
+              "y": 215,
+              "label": "Dietilamina (2°)"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 325,
+              "y": 110
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 325,
+              "y": 325
+            },
+            {
+              "id": "HO",
+              "el": "HO",
+              "x": 545,
+              "y": 215
+            },
+            {
+              "id": "NO",
+              "el": "N=O",
+              "x": 705,
+              "y": 215,
+              "highlight": "#38bdf8",
+              "label": "Ácido nitroso"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "HO",
+              "to": "NO",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 435,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — N-Nitrosación (Ruptura en Rojo de N—H y HO—NO; Formación N—N=O)",
+        "semiStep": "(CH₃CH₂)₂N ··· N=O  +  H ··· OH",
+        "semiGlobal": "(CH₃—CH₂)₂NH + HNO₂ ──► (CH₃—CH₂)₂N—N=O + H₂O",
+        "desc": "Se rompe en rojo punteado el enlace N—H de la amina secundaria y el enlace HO—NO del ácido nitroso, formándose en verde punteado el enlace N—N=O y agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlaces N—H y HO—NO.",
+          "forming": "En VERDE punteado: enlace covalente N—N=O.",
+          "movement": "Sustitución del protón por el grupo nitroso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 325,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 325,
+              "y": 105,
+              "border": "#ef4444"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 325,
+              "y": 325
+            },
+            {
+              "id": "NO",
+              "el": "N=O",
+              "x": 525,
+              "y": 215,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "HO",
+              "el": "HO",
+              "x": 525,
+              "y": 105,
+              "border": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "NO",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "HO",
+              "to": "NO",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Productos Finales Consolidados: N-Nitrosodietilamina + H₂O",
+        "semiStep": "(CH₃—CH₂)₂N—N=O  +  H₂O",
+        "semiGlobal": "(CH₃—CH₂)₂NH + HNO₂ ──► (CH₃—CH₂)₂N—N=O + H₂O",
+        "desc": "Se obtiene la N-nitrosodietilamina (líquido aceitoso amarillo insoluble) consolidada en verde sólido junto con agua.",
+        "legend": {
+          "breaking": "Enlace N—H sustituido.",
+          "forming": "En VERDE sólido: N-nitrosodietilamina + H₂O.",
+          "movement": "N-Nitrosamina formada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 155,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 335,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Nitrosodietilamina"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "NO",
+              "el": "N=O",
+              "x": 515,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "NO",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_2y3_dimetilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Dimetilamina (Amina 2°) + HNO₂",
+        "semiStep": "(CH₃)₂NH  +  HNO₂",
+        "semiGlobal": "(CH₃)₂NH + HNO₂ ──► (CH₃)₂N—N=O + H₂O",
+        "desc": "La dimetilamina (amina secundaria) reacciona con ácido nitroso.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "N-Nitrosación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 325,
+              "y": 215,
+              "label": "Dimetilamina (2°)"
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 325,
+              "y": 110
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 325,
+              "y": 325
+            },
+            {
+              "id": "HNO2",
+              "el": "HNO₂",
+              "x": 615,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 475,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Productos Finales Consolidados: N-Nitrosodimetilamina + H₂O",
+        "semiStep": "(CH₃)₂N—N=O  +  H₂O",
+        "semiGlobal": "(CH₃)₂NH + HNO₂ ──► (CH₃)₂N—N=O + H₂O",
+        "desc": "Se obtiene N-nitrosodimetilamina consolidada en verde sólido junto con agua.",
+        "legend": {
+          "breaking": "Enlace N—H sustituido.",
+          "forming": "En VERDE sólido: N-nitrosodimetilamina + H₂O.",
+          "movement": "Producto final."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 335,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Nitrosodimetilamina"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "NO",
+              "el": "N=O",
+              "x": 515,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "NO",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_2y3_nmetilanilina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: N-Metilanilina (Amina 2° Aromática) + HNO₂",
+        "semiStep": "C₆H₅—NH—CH₃  +  HNO₂",
+        "semiGlobal": "C₆H₅—NH—CH₃ + HNO₂ ──► C₆H₅—N(CH₃)—N=O + H₂O",
+        "desc": "La N-metilanilina (amina secundaria aromática) también forma una N-nitrosamina al reaccionar con HNO₂.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "N-Nitrosación aromática."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 165,
+              "y": 215,
+              "label": "N-Metilanilina (2°)"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 325,
+              "y": 215
+            },
+            {
+              "id": "Hn1",
+              "el": "H",
+              "x": 325,
+              "y": 110
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 325,
+              "y": 325
+            },
+            {
+              "id": "HNO2",
+              "el": "HNO₂",
+              "x": 615,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Hn1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 475,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: N-Nitroso-N-metilanilina + H₂O",
+        "semiStep": "C₆H₅—N(CH₃)—N=O  +  H₂O",
+        "semiGlobal": "C₆H₅—NH—CH₃ + HNO₂ ──► C₆H₅—N(CH₃)—N=O + H₂O",
+        "desc": "Se obtiene N-nitroso-N-metilanilina consolidada en verde sólido junto con agua.",
+        "legend": {
+          "breaking": "Enlace N—H sustituido.",
+          "forming": "En VERDE sólido: N-nitroso-N-metilanilina.",
+          "movement": "Producto final."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph1",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 335,
+              "y": 215,
+              "highlight": "#10b981",
+              "label": "N-Nitroso-N-metilanilina"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "NO",
+              "el": "N=O",
+              "x": 515,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "W_out",
+              "el": "H₂O",
+              "x": 745,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "NO",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "texts": [
+            {
+              "x": 635,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_2y3_trietilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Trietilamina (Amina 3° sin H en N) + HNO₂",
+        "semiStep": "(CH₃—CH₂)₃N:  +  H—ONO",
+        "semiGlobal": "(CH₃—CH₂)₃N + HNO₂ ──► [(CH₃—CH₂)₃NH⁺] NO₂⁻",
+        "desc": "Como la trietilamina NO tiene ningún enlace N—H, no puede formar una N-nitrosamina y actúa únicamente como base de Brønsted.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Neutralización ácido-base soluble."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 335,
+              "y": 215,
+              "label": "Trietilamina (3°)"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 335,
+              "y": 105
+            },
+            {
+              "id": "R3",
+              "el": "CH₂CH₃",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "Ha",
+              "el": "H",
+              "x": 545,
+              "y": 215
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 705,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ha",
+              "to": "NO2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 440,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Transferencia de Protón (Formación de Sal Soluble en Agua)",
+        "semiStep": "(CH₃CH₂)₃N ··· H ┆—┆ NO₂",
+        "semiGlobal": "(CH₃—CH₂)₃N + HNO₂ ──► [(CH₃—CH₂)₃NH⁺] NO₂⁻",
+        "desc": "El par libre del nitrógeno captura el protón H⁺ del ácido nitroso (verde punteado) liberando el ion nitrito NO₂⁻ (rojo punteado).",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace H—ONO.",
+          "forming": "En VERDE punteado: enlace N—H⁺.",
+          "movement": "Transferencia protónica reversible."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 335,
+              "y": 215,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 335,
+              "y": 105
+            },
+            {
+              "id": "R3",
+              "el": "CH₂CH₃",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "Ha",
+              "el": "H",
+              "x": 495,
+              "y": 215,
+              "border": "#10b981"
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 715,
+              "y": 215,
+              "charge": "-",
+              "border": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Ha",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Ha",
+              "to": "NO2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 3 — Producto Final Consolidado: Nitrito de Trietilamonio ([(CH₃CH₂)₃NH⁺] NO₂⁻)",
+        "semiStep": "[(CH₃—CH₂)₃NH⁺] NO₂⁻",
+        "semiGlobal": "(CH₃—CH₂)₃N + HNO₂ ──► [(CH₃—CH₂)₃NH⁺] NO₂⁻",
+        "desc": "Se obtiene la sal iónica soluble en agua nitrito de trietilamonio (sin desprendimiento de N₂↑ ni formación de aceite insoluble).",
+        "legend": {
+          "breaking": "Enlace H—ONO disociado.",
+          "forming": "En VERDE sólido: nitrito de trietilamonio.",
+          "movement": "Sal soluble obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R1",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 215
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 345,
+              "y": 215,
+              "charge": "+",
+              "highlight": "#10b981",
+              "label": "Nitrito de trietilamonio"
+            },
+            {
+              "id": "R2",
+              "el": "CH₂CH₃",
+              "x": 345,
+              "y": 105
+            },
+            {
+              "id": "R3",
+              "el": "CH₂CH₃",
+              "x": 345,
+              "y": 325
+            },
+            {
+              "id": "Ha",
+              "el": "H",
+              "x": 495,
+              "y": 215,
+              "border": "#10b981"
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 705,
+              "y": 215,
+              "charge": "-",
+              "highlight": "#38bdf8",
+              "label": "Ion nitrito"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "R3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "Ha",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_2y3_trimetilamina": [
+      {
+        "title": "Paso 1 — Estado Inicial Intacto: Trimetilamina (Amina 3°) + HNO₂",
+        "semiStep": "(CH₃)₃N:  +  H—ONO",
+        "semiGlobal": "(CH₃)₃N + HNO₂ ──► [(CH₃)₃NH⁺] NO₂⁻",
+        "desc": "La trimetilamina carece de hidrógenos en el nitrógeno y actúa como base frente al ácido nitroso.",
+        "legend": {
+          "breaking": "Sin ruptura inicial.",
+          "forming": "Sin enlace nuevo.",
+          "movement": "Reacción ácido-base."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N1",
+              "el": "(CH₃)₃N",
+              "x": 265,
+              "y": 215,
+              "label": "Trimetilamina (3°)"
+            },
+            {
+              "id": "Ha",
+              "el": "H",
+              "x": 515,
+              "y": 215
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 675,
+              "y": 215,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ha",
+              "to": "NO2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "texts": [
+            {
+              "x": 405,
+              "y": 222,
+              "text": "+"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Paso 2 — Producto Final Consolidado: Nitrito de Trimetilamonio ([(CH₃)₃NH⁺] NO₂⁻)",
+        "semiStep": "[(CH₃)₃NH⁺] NO₂⁻",
+        "semiGlobal": "(CH₃)₃N + HNO₂ ──► [(CH₃)₃NH⁺] NO₂⁻",
+        "desc": "Se obtiene la sal soluble nitrito de trimetilamonio.",
+        "legend": {
+          "breaking": "Completado.",
+          "forming": "En VERDE sólido: nitrito de trimetilamonio.",
+          "movement": "Sal soluble obtenida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N1",
+              "el": "(CH₃)₃NH",
+              "x": 295,
+              "y": 215,
+              "charge": "+",
+              "highlight": "#10b981",
+              "label": "Nitrito de trimetilamonio"
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 615,
+              "y": 215,
+              "charge": "-",
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
