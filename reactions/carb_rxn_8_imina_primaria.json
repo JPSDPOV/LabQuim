@@ -1,0 +1,1136 @@
+{
+  "category": "reacciones",
+  "title": "8) Condensación con Amoníaco (+ NH₃ ──► Iminas Primarias + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + NH₃ (H⁺ cat.) ⇄ Imina Primaria (R₂C=NH) + H₂O",
+  "deltaH": "ΔH° ≈ −10 a −25 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; impulsada por eliminación de H₂O)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y amoníaco (NH₃) en medio ligeramente ácido (pH ≈ 4.5) para formar una IMINA PRIMARIA (R–CH=NH o R₂C=NH) con eliminación de agua:\n1) Etapa de adición nucleofílica: el par libre del nitrógeno del amoníaco (:NH₃) ataca al carbono carbonílico electrofílico (δ+) formando un intermediario dipolar que, tras transferencia protónica, genera una CARBINOLAMINA o hemiaminal (R₂C(OH)(NH₂)).\n2) Etapa de eliminación (deshidratación): en catálisis ácida suave, el grupo –OH de la carbinolamina se protona a –OH₂⁺ y abandona como H₂O asistido por el par electrónico del nitrógeno, generando un ion iminio protonado [R₂C=NH₂⁺] que tras perder un protón da la imina primaria.\n3) Estabilidad y reactividad: las iminas primarias no sustituidas en el nitrógeno (R₂C=NH) son relativamente inestables y tienden a polimerizar (por ejemplo, el metanal con NH₃ forma hexametilentetramina o urotropina), salvo cuando están conjugadas con anillos aromáticos (como en el benzaldehído) o se reducen in situ (aminación reductiva).",
+  "meta": {
+    "grupoFuncional": "Iminas Primarias o Aldiminas/Cetiminas no sustituidas (R–CH=NH o R₂C=NH)",
+    "reaccionMecanismo": "Adición nucleofílica de NH₃ (carbinolamina) seguida de eliminación E1cb/E1 de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque :NH₃ → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion iminio] → desprotonación [imina]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina (R₂C(OH)(NH₂)) e ion iminio [R₂C=NH₂⁺]; formación de doble enlace C=NH y H₂O.",
+    "detalleMecanismo": "R–CHO + NH₃ ⇄ [R–CH(OH)–NH₂] ──(H⁺, −H₂O)──► R–CH=NH + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + exceso de NH₃ (amoníaco anhidro o en solución) + tampón ácido suave (pH 4–5) con agente deshidratante.",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Amoníaco (:NH₃, usado en exceso para evitar reacciones secundarias).\n• Catalizador ácido suave (pH 4–5): protona el –OH de la carbinolamina sin convertir todo el :NH₃ en NH₄⁺ (no nucleofílico).",
+    "reglasObs": "• Curva de pH óptima (pH 4–5): a pH muy bajo (<2) todo el NH₃ se protona a NH₄⁺ y detiene el ataque nucleofílico; a pH muy alto (>9) no se protona el –OH de la carbinolamina y falla la deshidratación.\n• Las iminas primarias aromáticas (ej. fenilmetanimina) son más estables por conjugación con el anillo bencénico.\n• Reducción in situ (NH₃ + NaBH₃CN): método clásico para sintetizar aminas primarias (R–CH₂–NH₂)."
+  },
+  "substrates": [
+    {
+      "id": "imi1_etanal_nh3",
+      "name": "Etanal + NH₃ (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► Etanimina (CH₃–CH=NH) + H₂O [Aldehído Alifático]",
+      "catalyst": "NH₃ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi1_benzaldehido_nh3",
+      "name": "Benzaldehído + NH₃ (pH 4.5) ⇄ Fenilmetanimina (C₆H₅–CH=NH) + H₂O [Imina Conjugada Estable]",
+      "catalyst": "NH₃ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi1_propanona_nh3",
+      "name": "Propanona + NH₃ (pH 4.5) ⇄ Propan-2-imina ((CH₃)₂C=NH) + H₂O [Cetona Alifática]",
+      "catalyst": "NH₃ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi1_ciclohexanona_nh3",
+      "name": "Ciclohexanona + NH₃ (pH 4.5) ⇄ Ciclohexanimina + H₂O [Cetona Cíclica]",
+      "catalyst": "NH₃ / H⁺ (pH 4–5)"
+    }
+  ],
+  "catalysts": [
+    "NH₃ / H⁺ (pH 4–5)"
+  ],
+  "stepsBySubstrate": {
+    "imi1_etanal_nh3": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Amoníaco (:NH₃, pH 4–5)",
+        "semiStep": "CH₃–CHO + :NH₃ (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + NH₃ ⇄ [CH₃–CH(OH)–NH₂] ──(−H₂O)──► CH₃–CH=NH + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) con su enlace C=O polarizado y el amoníaco (:NH₃) con su par de electrones no enlazantes libre a pH 4.5.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y amoníaco intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El par solitario del nitrógeno del :NH₃ ataca nucleofílicamente al carbono carbonílico electrofílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Amoníaco (:NH₃)"
+            },
+            {
+              "id": "H_nh3",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_nh3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Adición Nucleofílica y Formación de la Carbinolamina",
+        "semiStep": "CH₃–CHO + :NH₃ ⇄ CH₃–CH(OH)–NH₂ [Carbinolamina / Hemiaminal]",
+        "semiGlobal": "CH₃–CHO + NH₃ ⇄ [CH₃–CH(OH)–NH₂] ──(−H₂O)──► CH₃–CH=NH + H₂O",
+        "desc": "El amoníaco forma un enlace covalente C1–N mientras se abre el enlace π C=O y ocurre una transferencia protónica hacia el oxígeno O1, generando la carbinolamina.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C1–NH₂ de la carbinolamina.",
+          "movement": "El carbono C1 pasa temporalmente a hibridación sp³ con un grupo –OH y un grupo –NH₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_nh3",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_nh3",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque :NH₃"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de π C=N)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NH₂ ──► [CH₃–CH=NH₂⁺] + H₂O ──► CH₃–CH=NH + H₃O⁺",
+        "semiGlobal": "CH₃–CHO + NH₃ ⇄ [CH₃–CH(OH)–NH₂] ──(−H₂O)──► CH₃–CH=NH + H₂O",
+        "desc": "El medio ácido suave protona el grupo –OH transformándolo en H₂O saliente; el par libre del nitrógeno forma el doble enlace C=N y se pierde un protón final.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (eliminación de agua) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C=NH (imina primaria).",
+          "movement": "El carbono C1 recupera su hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanimina (CH₃–CH=NH) + H₂O",
+        "semiStep": "CH₃–CH=NH + H₂O (Imina Primaria)",
+        "semiGlobal": "CH₃–CHO + NH₃ ⇄ [CH₃–CH(OH)–NH₂] ──(−H₂O)──► CH₃–CH=NH + H₂O",
+        "desc": "Queda consolidada la etanimina (aldimina primaria) junto con una molécula de agua eliminada.",
+        "legend": {
+          "breaking": "Condensación carbonilo-amoníaco completada.",
+          "forming": "En VERDE sólido: grupo imino primario (–CH=NH).",
+          "movement": "Las iminas primarias alifáticas suelen reducirse in situ o polimerizar si no se estabilizan."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanimina"
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi1_benzaldehido_nh3": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Amoníaco (:NH₃, pH 4–5)",
+        "semiStep": "C₆H₅–CHO + :NH₃ (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + NH₃ ⇄ [C₆H₅–CH(OH)–NH₂] ──(−H₂O)──► C₆H₅–CH=NH + H₂O",
+        "desc": "Se observan el benzaldehído y el amoníaco. La conjugación con el anillo aromático estabilizará notablemente la imina primaria resultante.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y amoníaco intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de :NH₃ sobre el carbono formilo bencílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Amoníaco (:NH₃)"
+            },
+            {
+              "id": "H_nh3",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_nh3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Bencílica y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NH₂ ──(H⁺, −H₂O)──► C₆H₅–CH=NH",
+        "semiGlobal": "C₆H₅–CHO + NH₃ ⇄ [C₆H₅–CH(OH)–NH₂] ──(−H₂O)──► C₆H₅–CH=NH + H₂O",
+        "desc": "Tras formarse la carbinolamina bencílica, la protonación del –OH expulsa H₂O generando el enlace doble C=NH conjugado con el anillo fenílico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ y desprotonación del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C=NH conjugado.",
+          "movement": "La deslocalización electrónica con el benceno disminuye la energía de transición."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=NH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Fenilmetanimina (Benzaldimina Primaria) + H₂O",
+        "semiStep": "C₆H₅–CH=NH + H₂O",
+        "semiGlobal": "C₆H₅–CHO + NH₃ ⇄ [C₆H₅–CH(OH)–NH₂] ──(−H₂O)──► C₆H₅–CH=NH + H₂O",
+        "desc": "Queda consolidada la fenilmetanimina, estabilizada por conjugación π con el anillo aromático.",
+        "legend": {
+          "breaking": "Deshidratación completada.",
+          "forming": "En VERDE sólido: grupo aldimino primario (–CH=NH) conjugado.",
+          "movement": "Producto imina primaria aromática obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Fenilmetanimina"
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi1_propanona_nh3": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Amoníaco (:NH₃, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + :NH₃ (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + NH₃ ⇄ [(CH₃)₂C(OH)–NH₂] ──(−H₂O)──► (CH₃)₂C=NH + H₂O",
+        "desc": "Se observan la propanona y el amoníaco. Las cetonas reaccionan un poco más lento que los aldehídos por impedimento estérico y efecto +I.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona y amoníaco intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de :NH₃ sobre el carbono cetónico central C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Amoníaco (:NH₃)"
+            },
+            {
+              "id": "H_nh3",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_nh3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Terciaria y Eliminación de H₂O",
+        "semiStep": "(CH₃)₂C(OH)–NH₂ ──(H⁺, −H₂O)──► (CH₃)₂C=NH",
+        "semiGlobal": "CH₃–CO–CH₃ + NH₃ ⇄ [(CH₃)₂C(OH)–NH₂] ──(−H₂O)──► (CH₃)₂C=NH + H₂O",
+        "desc": "La carbinolamina pierde una molécula de agua en medio ácido suave formando el doble enlace C=NH de la cetimina.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación de –NH₂⁺.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=NH.",
+          "movement": "El carbono C2 recupera la geometría trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=NH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propan-2-imina ((CH₃)₂C=NH) + H₂O",
+        "semiStep": "(CH₃)₂C=NH + H₂O (Cetimina Primaria)",
+        "semiGlobal": "CH₃–CO–CH₃ + NH₃ ⇄ [(CH₃)₂C(OH)–NH₂] ──(−H₂O)──► (CH₃)₂C=NH + H₂O",
+        "desc": "Queda consolidada la propan-2-imina (cetimina primaria), útil como intermediario en la síntesis de isopropilamina por reducción catalítica.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace doble C=NH.",
+          "movement": "Producto cetimina primaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propan-2-imina"
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi1_ciclohexanona_nh3": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Amoníaco (:NH₃, pH 4–5)",
+        "semiStep": "Ciclohexanona + :NH₃ (pH 4.5)",
+        "semiGlobal": "Ciclohexanona + NH₃ ⇄ [1-Aminociclohexanol] ──(−H₂O)──► Ciclohexanimina + H₂O",
+        "desc": "Se observan la ciclohexanona y el amoníaco en tampón ácido suave.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona y :NH₃ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del amoníaco sobre el carbono carbonílico C1 del anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ciclohexanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Amoníaco (:NH₃)"
+            },
+            {
+              "id": "H_nh3",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_nh3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Cíclica y Eliminación de H₂O",
+        "semiStep": "1-Aminociclohexanol ──(H⁺, −H₂O)──► Ciclohexanimina",
+        "semiGlobal": "Ciclohexanona + NH₃ ⇄ [1-Aminociclohexanol] ──(−H₂O)──► Ciclohexanimina + H₂O",
+        "desc": "La carbinolamina pierde agua en medio ácido suave generando el doble enlace exocíclico C=NH.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=NH.",
+          "movement": "Restauración de la hibridación sp² en el carbono C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "N_nh3",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=NH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ciclohexanimina + H₂O",
+        "semiStep": "Ciclohexanimina + H₂O",
+        "semiGlobal": "Ciclohexanona + NH₃ ⇄ [1-Aminociclohexanol] ──(−H₂O)──► Ciclohexanimina + H₂O",
+        "desc": "Queda consolidada la ciclohexanimina junto con agua; su hidrogenación produce ciclohexilamina.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo imino exocíclico C=NH.",
+          "movement": "Producto imina primaria cíclica obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ciclohexanimina"
+            },
+            {
+              "id": "N_nh3",
+              "el": "NH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 545,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_nh3",
+              "order": 2,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
