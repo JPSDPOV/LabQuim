@@ -1,0 +1,1274 @@
+{
+  "category": "reacciones",
+  "title": "17) Adición de Reactivo de Grignard (Metanal → 1° | Aldehídos → 2° | Cetonas → Alcohol 3° + Retrosíntesis)",
+  "natureBadge": "Adición Nucleofílica Organometálica • HCHO → Alcohol 1° | R–CHO → Alcohol 2° | R–CO–R' → Alcohol 3°",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; formación de un enlace fuerte C–C y un enlace O–H)",
+  "description": "Adición nucleofílica irreversible de haluros de alquil o arilmagnesio (Reactivos de Grignard, R''–MgX) sobre aldehídos y cetonas en éter anhidro (Et₂O o THF), seguida de hidrólisis ácida suave (H₂O / H₃O⁺):\n1) Metanal (H–CHO) + R''–MgX ──(1. Éter seco / 2. H₃O⁺)──► ALCOHOL PRIMARIO (R''–CH₂–OH, alarga la cadena en +1 carbono).\n2) Otros aldehídos (R–CHO) + R''–MgX ──(1. Éter seco / 2. H₃O⁺)──► ALCOHOL SECUNDARIO (R–CH(OH)–R'').\n3) Cetonas (R–CO–R') + R''–MgX ──(1. Éter seco / 2. H₃O⁺)──► ALCOHOL TERCIARIO (R–C(OH)(R')–R'').\n4) Análisis retrosintético: cualquier alcohol secundario o terciario puede desconectarse por uno de los enlaces C–C unidos al carbono carbinólico (C–OH) para elegir el par óptimo sustrato carbonílico + reactivo de Grignard.",
+  "meta": {
+    "grupoFuncional": "Alcoholes Primarios (R–CH₂–OH), Secundarios (R–CH(OH)–R') y Terciarios (R₃C–OH)",
+    "reaccionMecanismo": "Adición nucleofílica polar concertada (estado de transición cíclico de 6 miembros / carbanión R''δ⁻) seguida de hidrólisis ácida",
+    "naturaleza": "Por etapas (ataque nucleofílico de R''–MgX al C=O en medio anhidro → sal halomagnesio alcóxido [R₂C(OMgX)R''] → protonación con H₃O⁺ / NH₄Cl).",
+    "rupturaIntermediarios": "Ruptura de C–Mg, π C=O y O–H (agua/ácido); intermediario alcóxido de magnesio (R₂C(OMgX)R''); formación de enlaces C–C y O–H.",
+    "detalleMecanismo": "HCHO + R''MgX ──► R''CH₂OH (1°)  |  RCHO + R''MgX ──► RCH(OH)R'' (2°)  |  RCOR' + R''MgX ──► RC(OH)(R')R'' (3°)",
+    "reactivosCondiciones": "Etapa 1: Aldehído o Cetona + R''–MgX (X = Br, Cl, I) en éter dietílico anhidro (Et₂O) o THF seco. Etapa 2: Hidrólisis con H₂O, NH₄Cl acuoso o H₃O⁺ diluido.",
+    "rolReactivos": "• Sustrato electrofílico: Metanal (→ 1°), Aldehído (→ 2°) o Cetona (→ 3°).\n• Nucleófilo organometálico: Reactivo de Grignard (R''δ⁻–MgXδ⁺, fuerte nucleófilo y base muy fuerte).\n• Fuente de protones (etapa separada): H₂O / H₃O⁺ diluido (nunca presente durante el ataque organometálico).",
+    "reglasObs": "• Incompatibilidad protónica estricta: el reactivo de Grignard se destruye instantáneamente frente a grupos con hidrógenos ácidos (–OH, –NH, –SH, –COOH, –C≡CH, H₂O) produciendo el alcano R''–H; si existen estos grupos en el sustrato, deben protegerse previamente (ej. como acetal o éter de sililo).\n• Estrategia retrosintética: para sintetizar un alcohol terciario asimétrico R¹R²R³C–OH existen hasta 3 rutas distintas (combinando una cetona R¹–CO–R² con R³MgX, etc.), eligiéndose los haluros y carbonilos más accesibles y menos impedidos."
+  },
+  "substrates": [
+    {
+      "id": "grig_metanal_etmgbr",
+      "name": "Metanal + Bromuro de Etilmagnesio ──(H₃O⁺)──► 1-Propanol [Alcohol 1° — Alargamiento +1C]",
+      "catalyst": "1) Et₂O anhidro  2) H₃O⁺"
+    },
+    {
+      "id": "grig_etanal_phmgbr",
+      "name": "Etanal + Bromuro de Fenilmagnesio ──(H₃O⁺)──► 1-Feniletanol [Aldehído → Alcohol 2°]",
+      "catalyst": "1) THF anhidro  2) H₃O⁺"
+    },
+    {
+      "id": "grig_propanona_memgbr",
+      "name": "Propanona + Yoduro de Metilmagnesio ──(H₃O⁺)──► 2-Metil-2-propanol (terc-Butanol) [Cetona → Alcohol 3°]",
+      "catalyst": "1) Et₂O anhidro  2) H₃O⁺"
+    },
+    {
+      "id": "grig_retrosintesis_butanona_etmgbr",
+      "name": "Retrosíntesis: Butanona + Bromuro de Etilmagnesio ──(H₃O⁺)──► 3-Metil-3-pentanol [Ruta Óptima Alcohol 3°]",
+      "catalyst": "1) Et₂O anhidro  2) NH₄Cl / H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) Et₂O anhidro  2) H₃O⁺",
+    "1) THF anhidro  2) H₃O⁺",
+    "1) Et₂O anhidro  2) NH₄Cl / H₂O"
+  ],
+  "stepsBySubstrate": {
+    "grig_metanal_etmgbr": [
+      {
+        "title": "Estado Inicial Desarrollado: Metanal (H–CHO) + Bromuro de Etilmagnesio (CH₃CH₂–MgBr)",
+        "semiStep": "H–CHO + CH₃CH₂–MgBr (en Et₂O anhidro)",
+        "semiGlobal": "H–CHO + CH₃CH₂MgBr ──(1. Et₂O / 2. H₃O⁺)──► CH₃CH₂CH₂–OH (1-Propanol)",
+        "desc": "Se observan el metanal (formaldehído) y el reactivo de Grignard fuertemente polarizado (CH₃CH₂δ⁻–MgBrδ⁺), donde el carbono unido al magnesio posee carácter carbaniónico nucleofílico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; metanal y reactivo organometálico intactos en medio anhidro.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El enlace C–Mg polarizado ataca nucleofílicamente al carbono carbonílico electrofílico del metanal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Metanal (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Grignard (δ−)"
+            },
+            {
+              "id": "MgBr",
+              "el": "MgBr",
+              "x": 555,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Et_nuc",
+              "to": "MgBr",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Adición Nucleofílica C–C y Formación del Alcóxido de Magnesio",
+        "semiStep": "H–CHO + CH₃CH₂–MgBr ──► CH₃CH₂–CH₂–O⁻ ⁺MgBr",
+        "semiGlobal": "H–CHO + CH₃CH₂MgBr ──(1. Et₂O / 2. H₃O⁺)──► CH₃CH₂CH₂–OH (1-Propanol)",
+        "desc": "El grupo etilo nucleofílico forma un enlace C–C irreversible con el carbono del metanal mientras el par electrónico π del carbonilo pasa al oxígeno coordinado con el magnesio.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–Mg y apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del nuevo enlace carbono-carbono (CH₃CH₂–CH₂).",
+          "movement": "El carbono carbonílico cambia de hibridación sp² a sp³ (intermediario propóxido de bromomagnesio)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O⁻",
+              "x": 395,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "MgBr",
+              "el": "MgBr⁺",
+              "x": 555,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Et_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Et_nuc",
+              "to": "MgBr",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 455,
+              "y1": 325,
+              "cx": 420,
+              "cy": 285,
+              "x2": 402,
+              "y2": 235,
+              "label": "Ataque C–C"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Hidrólisis Ácida Suave (H₃O⁺) del Alcóxido",
+        "semiStep": "CH₃CH₂–CH₂–O⁻ ⁺MgBr + H–OH₂⁺ ──► CH₃CH₂CH₂–OH + Mg(OH)Br + H₂O",
+        "semiGlobal": "H–CHO + CH₃CH₂MgBr ──(1. Et₂O / 2. H₃O⁺)──► CH₃CH₂CH₂–OH (1-Propanol)",
+        "desc": "En una segunda etapa independiente se añade agua ligeramente ácida (H₃O⁺); el oxígeno alcóxido captura un protón consolidando el grupo hidroxilo (–OH).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–OH₂⁺ del ácido acuoso.",
+          "forming": "En VERDE punteado: formación del enlace O–H del alcohol.",
+          "movement": "Protonación rápida ácido-base que libera el alcohol neutro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 510,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 635,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Hidrólisis H₃O⁺"
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Et_nuc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 490,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 1-Propanol (CH₃–CH₂–CH₂–OH — Alcohol Primario)",
+        "semiStep": "CH₃–CH₂–CH₂–OH (1-Propanol, Alcohol 1°)",
+        "semiGlobal": "H–CHO + CH₃CH₂MgBr ──(1. Et₂O / 2. H₃O⁺)──► CH₃CH₂CH₂–OH (1-Propanol)",
+        "desc": "Queda consolidado el 1-propanol (alcohol primario de 3 carbonos, alargado en +1 carbono respecto al haluro de etilo de partida).",
+        "legend": {
+          "breaking": "Síntesis de Grignard completada.",
+          "forming": "En VERDE sólido: grupo alcohol primario (–CH₂–OH) y nuevo enlace C–C.",
+          "movement": "Regla general: Metanal + R''MgX ──► Alcohol Primario (R''–CH₂–OH)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "1-Propanol (Alcohol 1°)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 495,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Et_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "grig_etanal_phmgbr": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal (CH₃–CHO) + Bromuro de Fenilmagnesio (C₆H₅–MgBr)",
+        "semiStep": "CH₃–CHO + C₆H₅–MgBr (en THF anhidro)",
+        "semiGlobal": "CH₃–CHO + C₆H₅MgBr ──(1. THF / 2. H₃O⁺)──► CH₃–CH(OH)–C₆H₅ (1-Feniletanol)",
+        "desc": "Se observan un aldehído distinto del metanal (etanal) y el bromuro de fenilmagnesio (reactivo de Grignard arílico).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y C₆H₅MgBr intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del carbono ipso del fenilo al carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal (Aldehído)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "Ph_nuc",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "MgBr",
+              "el": "MgBr",
+              "x": 555,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Ph–MgBr"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_nuc",
+              "to": "MgBr",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Formación del Enlace C–Ph e Hidrólisis Ácida",
+        "semiStep": "CH₃–CH(O⁻ ⁺MgBr)–C₆H₅ + H₃O⁺ ──► CH₃–CH(OH)–C₆H₅",
+        "semiGlobal": "CH₃–CHO + C₆H₅MgBr ──(1. THF / 2. H₃O⁺)──► CH₃–CH(OH)–C₆H₅ (1-Feniletanol)",
+        "desc": "Se consolida el enlace C–C entre el carbono carbonílico y el anillo fenílico, seguido de la protonación del alcóxido.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–Mg y enlace O–H del ácido.",
+          "forming": "En VERDE punteado: formación de los enlaces C1–Ph y O–H.",
+          "movement": "Se genera un centro quiral (mezcla racémica ±)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 510,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 635,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Hidrólisis H₃O⁺"
+            },
+            {
+              "id": "Ph_nuc",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Ph_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 490,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: (±)-1-Feniletanol (Alcohol Secundario)",
+        "semiStep": "CH₃–CH(OH)–C₆H₅ (Alcohol 2° racémico)",
+        "semiGlobal": "CH₃–CHO + C₆H₅MgBr ──(1. THF / 2. H₃O⁺)──► CH₃–CH(OH)–C₆H₅ (1-Feniletanol)",
+        "desc": "Queda consolidado el 1-feniletanol, un alcohol secundario bencílico.",
+        "legend": {
+          "breaking": "Adición de Grignard completada.",
+          "forming": "En VERDE sólido: grupo alcohol secundario (–CH(OH)–).",
+          "movement": "Regla general: Cualquier aldehído ≠ HCHO + R''MgX ──► Alcohol Secundario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "1-Feniletanol (Alcohol 2°)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 495,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_nuc",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Ph_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "grig_propanona_memgbr": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Yoduro de Metilmagnesio (CH₃–MgI)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–MgI (en Et₂O anhidro)",
+        "semiGlobal": "CH₃–CO–CH₃ + CH₃MgI ──(1. Et₂O / 2. H₃O⁺)──► (CH₃)₃C–OH (terc-Butanol)",
+        "desc": "Se observan la propanona (cetona) y el yoduro de metilmagnesio aproximándose al carbono carbonílico central C2.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona y CH₃MgI intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del grupo metilo (CH₃δ⁻) al carbono cetónico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona (Cetona)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "Me_nuc",
+              "el": "CH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "CH₃–MgI"
+            },
+            {
+              "id": "MgI",
+              "el": "MgI",
+              "x": 545,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_nuc",
+              "to": "MgI",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Adición C–CH₃ e Hidrólisis Ácida del terc-Butóxido",
+        "semiStep": "(CH₃)₃C–O⁻ ⁺MgI + H₃O⁺ ──► (CH₃)₃C–OH",
+        "semiGlobal": "CH₃–CO–CH₃ + CH₃MgI ──(1. Et₂O / 2. H₃O⁺)──► (CH₃)₃C–OH (terc-Butanol)",
+        "desc": "Se forma el tercer enlace C–CH₃ sobre el carbono C2 y la posterior hidrólisis protona el oxígeno alcóxido.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–Mg y enlace O–H del ácido acuoso.",
+          "forming": "En VERDE punteado: formación de los enlaces C2–CH₃ y O–H.",
+          "movement": "El carbono C2 pasa a ser un carbono carbinólico terciario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 510,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 635,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Hidrólisis H₃O⁺"
+            },
+            {
+              "id": "Me_nuc",
+              "el": "CH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 490,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Metil-2-propanol / terc-Butanol ((CH₃)₃C–OH — Alcohol Terciario)",
+        "semiStep": "(CH₃)₃C–OH (terc-Butanol, Alcohol 3°)",
+        "semiGlobal": "CH₃–CO–CH₃ + CH₃MgI ──(1. Et₂O / 2. H₃O⁺)──► (CH₃)₃C–OH (terc-Butanol)",
+        "desc": "Queda consolidado el 2-metil-2-propanol (alcohol terc-butílico), un alcohol terciario simétrico.",
+        "legend": {
+          "breaking": "Reacción de Grignard completada.",
+          "forming": "En VERDE sólido: carbono carbinólico terciario (R₃C–OH).",
+          "movement": "Regla general: Cetona + R''MgX ──► Alcohol Terciario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "terc-Butanol (Alcohol 3°)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 495,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_nuc",
+              "el": "CH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Me_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "grig_retrosintesis_butanona_etmgbr": [
+      {
+        "title": "Análisis Retrosintético: Desconexión de 3-Metil-3-pentanol → Butanona + EtMgBr",
+        "semiStep": "CH₃–CO–CH₂CH₃ + CH₃CH₂–MgBr (Desconexión C3–Et)",
+        "semiGlobal": "CH₃–CO–CH₂CH₃ + CH₃CH₂MgBr ──(1. Et₂O / 2. NH₄Cl)──► CH₃–C(OH)(CH₂CH₃)₂",
+        "desc": "Para sintetizar 3-metil-3-pentanol (un alcohol terciario con un grupo metilo y dos grupos etilo), la desconexión del enlace C–etilo conduce a la butanona + bromuro de etilmagnesio.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; sustrato cetónico y Grignard seleccionados por retrosíntesis.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del bromuro de etilmagnesio al carbonilo C2 de la butanona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Butanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Et_R",
+              "el": "CH₂CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Et–MgBr"
+            },
+            {
+              "id": "MgBr",
+              "el": "MgBr",
+              "x": 555,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Et_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Et_nuc",
+              "to": "MgBr",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Formación del Enlace C–Et e Hidrólisis con NH₄Cl Acuoso",
+        "semiStep": "CH₃–C(O⁻ ⁺MgBr)(CH₂CH₃)₂ + NH₄⁺ ──► CH₃–C(OH)(CH₂CH₃)₂ + NH₃",
+        "semiGlobal": "CH₃–CO–CH₂CH₃ + CH₃CH₂MgBr ──(1. Et₂O / 2. NH₄Cl)──► CH₃–C(OH)(CH₂CH₃)₂",
+        "desc": "El cloruro de amonio acuoso (NH₄Cl) protona suavemente el alcóxido terciario sin provocar deshidratación hacia alquenos.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura N–H del ion amonio.",
+          "forming": "En VERDE punteado: formación de los enlaces C3–Et y O–H.",
+          "movement": "Uso de NH₄Cl evita la deshidratación ácida de alcoholes terciarios sensibles."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 510,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH3_l",
+              "el": "NH₃",
+              "x": 635,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Tampón NH₄Cl"
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_R",
+              "el": "CH₂CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "NH3_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Et_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Et_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Metil-3-pentanol (Alcohol Terciario)",
+        "semiStep": "CH₃–C(OH)(CH₂CH₃)₂ (Alcohol 3°)",
+        "semiGlobal": "CH₃–CO–CH₂CH₃ + CH₃CH₂MgBr ──(1. Et₂O / 2. NH₄Cl)──► CH₃–C(OH)(CH₂CH₃)₂",
+        "desc": "Queda consolidado el 3-metil-3-pentanol (también sintetizable alternativamente desde 3-pentanona + CH₃MgBr).",
+        "legend": {
+          "breaking": "Síntesis retrosintética completada.",
+          "forming": "En VERDE sólido: alcohol terciario con dos grupos etilo y un metilo.",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "3-Metil-3-pentanol (Alcohol 3°)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 495,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_nuc",
+              "el": "CH₃CH₂",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_R",
+              "el": "CH₂CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Et_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Et_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
