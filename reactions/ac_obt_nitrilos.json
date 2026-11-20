@@ -1,0 +1,582 @@
+{
+  "category": "obtencion",
+  "title": "5) Hidrólisis Ácida o Básica de Nitrilos (R–C≡N) e Isonitrilos (R–N≡C) vía Amidas → R–COOH",
+  "natureBadge": "Hidrólisis de Cianuros Orgánicos • Nitrilo (R–C≡N) ──► Amida ──► R–COOH (+1C) | Isonitrilo (R–N≡C) ──► HCOOH + R–NH₂",
+  "deltaH": "ΔH° < 0 (Exotérmica en dos etapas consecutivas; permite sintetizar ácidos carboxílicos con +1 carbono desde haluros de alquilo)",
+  "description": "Obtención de ácidos carboxílicos mediante hidrólisis completa en dos etapas de nitrilos (cianuros de alquilo/arilo, R–C≡N) e isonitrilos (isocianuros, R–N≡C) en medio ácido (H₂SO₄ / HCl acuoso, Δ) o básico (NaOH acuoso, Δ seguido de H₃O⁺):\n1) Hidrólisis de Nitrilos (R–C≡N — Alargamiento de cadena en +1C): en la 1.ª hidratación, el nitrilo adiciona una molécula de agua formando una AMIDA PRIMARIA intermediaria (R–CONH₂); en la 2.ª hidratación, la amida se hidroliza hasta el ÁCIDO CARBOXÍLICO (R–COOH) más ion amonio (NH₄⁺ en medio ácido) o gas amoníaco (NH₃↑ en medio básico). Es la segunda etapa de la ruta clásica R–X + NaCN ──► R–C≡N ──(H₃O⁺, Δ)──► R–COOH.\n2) Hidrólisis de Isonitrilos (R–N≡C — Caso especial de cátedra): en la 1.ª hidratación sobre el carbono isociánico terminal se forma una N-alquilformamida (R–NH–CHO), que en la 2.ª hidratación produce siempre ÁCIDO METANOICO / FÓRMICO (H–COOH) más la amina primaria correspondiente (R–NH₂ / R–NH₃⁺).",
+  "meta": {
+    "grupoFuncional": "Ácidos Carboxílicos (R–COOH con +1C desde nitrilos) y Ácido Metanoico (HCOOH desde isonitrilos)",
+    "reaccionMecanismo": "Adición nucleofílica de H₂O al triple enlace C≡N / N≡C → Tautomería a Amida → Sustitución nucleofílica acílica",
+    "naturaleza": "Por etapas irreversible (Etapa 1: Nitrilo + H₂O → Amida primaria | Etapa 2: Amida + H₂O/H⁺ → Ácido Carboxílico + NH₄⁺).",
+    "rupturaIntermediarios": "Ruptura de los enlaces π y σ C≡N (o N≡C) y dos moléculas de H₂O; intermediarios ácido imídico y amida primaria; formación de –COOH y NH₄⁺.",
+    "detalleMecanismo": "R–C≡N + H₂O ──(H⁺)──► [R–CONH₂] ──(H₂O / H⁺, Δ)──► R–COOH + NH₄⁺",
+    "reactivosCondiciones": "Nitrilo (o Isonitrilo) + H₂O con H₂SO₄ o HCl concentrado a reflujo (Δ), o bien NaOH acuoso (Δ) seguido de acidificación con H₃O⁺.",
+    "rolReactivos": "• Sustrato nitrogenado: Nitrilo (R–C≡N, carbono +3) o Isonitrilo (R–N≡C).\n• Reactivo hidrolizante: 2 equivalentes de Agua (H₂O).\n• Catalizador ácido/básico: H₃O⁺ (protona el N y captura el amoníaco como NH₄⁺ haciendo irreversible la reacción) o OH⁻ (seguido de H₃O⁺).",
+    "reglasObs": "• Nota de cátedra (Diap. 841–842): 'El nitrilo en realidad no da directamente ácido; la 1.ª hidratación genera una amida y la 2.ª hidratación sobre la amida genera el ácido correspondiente'.\n• Diferencia crítica en examen: Nitrilo (CH₃CH₂–C≡N) + H₂O/H⁺ → Ácido propanoico (3C) + NH₄⁺; Isonitrilo (CH₃CH₂–N≡C) + H₂O/H⁺ → Ácido metanoico (HCOOH, 1C) + Etilamina (CH₃CH₂NH₃⁺)."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt5_butanonitrilo_butanoico",
+      "name": "Butanonitrilo + 2 H₂O / H⁺ (Δ) ──► [Butanamida] ──► Ácido Butanoico + NH₄⁺ [Hidrólisis de Nitrilo]",
+      "catalyst": "H₂O / H₂SO₄ o HCl (Reflujo Δ)"
+    },
+    {
+      "id": "ac_obt5_ruta_sn2_nitrilo",
+      "name": "Síntesis +1C: Cloroetano + NaCN ──► Propanonitrilo ──(H₃O⁺, Δ)──► Ácido Propanoico [Ruta Completa]",
+      "catalyst": "1) NaCN / DMSO  2) H₃O⁺ / Δ"
+    },
+    {
+      "id": "ac_obt5_benzonitrilo_basica",
+      "name": "Benzonitrilo + 1. NaOH ac. (Δ)  2. H₃O⁺ ──► Ácido Benzoico + NH₃↑ [Hidrólisis Básica]",
+      "catalyst": "1) NaOH / H₂O (Δ)  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt5_isonitrilo_metanoico",
+      "name": "Isocianuro de Etilo (CH₃CH₂–N≡C) + 2 H₂O / H⁺ ──► Ácido Metanoico (HCOOH) + Etilamonio [Isonitrilo]",
+      "catalyst": "H₂O / HCl (Δ — Caso Isonitrilo)"
+    }
+  ],
+  "catalysts": [
+    "H₂O / H₂SO₄ o HCl (Reflujo Δ)",
+    "1) NaCN / DMSO  2) H₃O⁺ / Δ",
+    "1) NaOH / H₂O (Δ)  2) H₃O⁺",
+    "H₂O / HCl (Δ — Caso Isonitrilo)"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt5_butanonitrilo_butanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Butanonitrilo (CH₃–CH₂–CH₂–C≡N) + H₂O / H⁺",
+        "semiStep": "CH₃–CH₂–CH₂–C≡N + 2 H₂O + H⁺",
+        "semiGlobal": "CH₃CH₂CH₂–C≡N + 2 H₂O + H⁺ ──(Δ)──► CH₃CH₂CH₂–COOH + NH₄⁺",
+        "desc": "Se observan el butanonitrilo con su grupo ciano triple enlace (–C≡N) y el agua en medio ácido fuerte.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; triple enlace C≡N intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del nitrógeno nitrílico y ataque nucleofílico de la 1.ª molécula de agua sobre C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "C Nitrilo (sp)"
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 525,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2O",
+              "el": "2 H₂O / H⁺ (Δ)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (1.ª Hidratación): Formación de la Amida Intermediaria (Butanamida)",
+        "semiStep": "CH₃–CH₂–CH₂–C≡N + H₂O ──(H⁺)──► CH₃–CH₂–CH₂–CO–NH₂ [Butanamida]",
+        "semiGlobal": "CH₃CH₂CH₂–C≡N + 2 H₂O + H⁺ ──(Δ)──► CH₃CH₂CH₂–COOH + NH₄⁺",
+        "desc": "La primera molécula de agua se adiciona al triple enlace formando un ácido imídico que tautomeriza inmediatamente a la butanamida.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces π del triple enlace C≡N.",
+          "forming": "En VERDE punteado: doble enlace C1=O y enlaces N–H de la amida.",
+          "movement": "La amida intermediaria continúa reaccionando con la 2.ª molécula de agua en caliente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "Intermediario Butanamida"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2O2",
+              "el": "+ H₂O / H⁺ (2.ª etapa)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Hidrólisis de la Amida y Salida de Ion Amonio (NH₄⁺)",
+        "semiStep": "CH₃–CH₂–CH₂–CO–NH₂ + H₂O + H⁺ ──(Δ)──► CH₃–CH₂–CH₂–COOH + NH₄⁺",
+        "semiGlobal": "CH₃CH₂CH₂–C≡N + 2 H₂O + H⁺ ──(Δ)──► CH₃CH₂CH₂–COOH + NH₄⁺",
+        "desc": "La segunda molécula de agua ataca al carbonilo de la amida y expulsa amoníaco, que se protona a ion amonio (NH₄⁺).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–NH₂.",
+          "forming": "En VERDE punteado: incorporación del hidroxilo carboxílico C1–OH.",
+          "movement": "La formación de NH₄⁺ hace totalmente irreversible el proceso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH4",
+              "el": "NH₄⁺",
+              "x": 555,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale Ion Amonio"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "NH4",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Butanoico (CH₃–CH₂–CH₂–COOH) + NH₄⁺",
+        "semiStep": "CH₃–CH₂–CH₂–COOH + NH₄⁺",
+        "semiGlobal": "CH₃CH₂CH₂–C≡N + 2 H₂O + H⁺ ──(Δ)──► CH₃CH₂CH₂–COOH + NH₄⁺",
+        "desc": "Queda consolidado el ácido butanoico (4 carbonos).",
+        "legend": {
+          "breaking": "Hidrólisis completa del nitrilo finalizada.",
+          "forming": "En VERDE sólido: ácido carboxílico en C1.",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Butanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH4",
+              "el": "+ NH₄⁺",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt5_ruta_sn2_nitrilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Ruta de Alargamiento +1C (Propanonitrilo → Ác. Propanoico)",
+        "semiStep": "CH₃–CH₂–Cl + NaCN ──(SN2)──► CH₃–CH₂–C≡N ──(H₃O⁺, Δ)──► CH₃–CH₂–COOH",
+        "semiGlobal": "CH₃CH₂–Cl ──(1. NaCN  2. H₃O⁺, Δ)──► CH₃CH₂–COOH + NH₄⁺ (+1 Carbono)",
+        "desc": "La sustitución SN2 de un haluro de alquilo primario con cianuro seguida de hidrólisis ácida permite alargar la cadena en un carbono adicional.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanonitrilo (3C) listo para hidrólisis.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Conversión del carbono nitrílico C1 en grupo carboxilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂ (2C)",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "CN",
+              "el": "C≡N (+1C)",
+              "x": 435,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "2 H₂O / H⁺ (Δ)",
+              "x": 635,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "CN",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Propanoico (3 Carbonos) + NH₄⁺",
+        "semiStep": "CH₃–CH₂–COOH + NH₄⁺",
+        "semiGlobal": "CH₃CH₂–Cl ──(1. NaCN  2. H₃O⁺, Δ)──► CH₃CH₂–COOH + NH₄⁺ (+1 Carbono)",
+        "desc": "Queda consolidado el ácido propanoico (3 carbonos a partir del cloroetano de 2 carbonos).",
+        "legend": {
+          "breaking": "Alargamiento +1C completado.",
+          "forming": "En VERDE sólido: grupo carboxilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "COOH (3C)",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Propanoico"
+            },
+            {
+              "id": "NH4",
+              "el": "+ NH₄⁺",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt5_benzonitrilo_basica": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzonitrilo + Hidróxido de Sodio Acuoso (Δ)",
+        "semiStep": "C₆H₅–C≡N + NaOH / H₂O (Δ)",
+        "semiGlobal": "C₆H₅–C≡N + NaOH + H₂O ──(Δ)──► C₆H₅–COO⁻Na⁺ + NH₃↑ ──(H₃O⁺)──► C₆H₅–COOH",
+        "desc": "En hidrólisis básica, el ion hidróxido ataca al carbono nitrílico liberando gas amoníaco (NH₃↑) y formando benzoato de sodio.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzonitrilo intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Hidrólisis alcalina seguida de protonación con H₃O⁺."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "CN",
+              "el": "C≡N",
+              "x": 425,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Base",
+              "el": "1) NaOH / Δ  2) H₃O⁺",
+              "x": 635,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "CN",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Benzoico + Gas Amoníaco (NH₃↑)",
+        "semiStep": "C₆H₅–COOH + NH₃↑",
+        "semiGlobal": "C₆H₅–C≡N + NaOH + H₂O ──(Δ)──► C₆H₅–COO⁻Na⁺ + NH₃↑ ──(H₃O⁺)──► C₆H₅–COOH",
+        "desc": "Queda consolidado el ácido benzoico tras acidificar la disolución.",
+        "legend": {
+          "breaking": "Hidrólisis básica completada.",
+          "forming": "En VERDE sólido: ácido benzoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "COOH",
+              "x": 425,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Benzoico"
+            },
+            {
+              "id": "NH3",
+              "el": "+ NH₃↑",
+              "x": 615,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt5_isonitrilo_metanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Isocianuro de Etilo (Isonitrilo, CH₃CH₂–N≡C) + H₂O / H⁺",
+        "semiStep": "CH₃–CH₂–N≡C + 2 H₂O + H⁺ (Δ)",
+        "semiGlobal": "CH₃CH₂–N≡C + 2 H₂O + H⁺ ──(Δ)──► H–COOH (Ác. Metanoico) + CH₃CH₂–NH₃⁺",
+        "desc": "En los isonitrilos, el carbono unido al nitrógeno es terminal (–N≡C), por lo que tras formar N-etilformamida (CH₃CH₂–NH–CHO) se hidroliza siempre a ácido metanoico (1C) + amina.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupo isociano –N≡C intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Doble hidratación en el carbono isociánico terminal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "NC",
+              "el": "N≡C",
+              "x": 415,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Isonitrilo (Carbono terminal)"
+            },
+            {
+              "id": "H2O",
+              "el": "2 H₂O / H⁺ (Δ)",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "NC",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Metanoico / Fórmico (H–COOH) + Ion Etilamonio",
+        "semiStep": "H–COOH + CH₃–CH₂–NH₃⁺",
+        "semiGlobal": "CH₃CH₂–N≡C + 2 H₂O + H⁺ ──(Δ)──► H–COOH (Ác. Metanoico) + CH₃CH₂–NH₃⁺",
+        "desc": "Queda consolidado el ácido metanoico (fórmico) junto con la sal de etilamonio. Método 8 explícito de las diapositivas de cátedra.",
+        "legend": {
+          "breaking": "Ruptura C–N de la formamida intermediaria completada.",
+          "forming": "En VERDE sólido: ácido metanoico (H–COOH).",
+          "movement": "Diferencia clave frente a los nitrilos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–CH₂–NH₃⁺",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Plus",
+              "el": "+",
+              "x": 415,
+              "y": 210
+            },
+            {
+              "id": "HCOOH",
+              "el": "H–COOH",
+              "x": 585,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Metanoico (1C)"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
