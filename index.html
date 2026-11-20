@@ -2479,6 +2479,84 @@
                 }
             }
 
+            // Caso general con ramificaciones entre paréntesis: ej. CH₃—CH(CH₃)—CH₂—CH₃, CH₃—C(CH₃)₂—CH₃, CH₃—CH(Cl)—CH₂—CH₃
+            if (/[()]/.test(f) && /[-–—=≡]/.test(f)) {
+                const topTokens = [];
+                let buf = '';
+                let depth = 0;
+                let pendingOrd = 1;
+                for (let i = 0; i < f.length; i++) {
+                    const ch = f[i];
+                    if (ch === '(') depth++;
+                    else if (ch === ')') depth = Math.max(0, depth - 1);
+                    if (depth === 0 && (ch === '-' || ch === '–' || ch === '—' || ch === '=' || ch === '≡')) {
+                        if (buf) topTokens.push({ raw: buf, order: pendingOrd });
+                        pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
+                        buf = '';
+                    } else {
+                        buf += ch;
+                    }
+                }
+                if (buf) topTokens.push({ raw: buf, order: pendingOrd });
+
+                if (topTokens.length >= 2) {
+                    const stepSeg = 88;
+                    const totalSpan = (topTokens.length - 1) * stepSeg;
+                    const startX = centerX - Math.round(totalSpan / 2);
+                    const midIdx = Math.floor(topTokens.length / 2);
+                    topTokens.forEach((tok, idx) => {
+                        const sx = startX + idx * stepSeg;
+                        const sId = `${prefixId}_B${idx}`;
+                        const mSub = tok.raw.match(/^([A-Za-z₀-₉]+)\(([^()]+)\)(2)?$/);
+                        if (mSub) {
+                            const mainEl = mSub[1];
+                            const subEl = mSub[2];
+                            const isDoubleSub = Boolean(mSub[3]);
+                            const isFuncNode = /CO|CHO|OH|NH|Cl|Br|I/.test(mainEl) || /CO|CHO|OH|NH|Cl|Br|I/.test(subEl);
+                            atoms.push({
+                                id: sId,
+                                el: mainEl,
+                                x: sx,
+                                y: centerY,
+                                highlight: isFuncNode ? accentColor : undefined,
+                                border: isFuncNode ? accentColor : undefined,
+                                label: (idx === midIdx) ? lbl : undefined
+                            });
+                            const subTopId = `${sId}_T`;
+                            atoms.push({
+                                id: subTopId,
+                                el: subEl,
+                                x: sx,
+                                y: centerY - 82,
+                                highlight: /OH|NH|Cl|Br|I|O/.test(subEl) ? accentColor : undefined,
+                                border: /OH|NH|Cl|Br|I|O/.test(subEl) ? accentColor : undefined
+                            });
+                            bonds.push({ from: sId, to: subTopId, order: subEl === 'O' ? 2 : 1, state: 'normal' });
+                            if (isDoubleSub) {
+                                const subBotId = `${sId}_B`;
+                                atoms.push({ id: subBotId, el: subEl, x: sx, y: centerY + 82 });
+                                bonds.push({ from: sId, to: subBotId, order: 1, state: 'normal' });
+                            }
+                        } else {
+                            const isFuncNode = (idx === topTokens.length - 1 || /CO|CHO|OH|NH/.test(tok.raw));
+                            atoms.push({
+                                id: sId,
+                                el: tok.raw,
+                                x: sx,
+                                y: centerY,
+                                highlight: isFuncNode ? accentColor : undefined,
+                                border: isFuncNode ? accentColor : undefined,
+                                label: (idx === midIdx) ? lbl : undefined
+                            });
+                        }
+                        if (idx > 0) {
+                            bonds.push({ from: `${prefixId}_B${idx - 1}`, to: sId, order: tok.order, state: 'normal' });
+                        }
+                    });
+                    return { atoms, bonds, spanHalfW: Math.max(70, Math.round(totalSpan / 2) + 36) };
+                }
+            }
+
             // Caso lineal / estándar sin ramificaciones: cápsula única centrada
             atoms.push({
                 id: `${prefixId}_0`,
@@ -2992,7 +3070,7 @@
             }
             const rawText = String(a.el || '');
             const compactLen = rawText.replace(/[₀-₉⁰-⁹⁺⁻°•]/g, '').length;
-            const isCompactAtom = rawText.length <= 3 && compactLen <= 2;
+            const isCompactAtom = (rawText.length <= 3 && compactLen <= 2) || /^(CHO|NH₂|NO₂|CN|SH|CH₃|CH₂|CH|CO|OH)$/i.test(rawText);
             const baseKey = rawText === 'CH₃' ? 'CH3' : (rawText.replace(/[^A-Za-z]/g, '') || 'C');
             const cfg = ATOM_COLORS[baseKey] || ATOM_COLORS['C'] || { bg: '#1e293b', border: '#94a3b8', text: '#f8fafc', r: 19 };
             if (isCompactAtom) {
