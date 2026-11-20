@@ -1,0 +1,1307 @@
+{
+  "category": "reacciones",
+  "title": "9) Condensación con Aminas Primarias (+ R–NH₂ ──► Iminas Secundarias / Bases de Schiff + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + R–NH₂ (pH 4–5) ⇄ Imina Sustituida (Base de Schiff) + H₂O",
+  "deltaH": "ΔH° ≈ −15 a −30 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; impulsada por eliminación de H₂O)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y una AMINA PRIMARIA (R'–NH₂ o Ar–NH₂) en medio ligeramente ácido (pH ≈ 4.5) para formar una IMINA SUSTITUIDA (R–CH=N–R' o R₂C=N–R', conocida como Base de Schiff) con eliminación de agua:\n1) Etapa de adición nucleofílica: el par libre del nitrógeno de la amina primaria (:NH₂–R') ataca al carbono carbonílico electrofílico (δ+) formando una CARBINOLAMINA N-sustituida (R₂C(OH)(NH–R')).\n2) Etapa de eliminación (deshidratación ácida): la protonación del grupo –OH lo transforma en buen grupo saliente (–OH₂⁺), expulsando H₂O asistido por el par libre del nitrógeno para generar un ion iminio [R₂C=NH⁺–R'] que tras perder un protón consolida la base de Schiff.\n3) Estabilidad y relevancia biológica: las iminas derivadas de aminas primarias (especialmente anilinas o arilaldehídos) son mucho más estables que las iminas de amoníaco debido al efecto electrónico y estérico del sustituyente R' en el nitrógeno; son esenciales en bioquímica (ej. unión del piridoxal fosfato PLP con lisina y ciclo visual de la rodopsina).",
+  "meta": {
+    "grupoFuncional": "Iminas N-Sustituidas o Bases de Schiff (R–CH=N–R' o R₂C=N–R')",
+    "reaccionMecanismo": "Adición nucleofílica de amina primaria (carbinolamina) seguida de eliminación de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque R'–NH₂ → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion iminio] → desprotonación [Base de Schiff]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina N-sustituida e ion iminio [R₂C=NH⁺–R']; formación de doble enlace C=N–R' y H₂O.",
+    "detalleMecanismo": "R–CHO + R'–NH₂ ⇄ [R–CH(OH)–NH–R'] ──(H⁺, −H₂O)──► R–CH=N–R' + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + Amina Primaria (alifática R'–NH₂ o aromática Ar–NH₂) + tampón ácido suave (pH 4–5) con agente deshidratante.",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Amina primaria (CH₃NH₂, CH₃CH₂NH₂, C₆H₅NH₂).\n• Catalizador ácido suave (pH 4–5): facilita la deshidratación de la carbinolamina sin protonar completamente la amina nucleofílica.",
+    "reglasObs": "• Solo las AMINAS PRIMARIAS (R'–NH₂) forman iminas (Bases de Schiff); las aminas secundarias (R'₂NH) forman enaminas.\n• Máxima velocidad a pH 4.5 (equilibrio óptimo entre amina libre nucleofílica y carbinolamina protonada).\n• Las Bases de Schiff aromáticas (ej. benzaldehído + anilina → N-bencilidenanilina) son sólidos cristalinos muy estables por conjugación extendida."
+  },
+  "substrates": [
+    {
+      "id": "imi2_etanal_metilamina",
+      "name": "Etanal + Metilamina (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► N-Etilidenmetanamina + H₂O [Aldehído + Amina 1°]",
+      "catalyst": "CH₃NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi2_benzaldehido_anilina",
+      "name": "Benzaldehído + Anilina (pH 4.5) ⇄ N-Bencilidenanilina + H₂O [Base de Schiff Conjugada]",
+      "catalyst": "C₆H₅NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi2_propanona_etilamina",
+      "name": "Propanona + Etilamina (pH 4.5) ⇄ N-(Propan-2-iliden)etanamina + H₂O [Cetona + Amina 1°]",
+      "catalyst": "CH₃CH₂NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "imi2_ciclohexanona_anilina",
+      "name": "Ciclohexanona + Anilina (pH 4.5) ⇄ N-Ciclohexilidenanilina + H₂O [Cetona Cíclica + Amina Aromática]",
+      "catalyst": "C₆H₅NH₂ / H⁺ (pH 4–5)"
+    }
+  ],
+  "catalysts": [
+    "CH₃NH₂ / H⁺ (pH 4–5)",
+    "C₆H₅NH₂ / H⁺ (pH 4–5)",
+    "CH₃CH₂NH₂ / H⁺ (pH 4–5)"
+  ],
+  "stepsBySubstrate": {
+    "imi2_etanal_metilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Metilamina (CH₃–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CHO + CH₃–NH₂ (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + CH₃NH₂ ⇄ [CH₃–CH(OH)–NHCH₃] ──(−H₂O)──► CH₃–CH=N–CH₃ + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) con su enlace C=O polarizado y la metilamina (CH₃–NH₂) con el par electrónico libre del nitrógeno a pH 4.5.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y metilamina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno de la metilamina al carbono carbonílico electrofílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Metilamina (CH₃NH₂)"
+            },
+            {
+              "id": "R_am",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_am",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R_am",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación de la Carbinolamina N-Sustituida",
+        "semiStep": "CH₃–CHO + CH₃NH₂ ⇄ CH₃–CH(OH)–NH–CH₃ [Carbinolamina]",
+        "semiGlobal": "CH₃–CHO + CH₃NH₂ ⇄ [CH₃–CH(OH)–NHCH₃] ──(−H₂O)──► CH₃–CH=N–CH₃ + H₂O",
+        "desc": "La metilamina forma un enlace C1–N mientras se abre el enlace π C=O y se transfiere un protón hacia el oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C1–NHCH₃ de la carbinolamina.",
+          "movement": "El carbono C1 cambia temporalmente a hibridación sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R_am",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_am",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "R_am",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_am",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque CH₃NH₂"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de C=N–CH₃)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NHCH₃ ──► [CH₃–CH=NH⁺CH₃] + H₂O ──► CH₃–CH=N–CH₃ + H₃O⁺",
+        "semiGlobal": "CH₃–CHO + CH₃NH₂ ⇄ [CH₃–CH(OH)–NHCH₃] ──(−H₂O)──► CH₃–CH=N–CH₃ + H₂O",
+        "desc": "La protonación del –OH expulsa H₂O mientras el par libre del nitrógeno forma el doble enlace C=N y pierde el segundo protón.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (salida de H₂O) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–CH₃.",
+          "movement": "El carbono C1 recupera hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R_am",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "R_am",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: N-Etilidenmetanamina (Base de Schiff) + H₂O",
+        "semiStep": "CH₃–CH=N–CH₃ + H₂O (Imina Secundaria / Sustituida)",
+        "semiGlobal": "CH₃–CHO + CH₃NH₂ ⇄ [CH₃–CH(OH)–NHCH₃] ──(−H₂O)──► CH₃–CH=N–CH₃ + H₂O",
+        "desc": "Queda consolidada la N-etilidenmetanamina (imina sustituida o base de Schiff) junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace imino N-sustituido (–CH=N–CH₃).",
+          "movement": "Producto base de Schiff obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Base de Schiff"
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R_am",
+              "el": "CH₃",
+              "x": 525,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_am",
+              "to": "R_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi2_benzaldehido_anilina": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Anilina (C₆H₅–NH₂, pH 4–5)",
+        "semiStep": "C₆H₅–CHO + C₆H₅–NH₂ (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NH₂ ⇄ C₆H₅–CH=N–C₆H₅ + H₂O (N-Bencilidenanilina)",
+        "desc": "Se observan el benzaldehído y la anilina (amina aromática primaria). Ambos anillos aromáticos se conjugarán a través del puente –CH=N–.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y anilina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno de la anilina al carbono carbonílico del benzaldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Anilina (PhNH₂)"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 325
+            },
+            {
+              "id": "H_am",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Diaromática y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NH–C₆H₅ ──(H⁺, −H₂O)──► C₆H₅–CH=N–C₆H₅",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NH₂ ⇄ C₆H₅–CH=N–C₆H₅ + H₂O (N-Bencilidenanilina)",
+        "desc": "La carbinolamina pierde H₂O en catálisis ácida suave generando el sistema π conjugado extendido Ph–CH=N–Ph.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N conjugado.",
+          "movement": "La alta conjugación desplaza fuertemente el equilibrio hacia el producto."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 325
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: N-Bencilidenanilina (Base de Schiff Clásica) + H₂O",
+        "semiStep": "C₆H₅–CH=N–C₆H₅ + H₂O (Sólido cristalino estable)",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NH₂ ⇄ C₆H₅–CH=N–C₆H₅ + H₂O (N-Bencilidenanilina)",
+        "desc": "Queda consolidada la N-bencilidenanilina, ejemplo prototípico de Base de Schiff cristalina y estable.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: puente imino conjugado –CH=N– entre dos anillos aromáticos.",
+          "movement": "Producto Base de Schiff obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Bencilidenanilina"
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 555,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi2_propanona_etilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Etilamina (CH₃CH₂–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃CH₂–NH₂ (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + EtNH₂ ⇄ (CH₃)₂C=N–CH₂CH₃ + H₂O",
+        "desc": "Se observan la propanona y la etilamina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cetona y amina primaria intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de la etilamina sobre el carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Etilamina (EtNH₂)"
+            },
+            {
+              "id": "Et_am",
+              "el": "CH₂CH₃",
+              "x": 255,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_am",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Et_am",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Eliminación de H₂O",
+        "semiStep": "(CH₃)₂C(OH)–NH–Et ──(H⁺, −H₂O)──► (CH₃)₂C=N–Et",
+        "semiGlobal": "CH₃–CO–CH₃ + EtNH₂ ⇄ (CH₃)₂C=N–CH₂CH₃ + H₂O",
+        "desc": "Tras formarse la carbinolamina, la protonación del –OH expulsa H₂O y consolida el doble enlace C=N–Et.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y pérdida de H⁺.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=N–CH₂CH₃.",
+          "movement": "Retorno del carbono C2 a hibridación sp²."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_am",
+              "el": "CH₂CH₃",
+              "x": 255,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Et_am",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: N-(Propan-2-iliden)etanamina + H₂O",
+        "semiStep": "(CH₃)₂C=N–CH₂CH₃ + H₂O (Cetimina N-Sustituida)",
+        "semiGlobal": "CH₃–CO–CH₃ + EtNH₂ ⇄ (CH₃)₂C=N–CH₂CH₃ + H₂O",
+        "desc": "Queda consolidada la cetimina N-sustituida junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo cetimino N-etilado.",
+          "movement": "Intermediario ideal para obtener etilisopropilamina por reducción con NaBH₃CN."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetimina Sustituida"
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_am",
+              "el": "CH₂CH₃",
+              "x": 545,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_am",
+              "to": "Et_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "imi2_ciclohexanona_anilina": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Anilina (C₆H₅–NH₂, pH 4–5)",
+        "semiStep": "Ciclohexanona + C₆H₅–NH₂ (pH 4.5)",
+        "semiGlobal": "Ciclohexanona + C₆H₅NH₂ ⇄ N-Ciclohexilidenanilina + H₂O",
+        "desc": "Se observan la ciclohexanona y la anilina en medio ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona y anilina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de la anilina al carbono C1 del anillo ciclohexánico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ciclohexanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "N_am",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Anilina (PhNH₂)"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 325
+            },
+            {
+              "id": "H_am",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Deshidratación Ácida",
+        "semiStep": "1-(Fenilamino)ciclohexanol ──(H⁺, −H₂O)──► N-Ciclohexilidenanilina",
+        "semiGlobal": "Ciclohexanona + C₆H₅NH₂ ⇄ N-Ciclohexilidenanilina + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace exocíclico C1=N conjugado con el grupo fenilo.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–Ph.",
+          "movement": "Estabilización por conjugación con el anillo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 325
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_am",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: N-Ciclohexilidenanilina + H₂O",
+        "semiStep": "N-Ciclohexilidenanilina + H₂O (Base de Schiff)",
+        "semiGlobal": "Ciclohexanona + C₆H₅NH₂ ⇄ N-Ciclohexilidenanilina + H₂O",
+        "desc": "Queda consolidada la N-ciclohexilidenanilina junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace doble exocíclico C=N–Ph.",
+          "movement": "Producto Base de Schiff cíclica obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Ciclohexilidenanilina"
+            },
+            {
+              "id": "N_am",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_R",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 555,
+              "y": 95
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_am",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_R",
+              "to": "N_am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
