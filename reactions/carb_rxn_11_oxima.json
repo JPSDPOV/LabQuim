@@ -1,0 +1,1305 @@
+{
+  "category": "reacciones",
+  "title": "11) Condensación con Hidroxilamina (+ H₂N–OH ──► Oximas + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + H₂N–OH (pH 4–5) ⇄ Oxima (R₂C=N–OH) + H₂O",
+  "deltaH": "ΔH° ≈ −25 a −40 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; alta estabilidad termodinámica por efecto alfa)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y la HIDROXILAMINA (H₂N–OH) en medio ligeramente ácido (pH ≈ 4.5) para formar una OXIMA (aldoxima R–CH=N–OH o cetoxima R₂C=N–OH) con eliminación de agua:\n1) Etapa de adición nucleofílica: el par libre del nitrógeno de la hidroxilamina (:NH₂–OH) ataca al carbono carbonílico electrofílico (δ+) formando una carbinolamina hidroxilamínica (R₂C(OH)(NH–OH)). El oxígeno adyacente potencia la nucleofilia del nitrógeno (efecto alfa) a la vez que disminuye su basicidad (pKa ≈ 6.0).\n2) Etapa de eliminación (deshidratación ácida): la protonación del grupo –OH unido al carbono lo transforma en buen grupo saliente (–OH₂⁺), expulsando H₂O asistido por el par libre del nitrógeno para generar un ion oximonio protonado [R₂C=NH⁺–OH] que tras perder un protón consolida la oxima.\n3) Importancia sintética e industrial: las oximas son sólidos cristalinos útiles para caracterizar aldehídos y cetonas, pueden reducirse a aminas primarias (R₂CH–NH₂) y las cetoximas sufren el REORDENAMIENTO DE BECKMANN en medio ácido para producir amidas o lactamas (ej. oxima de ciclohexanona → ε-caprolactama, monómero del Nylon-6).",
+  "meta": {
+    "grupoFuncional": "Oximas: Aldoximas (R–CH=N–OH) y Cetoximas (R₂C=N–OH)",
+    "reaccionMecanismo": "Adición nucleofílica de hidroxilamina (carbinolamina) seguida de eliminación de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque H₂N–OH → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion oximonio] → desprotonación [oxima]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina hidroxilamínica e ion oximonio [R₂C=NH⁺–OH]; formación de doble enlace C=N–OH y H₂O.",
+    "detalleMecanismo": "R–CHO + H₂N–OH ⇄ [R–CH(OH)–NH–OH] ──(H⁺, −H₂O)──► R–CH=N–OH + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + Clorhidrato de hidroxilamina (NH₂OH·HCl) tamponado con acetato de sodio (NaOAc) o piridina a pH 4–5.",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Hidroxilamina (:NH₂–OH, liberada in situ desde NH₂OH·HCl + base suave).\n• Tampón ácido suave (pH 4–5): cataliza la deshidratación de la carbinolamina manteniendo disponible la hidroxilamina libre.",
+    "reglasObs": "• Estereoisomería E/Z (sin/anti): cuando los dos sustituyentes del carbono imínico son distintos (R ≠ R'), las oximas presentan isomería geométrica (E/Z) separable.\n• Reordenamiento de Beckmann: Cetoxima + H₂SO₄ concentrado ──► Amida N-sustituida (ciclohexanona oxima → ε-caprolactama).\n• Deshidratación de aldoximas (R–CH=N–OH + Ac₂O, Δ): convierte aldoximas en nitrilos (R–C≡N)."
+  },
+  "substrates": [
+    {
+      "id": "oxim_etanal_nh2oh",
+      "name": "Etanal + Hidroxilamina (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► Etanal oxima (CH₃–CH=N–OH) + H₂O [Aldoxima]",
+      "catalyst": "NH₂OH·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "oxim_propanona_nh2oh",
+      "name": "Propanona + Hidroxilamina (pH 4.5) ⇄ Acetona oxima ((CH₃)₂C=N–OH) + H₂O [Cetoxima Alifática]",
+      "catalyst": "NH₂OH·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "oxim_benzaldehido_nh2oh",
+      "name": "Benzaldehído + Hidroxilamina (pH 4.5) ⇄ Benzaldoxima (C₆H₅–CH=N–OH) + H₂O [Aldoxima Conjugada]",
+      "catalyst": "NH₂OH·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "oxim_ciclohexanona_nh2oh",
+      "name": "Ciclohexanona + Hidroxilamina (pH 4.5) ⇄ Ciclohexanona oxima + H₂O [Precursor Nylon-6 / Beckmann]",
+      "catalyst": "NH₂OH·HCl / NaOAc (pH 4–5)"
+    }
+  ],
+  "catalysts": [
+    "NH₂OH·HCl / NaOAc (pH 4–5)"
+  ],
+  "stepsBySubstrate": {
+    "oxim_etanal_nh2oh": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Hidroxilamina (H₂N–OH, pH 4–5)",
+        "semiStep": "CH₃–CHO + H₂N–OH (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + H₂N–OH ⇄ [CH₃–CH(OH)–NH–OH] ──(−H₂O)──► CH₃–CH=N–OH + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) con su enlace C=O polarizado y la hidroxilamina (H₂N–OH), cuyo nitrógeno actúa como centro nucleofílico potenciado por el efecto alfa del oxígeno vecino.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal e hidroxilamina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del par solitario del nitrógeno de H₂N–OH al carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidroxilamina (H₂N–OH)"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_ox",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_ox",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación de la Carbinolamina Hidroxilamínica",
+        "semiStep": "CH₃–CHO + H₂N–OH ⇄ CH₃–CH(OH)–NH–OH [Carbinolamina]",
+        "semiGlobal": "CH₃–CHO + H₂N–OH ⇄ [CH₃–CH(OH)–NH–OH] ──(−H₂O)──► CH₃–CH=N–OH + H₂O",
+        "desc": "El nitrógeno de la hidroxilamina forma un enlace C1–N mientras se abre el enlace π C=O y se transfiere un protón al oxígeno carbonílico O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del enlace C1–NHOH de la carbinolamina.",
+          "movement": "El carbono C1 cambia temporalmente a hibridación sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ox",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_ox",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque H₂N–OH"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de C=N–OH)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NHOH ──► [CH₃–CH=NH⁺OH] + H₂O ──► CH₃–CH=N–OH + H₃O⁺",
+        "semiGlobal": "CH₃–CHO + H₂N–OH ⇄ [CH₃–CH(OH)–NH–OH] ──(−H₂O)──► CH₃–CH=N–OH + H₂O",
+        "desc": "La protonación selectiva del grupo –OH unido al carbono expulsa H₂O mientras el par libre del nitrógeno forma el doble enlace C=N y pierde el protón restante.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (salida de H₂O) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–OH.",
+          "movement": "El carbono C1 recupera hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal oxima / Acetaldoxima (CH₃–CH=N–OH) + H₂O",
+        "semiStep": "CH₃–CH=N–OH + H₂O (Aldoxima)",
+        "semiGlobal": "CH₃–CHO + H₂N–OH ⇄ [CH₃–CH(OH)–NH–OH] ──(−H₂O)──► CH₃–CH=N–OH + H₂O",
+        "desc": "Queda consolidada la etanal oxima (aldoxima) junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo oxima (–CH=N–OH).",
+          "movement": "Mayor estabilidad que las iminas simples debido a la deslocalización del par libre del oxígeno sobre el enlace C=N."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal Oxima"
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_ox",
+              "to": "OH_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "oxim_propanona_nh2oh": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Hidroxilamina (H₂N–OH, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + H₂N–OH (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–OH ⇄ (CH₃)₂C=N–OH + H₂O",
+        "desc": "Se observan la propanona y la hidroxilamina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona e hidroxilamina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno de H₂N–OH sobre el carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidroxilamina (H₂N–OH)"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_ox",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_ox",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Eliminación de H₂O",
+        "semiStep": "(CH₃)₂C(OH)–NHOH ──(H⁺, −H₂O)──► (CH₃)₂C=N–OH",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–OH ⇄ (CH₃)₂C=N–OH + H₂O",
+        "desc": "Tras formarse la carbinolamina, la deshidratación ácida expulsa H₂O y genera el doble enlace C2=N–OH.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=N–OH.",
+          "movement": "Retorno del carbono C2 a hibridación sp²."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Acetona oxima / Propan-2-ona oxima ((CH₃)₂C=N–OH) + H₂O",
+        "semiStep": "(CH₃)₂C=N–OH + H₂O (Cetoxima cristalina)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–OH ⇄ (CH₃)₂C=N–OH + H₂O",
+        "desc": "Queda consolidada la acetona oxima (sólido cristalino blanco usado para identificar la propanona por punto de fusión).",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo cetoxima ((CH₃)₂C=N–OH).",
+          "movement": "Producto cetoxima obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Acetona Oxima"
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_ox",
+              "to": "OH_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "oxim_benzaldehido_nh2oh": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Hidroxilamina (H₂N–OH, pH 4–5)",
+        "semiStep": "C₆H₅–CHO + H₂N–OH (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–OH ⇄ C₆H₅–CH=N–OH + H₂O",
+        "desc": "Se observan el benzaldehído y la hidroxilamina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído e hidroxilamina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de H₂N–OH sobre el grupo formilo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidroxilamina (H₂N–OH)"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_ox",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_ox",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Bencílica y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NHOH ──(H⁺, −H₂O)──► C₆H₅–CH=N–OH",
+        "semiGlobal": "C₆H₅–CHO + H₂N–OH ⇄ C₆H₅–CH=N–OH + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace C=N–OH conjugado con el anillo bencénico.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N–OH conjugado.",
+          "movement": "Conjugación extendida Ph–CH=N–OH."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzaldoxima (C₆H₅–CH=N–OH) + H₂O",
+        "semiStep": "C₆H₅–CH=N–OH + H₂O (Isómero E predominante)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–OH ⇄ C₆H₅–CH=N–OH + H₂O",
+        "desc": "Queda consolidada la benzaldoxima (predominantemente en configuración E por menor impedimento estérico entre Ph y OH).",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo aldoxima conjugado al anillo aromático.",
+          "movement": "Producto benzaldoxima obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldoxima"
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_ox",
+              "to": "OH_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "oxim_ciclohexanona_nh2oh": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Hidroxilamina (H₂N–OH, pH 4–5)",
+        "semiStep": "Ciclohexanona + H₂N–OH (pH 4.5)",
+        "semiGlobal": "Ciclohexanona + H₂N–OH ⇄ Ciclohexanona oxima + H₂O",
+        "desc": "Se observan la ciclohexanona y la hidroxilamina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona e hidroxilamina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de H₂N–OH al carbono carbonílico C1 del anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ciclohexanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "N_ox",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidroxilamina (H₂N–OH)"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_ox",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_ox",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Cíclica y Eliminación de H₂O",
+        "semiStep": "1-(Hidroxiamino)ciclohexanol ──(H⁺, −H₂O)──► Ciclohexanona oxima",
+        "semiGlobal": "Ciclohexanona + H₂N–OH ⇄ Ciclohexanona oxima + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace exocíclico C1=N–OH.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–OH.",
+          "movement": "Restauración de la geometría sp² en C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "OH_ox",
+              "to": "N_ox",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_ox",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ciclohexanona oxima + H₂O (Precursor Industrial del Nylon-6)",
+        "semiStep": "Ciclohexanona oxima + H₂O",
+        "semiGlobal": "Ciclohexanona + H₂N–OH ⇄ Ciclohexanona oxima + H₂O",
+        "desc": "Queda consolidada la ciclohexanona oxima; mediante transposición de Beckmann con H₂SO₄ se convierte en ε-caprolactama para fabricar Nylon-6.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace doble C=N–OH sobre el anillo ciclohexánico.",
+          "movement": "Producto oxima cíclica obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ciclohexanona Oxima"
+            },
+            {
+              "id": "N_ox",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ox",
+              "el": "OH",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_ox",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_ox",
+              "to": "OH_ox",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
