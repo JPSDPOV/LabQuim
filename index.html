@@ -2391,21 +2391,49 @@
                 return { atoms, bonds, spanHalfW: 155 };
             }
 
-            // Caso anillo bencénico C₆H₅—... en fórmulas semidesarrolladas (ej. Fenóxido de sodio, Anisol)
+            // Caso anillo bencénico C₆H₅—... en fórmulas semidesarrolladas (ej. Etinilbenceno, Acetofenona, Fenóxido de sodio, Anisol) -> nodos separados
             const mPhLeft = norm.match(/^C6H5-(.+)$/);
             if (mPhLeft) {
-                const rightRest = mPhLeft[1]
+                const rightRaw = mPhLeft[1]
                     .replace(/CH3/g, 'CH₃')
-                    .replace(/CH2/g, 'CH₂')
-                    .replace(/-/g, '—');
-                atoms.push(
-                    { id: `${prefixId}_Ph`, el: 'Ph', ring: 'phenyl', x: centerX - 65, y: centerY, highlight: accentColor, label: lbl },
-                    { id: `${prefixId}_R`, el: rightRest, x: centerX + 55, y: centerY, highlight: accentColor, border: accentColor }
-                );
-                bonds.push(
-                    { from: `${prefixId}_Ph`, to: `${prefixId}_R`, order: 1, state: 'normal' }
-                );
-                return { atoms, bonds, spanHalfW: 135 };
+                    .replace(/CH2/g, 'CH₂');
+                const segTokens = [];
+                let buf = '';
+                let pendingOrd = 1;
+                for (let i = 0; i < rightRaw.length; i++) {
+                    const ch = rightRaw[i];
+                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                        if (buf) segTokens.push({ el: buf, order: pendingOrd });
+                        pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
+                        buf = '';
+                    } else {
+                        buf += ch;
+                    }
+                }
+                if (buf) segTokens.push({ el: buf, order: pendingOrd });
+
+                const stepSeg = 84;
+                const totalSpan = segTokens.length * stepSeg;
+                const phX = centerX - Math.round(totalSpan / 2) - 18;
+                atoms.push({ id: `${prefixId}_Ph`, el: 'Ph', ring: 'phenyl', x: phX, y: centerY, highlight: accentColor, label: lbl });
+
+                let prevNodeId = `${prefixId}_Ph`;
+                segTokens.forEach((seg, sIdx) => {
+                    const sx = phX + 24 + (sIdx + 1) * stepSeg;
+                    const sId = `${prefixId}_R${sIdx}`;
+                    const isLast = (sIdx === segTokens.length - 1 || /CO|CHO|OH|NH/.test(seg.el));
+                    atoms.push({
+                        id: sId,
+                        el: seg.el,
+                        x: sx,
+                        y: centerY,
+                        highlight: isLast ? accentColor : undefined,
+                        border: isLast ? accentColor : undefined
+                    });
+                    bonds.push({ from: prevNodeId, to: sId, order: seg.order, state: 'normal' });
+                    prevNodeId = sId;
+                });
+                return { atoms, bonds, spanHalfW: Math.max(115, Math.round(totalSpan / 2) + 52) };
             }
 
             // Caso lineal con múltiples grupos unidos por enlaces (ej. CH₃—CH₂—C≡CH, CH₃—CH₂—CO—CH₃) -> nodos separados
@@ -2493,15 +2521,27 @@
                 bonds.push(...built.bonds);
                 rightEdgeX = cx + built.spanHalfW;
             } else if (n === 2) {
-                const cx0 = hasCatArrow ? 195 : 255;
-                const cx1 = hasCatArrow ? 515 : 675;
+                const cx0 = hasCatArrow ? 195 : 240;
+                const cx1 = hasCatArrow ? 515 : 695;
                 const built0 = expandBranchedSemidevelopedNodes(parsedParts[0], cx0, 185, accentColor, 'Semi_0');
                 const built1 = expandBranchedSemidevelopedNodes(parsedParts[1], cx1, 185, accentColor, 'Semi_1');
-                atoms.push(...built0.atoms, ...built1.atoms);
-                bonds.push(...built0.bonds, ...built1.bonds);
-                const plusX = Math.round(((cx0 + built0.spanHalfW) + (cx1 - built1.spanHalfW)) / 2);
-                texts.push({ x: plusX, y: 193, text: '+', size: 24, color: accentColor });
-                rightEdgeX = cx1 + built1.spanHalfW;
+                const overlap = (cx0 + built0.spanHalfW + 56) - (cx1 - built1.spanHalfW);
+                if (overlap > 0 && !hasCatArrow) {
+                    const shift = Math.round(overlap / 2);
+                    built0.atoms.forEach(a => { a.x -= shift; });
+                    built1.atoms.forEach(a => { a.x += shift; });
+                    const plusX = Math.round(((cx0 - shift + built0.spanHalfW) + (cx1 + shift - built1.spanHalfW)) / 2);
+                    atoms.push(...built0.atoms, ...built1.atoms);
+                    bonds.push(...built0.bonds, ...built1.bonds);
+                    texts.push({ x: plusX, y: 193, text: '+', size: 24, color: accentColor });
+                    rightEdgeX = cx1 + shift + built1.spanHalfW;
+                } else {
+                    atoms.push(...built0.atoms, ...built1.atoms);
+                    bonds.push(...built0.bonds, ...built1.bonds);
+                    const plusX = Math.round(((cx0 + built0.spanHalfW) + (cx1 - built1.spanHalfW)) / 2);
+                    texts.push({ x: plusX, y: 193, text: '+', size: 24, color: accentColor });
+                    rightEdgeX = cx1 + built1.spanHalfW;
+                }
             } else if (n >= 3) {
                 const startX = hasCatArrow ? 130 : 175;
                 const spanTotal = hasCatArrow ? 440 : 570;
