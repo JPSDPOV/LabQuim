@@ -1,0 +1,853 @@
+{
+  "category": "reacciones",
+  "title": "20) Oxidación Diferencial: Agua de Bromo (→ Ác. Aldónico) | HNO₃ (→ Ác. Aldárico) | C6 (→ Ác. Urónico)",
+  "natureBadge": "Oxidación Selectiva de Monosacáridos • Br₂/H₂O → Ác. Aldónico | HNO₃ → Ác. Aldárico | Enzimática C6 → Ác. Urónico",
+  "deltaH": "ΔH° < 0 (Exotérmica; grado de oxidación controlado por la fuerza y selectividad del agente oxidante)",
+  "description": "Oxidación química o enzimática controlada de los monosacáridos según el extremo de la cadena que se oxida:\n1) Oxidación suave con Agua de Bromo (Br₂ / H₂O, pH 5–6): oxida EXCLUSIVAMENTE el grupo aldehído en C1 de las aldosas a ácido carboxílico (–COOH), produciendo un ÁCIDO ALDÓNICO (ej. D-Glucosa → Ácido D-glucónico). Las cetosas (como la D-fructosa) NO reaccionan porque el agua de bromo no isomeriza ni rompe enlaces C–C (ensayo diagnóstico para diferenciar aldosas de cetosas).\n2) Oxidación fuerte con Ácido Nítrico diluido (HNO₃, Δ): oxida SIMULTÁNEAMENTE ambos extremos de la cadena de una aldosa —tanto el grupo aldehído en C1 como el alcohol primario terminal en C6 (–CH₂OH)— a grupos carboxilo, generando un ácido dicarboxílico llamado ÁCIDO ALDÁRICO o sacárico (ej. D-Glucosa → Ácido D-glucárico; D-Galactosa → Ácido múcico, compuesto meso ópticamente inactivo).\n3) Oxidación selectiva del carbono terminal C6 (enzimática o con protección previa): oxida únicamente el alcohol primario –CH₂OH en C6 respetando el aldehído/hemiacetal en C1, formando un ÁCIDO URÓNICO (ej. D-Glucosa → Ácido D-glucurónico, fundamental en detoxificación hepática y glicosaminoglicanos).",
+  "meta": {
+    "grupoFuncional": "Ácidos Aldónicos (C1 oxidado), Ácidos Aldáricos (C1 y C6 oxidados) y Ácidos Urónicos (C6 oxidado)",
+    "reaccionMecanismo": "Oxidación selectiva por etapas según el potencial oxidante (Br₂/H₂O suave, HNO₃ fuerte, oxidación enzimática en C6)",
+    "naturaleza": "Por etapas (en Br₂/H₂O: apertura hemiacetal → oxidación exclusiva de C1–CHO; en HNO₃: oxidación de C1–CHO y C6–CH₂OH a diácido; en C6: oxidación terminal selectiva).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–H y/o C6–H; intermediarios δ-lactona (en ácidos aldónicos) y aldehído terminal; formación de uno o dos grupos carboxilo (–COOH).",
+    "detalleMecanismo": "Aldosa + Br₂/H₂O ──► Ác. Aldónico  |  Aldosa + HNO₃/Δ ──► Ác. Aldárico  |  Aldosa (C6) + [O] ──► Ác. Urónico",
+    "reactivosCondiciones": "• Ác. Aldónico: Br₂ en H₂O (pH 5–6, 25 °C).\n• Ác. Aldárico: HNO₃ diluido con calentamiento suave (60 °C).\n• Ác. Urónico: UDP-glucosa deshidrogenasa / NAD⁺ (biológica) o TEMPO/NaOCl tras proteger C1 (química).",
+    "rolReactivos": "• Sustrato: Aldohexosa o aldopentosa (D-glucosa, D-galactosa); las cetosas son inertes frente a Br₂/H₂O.\n• Br₂ / H₂O: oxidante suave y neutro/ligeramente ácido que diferencia aldosas (+) de cetosas (−).\n• HNO₃ / Δ: oxidante enérgico capaz de oxidar el alcohol primario terminal C6 además del C1.",
+    "reglasObs": "• Diferenciación Aldosa vs. Cetosa: Fehling/Tollens dan (+) para ambas (por medio básico), mientras que Agua de Bromo (Br₂/H₂O, decoloración del bromo rojo-pardo) da (+) SOLO para aldosas y (−) para cetosas.\n• Simetría en Ácidos Aldáricos: al tener grupos –COOH idénticos en C1 y C6, algunas aldosas quirales (como la D-galactosa o la D-alosa) generan ácidos aldáricos con plano de simetría interno (compuestos MESO, ópticamente inactivos).\n• Lactonización: los ácidos aldónicos y urónicos en solución ácida se ciclan espontáneamente formando γ- o δ-lactonas (ésteres cíclicos intramoleculares)."
+  },
+  "substrates": [
+    {
+      "id": "ox_glucosa_br2_aldonico",
+      "name": "D-Glucosa + Br₂ / H₂O (Suave) ──► Ácido D-Glucónico [Oxidación Exclusiva en C1 — Ác. Aldónico]",
+      "catalyst": "Br₂ / H₂O (pH 5–6, 25 °C)"
+    },
+    {
+      "id": "ox_glucosa_hno3_aldarico",
+      "name": "D-Glucosa + HNO₃ / Δ (Fuerte) ──► Ácido D-Glucárico [Oxidación Doble C1 y C6 — Ác. Aldárico]",
+      "catalyst": "HNO₃ diluido (Δ, 60 °C)"
+    },
+    {
+      "id": "ox_galactosa_hno3_meso",
+      "name": "D-Galactosa + HNO₃ / Δ ──► Ácido Galactárico / Múcico (Compuesto Meso Aquiral) [Simetría C1=C6]",
+      "catalyst": "HNO₃ diluido (Δ, 60 °C)"
+    },
+    {
+      "id": "ox_glucosa_c6_uronico",
+      "name": "D-Glucosa (Oxidación Selectiva C6) ──► Ácido D-Glucurónico [Conserva C1 — Ác. Urónico]",
+      "catalyst": "NAD⁺ / Deshidrogenasa (o TEMPO tras proteger C1)"
+    }
+  ],
+  "catalysts": [
+    "Br₂ / H₂O (pH 5–6, 25 °C)",
+    "HNO₃ diluido (Δ, 60 °C)",
+    "NAD⁺ / Deshidrogenasa (o TEMPO tras proteger C1)"
+  ],
+  "stepsBySubstrate": {
+    "ox_glucosa_br2_aldonico": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucosa + Agua de Bromo (Br₂ / H₂O, pH 5–6)",
+        "semiStep": "OHC–(CHOH)₄–CH₂OH + Br₂ + H₂O",
+        "semiGlobal": "D-Glucosa + Br₂ + H₂O ──► Ácido D-Glucónico (HOOC–(CHOH)₄–CH₂OH) + 2 HBr",
+        "desc": "Se observan la D-glucosa (con su grupo aldehído en C1 y su alcohol primario en C6) y el agua de bromo (Br₂ / H₂O), un oxidante suave incapaz de atacar alcoholes primarios o secundarios.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; D-glucosa y bromo acuoso intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Hidratación del aldehído en C1 seguida de oxidación selectiva por Br₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 205,
+              "y": 85
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 205,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "C1 Aldehído (Reactivo)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 105,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 385,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 575,
+              "y": 195,
+              "label": "C6 (Intacto)"
+            },
+            {
+              "id": "Br2_ox",
+              "el": "Br₂ / H₂O",
+              "x": 385,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Oxidación Exclusiva del Carbono C1",
+        "semiStep": "R–CH(OH)₂ + Br₂ ──► R–COOH + 2 HBr",
+        "semiGlobal": "D-Glucosa + Br₂ + H₂O ──► Ácido D-Glucónico (HOOC–(CHOH)₄–CH₂OH) + 2 HBr",
+        "desc": "Se rompe exclusivamente el enlace C1–H aldehídico mientras el bromo rojo-pardo se reduce a iones bromuro incoloros (2 Br⁻).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–H aldehídico.",
+          "forming": "En VERDE punteado: incorporación del hidroxilo carboxílico C1–OH.",
+          "movement": "El grupo alcohol primario –CH₂OH en C6 permanece completamente inalterado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 205,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 205,
+              "y": 195
+            },
+            {
+              "id": "OH1",
+              "el": "OH",
+              "x": 205,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 95,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Sale H⁺"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 385,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 575,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido D-Glucónico (Ácido Aldónico — Solo C1 Oxidado)",
+        "semiStep": "HOOC–(CHOH)₄–CH₂OH (Ácido D-Glucónico)",
+        "semiGlobal": "D-Glucosa + Br₂ + H₂O ──► Ácido D-Glucónico (HOOC–(CHOH)₄–CH₂OH) + 2 HBr",
+        "desc": "Queda consolidado el ácido D-glucónico (un ácido aldónico con –COOH en C1 y –CH₂OH intacto en C6). Las cetosas no reaccionan con Br₂/H₂O.",
+        "legend": {
+          "breaking": "Oxidación suave completada; decoloración del agua de bromo.",
+          "forming": "En VERDE sólido: grupo carboxilo exclusivo en C1.",
+          "movement": "En disolución ácida puede ciclarse a D-glucono-δ-lactona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 205,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Ácido D-Glucónico"
+            },
+            {
+              "id": "OH1",
+              "el": "OH",
+              "x": 205,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 385,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 575,
+              "y": 195,
+              "highlight": "#38bdf8",
+              "label": "C6 sin oxidar"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ox_glucosa_hno3_aldarico": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucosa + Ácido Nítrico Diluido (HNO₃, Δ)",
+        "semiStep": "OHC–(CHOH)₄–CH₂OH + HNO₃ (Δ, 60 °C)",
+        "semiGlobal": "D-Glucosa + HNO₃ (Δ) ──► Ácido D-Glucárico (HOOC–(CHOH)₄–COOH)",
+        "desc": "Se observan la D-glucosa y el ácido nítrico diluido en caliente, un oxidante más enérgico que ataca tanto al aldehído C1 como al alcohol primario terminal C6.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos extremos C1 y C6 expuestos al oxidante fuerte.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación simultánea de los dos extremos de la cadena carbonada sin romper enlaces C–C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Extremo 1"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 395,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Extremo 2"
+            },
+            {
+              "id": "HNO3_ox",
+              "el": "HNO₃ / Δ",
+              "x": 395,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Oxidante fuerte"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Doble Oxidación Terminal (C1 → –COOH y C6 → –COOH)",
+        "semiStep": "Oxidación de C1 aldehídico y C6 alcohol primario (respetando –OH secundarios)",
+        "semiGlobal": "D-Glucosa + HNO₃ (Δ) ──► Ácido D-Glucárico (HOOC–(CHOH)₄–COOH)",
+        "desc": "En condiciones controladas (60 °C), el HNO₃ oxida ambos carbonos terminales (C1 y C6) a ácidos carboxílicos sin escindir la cadena de 6 carbonos.",
+        "legend": {
+          "breaking": "En ROJO punteado: pérdida de hidrógenos en C1 y C6.",
+          "forming": "En VERDE punteado: formación de los dos grupos carboxilo terminales.",
+          "movement": "Conversión a ácido dicarboxílico polihidroxilado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1_a",
+              "el": "O",
+              "x": 185,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 185,
+              "y": 195
+            },
+            {
+              "id": "O1_b",
+              "el": "OH",
+              "x": 185,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 395,
+              "y": 195
+            },
+            {
+              "id": "O6_a",
+              "el": "O",
+              "x": 605,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "C6",
+              "x": 605,
+              "y": 195
+            },
+            {
+              "id": "O6_b",
+              "el": "OH",
+              "x": 605,
+              "y": 305,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1_a",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O1_b",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "O6_a",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C6",
+              "to": "O6_b",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido D-Glucárico / Sacárico (Ácido Aldárico — C1 y C6 Oxidados)",
+        "semiStep": "HOOC–(CHOH)₄–COOH (Ácido D-Glucárico, ópticamente activo)",
+        "semiGlobal": "D-Glucosa + HNO₃ (Δ) ──► Ácido D-Glucárico (HOOC–(CHOH)₄–COOH)",
+        "desc": "Queda consolidado el ácido D-glucárico (ácido aldárico de la glucosa), que conserva actividad óptica por carecer de plano de simetría.",
+        "legend": {
+          "breaking": "Oxidación enérgica completada.",
+          "forming": "En VERDE sólido: dos grupos carboxilo (–COOH) en C1 y C6.",
+          "movement": "Producto diácido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1_a",
+              "el": "O",
+              "x": 185,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 185,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "–COOH (C1)"
+            },
+            {
+              "id": "O1_b",
+              "el": "OH",
+              "x": 185,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 395,
+              "y": 195,
+              "label": "Ácido D-Glucárico"
+            },
+            {
+              "id": "O6_a",
+              "el": "O",
+              "x": 605,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "C6",
+              "x": 605,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "–COOH (C6)"
+            },
+            {
+              "id": "O6_b",
+              "el": "OH",
+              "x": 605,
+              "y": 305,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1_a",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O1_b",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "O6_a",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C6",
+              "to": "O6_b",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ox_galactosa_hno3_meso": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Galactosa (Ópticamente Activa) + HNO₃ / Δ",
+        "semiStep": "D-Galactosa + HNO₃ (Δ, 60 °C)",
+        "semiGlobal": "D-Galactosa + HNO₃ (Δ) ──► Ácido Galactárico / Múcico (Compuesto MESO inactivo)",
+        "desc": "La D-galactosa tiene los grupos –OH de C2 y C5 hacia la derecha y los de C3 y C4 hacia la izquierda en Fischer.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; D-galactosa quiral intacta.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Al oxidar ambos extremos C1 y C6 a grupos –COOH idénticos, aparecerá un plano especular interno entre C3 y C4."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Chain",
+              "el": "Galactosa (C₂–C₅)",
+              "x": 395,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "HNO3_ox",
+              "el": "HNO₃ / Δ",
+              "x": 395,
+              "y": 310,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Galactárico / Ácido Múcico (Compuesto MESO Aquiral)",
+        "semiStep": "HOOC–(CHOH)₄–COOH (Plano de simetría σ → [α]D = 0°)",
+        "semiGlobal": "D-Galactosa + HNO₃ (Δ) ──► Ácido Galactárico / Múcico (Compuesto MESO inactivo)",
+        "desc": "Queda consolidado el ácido galactárico (múcico), un sólido cristalino poco soluble y ópticamente inactivo (forma MESO) debido a su plano de simetría interno.",
+        "legend": {
+          "breaking": "Pérdida de actividad óptica por simetría molecular (meso).",
+          "forming": "En VERDE sólido: extremos simétricos HOOC– en C1 y C6.",
+          "movement": "Prueba clásica de identificación de galactosa y lactosa (precipitado cristalino de ácido múcico)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1_a",
+              "el": "O",
+              "x": 185,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 185,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "–COOH"
+            },
+            {
+              "id": "O1_b",
+              "el": "OH",
+              "x": 185,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄ [Plano σ]",
+              "x": 395,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Ácido Múcico (MESO)"
+            },
+            {
+              "id": "O6_a",
+              "el": "O",
+              "x": 605,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "C6",
+              "x": 605,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "–COOH"
+            },
+            {
+              "id": "O6_b",
+              "el": "OH",
+              "x": 605,
+              "y": 305,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1_a",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O1_b",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "O6_a",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C6",
+              "to": "O6_b",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ox_glucosa_c6_uronico": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucosa (C1 Protegido / Enzimático) + Oxidante en C6",
+        "semiStep": "OHC–(CHOH)₄–CH₂OH (Oxidación selectiva del alcohol primario C6)",
+        "semiGlobal": "D-Glucosa (C6) + 2 NAD⁺ + H₂O ──► Ácido D-Glucurónico (OHC–(CHOH)₄–COOH)",
+        "desc": "En los sistemas biológicos (vía UDP-glucosa) o en laboratorio protegiendo previamente el carbono anomérico C1 como glicósido, se oxida selectivamente el alcohol primario –CH₂OH del C6.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; carbono C1 protegido/preservado y C6 listo para oxidación.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación de 4 electrones del grupo –CH₂OH en C6 a ácido carboxílico –COOH."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#38bdf8",
+              "label": "C1 Preservado"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 395,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "C6 Oxidado"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido D-Glucurónico (Ácido Urónico — Solo C6 Oxidado)",
+        "semiStep": "OHC–(CHOH)₄–COOH (Ácido D-Glucurónico)",
+        "semiGlobal": "D-Glucosa (C6) + 2 NAD⁺ + H₂O ──► Ácido D-Glucurónico (OHC–(CHOH)₄–COOH)",
+        "desc": "Queda consolidado el ácido D-glucurónico, que mantiene intacta la función aldehído/hemiacetal en C1 (sigue siendo reductor) y posee un grupo –COOH en C6.",
+        "legend": {
+          "breaking": "Oxidación selectiva en C6 completada.",
+          "forming": "En VERDE sólido: grupo carboxilo exclusivo en el carbono C6.",
+          "movement": "Esencial en el hígado para solubilizar y excretar fármacos, bilirrubina y toxinas (glucuronidación)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#38bdf8",
+              "label": "C1 Aldehído intacto"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 395,
+              "y": 195,
+              "label": "Ácido D-Glucurónico"
+            },
+            {
+              "id": "O6_a",
+              "el": "O",
+              "x": 585,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "C6",
+              "x": 585,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "–COOH (C6)"
+            },
+            {
+              "id": "O6_b",
+              "el": "OH",
+              "x": 585,
+              "y": 305,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "O6_a",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C6",
+              "to": "O6_b",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
