@@ -1,0 +1,441 @@
+{
+  "category": "reacciones",
+  "title": "D.1- Halogenación α de Hell-Volhard-Zelinsky (R–CH₂–COOH + Br₂ / PBr₃ → α-Bromoácido)",
+  "natureBadge": "Sustitución α en Cadena Lateral • R–CH₂–COOH + Br₂ / PBr₃ (cat.) ──(H₂O)──► R–CH(Br)–COOH + HBr",
+  "deltaH": "ΔH° < 0 (Exotérmica; regioselectiva exclusivamente en el carbono α adyacente al grupo carboxilo)",
+  "description": "Sustitución regioselectiva de un átomo de hidrógeno en posición alfa (C2, adyacente al grupo –COOH) por un átomo de bromo (o cloro) mediante tratamiento de un ácido carboxílico con bromo (Br₂) en presencia de una cantidad catalítica de tribromuro de fósforo (PBr₃) o fósforo rojo, seguida de hidrólisis acuosa:\n1) Activación a bromuro de acilo: el ácido carboxílico puro no enoliza con facilidad; la cantidad catalítica de PBr₃ convierte una pequeña fracción del ácido en bromuro de acilo (R–CH₂–COBr), el cual enoliza rápidamente en el carbono α.\n2) Bromación electrofílica del enol en Cα: el enol del bromuro de acilo ataca al Br₂ formando el bromuro de α-bromoacilo (R–CH(Br)–COBr).\n3) Intercambio con el ácido libre e hidrólisis: el bromuro de α-bromoacilo intercambia el bromuro con otra molécula de ácido carboxílico (regenerando el catalizador R–CH₂–COBr) y liberando el ÁCIDO α-BROMOCARBOXÍLICO.\n4) Puente sintético clave hacia α-aminoácidos y α-hidroxiácidos: los α-bromoácidos obtenidos por HVZ sufren fácilmente sustitución SN2 con exceso de NH₃ (→ α-aminoácidos) o con OH⁻ acuoso (→ α-hidroxiácidos).",
+  "meta": {
+    "grupoFuncional": "Ácidos α-Halocarboxílicos / α-Bromoácidos (R–CH(Br)–COOH)",
+    "reaccionMecanismo": "Conversión catalítica a bromuro de acilo → Tautomería ceto-enólica α → Bromación electrofílica en Cα → Hidrólisis",
+    "naturaleza": "Por etapas en ciclo catalítico (PBr₃ → RCH₂COBr → Enol α → Bromación con Br₂ → RCH(Br)COBr → Intercambio/Hidrólisis → RCH(Br)COOH).",
+    "rupturaIntermediarios": "Ruptura de enlaces Cα–H y Br–Br; intermediarios bromuro de acilo y forma enólica α; formación de enlace Cα–Br y HBr.",
+    "detalleMecanismo": "R–CH₂–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► R–CH(Br)–COOH + HBr",
+    "reactivosCondiciones": "Ácido carboxílico con al menos un hidrógeno en posición α (H-α) + Br₂ (o Cl₂) + cantidad catalítica de PBr₃ (o fósforo rojo P₄) con calentamiento suave, seguido de H₂O.",
+    "rolReactivos": "• Sustrato enolizable: Ácido carboxílico con H-α (acético, propanoico, butanoico, fenilacético).\n• Agente halogenante: Bromo molecular (Br₂) o Cloro (Cl₂).\n• Catalizador activante: Tribromuro de fósforo (PBr₃) o fósforo rojo (genera in situ el bromuro de acilo enolizable).",
+    "reglasObs": "• Requisito indispensable: el ácido DEBE tener al menos un hidrógeno en posición α (C2). El ácido benzoico (C₆H₅–COOH) o el ácido piválico ((CH₃)₃C–COOH) NO dan reacción HVZ por carecer de H-α.\n• Aplicación directa en síntesis de aminoácidos (Unidad 17.3): Ácido propanoico + Br₂/PBr₃ ──► Ácido 2-bromopropanoico ──(+ 2 NH₃)──► Alanina (ácido 2-aminopropanoico)."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn9_propanoico_2bromopropanoico",
+      "name": "Ácido Propanoico + Br₂ / PBr₃ (cat.) ──(H₂O)──► Ácido 2-Bromopropanoico + HBr [Regioselectivo en Cα]",
+      "catalyst": "1) Br₂ / PBr₃ (cat.)  2) H₂O"
+    },
+    {
+      "id": "ac_rxn9_acetico_bromoacetico",
+      "name": "Ácido Etanoico + Br₂ / PBr₃ (cat.) ──(H₂O)──► Ácido Bromoetanoico (Bromoacético) + HBr",
+      "catalyst": "1) Br₂ / PBr₃ (cat.)  2) H₂O"
+    },
+    {
+      "id": "ac_rxn9_butanoico_2bromobutanoico",
+      "name": "Ácido Butanoico + Cl₂ / PCl₃ (cat.) ──(H₂O)──► Ácido 2-Clorobutanoico + HCl [Cloración α]",
+      "catalyst": "1) Cl₂ / PCl₃ (cat.)  2) H₂O"
+    },
+    {
+      "id": "ac_rxn9_pivalico_sin_h_alfa",
+      "name": "Ácido 2,2-Dimetilpropanoico (Sin H-α) + Br₂ / PBr₃ ──► Sin Reacción HVZ [Control Estructural]",
+      "catalyst": "Br₂ / PBr₃ (Carece de H-α)"
+    }
+  ],
+  "catalysts": [
+    "1) Br₂ / PBr₃ (cat.)  2) H₂O",
+    "1) Cl₂ / PCl₃ (cat.)  2) H₂O",
+    "Br₂ / PBr₃ (Carece de H-α)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn9_propanoico_2bromopropanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Propanoico (con H-α en C2) + Br₂ / PBr₃ (cat.)",
+        "semiStep": "CH₃–CH₂–COOH + Br₂ (cat. PBr₃)",
+        "semiGlobal": "CH₃–CH₂–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► CH₃–CH(Br)–COOH + HBr",
+        "desc": "Se observan el ácido propanoico con sus dos hidrógenos α en C2 (carbono adyacente al grupo carboxilo) y el bromo molecular en presencia de PBr₃ catalítico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlaces Cα–H y Br–Br intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El PBr₃ convierte trazas de ácido en bromuro de propanoilo que enoliza en Cα."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "Ca",
+              "el": "CH",
+              "x": 355,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Cα (C2)"
+            },
+            {
+              "id": "Ha",
+              "el": "H",
+              "x": 355,
+              "y": 95,
+              "highlight": "#fbbf24",
+              "label": "H-α Reactivo"
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 525,
+              "y": 210
+            },
+            {
+              "id": "Br2",
+              "el": "Br–Br (PBr₃ cat.)",
+              "x": 355,
+              "y": 325,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "Ca",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ca",
+              "to": "Ha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ca",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Bromación Electrofílica del Enol en Cα",
+        "semiStep": "[CH₃–CH=C(OH)Br] + Br–Br ──► CH₃–CH(Br)–COBr + HBr",
+        "semiGlobal": "CH₃–CH₂–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► CH₃–CH(Br)–COOH + HBr",
+        "desc": "El doble enlace del enol de bromuro de acilo ataca al Br₂ introduciendo el átomo de bromo exclusivamente en la posición α (C2).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces Cα–H y Br–Br.",
+          "forming": "En VERDE punteado: formación del enlace Cα–Br.",
+          "movement": "El grupo metilo β (C3) no se ve afectado en absoluto."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "Ca",
+              "el": "CH",
+              "x": 355,
+              "y": 210
+            },
+            {
+              "id": "Ha",
+              "el": "HBr↑",
+              "x": 355,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Sale HBr"
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 525,
+              "y": 210
+            },
+            {
+              "id": "Br_new",
+              "el": "Br",
+              "x": 355,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "Ca",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ca",
+              "to": "Ha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Ca",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ca",
+              "to": "Br_new",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido 2-Bromopropanoico (α-Bromoácido) + HBr",
+        "semiStep": "CH₃–CH(Br)–COOH + HBr",
+        "semiGlobal": "CH₃–CH₂–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► CH₃–CH(Br)–COOH + HBr",
+        "desc": "Queda consolidado el ácido 2-bromopropanoico (precursor directo de la alanina mediante sustitución SN2 con NH₃).",
+        "legend": {
+          "breaking": "Halogenación HVZ completada.",
+          "forming": "En VERDE sólido: enlace C2–Br (posición α).",
+          "movement": "Producto α-bromoácido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "Ca",
+              "el": "CH",
+              "x": 355,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido 2-Bromopropanoico"
+            },
+            {
+              "id": "Br_new",
+              "el": "Br",
+              "x": 355,
+              "y": 325,
+              "highlight": "#f97316"
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "HBr",
+              "el": "+ HBr",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "Ca",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ca",
+              "to": "Br_new",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ca",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn9_acetico_bromoacetico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico + Br₂ / PBr₃ (cat.)",
+        "semiStep": "CH₃–COOH + Br₂ (cat. PBr₃)",
+        "semiGlobal": "CH₃–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► Br–CH₂–COOH + HBr",
+        "desc": "El grupo metilo del ácido acético está en posición α respecto al grupo carboxilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Bromación selectiva en C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "H–CH₂–COOH",
+              "x": 255,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Br2",
+              "el": "+ Br₂ / PBr₃ (cat.)",
+              "x": 535,
+              "y": 210,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Bromoetanoico (Br–CH₂–COOH) + HBr",
+        "semiStep": "Br–CH₂–COOH + HBr (Mayor acidez por efecto −I del bromo)",
+        "semiGlobal": "CH₃–COOH + Br₂ ──(1. PBr₃ cat.  2. H₂O)──► Br–CH₂–COOH + HBr",
+        "desc": "Queda consolidado el ácido bromoacético (precursor de la glicina con exceso de NH₃).",
+        "legend": {
+          "breaking": "Sustitución α completada.",
+          "forming": "En VERDE sólido: ácido bromoetanoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "Br–CH₂–COOH",
+              "x": 275,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "HBr",
+              "el": "+ HBr",
+              "x": 545,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn9_butanoico_2bromobutanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Butanoico + Cl₂ / PCl₃ (cat.)",
+        "semiStep": "CH₃–CH₂–CH₂–COOH + Cl₂ (cat. PCl₃)",
+        "semiGlobal": "CH₃–CH₂–CH₂–COOH + Cl₂ ──(1. PCl₃ cat.  2. H₂O)──► CH₃–CH₂–CH(Cl)–COOH + HCl",
+        "desc": "Incluso en cadenas largas de 4 o más carbonos, la halogenación HVZ ocurre EXCLUSIVAMENTE en el carbono C2 (α), sin tocar C3 (β) ni C4 (γ).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Regioselectividad absoluta en C2 (α)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–CH₂–COOH",
+              "x": 265,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Cl2",
+              "el": "+ Cl₂ / PCl₃ (cat.)",
+              "x": 555,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido 2-Clorobutanoico + HCl",
+        "semiStep": "CH₃–CH₂–CH(Cl)–COOH + HCl",
+        "semiGlobal": "CH₃–CH₂–CH₂–COOH + Cl₂ ──(1. PCl₃ cat.  2. H₂O)──► CH₃–CH₂–CH(Cl)–COOH + HCl",
+        "desc": "Queda consolidado el ácido 2-clorobutanoico.",
+        "legend": {
+          "breaking": "Cloración α completada.",
+          "forming": "En VERDE sólido: ácido 2-clorobutanoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–CH(Cl)–COOH",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 565,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn9_pivalico_sin_h_alfa": [
+      {
+        "title": "Estado Inicial: Ácido 2,2-Dimetilpropanoico (Sin H-α) + Br₂ / PBr₃",
+        "semiStep": "(CH₃)₃C–COOH + Br₂ / PBr₃",
+        "semiGlobal": "(CH₃)₃C–COOH + Br₂ / PBr₃ ──► SIN REACCIÓN HVZ (0 Hidrógenos α)",
+        "desc": "El carbono α (C2) está unido a tres grupos metilo y al carboxilo, careciendo de hidrógenos α para formar el enol intermediario.",
+        "legend": {
+          "breaking": "Ningún enlace roto; ausencia de H-α.",
+          "forming": "Ningún enlace formado.",
+          "movement": "No ocurre bromación HVZ."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "(CH₃)₃C–COOH [0 H-α]",
+              "x": 265,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Br2",
+              "el": "+ Br₂ / PBr₃ (Sin efecto)",
+              "x": 555,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Resultado Consolidado: Sin Reacción HVZ (Control de Hidrógeno α)",
+        "semiStep": "(CH₃)₃C–COOH inalterado",
+        "semiGlobal": "(CH₃)₃C–COOH + Br₂ / PBr₃ ──► SIN REACCIÓN HVZ (0 Hidrógenos α)",
+        "desc": "Se confirma la necesidad de al menos un hidrógeno en posición α.",
+        "legend": {
+          "breaking": "Sin sustitución en Cα.",
+          "forming": "Sin α-bromoácido.",
+          "movement": "Regla clave de examen."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "(CH₃)₃C–COOH [Inerte]",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
