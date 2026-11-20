@@ -1,80 +1,107 @@
 {
   "category": "obtencion",
-  "title": "6) Reducción Catalítica de Halogenuros de Ácido (Reacción de Rosenmund: + H₂ / Pt ──► Aldehído)",
-  "natureBadge": "Hidrogenólisis Selectiva • R–COCl + H₂ ──(Pt o Pd/BaSO₄)──► R–CHO + HCl",
-  "deltaH": "ΔH° < 0 (Exotérmica; convierte cloruros de acilo en aldehídos sin reducir el carbonilo a alcohol)",
-  "description": "Reducción catalítica de un halogenuro de acilo (cloruro de ácido) con hidrógeno gaseoso sobre platino o paladio envenenado sobre sulfato de bario (Reacción de Rosenmund, Diap. 14), reemplazando el átomo de cloro por hidrógeno para generar un aldehído.",
+  "title": "6) Reducción Catalítica de Halogenuros de Ácido (Reacción de Rosenmund: + H₂ / Pd–BaSO₄ ──► Aldehído)",
+  "natureBadge": "Reducción Catalítica • R–COCl + H₂ ──(Pd / BaSO₄)──► R–CHO + HCl",
+  "deltaH": "ΔH° < 0 (Exotérmica; el catalizador envenenado detiene la hidrogenación en el aldehído)",
+  "description": "Hidrogenación catalítica selectiva de cloruros de ácido (Reacción de Rosenmund) empleando hidrógeno molecular (H₂) sobre paladio depositado en sulfato de bario (Pd / BaSO₄) parcialmente envenenado:\n1) Adición oxidativa: el paladio se inserta en el enlace C–Cl del halogenuro de acilo y activa el enlace H–H formando un complejo acilpaladio-hidruro.\n2) Eliminación reductiva: se transfiere un átomo de hidrógeno al carbono acílico para formar el aldehído (R–CHO) y se libera cloruro de hidrógeno (HCl).\n3) El soporte de BaSO₄ (a menudo con quinolina o azufre) modera la actividad del paladio para impedir que el aldehído siga hidrogenándose hasta alcohol primario.",
   "meta": {
-    "grupoFuncional": "Aldehídos (R–CHO) + HCl",
-    "reaccionMecanismo": "Adición oxidativa / eliminación reductora catalítica sobre Pt o Pd",
-    "naturaleza": "Catalítica heterogénea.",
-    "rupturaIntermediarios": "Ruptura de enlaces C–Cl y H–H; formación de C–H y H–Cl.",
-    "detalleMecanismo": "CH₃–CH₂–CH₂–COCl + H₂ ──(Pt)──► CH₃–CH₂–CH₂–CHO + HCl",
-    "reactivosCondiciones": "Cloruro de acilo (R–COCl) + H₂ / Pt (o Pd/BaSO₄ envenenado).",
-    "rolReactivos": "• Sustrato: Halogenuro de ácido (cloruro de butanoílo).\n• Reductor: Hidrógeno (H₂).\n• Catalizador: Pt o Pd/BaSO₄.",
-    "reglasObs": "• Diap. 14: Cloruro de butanoílo + [H₂] / Pt → butanal."
+    "grupoFuncional": "Aldehídos (R–CHO)",
+    "reaccionMecanismo": "Hidrogenación catalítica selectiva (Reacción de Rosenmund: adición oxidativa + eliminación reductiva)",
+    "naturaleza": "Catálisis heterogénea en superficie de Pd envenenado con BaSO₄.",
+    "rupturaIntermediarios": "Ruptura de C–Cl y H–H; intermediario acilpaladio-hidruro; formación de C–H y H–Cl.",
+    "detalleMecanismo": "R–CO–Cl + H₂ ──(Pd / BaSO₄)──► R–CHO + HCl",
+    "reactivosCondiciones": "Halogenuro de acilo (R–COCl) + H₂ (g), catalizador Pd / BaSO₄ envenenado (quinolina-S) en xileno o tolueno.",
+    "rolReactivos": "• Sustrato: Cloruro de acilo (R–COCl).\n• Agente reductor: Hidrógeno molecular (H₂).\n• Catalizador moderado: Paladio sobre sulfato de bario (Pd / BaSO₄).",
+    "reglasObs": "• El cloruro de metanoílo (H–COCl) es inestable a temperatura ambiente, por lo que la reacción de Rosenmund se aplica a partir del cloruro de etanoílo (C₂) en adelante.\n• Permite obtener aldehídos aromáticos y alifáticos con alto rendimiento."
   },
   "substrates": [
     {
-      "id": "cl_butanoilo_butanal",
-      "name": "Diap. 14: Cloruro de Butanoílo + H₂ (Pt) ──► Butanal",
-      "catalyst": "H₂ / Pt (o Pd/BaSO₄)"
+      "id": "rosenmund_etanoilo",
+      "name": "Cloruro de Etanoílo (Acetilo) + H₂ ──► Etanal + HCl",
+      "catalyst": "H₂ / Pd–BaSO₄ (envenenado)"
+    },
+    {
+      "id": "rosenmund_propanoilo",
+      "name": "Cloruro de Propanoílo + H₂ ──► Propanal + HCl",
+      "catalyst": "H₂ / Pd–BaSO₄ (envenenado)"
+    },
+    {
+      "id": "rosenmund_isobutirilo",
+      "name": "Cloruro de 2-Metilpropanoílo + H₂ ──► 2-Metilpropanal + HCl [Ramificado]",
+      "catalyst": "H₂ / Pd–BaSO₄ (envenenado)"
+    },
+    {
+      "id": "rosenmund_benzoilo",
+      "name": "Cloruro de Benzoílo + H₂ ──► Benzaldehído + HCl [Aromático]",
+      "catalyst": "H₂ / Pd–BaSO₄ (envenenado)"
+    },
+    {
+      "id": "rosenmund_2butenoilo",
+      "name": "Cloruro de 2-Butenoílo + H₂ ──► 2-Butenal + HCl [Insaturado]",
+      "catalyst": "H₂ / Pd–BaSO₄ (envenenado)"
     }
   ],
   "catalysts": [
-    "H₂ / Pt (o Pd/BaSO₄)"
+    "H₂ / Pd–BaSO₄ (envenenado)"
   ],
   "stepsBySubstrate": {
-    "cl_butanoilo_butanal": [
+    "rosenmund_etanoilo": [
       {
-        "title": "Paso 1 — Estado Inicial: Cloruro de Butanoílo + H₂ / Pt",
-        "semiStep": "CH₃–CH₂–CH₂–CO–Cl  +  H₂ (Pt)",
-        "semiGlobal": "CH₃–CH₂–CH₂–COCl + H₂ (Pt) ──► CH₃–CH₂–CH₂–CHO + HCl",
-        "desc": "El cloruro de butanoílo se adsorbe con H₂ sobre el catalizador metálico.",
+        "title": "Estado Inicial Desarrollado: Cloruro de Etanoílo + H₂ / Pd–BaSO₄",
+        "semiStep": "CH₃–CO–Cl + H₂",
+        "semiGlobal": "CH₃–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CHO + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el cloruro de etanoílo (CH₃–CO–Cl) y el hidrógeno molecular (H₂) sobre el catalizador Pd / BaSO₄.",
         "legend": {
-          "breaking": "En ROJO punteado: enlace C–Cl y H–H.",
-          "forming": "En VERDE punteado: enlace C–H.",
-          "movement": "Sustitución del cloro por hidrógeno."
+          "breaking": "Ningún enlace roto todavía; halogenuro de acilo e hidrógeno molecular intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adsorción de los reactivos sobre la superficie de paladio envenenado con BaSO₄."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Pr",
-              "el": "CH₃–CH₂–CH₂",
-              "x": 220,
+              "id": "C2",
+              "el": "CH₃",
+              "x": 225,
               "y": 210
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 440,
+              "x": 380,
               "y": 210,
-              "label": "Cloruro de butanoílo"
+              "label": "Cloruro de Etanoílo"
             },
             {
               "id": "O1",
               "el": "O",
-              "x": 440,
-              "y": 100
+              "x": 380,
+              "y": 95
             },
             {
-              "id": "Cl",
+              "id": "Cl1",
               "el": "Cl",
-              "x": 610,
-              "y": 210,
-              "highlight": "#fbbf24"
+              "x": 505,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 630,
+              "y": 165,
+              "highlight": "#38bdf8"
             },
             {
               "id": "H2",
-              "el": "H₂ / Pt",
-              "x": 780,
-              "y": 210,
-              "highlight": "#38bdf8"
+              "el": "H",
+              "x": 630,
+              "y": 265,
+              "highlight": "#38bdf8",
+              "label": "H₂ / Pd–BaSO₄"
             }
           ],
           "bonds": [
             {
-              "from": "Pr",
+              "from": "C2",
               "to": "C1",
               "order": 1,
               "state": "normal"
@@ -87,47 +114,2841 @@
             },
             {
               "from": "C1",
-              "to": "Cl",
+              "to": "Cl1",
               "order": 1,
-              "state": "breaking"
+              "state": "normal"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Butanal + HCl",
-        "semiStep": "CH₃–CH₂–CH₂–CHO  +  HCl",
-        "semiGlobal": "CH₃–CH₂–CH₂–COCl + H₂ (Pt) ──► CH₃–CH₂–CH₂–CHO + HCl",
-        "desc": "Se obtiene butanal y ácido clorhídrico.",
+        "title": "Ruptura en Rojo: Adición Oxidativa del Enlace C–Cl y Disociación de H₂ sobre Pd",
+        "semiStep": "CH₃–CO–Cl + H₂ (Inserción oxidativa de Pd en C–Cl y activación de H₂)",
+        "semiGlobal": "CH₃–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CHO + HCl",
+        "desc": "El paladio realiza una adición oxidativa rompiendo el enlace C1–Cl y disociando la molécula de H₂ en la superficie catalítica.",
         "legend": {
-          "breaking": "Enlace C–Cl roto.",
-          "forming": "En VERDE sólido: butanal.",
-          "movement": "Producto final obtenido."
+          "breaking": "En ROJO punteado: ruptura del enlace C–Cl y del enlace H–H sobre el paladio.",
+          "forming": "En VERDE punteado: formación de los enlaces C–Pd y Pd–H.",
+          "movement": "Inserción catalítica del paladio entre el carbono acílico y el cloro."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "CH₃–CH₂–CH₂–CHO",
-              "x": 330,
-              "y": 195,
-              "highlight": "#10b981",
-              "label": "Butanal"
+              "id": "C2",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
             },
             {
-              "id": "HCl",
-              "el": "HCl",
-              "x": 690,
-              "y": 195,
+              "id": "C1",
+              "el": "C",
+              "x": 380,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 380,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 505,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Catalizador envenenado"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 625,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 505,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 625,
+              "y": 325,
               "highlight": "#38bdf8"
             }
           ],
-          "bonds": [],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 445,
+              "y1": 210,
+              "cx": 475,
+              "cy": 185,
+              "x2": 495,
+              "y2": 200,
+              "label": "Inserción Pd en C–Cl"
+            },
+            {
+              "type": "full",
+              "x1": 590,
+              "y1": 285,
+              "cx": 555,
+              "cy": 255,
+              "x2": 525,
+              "y2": 230,
+              "label": "Quimisorción H₂"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Acilpaladio en Catalizador Envenenado (Pd / BaSO₄)",
+        "semiStep": "[Complejo acilpaladio en superficie catalítica moderada]",
+        "semiGlobal": "CH₃–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CHO + HCl",
+        "desc": "Se forma el complejo intermediario acilpaladio-hidruro; el soporte de BaSO₄ modera la reactividad para detener la reducción en el aldehído.",
+        "legend": {
+          "breaking": "Enlace C–Cl ya escindido en la esfera de coordinación del paladio.",
+          "forming": "Complejo acilpaladio-hidruro formado; el BaSO₄ modera la actividad catalítica.",
+          "movement": "El envenenamiento con BaSO₄ evita la reducción posterior del aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Complejo acilpaladio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 380,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 505,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 625,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 505,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 625,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación Reductiva: Ruptura C–Pd y Pd–H en Rojo, Formación C–H y H–Cl en Verde",
+        "semiStep": "CH₃–CHO + HCl (Eliminación reductiva)",
+        "semiGlobal": "CH₃–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CHO + HCl",
+        "desc": "Por eliminación reductiva se forma el enlace C1–H del aldehído, se libera HCl y se regenera el paladio metálico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces C–Pd y Pd–H.",
+          "forming": "En VERDE punteado: formación del enlace aldehídico C–H y liberación de H–Cl.",
+          "movement": "Eliminación reductiva que libera el aldehído y regenera el catalizador Pd⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 380,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 452,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 452,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 535,
+              "y": 205,
+              "highlight": "#ef4444",
+              "label": "Se regenera Pd⁰"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 645,
+              "y": 255,
+              "highlight": "#10b981",
+              "label": "HCl"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 735,
+              "y": 255,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 480,
+              "y1": 332,
+              "cx": 445,
+              "cy": 285,
+              "x2": 405,
+              "y2": 235,
+              "label": "Transfiere H al C=O"
+            },
+            {
+              "type": "full",
+              "x1": 575,
+              "y1": 215,
+              "cx": 640,
+              "cy": 225,
+              "x2": 685,
+              "y2": 245,
+              "label": "Libera H–Cl"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal (CH₃–CHO + HCl)",
+        "semiStep": "CH₃–CHO + HCl (Etanal)",
+        "semiGlobal": "CH₃–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CHO + HCl",
+        "desc": "Queda consolidado el etanal (CH₃–CHO) con geometría trigonal plana (120°) junto al subproducto cloruro de hidrógeno (HCl).",
+        "legend": {
+          "breaking": "Sustitución del cloro por hidrógeno completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°) y HCl.",
+          "movement": "Reacción de Rosenmund finalizada sin reducir el aldehído a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 452,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 452,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 555,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 625,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 720,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "rosenmund_propanoilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de Propanoílo + H₂ / Pd–BaSO₄",
+        "semiStep": "CH₃–CH₂–CO–Cl + H₂",
+        "semiGlobal": "CH₃–CH₂–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH₂–CHO + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el cloruro de propanoílo con cada carbono separado (CH₃–CH₂–CO–Cl) y el hidrógeno molecular.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; halogenuro de acilo e hidrógeno molecular intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adsorción de los reactivos sobre la superficie de paladio envenenado con BaSO₄."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 125,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 260,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 400,
+              "y": 210,
+              "label": "Cloruro de Propanoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 400,
+              "y": 95
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 525,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 650,
+              "y": 165,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 650,
+              "y": 265,
+              "highlight": "#38bdf8",
+              "label": "H₂ / Pd–BaSO₄"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Adición Oxidativa del Enlace C–Cl y Disociación de H₂ sobre Pd",
+        "semiStep": "CH₃–CH₂–CO–Cl + H₂ (Inserción oxidativa de Pd en C–Cl y activación de H₂)",
+        "semiGlobal": "CH₃–CH₂–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH₂–CHO + HCl",
+        "desc": "El catalizador de paladio se inserta en el enlace C1–Cl y activa el enlace H–H.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–Cl y del enlace H–H sobre el paladio.",
+          "forming": "En VERDE punteado: formación de los enlaces C–Pd y Pd–H.",
+          "movement": "Inserción catalítica del paladio entre el carbono acílico y el cloro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 125,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 260,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 400,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 400,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 525,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Catalizador envenenado"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 645,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 645,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 465,
+              "y1": 210,
+              "cx": 495,
+              "cy": 185,
+              "x2": 515,
+              "y2": 200,
+              "label": "Inserción Pd en C–Cl"
+            },
+            {
+              "type": "full",
+              "x1": 610,
+              "y1": 285,
+              "cx": 575,
+              "cy": 255,
+              "x2": 545,
+              "y2": 230,
+              "label": "Quimisorción H₂"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Acilpaladio en Catalizador Envenenado (Pd / BaSO₄)",
+        "semiStep": "[Complejo acilpaladio en superficie catalítica moderada]",
+        "semiGlobal": "CH₃–CH₂–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH₂–CHO + HCl",
+        "desc": "Se estabiliza el intermediario acilpaladio en la superficie moderada por BaSO₄.",
+        "legend": {
+          "breaking": "Enlace C–Cl ya escindido en la esfera de coordinación del paladio.",
+          "forming": "Complejo acilpaladio-hidruro formado; el BaSO₄ modera la actividad catalítica.",
+          "movement": "El envenenamiento con BaSO₄ evita la reducción posterior del aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 125,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 260,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 400,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Complejo acilpaladio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 400,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 525,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 645,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 645,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación Reductiva: Ruptura C–Pd y Pd–H en Rojo, Formación C–H y H–Cl en Verde",
+        "semiStep": "CH₃–CH₂–CHO + HCl (Eliminación reductiva)",
+        "semiGlobal": "CH₃–CH₂–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH₂–CHO + HCl",
+        "desc": "La eliminación reductiva transfiere hidrógeno al carbono acílico C1 y desprende HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces C–Pd y Pd–H.",
+          "forming": "En VERDE punteado: formación del enlace aldehídico C–H y liberación de H–Cl.",
+          "movement": "Eliminación reductiva que libera el aldehído y regenera el catalizador Pd⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 125,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 260,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 400,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 472,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 472,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 555,
+              "y": 205,
+              "highlight": "#ef4444",
+              "label": "Se regenera Pd⁰"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 665,
+              "y": 255,
+              "highlight": "#10b981",
+              "label": "HCl"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 755,
+              "y": 255,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 500,
+              "y1": 332,
+              "cx": 465,
+              "cy": 285,
+              "x2": 425,
+              "y2": 235,
+              "label": "Transfiere H al C=O"
+            },
+            {
+              "type": "full",
+              "x1": 595,
+              "y1": 215,
+              "cx": 660,
+              "cy": 225,
+              "x2": 705,
+              "y2": 245,
+              "label": "Libera H–Cl"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propanal (CH₃–CH₂–CHO + HCl)",
+        "semiStep": "CH₃–CH₂–CHO + HCl (Propanal)",
+        "semiGlobal": "CH₃–CH₂–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH₂–CHO + HCl",
+        "desc": "Queda consolidado el propanal (CH₃–CH₂–CHO) con geometría trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución del cloro por hidrógeno completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°) y HCl.",
+          "movement": "Reacción de Rosenmund finalizada sin reducir el aldehído a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 125,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 260,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 400,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 472,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 472,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 575,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 645,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 740,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "rosenmund_isobutirilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de 2-Metilpropanoílo + H₂ / Pd–BaSO₄",
+        "semiStep": "(CH₃)₂CH–CO–Cl + H₂",
+        "semiGlobal": "(CH₃)₂CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► (CH₃)₂CH–CHO + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el cloruro de 2-metilpropanoílo (cloruro de isobutirilo) ramificado y el H₂.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; halogenuro de acilo e hidrógeno molecular intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adsorción de los reactivos sobre la superficie de paladio envenenado con BaSO₄."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 100,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 235,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "label": "Cloruro de 2-Metilpropanoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 510,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 165,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 635,
+              "y": 265,
+              "highlight": "#38bdf8",
+              "label": "H₂ / Pd–BaSO₄"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Adición Oxidativa del Enlace C–Cl y Disociación de H₂ sobre Pd",
+        "semiStep": "(CH₃)₂CH–CO–Cl + H₂ (Inserción oxidativa de Pd en C–Cl y activación de H₂)",
+        "semiGlobal": "(CH₃)₂CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► (CH₃)₂CH–CHO + HCl",
+        "desc": "El paladio rompe selectivamente el enlace C1–Cl mientras quimisorbe el hidrógeno molecular.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–Cl y del enlace H–H sobre el paladio.",
+          "forming": "En VERDE punteado: formación de los enlaces C–Pd y Pd–H.",
+          "movement": "Inserción catalítica del paladio entre el carbono acílico y el cloro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 100,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 235,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 510,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Catalizador envenenado"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 630,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 510,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 450,
+              "y1": 210,
+              "cx": 480,
+              "cy": 185,
+              "x2": 500,
+              "y2": 200,
+              "label": "Inserción Pd en C–Cl"
+            },
+            {
+              "type": "full",
+              "x1": 595,
+              "y1": 285,
+              "cx": 560,
+              "cy": 255,
+              "x2": 530,
+              "y2": 230,
+              "label": "Quimisorción H₂"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Acilpaladio en Catalizador Envenenado (Pd / BaSO₄)",
+        "semiStep": "[Complejo acilpaladio en superficie catalítica moderada]",
+        "semiGlobal": "(CH₃)₂CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► (CH₃)₂CH–CHO + HCl",
+        "desc": "Se forma el complejo acilpaladio conservando intacta la ramificación isopropilo.",
+        "legend": {
+          "breaking": "Enlace C–Cl ya escindido en la esfera de coordinación del paladio.",
+          "forming": "Complejo acilpaladio-hidruro formado; el BaSO₄ modera la actividad catalítica.",
+          "movement": "El envenenamiento con BaSO₄ evita la reducción posterior del aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 100,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 235,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Complejo acilpaladio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 510,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 510,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación Reductiva: Ruptura C–Pd y Pd–H en Rojo, Formación C–H y H–Cl en Verde",
+        "semiStep": "(CH₃)₂CH–CHO + HCl (Eliminación reductiva)",
+        "semiGlobal": "(CH₃)₂CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► (CH₃)₂CH–CHO + HCl",
+        "desc": "Por eliminación reductiva se forma el enlace C1–H y se libera HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces C–Pd y Pd–H.",
+          "forming": "En VERDE punteado: formación del enlace aldehídico C–H y liberación de H–Cl.",
+          "movement": "Eliminación reductiva que libera el aldehído y regenera el catalizador Pd⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 100,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 235,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 457,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 457,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 540,
+              "y": 205,
+              "highlight": "#ef4444",
+              "label": "Se regenera Pd⁰"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 650,
+              "y": 255,
+              "highlight": "#10b981",
+              "label": "HCl"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 740,
+              "y": 255,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 332,
+              "cx": 450,
+              "cy": 285,
+              "x2": 410,
+              "y2": 235,
+              "label": "Transfiere H al C=O"
+            },
+            {
+              "type": "full",
+              "x1": 580,
+              "y1": 215,
+              "cx": 645,
+              "cy": 225,
+              "x2": 690,
+              "y2": 245,
+              "label": "Libera H–Cl"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Metilpropanal ((CH₃)₂CH–CHO + HCl)",
+        "semiStep": "(CH₃)₂CH–CHO + HCl (2-Metilpropanal)",
+        "semiGlobal": "(CH₃)₂CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► (CH₃)₂CH–CHO + HCl",
+        "desc": "Queda consolidado el 2-metilpropanal ((CH₃)₂CH–CHO) con el grupo –CHO en disposición trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución del cloro por hidrógeno completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°) y HCl.",
+          "movement": "Reacción de Rosenmund finalizada sin reducir el aldehído a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 100,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 235,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Metilpropanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 457,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 457,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 560,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 725,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "rosenmund_benzoilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de Benzoílo + H₂ / Pd–BaSO₄",
+        "semiStep": "C₆H₅–CO–Cl + H₂",
+        "semiGlobal": "C₆H₅–CO–Cl + H₂ ──(Pd / BaSO₄)──► C₆H₅–CHO + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el cloruro de benzoílo (C₆H₅–CO–Cl) y el hidrógeno molecular sobre Pd / BaSO₄.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; halogenuro de acilo e hidrógeno molecular intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adsorción de los reactivos sobre la superficie de paladio envenenado con BaSO₄."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "label": "Cloruro de Benzoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 510,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 165,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 635,
+              "y": 265,
+              "highlight": "#38bdf8",
+              "label": "H₂ / Pd–BaSO₄"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Adición Oxidativa del Enlace C–Cl y Disociación de H₂ sobre Pd",
+        "semiStep": "C₆H₅–CO–Cl + H₂ (Inserción oxidativa de Pd en C–Cl y activación de H₂)",
+        "semiGlobal": "C₆H₅–CO–Cl + H₂ ──(Pd / BaSO₄)──► C₆H₅–CHO + HCl",
+        "desc": "El paladio realiza la adición oxidativa sobre el enlace C1–Cl dejando intacto el anillo aromático.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–Cl y del enlace H–H sobre el paladio.",
+          "forming": "En VERDE punteado: formación de los enlaces C–Pd y Pd–H.",
+          "movement": "Inserción catalítica del paladio entre el carbono acílico y el cloro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 510,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Catalizador envenenado"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 630,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 510,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 450,
+              "y1": 210,
+              "cx": 480,
+              "cy": 185,
+              "x2": 500,
+              "y2": 200,
+              "label": "Inserción Pd en C–Cl"
+            },
+            {
+              "type": "full",
+              "x1": 595,
+              "y1": 285,
+              "cx": 560,
+              "cy": 255,
+              "x2": 530,
+              "y2": 230,
+              "label": "Quimisorción H₂"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Acilpaladio en Catalizador Envenenado (Pd / BaSO₄)",
+        "semiStep": "[Complejo acilpaladio en superficie catalítica moderada]",
+        "semiGlobal": "C₆H₅–CO–Cl + H₂ ──(Pd / BaSO₄)──► C₆H₅–CHO + HCl",
+        "desc": "Se forma el complejo benzoilpaladio-hidruro moderado por el sulfato de bario.",
+        "legend": {
+          "breaking": "Enlace C–Cl ya escindido en la esfera de coordinación del paladio.",
+          "forming": "Complejo acilpaladio-hidruro formado; el BaSO₄ modera la actividad catalítica.",
+          "movement": "El envenenamiento con BaSO₄ evita la reducción posterior del aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Complejo acilpaladio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 510,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 510,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación Reductiva: Ruptura C–Pd y Pd–H en Rojo, Formación C–H y H–Cl en Verde",
+        "semiStep": "C₆H₅–CHO + HCl (Eliminación reductiva)",
+        "semiGlobal": "C₆H₅–CO–Cl + H₂ ──(Pd / BaSO₄)──► C₆H₅–CHO + HCl",
+        "desc": "La eliminación reductiva forma el enlace C1–H y desprende cloruro de hidrógeno (HCl).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces C–Pd y Pd–H.",
+          "forming": "En VERDE punteado: formación del enlace aldehídico C–H y liberación de H–Cl.",
+          "movement": "Eliminación reductiva que libera el aldehído y regenera el catalizador Pd⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 457,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 457,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 540,
+              "y": 205,
+              "highlight": "#ef4444",
+              "label": "Se regenera Pd⁰"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 650,
+              "y": 255,
+              "highlight": "#10b981",
+              "label": "HCl"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 740,
+              "y": 255,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 332,
+              "cx": 450,
+              "cy": 285,
+              "x2": 410,
+              "y2": 235,
+              "label": "Transfiere H al C=O"
+            },
+            {
+              "type": "full",
+              "x1": 580,
+              "y1": 215,
+              "cx": 645,
+              "cy": 225,
+              "x2": 690,
+              "y2": 245,
+              "label": "Libera H–Cl"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzaldehído (C₆H₅–CHO + HCl)",
+        "semiStep": "C₆H₅–CHO + HCl (Benzaldehído)",
+        "semiGlobal": "C₆H₅–CO–Cl + H₂ ──(Pd / BaSO₄)──► C₆H₅–CHO + HCl",
+        "desc": "Queda consolidado el benzaldehído (C₆H₅–CHO) con geometría trigonal plana (120°) junto a HCl, sin hidrogenar el anillo bencénico.",
+        "legend": {
+          "breaking": "Sustitución del cloro por hidrógeno completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°) y HCl.",
+          "movement": "Reacción de Rosenmund finalizada sin reducir el aldehído a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 457,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 457,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 560,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 725,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "rosenmund_2butenoilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de 2-Butenoílo + H₂ / Pd–BaSO₄",
+        "semiStep": "CH₃–CH=CH–CO–Cl + H₂",
+        "semiGlobal": "CH₃–CH=CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH=CH–CHO + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el cloruro de 2-butenoílo (con doble enlace C3=C2) y el H₂ sobre Pd / BaSO₄.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; halogenuro de acilo e hidrógeno molecular intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adsorción de los reactivos sobre la superficie de paladio envenenado con BaSO₄."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 460,
+              "y": 210,
+              "label": "Cloruro de 2-Butenoílo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 710,
+              "y": 165,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 710,
+              "y": 265,
+              "highlight": "#38bdf8",
+              "label": "H₂ / Pd–BaSO₄"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Adición Oxidativa del Enlace C–Cl y Disociación de H₂ sobre Pd",
+        "semiStep": "CH₃–CH=CH–CO–Cl + H₂ (Inserción oxidativa de Pd en C–Cl y activación de H₂)",
+        "semiGlobal": "CH₃–CH=CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH=CH–CHO + HCl",
+        "desc": "El paladio envenenado ataca selectivamente el enlace acílico C1–Cl sin saturar el doble enlace C3=C2.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–Cl y del enlace H–H sobre el paladio.",
+          "forming": "En VERDE punteado: formación de los enlaces C–Pd y Pd–H.",
+          "movement": "Inserción catalítica del paladio entre el carbono acílico y el cloro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 460,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 585,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Catalizador envenenado"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 705,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 585,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 705,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H1",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 210,
+              "cx": 555,
+              "cy": 185,
+              "x2": 575,
+              "y2": 200,
+              "label": "Inserción Pd en C–Cl"
+            },
+            {
+              "type": "full",
+              "x1": 670,
+              "y1": 285,
+              "cx": 635,
+              "cy": 255,
+              "x2": 605,
+              "y2": 230,
+              "label": "Quimisorción H₂"
+            }
+          ],
           "texts": [
             {
-              "x": 540,
-              "y": 202,
-              "text": "+"
+              "x": 460,
+              "y": 38,
+              "text": "Catalizador envenenado (Pd/BaSO₄): reduce –COCl a –CHO deteniéndose antes de reducir C=C o –CHO",
+              "size": 13.5,
+              "color": "#fbbf24"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Acilpaladio en Catalizador Envenenado (Pd / BaSO₄)",
+        "semiStep": "[Complejo acilpaladio en superficie catalítica moderada]",
+        "semiGlobal": "CH₃–CH=CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH=CH–CHO + HCl",
+        "desc": "Se forma el complejo acilpaladio conservando intacta la insaturación conjugada C3=C2.",
+        "legend": {
+          "breaking": "Enlace C–Cl ya escindido en la esfera de coordinación del paladio.",
+          "forming": "Complejo acilpaladio-hidruro formado; el BaSO₄ modera la actividad catalítica.",
+          "movement": "El envenenamiento con BaSO₄ evita la reducción posterior del aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 460,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Complejo acilpaladio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 705,
+              "y": 210
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 585,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 705,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "Cl1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Pd",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación Reductiva: Ruptura C–Pd y Pd–H en Rojo, Formación C–H y H–Cl en Verde",
+        "semiStep": "CH₃–CH=CH–CHO + HCl (Eliminación reductiva)",
+        "semiGlobal": "CH₃–CH=CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH=CH–CHO + HCl",
+        "desc": "La eliminación reductiva forma el enlace C1–H y libera HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los enlaces C–Pd y Pd–H.",
+          "forming": "En VERDE punteado: formación del enlace aldehídico C–H y liberación de H–Cl.",
+          "movement": "Eliminación reductiva que libera el aldehído y regenera el catalizador Pd⁰."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 460,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 532,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 532,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pd",
+              "el": "Pd",
+              "x": 615,
+              "y": 205,
+              "highlight": "#ef4444",
+              "label": "Se regenera Pd⁰"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 725,
+              "y": 255,
+              "highlight": "#10b981",
+              "label": "HCl"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 815,
+              "y": 255,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Pd",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Pd",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 560,
+              "y1": 332,
+              "cx": 525,
+              "cy": 285,
+              "x2": 485,
+              "y2": 235,
+              "label": "Transfiere H al C=O"
+            },
+            {
+              "type": "full",
+              "x1": 655,
+              "y1": 215,
+              "cx": 720,
+              "cy": 225,
+              "x2": 765,
+              "y2": 245,
+              "label": "Libera H–Cl"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Butenal / Crotonaldehído (CH₃–CH=CH–CHO + HCl)",
+        "semiStep": "CH₃–CH=CH–CHO + HCl (2-Butenal / Crotonaldehído)",
+        "semiGlobal": "CH₃–CH=CH–CO–Cl + H₂ ──(Pd / BaSO₄)──► CH₃–CH=CH–CHO + HCl",
+        "desc": "Queda consolidado el 2-butenal o crotonaldehído (CH₃–CH=CH–CHO) con geometría trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución del cloro por hidrógeno completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°) y HCl.",
+          "movement": "Reacción de Rosenmund finalizada sin reducir el aldehído a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 460,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Butenal / Crotonaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 532,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 532,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 635,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 705,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl1",
+              "el": "Cl",
+              "x": 800,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H2",
+              "to": "Cl1",
+              "order": 1,
+              "state": "new"
             }
           ]
         }
