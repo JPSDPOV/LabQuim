@@ -3423,7 +3423,14 @@
                     const baseSize = tx.size || 20;
                     const finalSize = mobile ? Math.round(baseSize * 1.45) : baseSize;
                     expandBounds(txX - 15, txY - finalSize, txX + 15, txY + 8);
-                    const txCol = (lightMode && (!tx.color || tx.color === '#cbd5e1' || tx.color === '#38bdf8')) ? '#0f172a' : (tx.color || '#cbd5e1');
+                    let txCol = tx.color || '#cbd5e1';
+                    if (lightMode) {
+                        if (!tx.color || tx.color === '#cbd5e1' || tx.color === '#38bdf8') {
+                            txCol = '#0f172a';
+                        } else if (/^(#fbbf24|#f59e0b|#fde047|#eab308|yellow|amber)$/i.test(tx.color.trim())) {
+                            txCol = '#c2410c';
+                        }
+                    }
                     svgOut += `<text x="${txX}" y="${txY}" text-anchor="middle" fill="${txCol}" font-size="${finalSize}" font-weight="800" opacity="${fadeT}">${tx.text}</text>`;
                 });
             }
