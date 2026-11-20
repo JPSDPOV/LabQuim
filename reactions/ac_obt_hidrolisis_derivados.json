@@ -1,0 +1,623 @@
+{
+  "category": "obtencion",
+  "title": "4) Hidrólisis de Derivados de Ácido (Ésteres, Lactonas, Amidas, Lactamas, Anhídridos y Haluros → R–COOH)",
+  "natureBadge": "Sustitución Nucleofílica Acílica • Derivado de Ácido (R–CO–Z) + H₂O ──► Ácido Carboxílico (R–COOH) + H–Z",
+  "deltaH": "ΔH° < 0 (Muy exotérmica en haluros y anhídridos; en equilibrio reversible en ésteres y requiere catálisis enérgica en amidas)",
+  "description": "Obtención de ácidos carboxílicos mediante hidrólisis (reacción con agua) de cualquiera de sus derivados funcionales (halogenuros de acilo, anhídridos, ésteres, lactonas, amidas y lactamas) mediante un mecanismo de sustitución nucleofílica acílica (adición–eliminación):\n1) Orden de facilidad de hidrólisis: Haluros de acilo (R–COCl, reaccionan vigorosamente con agua fría) > Anhídridos ((R–CO)₂O, agua tibia) > Ésteres y Lactonas (R–COOR', requieren catálisis ácida H⁺/Δ o básica OH⁻/Δ seguida de H₃O⁺) > Amidas y Lactamas (R–CONH₂, las menos reactivas por resonancia C=N⁺; requieren calentamiento prolongado con ácido fuerte HCl/H₂SO₄ o base fuerte NaOH).\n2) Hidrólisis de derivados cíclicos (Lactonas y Lactamas — Preguntas frecuentes de examen 2023–2026): la hidrólisis abre el anillo formando en la MISMA molécula el grupo ácido carboxílico y el grupo alcohol o amina: Lactona + H₂O/H⁺ ──► Hidroxiácido (ej. β-butanolactona → ácido 3-hidroxibutanoico); Lactama + H₂O/H⁺ ──► Aminoácido (ej. β-propanolactama → ácido 3-aminopropanoico).",
+  "meta": {
+    "grupoFuncional": "Ácidos Carboxílicos (R–COOH), Hidroxiácidos (desde Lactonas) y Aminoácidos (desde Lactamas)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica (adición de H₂O al carbonilo → intermediario tetraédrico → eliminación del grupo saliente Z)",
+    "naturaleza": "Por etapas (protonación del carbonilo → ataque nucleofílico de H₂O → intermediario tetraédrico → transferencia protónica → expulsión de Cl⁻, RCOO⁻, R'OH o NH₄⁺).",
+    "rupturaIntermediarios": "Ruptura de enlaces C–Cl, C–O(éster/anhídrido/lactona) o C–N(amida/lactama) y O–H del agua; intermediario tetraédrico; formación de enlace C–OH carboxílico.",
+    "detalleMecanismo": "R–CO–Z + H₂O ──(H⁺ o OH⁻ / H₃O⁺)──► R–COOH + H–Z",
+    "reactivosCondiciones": "• Haluros de acilo: H₂O a temperatura ambiente.\n• Anhídridos: H₂O (calentamiento suave).\n• Ésteres y Lactonas: H₂O / H₂SO₄ o HCl (Δ) [reversible] o NaOH ac. (Δ) seguido de H₃O⁺ [irreversible].\n• Amidas y Lactamas: HCl 6 M / H₂O (reflujo Δ) o NaOH ac. (Δ) + H₃O⁺.",
+    "rolReactivos": "• Sustrato acílico: Cloruro de acilo, anhídrido, éster, lactona, amida o lactama.\n• Nucleófilo: Agua (H₂O) en medio ácido o ion hidróxido (OH⁻) en medio básico.\n• Catalizador: H⁺ (aumenta la electrofilia del carbonilo C=O y convierte grupos salientes malos como –OR y –NH₂ en ROH y NH₃).",
+    "reglasObs": "• Hidrólisis de anhídrido cíclico (ej. anhídrido maleico + H₂O → ácido maleico; anhídrido glutárico + H₂O → ácido glutárico): produce un ácido dicarboxílico.\n• Hidrólisis de lactonas y lactamas (Examen Febrero 2026): β-butanolactona + H₂O → ácido 3-hidroxibutanoico; β-propanolactama + H₂O → ácido 3-aminopropanoico.\n• Si se realiza hidrólisis básica (saponificación), se obtiene inicialmente el carboxilato (R–COO⁻Na⁺) y debe añadirse H₃O⁺ para liberar el ácido carboxílico (R–COOH)."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt4_ester_propanoato",
+      "name": "Propanoato de Metilo + H₂O / H⁺ (Δ) ⇄ Ácido Propanoico + Metanol [Hidrólisis de Éster]",
+      "catalyst": "H₂O / H₂SO₄ (Reflujo Δ)"
+    },
+    {
+      "id": "ac_obt4_lactona_hidroxiacido",
+      "name": "β-Butanolactona + H₂O / H⁺ ──► Ácido 3-Hidroxibutanoico [Hidrólisis de Lactona — Examen 2026]",
+      "catalyst": "H₂O / H⁺ (Apertura de anillo)"
+    },
+    {
+      "id": "ac_obt4_amida_nmetil",
+      "name": "N-Metilpropanamida + H₂O / HCl (Δ) ──► Ácido Propanoico + Cloruro de Metilamonio [Amida]",
+      "catalyst": "H₂O / HCl concentrado (Δ)"
+    },
+    {
+      "id": "ac_obt4_anhidrido_haluro",
+      "name": "Anhídrido Acético (o Cloruro de Propanoilo) + H₂O ──► Ácido Carboxílico [Derivados Reactivos]",
+      "catalyst": "H₂O (Hidrólisis rápida)"
+    }
+  ],
+  "catalysts": [
+    "H₂O / H₂SO₄ (Reflujo Δ)",
+    "H₂O / H⁺ (Apertura de anillo)",
+    "H₂O / HCl concentrado (Δ)",
+    "H₂O (Hidrólisis rápida)"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt4_ester_propanoato": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanoato de Metilo + Agua (Catálisis Ácida H⁺)",
+        "semiStep": "CH₃–CH₂–CO–OCH₃ + H–OH (cat. H⁺)",
+        "semiGlobal": "CH₃–CH₂–COOCH₃ + H₂O ⇄(H⁺, Δ) CH₃–CH₂–COOH + CH₃–OH",
+        "desc": "Se observan el propanoato de metilo (éster) y una molécula de agua en medio ácido. Es la reacción inversa exacta de la esterificación de Fischer.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace acilo-oxígeno (C–OCH₃) intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del oxígeno carbonílico seguida de ataque nucleofílico del agua al carbono C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "C Carbonilo (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95
+            },
+            {
+              "id": "OMe",
+              "el": "OCH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2O",
+              "el": "H–OH (H⁺)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OMe",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Intermediario Tetraédrico y Eliminación de Metanol",
+        "semiStep": "[CH₃CH₂–C(OH)₂–OCH₃]⁺ ──► CH₃CH₂–COOH + CH₃OH",
+        "semiGlobal": "CH₃–CH₂–COOCH₃ + H₂O ⇄(H⁺, Δ) CH₃–CH₂–COOH + CH₃–OH",
+        "desc": "Desde el intermediario tetraédrico protonado en el grupo metoxi, se regenera el doble enlace C=O y se expulsa metanol neutro (CH₃OH).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace acilo-metoxi (C1–OCH₃).",
+          "forming": "En VERDE punteado: consolidación del grupo –OH carboxílico.",
+          "movement": "El exceso de agua desplaza el equilibrio hacia el ácido carboxílico libre."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "MeOH",
+              "el": "HOCH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale Metanol"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "MeOH",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Propanoico (CH₃–CH₂–COOH) + Metanol",
+        "semiStep": "CH₃–CH₂–COOH + CH₃–OH",
+        "semiGlobal": "CH₃–CH₂–COOCH₃ + H₂O ⇄(H⁺, Δ) CH₃–CH₂–COOH + CH₃–OH",
+        "desc": "Queda consolidado el ácido propanoico junto con el metanol.",
+        "legend": {
+          "breaking": "Hidrólisis del éster completada.",
+          "forming": "En VERDE sólido: ácido propanoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Propanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "MeOH",
+              "el": "+ CH₃OH",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt4_lactona_hidroxiacido": [
+      {
+        "title": "Estado Inicial Desarrollado: β-Butanolactona (Éster Cíclico de 4 Miembros) + H₂O / H⁺",
+        "semiStep": "β-Butanolactona + H₂O / H⁺",
+        "semiGlobal": "β-Butanolactona + H₂O ──(H⁺)──► CH₃–CH(OH)–CH₂–COOH (Ácido 3-Hidroxibutanoico)",
+        "desc": "Las lactonas son ésteres cíclicos intramoleculares; en la β-butanolactona el oxígeno éster está unido al carbono C3 (posición β).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; anillo lactónico listo para abrirse.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del agua sobre el carbono carbonílico C1 de la lactona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 455,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_ring",
+              "el": "O",
+              "x": 455,
+              "y": 275,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 315,
+              "y": 145
+            },
+            {
+              "id": "C3",
+              "el": "CH(CH₃)",
+              "x": 315,
+              "y": 275
+            },
+            {
+              "id": "H2O",
+              "el": "H–OH (H⁺)",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O_ring",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "O_ring",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido 3-Hidroxibutanoico / Ácido β-Hidroxibutírico",
+        "semiStep": "CH₃–CH(OH)–CH₂–COOH (Hidroxiácido bifuncional)",
+        "semiGlobal": "β-Butanolactona + H₂O ──(H⁺)──► CH₃–CH(OH)–CH₂–COOH (Ácido 3-Hidroxibutanoico)",
+        "desc": "Al romperse el enlace acilo-oxígeno C1–O, la cadena queda abierta con el grupo ácido carboxílico en C1 y el grupo hidroxilo en C3 (β).",
+        "legend": {
+          "breaking": "Apertura hidrolítica del anillo lactónico completada.",
+          "forming": "En VERDE sólido: ácido carboxílico en C1 y grupo alcohol en C3.",
+          "movement": "Pregunta directa del examen de ingreso Febrero 2026."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃–CH(OH)",
+              "x": 215,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "–OH en C3 (β)"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido 3-Hidroxibutanoico"
+            },
+            {
+              "id": "C1",
+              "el": "COOH",
+              "x": 575,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "–COOH en C1"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt4_amida_nmetil": [
+      {
+        "title": "Estado Inicial Desarrollado: N-Metilpropanamida + Agua / HCl Concentrado (Δ)",
+        "semiStep": "CH₃–CH₂–CO–NH–CH₃ + H₂O + HCl (Δ)",
+        "semiGlobal": "CH₃CH₂CONHCH₃ + H₂O + HCl ──(Δ)──► CH₃CH₂COOH + CH₃NH₃⁺Cl⁻",
+        "desc": "Debido a la estabilización por resonancia de las amidas, se requiere ácido fuerte (HCl) y calentamiento prolongado para hidrolizar el enlace C–N.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace amida C1–N intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del nitrógeno y ataque del agua sobre C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95
+            },
+            {
+              "id": "NHMe",
+              "el": "NH–CH₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2O",
+              "el": "H₂O / HCl (Δ)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NHMe",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Propanoico + Cloruro de Metilamonio (CH₃NH₃⁺Cl⁻)",
+        "semiStep": "CH₃–CH₂–COOH + CH₃–NH₃⁺Cl⁻",
+        "semiGlobal": "CH₃CH₂CONHCH₃ + H₂O + HCl ──(Δ)──► CH₃CH₂COOH + CH₃NH₃⁺Cl⁻",
+        "desc": "En medio ácido, la amina liberada se protona irreversiblemente formando la sal de amonio, lo que desplaza completamente la hidrólisis hacia el ácido propanoico.",
+        "legend": {
+          "breaking": "Ruptura del enlace amida C–N completada.",
+          "forming": "En VERDE sólido: ácido propanoico y sal de amonio.",
+          "movement": "Reacción irreversible en medio ácido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Propanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 515,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Sal",
+              "el": "+ CH₃NH₃⁺Cl⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt4_anhidrido_haluro": [
+      {
+        "title": "Estado Inicial Desarrollado: Anhídrido Acético (o Cloruro de Acilo) + Agua",
+        "semiStep": "CH₃–CO–O–CO–CH₃ + H–OH",
+        "semiGlobal": "(CH₃CO)₂O + H₂O ──► 2 CH₃–COOH  |  R–COCl + H₂O ──► R–COOH + HCl",
+        "desc": "Los halogenuros de acilo y anhídridos son los derivados más reactivos y se hidrolizan rápidamente con agua sin necesidad de catalizadores fuertes.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace acilo-carboxilato (o C–Cl) listo para escindirse.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque directo del agua al carbonilo electrófilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac1",
+              "el": "CH₃–CO",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "O_br",
+              "el": "O",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ac2",
+              "el": "CO–CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O",
+              "el": "H–OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac1",
+              "to": "O_br",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_br",
+              "to": "Ac2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: 2 Moléculas de Ácido Acético (2 CH₃–COOH)",
+        "semiStep": "CH₃–COOH + CH₃–COOH",
+        "semiGlobal": "(CH₃CO)₂O + H₂O ──► 2 CH₃–COOH  |  R–COCl + H₂O ──► R–COOH + HCl",
+        "desc": "Cada mol de anhídrido acético produce 2 moles de ácido acético (y cada mol de cloruro de acilo produce 1 mol de ácido carboxílico + HCl).",
+        "legend": {
+          "breaking": "Hidrólisis rápida completada.",
+          "forming": "En VERDE sólido: dos ácidos carboxílicos.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "P1",
+              "el": "CH₃–COOH",
+              "x": 245,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Plus",
+              "el": "+",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "P2",
+              "el": "HOOC–CH₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
