@@ -1,0 +1,476 @@
+{
+  "category": "reacciones",
+  "title": "B.3- Formación de Haluros de Acilo con SOCl₂, PCl₅ o PCl₃ (→ R–COCl + SO₂↑ + HCl↑)",
+  "natureBadge": "Activación de Ácidos Carboxílicos • R–COOH + SOCl₂ / PCl₅ / PCl₃ ──► Halogenuro de Acilo (R–COCl)",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; convierte al ácido carboxílico en su derivado más reactivo)",
+  "description": "Conversión de ácidos carboxílicos en halogenuros de acilo (generalmente cloruros de acilo, R–COCl, o bromuros de acilo con PBr₃) mediante agentes halogenantes inorgánicos como cloruro de tionilo (SOCl₂), pentacloruro de fósforo (PCl₅) o tricloruro de fósforo (PCl₃):\n1) Necesidad de activación previa: el ion cloruro (Cl⁻) es una base muy débil y mal nucleófilo para desplazar directamente al grupo –OH de un ácido carboxílico. Por ello, los reactivos como SOCl₂ o PCl₃/PCl₅ transforman primero el –OH en un excelente grupo saliente (clorosulfito –OSOCl o diclorofosfito –OPCl₂) antes del ataque interno del cloruro.\n2) Ventaja sintética del Cloruro de Tionilo (SOCl₂): es el reactivo preferido en laboratorio e industria porque los dos subproductos formados —dióxido de azufre (SO₂↑) y cloruro de hidrógeno (HCl↑)— son GASES que escapan del medio de reacción, desplazando completamente el equilibrio y dejando el cloruro de acilo puro.\n3) Utilidad como intermediario universal: dado que los haluros de acilo ocupan el primer lugar en reactividad (Haluro de acilo > Anhídrido > Éster > Amida), permiten sintetizar todos los demás derivados de ácido en condiciones suaves.",
+  "meta": {
+    "grupoFuncional": "Halogenuros de Ácido / Haluros de Acilo (R–COCl / R–COBr)",
+    "reaccionMecanismo": "Activación del grupo hidroxilo carboxílico seguida de sustitución nucleofílica acílica interna por Cl⁻",
+    "naturaleza": "Por etapas irreversible (formación de intermediario clorosulfito/fosfito mixto → ataque de Cl⁻ al carbonilo → intermediario tetraédrico → eliminación de SO₂↑ + HCl↑).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y S–Cl (o P–Cl); intermediario anhídrido mixto de clorosulfito (R–CO–O–SOCl); formación de enlace acilo-halógeno C1–Cl.",
+    "detalleMecanismo": "R–COOH + SOCl₂ ──► R–COCl + SO₂↑ + HCl↑  |  3 R–COOH + PCl₃ ──► 3 R–COCl + H₃PO₃",
+    "reactivosCondiciones": "Ácido carboxílico + Cloruro de tionilo (SOCl₂, reflujo suave), Pentacloruro de fósforo (PCl₅), Tricloruro de fósforo (PCl₃) o Tribromuro de fósforo (PBr₃) en condiciones anhidras.",
+    "rolReactivos": "• Sustrato: Ácido carboxílico alifático o aromático (R–COOH).\n• Reactivo activante y fuente de halógeno: SOCl₂ (subproductos gaseosos SO₂↑ + HCl↑), PCl₅ (subproductos POCl₃ + HCl↑), PCl₃ (subproducto H₃PO₃) o PBr₃ (→ bromuro de acilo R–COBr).",
+    "reglasObs": "• Estequiometría exacta de cátedra (Diap. 856–857):\n  - 1 R–COOH + 1 SOCl₂ ──► 1 R–COCl + SO₂↑ + HCl↑\n  - 1 R–COOH + 1 PCl₅ ──► 1 R–COCl + POCl₃ + HCl↑\n  - 3 R–COOH + 1 PCl₃ ──► 3 R–COCl + H₃PO₃ (ácido fosforoso)\n• Es el ÚNICO método directo para subir en la escala de reactividad de derivados de ácido (Ácido carboxílico → Cloruro de acilo)."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn4_propanoico_socl2",
+      "name": "Ácido Propanoico + SOCl₂ ──► Cloruro de Propanoilo + SO₂↑ + HCl↑ [Método Óptimo — Gases]",
+      "catalyst": "SOCl₂ (Cloruro de tionilo, Δ)"
+    },
+    {
+      "id": "ac_rxn4_propanoico_pcl3",
+      "name": "3 Ácido Propanoico + PCl₃ ──► 3 Cloruro de Propanoilo + H₃PO₃ [Ejemplo de Cátedra Diap. 857]",
+      "catalyst": "PCl₃ (Tricloruro de fósforo)"
+    },
+    {
+      "id": "ac_rxn4_benzoico_pcl5",
+      "name": "Ácido Benzoico + PCl₅ ──► Cloruro de Benzoilo + POCl₃ + HCl↑ [Aromático]",
+      "catalyst": "PCl₅ (Pentacloruro de fósforo)"
+    },
+    {
+      "id": "ac_rxn4_benzoico_pbr3",
+      "name": "3 Ácido Benzoico + PBr₃ ──► 3 Bromuro de Benzoilo + H₃PO₃ [Bromuro de Acilo]",
+      "catalyst": "PBr₃ (Tribromuro de fósforo)"
+    }
+  ],
+  "catalysts": [
+    "SOCl₂ (Cloruro de tionilo, Δ)",
+    "PCl₃ (Tricloruro de fósforo)",
+    "PCl₅ (Pentacloruro de fósforo)",
+    "PBr₃ (Tribromuro de fósforo)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn4_propanoico_socl2": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Propanoico + Cloruro de Tionilo (SOCl₂)",
+        "semiStep": "CH₃–CH₂–COOH + Cl–SO–Cl",
+        "semiGlobal": "CH₃–CH₂–COOH + SOCl₂ ──► CH₃–CH₂–COCl + SO₂↑ + HCl↑",
+        "desc": "Se observan el ácido propanoico y el cloruro de tionilo (SOCl₂), cuyo átomo de azufre electrofílico es atacado por el oxígeno del ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido propanoico y SOCl₂ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del grupo –OH carboxílico sobre el azufre del SOCl₂ expulsando HCl↑."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "SOCl2",
+              "el": "SOCl₂",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Agente Clorante"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Intermediario Clorosulfito y Ataque de Cl⁻",
+        "semiStep": "[CH₃CH₂–CO–O–SOCl] + Cl⁻ ──► CH₃CH₂–COCl + SO₂↑",
+        "semiGlobal": "CH₃–CH₂–COOH + SOCl₂ ──► CH₃–CH₂–COCl + SO₂↑ + HCl↑",
+        "desc": "El grupo –O–SOCl es un excelente grupo saliente; el ion cloruro (Cl⁻) ataca al carbonilo C1 formando el enlace C1–Cl y descomponiendo el grupo saliente en SO₂ gaseoso.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace acilo-oxígeno C1–OSOCl.",
+          "forming": "En VERDE punteado: formación del nuevo enlace acilo-cloro C1–Cl.",
+          "movement": "Desprendimiento de SO₂↑ y HCl↑ gaseosos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "Cl_new",
+              "el": "Cl",
+              "x": 365,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "SO2_l",
+              "el": "SO₂↑ + HCl↑",
+              "x": 575,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Escapan gases"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl_new",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "SO2_l",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Cloruro de Propanoilo (CH₃–CH₂–COCl) + SO₂↑ + HCl↑",
+        "semiStep": "CH₃–CH₂–COCl + SO₂↑ + HCl↑",
+        "semiGlobal": "CH₃–CH₂–COOH + SOCl₂ ──► CH₃–CH₂–COCl + SO₂↑ + HCl↑",
+        "desc": "Queda consolidado el cloruro de propanoilo puro (los subproductos SO₂ y HCl abandonan el recipiente como gases).",
+        "legend": {
+          "breaking": "Activación completada.",
+          "forming": "En VERDE sólido: grupo cloruro de acilo (–COCl).",
+          "movement": "Derivado más reactivo listo para síntesis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cloruro de Propanoilo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_new",
+              "el": "Cl",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Gases",
+              "el": "+ SO₂↑ + HCl↑",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Cl_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn4_propanoico_pcl3": [
+      {
+        "title": "Estado Inicial Desarrollado: 3 Ácido Propanoico + Tricloruro de Fósforo (PCl₃)",
+        "semiStep": "3 CH₃–CH₂–COOH + PCl₃",
+        "semiGlobal": "3 CH₃–CH₂–COOH + PCl₃ ──► 3 CH₃–CH₂–COCl + H₃PO₃",
+        "desc": "Cada molécula de PCl₃ cede sus tres átomos de cloro a tres moléculas de ácido propanoico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución del –OH por –Cl en 3 equivalentes de ácido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "3 CH₃–CH₂–COOH",
+              "x": 255,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "PCl3",
+              "el": "+ PCl₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: 3 Cloruro de Propanoilo + Ácido Fosforoso (H₃PO₃)",
+        "semiStep": "3 CH₃–CH₂–COCl + H₃PO₃",
+        "semiGlobal": "3 CH₃–CH₂–COOH + PCl₃ ──► 3 CH₃–CH₂–COCl + H₃PO₃",
+        "desc": "Quedan consolidados 3 moles de cloruro de propanoilo más ácido fosforoso (H₃PO₃). Reacción exacta de la diapositiva 857 de cátedra.",
+        "legend": {
+          "breaking": "Halogenación completada.",
+          "forming": "En VERDE sólido: cloruro de propanoilo + H₃PO₃.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "3 CH₃–CH₂–COCl",
+              "x": 265,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Sub",
+              "el": "+ H₃PO₃ (Ác. fosforoso)",
+              "x": 565,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn4_benzoico_pcl5": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico + Pentacloruro de Fósforo (PCl₅)",
+        "semiStep": "C₆H₅–COOH + PCl₅",
+        "semiGlobal": "C₆H₅–COOH + PCl₅ ──► C₆H₅–COCl + POCl₃ + HCl↑",
+        "desc": "El PCl₅ es un sólido reactivo ideal para convertir ácidos carboxílicos aromáticos de alto punto de fusión en cloruros de acilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Activación del carboxilo aromático con PCl₅."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 405,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "PCl5",
+              "el": "+ PCl₅",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Cloruro de Benzoilo + POCl₃ + HCl↑",
+        "semiStep": "C₆H₅–COCl + POCl₃ + HCl↑",
+        "semiGlobal": "C₆H₅–COOH + PCl₅ ──► C₆H₅–COCl + POCl₃ + HCl↑",
+        "desc": "Queda consolidado el cloruro de benzoilo junto con oxicloruro de fósforo (POCl₃) y HCl.",
+        "legend": {
+          "breaking": "Cloración completada.",
+          "forming": "En VERDE sólido: cloruro de benzoilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "COCl",
+              "el": "COCl",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cloruro de Benzoilo"
+            },
+            {
+              "id": "Sub",
+              "el": "+ POCl₃ + HCl↑",
+              "x": 615,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "COCl",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn4_benzoico_pbr3": [
+      {
+        "title": "Estado Inicial Desarrollado: 3 Ácido Benzoico + Tribromuro de Fósforo (PBr₃)",
+        "semiStep": "3 C₆H₅–COOH + PBr₃",
+        "semiGlobal": "3 C₆H₅–COOH + PBr₃ ──► 3 C₆H₅–COBr + H₃PO₃",
+        "desc": "Análogamente al PCl₃, el tribromuro de fósforo convierte ácidos carboxílicos en bromuros de acilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución del grupo –OH por –Br."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "3 C₆H₅–COOH",
+              "x": 265,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "PBr3",
+              "el": "+ PBr₃",
+              "x": 525,
+              "y": 210,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: 3 Bromuro de Benzoilo (C₆H₅–COBr) + H₃PO₃",
+        "semiStep": "3 C₆H₅–COBr + H₃PO₃",
+        "semiGlobal": "3 C₆H₅–COOH + PBr₃ ──► 3 C₆H₅–COBr + H₃PO₃",
+        "desc": "Queda consolidado el bromuro de benzoilo (mencionado en Recopi Preg. 59).",
+        "legend": {
+          "breaking": "Bromación acílica completada.",
+          "forming": "En VERDE sólido: bromuro de benzoilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "3 C₆H₅–COBr",
+              "x": 275,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Sub",
+              "el": "+ H₃PO₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
