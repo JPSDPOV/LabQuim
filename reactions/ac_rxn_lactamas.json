@@ -1,0 +1,589 @@
+{
+  "category": "reacciones",
+  "title": "B.6- Aminación Intramolecular de Aminoácidos (γ- y δ-Aminoácidos + Δ / H⁺ → Lactamas + H₂O)",
+  "natureBadge": "Ciclación Intramolecular • γ-Aminoácido (C4) ──► γ-Lactama (5M) | δ-Aminoácido (C5) ──► δ-Lactama (6M)",
+  "deltaH": "ΔH° ≈ −15 a −25 kJ/mol (Ciclación intramolecular térmicamente favorable para anillos de 5 y 6 miembros)",
+  "description": "Reacción de formación de amida intramolecular (deshidratación térmica o catalizada por ácido) cuando una misma molécula contiene un grupo ácido carboxílico (–COOH) y un grupo amino primario o secundario (–NH₂ o –NHR) separados por 3 o 4 carbonos:\n1) γ-Aminoácidos (grupo amino en C4): el nitrógeno de C4 ataca intramolecularmente al carbono carboxílico C1 eliminando agua y formando una amida cíclica de 5 miembros llamada γ-LACTAMA (ej. ácido 4-aminobutanoico [GABA] + Δ → 2-pirrolidinona / γ-butirolactama; ácido 4-N-metilaminopentanoico → 4-N-metilaminopentanolactama).\n2) δ-Aminoácidos (grupo amino en C5): el nitrógeno de C5 ataca al carboxilo C1 formando una amida cíclica de 6 miembros llamada δ-LACTAMA (ej. ácido 5-aminopentanoico + Δ → 2-piperidinona / δ-valerolactama; ácido 5-aminohexanoico → 5-aminohexanolactama).\n3) α-Aminoácidos (–NH₂ en C2, como glicina o alanina): NO forman β-lactamas de 4 miembros al calentar; DOS moléculas condensan intermolecularmente formando una diamida cíclica de 6 miembros llamada DICETOPIPERAZINA.",
+  "meta": {
+    "grupoFuncional": "Lactamas / Amidas Cíclicas (γ-Lactamas de 5 miembros y δ-Lactamas de 6 miembros)",
+    "reaccionMecanismo": "Ataque nucleofílico intramolecular del grupo –NH₂/–NHR sobre el carbono carboxílico C1 + eliminación térmica de H₂O",
+    "naturaleza": "Por etapas intramolecular (equilibrio zwitteriónico → plegamiento de cadena → ataque interno de N4/N5 sobre C1 → intermediario tetraédrico → eliminación de H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y N4–H (o N5–H); intermediario tetraédrico cíclico; formación del enlace amida endocíclico C1–N4 (o C1–N5) y H₂O.",
+    "detalleMecanismo": "H₂N–CH₂–CH₂–CH₂–COOH ──(Δ / H⁺)──► γ-Butirolactama (2-Pirrolidinona, 5M) + H₂O",
+    "reactivosCondiciones": "γ-Aminoácido o δ-Aminoácido sometido a calentamiento (Δ, 150–200 °C) o catálisis ácida suave (H⁺) con destilación del agua formada.",
+    "rolReactivos": "• Electrófilo interno: Grupo carboxilo (–COOH en C1).\n• Nucleófilo interno: Grupo amino (–NH₂ o –NHR en posición C4 [γ] o C5 [δ]).\n• Calor (Δ) / H⁺: promueve la eliminación de H₂O y el cierre del anillo.",
+    "reglasObs": "• Pregunta directa de examen Final 2022 B (Recopi Preg. 80): 'El compuesto que se requiere para formar una lactama es...' → deben buscarse γ-aminoácidos (posición 4, anillo 5M) o δ-aminoácidos (posición 5, anillo 6M).\n• Ejemplos de importancia biológica (Diap. 768–770, 916–918): Creatina → Creatinina (lactama); Penicilinas y cefalosporinas (anillo β-lactámico de 4 miembros altamente tenso y reactivo frente a transpeptidasas bacterianas); Ácido barbitúrico."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn7_gamma_butirolactama",
+      "name": "Ácido 4-Aminobutanoico (GABA, γ-Aminoácido) + Δ ──► γ-Butirolactama (2-Pirrolidinona, 5M) + H₂O",
+      "catalyst": "Calor Δ / H⁺ (Ciclación 5 Miembros)"
+    },
+    {
+      "id": "ac_rxn7_delta_valerolactama",
+      "name": "Ácido 5-Aminopentanoico (δ-Aminoácido) + Δ ──► δ-Valerolactama (2-Piperidinona, 6M) + H₂O",
+      "catalyst": "Calor Δ / H⁺ (Ciclación 6 Miembros)"
+    },
+    {
+      "id": "ac_rxn7_catedra_nmetil_lactama",
+      "name": "Ácido 4-(N-Metilamino)pentanoico + H⁺ / Δ ──► 4-N-Metilaminopentanolactama + H₂O [Diap. 861]",
+      "catalyst": "H⁺ / Δ (Ejemplo Exacto Cátedra)"
+    },
+    {
+      "id": "ac_rxn7_catedra_5aminohexanoico",
+      "name": "Ácido 5-Aminohexanoico + H⁺ / Δ ──► 5-Aminohexanolactama (6M) + H₂O [Diap. 861]",
+      "catalyst": "H⁺ / Δ (Ejemplo Exacto Cátedra)"
+    }
+  ],
+  "catalysts": [
+    "Calor Δ / H⁺ (Ciclación 5 Miembros)",
+    "Calor Δ / H⁺ (Ciclación 6 Miembros)",
+    "H⁺ / Δ (Ejemplo Exacto Cátedra)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn7_gamma_butirolactama": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 4-Aminobutanoico (GABA — γ-Aminoácido Plegado)",
+        "semiStep": "H₂N–CH₂–CH₂–CH₂–COOH (Δ / H⁺)",
+        "semiGlobal": "H₂N–(CH₂)₃–COOH ──(Δ / H⁺)──► γ-Butirolactama (2-Pirrolidinona, 5M) + H₂O",
+        "desc": "Se observa el ácido 4-aminobutanoico plegado: el grupo –NH₂ en posición γ (C4) queda situado junto al grupo carboxilo C1 para formar un anillo lactámico de 5 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupos –COOH y –NH₂ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno N4 sobre el carbono carboxílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175,
+              "label": "C1 Carboxilo (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 585,
+              "y": 105
+            },
+            {
+              "id": "OH_ac",
+              "el": "OH",
+              "x": 595,
+              "y": 245,
+              "highlight": "#ef4444",
+              "label": "Sale como H₂O"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "N4",
+              "el": "NH₂",
+              "x": 355,
+              "y": 105,
+              "highlight": "#38bdf8",
+              "label": "N4 (γ) nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "N4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Formación del Enlace Amida C1–N4 y Salida de H₂O",
+        "semiStep": "Cierre de anillo lactámico de 5 miembros con eliminación de H₂O",
+        "semiGlobal": "H₂N–(CH₂)₃–COOH ──(Δ / H⁺)──► γ-Butirolactama (2-Pirrolidinona, 5M) + H₂O",
+        "desc": "Se forma el enlace amida endocíclico C1–NH mientras se elimina una molécula de agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–OH (salida de H₂O).",
+          "forming": "En VERDE punteado: nuevo enlace amida cíclico C1–NH.",
+          "movement": "Se consolida un heterociclo nitrogenado pentagonal plano en el grupo amida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 585,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ac",
+              "el": "H₂O↑",
+              "x": 605,
+              "y": 245,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "N4",
+              "el": "NH",
+              "x": 355,
+              "y": 105,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "N4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N4",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 115,
+              "cx": 425,
+              "cy": 125,
+              "x2": 455,
+              "y2": 155,
+              "label": "Cierre C1–N4"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: γ-Butirolactama (2-Pirrolidinona, Anillo 5M) + H₂O",
+        "semiStep": "γ-Butirolactama + H₂O",
+        "semiGlobal": "H₂N–(CH₂)₃–COOH ──(Δ / H⁺)──► γ-Butirolactama (2-Pirrolidinona, 5M) + H₂O",
+        "desc": "Queda consolidada la γ-butirolactama (amida cíclica de 5 miembros).",
+        "legend": {
+          "breaking": "Ciclación lactámica completada.",
+          "forming": "En VERDE sólido: anillo γ-lactama de 5 miembros.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "γ-Butirolactama (5M)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 595,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "N4",
+              "el": "NH",
+              "x": 355,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 635,
+              "y": 245,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "N4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N4",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn7_delta_valerolactama": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 5-Aminopentanoico (δ-Aminoácido) + Δ",
+        "semiStep": "H₂N–CH₂–CH₂–CH₂–CH₂–COOH (Δ / H⁺)",
+        "semiGlobal": "H₂N–(CH₂)₄–COOH ──(Δ / H⁺)──► δ-Valerolactama (2-Piperidinona, 6M) + H₂O",
+        "desc": "El grupo amino en posición δ (C5) ataca al carboxilo C1 cerrando un anillo lactámico de 6 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; δ-aminoácido listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque intramolecular N5 → C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N5",
+              "el": "H₂N (C5)",
+              "x": 225,
+              "y": 145,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Chain",
+              "el": "–CH₂–CH₂–CH₂–CH₂–",
+              "x": 225,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "COOH (C1)",
+              "x": 495,
+              "y": 145,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "N5",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: δ-Valerolactama (2-Piperidinona, Anillo 6M) + H₂O",
+        "semiStep": "δ-Valerolactama (Anillo 6M) + H₂O",
+        "semiGlobal": "H₂N–(CH₂)₄–COOH ──(Δ / H⁺)──► δ-Valerolactama (2-Piperidinona, 6M) + H₂O",
+        "desc": "Queda consolidada la δ-valerolactama (6 miembros).",
+        "legend": {
+          "breaking": "Eliminación de H₂O completada.",
+          "forming": "En VERDE sólido: anillo δ-lactama de 6 miembros.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "N5",
+              "el": "NH",
+              "x": 245,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "–CH₂–CH₂–CH₂–CH₂–",
+              "x": 245,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 465,
+              "y": 145,
+              "highlight": "#10b981",
+              "label": "δ-Valerolactama (6M)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "N5",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N5",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn7_catedra_nmetil_lactama": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 4-(N-Metilamino)pentanoico + H⁺ / Δ [Diap. 861]",
+        "semiStep": "CH₃–CH(NHCH₃)–CH₂–CH₂–COOH (H⁺ / Δ)",
+        "semiGlobal": "Ác. 4-N-Metilaminopentanoico ──(H⁺, Δ)──► 4-N-Metilaminopentanolactama + H₂O",
+        "desc": "Ejemplo literal de la diapositiva 861 de cátedra: amina secundaria en posición C4 cicla sobre el grupo –COOH formando una lactama N-sustituida de 5 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivo listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ciclación intramolecular N4 → C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH(NHCH₃)–CH₂–CH₂–COOH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: 4-N-Metilaminopentanolactama (Anillo 5M) + H₂O",
+        "semiStep": "Lactama N-metilada de 5 miembros + H₂O",
+        "semiGlobal": "Ác. 4-N-Metilaminopentanoico ──(H⁺, Δ)──► 4-N-Metilaminopentanolactama + H₂O",
+        "desc": "Queda consolidada la lactama N-metilada.",
+        "legend": {
+          "breaking": "Deshidratación completada.",
+          "forming": "En VERDE sólido: lactama sustituida de 5 miembros.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "4-N-Metilaminopentanolactama (5M)",
+              "x": 325,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn7_catedra_5aminohexanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 5-Aminohexanoico + H⁺ / Δ [Diap. 861]",
+        "semiStep": "CH₃–CH(NH₂)–CH₂–CH₂–CH₂–COOH (H⁺ / Δ)",
+        "semiGlobal": "Ác. 5-Aminohexanoico ──(H⁺, Δ)──► 5-Aminohexanolactama (6M) + H₂O",
+        "desc": "Segundo ejemplo literal de la diapositiva 861 de cátedra: el grupo amino en C5 (δ) cicla formando una lactama hexagonal con un metilo en C6.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivo listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ciclación intramolecular N5 → C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH(NH₂)–(CH₂)₃–COOH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: 5-Aminohexanolactama (Anillo 6M) + H₂O",
+        "semiStep": "5-Aminohexanolactama (6M) + H₂O",
+        "semiGlobal": "Ác. 5-Aminohexanoico ──(H⁺, Δ)──► 5-Aminohexanolactama (6M) + H₂O",
+        "desc": "Queda consolidada la lactama de 6 miembros.",
+        "legend": {
+          "breaking": "Ciclación completada.",
+          "forming": "En VERDE sólido: lactama hexagonal.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "5-Aminohexanolactama (6M)",
+              "x": 315,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
