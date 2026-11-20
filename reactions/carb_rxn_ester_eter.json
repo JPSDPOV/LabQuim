@@ -1,0 +1,617 @@
+{
+  "category": "reacciones",
+  "title": "23) Esterificación de Grupos Hidroxilo (Anhídrido Acético → Pentaacetatos) y Alquilación (Metilación Exhaustiva)",
+  "natureBadge": "Derivados de Grupos –OH • Acilación Exhaustiva (Ac₂O / Piridina → Ésteres) | Metilación (CH₃I / Ag₂O → Éteres)",
+  "deltaH": "ΔH° < 0 (Exotérmica e irreversible; protege los grupos hidroxilo y revela el tamaño del anillo hemiacetálico)",
+  "description": "Reacciones de derivación de los grupos hidroxilo (–OH) libres en monosacáridos cíclicos para convertirlos en ésteres o éteres estables:\n1) Esterificación exhaustiva (Acilación con Anhídrido Acético, Ac₂O / Piridina): todos los grupos hidroxilo libres (tanto los alcohólicos C2, C3, C4, C6 como el hemiacetálico anomérico C1) reaccionan como nucleófilos sobre el anhídrido acético formando grupos éster acetato (–O–CO–CH₃). En una aldohexosa (D-glucosa) se incorpora exactamente 5 grupos acetilo (penta-O-acetil-β-D-glucopiranosa), confirmando la presencia de 5 grupos –OH.\n2) Alquilación exhaustiva (Metilación de Purdie / Haworth: Me₂SO₄ / NaOH o CH₃I / Ag₂O): todos los grupos –OH libres se transforman en éteres metílicos (–OCH₃). El grupo metoxi en el carbono anomérico C1 es un acetal (hidrolizable fácilmente con ácido acuoso diluido H₃O⁺), mientras que los éteres metílicos en C2, C3, C4 y C6 son éteres verdaderos resistentes a la hidrólisis ácida suave.\n3) Utilidad estructural (Determinación del tamaño del anillo): tras metilar exhaustivamente un azúcar e hidrolizar suavemente el acetal anomérico en C1, el único grupo –OH libre que reaparece en la cadena indica exactamente qué oxígeno (O5 en piranosas vs. O4 en furanosas) formaba el puente del anillo.",
+  "meta": {
+    "grupoFuncional": "Ésteres de Carbohidratos (Pentaacetatos: R–OAc) y Éteres Metílicos (Permetilados: R–OCH₃)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica (Ac₂O / Piridina) y Sustitución nucleofílica SN2 (CH₃I / Ag₂O o Me₂SO₄ / OH⁻)",
+    "naturaleza": "Por etapas irreversible (ataque nucleofílico de cada grupo –OH libre sobre el electrófilo acilante o metilante; en el anillo hemiacetálico queda fijada la configuración α o β).",
+    "rupturaIntermediarios": "Ruptura de enlaces O–H (×5 en hexosas), enlace anhídrido C–OAc o enlace C–I; intermediarios tetraédricos acílicos; formación de 5 enlaces éster (–OAc) o 5 enlaces éter (–OCH₃).",
+    "detalleMecanismo": "β-D-Glucopiranosa + 5 (CH₃CO)₂O ──(Piridina)──► Penta-O-acetil-β-D-glucopiranosa + 5 CH₃COOH",
+    "reactivosCondiciones": "• Esterificación: Exceso de anhídrido acético ((CH₃CO)₂O) + piridina (o acetato de sodio anhidro) a 0–25 °C.\n• Metilación exhaustiva: Exceso de yoduro de metilo (CH₃I) + óxido de plata (Ag₂O) o sulfato de dimetilo ((CH₃O)₂SO₂) + NaOH.",
+    "rolReactivos": "• Sustrato nucleofílico: Monosacárido cíclico con 5 grupos hidroxilo libres (C1, C2, C3, C4, C6 en hexosas).\n• Reactivo acilante: Anhídrido acético (Ac₂O) + Piridina (base que neutraliza el ácido acético y cataliza la acilación).\n• Reactivo metilante: CH₃I / Ag₂O (condiciones neutras suaves que evitan epimerización) o (CH₃O)₂SO₂ / NaOH.",
+    "reglasObs": "• Fijación de la configuración anomérica: una vez acilado o metilado el –OH de C1, el carbohidrato deja de mutarrotar (ya no tiene hemiacetal libre) y se convierte en NO REDUCTOR (−).\n• Hidrólisis selectiva tras permetilación: 2,3,4,6-tetra-O-metil-metil-D-glucopiranósido + H₃O⁺ diluido ──► 2,3,4,6-tetra-O-metil-D-glucopiranosa + CH₃OH (el único –OH libre en C5 demuestra que el anillo original era una piranosa de 6 miembros)."
+  },
+  "substrates": [
+    {
+      "id": "der_glucosa_pentaacetato",
+      "name": "β-D-Glucopiranosa + 5 Ac₂O (Piridina) ──► Penta-O-acetil-β-D-glucopiranosa + 5 AcOH [Esterificación]",
+      "catalyst": "(CH₃CO)₂O / Piridina (25 °C)"
+    },
+    {
+      "id": "der_glucosa_permetilacion",
+      "name": "D-Glucopiranosa + Exceso CH₃I / Ag₂O ──► Metil 2,3,4,6-tetra-O-metil-D-glucopiranósido [Metilación]",
+      "catalyst": "CH₃I / Ag₂O (o Me₂SO₄ / NaOH)"
+    },
+    {
+      "id": "der_hidrolisis_anillo_piranosa",
+      "name": "Permetil-glucopiranósido + H₃O⁺ diluido ──► 2,3,4,6-Tetra-O-metil-D-glucosa (–OH libre en C5) [Prueba de Anillo]",
+      "catalyst": "H₃O⁺ acuoso diluido (Hidrólisis selectiva C1)"
+    },
+    {
+      "id": "der_fructosa_pentaacetato",
+      "name": "β-D-Fructofuranosa + 5 Ac₂O (Piridina) ──► Penta-O-acetil-β-D-fructofuranosa [Acilación Cetosa]",
+      "catalyst": "(CH₃CO)₂O / Piridina (25 °C)"
+    }
+  ],
+  "catalysts": [
+    "(CH₃CO)₂O / Piridina (25 °C)",
+    "CH₃I / Ag₂O (o Me₂SO₄ / NaOH)",
+    "H₃O⁺ acuoso diluido (Hidrólisis selectiva C1)"
+  ],
+  "stepsBySubstrate": {
+    "der_glucosa_pentaacetato": [
+      {
+        "title": "Estado Inicial Desarrollado: β-D-Glucopiranosa (5 Grupos –OH Libres) + Anhídrido Acético",
+        "semiStep": "β-D-Glucopiranosa (5 –OH) + 5 (CH₃CO)₂O / Piridina",
+        "semiGlobal": "β-D-Glucopiranosa + 5 Ac₂O ──(Piridina)──► Penta-O-acetil-β-D-glucopiranosa + 5 AcOH",
+        "desc": "Se observan la β-D-glucopiranosa con sus cinco grupos hidroxilo libres (C1 anomérico y C2, C3, C4, C6 alcohólicos) y el anhídrido acético en piridina.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; los 5 grupos –OH y el anhídrido acético intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de cada par libre de oxígeno hidroxílico al carbonilo del anhídrido acético."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo Glucopiranosa",
+              "x": 365,
+              "y": 195
+            },
+            {
+              "id": "OH1",
+              "el": "C1–OH",
+              "x": 565,
+              "y": 135,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "OH234",
+              "el": "C2,C3,C4–(OH)₃",
+              "x": 365,
+              "y": 310,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "OH6",
+              "el": "C6–CH₂OH",
+              "x": 185,
+              "y": 115,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ac2O",
+              "el": "5 (CH₃CO)₂O / Piridina",
+              "x": 585,
+              "y": 285,
+              "highlight": "#fbbf24",
+              "label": "Agente Acilante"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OH1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "OH234",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "OH6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Sustitución Nucleofílica Acílica en los 5 Grupos –OH",
+        "semiStep": "R–OH + CH₃CO–O–COCH₃ ──(Piridina)──► R–O–COCH₃ + CH₃COOH",
+        "semiGlobal": "β-D-Glucopiranosa + 5 Ac₂O ──(Piridina)──► Penta-O-acetil-β-D-glucopiranosa + 5 AcOH",
+        "desc": "Cada oxígeno hidroxílico ataca al carbono carbonílico del anhídrido acético formando un enlace éster y expulsando ion acetato (capturado por la piridina).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los 5 enlaces O–H y del enlace C–OAc del anhídrido.",
+          "forming": "En VERDE punteado: formación de los 5 enlaces éster acetato (–O–COCH₃).",
+          "movement": "Retención total de la configuración estereoquímica de todos los carbonos quirales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo Glucopiranosa",
+              "x": 365,
+              "y": 195
+            },
+            {
+              "id": "OAc1",
+              "el": "C1–OAc",
+              "x": 575,
+              "y": 135,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc234",
+              "el": "C2,C3,C4–(OAc)₃",
+              "x": 365,
+              "y": 310,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc6",
+              "el": "C6–CH₂OAc",
+              "x": 185,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "AcOH_l",
+              "el": "5 CH₃COOH",
+              "x": 605,
+              "y": 285,
+              "highlight": "#ef4444",
+              "label": "Subproducto ácido"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OAc1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Ring",
+              "to": "OAc234",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Ring",
+              "to": "OAc6",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Penta-O-acetil-β-D-glucopiranosa + 5 CH₃COOH",
+        "semiStep": "1,2,3,4,6-Penta-O-acetil-β-D-glucopiranosa + 5 CH₃COOH",
+        "semiGlobal": "β-D-Glucopiranosa + 5 Ac₂O ──(Piridina)──► Penta-O-acetil-β-D-glucopiranosa + 5 AcOH",
+        "desc": "Queda consolidado el pentaacetato de β-D-glucopiranosa, derivado cristalino soluble en disolventes orgánicos y sin capacidad de mutarrotación.",
+        "legend": {
+          "breaking": "Esterificación exhaustiva completada.",
+          "forming": "En VERDE sólido: 5 grupos éster acetato (–OAc = –O–CO–CH₃).",
+          "movement": "Demuestra químicamente la presencia de exactamente cinco grupos hidroxilo en las hexosas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Penta-O-acetil-β-D-glucopiranosa",
+              "x": 365,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc1",
+              "el": "C1–OAc (β)",
+              "x": 605,
+              "y": 135,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc234",
+              "el": "C2,C3,C4–(OAc)₃",
+              "x": 365,
+              "y": 310,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc6",
+              "el": "C6–CH₂OAc",
+              "x": 155,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "AcOH_p",
+              "el": "+ 5 AcOH",
+              "x": 625,
+              "y": 285,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OAc1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ring",
+              "to": "OAc234",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ring",
+              "to": "OAc6",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "der_glucosa_permetilacion": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucopiranosa + Exceso de Yoduro de Metilo (CH₃I / Ag₂O)",
+        "semiStep": "D-Glucopiranosa + 5 CH₃I / Ag₂O (Metilación de Purdie)",
+        "semiGlobal": "D-Glucopiranosa + 5 CH₃I ──(Ag₂O)──► Metil 2,3,4,6-tetra-O-metil-D-glucopiranósido + 5 HI",
+        "desc": "Se observan la D-glucopiranosa con sus 5 grupos –OH y un exceso de yoduro de metilo en presencia de óxido de plata (Ag₂O), que activa el haluro de alquilo precipitando AgI↓.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; 5 grupos –OH y CH₃I intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución nucleofílica SN2 en cada oxígeno hidroxílico sobre el grupo metilo de CH₃I."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo Glucopiranosa",
+              "x": 365,
+              "y": 195
+            },
+            {
+              "id": "OH1",
+              "el": "C1–OH",
+              "x": 565,
+              "y": 135,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "OH234",
+              "el": "C2,C3,C4–(OH)₃",
+              "x": 365,
+              "y": 310,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "OH6",
+              "el": "C6–CH₂OH",
+              "x": 185,
+              "y": 115,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "MeI",
+              "el": "5 CH₃I / Ag₂O",
+              "x": 585,
+              "y": 285,
+              "highlight": "#fbbf24",
+              "label": "Agente Metilante"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OH1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "OH234",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "OH6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Metil 2,3,4,6-tetra-O-metil-D-glucopiranósido (Permetilado)",
+        "semiStep": "Permetil-D-glucopiranósido (1 acetal en C1 + 4 éteres metílicos)",
+        "semiGlobal": "D-Glucopiranosa + 5 CH₃I ──(Ag₂O)──► Metil 2,3,4,6-tetra-O-metil-D-glucopiranósido + 5 HI",
+        "desc": "Queda consolidado el derivado permetilado: posee 4 grupos éter metílico estables (C2, C3, C4, C6) y 1 grupo acetal metílico (C1).",
+        "legend": {
+          "breaking": "Metilación exhaustiva completada.",
+          "forming": "En VERDE sólido: 5 grupos metoxi (–OCH₃).",
+          "movement": "Listo para hidrólisis ácida selectiva en C1 y determinación del tamaño del anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Permetil-D-glucopiranósido",
+              "x": 365,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OMe1",
+              "el": "C1–OCH₃ (Acetal)",
+              "x": 615,
+              "y": 135,
+              "highlight": "#fbbf24",
+              "label": "Hidrolizable con H₃O⁺"
+            },
+            {
+              "id": "OMe234",
+              "el": "C2,C3,C4–(OCH₃)₃",
+              "x": 365,
+              "y": 310,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OMe6",
+              "el": "C6–CH₂OCH₃",
+              "x": 155,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OMe1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ring",
+              "to": "OMe234",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ring",
+              "to": "OMe6",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "der_hidrolisis_anillo_piranosa": [
+      {
+        "title": "Estado Inicial Desarrollado: Permetil-D-glucopiranósido + Ácido Acuoso Diluido (H₃O⁺)",
+        "semiStep": "Metil 2,3,4,6-tetra-O-metil-D-glucopiranósido + H₂O / H⁺",
+        "semiGlobal": "Permetil-glucopiranósido + H₃O⁺ ──► 2,3,4,6-Tetra-O-metil-D-glucosa (–OH libre en C5) + CH₃OH",
+        "desc": "El ácido acuoso diluido hidroliza EXCLUSIVAMENTE el enlace acetálico en C1 (liberando CH₃OH y abriendo el anillo), sin afectar los cuatro enlaces éter metílico en C2, C3, C4 y C6.",
+        "legend": {
+          "breaking": "En ROJO punteado: hidrólisis selectiva del acetal C1–OCH₃.",
+          "forming": "Ningún enlace éter roto en C2, C3, C4 o C6.",
+          "movement": "Apertura del anillo que deja libre el grupo –OH en C5."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Permetil-glucopiranósido",
+              "x": 355,
+              "y": 195
+            },
+            {
+              "id": "OMe1",
+              "el": "C1–OCH₃",
+              "x": 585,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Se hidroliza (Acetal)"
+            },
+            {
+              "id": "H3O",
+              "el": "H₃O⁺ / H₂O",
+              "x": 585,
+              "y": 305,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OMe1",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2,3,4,6-Tetra-O-metil-D-glucosa (–OH Libre en C5 Confirma Anillo Piranosa)",
+        "semiStep": "OHC–CH(OMe)–CH(OMe)–CH(OMe)–CH(OH)–CH₂OMe + CH₃OH",
+        "semiGlobal": "Permetil-glucopiranósido + H₃O⁺ ──► 2,3,4,6-Tetra-O-metil-D-glucosa (–OH libre en C5) + CH₃OH",
+        "desc": "Al quedar sin metilar únicamente el oxígeno del carbono C5 (–OH libre en C5), se demuestra inequívocamente que la D-glucosa formaba un anillo heterocíclico de 6 miembros (piranosa).",
+        "legend": {
+          "breaking": "Hidrólisis selectiva completada.",
+          "forming": "En VERDE sólido: grupo –OH libre en C5 y aldehído regenerado en C1.",
+          "movement": "Método clásico de Haworth para demostrar la estructura piranósica y furanósica de los azúcares."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1–CHO",
+              "x": 175,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C234",
+              "el": "C2,C3,C4–(OMe)₃",
+              "x": 365,
+              "y": 195
+            },
+            {
+              "id": "C5_oh",
+              "el": "C5–OH (Libre)",
+              "x": 555,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Prueba anillo 6M (O5)"
+            },
+            {
+              "id": "C6",
+              "el": "C6–CH₂OMe",
+              "x": 705,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C234",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C234",
+              "to": "C5_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5_oh",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "der_fructosa_pentaacetato": [
+      {
+        "title": "Estado Inicial Desarrollado: β-D-Fructofuranosa + 5 Anhídrido Acético (Piridina)",
+        "semiStep": "β-D-Fructofuranosa (5 –OH) + 5 (CH₃CO)₂O / Piridina",
+        "semiGlobal": "β-D-Fructofuranosa + 5 Ac₂O ──(Piridina)──► Penta-O-acetil-β-D-fructofuranosa + 5 AcOH",
+        "desc": "La D-fructosa posee 5 grupos hidroxilo libres (C1, C2 anomérico, C3, C4 y C6) que reaccionan con exceso de anhídrido acético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; los 5 grupos –OH y Ac₂O intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Acilación exhaustiva de los 5 hidroxilos sobre el anillo furanósico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo Fructofuranosa",
+              "x": 365,
+              "y": 195
+            },
+            {
+              "id": "OH12",
+              "el": "C1–CH₂OH + C2–OH",
+              "x": 585,
+              "y": 155,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "OH346",
+              "el": "C3,C4,C6–(OH)₃",
+              "x": 225,
+              "y": 295,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ac2O",
+              "el": "5 (CH₃CO)₂O / Piridina",
+              "x": 585,
+              "y": 285,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OH12",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "OH346",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Penta-O-acetil-β-D-fructofuranosa + 5 CH₃COOH",
+        "semiStep": "1,2,3,4,6-Penta-O-acetil-β-D-fructofuranosa + 5 CH₃COOH",
+        "semiGlobal": "β-D-Fructofuranosa + 5 Ac₂O ──(Piridina)──► Penta-O-acetil-β-D-fructofuranosa + 5 AcOH",
+        "desc": "Queda consolidado el pentaacetato de β-D-fructofuranosa, con los 5 grupos hidroxilo esterificados y la configuración β fijada en C2.",
+        "legend": {
+          "breaking": "Acilación completada.",
+          "forming": "En VERDE sólido: 5 grupos éster acetato (–OAc).",
+          "movement": "Derivado protegido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Penta-O-acetil-β-D-fructofuranosa",
+              "x": 365,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc12",
+              "el": "C1–CH₂OAc + C2–OAc",
+              "x": 605,
+              "y": 155,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OAc346",
+              "el": "C3,C4,C6–(OAc)₃",
+              "x": 205,
+              "y": 295,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "AcOH_p",
+              "el": "+ 5 AcOH",
+              "x": 605,
+              "y": 285,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "OAc12",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ring",
+              "to": "OAc346",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
