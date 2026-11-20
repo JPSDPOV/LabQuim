@@ -1,0 +1,595 @@
+{
+  "category": "reacciones",
+  "title": "21) Reducción del Carbonilo a Alditoles / Polioles (D-Glucosa → D-Sorbitol | D-Fructosa → Sorbitol + Manitol)",
+  "natureBadge": "Reducción de Monosacáridos • Aldosas → 1 Alditol | Cetosas → Mezcla de 2 Alditoles Epímeros en C2",
+  "deltaH": "ΔH° < 0 (Exotérmica; reducción irreversible del grupo carbonilo C=O a alcohol secundario o primario)",
+  "description": "Reducción del grupo carbonilo (aldehído o cetona) de los monosacáridos mediante borohidruro de sodio (NaBH₄ en H₂O/EtOH) o hidrogenación catalítica (H₂ / Ni Raney, Pt o Pd) para generar polialcoholes acíclicos llamados ALDITOLES o POLIOLES:\n1) Aldosas (ej. D-Glucosa, D-Galactosa, D-Manosa): dado que en disolución existe un equilibrio entre la forma cíclica hemiacetálica y la forma abierta (–CHO), el agente reductor reduce el grupo aldehído en C1 a alcohol primario (–CH₂OH) sin crear ningún centro quiral nuevo, produciendo un ÚNICO alditol (ej. D-Glucosa → D-Glucitol / D-Sorbitol).\n2) Cetosas (ej. D-Fructosa): al reducir el grupo cetona proquiral en C2 con NaBH₄ o H₂/Ni, el hidruro puede atacar por ambas caras del plano trigonal sp² (cara Re o cara Si), generando un NUEVO centro estereogénico en C2 y produciendo una MEZCLA DE DOS ALDITOLES EPÍMEROS EN C2: D-glucitol (D-sorbitol) y D-manitol.\n3) Importancia biológica e industrial: los alditoles carecen de carbono anomérico (no pueden ciclarse ni mutarrotar) y son azúcares NO REDUCTORES (−) frente a Fehling/Tollens; se emplean ampliamente como edulcorantes no cariogénicos (sorbitol, manitol, xilitol) y osmoprotectores.",
+  "meta": {
+    "grupoFuncional": "Alditoles o Polialcoholes (HOCH₂–(CHOH)ₙ–CH₂OH)",
+    "reaccionMecanismo": "Adición nucleofílica de hidruro (H⁻) al carbonilo acíclico en equilibrio seguida de protonación",
+    "naturaleza": "Por etapas irreversible (apertura anillo hemiacetal/hemicetal → ataque nucleofílico de H⁻ al C=O → protonación del alcóxido con H₂O).",
+    "rupturaIntermediarios": "Ruptura de π C=O y enlace B–H (o H–H); intermediario alcóxido polihidroxilado; formación de enlaces C–H y O–H.",
+    "detalleMecanismo": "D-Glucosa + NaBH₄ ──► D-Sorbitol (1 producto)  |  D-Fructosa + NaBH₄ ──► D-Sorbitol + D-Manitol (2 epímeros en C2)",
+    "reactivosCondiciones": "Monosacárido (aldosa o cetosa) + NaBH₄ en agua o etanol acuoso (25 °C) o H₂ (g) con catalizador metálico (Ni Raney, Pt, Pd) a presión.",
+    "rolReactivos": "• Sustrato electrofílico: Aldosa (C1–CHO) o Cetosa (C2–C=O) en equilibrio con su forma abierta.\n• Donador de hidruro: Borohidruro de sodio (NaBH₄, compatible con agua y grupos –OH) o H₂ / Ni Raney.\n• Fuente de protones: Disolvente acuoso (H₂O).",
+    "reglasObs": "• Aldosas → 1 único alditol (no se genera nuevo centro quiral en C1).\n• Cetosas → 2 alditoles epímeros en C2 (se crea un nuevo centro estereogénico en C2).\n• Simetría molecular (Compuestos MESO): la reducción de D-galactosa produce GALACTITOL (dulcitol) y la de D-xilosa produce XILITOL; ambos tienen extremos idénticos –CH₂OH y un plano de simetría interno, siendo ópticamente inactivos (MESO).\n• Todos los alditoles son NO REDUCTORES (−) frente a Fehling y Tollens."
+  },
+  "substrates": [
+    {
+      "id": "alditol_glucosa_sorbitol",
+      "name": "D-Glucosa (Aldosa) + NaBH₄ / H₂O ──► D-Sorbitol (D-Glucitol) [Único Producto — Poliol]",
+      "catalyst": "NaBH₄ / H₂O (o H₂ / Ni Raney)"
+    },
+    {
+      "id": "alditol_fructosa_mezcla",
+      "name": "D-Fructosa (Cetosa) + NaBH₄ / H₂O ──► D-Sorbitol + D-Manitol [Mezcla de 2 Epímeros en C2]",
+      "catalyst": "NaBH₄ / H₂O (Ataque Re / Si en C2)"
+    },
+    {
+      "id": "alditol_galactosa_meso",
+      "name": "D-Galactosa + NaBH₄ / H₂O ──► Galactitol / Dulcitol (Compuesto MESO Ópticamente Inactivo)",
+      "catalyst": "NaBH₄ / H₂O (Simetría C1=C6)"
+    },
+    {
+      "id": "alditol_xilosa_xilitol",
+      "name": "D-Xilosa (Aldopentosa) + H₂ / Ni Raney ──► Xilitol (Poliol Edulcorante MESO)",
+      "catalyst": "H₂ / Ni Raney (Catalítico)"
+    }
+  ],
+  "catalysts": [
+    "NaBH₄ / H₂O (o H₂ / Ni Raney)",
+    "NaBH₄ / H₂O (Ataque Re / Si en C2)",
+    "NaBH₄ / H₂O (Simetría C1=C6)",
+    "H₂ / Ni Raney (Catalítico)"
+  ],
+  "stepsBySubstrate": {
+    "alditol_glucosa_sorbitol": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucosa (Forma Abierta) + Borohidruro de Sodio (NaBH₄)",
+        "semiStep": "OHC–(CHOH)₄–CH₂OH + BH₄⁻ (en H₂O)",
+        "semiGlobal": "D-Glucosa + NaBH₄ ──(H₂O)──► D-Sorbitol (HOCH₂–(CHOH)₄–CH₂OH)",
+        "desc": "Se observan la D-glucosa (con su grupo aldehído C1=O en equilibrio con la piranosa) y el ion borohidruro (BH₄⁻), que transfiere un ion hidruro (H⁻) al carbono carbonílico C1.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupo aldehído en C1 y borohidruro intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del hidruro (H⁻) desde BH₄⁻ hacia el carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 215,
+              "y": 85
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 215,
+              "y": 195,
+              "label": "C1 Aldehído (δ+)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 105,
+              "y": 195
+            },
+            {
+              "id": "H_hyd",
+              "el": "H⁻",
+              "x": 215,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "NaBH₄ (Hidruro)"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 405,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 595,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Adición de Hidruro (C1–H) y Protonación",
+        "semiStep": "HOCH₂–(CHOH)₄–CH₂O⁻ + H₂O ──► HOCH₂–(CHOH)₄–CH₂OH + OH⁻",
+        "semiGlobal": "D-Glucosa + NaBH₄ ──(H₂O)──► D-Sorbitol (HOCH₂–(CHOH)₄–CH₂OH)",
+        "desc": "Se forma el nuevo enlace C1–H mientras se abre el enlace π C1=O1 y el alcóxido resultante captura un protón del agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C1=O1.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C1–H y del enlace O1–H.",
+          "movement": "El carbono C1 pasa a ser un grupo –CH₂OH aquiral (unido a dos hidrógenos)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 215,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 215,
+              "y": 195
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 105,
+              "y": 195
+            },
+            {
+              "id": "H_hyd",
+              "el": "H",
+              "x": 215,
+              "y": 310,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 405,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 595,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hyd",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 215,
+              "y1": 288,
+              "cx": 192,
+              "cy": 252,
+              "x2": 208,
+              "y2": 222,
+              "label": "Ataque H⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: D-Sorbitol / D-Glucitol (Único Alditol — No Reductor)",
+        "semiStep": "HOCH₂–(CHOH)₄–CH₂OH (D-Sorbitol, ópticamente activo)",
+        "semiGlobal": "D-Glucosa + NaBH₄ ──(H₂O)──► D-Sorbitol (HOCH₂–(CHOH)₄–CH₂OH)",
+        "desc": "Queda consolidado el D-sorbitol (D-glucitol), un polialcohol de cadena abierta con 6 grupos –OH, incapaz de ciclarse y negativo (−) en Fehling y Tollens.",
+        "legend": {
+          "breaking": "Reducción completada de forma irreversible.",
+          "forming": "En VERDE sólido: grupo alcohol primario –CH₂OH en C1.",
+          "movement": "La misma molécula de D-sorbitol también se obtiene reduciendo la L-gulosa (aldosa con extremos invertidos)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOCH₂ (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "C1 Reducido"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄",
+              "x": 405,
+              "y": 195,
+              "label": "D-Sorbitol (Único producto)"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 605,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "alditol_fructosa_mezcla": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Fructosa (Cetona Proquiral en C2) + NaBH₄",
+        "semiStep": "HOCH₂–CO–(CHOH)₃–CH₂OH + NaBH₄ / H₂O",
+        "semiGlobal": "D-Fructosa + NaBH₄ ──► D-Sorbitol (50%) + D-Manitol (50%) [Epímeros en C2]",
+        "desc": "En la D-fructosa, el carbono carbonílico C2 tiene hibridación sp² trigonal plana con dos sustituyentes distintos (–CH₂OH y la cadena C3–C6), por lo que es un centro proquiral.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cetona en C2 y NaBH₄ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El hidruro (H⁻) puede atacar por ambas caras del plano del grupo cetona C2=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOCH₂",
+              "x": 185,
+              "y": 195
+            },
+            {
+              "id": "C2",
+              "el": "C2",
+              "x": 345,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "C2 Proquiral (sp²)"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 345,
+              "y": 85
+            },
+            {
+              "id": "H_hyd",
+              "el": "H⁻ (Re/Si)",
+              "x": 345,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Ataque por ambas caras"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₃–CH₂OH",
+              "x": 555,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Mezcla de D-Sorbitol (2R) + D-Manitol (2S) [Epímeros en C2]",
+        "semiStep": "D-Sorbitol (–OH C2 derecha) + D-Manitol (–OH C2 izquierda)",
+        "semiGlobal": "D-Fructosa + NaBH₄ ──► D-Sorbitol (50%) + D-Manitol (50%) [Epímeros en C2]",
+        "desc": "Al reducirse C2, se crea un nuevo centro quiral: el ataque por una cara coloca el nuevo –OH en C2 a la derecha (D-sorbitol) y por la cara opuesta a la izquierda (D-manitol).",
+        "legend": {
+          "breaking": "Reducción cetónica completada.",
+          "forming": "En VERDE sólido: dos alditoles diastereoméricos (epímeros en C2).",
+          "movement": "Regla clave: La reducción de una cetosa siempre produce DOS alditoles epímeros."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod1",
+              "el": "D-Sorbitol (C2-OH der.)",
+              "x": 235,
+              "y": 145,
+              "highlight": "#10b981",
+              "label": "Epímero 1 (~50%)"
+            },
+            {
+              "id": "Plus",
+              "el": "+",
+              "x": 425,
+              "y": 195
+            },
+            {
+              "id": "Prod2",
+              "el": "D-Manitol (C2-OH izq.)",
+              "x": 605,
+              "y": 245,
+              "highlight": "#10b981",
+              "label": "Epímero 2 (~50%)"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "alditol_galactosa_meso": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Galactosa (Quiral) + NaBH₄ / H₂O",
+        "semiStep": "OHC–(CHOH)₄–CH₂OH + NaBH₄",
+        "semiGlobal": "D-Galactosa + NaBH₄ ──► Galactitol / Dulcitol (Compuesto MESO aquiral)",
+        "desc": "Se observan la D-galactosa (ópticamente activa) y el borohidruro de sodio que reducirá el aldehído en C1 a –CH₂OH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; D-galactosa intacta.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Al igualarse ambos extremos como –CH₂OH, la molécula adquiere un plano de simetría especular."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Chain",
+              "el": "Galactosa (C₂–C₅)",
+              "x": 405,
+              "y": 195
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 605,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Galactitol / Dulcitol (Compuesto MESO Ópticamente Inactivo)",
+        "semiStep": "HOCH₂–(CHOH)₄–CH₂OH (Plano de simetría σ → [α]D = 0°)",
+        "semiGlobal": "D-Galactosa + NaBH₄ ──► Galactitol / Dulcitol (Compuesto MESO aquiral)",
+        "desc": "Queda consolidado el galactitol (dulcitol), un poliol simétrico (forma MESO) sin actividad óptica ([α]D = 0°).",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: extremos simétricos HOCH₂– en C1 y C6.",
+          "movement": "La acumulación de galactitol en el cristalino causa cataratas en la galactosemia."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOCH₂ (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₄ [Plano σ]",
+              "x": 405,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Galactitol (MESO)"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH (C6)",
+              "x": 605,
+              "y": 195,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Chain",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "alditol_xilosa_xilitol": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Xilosa (Aldopentosa) + H₂ / Ni Raney",
+        "semiStep": "OHC–(CHOH)₃–CH₂OH + H₂ (cat. Ni Raney)",
+        "semiGlobal": "D-Xilosa + H₂ ──(Ni Raney)──► Xilitol (HOCH₂–(CHOH)₃–CH₂OH)",
+        "desc": "La hidrogenación catalítica de la D-xilosa (azúcar de madera, 5 carbonos) reduce el aldehído C1 a –CH₂OH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; D-xilosa e hidrógeno molecular listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición catalítica de H₂ sobre el doble enlace C1=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CHO (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₃",
+              "x": 405,
+              "y": 195
+            },
+            {
+              "id": "C5",
+              "el": "CH₂OH (C5)",
+              "x": 605,
+              "y": 195
+            },
+            {
+              "id": "H2_cat",
+              "el": "H₂ / Ni",
+              "x": 205,
+              "y": 310,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Xilitol (Pentitol Edulcorante MESO)",
+        "semiStep": "HOCH₂–(CHOH)₃–CH₂OH (Xilitol, plano de simetría en C3)",
+        "semiGlobal": "D-Xilosa + H₂ ──(Ni Raney)──► Xilitol (HOCH₂–(CHOH)₃–CH₂OH)",
+        "desc": "Queda consolidado el xilitol (5 carbonos, forma meso aquiral), poliol edulcorante que no es fermentado por las bacterias cariogénicas bucales.",
+        "legend": {
+          "breaking": "Hidrogenación catalítica completada.",
+          "forming": "En VERDE sólido: pentitol simétrico.",
+          "movement": "Producto industrial obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOCH₂ (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "(CHOH)₃ [MESO]",
+              "x": 405,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Xilitol (5C)"
+            },
+            {
+              "id": "C5",
+              "el": "CH₂OH (C5)",
+              "x": 605,
+              "y": 195,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Chain",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Chain",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
