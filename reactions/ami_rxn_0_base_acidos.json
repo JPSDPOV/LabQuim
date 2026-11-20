@@ -1,0 +1,272 @@
+{
+  "category": "reacciones",
+  "title": "A.1- Como Base frente a Ácidos Inorgánicos (Etilamina + HCl / HI / HNO₃ → Sales de Etilamonio)",
+  "natureBadge": "Reacción Ácido-Base de Lewis / Brønsted • R–NH₂ + HX ──► Sal de Alquilamonio (R–NH₃⁺ X⁻)",
+  "deltaH": "ΔH° ≈ −55 a −65 kJ/mol (Neutralización exotérmica e irreversible en disolución acuosa)",
+  "description": "Comportamiento básico de las aminas gracias al par de electrones no compartido del átomo de nitrógeno (hibridación sp³), que acepta un protón (H⁺) de ácidos inorgánicos fuertes formando sales cristalinas solubles en agua llamadas SALES DE ALQUILAMONIO (Diap. 1186 de cátedra):\n1) Etilamina + Ácido clorhídrico (HCl) ──► Cloruro de etilamonio (CH₃CH₂–NH₃⁺ Cl⁻).\n2) Etilamina + Ácido yodhídrico (HI) ──► Yoduro de etilamonio (CH₃CH₂–NH₃⁺ I⁻).\n3) Etilamina + Ácido nítrico (HNO₃) ──► Nitrato de etilamonio (CH₃CH₂–NH₃⁺ NO₃⁻).\n4) Orden de basicidad en agua (Diap. 1181–1182): Amina secundaria alifática (Dietilamina / Dimetilamina) > Amina primaria alifática (Etilamina) > Amina terciaria alifática (Trietilamina / Trimetilamina) > Amoníaco (NH₃) > Anilina (Fenilamina) > Amidas (Etanamida).",
+  "meta": {
+    "grupoFuncional": "Sales de Alquilamonio (Cloruro, Yoduro y Nitrato de Etilamonio: R–NH₃⁺ X⁻)",
+    "reaccionMecanismo": "Transferencia protónica ácido-base de Brønsted-Lowry (ataque del par libre del N al protón H⁺)",
+    "naturaleza": "Concertada instantánea (formación del enlace dativo N–H⁺ generando el catión amonio tetraédrico).",
+    "rupturaIntermediarios": "Ruptura heterolítica del enlace H–X (H–Cl, H–I, H–ONO₂); formación de enlace coordinado N–H⁺.",
+    "detalleMecanismo": "CH₃CH₂–:NH₂ + H–Cl ──► CH₃CH₂–NH₃⁺ Cl⁻ (Cloruro de etilamonio)",
+    "reactivosCondiciones": "Amina alifática o aromática + ácido mineral fuerte (HCl, HI, HNO₃, H₂SO₄) a temperatura ambiente (25 °C).",
+    "rolReactivos": "• Base de Brønsted / Lewis: Amina (dona su par de electrones no enlazante del nitrógeno).\n• Ácido fuerte: HCl, HI o HNO₃ (dona H⁺).\n• Producto: Sal iónica de amonio (solubiliza aminas insolubles en agua).",
+    "reglasObs": "• Ejemplos exactos de la diapositiva 1186 de cátedra:\n  - Etilamina + HCl → Cloruro de etilamonio\n  - Etilamina + HI → Yoduro de etilamonio\n  - Etilamina + HNO₃ → Nitrato de etilamonio\n• Al tratar la sal de amonio con una base fuerte (NaOH) se regenera la amina libre."
+  },
+  "substrates": [
+    {
+      "id": "ami_rxn0_etilamina_hcl",
+      "name": "Etilamina + Ácido Clorhídrico (HCl) ──► Cloruro de Etilamonio (CH₃CH₂NH₃⁺Cl⁻) [Diap. 1186]",
+      "catalyst": "HCl acuoso / etéreo (25 °C)"
+    },
+    {
+      "id": "ami_rxn0_etilamina_hi",
+      "name": "Etilamina + Ácido Yodhídrico (HI) ──► Yoduro de Etilamonio (CH₃CH₂NH₃⁺I⁻) [Diap. 1186]",
+      "catalyst": "HI acuoso (25 °C)"
+    },
+    {
+      "id": "ami_rxn0_etilamina_hno3",
+      "name": "Etilamina + Ácido Nítrico (HNO₃) ──► Nitrato de Etilamonio (CH₃CH₂NH₃⁺NO₃⁻) [Diap. 1186]",
+      "catalyst": "HNO₃ acuoso (25 °C)"
+    }
+  ],
+  "catalysts": [
+    "HCl acuoso / etéreo (25 °C)",
+    "HI acuoso (25 °C)",
+    "HNO₃ acuoso (25 °C)"
+  ],
+  "stepsBySubstrate": {
+    "ami_rxn0_etilamina_hcl": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina (CH₃–CH₂–:NH₂) + Ácido Clorhídrico (H–Cl)",
+        "semiStep": "CH₃–CH₂–:NH₂ + H–Cl",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HCl ──► CH₃–CH₂–NH₃⁺ Cl⁻ (Cloruro de etilamonio)",
+        "desc": "Se observan la etilamina con su par de electrones no compartido sobre el nitrógeno y el cloruro de hidrógeno.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace H–Cl intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El par libre del nitrógeno captura el protón H⁺ del ácido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "N1",
+              "el": ":NH₂",
+              "x": 495,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Base de Lewis"
+            },
+            {
+              "id": "HCl",
+              "el": "+ H–Cl",
+              "x": 655,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 195,
+              "cx": 575,
+              "cy": 175,
+              "x2": 625,
+              "y2": 195,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Cloruro de Etilamonio (CH₃–CH₂–NH₃⁺ Cl⁻)",
+        "semiStep": "CH₃–CH₂–NH₃⁺ Cl⁻ (Cloruro de etilamonio — Sal iónica soluble)",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HCl ──► CH₃–CH₂–NH₃⁺ Cl⁻ (Cloruro de etilamonio)",
+        "desc": "Queda consolidado el cloruro de etilamonio.",
+        "legend": {
+          "breaking": "Ruptura heterolítica H–Cl completada.",
+          "forming": "En VERDE sólido: cloruro de etilamonio (CH₃CH₂NH₃⁺Cl⁻).",
+          "movement": "Producto salino obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 355,
+              "y": 210
+            },
+            {
+              "id": "N1",
+              "el": "NH₃⁺ Cl⁻",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cloruro de etilamonio"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_rxn0_etilamina_hi": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina + Ácido Yodhídrico (H–I)",
+        "semiStep": "CH₃–CH₂–NH₂ + H–I",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HI ──► CH₃–CH₂–NH₃⁺ I⁻ (Yoduro de etilamonio)",
+        "desc": "Neutralización de etilamina con ácido yodhídrico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del nitrógeno amínico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 255,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "HI",
+              "el": "+ H–I",
+              "x": 515,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Producto Consolidado: Yoduro de Etilamonio (CH₃–CH₂–NH₃⁺ I⁻)",
+        "semiStep": "CH₃–CH₂–NH₃⁺ I⁻ (Yoduro de etilamonio)",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HI ──► CH₃–CH₂–NH₃⁺ I⁻ (Yoduro de etilamonio)",
+        "desc": "Queda consolidado el yoduro de etilamonio.",
+        "legend": {
+          "breaking": "Transferencia protónica completada.",
+          "forming": "En VERDE sólido: yoduro de etilamonio.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–NH₃⁺ I⁻",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Yoduro de etilamonio"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn0_etilamina_hno3": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina + Ácido Nítrico (HNO₃)",
+        "semiStep": "CH₃–CH₂–NH₂ + HNO₃",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HNO₃ ──► CH₃–CH₂–NH₃⁺ NO₃⁻ (Nitrato de etilamonio)",
+        "desc": "Neutralización de etilamina con ácido nítrico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del nitrógeno amínico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 255,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "HNO3",
+              "el": "+ HNO₃",
+              "x": 515,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Producto Consolidado: Nitrato de Etilamonio (CH₃–CH₂–NH₃⁺ NO₃⁻)",
+        "semiStep": "CH₃–CH₂–NH₃⁺ NO₃⁻ (Nitrato de etilamonio)",
+        "semiGlobal": "CH₃–CH₂–NH₂ + HNO₃ ──► CH₃–CH₂–NH₃⁺ NO₃⁻ (Nitrato de etilamonio)",
+        "desc": "Queda consolidado el nitrato de etilamonio.",
+        "legend": {
+          "breaking": "Transferencia protónica completada.",
+          "forming": "En VERDE sólido: nitrato de etilamonio.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–NH₃⁺ NO₃⁻",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Nitrato de etilamonio"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
