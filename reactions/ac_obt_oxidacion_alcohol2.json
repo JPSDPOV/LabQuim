@@ -1,155 +1,2717 @@
 {
   "category": "obtencion",
   "title": "5) Oxidación de Alcoholes Secundarios (+ [O] / CrO₃ / K₂Cr₂O₇ ──► Cetona)",
-  "natureBadge": "Deshidrogenación Oxidativa • R–CH(OH)–R' + [O] ──► R–CO–R' + H₂O",
-  "deltaH": "ΔH° < 0 (Exotérmica; las cetonas resisten la oxidación ulterior en condiciones normales)",
-  "description": "Los alcoholes secundarios al tratarse con agentes oxidantes como anhídrido crómico (CrO₃), dicromato de potasio en medio ácido (K₂Cr₂O₇/H₂SO₄) o PCC pierden dos hidrógenos formando cetonas (Diap. 13 y 24).",
+  "natureBadge": "Oxidación • R–CH(OH)–R' + [O] (K₂Cr₂O₇/H₂SO₄ o CrO₃) ──► R–CO–R'",
+  "deltaH": "ΔH° < 0 (Exotérmica; las cetonas no poseen Hα unido al carbonilo y resisten oxidación ulterior)",
+  "description": "Oxidación de alcoholes secundarios mediante oxidantes crómicos (K₂Cr₂O₇ / H₂SO₄, Na₂Cr₂O₇ / H⁺, CrO₃ o PCC) o deshidrogenación catalítica (Cu / 300 °C) para obtener cetonas:\n1) El grupo –OH del alcohol secundario ataca al cromo hexavalente (Cr⁶⁺) formando un intermediario éster cromato (R–CH(O–CrO₃H)–R').\n2) Una eliminación concertada tipo E2 abstrae el único hidrógeno α (Cα–H) y rompe el enlace O–Cr, formando el doble enlace carbonilo C=O y reduciendo el cromo.\n3) Al no quedar hidrógenos unidos al carbono carbonílico resultante, la cetona (R–CO–R') es resistente a oxidaciones adicionales.",
   "meta": {
     "grupoFuncional": "Cetonas (R–CO–R')",
-    "reaccionMecanismo": "Eliminación oxidativa E2 sobre éster cromato",
-    "naturaleza": "Por etapas.",
-    "rupturaIntermediarios": "Ruptura de O–H y Cα–H; formación de enlace π C=O.",
-    "detalleMecanismo": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O | 3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
-    "reactivosCondiciones": "Alcohol secundario + CrO₃, Na₂Cr₂O₇/H₂SO₄ o PCC.",
-    "rolReactivos": "• Sustrato: Alcohol secundario.\n• Agente oxidante: CrO₃, dicromato o PCC.",
-    "reglasObs": "• Diap. 13: Ciclopentanol → ciclopentanona; Diap. 24 (Ej. 11): 3-metilciclohexanol + CrO₃ → 3-metilciclohexanona."
+    "reaccionMecanismo": "Oxidación vía éster cromato + eliminación E2 intramolecular",
+    "naturaleza": "Por etapas (formación de éster cromato seguida de eliminación E2 concertada).",
+    "rupturaIntermediarios": "Ruptura de O–H y Cα–H; intermediario éster cromato; formación de C=O.",
+    "detalleMecanismo": "R–CH(OH)–R' + K₂Cr₂O₇ / H₂SO₄ ──► R–CO–R'",
+    "reactivosCondiciones": "Alcohol secundario (R–CH(OH)–R') + K₂Cr₂O₇ / H₂SO₄ (o CrO₃ / H⁺, o PCC en CH₂Cl₂, o Cu / 300 °C).",
+    "rolReactivos": "• Sustrato: Alcohol secundario (R–CH(OH)–R').\n• Oxidante: Dicromato de potasio en medio ácido (K₂Cr₂O₇ / H₂SO₄) o trióxido de cromo (CrO₃).\n• Base eliminadora: H₂O del medio.",
+    "reglasObs": "• Los alcoholes secundarios producen cetonas tanto con oxidantes fuertes (K₂Cr₂O₇/H⁺) como suaves (PCC).\n• Los alcoholes terciarios (R₃C–OH) NO se oxidan en estas condiciones porque carecen de hidrógeno α (Cα–H)."
   },
   "substrates": [
     {
-      "id": "ciclopentanol_cetona",
-      "name": "Diap. 13: Ciclopentanol + [O] ──► Ciclopentanona",
-      "catalyst": "[O] (CrO₃ / H₂SO₄ o PCC)"
+      "id": "alc2_2propanol",
+      "name": "2-Propanol + K₂Cr₂O₇ / H₂SO₄ ──► Propanona (Acetona)",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄ (o CrO₃ / H⁺)"
     },
     {
-      "id": "3metilciclohexanol_cetona",
-      "name": "Ejercicio 11 (Diap. 24): 3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
-      "catalyst": "CrO₃ (Anhídrido crómico)"
+      "id": "alc2_2butanol",
+      "name": "2-Butanol + K₂Cr₂O₇ / H₂SO₄ ──► Butanona",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄ (o CrO₃ / H⁺)"
+    },
+    {
+      "id": "alc2_3pentanol",
+      "name": "3-Pentanol + CrO₃ / H⁺ ──► 3-Pentanona [Simétrica]",
+      "catalyst": "CrO₃ / H₂SO₄ acuoso (Reactivo de Jones)"
+    },
+    {
+      "id": "alc2_3metil2butanol",
+      "name": "3-Metil-2-butanol + K₂Cr₂O₇ / H₂SO₄ ──► 3-Metil-2-butanona [Ramificado]",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄"
+    },
+    {
+      "id": "alc2_1feniletanol",
+      "name": "1-Feniletanol + CrO₃ / H⁺ ──► Acetofenona [Aromático]",
+      "catalyst": "CrO₃ / H⁺ (o PCC / CH₂Cl₂)"
     }
   ],
   "catalysts": [
-    "[O] (CrO₃ / H₂SO₄ o PCC)",
-    "CrO₃ (Anhídrido crómico)"
+    "K₂Cr₂O₇ / H₂SO₄ (o CrO₃ / H⁺)"
   ],
   "stepsBySubstrate": {
-    "ciclopentanol_cetona": [
+    "alc2_2propanol": [
       {
-        "title": "Paso 1 — Estado Inicial: Ciclopentanol + [O]",
-        "semiStep": "C₅H₉–OH (Ciclopentanol)  +  [O]",
-        "semiGlobal": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O",
-        "desc": "El alcohol secundario cíclico enfrenta al agente oxidante.",
+        "title": "Estado Inicial Desarrollado: 2-Propanol + Oxidante Cr(VI)",
+        "semiStep": "CH₃–CH(OH)–CH₃ + [O]",
+        "semiGlobal": "CH₃–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-propanol (alcohol isopropílico) con su grupo –OH y su único hidrógeno α en C2, junto al oxidante crómico.",
         "legend": {
-          "breaking": "Enlaces C1–H y O–H.",
-          "forming": "Sin enlaces nuevos aún.",
-          "movement": "Oxidación de alcohol 2°."
+          "breaking": "Ningún enlace roto todavía; alcohol secundario intacto con su hidrógeno α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ácido crómico (H₂CrO₄ generado desde K₂Cr₂O₇ / H₂SO₄ o CrO₃)."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Sub",
-              "el": "Ciclopentanol",
-              "x": 310,
-              "y": 195
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 270,
+              "y": 210
             },
             {
-              "id": "Ox",
-              "el": "[O] (CrO₃)",
+              "id": "C_carb",
+              "el": "C",
+              "x": 450,
+              "y": 210,
+              "label": "2-Propanol"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 450,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 95
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 545,
+              "y": 95
+            },
+            {
+              "id": "Ox_cr",
+              "el": "Cr⁶⁺ (H₂CrO₄)",
+              "x": 695,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante (K₂Cr₂O₇ / H₂SO₄)"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
               "x": 630,
-              "y": 195,
-              "highlight": "#a855f7"
+              "y": 210
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 470,
-              "y": 202,
-              "text": "+"
+              "from": "Me_L",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Ciclopentanona",
-        "semiStep": "Ciclopentanona  +  H₂O",
-        "semiGlobal": "Ciclopentanol + [O] ──► Ciclopentanona + H₂O",
-        "desc": "Se obtiene ciclopentanona.",
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–CH(OH)–CH₃ + [O] (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₃",
+        "desc": "El oxígeno hidroxílico del 2-propanol ataca al cromo hexavalente (Cr⁶⁺), escindiendo el enlace O–H para formar el intermediario éster cromato.",
         "legend": {
-          "breaking": "2 H eliminados.",
-          "forming": "En VERDE sólido: ciclopentanona.",
-          "movement": "Producto cetónico consolidado."
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol secundario.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "Ciclopentanona",
-              "x": 460,
-              "y": 195,
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 450,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 450,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 545,
+              "y": 148,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 605,
+              "y": 95,
               "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 630,
+              "y": 210
             }
           ],
-          "bonds": []
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 478,
+              "y1": 85,
+              "cx": 528,
+              "cy": 68,
+              "x2": 575,
+              "y2": 85,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 502,
+              "y1": 122,
+              "cx": 525,
+              "cy": 140,
+              "x2": 538,
+              "y2": 146,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH(O–CrO₃H)–R')",
+        "semiStep": "[Intermediario éster cromato listo para eliminación E2]",
+        "semiGlobal": "CH₃–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₃",
+        "desc": "Se forma el intermediario éster cromato isopropílico, activando el enlace C2–Hα.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado sobre el carbono secundario.",
+          "movement": "El hidrógeno α queda activado para ser abstraído por una molécula de agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 450,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 450,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 595,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 630,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "CH₃–CO–CH₃ (Propanona) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₃",
+        "desc": "En la eliminación E2, el agua abstrae el hidrógeno α (C2–H) mientras se rompe el enlace O–Cr y se forma el doble enlace carbonilo C2=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada E2 que convierte el carbono secundario en grupo cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 450,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 450,
+              "y": 335,
+              "highlight": "#ef4444",
+              "label": "Hα abstraído (por H₂O)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "HCrO₃⁻",
+              "x": 615,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 630,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 436,
+              "y1": 270,
+              "cx": 414,
+              "cy": 210,
+              "x2": 434,
+              "y2": 150,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 82,
+              "cx": 560,
+              "cy": 66,
+              "x2": 585,
+              "y2": 78,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propanona (Acetona) (CH₃–CO–CH₃ (Propanona))",
+        "semiStep": "CH₃–CO–CH₃ (Propanona) (Propanona (Acetona))",
+        "semiGlobal": "CH₃–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₃",
+        "desc": "Queda consolidada la propanona o acetona (CH₃–CO–CH₃) con geometría trigonal plana (120°) alrededor del carbono carbonílico.",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo carbonilo cetónico C=O con geometría trigonal plana (120°).",
+          "movement": "Cetona estable obtenida; las cetonas resisten oxidaciones posteriores en condiciones normales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 270,
+              "y": 258
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 450,
+              "y": 200,
+              "highlight": "#10b981",
+              "label": "Propanona (Acetona)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 450,
+              "y": 75,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 630,
+              "y": 258
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
         }
       }
     ],
-    "3metilciclohexanol_cetona": [
+    "alc2_2butanol": [
       {
-        "title": "Paso 1 — Estado Inicial: 3-Metilciclohexanol + CrO₃",
-        "semiStep": "3-Metilciclohexanol  +  CrO₃",
-        "semiGlobal": "3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
-        "desc": "El anhídrido crómico oxida el grupo –OH secundario en C1.",
+        "title": "Estado Inicial Desarrollado: 2-Butanol + Oxidante Cr(VI)",
+        "semiStep": "CH₃–CH(OH)–CH₂–CH₃ + [O]",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₂–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-butanol con cada carbono separado (CH₃–CH(OH)–CH₂–CH₃) y el oxidante crómico.",
         "legend": {
-          "breaking": "Enlaces C1–H y O–H.",
-          "forming": "Sin enlaces nuevos aún.",
-          "movement": "Oxidación con CrO₃."
+          "breaking": "Ningún enlace roto todavía; alcohol secundario intacto con su hidrógeno α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ácido crómico (H₂CrO₄ generado desde K₂Cr₂O₇ / H₂SO₄ o CrO₃)."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Sub",
-              "el": "3-Metilciclohexanol",
-              "x": 310,
-              "y": 195
+              "id": "C1",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
             },
             {
-              "id": "Ox",
-              "el": "CrO₃",
-              "x": 640,
-              "y": 195,
-              "highlight": "#a855f7"
+              "id": "C_carb",
+              "el": "C",
+              "x": 415,
+              "y": 210,
+              "label": "2-Butanol"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 415,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 415,
+              "y": 95
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 510,
+              "y": 95
+            },
+            {
+              "id": "Ox_cr",
+              "el": "Cr⁶⁺ (H₂CrO₄)",
+              "x": 660,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante (K₂Cr₂O₇ / H₂SO₄)"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 745,
+              "y": 210
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 485,
-              "y": 202,
-              "text": "+"
+              "from": "C1",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: 3-Metilciclohexanona",
-        "semiStep": "3-Metilciclohexanona",
-        "semiGlobal": "3-Metilciclohexanol + CrO₃ ──► 3-Metilciclohexanona",
-        "desc": "Se obtiene 3-metilciclohexanona.",
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–CH(OH)–CH₂–CH₃ + [O] (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₂–CH₃",
+        "desc": "El grupo –OH en C2 ataca al cromo hexavalente rompiendo el enlace O–H y formando el éster cromato.",
         "legend": {
-          "breaking": "Grupo alcohol oxidado.",
-          "forming": "En VERDE sólido: 3-metilciclohexanona.",
-          "movement": "Producto final obtenido."
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol secundario.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "3-Metilciclohexanona",
-              "x": 460,
-              "y": 195,
+              "id": "C1",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 415,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 415,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 510,
+              "y": 148,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 570,
+              "y": 95,
               "highlight": "#10b981"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 745,
+              "y": 210
             }
           ],
-          "bonds": []
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_carb",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 443,
+              "y1": 85,
+              "cx": 493,
+              "cy": 68,
+              "x2": 540,
+              "y2": 85,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 467,
+              "y1": 122,
+              "cx": 490,
+              "cy": 140,
+              "x2": 503,
+              "y2": 146,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH(O–CrO₃H)–R')",
+        "semiStep": "[Intermediario éster cromato listo para eliminación E2]",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₂–CH₃",
+        "desc": "Se estabiliza el intermediario éster cromato en C2.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado sobre el carbono secundario.",
+          "movement": "El hidrógeno α queda activado para ser abstraído por una molécula de agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 415,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 415,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 560,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 745,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "CH₃–CO–CH₂–CH₃ (Butanona) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₂–CH₃",
+        "desc": "La eliminación E2 abstrae el hidrógeno α de C2 y expulsa el cromo reducido, generando el doble enlace C2=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada E2 que convierte el carbono secundario en grupo cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 415,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 415,
+              "y": 335,
+              "highlight": "#ef4444",
+              "label": "Hα abstraído (por H₂O)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 415,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "HCrO₃⁻",
+              "x": 580,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 745,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 401,
+              "y1": 270,
+              "cx": 379,
+              "cy": 210,
+              "x2": 399,
+              "y2": 150,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 490,
+              "y1": 82,
+              "cx": 525,
+              "cy": 66,
+              "x2": 550,
+              "y2": 78,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Butanona (CH₃–CO–CH₂–CH₃ (Butanona))",
+        "semiStep": "CH₃–CO–CH₂–CH₃ (Butanona) (Butanona)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► CH₃–CO–CH₂–CH₃",
+        "desc": "Queda consolidada la butanona o metiletilcetona (CH₃–CO–CH₂–CH₃) con geometría trigonal plana (120°) en C2.",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo carbonilo cetónico C=O con geometría trigonal plana (120°).",
+          "movement": "Cetona estable obtenida; las cetonas resisten oxidaciones posteriores en condiciones normales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 235,
+              "y": 258
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 415,
+              "y": 200,
+              "highlight": "#10b981",
+              "label": "Butanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 415,
+              "y": 75,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 585,
+              "y": 258
+            },
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 745,
+              "y": 258
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "alc2_3pentanol": [
+      {
+        "title": "Estado Inicial Desarrollado: 3-Pentanol + Oxidante Cr(VI)",
+        "semiStep": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + [O]",
+        "semiGlobal": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + CrO₃ / H⁺ ──► CH₃–CH₂–CO–CH₂–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 3-pentanol simétrico con cada grupo separado y el trióxido de cromo en medio ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol secundario intacto con su hidrógeno α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ácido crómico (H₂CrO₄ generado desde K₂Cr₂O₇ / H₂SO₄ o CrO₃)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 295,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 460,
+              "y": 210,
+              "label": "3-Pentanol"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 460,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 555,
+              "y": 95
+            },
+            {
+              "id": "Ox_cr",
+              "el": "Cr⁶⁺ (H₂CrO₄)",
+              "x": 705,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante (K₂Cr₂O₇ / H₂SO₄)"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 625,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₃",
+              "x": 785,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + [O] (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + CrO₃ / H⁺ ──► CH₃–CH₂–CO–CH₂–CH₃",
+        "desc": "El oxígeno hidroxílico en C3 ataca al cromo hexavalente con ruptura del enlace O–H.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol secundario.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 295,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 460,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 460,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 555,
+              "y": 148,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 615,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 625,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₃",
+              "x": 785,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_carb",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 488,
+              "y1": 85,
+              "cx": 538,
+              "cy": 68,
+              "x2": 585,
+              "y2": 85,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 512,
+              "y1": 122,
+              "cx": 535,
+              "cy": 140,
+              "x2": 548,
+              "y2": 146,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH(O–CrO₃H)–R')",
+        "semiStep": "[Intermediario éster cromato listo para eliminación E2]",
+        "semiGlobal": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + CrO₃ / H⁺ ──► CH₃–CH₂–CO–CH₂–CH₃",
+        "desc": "Se forma el intermediario éster cromato simétrico en C3.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado sobre el carbono secundario.",
+          "movement": "El hidrógeno α queda activado para ser abstraído por una molécula de agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 295,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 460,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 460,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 605,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 625,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₃",
+              "x": 785,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "CH₃–CH₂–CO–CH₂–CH₃ (3-Pentanona) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + CrO₃ / H⁺ ──► CH₃–CH₂–CO–CH₂–CH₃",
+        "desc": "La eliminación E2 rompe el enlace C3–Hα y el enlace O–Cr, formando el carbonilo central C3=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada E2 que convierte el carbono secundario en grupo cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 295,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 460,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 460,
+              "y": 335,
+              "highlight": "#ef4444",
+              "label": "Hα abstraído (por H₂O)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "HCrO₃⁻",
+              "x": 625,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 625,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₃",
+              "x": 785,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 446,
+              "y1": 270,
+              "cx": 424,
+              "cy": 210,
+              "x2": 444,
+              "y2": 150,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 535,
+              "y1": 82,
+              "cx": 570,
+              "cy": 66,
+              "x2": 595,
+              "y2": 78,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Pentanona (CH₃–CH₂–CO–CH₂–CH₃ (3-Pentanona))",
+        "semiStep": "CH₃–CH₂–CO–CH₂–CH₃ (3-Pentanona) (3-Pentanona)",
+        "semiGlobal": "CH₃–CH₂–CH(OH)–CH₂–CH₃ + CrO₃ / H⁺ ──► CH₃–CH₂–CO–CH₂–CH₃",
+        "desc": "Queda consolidada la 3-pentanona o dietilcetona (CH₃–CH₂–CO–CH₂–CH₃) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo carbonilo cetónico C=O con geometría trigonal plana (120°).",
+          "movement": "Cetona estable obtenida; las cetonas resisten oxidaciones posteriores en condiciones normales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 135,
+              "y": 258
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 295,
+              "y": 258
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 460,
+              "y": 200,
+              "highlight": "#10b981",
+              "label": "3-Pentanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 460,
+              "y": 75,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 625,
+              "y": 258
+            },
+            {
+              "id": "C5",
+              "el": "CH₃",
+              "x": 785,
+              "y": 258
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "alc2_3metil2butanol": [
+      {
+        "title": "Estado Inicial Desarrollado: 3-Metil-2-butanol + Oxidante Cr(VI)",
+        "semiStep": "(CH₃)₂CH–CH(OH)–CH₃ + [O]",
+        "semiGlobal": "(CH₃)₂CH–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► (CH₃)₂CH–CO–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 3-metil-2-butanol ramificado con su grupo –OH en C2 y el oxidante crómico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol secundario intacto con su hidrógeno α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ácido crómico (H₂CrO₄ generado desde K₂Cr₂O₇ / H₂SO₄ o CrO₃)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 120,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 265,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210,
+              "label": "3-Metil-2-butanol"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 530,
+              "y": 95
+            },
+            {
+              "id": "Ox_cr",
+              "el": "Cr⁶⁺ (H₂CrO₄)",
+              "x": 680,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante (K₂Cr₂O₇ / H₂SO₄)"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "(CH₃)₂CH–CH(OH)–CH₃ + [O] (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "(CH₃)₂CH–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► (CH₃)₂CH–CO–CH₃",
+        "desc": "El oxígeno del grupo –OH secundario ataca al cromo hexavalente rompiendo el enlace O–H.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol secundario.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 120,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 265,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 530,
+              "y": 148,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 590,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_carb",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 463,
+              "y1": 85,
+              "cx": 513,
+              "cy": 68,
+              "x2": 560,
+              "y2": 85,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 487,
+              "y1": 122,
+              "cx": 510,
+              "cy": 140,
+              "x2": 523,
+              "y2": 146,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH(O–CrO₃H)–R')",
+        "semiStep": "[Intermediario éster cromato listo para eliminación E2]",
+        "semiGlobal": "(CH₃)₂CH–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► (CH₃)₂CH–CO–CH₃",
+        "desc": "Se forma el intermediario éster cromato en C2 conservando intacto el grupo isopropilo.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado sobre el carbono secundario.",
+          "movement": "El hidrógeno α queda activado para ser abstraído por una molécula de agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 120,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 265,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 580,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "(CH₃)₂CH–CO–CH₃ (3-Metil-2-butanona) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "(CH₃)₂CH–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► (CH₃)₂CH–CO–CH₃",
+        "desc": "La eliminación E2 abstrae el hidrógeno α de C2 y expulsa el cromo reducido, formando el doble enlace C2=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada E2 que convierte el carbono secundario en grupo cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 120,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 265,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 265,
+              "y": 325
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 335,
+              "highlight": "#ef4444",
+              "label": "Hα abstraído (por H₂O)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "HCrO₃⁻",
+              "x": 600,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 421,
+              "y1": 270,
+              "cx": 399,
+              "cy": 210,
+              "x2": 419,
+              "y2": 150,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 510,
+              "y1": 82,
+              "cx": 545,
+              "cy": 66,
+              "x2": 570,
+              "y2": 78,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Metil-2-butanona ((CH₃)₂CH–CO–CH₃ (3-Metil-2-butanona))",
+        "semiStep": "(CH₃)₂CH–CO–CH₃ (3-Metil-2-butanona) (3-Metil-2-butanona)",
+        "semiGlobal": "(CH₃)₂CH–CH(OH)–CH₃ + K₂Cr₂O₇ / H₂SO₄ ──► (CH₃)₂CH–CO–CH₃",
+        "desc": "Queda consolidada la 3-metil-2-butanona o metilisopropilcetona ((CH₃)₂CH–CO–CH₃) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo carbonilo cetónico C=O con geometría trigonal plana (120°).",
+          "movement": "Cetona estable obtenida; las cetonas resisten oxidaciones posteriores en condiciones normales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 120,
+              "y": 258
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 265,
+              "y": 258
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 265,
+              "y": 360
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 200,
+              "highlight": "#10b981",
+              "label": "3-Metil-2-butanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 75,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃",
+              "x": 615,
+              "y": 258
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "alc2_1feniletanol": [
+      {
+        "title": "Estado Inicial Desarrollado: 1-Feniletanol + Oxidante Cr(VI)",
+        "semiStep": "C₆H₅–CH(OH)–CH₃ + [O]",
+        "semiGlobal": "C₆H₅–CH(OH)–CH₃ + CrO₃ / H⁺ ──► C₆H₅–CO–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 1-feniletanol (alcohol secundario bencílico) y el oxidante crómico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol secundario intacto con su hidrógeno α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ácido crómico (H₂CrO₄ generado desde K₂Cr₂O₇ / H₂SO₄ o CrO₃)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 240,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210,
+              "label": "1-Feniletanol"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 530,
+              "y": 95
+            },
+            {
+              "id": "Ox_cr",
+              "el": "Cr⁶⁺ (H₂CrO₄)",
+              "x": 680,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante (K₂Cr₂O₇ / H₂SO₄)"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "C₆H₅–CH(OH)–CH₃ + [O] (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "C₆H₅–CH(OH)–CH₃ + CrO₃ / H⁺ ──► C₆H₅–CO–CH₃",
+        "desc": "El oxígeno hidroxílico ataca al cromo hexavalente con pérdida de H⁺ para formar el éster cromato bencílico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol secundario.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 240,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 530,
+              "y": 148,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 590,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 463,
+              "y1": 85,
+              "cx": 513,
+              "cy": 68,
+              "x2": 560,
+              "y2": 85,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 487,
+              "y1": 122,
+              "cx": 510,
+              "cy": 140,
+              "x2": 523,
+              "y2": 146,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH(O–CrO₃H)–R')",
+        "semiStep": "[Intermediario éster cromato listo para eliminación E2]",
+        "semiGlobal": "C₆H₅–CH(OH)–CH₃ + CrO₃ / H⁺ ──► C₆H₅–CO–CH₃",
+        "desc": "Se estabiliza el intermediario éster cromato leaving intacto el anillo aromático.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado sobre el carbono secundario.",
+          "movement": "El hidrógeno α queda activado para ser abstraído por una molécula de agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 240,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "CrO₃H",
+              "x": 580,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "C₆H₅–CO–CH₃ (Acetofenona) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "C₆H₅–CH(OH)–CH₃ + CrO₃ / H⁺ ──► C₆H₅–CO–CH₃",
+        "desc": "La eliminación E2 abstrae el hidrógeno bencílico Hα y expulsa el cromo reducido, generando el doble enlace C=O conjugado con el anillo.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada E2 que convierte el carbono secundario en grupo cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 240,
+              "y": 210
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 210
+            },
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 435,
+              "y": 335,
+              "highlight": "#ef4444",
+              "label": "Hα abstraído (por H₂O)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_cr",
+              "el": "HCrO₃⁻",
+              "x": 600,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 615,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "H_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_cr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 421,
+              "y1": 270,
+              "cx": 399,
+              "cy": 210,
+              "x2": 419,
+              "y2": 150,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 510,
+              "y1": 82,
+              "cx": 545,
+              "cy": 66,
+              "x2": 570,
+              "y2": 78,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Acetofenona (C₆H₅–CO–CH₃ (Acetofenona))",
+        "semiStep": "C₆H₅–CO–CH₃ (Acetofenona) (Acetofenona)",
+        "semiGlobal": "C₆H₅–CH(OH)–CH₃ + CrO₃ / H⁺ ──► C₆H₅–CO–CH₃",
+        "desc": "Queda consolidada la acetofenona o fenilmetilcetona (C₆H₅–CO–CH₃) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo carbonilo cetónico C=O con geometría trigonal plana (120°).",
+          "movement": "Cetona estable obtenida; las cetonas resisten oxidaciones posteriores en condiciones normales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 240,
+              "y": 258
+            },
+            {
+              "id": "C_carb",
+              "el": "C",
+              "x": 435,
+              "y": 200,
+              "highlight": "#10b981",
+              "label": "Acetofenona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 435,
+              "y": 75,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 615,
+              "y": 258
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_carb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_carb",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
         }
       }
     ]
