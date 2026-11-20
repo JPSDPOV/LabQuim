@@ -1,0 +1,226 @@
+{
+  "category": "obtencion",
+  "title": "3) Reducción Catalítica de Nitrilos (Butanonitrilo + 2 H₂/Ni → Butanamina [Amina 1°])",
+  "natureBadge": "Hidrogenación de Nitrilos • R–C≡N + 2 H₂ / Ni (o LiAlH₄) ──► Amina Primaria (R–CH₂–NH₂)",
+  "deltaH": "ΔH° < 0 (Exotérmica; saturación de los dos enlaces π del grupo ciano –C≡N hasta amina primaria)",
+  "description": "Obtención exclusiva de AMINAS PRIMARIAS mediante reducción catalítica de nitrilos (cianuros de alquilo/arilo, R–C≡N) con 2 equivalentes de hidrógeno molecular sobre níquel (Ni Raney, Pt o Pd) o con LiAlH₄ en éter seguido de H₂O (Diap. 1183 de cátedra):\n1) Ejemplo de cátedra: Butanonitrilo (CH₃CH₂CH₂–C≡N) + 2 H₂ / Ni ──► Butanamina (CH₃CH₂CH₂CH₂–NH₂, amina primaria de 4 carbonos).\n2) Alargamiento de cadena (+1C): combinado con sustitución SN2 de un haluro de alquilo con NaCN, permite sintetizar aminas primarias con un carbono adicional.",
+  "meta": {
+    "grupoFuncional": "Aminas Primarias (R–CH₂–NH₂)",
+    "reaccionMecanismo": "Adición catalítica sucesiva de 2 moles de H₂ sobre el triple enlace C≡N (vía imina primaria intermediaria)",
+    "naturaleza": "Por etapas (Nitrilo + H₂ → Imina R–CH=NH + H₂ → Amina Primaria R–CH₂–NH₂).",
+    "rupturaIntermediarios": "Ruptura de los dos enlaces π del triple enlace C≡N; intermediario imina primaria; formación de dos enlaces C–H y dos enlaces N–H.",
+    "detalleMecanismo": "CH₃CH₂CH₂–C≡N + 2 H₂ ──(Ni)──► CH₃CH₂CH₂–CH₂–NH₂ (Butanamina)",
+    "reactivosCondiciones": "Nitrilo (R–C≡N) + 2 H₂ (g) con catalizador metálico (Ni Raney, Pt o Pd) a presión, o 1. LiAlH₄ / Éter  2. H₂O.",
+    "rolReactivos": "• Sustrato insaturado: Nitrilo (R–C≡N, ambos átomos C y N tienen hibridación sp).\n• Agente reductor: 2 equivalentes de H₂ / Ni (o LiAlH₄).\n• Producto: Amina primaria (R–CH₂–NH₂) con el grupo –NH₂ siempre terminal.",
+    "reglasObs": "• Contraste crítico de cátedra (Diap. 1183): los NITRILOS (R–C≡N) siempre generan AMINAS PRIMARIAS (R–CH₂–NH₂), mientras que los ISONITRILOS (R–N≡C) siempre generan AMINAS SECUNDARIAS N-metiladas (R–NH–CH₃)."
+  },
+  "substrates": [
+    {
+      "id": "ami_obt3_butanonitrilo_butanamina",
+      "name": "Butanonitrilo + 2 H₂ / Ni ──► Butanamina (1-Butanamina — Amina 1°) [Ejemplo Exacto Diap. 1183]",
+      "catalyst": "2 H₂ / Ni (Catalítico)"
+    },
+    {
+      "id": "ami_obt3_benzonitrilo_bencilamina",
+      "name": "Benzonitrilo + 2 H₂ / Ni (o LiAlH₄) ──► Bencilamina (Fenilmetanamina — Amina 1°)",
+      "catalyst": "2 H₂ / Ni  (o 1. LiAlH₄  2. H₂O)"
+    }
+  ],
+  "catalysts": [
+    "2 H₂ / Ni (Catalítico)",
+    "2 H₂ / Ni  (o 1. LiAlH₄  2. H₂O)"
+  ],
+  "stepsBySubstrate": {
+    "ami_obt3_butanonitrilo_butanamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Butanonitrilo (CH₃–CH₂–CH₂–C≡N) + 2 H₂ / Ni",
+        "semiStep": "CH₃–CH₂–CH₂–C≡N + 2 H₂ (cat. Ni)",
+        "semiGlobal": "CH₃–CH₂–CH₂–C≡N + 2 H₂ ──(Ni)──► CH₃–CH₂–CH₂–CH₂–NH₂ (Butanamina)",
+        "desc": "Se observan el butanonitrilo con su triple enlace C≡N terminal y los 2 equivalentes de hidrógeno sobre níquel.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; triple enlace C≡N intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición sucesiva de dos moléculas de H₂ a través del triple enlace C≡N."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃–CH₂–CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 525,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2",
+              "el": "+ 2 H₂ / Ni",
+              "x": 675,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Butanamina / 1-Butanamina (CH₃–CH₂–CH₂–CH₂–NH₂ — Amina 1°)",
+        "semiStep": "CH₃–CH₂–CH₂–CH₂–NH₂ (Butanamina)",
+        "semiGlobal": "CH₃–CH₂–CH₂–C≡N + 2 H₂ ──(Ni)──► CH₃–CH₂–CH₂–CH₂–NH₂ (Butanamina)",
+        "desc": "Queda consolidada la butanamina (amina primaria de 4 carbonos).",
+        "legend": {
+          "breaking": "Saturación de los dos enlaces π C≡N completada.",
+          "forming": "En VERDE sólido: butanamina (–CH₂–NH₂).",
+          "movement": "Producto amina primaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr",
+              "el": "CH₃–CH₂–CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "NH₂",
+              "x": 565,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Butanamina (Amina 1°)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_obt3_benzonitrilo_bencilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzonitrilo + 2 H₂ / Ni",
+        "semiStep": "C₆H₅–C≡N + 2 H₂ (cat. Ni)",
+        "semiGlobal": "C₆H₅–C≡N + 2 H₂ ──(Ni)──► C₆H₅–CH₂–NH₂ (Bencilamina)",
+        "desc": "Hidrogenación selectiva del grupo nitrilo respetando el anillo aromático.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzonitrilo intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reducción del grupo –C≡N a –CH₂–NH₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "CN",
+              "el": "C≡N",
+              "x": 415,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2",
+              "el": "+ 2 H₂ / Ni",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "CN",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Bencilamina / Fenilmetanamina (C₆H₅–CH₂–NH₂ — Amina 1°)",
+        "semiStep": "C₆H₅–CH₂–NH₂ (Bencilamina)",
+        "semiGlobal": "C₆H₅–C≡N + 2 H₂ ──(Ni)──► C₆H₅–CH₂–NH₂ (Bencilamina)",
+        "desc": "Queda consolidada la bencilamina.",
+        "legend": {
+          "breaking": "Hidrogenación completada.",
+          "forming": "En VERDE sólido: bencilamina.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Prod",
+              "el": "CH₂–NH₂",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Bencilamina (Amina 1°)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Prod",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
