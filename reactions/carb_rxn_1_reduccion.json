@@ -12,17 +12,17 @@
     "detalleMecanismo": "R–CHO + DIBAH / H₂O ──► R–CH₂–OH  |  R–CO–R' + LiBH₄ / H₂O ──► R–CH(OH)–R'",
     "reactivosCondiciones": "Aldehído o Cetona + DIBAH, LiBH₄, NaBH₄ (en MeOH/EtOH) o LiAlH₄ (en éter seco), luego H₂O / H⁺.",
     "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Agente reductor (donador de H⁻): DIBAH, LiBH₄, NaBH₄ o LiAlH₄.\n• Fuente de protones: H₂O o H₃O⁺.",
-    "reglasObs": "• Aldehído ──► Alcohol 1° (ejemplo del programa: Etanal + DIBAH ──► Etanol).\n• Cetona ──► Alcohol 2° (ejemplo del programa: Propanona + LiBH₄ ──► 2-Propanol).\n• NaBH₄ y LiBH₄ son selectivos para aldehídos y cetonas sin reducir ácidos ni ésteres."
+    "reglasObs": "• Aldehído ──► Alcohol 1°.\n• Cetona ──► Alcohol 2°.\n• NaBH₄ y LiBH₄ son selectivos para aldehídos y cetonas sin reducir ácidos ni ésteres."
   },
   "substrates": [
     {
       "id": "red_etanal_dibah",
-      "name": "Etanal + DIBAH ──► Etanol [Alcohol 1° — Ejemplo CPAM]",
+      "name": "Etanal + DIBAH ──► Etanol [Alcohol 1°]",
       "catalyst": "DIBAH (luego H₂O)"
     },
     {
       "id": "red_propanona_libh4",
-      "name": "Propanona + LiBH₄ ──► 2-Propanol [Alcohol 2° — Ejemplo CPAM]",
+      "name": "Propanona + LiBH₄ ──► 2-Propanol [Alcohol 2°]",
       "catalyst": "LiBH₄ (luego H₂O)"
     },
     {
