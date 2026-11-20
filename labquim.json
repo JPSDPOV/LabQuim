@@ -1098,24 +1098,72 @@
       ],
       "reacciones": [
         {
-          "value": "carb_rxn_grignard",
-          "label": "A.1- Adición Nucleofílica de Grignard (Metanal → 1° | Aldehídos → 2° | Cetonas → Alcohol 3°)"
+          "value": "carb_rxn_1_reduccion",
+          "label": "1) Reducción de Aldehídos y Cetonas (+ DIBAH / LiBH₄ / NaBH₄ ──► Alcoholes 1° y 2°)"
         },
         {
-          "value": "carb_rxn_hemiacetal",
-          "label": "A.2- Adición de Alcoholes (Aldehído → Hemiacetal → Acetal | Cetona → Hemicetal → Cetal)"
+          "value": "carb_rxn_2_oxidacion_acidos",
+          "label": "2) Oxidación de Aldehídos (+ [O] débil / KMnO₄ / K₂Cr₂O₇ ──► Ácidos Carboxílicos)"
         },
         {
-          "value": "carb_rxn_reduccion",
-          "label": "B.1- Reducción a Alcoholes (NaBH₄ / LiAlH₄) vs. Clemmensen / Wolff-Kishner (→ Alcanos)"
+          "value": "carb_rxn_3_haloformica",
+          "label": "3) Reacción Haloformica de Metilcetonas o Etanal (+ NaOH / X₂ ──► Sal Carboxilato + Haloformo CHX₃)"
         },
         {
-          "value": "carb_rxn_tollens_fehling",
-          "label": "B.2- Oxidación Diferencial: Tollens (Espejo Ag⁰) y Fehling (Cu₂O↓) [Aldehídos + | Cetonas -]"
+          "value": "carb_rxn_4_cianhidrinas",
+          "label": "4) Formación de Cianhidrinas (+ H–C≡N ──► α-Hidroxinitrilos)"
         },
         {
-          "value": "carb_rxn_aldolica_cannizzaro",
-          "label": "C- Condensación Aldólica (con H-α) vs. Reacción de Cannizzaro (sin H-α) y Prueba del Yodoformo"
+          "value": "carb_rxn_5_hidratos",
+          "label": "5) Adición de Agua a Aldehídos (+ H–OH ──► Hidratos / Gem-dioles; Hidrato de Cloral)"
+        },
+        {
+          "value": "carb_rxn_6_hemiacetal_acetal",
+          "label": "6) Adición de Alcoholes a Aldehídos (+ R–OH ──► Hemiacetal ──(+ R–OH)──► Acetal + H₂O)"
+        },
+        {
+          "value": "carb_rxn_7_hemicetal_cetal",
+          "label": "7) Adición de Alcoholes a Cetonas (+ R–OH ──► Hemicetal ──(+ R–OH)──► Cetal + H₂O)"
+        },
+        {
+          "value": "carb_rxn_8_imina_primaria",
+          "label": "8) Condensación con Amoníaco (+ NH₃ ──► Iminas Primarias + H₂O)"
+        },
+        {
+          "value": "carb_rxn_9_imina_secundaria",
+          "label": "9) Condensación con Aminas Primarias (+ R–NH₂ ──► Iminas Secundarias / Bases de Schiff + H₂O)"
+        },
+        {
+          "value": "carb_rxn_10_hidrazona",
+          "label": "10) Condensación con Hidracina (+ H₂N–NH₂ ──► Hidrazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_11_oxima",
+          "label": "11) Condensación con Hidroxilamina (+ H₂N–OH ──► Oximas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_12_fenilhidrazona",
+          "label": "12) Condensación con Fenilhidracina (+ C₆H₅–NH–NH₂ ──► Fenilhidrazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_13_semicarbazona",
+          "label": "13) Condensación con Semicarbazida (+ H₂N–NH–CO–NH₂ ──► Semicarbazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_14_aldolizacion",
+          "label": "14) Reacción de Aldolización (2 Aldehídos con H-α ──► Aldol ──(-H₂O)──► Aldehído α,β-Insaturado)"
+        },
+        {
+          "value": "carb_rxn_15_cetolizacion_cruzada",
+          "label": "15) Cetolización y Condensación Aldólica Cruzada (2 Cetonas o Aldehído + Cetona con H-α)"
+        },
+        {
+          "value": "carb_rxn_16_benzaldehido_cetona",
+          "label": "16) Condensación Aldólica Dirigida: Benzaldehído (sin H-α) + Cetona ──► Cetona α,β-Insaturada"
+        },
+        {
+          "value": "carb_rxn_17_grignard",
+          "label": "17) Adición de Reactivo de Grignard (Metanal → 1° | Aldehídos → 2° | Cetonas → Alcohol 3° + Retrosíntesis)"
         }
       ]
     },
