@@ -1,0 +1,1265 @@
+{
+  "category": "reacciones",
+  "title": "14) Reacción de Aldolización (2 Aldehídos con H-α ──► Aldol ──(-H₂O)──► Aldehído α,β-Insaturado)",
+  "natureBadge": "Condensación Carbonílica • 2 Aldehídos (H-α) ──(OH⁻ / H⁺)──► β-Hidroxialdehído (Aldol) ──(Δ, −H₂O)──► Enal α,β-Insaturado",
+  "deltaH": "ΔH° ≈ −25 a −45 kJ/mol (Adición aldólica exotérmica; la deshidratación térmica Δ consolida el sistema conjugado C=C–C=O)",
+  "description": "Reacción fundamental de formación de enlaces carbono-carbono entre dos moléculas de aldehído (que posean al menos un hidrógeno en posición alfa, H-α) en medio básico diluido (NaOH / KOH) o ácido:\n1) Adición aldólica (en frío, 5–10 °C): la base (OH⁻) abstrae un protón α ácido (pKa ≈ 17–20) de una molécula de aldehído formando un ion enolato estabilizado por resonancia, el cual ataca nucleofílicamente al carbono carbonílico electrofílico de una segunda molécula de aldehído. Tras protonación con H₂O, se obtiene un β-hidroxialdehído (ALDOL).\n2) Condensación aldólica (con calentamiento, Δ): el aldol pierde una molécula de agua mediante un mecanismo E1cb (desprotonación del H-α residual → enolato → expulsión de OH⁻) para generar un ALDEHÍDO α,β-INSATURADO (enal) altamente estable por conjugación.\n3) Importancia sintética y bioquímica: permite duplicar la cadena carbonada (ej. 2 etanal [2C] → 3-hidroxibutanal [4C] → 2-butenal [4C]) y constituye la base de la enzima aldolasa en la glucólisis.",
+  "meta": {
+    "grupoFuncional": "β-Hidroxialdehídos (Aldoles: R–CH(OH)–CH(R')–CHO) y Aldehídos α,β-Insaturados (Enales: R–CH=C(R')–CHO)",
+    "reaccionMecanismo": "Enolización α + Adición nucleofílica aldólica, seguida de deshidratación E1cb térmica",
+    "naturaleza": "Por etapas (desprotonación H-α → enolato → ataque C=O [2.º aldehído] → protonación [aldol] → deshidratación E1cb [enal α,β-insaturado]).",
+    "rupturaIntermediarios": "Ruptura de C–H α, π C=O y enlace Cβ–OH (en Δ); intermediarios ion enolato y alcóxido aldólico; formación de nuevo enlace Cα–Cβ y doble enlace Cα=Cβ.",
+    "detalleMecanismo": "2 CH₃–CHO ──(NaOH dil., 5 °C)──► CH₃–CH(OH)–CH₂–CHO  ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+    "reactivosCondiciones": "Aldehído con H-α + NaOH o KOH acuoso diluido (5–10 °C para aislar el aldol; calentamiento Δ para obtener el enal α,β-insaturado).",
+    "rolReactivos": "• Componente nucleofílico (enolizable): 1.ª molécula de aldehído con H-α → ion enolato.\n• Componente electrofílico: 2.ª molécula de aldehído (carbono carbonílico δ+).\n• Catalizador básico: NaOH / KOH diluido (genera el enolato en etapa 1 y promueve eliminación E1cb en etapa 2).",
+    "reglasObs": "• Requisito estructural indispensable: el aldehído debe poseer al menos 1 hidrógeno en el carbono α (C2); aldehídos sin H-α (como metanal HCHO o benzaldehído C₆H₅CHO) NO experimentan auto-aldolización (sufren reacción de Cannizzaro con base concentrada).\n• Para deshidratar hasta el aldehído α,β-insaturado se requieren al menos 2 hidrógenos en el carbono α.\n• En enales α,β-insaturados predomina el estereoisómero trans (E) por menor impedimento estérico."
+  },
+  "substrates": [
+    {
+      "id": "ald_etanal_auto",
+      "name": "2 Etanal + NaOH dil. ──► 3-Hidroxibutanal (Aldol) ──(Δ, −H₂O)──► 2-Butenal (Crotonaldehído)",
+      "catalyst": "NaOH diluido (5 °C → Δ)"
+    },
+    {
+      "id": "ald_propanal_auto",
+      "name": "2 Propanal + NaOH dil. ──► 3-Hidroxi-2-metilpentanal ──(Δ, −H₂O)──► 2-Metil-2-pentenal",
+      "catalyst": "NaOH diluido (5 °C → Δ)"
+    },
+    {
+      "id": "ald_butanal_auto",
+      "name": "2 Butanal + NaOH dil. ──► 2-Etil-3-hidroxihexanal ──(Δ, −H₂O)──► 2-Etil-2-hexenal",
+      "catalyst": "NaOH diluido (5 °C → Δ)"
+    },
+    {
+      "id": "ald_fenilacetaldehido_auto",
+      "name": "2 Fenilacetaldehído + NaOH dil. ──► 3-Hidroxi-2,4-difenilbutanal ──(Δ)──► 2,4-Difenil-2-butenal",
+      "catalyst": "NaOH diluido (5 °C → Δ)"
+    }
+  ],
+  "catalysts": [
+    "NaOH diluido (5 °C → Δ)"
+  ],
+  "stepsBySubstrate": {
+    "ald_etanal_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Etanal + Base Diluida (OH⁻)",
+        "semiStep": "CH₃–CHO + CH₃–CHO + OH⁻ (NaOH acuoso diluido)",
+        "semiGlobal": "2 CH₃–CHO ──(NaOH, 5 °C)──► CH₃–CH(OH)–CH₂–CHO ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Se observan dos moléculas de etanal (CH₃–CHO): una actuará como donador nucleofílico tras perder un protón ácido α (C–H), y la segunda como aceptor electrofílico en su grupo carbonilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de etanal y la base OH⁻ intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "La base hidróxido (OH⁻) abstrae un protón α del carbono metílico para generar el ion enolato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 165,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Cα nucleofílico"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 165,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Base diluida"
+            },
+            {
+              "id": "Me_2",
+              "el": "CH₃",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "2.º Etanal (δ+)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_cho",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación del Enolato y Ataque Nucleofílico Cα–Cβ",
+        "semiStep": "[⁻CH₂–CHO] + CH₃–CHO ──► CH₃–CH(O⁻)–CH₂–CHO",
+        "semiGlobal": "2 CH₃–CHO ──(NaOH, 5 °C)──► CH₃–CH(OH)–CH₂–CHO ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Tras desprotonarse el carbono α, el carbanión/enolato ataca al carbono carbonílico de la segunda molécula de etanal formando un nuevo enlace C–C y abriendo el enlace π C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–H α (salida de H₂O) y apertura del enlace π C=O del 2.º aldehído.",
+          "forming": "En VERDE punteado: formación del nuevo enlace carbono-carbono (Cα–Cβ).",
+          "movement": "El carbono carbonílico atacado cambia de hibridación sp² a sp³ (intermediario alcóxido aldólico)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H₂O",
+              "x": 165,
+              "y": 150,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "Me_2",
+              "el": "CH₃",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O2_carb",
+              "el": "O⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_cho",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Me_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 335,
+              "y1": 210,
+              "cx": 415,
+              "cy": 182,
+              "x2": 505,
+              "y2": 205,
+              "label": "Ataque Cα → C=O"
+            },
+            {
+              "type": "full",
+              "x1": 605,
+              "y1": 198,
+              "cx": 635,
+              "cy": 178,
+              "x2": 655,
+              "y2": 195,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2: Producto de Adición Aldólica — 3-Hidroxibutanal (Aldol, en frío)",
+        "semiStep": "CH₃–CH(OH)–CH₂–CHO [β-Hidroxialdehído / Aldol]",
+        "semiGlobal": "2 CH₃–CHO ──(NaOH, 5 °C)──► CH₃–CH(OH)–CH₂–CHO ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Tras protonarse el alcóxido con agua, se obtiene el 3-hidroxibutanal (acetaldol), molécula de 4 carbonos que conserva la función aldehído (C1) y un grupo hidroxilo en posición β (C3).",
+        "legend": {
+          "breaking": "Enlace C–C consolidado; en frío (5–10 °C) el aldol puede aislarse.",
+          "forming": "En VERDE sólido: enlace C2–C3 y grupo β-hidroxilo (–OH).",
+          "movement": "Al calentar (Δ), el aldol experimenta deshidratación E1cb."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 315,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cα (C2)"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "Me_2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "3-Hidroxibutanal (Aldol)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH",
+              "x": 635,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Me_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 3 (Ruptura en Rojo): Deshidratación Térmica E1cb (−H₂O) y Formación de C=C en Verde",
+        "semiStep": "CH₃–CH(OH)–CH₂–CHO ──(OH⁻, Δ)──► CH₃–CH=CH–CHO + H₂O",
+        "semiGlobal": "2 CH₃–CHO ──(NaOH, 5 °C)──► CH₃–CH(OH)–CH₂–CHO ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Al calentar, la base abstrae un segundo protón α generando un enolato que expulsa al grupo saliente OH⁻ en posición β para formar un doble enlace conjugado C=C.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cβ–OH (expulsión de H₂O).",
+          "forming": "En VERDE punteado: formación del doble enlace olefínico C2=C3 conjugado con el carbonilo.",
+          "movement": "La conjugación π (C=C–C=O) estabiliza fuertemente el sistema y hace irreversible la deshidratación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 335,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 655,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale grupo –OH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Me_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 365,
+              "y1": 195,
+              "cx": 415,
+              "cy": 175,
+              "x2": 465,
+              "y2": 195,
+              "label": "Forma π C=C"
+            },
+            {
+              "type": "full",
+              "x1": 555,
+              "y1": 210,
+              "cx": 595,
+              "cy": 188,
+              "x2": 625,
+              "y2": 205,
+              "label": "Expulsa OH⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Butenal / Crotonaldehído (CH₃–CH=CH–CHO) + H₂O",
+        "semiStep": "(E)-CH₃–CH=CH–CHO + H₂O (Aldehído α,β-Insaturado)",
+        "semiGlobal": "2 CH₃–CHO ──(NaOH, 5 °C)──► CH₃–CH(OH)–CH₂–CHO ──(Δ, −H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Queda consolidado el trans-2-butenal (crotonaldehído), un aldehído α,β-insaturado de 4 carbonos conjugado.",
+        "legend": {
+          "breaking": "Condensación aldólica completada.",
+          "forming": "En VERDE sólido: sistema conjugado α,β-insaturado (–CH=CH–CHO).",
+          "movement": "Producto enal obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "(E)-2-Butenal"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_2",
+              "el": "CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Me_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ald_propanal_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Propanal + NaOH Diluido",
+        "semiStep": "2 CH₃–CH₂–CHO + OH⁻",
+        "semiGlobal": "2 CH₃CH₂CHO ──(NaOH)──► CH₃CH₂CH(OH)CH(CH₃)CHO ──(Δ)──► CH₃CH₂CH=C(CH₃)CHO",
+        "desc": "En el propanal (CH₃–CH₂–CHO), los hidrógenos ácidos α están en el grupo metileno –CH₂– (C2), NO en el metilo terminal C3.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de propanal intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Desprotonación del carbono α (C2) generando el enolato ramificado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_a",
+              "el": "CH₃",
+              "x": 175,
+              "y": 115
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "C2 (H-α ácido)"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "Et_2",
+              "el": "CH₃CH₂",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "2.º Propanal"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_a",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_cho",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Et_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Formación del Aldol Ramificado (3-Hidroxi-2-metilpentanal)",
+        "semiStep": "CH₃–CH₂–CH(OH)–CH(CH₃)–CHO [Aldol de 6C]",
+        "semiGlobal": "2 CH₃CH₂CHO ──(NaOH)──► CH₃CH₂CH(OH)CH(CH₃)CHO ──(Δ)──► CH₃CH₂CH=C(CH₃)CHO",
+        "desc": "El enlace C–C se forma entre el carbono α (C2) del primer propanal y el carbono carbonílico del segundo, dejando un sustituyente metilo en posición α.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O al calentar (Δ).",
+          "forming": "En VERDE punteado: formación del doble enlace trisustituido C2=C3.",
+          "movement": "Deshidratación E1cb hacia el alqueno conjugado más estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(CH₃)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_2",
+              "el": "CH₂CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH (Δ)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Et_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Metil-2-pentenal (CH₃–CH₂–CH=C(CH₃)–CHO) + H₂O",
+        "semiStep": "(E)-2-Metil-2-pentenal + H₂O (Enal α-ramificado)",
+        "semiGlobal": "2 CH₃CH₂CHO ──(NaOH)──► CH₃CH₂CH(OH)CH(CH₃)CHO ──(Δ)──► CH₃CH₂CH=C(CH₃)CHO",
+        "desc": "Queda consolidado el 2-metil-2-pentenal (6 carbonos), con una ramificación metilo en el carbono α.",
+        "legend": {
+          "breaking": "Condensación aldólica completada.",
+          "forming": "En VERDE sólido: sistema α,β-insaturado α-metilado.",
+          "movement": "Regla clave: el enolato siempre ataca por su carbono α."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(CH₃)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Metil-2-pentenal"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et_2",
+              "el": "CH₂CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Et_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ald_butanal_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Butanal + NaOH Diluido",
+        "semiStep": "2 CH₃–CH₂–CH₂–CHO + OH⁻",
+        "semiGlobal": "2 CH₃CH₂CH₂CHO ──(NaOH, Δ)──► CH₃CH₂CH₂–CH=C(CH₂CH₃)–CHO + H₂O",
+        "desc": "El butanal posee un grupo etilo unido al carbono α (C2), por lo que al condensar formará un producto de 8 carbonos con ramificación etilo en C2.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de butanal intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Enolización del carbono C2 (α) del butanal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et_a",
+              "el": "CH₃CH₂",
+              "x": 165,
+              "y": 115
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "C2 (H-α)"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "Pr_2",
+              "el": "C₃H₇",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "2.º Butanal"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et_a",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_cho",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Pr_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación del Aldol (2-Etil-3-hidroxihexanal)",
+        "semiStep": "C₃H₇–CH(OH)–CH(Et)–CHO ──(OH⁻, Δ)──► C₃H₇–CH=C(Et)–CHO + H₂O",
+        "semiGlobal": "2 CH₃CH₂CH₂CHO ──(NaOH, Δ)──► CH₃CH₂CH₂–CH=C(CH₂CH₃)–CHO + H₂O",
+        "desc": "Tras la adición aldólica, el calentamiento elimina agua formando el doble enlace conjugado C2=C3.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión del grupo –OH β.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=C3.",
+          "movement": "Síntesis industrial clave para obtener luego 2-etilhexanol (plastificantes)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(Et)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pr_2",
+              "el": "CH₂CH₂CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH (Δ)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Pr_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Etil-2-hexenal + H₂O",
+        "semiStep": "CH₃–CH₂–CH₂–CH=C(CH₂CH₃)–CHO + H₂O (8 Carbonos)",
+        "semiGlobal": "2 CH₃CH₂CH₂CHO ──(NaOH, Δ)──► CH₃CH₂CH₂–CH=C(CH₂CH₃)–CHO + H₂O",
+        "desc": "Queda consolidado el 2-etil-2-hexenal, aldehído α,β-insaturado ramificado de 8 carbonos.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: sistema conjugado α-etilado.",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(Et)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Etil-2-hexenal"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Pr_2",
+              "el": "CH₂CH₂CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Pr_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ald_fenilacetaldehido_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Fenilacetaldehído + NaOH Diluido",
+        "semiStep": "2 C₆H₅–CH₂–CHO + OH⁻",
+        "semiGlobal": "2 Ph–CH₂–CHO ──(NaOH, Δ)──► Ph–CH₂–CH=C(Ph)–CHO + H₂O",
+        "desc": "Los hidrógenos α del fenilacetaldehído son doblemente activados (posición α al carbonilo y bencílica al anillo aromático), por lo que enolizan con gran facilidad.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de fenilacetaldehído intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Desprotonación rápida del metileno bencílico α."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_a",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 155,
+              "y": 115
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Cα bencílico"
+            },
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "Bn_2",
+              "el": "PhCH₂",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "2.º Aldehído"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_a",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_cho",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Bn_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación Espontánea Hacia Sistema Estilbenoide Conjugado",
+        "semiStep": "Ph–CH₂–CH(OH)–CH(Ph)–CHO ──(−H₂O)──► Ph–CH₂–CH=C(Ph)–CHO",
+        "semiGlobal": "2 Ph–CH₂–CHO ──(NaOH, Δ)──► Ph–CH₂–CH=C(Ph)–CHO + H₂O",
+        "desc": "El aldol intermediario pierde agua muy rápidamente para conjugar el anillo fenílico α con el doble enlace C=C y el grupo formilo.",
+        "legend": {
+          "breaking": "En ROJO punteado: eliminación de H₂O.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=C3 conjugado.",
+          "movement": "Conjugación cruzada Ph–C=C–CHO."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(Ph)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Bn_2",
+              "el": "CH₂Ph",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Bn_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2,4-Difenil-2-butenal + H₂O",
+        "semiStep": "C₆H₅–CH₂–CH=C(C₆H₅)–CHO + H₂O",
+        "semiGlobal": "2 Ph–CH₂–CHO ──(NaOH, Δ)──► Ph–CH₂–CH=C(Ph)–CHO + H₂O",
+        "desc": "Queda consolidado el 2,4-difenil-2-butenal, aldehído α,β-insaturado diarílico.",
+        "legend": {
+          "breaking": "Condensación aldólica completada.",
+          "forming": "En VERDE sólido: sistema conjugado α-fenilado.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_cho",
+              "el": "CHO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "C(Ph)",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2,4-Difenil-2-butenal"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Bn_2",
+              "el": "CH₂Ph",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_cho",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Bn_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
