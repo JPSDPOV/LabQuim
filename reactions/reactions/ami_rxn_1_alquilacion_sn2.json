@@ -1,0 +1,290 @@
+{
+  "category": "reacciones",
+  "title": "B.1- Sustitución SN2 con Halogenuros de Alquilo (→ Dietilamina, Trietilamina y Cloruro de Tetrametilamonio)",
+  "natureBadge": "Reacción 1 (Nucleófilo) • Amina (1°, 2° o 3°) + R–X ──(SN2)──► Amina Superior / Sal Cuaternaria de Amonio",
+  "deltaH": "ΔH° < 0 (Exotérmica; alquilación nucleofílica SN2 en el átomo de nitrógeno)",
+  "description": "Reacción de las aminas actuando como nucleófilos frente a halogenuros de alquilo primarios o metílicos mediante mecanismo SN2 (Diap. 1187 y 1192 de cátedra):\n1) Amina 1° + Haluro de alquilo ──► Amina 2° + HX: Etilamina + Cloroetano ──► Dietilamina + HCl (y Ciclohexilamina + Cloruro de etilo ──► Etilciclohexilamina + HCl).\n2) Amina 2° + Haluro de alquilo ──► Amina 3° + HX: Dietilamina + Cloroetano ──► Trietilamina + HCl.\n3) Amina 3° + Haluro de alquilo ──► Sal de Amonio Cuaternaria: Trimetilamina + Clorometano ──► Cloruro de tetrametilamonio ((CH₃)₄N⁺ Cl⁻).",
+  "meta": {
+    "grupoFuncional": "Aminas Secundarias (Dietilamina, Etilciclohexilamina), Terciarias (Trietilamina) y Sales Cuaternarias (Cloruro de Tetrametilamonio)",
+    "reaccionMecanismo": "Sustitución nucleofílica bimolecular concertada (SN2) del par libre del nitrógeno sobre el carbono electrófilo C–X",
+    "naturaleza": "Concertada en un paso (ataque dorsal de la amina al enlace C–X → expulsión del haluro X⁻).",
+    "rupturaIntermediarios": "Ruptura del enlace C–Cl; estado de transición pentacoordinado; formación de enlace C–N.",
+    "detalleMecanismo": "R–NH₂ + R'–Cl ──(SN2)──► R–NH–R' + HCl  |  R₃N + CH₃–Cl ──(SN2)──► R₃(CH₃)N⁺ Cl⁻",
+    "reactivosCondiciones": "Amina (1°, 2° o 3°) + Halogenuro de alquilo primario o metílico (CH₃Cl, CH₃CH₂Cl) en etanol o acetona.",
+    "rolReactivos": "• Nucleófilo: Amina primaria, secundaria o terciaria.\n• Electrófilo: Halogenuro de alquilo primario o metílico.\n• Productos: Dietilamina, Trietilamina, Etilciclohexilamina o Cloruro de tetrametilamonio.",
+    "reglasObs": "• Las sales de amonio cuaternarias (R₄N⁺X⁻) no tienen pares libres ni hidrógenos en el nitrógeno, por lo que no son básicas y ya no pueden alquilarse más.\n• Todos los ejemplos corresponden exactamente a las diapositivas 1187 y 1192 de cátedra."
+  },
+  "substrates": [
+    {
+      "id": "ami_rxn1_dietilamina",
+      "name": "Etilamina + Cloroetano ──(SN2)──► Dietilamina + HCl [Diap. 1187]",
+      "catalyst": "SN2 • EtOH / Δ"
+    },
+    {
+      "id": "ami_rxn1_trietilamina",
+      "name": "Dietilamina + Cloroetano ──(SN2)──► Trietilamina + HCl [Diap. 1187]",
+      "catalyst": "SN2 • EtOH / Δ"
+    },
+    {
+      "id": "ami_rxn1_tetrametilamonio",
+      "name": "Trimetilamina + Clorometano ──(SN2)──► Cloruro de Tetrametilamonio ((CH₃)₄N⁺Cl⁻) [Diap. 1187]",
+      "catalyst": "SN2 • Cuaternización"
+    },
+    {
+      "id": "ami_rxn1_etilciclohexilamina",
+      "name": "Ciclohexilamina + Cloroetano ──(SN2)──► Etilciclohexilamina + HCl [Ejercicio Diap. 1192]",
+      "catalyst": "SN2 • EtOH / Δ"
+    }
+  ],
+  "catalysts": [
+    "SN2 • EtOH / Δ",
+    "SN2 • Cuaternización"
+  ],
+  "stepsBySubstrate": {
+    "ami_rxn1_dietilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina + Cloroetano",
+        "semiStep": "CH₃–CH₂–NH₂ + Cl–CH₂–CH₃",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃CH₂–Cl ──(SN2)──► CH₃CH₂–NH–CH₂CH₃ (Dietilamina) + HCl",
+        "desc": "El par libre del nitrógeno de la etilamina ataca al carbono C1 del cloroetano.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace C–Cl intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico SN2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Hal",
+              "el": "+ Cl–CH₂–CH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Dietilamina (N-Etiletanamina) + HCl",
+        "semiStep": "CH₃–CH₂–NH–CH₂–CH₃ (Dietilamina) + HCl",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃CH₂–Cl ──(SN2)──► CH₃CH₂–NH–CH₂CH₃ (Dietilamina) + HCl",
+        "desc": "Queda consolidada la dietilamina más HCl.",
+        "legend": {
+          "breaking": "Ruptura C–Cl completada.",
+          "forming": "En VERDE sólido: Dietilamina.",
+          "movement": "Producto amina secundaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–NH–CH₂–CH₃",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Dietilamina"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn1_trietilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Dietilamina + Cloroetano",
+        "semiStep": "(CH₃–CH₂)₂NH + Cl–CH₂–CH₃",
+        "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₃N (Trietilamina) + HCl",
+        "desc": "La dietilamina ataca al cloroetano formando una amina terciaria.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución SN2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "(CH₃–CH₂)₂NH",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Hal",
+              "el": "+ Cl–CH₂–CH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Trietilamina (N,N-Dietiletanamina) + HCl",
+        "semiStep": "(CH₃–CH₂)₃N (Trietilamina) + HCl",
+        "semiGlobal": "(CH₃CH₂)₂NH + CH₃CH₂–Cl ──(SN2)──► (CH₃CH₂)₃N (Trietilamina) + HCl",
+        "desc": "Queda consolidada la trietilamina más HCl.",
+        "legend": {
+          "breaking": "Ruptura C–Cl completada.",
+          "forming": "En VERDE sólido: Trietilamina.",
+          "movement": "Producto amina terciaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "(CH₃–CH₂)₃N",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Trietilamina"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 565,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn1_tetrametilamonio": [
+      {
+        "title": "Estado Inicial Desarrollado: Trimetilamina + Clorometano (CH₃–Cl)",
+        "semiStep": "(CH₃)₃N: + CH₃–Cl",
+        "semiGlobal": "(CH₃)₃N + CH₃–Cl ──(SN2)──► (CH₃)₄N⁺ Cl⁻ (Cloruro de tetrametilamonio)",
+        "desc": "El par libre de la trimetilamina ataca al clorometano formando una sal cuaternaria de amonio.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Cuaternización SN2 del nitrógeno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "(CH₃)₃N:",
+              "x": 245,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Hal",
+              "el": "+ CH₃–Cl",
+              "x": 515,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Producto Consolidado: Cloruro de Tetrametilamonio ((CH₃)₄N⁺ Cl⁻)",
+        "semiStep": "(CH₃)₄N⁺ Cl⁻ (Cloruro de tetrametilamonio)",
+        "semiGlobal": "(CH₃)₃N + CH₃–Cl ──(SN2)──► (CH₃)₄N⁺ Cl⁻ (Cloruro de tetrametilamonio)",
+        "desc": "Queda consolidado el cloruro de tetrametilamonio (sal de amonio cuaternaria).",
+        "legend": {
+          "breaking": "Ruptura C–Cl completada.",
+          "forming": "En VERDE sólido: Cloruro de tetrametilamonio.",
+          "movement": "Producto sal cuaternaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "(CH₃)₄N⁺ Cl⁻",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cloruro de tetrametilamonio"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn1_etilciclohexilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexilamina + Cloruro de Etilo",
+        "semiStep": "C₆H₁₁–NH₂ + CH₃–CH₂–Cl",
+        "semiGlobal": "C₆H₁₁–NH₂ + CH₃CH₂–Cl ──(SN2)──► C₆H₁₁–NH–CH₂CH₃ (Etilciclohexilamina) + HCl",
+        "desc": "Ejercicio de aplicación de la diapositiva 1192: ciclohexilamina + cloruro de etilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución SN2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "Ciclohexilamina (C₆H₁₁–NH₂)",
+              "x": 245,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Hal",
+              "el": "+ CH₃–CH₂–Cl",
+              "x": 555,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etilciclohexilamina (N-Etilciclohexanamina) + HCl",
+        "semiStep": "C₆H₁₁–NH–CH₂–CH₃ (Etilciclohexilamina) + HCl",
+        "semiGlobal": "C₆H₁₁–NH₂ + CH₃CH₂–Cl ──(SN2)──► C₆H₁₁–NH–CH₂CH₃ (Etilciclohexilamina) + HCl",
+        "desc": "Queda consolidada la etilciclohexilamina más HCl.",
+        "legend": {
+          "breaking": "Ruptura C–Cl completada.",
+          "forming": "En VERDE sólido: Etilciclohexilamina.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "C₆H₁₁–NH–CH₂–CH₃",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etilciclohexilamina"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
