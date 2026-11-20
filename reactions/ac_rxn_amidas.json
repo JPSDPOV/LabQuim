@@ -1,0 +1,537 @@
+{
+  "category": "reacciones",
+  "title": "B.5- Formación de Amidas con Amoníaco o Aminas (1° Sal de Amonio —(Δ)→ Amida + H₂O)",
+  "natureBadge": "Sustitución Nucleofílica Acílica • R–COOH + NH₃ / R'NH₂ / R'₂NH ──► Sal Carboxilato de Amonio ──(Δ)──► Amida (1°, 2° o 3°) + H₂O",
+  "deltaH": "ΔH° < 0 en etapa ácido-base inicial; ΔH° > 0 en pirólisis térmica (150–200 °C) para eliminar H₂O",
+  "description": "Obtención de amidas primarias, secundarias y terciarias a partir de ácidos carboxílicos y amoníaco o aminas (primarias o secundarias) en dos etapas bien diferenciadas:\n1) Etapa 1 — Neutralización ácido-base en frío (25 °C): dado que el ácido carboxílico es un ácido de Brønsted (pKa ≈ 5) y la amina/amoníaco es una base (pKb ≈ 3–5), ambos reaccionan instantáneamente transfiriendo un protón para formar una SAL CARBOXILATO DE AMONIO (ej. acetato de amonio, CH₃–COO⁻ ⁺NH₄).\n2) Etapa 2 — Pirólisis térmica (Calentamiento Δ a 150–200 °C): al calentar fuertemente la sal de amonio anhidra, el par libre del nitrógeno ataca nucleofílicamente al carbono carboxílico deshidratando la sal y consolidando el enlace amida (–CO–NH–) más H₂O:\n   • Con NH₃ ──(Δ)──► Amida Primaria (R–CONH₂)\n   • Con Amina Primaria (R'–NH₂) ──(Δ)──► Amida Secundaria N-sustituida (R–CONHR')\n   • Con Amina Secundaria (R'₂NH) ──(Δ)──► Amida Terciaria N,N-disustituida (R–CONR'₂)\n   • Con Amina Terciaria (R'₃N) ──► Solo forma la sal en frío; NO forma amida por carecer de hidrógeno unido al nitrógeno (N–H).",
+  "meta": {
+    "grupoFuncional": "Amidas Primarias (R–CONH₂), Secundarias (R–CONHR') y Terciarias (R–CONR'₂)",
+    "reaccionMecanismo": "Neutralización ácido-base en frío (→ Sal de amonio) seguida de pirólisis / deshidratación térmica (adición-eliminación)",
+    "naturaleza": "Por etapas (Etapa 1 rápida ácido-base → Sal carboxilato de amonio | Etapa 2 térmica → Intermediario tetraédrico → Eliminación de H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y N–H; intermediario sal carboxilato de amonio (R–COO⁻ ⁺NH₃R') e intermediario tetraédrico; formación de enlace amida C1–N (con carácter parcial de doble enlace por resonancia) y H₂O.",
+    "detalleMecanismo": "R–COOH + R'–NH₂ ──(25 °C)──► [R–COO⁻ ⁺NH₃R'] ──(Δ, 180 °C)──► R–CO–NHR' + H₂O",
+    "reactivosCondiciones": "Ácido carboxílico + Amoníaco (NH₃), amina primaria (R'NH₂) o amina secundaria (R'₂NH); mezcla inicial a 25 °C seguida de calentamiento fuerte (Δ, 150–200 °C) para eliminar H₂O.",
+    "rolReactivos": "• Electrófilo acílico: Ácido carboxílico (R–COOH).\n• Base / Nucleófilo nitrogenado: NH₃ (→ amida 1°), R'NH₂ (→ amida 2°), R'₂NH (→ amida 3°).\n• Energía térmica (Δ): indispensable para vencer la baja electrofilia del carboxilato y expulsar H₂O.",
+    "reglasObs": "• Las aminas terciarias (R'₃N) NO pueden formar amidas porque no tienen ningún hidrógeno N–H que eliminar junto con el –OH del ácido.\n• En síntesis de laboratorio más suave (a 25 °C sin pirólisis), se activa primero el ácido con SOCl₂ (→ R–COCl) o se emplea un agente acoplante como DCC (diciclohexilcarbodiimida, fundamental en síntesis de péptidos)."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn6_acetico_nh3_acetamida",
+      "name": "Ácido Etanoico + NH₃ ──(25 °C)──► Acetato de Amonio ──(Δ)──► Etanamida (Acetamida) + H₂O [Amida 1°]",
+      "catalyst": "1) 25 °C (Sal)  2) Calor Δ (180 °C)"
+    },
+    {
+      "id": "ac_rxn6_propanoico_metilamina",
+      "name": "Ácido Propanoico + Metanamina (CH₃NH₂) ──(Δ)──► N-Metilpropanamida + H₂O [Diap. 854 — Amida 2°]",
+      "catalyst": "1) 25 °C  2) Calor Δ (180 °C)"
+    },
+    {
+      "id": "ac_rxn6_benzoico_dimetilamina",
+      "name": "Ácido Benzoico + Dimetilamina ((CH₃)₂NH) ──(Δ)──► N,N-Dimetilbenzamida + H₂O [Amida 3°]",
+      "catalyst": "1) 25 °C  2) Calor Δ (190 °C)"
+    },
+    {
+      "id": "ac_rxn6_amina_terciaria_control",
+      "name": "Ácido Etanoico + Trimetilamina ((CH₃)₃N) ──► Acetato de Trimetilamonio [Sin Amida — 0 H–N]",
+      "catalyst": "25 °C → Δ (No forma amida)"
+    }
+  ],
+  "catalysts": [
+    "1) 25 °C (Sal)  2) Calor Δ (180 °C)",
+    "1) 25 °C  2) Calor Δ (180 °C)",
+    "1) 25 °C  2) Calor Δ (190 °C)",
+    "25 °C → Δ (No forma amida)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn6_acetico_nh3_acetamida": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico (CH₃–COOH) + Amoníaco (:NH₃)",
+        "semiStep": "CH₃–COOH + :NH₃ (25 °C)",
+        "semiGlobal": "CH₃–COOH + NH₃ ──► [CH₃–COO⁻ ⁺NH₄] ──(Δ)──► CH₃–CONH₂ + H₂O",
+        "desc": "Se observan el ácido etanoico (donador de protones) y el amoníaco (base de Brønsted y nucleófilo).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido acético y amoníaco intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia inmediata del protón ácido desde –COOH hacia :NH₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "O2",
+              "el": "OH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "NH3",
+              "el": ":NH₃",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Base / Nucleófilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (En Frío, 25 °C): Formación de la Sal Etanoato de Amonio (CH₃–COO⁻ ⁺NH₄)",
+        "semiStep": "CH₃–COOH + NH₃ ──(25 °C)──► CH₃–COO⁻ ⁺NH₄ [Sal Carboxilato de Amonio]",
+        "semiGlobal": "CH₃–COOH + NH₃ ──► [CH₃–COO⁻ ⁺NH₄] ──(Δ)──► CH₃–CONH₂ + H₂O",
+        "desc": "A temperatura ambiente la reacción se detiene en la sal iónica acetato de amonio. Se requiere calentamiento fuerte para deshidratarla.",
+        "legend": {
+          "breaking": "Enlace O–H roto por neutralización ácido-base.",
+          "forming": "En VERDE sólido: par iónico acetato de amonio.",
+          "movement": "Al aplicar calor (Δ > 150 °C) ocurre la pirólisis hacia amida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "O2",
+              "el": "O⁻",
+              "x": 505,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "NH4",
+              "el": "⁺NH₄",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Sal de Amonio (25 °C)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Pirólisis con Calor Δ — Ruptura en Rojo): Deshidratación y Enlace C1–N",
+        "semiStep": "CH₃–COO⁻ ⁺NH₄ ──(Δ, 180 °C)──► CH₃–CO–NH₂ + H₂O↑",
+        "semiGlobal": "CH₃–COOH + NH₃ ──► [CH₃–COO⁻ ⁺NH₄] ──(Δ)──► CH₃–CONH₂ + H₂O",
+        "desc": "El calentamiento expulsa una molécula de agua (–OH del carboxilo + 2 H del amonio) y consolida el enlace covalente acilo-nitrógeno C1–NH₂.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–O y enlaces N–H (sale H₂O).",
+          "forming": "En VERDE punteado: nuevo enlace amida C1–NH₂.",
+          "movement": "El par libre del nitrógeno queda en resonancia con el carbonilo C=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 365,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "H₂O↑",
+              "x": 545,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale Vapor de Agua"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H2O",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanamida / Acetamida (CH₃–CONH₂ — Amida Primaria) + H₂O",
+        "semiStep": "CH₃–CONH₂ + H₂O (Sólido cristalino blanco)",
+        "semiGlobal": "CH₃–COOH + NH₃ ──► [CH₃–COO⁻ ⁺NH₄] ──(Δ)──► CH₃–CONH₂ + H₂O",
+        "desc": "Queda consolidada la etanamida (acetamida), amida primaria neutra y plana por resonancia.",
+        "legend": {
+          "breaking": "Pirólisis completada.",
+          "forming": "En VERDE sólido: grupo funcional amida primaria (–CONH₂).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanamida (Acetamida)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn6_propanoico_metilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Propanoico + Metanamina (Amina 1°)",
+        "semiStep": "CH₃–CH₂–COOH + H₂N–CH₃ ──(25 °C → Δ)",
+        "semiGlobal": "CH₃–CH₂–COOH + CH₃–NH₂ ──(Δ)──► CH₃–CH₂–CO–NH–CH₃ + H₂O",
+        "desc": "Ejemplo literal de la diapositiva 854 de cátedra: el ácido propanoico reacciona con metilamina formando primero propanoato de metilamonio y luego, con calor, N-metilpropanamida.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Condensación térmica hacia amida secundaria N-sustituida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂–COOH",
+              "x": 245,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Am",
+              "el": "+ H₂N–CH₃ (Δ)",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Metilpropanamida (Amida Secundaria) + H₂O",
+        "semiStep": "CH₃–CH₂–CO–NH–CH₃ + H₂O",
+        "semiGlobal": "CH₃–CH₂–COOH + CH₃–NH₂ ──(Δ)──► CH₃–CH₂–CO–NH–CH₃ + H₂O",
+        "desc": "Queda consolidada la N-metilpropanamida.",
+        "legend": {
+          "breaking": "Eliminación de H₂O completada.",
+          "forming": "En VERDE sólido: amida secundaria (–CONHR).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂–CO",
+              "x": 225,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHMe",
+              "el": "NH–CH₃",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Metilpropanamida"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "NHMe",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn6_benzoico_dimetilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico + Dimetilamina (Amina 2°)",
+        "semiStep": "C₆H₅–COOH + HN(CH₃)₂ ──(25 °C → Δ)",
+        "semiGlobal": "C₆H₅–COOH + (CH₃)₂NH ──(Δ)──► C₆H₅–CO–N(CH₃)₂ + H₂O",
+        "desc": "La dimetilamina posee 1 hidrógeno unido al nitrógeno, suficiente para eliminar agua al calentar la sal intermedia.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Condensación térmica hacia amida terciaria N,N-disustituida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "C₆H₅–COOH",
+              "x": 245,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Am",
+              "el": "+ HN(CH₃)₂ (Δ)",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N,N-Dimetilbenzamida (Amida Terciaria) + H₂O",
+        "semiStep": "C₆H₅–CO–N(CH₃)₂ + H₂O",
+        "semiGlobal": "C₆H₅–COOH + (CH₃)₂NH ──(Δ)──► C₆H₅–CO–N(CH₃)₂ + H₂O",
+        "desc": "Queda consolidada la N,N-dimetilbenzamida.",
+        "legend": {
+          "breaking": "Deshidratación completada.",
+          "forming": "En VERDE sólido: amida terciaria (–CONR₂).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "C₆H₅–CO",
+              "x": 225,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NMe2",
+              "el": "N(CH₃)₂",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N,N-Dimetilbenzamida"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "NMe2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn6_amina_terciaria_control": [
+      {
+        "title": "Estado Inicial: Ácido Etanoico + Trimetilamina ((CH₃)₃N — Amina 3° sin H–N)",
+        "semiStep": "CH₃–COOH + :N(CH₃)₃",
+        "semiGlobal": "CH₃–COOH + (CH₃)₃N ──► CH₃–COO⁻ ⁺HN(CH₃)₃ (Solo Sal — NO forma amida)",
+        "desc": "La amina terciaria captura el protón formando acetato de trimetilamonio, pero al no tener ningún hidrógeno unido al nitrógeno es incapaz de eliminar agua para dar amida.",
+        "legend": {
+          "breaking": "Solo transferencia protónica ácido-base.",
+          "forming": "Sal de amonio cuaternizada.",
+          "movement": "Control estructural: aminas 3° no forman amidas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "CH₃–COOH",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Am3",
+              "el": "+ :N(CH₃)₃ (0 H–N)",
+              "x": 515,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Resultado Consolidado: Sal Acetato de Trimetilamonio (Sin Formación de Amida)",
+        "semiStep": "CH₃–COO⁻ ⁺HN(CH₃)₃",
+        "semiGlobal": "CH₃–COOH + (CH₃)₃N ──► CH₃–COO⁻ ⁺HN(CH₃)₃ (Solo Sal — NO forma amida)",
+        "desc": "Se detiene en la sal iónica.",
+        "legend": {
+          "breaking": "Sin deshidratación ni enlace C–N.",
+          "forming": "Par iónico estabilizado.",
+          "movement": "Regla clave de examen."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Salt",
+              "el": "CH₃–COO⁻ ⁺HN(CH₃)₃ [Solo Sal]",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
