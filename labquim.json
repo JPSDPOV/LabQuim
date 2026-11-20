@@ -972,46 +972,62 @@
     "aminas": {
       "obtencion": [
         {
-          "value": "ami_obt_sn2",
-          "label": "1) Sustitución Nucleofílica (SN2) de Haluros de Alquilo con NH₃ o Aminas (1° → 2° → 3°)"
+          "value": "ami_obt_1_alquilacion_sn2",
+          "label": "1) Sustitución SN2 de Halogenuros de Alquilo con NH₃ o Aminas (→ Etilamina, Dietilamina, Trietilamina)"
         },
         {
-          "value": "ami_obt_nitro",
-          "label": "2) Reducción Catalítica o Química de Compuestos Nitro Aromáticos (p-nitrotolueno + 3 H₂/Pt → p-metilanilina)"
+          "value": "ami_obt_2_nitro_aromaticos",
+          "label": "2) Reducción Catalítica de Compuestos Nitro Aromáticos (p-Nitrotolueno + 3 H₂/Pt → p-Metilanilina)"
         },
         {
-          "value": "ami_obt_nitrilos",
-          "label": "3) Reducción de Nitrilos (→ Amina Primaria 1°) vs. Isonitrilos (→ Amina Secundaria 2°)"
+          "value": "ami_obt_3_nitrilos",
+          "label": "3) Reducción Catalítica de Nitrilos (Butanonitrilo + 2 H₂/Ni → Butanamina [Amina 1°])"
         },
         {
-          "value": "ami_obt_amidas",
-          "label": "4) Reducción de Amidas con LiAlH₄ (Amida 1° → Amina 1° | N-sustituida → Amina 2°)"
+          "value": "ami_obt_4_isonitrilos",
+          "label": "4) Reducción Catalítica de Isonitrilos (Isocianuro de etilo + 2 H₂/Ni → Etilmetilamina [Amina 2°])"
+        },
+        {
+          "value": "ami_obt_5_amidas_1",
+          "label": "5) Reducción de Amidas Primarias con LiAlH₄ (Propanamida → Propanamina [Amina 1°])"
+        },
+        {
+          "value": "ami_obt_6_amidas_sust",
+          "label": "6) Reducción de Amidas N-Sustituidas con LiAlH₄ (N-Isopropilpropanamida → Isopropilpropilamina [Amina 2°])"
         }
       ],
       "reacciones": [
         {
-          "value": "ami_rxn_basicidad",
-          "label": "A.1- Como Base de Lewis / Brønsted frente a Ácidos (→ Sales de Alquilamonio)"
+          "value": "ami_rxn_0_base_acidos",
+          "label": "A.1- Como Base frente a Ácidos Inorgánicos (Etilamina + HCl / HI / HNO₃ → Sales de Etilamonio)"
         },
         {
-          "value": "ami_rxn_acilacion",
-          "label": "A.2- Sustitución Nucleofílica de Acilo con Cloruros de Ácido, Anhídridos o Ésteres (→ Amidas)"
+          "value": "ami_rxn_1_alquilacion_sn2",
+          "label": "B.1- Sustitución SN2 con Halogenuros de Alquilo (→ Dietilamina, Trietilamina y Cloruro de Tetrametilamonio)"
         },
         {
-          "value": "ami_rxn_hno2_1alif",
-          "label": "B.1- Con Ácido Nitroso (HNO₂): Amina Primaria Alifática → Alcohol (R–OH) + Gas N₂↑ + H₂O"
+          "value": "ami_rxn_2_derivados_acido",
+          "label": "B.2- Sustitución Nucleofílica de Acilos (Con Cloruros, Ésteres o Anhídridos → N-Etiletanamida / N-Feniletanamida)"
         },
         {
-          "value": "ami_rxn_hno2_1arom",
-          "label": "B.2- Con Ácido Nitroso (HNO₂ en frío 0–5 °C): Anilina → Sal de Diazonio (C₆H₅–N₂⁺Cl⁻)"
+          "value": "ami_rxn_3_hno2_1_alif",
+          "label": "B.3- Amina Primaria Alifática + Ácido Nitroso HNO₂ (Etilamina → Etanol + Gas N₂↑ + H₂O)"
         },
         {
-          "value": "ami_rxn_hno2_2y3",
-          "label": "B.3- Con Ácido Nitroso (HNO₂): Amina Secundaria (→ N-Nitrosamina) vs. Amina Terciaria (→ Sal Nitrito)"
+          "value": "ami_rxn_4_hno2_2_nitrosamina",
+          "label": "B.4- Amina Secundaria + Ácido Nitroso HNO₂ (Dietilamina → N-Nitrosodietilamina + H₂O)"
         },
         {
-          "value": "ami_rxn_imina",
-          "label": "C- Condensación Nucleofílica con Aldehídos y Cetonas (→ Carbinolamina → Imina / Base de Schiff)"
+          "value": "ami_rxn_5_hno2_3_sal",
+          "label": "B.5- Amina Terciaria + Ácido Nitroso HNO₂ (Trietilamina → Nitrito de Trietilamonio [Reacción Ácido-Base])"
+        },
+        {
+          "value": "ami_rxn_6_hno2_1_arom_diazonio",
+          "label": "B.6- Amina Primaria Aromática + HNO₂ / HCl en Frío 0–5 °C (Anilina → Cloruro de Bencenodiazonio + H₂O)"
+        },
+        {
+          "value": "ami_rxn_7_carbonilos_imina",
+          "label": "B.7- Condensación con Aldehídos y Cetonas (Etilamina + Etanal → Carbinolamina → Imina / Base de Schiff + H₂O)"
         }
       ]
     },
