@@ -1,81 +1,137 @@
 {
   "category": "obtencion",
   "title": "4) Oxidación Suave de Alcoholes Primarios (+ [O] débil / PCC ──► Aldehído)",
-  "natureBadge": "Deshidrogenación Oxidativa Controlada • R–CH₂OH + [O]débil (PCC) ──► R–CHO + H₂O",
-  "deltaH": "ΔH° < 0 (Exotérmica; el medio anhidro con PCC evita la oxidación posterior hasta ácido carboxílico)",
-  "description": "Oxidación suave de alcoholes primarios mediante reactivos anhidros como el clorocromato de piridinio (PCC en CH₂Cl₂, representado como [O]débil en Diap. 13), eliminando dos hidrógenos para obtener un aldehído.",
+  "natureBadge": "Oxidación Controlada • R–CH₂OH + PCC ──(CH₂Cl₂ anhidro)──► R–CHO",
+  "deltaH": "ΔH° < 0 (Exotérmica; en medio anhidro se detiene en el aldehído sin sobreoxidar a ácido carboxílico)",
+  "description": "Oxidación suave y controlada de alcoholes primarios mediante reactivos selectivos como el PCC (clorocromato de piridinio en CH₂Cl₂ anhidro) o deshidrogenación catalítica (Cu / 300 °C):\n1) El grupo –OH del alcohol primario ataca al cromo hexavalente (Cr⁶⁺) formando un intermediario éster cromato (R–CH₂–O–CrO₂Cl).\n2) Una eliminación intramolecular (tipo E2) rompe un enlace Cα–H y el enlace O–Cr, formando el doble enlace carbonilo C=O y reduciendo el cromo.\n3) Gracias a la ausencia de agua (medio anhidro), el aldehído (R–CHO) no forma hidrato gem-diol y la reacción se detiene exactamente en el aldehído.",
   "meta": {
     "grupoFuncional": "Aldehídos (R–CHO)",
-    "reaccionMecanismo": "Eliminación oxidativa E2 sobre éster cromato intermediario",
-    "naturaleza": "Por etapas en medio anhidro.",
-    "rupturaIntermediarios": "Ruptura de enlaces O–H y Cα–H; formación de enlace π C=O.",
-    "detalleMecanismo": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
-    "reactivosCondiciones": "Alcohol primario (R–CH₂OH) + [O]débil (PCC en CH₂Cl₂ anhidro).",
-    "rolReactivos": "• Sustrato: Alcohol primario.\n• Oxidante débil: PCC en diclorometano anhidro.",
-    "reglasObs": "• Diap. 13: 1-butanol + [O]débil → butanal."
+    "reaccionMecanismo": "Oxidación controlada vía éster cromato + eliminación E2 intramolecular",
+    "naturaleza": "Por etapas (esterificación con Cr(VI) seguida de eliminación concertada E2).",
+    "rupturaIntermediarios": "Ruptura de O–H y Cα–H; intermediario éster cromato (R–CH₂–O–CrO₂Cl); formación de C=O.",
+    "detalleMecanismo": "R–CH₂–OH + PCC ──(CH₂Cl₂ anhidro)──► R–CHO",
+    "reactivosCondiciones": "Alcohol primario (R–CH₂OH) + PCC en diclorometano (CH₂Cl₂) anhidro (alternativa industrial: Cu / 300 °C).",
+    "rolReactivos": "• Sustrato: Alcohol primario (R–CH₂OH).\n• Oxidante débil selectivo: PCC (Clorocromato de piridinio, C₅H₅NH⁺CrO₃Cl⁻).\n• Solvente anhidro: CH₂Cl₂ (evita la formación de hidrato y la sobreoxidación a ácido).",
+    "reglasObs": "• Con oxidantes fuertes acuosos (KMnO₄, K₂Cr₂O₇/H₂SO₄) el alcohol primario pasa de largo hasta ácido carboxílico (R–COOH).\n• Con PCC en medio anhidro se detiene limpiamente en el aldehído (R–CHO)."
   },
   "substrates": [
     {
-      "id": "1butanol_butanal",
-      "name": "Diap. 13: 1-Butanol + [O]débil ──► Butanal",
-      "catalyst": "[O]débil (PCC en CH₂Cl₂ anhidro)"
+      "id": "alc1_metanol_pcc",
+      "name": "Metanol + PCC ──► Metanal (Formaldehído)",
+      "catalyst": "PCC / CH₂Cl₂ anhidro"
+    },
+    {
+      "id": "alc1_etanol_pcc",
+      "name": "Etanol + PCC ──► Etanal (Acetaldehído)",
+      "catalyst": "PCC / CH₂Cl₂ anhidro"
+    },
+    {
+      "id": "alc1_1propanol_pcc",
+      "name": "1-Propanol + PCC ──► Propanal",
+      "catalyst": "PCC / CH₂Cl₂ anhidro"
+    },
+    {
+      "id": "alc1_isobutanol_pcc",
+      "name": "2-Metil-1-propanol + PCC ──► 2-Metilpropanal [Ramificado]",
+      "catalyst": "PCC / CH₂Cl₂ anhidro"
+    },
+    {
+      "id": "alc1_bencilico_pcc",
+      "name": "Alcohol Bencílico + PCC ──► Benzaldehído [Aromático]",
+      "catalyst": "PCC / CH₂Cl₂ anhidro"
     }
   ],
   "catalysts": [
-    "[O]débil (PCC en CH₂Cl₂ anhidro)"
+    "PCC / CH₂Cl₂ anhidro"
   ],
   "stepsBySubstrate": {
-    "1butanol_butanal": [
+    "alc1_metanol_pcc": [
       {
-        "title": "Paso 1 — Estado Inicial: 1-Butanol + [O]débil (PCC)",
-        "semiStep": "CH₃–CH₂–CH₂–CH₂–OH  +  [O]débil",
-        "semiGlobal": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
-        "desc": "Se eliminan un H del hidroxilo y un H del carbono C1.",
+        "title": "Estado Inicial Desarrollado: Metanol + PCC",
+        "semiStep": "CH₃–OH + PCC",
+        "semiGlobal": "CH₃–OH + PCC ──(CH₂Cl₂)──► H–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el metanol (CH₃–OH) con sus tres hidrógenos desplegados alrededor del carbono y el oxidante suave PCC.",
         "legend": {
-          "breaking": "En ROJO punteado: enlaces C1–H y O–H.",
-          "forming": "En VERDE punteado: doble enlace C1=O.",
-          "movement": "Oxidación controlada."
+          "breaking": "Ningún enlace roto todavía; alcohol primario intacto con sus dos hidrógenos α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del clorocromato de piridinio (PCC) en medio anhidro (CH₂Cl₂)."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Pr",
-              "el": "CH₃–CH₂–CH₂",
-              "x": 230,
+              "id": "H_left",
+              "el": "H",
+              "x": 245,
               "y": 210
             },
             {
               "id": "C1",
-              "el": "CH₂",
-              "x": 450,
+              "el": "C",
+              "x": 395,
               "y": 210,
-              "label": "1-Butanol"
+              "label": "Metanol"
             },
             {
-              "id": "OH",
-              "el": "OH",
-              "x": 450,
-              "y": 100,
-              "highlight": "#38bdf8"
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
             },
             {
-              "id": "Ox",
-              "el": "[O]débil (PCC)",
-              "x": 700,
-              "y": 160,
-              "highlight": "#a855f7"
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 615,
+              "y": 210
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "PCC (Cr⁶⁺)",
+              "x": 640,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave (CH₂Cl₂)"
             }
           ],
           "bonds": [
             {
-              "from": "Pr",
+              "from": "H_left",
               "to": "C1",
               "order": 1,
               "state": "normal"
             },
             {
               "from": "C1",
-              "to": "OH",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
               "order": 1,
               "state": "normal"
             }
@@ -83,49 +139,367 @@
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Butanal + H₂O",
-        "semiStep": "CH₃–CH₂–CH₂–CH=O  +  H₂O",
-        "semiGlobal": "CH₃–CH₂–CH₂–CH₂OH + [O]débil ──► CH₃–CH₂–CH₂–CHO + H₂O",
-        "desc": "Se obtiene butanal.",
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–OH + PCC (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–OH + PCC ──(CH₂Cl₂)──► H–CHO",
+        "desc": "El oxígeno del grupo hidroxilo del metanol ataca al cromo hexavalente del PCC, rompiéndose el enlace O–H para formar el intermediario éster cromato.",
         "legend": {
-          "breaking": "2 H eliminados como H₂O.",
-          "forming": "En VERDE sólido: butanal.",
-          "movement": "Producto aldehído consolidado."
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Pr",
-              "el": "CH₃–CH₂–CH₂",
-              "x": 220,
-              "y": 215
+              "id": "H_left",
+              "el": "H",
+              "x": 245,
+              "y": 210
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 440,
-              "y": 215,
-              "highlight": "#10b981",
-              "label": "Butanal"
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
             },
             {
               "id": "O1",
               "el": "O",
-              "x": 440,
-              "y": 100,
-              "highlight": "#10b981"
+              "x": 515,
+              "y": 210,
+              "highlight": "#fbbf24"
             },
             {
-              "id": "H1",
+              "id": "H_oh",
               "el": "H",
-              "x": 620,
-              "y": 215,
+              "x": 625,
+              "y": 245,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 625,
+              "y": 115,
               "highlight": "#10b981"
             }
           ],
           "bonds": [
             {
-              "from": "Pr",
+              "from": "H_left",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 527,
+              "y1": 185,
+              "cx": 565,
+              "cy": 140,
+              "x2": 600,
+              "y2": 122,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 570,
+              "y1": 225,
+              "cx": 595,
+              "cy": 245,
+              "x2": 610,
+              "y2": 245,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH₂–O–CrO₂Cl)",
+        "semiStep": "[Intermediario éster cromato en medio anhidro CH₂Cl₂]",
+        "semiGlobal": "CH₃–OH + PCC ──(CH₂Cl₂)──► H–CHO",
+        "desc": "Se forma el intermediario éster cromato (H–CH₂–O–CrO₂Cl) en diclorometano anhidro.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado, preparando la eliminación de un hidrógeno α.",
+          "movement": "Al no haber agua en el medio (CH₂Cl₂), el aldehído no formará hidrato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_left",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 520,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_left",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "H–CHO (Metanal) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–OH + PCC ──(CH₂Cl₂)──► H–CHO",
+        "desc": "Una eliminación intramolecular rompe un enlace C–H y el enlace O–Cr, generando el doble enlace carbonilo C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada que convierte el carbono primario en aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_left",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Hα eliminado"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl⁻",
+              "x": 620,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_left",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 145,
+              "cx": 430,
+              "cy": 135,
+              "x2": 443,
+              "y2": 152,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 132,
+              "cx": 580,
+              "cy": 150,
+              "x2": 605,
+              "y2": 180,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Metanal (H–CHO (Metanal))",
+        "semiStep": "H–CHO (Metanal) (Metanal)",
+        "semiGlobal": "CH₃–OH + PCC ──(CH₂Cl₂)──► H–CHO",
+        "desc": "Queda consolidado el metanal o formaldehído (H–CHO) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Oxidación detenida selectivamente en el aldehído sin llegar a ácido carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_left",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_left",
               "to": "C1",
               "order": 1,
               "state": "normal"
@@ -138,9 +512,2094 @@
             },
             {
               "from": "C1",
-              "to": "H1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "alc1_etanol_pcc": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanol + PCC",
+        "semiStep": "CH₃–CH₂–OH + PCC",
+        "semiGlobal": "CH₃–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el etanol (CH₃–CH₂–OH) con sus dos hidrógenos α desplegados en C1 y el PCC.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol primario intacto con sus dos hidrógenos α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del clorocromato de piridinio (PCC) en medio anhidro (CH₂Cl₂)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanol"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 615,
+              "y": 210
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "PCC (Cr⁶⁺)",
+              "x": 640,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave (CH₂Cl₂)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
               "order": 1,
               "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–CH₂–OH + PCC (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CHO",
+        "desc": "El oxígeno del etanol se coordina al cromo hexavalente del PCC con pérdida de H⁺, formando el éster cromato.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 625,
+              "y": 245,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 625,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 527,
+              "y1": 185,
+              "cx": 565,
+              "cy": 140,
+              "x2": 600,
+              "y2": 122,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 570,
+              "y1": 225,
+              "cx": 595,
+              "cy": 245,
+              "x2": 610,
+              "y2": 245,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH₂–O–CrO₂Cl)",
+        "semiStep": "[Intermediario éster cromato en medio anhidro CH₂Cl₂]",
+        "semiGlobal": "CH₃–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CHO",
+        "desc": "Se estabiliza el intermediario éster cromato (CH₃–CH₂–O–CrO₂Cl) en medio anhidro (CH₂Cl₂).",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado, preparando la eliminación de un hidrógeno α.",
+          "movement": "Al no haber agua en el medio (CH₂Cl₂), el aldehído no formará hidrato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 520,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "CH₃–CHO (Etanal) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CHO",
+        "desc": "Se produce la eliminación concertada E2: se rompe el enlace C1–Hα superior y el enlace O–Cr mientras se forma el doble enlace C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada que convierte el carbono primario en aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Hα eliminado"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl⁻",
+              "x": 620,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 145,
+              "cx": 430,
+              "cy": 135,
+              "x2": 443,
+              "y2": 152,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 132,
+              "cx": 580,
+              "cy": 150,
+              "x2": 605,
+              "y2": 180,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal (CH₃–CHO (Etanal))",
+        "semiStep": "CH₃–CHO (Etanal) (Etanal)",
+        "semiGlobal": "CH₃–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CHO",
+        "desc": "Queda consolidado el etanal o acetaldehído (CH₃–CHO) con su grupo aldehído en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Oxidación detenida selectivamente en el aldehído sin llegar a ácido carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "alc1_1propanol_pcc": [
+      {
+        "title": "Estado Inicial Desarrollado: 1-Propanol + PCC",
+        "semiStep": "CH₃–CH₂–CH₂–OH + PCC",
+        "semiGlobal": "CH₃–CH₂–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CH₂–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el 1-propanol con cada carbono separado (CH₃–CH₂–CH₂–OH) y el PCC.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol primario intacto con sus dos hidrógenos α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del clorocromato de piridinio (PCC) en medio anhidro (CH₂Cl₂)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "label": "1-Propanol"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 410,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 410,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 530,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "PCC (Cr⁶⁺)",
+              "x": 655,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave (CH₂Cl₂)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "CH₃–CH₂–CH₂–OH + PCC (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "CH₃–CH₂–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CH₂–CHO",
+        "desc": "El oxígeno del grupo –OH terminal ataca al cromo del PCC rompiéndose el enlace O–H.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 410,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 410,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 530,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 640,
+              "y": 245,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 640,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 542,
+              "y1": 185,
+              "cx": 580,
+              "cy": 140,
+              "x2": 615,
+              "y2": 122,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 585,
+              "y1": 225,
+              "cx": 610,
+              "cy": 245,
+              "x2": 625,
+              "y2": 245,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH₂–O–CrO₂Cl)",
+        "semiStep": "[Intermediario éster cromato en medio anhidro CH₂Cl₂]",
+        "semiGlobal": "CH₃–CH₂–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CH₂–CHO",
+        "desc": "Se forma el intermediario éster cromato del 1-propanol en diclorometano anhidro.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado, preparando la eliminación de un hidrógeno α.",
+          "movement": "Al no haber agua en el medio (CH₂Cl₂), el aldehído no formará hidrato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 410,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 410,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 660,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "CH₃–CH₂–CHO (Propanal) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "CH₃–CH₂–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CH₂–CHO",
+        "desc": "La eliminación E2 intramolecular abstrae un hidrógeno α de C1 y expulsa el cromo reducido, formando el doble enlace C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada que convierte el carbono primario en aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 410,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Hα eliminado"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 482,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 482,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl⁻",
+              "x": 635,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 410,
+              "y1": 145,
+              "cx": 445,
+              "cy": 135,
+              "x2": 458,
+              "y2": 152,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 545,
+              "y1": 132,
+              "cx": 595,
+              "cy": 150,
+              "x2": 620,
+              "y2": 180,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propanal (CH₃–CH₂–CHO (Propanal))",
+        "semiStep": "CH₃–CH₂–CHO (Propanal) (Propanal)",
+        "semiGlobal": "CH₃–CH₂–CH₂–OH + PCC ──(CH₂Cl₂)──► CH₃–CH₂–CHO",
+        "desc": "Queda consolidado el propanal (CH₃–CH₂–CHO) con geometría trigonal plana (120°) sin sobreoxidación a ácido propanoico.",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Oxidación detenida selectivamente en el aldehído sin llegar a ácido carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 482,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 482,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "alc1_isobutanol_pcc": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Metil-1-propanol + PCC",
+        "semiStep": "(CH₃)₂CH–CH₂–OH + PCC",
+        "semiGlobal": "(CH₃)₂CH–CH₂–OH + PCC ──(CH₂Cl₂)──► (CH₃)₂CH–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-metil-1-propanol (alcohol isobutílico) ramificado y el PCC.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol primario intacto con sus dos hidrógenos α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del clorocromato de piridinio (PCC) en medio anhidro (CH₂Cl₂)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 110,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 245,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "2-Metil-1-propanol"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 615,
+              "y": 210
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "PCC (Cr⁶⁺)",
+              "x": 640,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave (CH₂Cl₂)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "(CH₃)₂CH–CH₂–OH + PCC (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "(CH₃)₂CH–CH₂–OH + PCC ──(CH₂Cl₂)──► (CH₃)₂CH–CHO",
+        "desc": "El grupo –OH primario reacciona con el PCC rompiendo el enlace O–H y formando el éster cromato.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 110,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 245,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 625,
+              "y": 245,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 625,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 527,
+              "y1": 185,
+              "cx": 565,
+              "cy": 140,
+              "x2": 600,
+              "y2": 122,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 570,
+              "y1": 225,
+              "cx": 595,
+              "cy": 245,
+              "x2": 610,
+              "y2": 245,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH₂–O–CrO₂Cl)",
+        "semiStep": "[Intermediario éster cromato en medio anhidro CH₂Cl₂]",
+        "semiGlobal": "(CH₃)₂CH–CH₂–OH + PCC ──(CH₂Cl₂)──► (CH₃)₂CH–CHO",
+        "desc": "Se forma el intermediario éster cromato conservando intacta la ramificación isopropilo.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado, preparando la eliminación de un hidrógeno α.",
+          "movement": "Al no haber agua en el medio (CH₂Cl₂), el aldehído no formará hidrato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 110,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 245,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 520,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "(CH₃)₂CH–CHO (2-Metilpropanal) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "(CH₃)₂CH–CH₂–OH + PCC ──(CH₂Cl₂)──► (CH₃)₂CH–CHO",
+        "desc": "La eliminación intramolecular rompe un enlace C1–Hα y el enlace O–Cr, formando el doble enlace carbonilo C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada que convierte el carbono primario en aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 110,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 245,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Hα eliminado"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl⁻",
+              "x": 620,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 145,
+              "cx": 430,
+              "cy": 135,
+              "x2": 443,
+              "y2": 152,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 132,
+              "cx": 580,
+              "cy": 150,
+              "x2": 605,
+              "y2": 180,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Metilpropanal ((CH₃)₂CH–CHO (2-Metilpropanal))",
+        "semiStep": "(CH₃)₂CH–CHO (2-Metilpropanal) (2-Metilpropanal)",
+        "semiGlobal": "(CH₃)₂CH–CH₂–OH + PCC ──(CH₂Cl₂)──► (CH₃)₂CH–CHO",
+        "desc": "Queda consolidado el 2-metilpropanal ((CH₃)₂CH–CHO) con el grupo –CHO en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Oxidación detenida selectivamente en el aldehído sin llegar a ácido carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 110,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 245,
+              "y": 320
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Metilpropanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "alc1_bencilico_pcc": [
+      {
+        "title": "Estado Inicial Desarrollado: Alcohol Bencílico + PCC",
+        "semiStep": "C₆H₅–CH₂–OH + PCC",
+        "semiGlobal": "C₆H₅–CH₂–OH + PCC ──(CH₂Cl₂)──► C₆H₅–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el alcohol bencílico (C₆H₅–CH₂–OH) con sus dos hidrógenos bencílicos y el PCC.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol primario intacto con sus dos hidrógenos α.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del clorocromato de piridinio (PCC) en medio anhidro (CH₂Cl₂)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Alcohol Bencílico"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 615,
+              "y": 210
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "PCC (Cr⁶⁺)",
+              "x": 640,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Oxidante suave (CH₂Cl₂)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Ataque del Oxígeno Hidroxílico y Formación del Éster Cromato",
+        "semiStep": "C₆H₅–CH₂–OH + PCC (Coordinación O–Cr y pérdida de H⁺)",
+        "semiGlobal": "C₆H₅–CH₂–OH + PCC ──(CH₂Cl₂)──► C₆H₅–CHO",
+        "desc": "El oxígeno del alcohol bencílico ataca al cromo hexavalente del PCC con pérdida de H⁺.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del alcohol.",
+          "forming": "En VERDE punteado: formación del enlace O–Cr(VI) del éster cromato.",
+          "movement": "El oxígeno nucleofílico se enlaza al cromo hexavalente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 515,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 625,
+              "y": 245,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 625,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 527,
+              "y1": 185,
+              "cx": 565,
+              "cy": 140,
+              "x2": 600,
+              "y2": 122,
+              "label": "Ataque O → Cr(VI)"
+            },
+            {
+              "type": "full",
+              "x1": 570,
+              "y1": 225,
+              "cx": 595,
+              "cy": 245,
+              "x2": 610,
+              "y2": 245,
+              "label": "Sale H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Éster Cromato (R–CH₂–O–CrO₂Cl)",
+        "semiStep": "[Intermediario éster cromato en medio anhidro CH₂Cl₂]",
+        "semiGlobal": "C₆H₅–CH₂–OH + PCC ──(CH₂Cl₂)──► C₆H₅–CHO",
+        "desc": "Se forma el intermediario éster cromato bencílico en medio anhidro (CH₂Cl₂), dejando intacto el anillo aromático.",
+        "legend": {
+          "breaking": "Enlace O–H ya escindido.",
+          "forming": "Éster cromato formado, preparando la eliminación de un hidrógeno α.",
+          "movement": "Al no haber agua en el medio (CH₂Cl₂), el aldehído no formará hidrato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario éster cromato"
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 395,
+              "y": 325
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 520,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Eliminación E2: Ruptura de Cα–H y O–Cr en Rojo, Formación de C=O en Verde",
+        "semiStep": "C₆H₅–CHO (Benzaldehído) (Eliminación de Hα y reducción de Cr⁶⁺ a Cr⁴⁺)",
+        "semiGlobal": "C₆H₅–CH₂–OH + PCC ──(CH₂Cl₂)──► C₆H₅–CHO",
+        "desc": "La eliminación E2 intramolecular abstrae un hidrógeno bencílico Hα y expulsa el cromo reducido, formando el enlace π C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cα–H y del enlace O–Cr.",
+          "forming": "En VERDE punteado: formación del doble enlace carbonilo C=O.",
+          "movement": "Eliminación concertada que convierte el carbono primario en aldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H_top",
+              "el": "H",
+              "x": 395,
+              "y": 82,
+              "highlight": "#ef4444",
+              "label": "Hα eliminado"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ox_pcc",
+              "el": "CrO₂Cl⁻",
+              "x": 620,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Cr reducido (Cr⁴⁺)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_top",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Ox_pcc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 145,
+              "cx": 430,
+              "cy": 135,
+              "x2": 443,
+              "y2": 152,
+              "label": "Forma π C=O"
+            },
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 132,
+              "cx": 580,
+              "cy": 150,
+              "x2": 605,
+              "y2": 180,
+              "label": "Sale Cr(IV)"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzaldehído (C₆H₅–CHO (Benzaldehído))",
+        "semiStep": "C₆H₅–CHO (Benzaldehído) (Benzaldehído)",
+        "semiGlobal": "C₆H₅–CH₂–OH + PCC ──(CH₂Cl₂)──► C₆H₅–CHO",
+        "desc": "Queda consolidado el benzaldehído (C₆H₅–CHO) con geometría trigonal plana (120°) sin llegar a ácido benzoico.",
+        "legend": {
+          "breaking": "Eliminación de H₂ completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Oxidación detenida selectivamente en el aldehído sin llegar a ácido carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_bot",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_bot",
+              "order": 1,
+              "state": "new"
             }
           ]
         }
