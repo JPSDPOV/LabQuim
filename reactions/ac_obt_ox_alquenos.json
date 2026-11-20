@@ -1,0 +1,511 @@
+{
+  "category": "obtencion",
+  "title": "3) Ruptura Oxidativa de Alquenos, Cicloalquenos y Alquinos (O₃ / H₂O₂ o KMnO₄ conc. Δ → Ácidos y Diácidos)",
+  "natureBadge": "Escisión Oxidativa de Insaturaciones • Alquenos (R–CH=CH–R'), Cicloalquenos y Alquinos (R–C≡C–R') ──► Ácidos / Diácidos Carboxílicos",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica; ruptura completa de enlaces σ y π de la insaturación con formación de grupos carboxilo)",
+  "description": "Obtención de ácidos monocarboxílicos y dicarboxílicos mediante ruptura oxidativa completa de dobles enlaces (C=C) o triples enlaces (C≡C) utilizando permanganato de potasio concentrado y caliente en medio ácido (KMnO₄ / H⁺, Δ) u ozonólisis oxidativa (1. O₃  2. H₂O₂):\n1) Alquenos internos disustituidos (R–CH=CH–R'): cada carbono vinílico unido a un hidrógeno (=CH–) se oxida hasta ácido carboxílico (R–COOH + R'–COOH). Si un carbono vinílico tiene dos alquilos (=CR₂), forma cetona; si es terminal (=CH₂), se oxida hasta CO₂ + H₂O.\n2) Cicloalquenos (Pregunta estrella de exámenes de ingreso): la ruptura oxidativa abre el anillo sin pérdida de carbonos generando un ÁCIDO DICARBOXÍLICO lineal de igual número de carbonos (ej. Ciclobuteno → Ácido succínico [4C]; Ciclopenteno → Ácido glutárico [5C]; Ciclohexeno → Ácido adípico [6C]).\n3) Alquinos (R–C≡C–R'): tanto la ozonólisis (O₃ / H₂O) como el KMnO₄ escinden el triple enlace generando dos ácidos carboxílicos (R–COOH + R'–COOH); en alquinos terminales (R–C≡CH), el carbono terminal se oxida a CO₂.",
+  "meta": {
+    "grupoFuncional": "Ácidos Monocarboxílicos (R–COOH) y Ácidos Dicarboxílicos Lineales (HOOC–(CH₂)ₙ–COOH)",
+    "reaccionMecanismo": "Cicloadición [3+2] (ozónido / éster manganato cíclico) seguida de ruptura oxidativa C–C y sobreoxidación",
+    "naturaleza": "Por etapas irreversible (formación de molozónido / éster cíclico → ruptura del enlace múltiple → sobreoxidación de aldehídos intermediarios a ácidos carboxílicos).",
+    "rupturaIntermediarios": "Ruptura total de enlaces C=C (σ + π) o C≡C (σ + 2π); intermediarios ozónido / aldehído; formación de dos grupos carboxilo (–COOH).",
+    "detalleMecanismo": "Cicloalqueno ──(1. O₃  2. H₂O₂  ó  KMnO₄ / H⁺, Δ)──► HOOC–(CH₂)ₙ–COOH (Ácido Dicarboxílico)",
+    "reactivosCondiciones": "• Alquenos / Cicloalquenos: KMnO₄ concentrado en medio ácido (H₂SO₄, Δ) o Ozonólisis oxidativa (1. O₃, −78 °C  2. H₂O₂).\n• Alquinos: Ozonólisis (1. O₃  2. H₂O) o KMnO₄ acuoso neutro/ácido (Δ).",
+    "rolReactivos": "• Sustrato insaturado: Alqueno (con H vinílico =CH–), Cicloalqueno o Alquino.\n• Agente oxidante escindente: KMnO₄ / H⁺ (Δ) o O₃ seguido de H₂O₂ (evita detenerse en aldehídos).\n• Medio acuoso / peróxido: completa la oxidación hasta el grupo carboxilo –COOH.",
+    "reglasObs": "• Tabla rápida de cicloalquenos (exámenes 2019–2024): Ciclobuteno + O₃/H₂O₂ → Ácido succínico (butanodioico, 4C); Ciclopenteno + O₃/H₂O₂ → Ácido glutárico (pentanodioico, 5C); Ciclohexeno + KMnO₄/H⁺ Δ → Ácido adípico (hexanodioico, 6C).\n• Contraste clave: Ozonólisis reductiva (1. O₃  2. Zn/H₂O) produce ALDEHÍDOS/CETONAS; Ozonólisis oxidativa (1. O₃  2. H₂O₂) o KMnO₄/H⁺ Δ produce ÁCIDOS CARBOXÍLICOS."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt3_ciclobuteno_succinico",
+      "name": "Ciclobuteno + 1. O₃  2. H₂O₂ (ó KMnO₄ / H⁺ Δ) ──► Ácido Succínico (Butanodioico, 4C) [Apertura Ciclo]",
+      "catalyst": "1) O₃  2) H₂O₂  (ó KMnO₄ / H⁺, Δ)"
+    },
+    {
+      "id": "ac_obt3_ciclopenteno_glutarico",
+      "name": "Ciclopenteno + 1. O₃  2. H₂O₂ (ó KMnO₄ / H⁺ Δ) ──► Ácido Glutárico (Pentanodioico, 5C) [Apertura Ciclo]",
+      "catalyst": "1) O₃  2) H₂O₂  (ó KMnO₄ / H⁺, Δ)"
+    },
+    {
+      "id": "ac_obt3_2buteno_acetico",
+      "name": "2-Buteno + KMnO₄ conc. / H⁺ (Δ) ──► 2 Ácido Etanoico (Ácido Acético) [Alqueno Simétrico]",
+      "catalyst": "KMnO₄ concentrado / H₂SO₄ (Δ)"
+    },
+    {
+      "id": "ac_obt3_2butino_acetico",
+      "name": "2-Butino + 1. O₃  2. H₂O (ó KMnO₄ / Δ) ──► 2 Ácido Etanoico [Ruptura de Alquino Interno]",
+      "catalyst": "1) O₃  2) H₂O  (ó KMnO₄, Δ)"
+    }
+  ],
+  "catalysts": [
+    "1) O₃  2) H₂O₂  (ó KMnO₄ / H⁺, Δ)",
+    "KMnO₄ concentrado / H₂SO₄ (Δ)",
+    "1) O₃  2) H₂O  (ó KMnO₄, Δ)"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt3_ciclobuteno_succinico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclobuteno (Anillo de 4C) + Ozono / H₂O₂ (o KMnO₄ / H⁺)",
+        "semiStep": "Ciclobuteno (C₄H₆) + O₃ / H₂O₂",
+        "semiGlobal": "Ciclobuteno ──(1. O₃  2. H₂O₂)──► HOOC–CH₂–CH₂–COOH (Ácido Succínico)",
+        "desc": "Se observa el ciclobuteno con su doble enlace C1=C2 dentro del anillo de 4 carbonos, listo para experimentar ruptura oxidativa y apertura de anillo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; doble enlace endocíclico C1=C2 intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Cicloadición oxidativa sobre el doble enlace C1=C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH",
+              "x": 315,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 475,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 315,
+              "y": 275
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 475,
+              "y": 275
+            },
+            {
+              "id": "Ox",
+              "el": "1) O₃  2) H₂O₂",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Escisión del Doble Enlace C1=C2 y Apertura del Anillo",
+        "semiStep": "Ruptura completa de C1=C2 sin pérdida de carbonos",
+        "semiGlobal": "Ciclobuteno ──(1. O₃  2. H₂O₂)──► HOOC–CH₂–CH₂–COOH (Ácido Succínico)",
+        "desc": "Se rompe completamente el doble enlace C1=C2 abriendo el anillo de 4 carbonos y oxidando cada carbono olefínico hasta ácido carboxílico.",
+        "legend": {
+          "breaking": "En ROJO punteado: escisión total del enlace C1=C2.",
+          "forming": "En VERDE punteado: incorporación de oxígenos carboxílicos en C1 y C4.",
+          "movement": "La cadena conserva exactamente los 4 átomos de carbono."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "COOH",
+              "x": 245,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "COOH",
+              "x": 545,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 315,
+              "y": 275
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 475,
+              "y": 275
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Succínico / Ácido Butanodioico (HOOC–CH₂–CH₂–COOH)",
+        "semiStep": "HOOC–CH₂–CH₂–COOH (Diácido lineal de 4 carbonos)",
+        "semiGlobal": "Ciclobuteno ──(1. O₃  2. H₂O₂)──► HOOC–CH₂–CH₂–COOH (Ácido Succínico)",
+        "desc": "Queda consolidado el ácido succínico (butanodioico). Pregunta directa de los exámenes de ingreso 2019 y 2022.",
+        "legend": {
+          "breaking": "Apertura oxidativa completada.",
+          "forming": "En VERDE sólido: dos grupos carboxilo terminales (C1 y C4).",
+          "movement": "Producto diácido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOOC",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 335,
+              "y": 210,
+              "label": "Ácido Succínico (4C)"
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 475,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "COOH",
+              "x": 625,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C4",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt3_ciclopenteno_glutarico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclopenteno (Anillo de 5C) + Ozono / H₂O₂",
+        "semiStep": "Ciclopenteno (C₅H₈) + 1. O₃  2. H₂O₂",
+        "semiGlobal": "Ciclopenteno ──(1. O₃  2. H₂O₂)──► HOOC–CH₂–CH₂–CH₂–COOH (Ácido Glutárico)",
+        "desc": "El ciclopenteno posee 5 carbonos en el anillo; al romperse oxidativamente el doble enlace se obtiene el diácido lineal de 5 carbonos.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclopenteno intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ruptura del doble enlace C1=C2 con formación de dos grupos carboxilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH=CH",
+              "x": 385,
+              "y": 115,
+              "highlight": "#fbbf24",
+              "label": "Doble enlace a escindir"
+            },
+            {
+              "id": "Ring",
+              "el": "–CH₂–CH₂–CH₂–",
+              "x": 385,
+              "y": 265
+            },
+            {
+              "id": "Ox",
+              "el": "1) O₃  2) H₂O₂",
+              "x": 635,
+              "y": 195,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Ring",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Glutárico / Ácido Pentanodioico (HOOC–(CH₂)₃–COOH)",
+        "semiStep": "HOOC–CH₂–CH₂–CH₂–COOH (Diácido lineal de 5 carbonos)",
+        "semiGlobal": "Ciclopenteno ──(1. O₃  2. H₂O₂)──► HOOC–CH₂–CH₂–CH₂–COOH (Ácido Glutárico)",
+        "desc": "Queda consolidado el ácido glutárico (pentanodioico, 5C). Si se usara Zn/H₂O en vez de H₂O₂ se detendría en 1,5-pentanodial.",
+        "legend": {
+          "breaking": "Escisión oxidativa completada.",
+          "forming": "En VERDE sólido: dos grupos carboxilo en C1 y C5.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOOC",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mid",
+              "el": "CH₂–CH₂–CH₂",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido Glutárico (5C)"
+            },
+            {
+              "id": "C5",
+              "el": "COOH",
+              "x": 605,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Mid",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Mid",
+              "to": "C5",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt3_2buteno_acetico": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Buteno + KMnO₄ Concentrado / H⁺ (Δ)",
+        "semiStep": "CH₃–CH=CH–CH₃ + KMnO₄ / H₂SO₄ (Δ)",
+        "semiGlobal": "CH₃–CH=CH–CH₃ ──(KMnO₄ conc., H⁺, Δ)──► 2 CH₃–COOH",
+        "desc": "En el 2-buteno simétrico, cada carbono del doble enlace (=CH–CH₃) está unido a un hidrógeno vinílico, por lo que al romperse el enlace se oxida hasta ácido acético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; doble enlace C2=C3 intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ruptura central del doble enlace C2=C3 en dos fragmentos de 2 carbonos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "L",
+              "el": "CH₃–CH",
+              "x": 255,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "R",
+              "el": "CH–CH₃",
+              "x": 495,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / H⁺ (Δ)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "L",
+              "to": "R",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2 Moléculas de Ácido Etanoico (2 CH₃–COOH)",
+        "semiStep": "CH₃–COOH + CH₃–COOH",
+        "semiGlobal": "CH₃–CH=CH–CH₃ ──(KMnO₄ conc., H⁺, Δ)──► 2 CH₃–COOH",
+        "desc": "Quedan consolidadas dos moléculas idénticas de ácido etanoico (ácido acético).",
+        "legend": {
+          "breaking": "Ruptura oxidativa completada.",
+          "forming": "En VERDE sólido: dos moléculas de CH₃–COOH.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "P1",
+              "el": "CH₃–COOH",
+              "x": 245,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Plus",
+              "el": "+",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "P2",
+              "el": "HOOC–CH₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_obt3_2butino_acetico": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Butino (Alquino Interno) + Ozono / H₂O (o KMnO₄)",
+        "semiStep": "CH₃–C≡C–CH₃ + 1. O₃  2. H₂O",
+        "semiGlobal": "CH₃–C≡C–CH₃ ──(1. O₃  2. H₂O)──► 2 CH₃–COOH",
+        "desc": "Los alquinos internos sufren ruptura oxidativa del triple enlace C≡C generando directamente dos ácidos carboxílicos.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; triple enlace C2≡C3 intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Escisión completa del triple enlace."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "L",
+              "el": "CH₃–C",
+              "x": 255,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "R",
+              "el": "C–CH₃",
+              "x": 495,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "1) O₃  2) H₂O",
+              "x": 375,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "L",
+              "to": "R",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2 Moléculas de Ácido Etanoico (2 CH₃–COOH)",
+        "semiStep": "2 CH₃–COOH",
+        "semiGlobal": "CH₃–C≡C–CH₃ ──(1. O₃  2. H₂O)──► 2 CH₃–COOH",
+        "desc": "Quedan consolidadas dos moléculas de ácido etanoico.",
+        "legend": {
+          "breaking": "Ruptura del triple enlace completada.",
+          "forming": "En VERDE sólido: grupos carboxilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "P1",
+              "el": "CH₃–COOH",
+              "x": 245,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Plus",
+              "el": "+",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "P2",
+              "el": "HOOC–CH₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
