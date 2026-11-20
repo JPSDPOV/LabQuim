@@ -3330,20 +3330,28 @@
                 const targetOrder = b.order || 1;
 
                 let trim1 = 0, trim2 = 0;
-                if (a1.noShape || a2.noShape) {
-                    const ang = Math.atan2(a2.y - a1.y, a2.x - a1.x);
-                    const cosA = Math.abs(Math.cos(ang));
-                    const sinA = Math.abs(Math.sin(ang));
-                    const charHalf = mobile ? 9.5 : 8.2;
+                const ang = Math.atan2(a2.y - a1.y, a2.x - a1.x);
+                const cosA = Math.abs(Math.cos(ang));
+                const sinA = Math.abs(Math.sin(ang));
+                const charHalf = mobile ? 9.5 : 8.2;
+                if (!a1.isVertex) {
                     if (a1.noShape) {
                         const hw1 = Math.max(14, String(a1.el || '').length * charHalf + 6);
                         const hh1 = mobile ? 19 : 16;
-                        trim1 = Math.min(hw1 / (cosA || 0.01), hh1 / (sinA || 0.01), Math.max(hw1, hh1)) + 4;
+                        trim1 = Math.min(hw1 / (cosA || 0.01), hh1 / (sinA || 0.01), Math.max(hw1, hh1)) + 5;
+                    } else {
+                        const g1 = getNodeGeometry(a1);
+                        trim1 = Math.min(g1.halfW / (cosA || 0.01), g1.halfH / (sinA || 0.01), Math.max(g1.halfW, g1.halfH)) + 6;
                     }
+                }
+                if (!a2.isVertex) {
                     if (a2.noShape) {
                         const hw2 = Math.max(14, String(a2.el || '').length * charHalf + 6);
                         const hh2 = mobile ? 19 : 16;
-                        trim2 = Math.min(hw2 / (cosA || 0.01), hh2 / (sinA || 0.01), Math.max(hw2, hh2)) + 4;
+                        trim2 = Math.min(hw2 / (cosA || 0.01), hh2 / (sinA || 0.01), Math.max(hw2, hh2)) + 5;
+                    } else {
+                        const g2 = getNodeGeometry(a2);
+                        trim2 = Math.min(g2.halfW / (cosA || 0.01), g2.halfH / (sinA || 0.01), Math.max(g2.halfW, g2.halfH)) + 6;
                     }
                 }
                 svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null, null, lightMode, trim1, trim2);
@@ -3670,7 +3678,7 @@
                     <line x1="${ix1.toFixed(1)}" y1="${iy1.toFixed(1)}" x2="${ix2.toFixed(1)}" y2="${iy2.toFixed(1)}" stroke="${aromStroke}" stroke-width="${innerW}" stroke-linecap="round"/>
                 `;
             } else if (order === 2) {
-                const off = lightTheme ? 3.3 : (mobile ? 6.0 : 4.8);
+                const off = lightTheme ? 4.2 : (mobile ? 6.6 : 5.4);
                 let piStroke = lightTheme ? '#0f172a' : '#a78bfa';
                 let piDash = '';
                 let piGlow = '';
@@ -3685,17 +3693,17 @@
                     piStroke = '#10b981';
                     piGlow = 'filter="drop-shadow(0 0 7px rgba(16,185,129,0.8))"';
                 }
-                const w2a = lightTheme ? 2.2 : (mobile ? 4.2 : 3.2);
-                const w2b = lightTheme ? 2.2 : (mobile ? 4.6 : 3.6);
+                const w2a = lightTheme ? 2.2 : (mobile ? 4.0 : 3.0);
+                const w2b = lightTheme ? 2.2 : (mobile ? 4.2 : 3.2);
                 html += `
                     <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${lightTheme ? '#0f172a' : '#cbd5e1'}" stroke-width="${w2a}" stroke-linecap="round"/>
                     <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${w2b}" ${piDash} ${piGlow} stroke-linecap="round"/>
                 `;
             } else if (order === 3) {
-                const off = lightTheme ? 4.2 : (mobile ? 7.6 : 6.2);
+                const off = lightTheme ? 5.2 : (mobile ? 8.2 : 6.8);
                 const piStroke = (state === 'breaking-pi' || state === 'breaking') ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : (lightTheme ? '#0f172a' : '#38bdf8'));
                 const piDash = (state === 'breaking-pi' || state === 'breaking') ? 'stroke-dasharray="6,5"' : '';
-                const w3a = lightTheme ? 2.2 : (mobile ? 4.0 : 3.2);
+                const w3a = lightTheme ? 2.2 : (mobile ? 3.8 : 3.0);
                 const w3b = lightTheme ? 2.1 : (mobile ? 3.5 : 2.8);
                 html += `
                     <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${lightTheme ? '#0f172a' : '#cbd5e1'}" stroke-width="${w3a}" stroke-linecap="round"/>
