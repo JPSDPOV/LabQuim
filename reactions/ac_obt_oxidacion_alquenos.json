@@ -1,89 +1,3224 @@
 {
   "category": "obtencion",
   "title": "9) Método Complementario: Ruptura Oxidativa de Alquenos Disustituidos (+ KMnO₄ conc., H⁺, Δ ──► Cetonas)",
-  "natureBadge": "Oxidación Enérgica • R₂C=CR'₂ + KMnO₄ (H⁺, Δ) ──► R₂C=O + R'₂C=O (Cetonas)",
-  "deltaH": "ΔH° << 0 (Fuertemente exotérmica; los carbonos vinílicos disustituidos =CR₂ se oxidan a cetonas)",
-  "description": "Cuando un alqueno posee carbonos vinílicos disustituidos (=CR₂, sin hidrógenos unidos al carbono del doble enlace), su escisión oxidativa con permanganato de potasio concentrado y caliente (KMnO₄ / H⁺, Δ) se detiene en CETONAS, ya que las cetonas no sufren oxidación posterior.",
+  "natureBadge": "Ruptura Oxidativa Enérgica • R₂C=CR'₂ + KMnO₄ conc. (H⁺, Δ) ──► R₂C=O + O=CR'₂",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica; escinde completamente el enlace C=C)",
+  "description": "Ruptura oxidativa enérgica de alquenos mediante permanganato de potasio concentrado (KMnO₄) en medio ácido (H₂SO₄) y caliente (Δ):\n1) El ion permanganato realiza una cicloadición [3+2] formando un éster manganato cíclico que, bajo condiciones ácidas y calor, se escinde rompiendo completamente tanto el enlace π como el enlace σ del doble enlace C=C.\n2) Cada carbono sp² disustituido (=CR₂) produce una CETONA estable (R–CO–R'), ya que carece de hidrógenos unidos al carbonilo y resiste oxidaciones posteriores.\n3) Si el otro carbono del doble enlace posee hidrógenos, se oxida hasta ácido carboxílico (=CHR ──► R–COOH) o hasta dióxido de carbono (=CH₂ ──► CO₂ + H₂O).",
   "meta": {
-    "grupoFuncional": "Cetonas (R₂C=O)",
-    "reaccionMecanismo": "Escisión oxidativa enérgica del doble enlace C=C",
-    "naturaleza": "Oxidación profunda con ruptura total de C=C.",
-    "rupturaIntermediarios": "Ruptura completa de enlaces σ y π del doble enlace.",
-    "detalleMecanismo": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O (propanona)",
-    "reactivosCondiciones": "Alqueno con carbonos disustituidos (=CR₂) + KMnO₄ conc., H⁺, calor (Δ).",
-    "rolReactivos": "• Sustrato: Alqueno disustituido (=CR₂).\n• Oxidante enérgico: KMnO₄ concentrado y caliente.",
-    "reglasObs": "• Si el carbono vinílico tiene algún H (=CHR o =CH₂), con KMnO₄ caliente pasa a ácido carboxílico o CO₂, no a aldehído."
+    "grupoFuncional": "Cetonas (R–CO–R')",
+    "reaccionMecanismo": "Ruptura oxidativa enérgica de alquenos vía éster manganato cíclico (KMnO₄ / H⁺, Δ)",
+    "naturaleza": "Por etapas (cicloadición → éster manganato cíclico → escisión oxidativa C–C).",
+    "rupturaIntermediarios": "Ruptura total de C=C (σ + π); intermediario éster manganato cíclico; formación de C=O.",
+    "detalleMecanismo": "R₂C=CR'₂ + KMnO₄ conc. / H⁺, Δ ──► R₂C=O + O=CR'₂",
+    "reactivosCondiciones": "Alqueno disustituido/tetrasustituido + KMnO₄ concentrado, H₂SO₄ (H⁺) y calentamiento (Δ).",
+    "rolReactivos": "• Sustrato: Alqueno con carbonos disustituidos (=CR₂).\n• Oxidante enérgico: Permanganato de potasio concentrado (KMnO₄).\n• Medio: Ácido fuerte (H₂SO₄) y calor (Δ).",
+    "reglasObs": "• A diferencia de la ozonólisis reductiva (que conserva los aldehídos), el KMnO₄ caliente oxida los aldehídos intermedios hasta ácidos carboxílicos.\n• Por ello, es un método específico para obtener CETONAS a partir de carbonos alquénicos disustituidos (=CR₂)."
   },
   "substrates": [
     {
-      "id": "kmno4_tetrametiletileno",
-      "name": "Complementario: 2,3-Dimetil-2-buteno + KMnO₄ (H⁺, Δ) ──► 2 Propanona",
-      "catalyst": "KMnO₄ concentrado / H⁺, Δ"
+      "id": "kmno4_23dimetil2buteno",
+      "name": "2,3-Dimetil-2-buteno + KMnO₄ / H⁺, Δ ──► 2 Propanona (Acetona)",
+      "catalyst": "KMnO₄ conc. / H₂SO₄, Δ"
+    },
+    {
+      "id": "kmno4_23dimetil2penteno",
+      "name": "2,3-Dimetil-2-penteno + KMnO₄ / H⁺, Δ ──► Propanona + Butanona [2 Cetonas]",
+      "catalyst": "KMnO₄ conc. / H₂SO₄, Δ"
+    },
+    {
+      "id": "kmno4_isobutileno",
+      "name": "2-Metilpropeno (Isobutileno) + KMnO₄ / H⁺, Δ ──► Propanona + CO₂",
+      "catalyst": "KMnO₄ conc. / H₂SO₄, Δ"
+    },
+    {
+      "id": "kmno4_2metil2buteno",
+      "name": "2-Metil-2-buteno + KMnO₄ / H⁺, Δ ──► Propanona + Ácido Etanoico [Mixto]",
+      "catalyst": "KMnO₄ conc. / H₂SO₄, Δ"
+    },
+    {
+      "id": "kmno4_1metilciclohexeno",
+      "name": "1-Metilciclohexeno + KMnO₄ / H⁺, Δ ──► Ácido 6-Oxoheptanoico [Apertura de ciclo]",
+      "catalyst": "KMnO₄ conc. / H₂SO₄, Δ"
     }
   ],
   "catalysts": [
-    "KMnO₄ concentrado / H⁺, Δ"
+    "KMnO₄ conc. / H₂SO₄, Δ"
   ],
   "stepsBySubstrate": {
-    "kmno4_tetrametiletileno": [
+    "kmno4_23dimetil2buteno": [
       {
-        "title": "Paso 1 — Estado Inicial: 2,3-Dimetil-2-buteno + KMnO₄ Caliente",
-        "semiStep": "(CH₃)₂C=C(CH₃)₂  +  KMnO₄ (H⁺, Δ)",
-        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O",
-        "desc": "Ninguno de los carbonos del doble enlace tiene hidrógenos, por lo que ambos se oxidan a cetona.",
+        "title": "Estado Inicial Desarrollado: 2,3-Dimetil-2-buteno + KMnO₄ conc. / H⁺, Δ",
+        "semiStep": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ / H⁺, Δ",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ conc., H⁺, Δ ──► 2 CH₃–CO–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 2,3-dimetil-2-buteno tetrasustituido y el ion permanganato en medio ácido caliente.",
         "legend": {
-          "breaking": "Doble enlace C2=C3.",
-          "forming": "Sin enlaces nuevos aún.",
-          "movement": "Escisión oxidativa en caliente."
+          "breaking": "Ningún enlace roto todavía; alqueno y permanganato intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ion permanganato (MnO₄⁻) sobre la nube electrónica π del alqueno."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Sub",
-              "el": "(CH₃)₂C=C(CH₃)₂",
-              "x": 310,
-              "y": 195
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2,3-Dimetil-2-buteno"
             },
             {
-              "id": "Ox",
-              "el": "KMnO₄ / H⁺, Δ",
-              "x": 640,
-              "y": 195,
-              "highlight": "#a855f7"
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 390,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 50,
+              "highlight": "#38bdf8",
+              "label": "KMnO₄ conc. / H⁺, Δ"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 530,
+              "y": 95,
+              "highlight": "#38bdf8"
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 480,
-              "y": 202,
-              "text": "+"
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: 2 moles de Propanona",
-        "semiStep": "2 (CH₃)₂C=O  (Propanona)",
-        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ (H⁺, Δ) ──► 2 (CH₃)₂C=O",
-        "desc": "Se obtienen 2 moles de propanona.",
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Éster Manganato Cíclico",
+        "semiStep": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ / H⁺, Δ ──► [Éster manganato cíclico]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ conc., H⁺, Δ ──► 2 CH₃–CO–CH₃",
+        "desc": "El permanganato realiza una cicloadición [3+2] sobre el doble enlace C2=C1 formando el éster manganato cíclico.",
         "legend": {
-          "breaking": "Doble enlace escindido.",
-          "forming": "En VERDE sólido: 2 propanona.",
-          "movement": "Producto cetónico consolidado."
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O con el manganeso.",
+          "movement": "Cicloadición dipolar concertada que genera un anillo de 5 miembros."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "2 (CH₃)₂C=O",
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
               "x": 460,
-              "y": 195,
-              "highlight": "#10b981",
-              "label": "Propanona"
+              "y": 58,
+              "highlight": "#38bdf8",
+              "label": "Éster manganato cíclico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
             }
           ],
-          "bonds": []
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 135,
+              "cx": 542,
+              "cy": 170,
+              "x2": 535,
+              "y2": 195,
+              "label": "Forma C1–O"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura Oxidativa Enérgica: Escisión Total del Enlace C–C (en Rojo)",
+        "semiStep": "[Ruptura completa de C=C bajo KMnO₄ concentrado, H⁺ y calor]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ conc., H⁺, Δ ──► 2 CH₃–CO–CH₃",
+        "desc": "Bajo el efecto del ácido fuerte y el calor, se rompe completamente el enlace C2–C1 formando dos grupos carbonilo cetónicos.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura total del enlace σ C2–C1 y disociación de O–Mn.",
+          "forming": "En VERDE punteado: formación de los dobles enlaces carbonilo C=O.",
+          "movement": "El calor y el medio ácido fuerte escinden por completo la cadena en el antiguo doble enlace."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 350,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 570,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 240,
+              "y": 135
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 240,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 680,
+              "y": 135
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 680,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂",
+              "x": 460,
+              "y": 48,
+              "highlight": "#ef4444",
+              "label": "Ruptura C–C (H⁺, Δ)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 420,
+              "cy": 165,
+              "x2": 378,
+              "y2": 148,
+              "label": "Ruptura C2–C1"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 500,
+              "cy": 165,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Evaluación de Estabilidad Oxidativa de los Fragmentos Formados",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₃",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ conc., H⁺, Δ ──► 2 CH₃–CO–CH₃",
+        "desc": "Al ser ambos carbonos disustituidos (unidos a dos grupos metilo cada uno), las cetonas formadas resisten cualquier oxidación posterior.",
+        "legend": {
+          "breaking": "Los enlaces C–H vinílicos (si existen) se oxidan ulteriormente; los enlaces C–C de las cetonas resisten.",
+          "forming": "En VERDE sólido: grupos carbonilo cetónicos estables (y ácido/CO₂ si había H vinílico).",
+          "movement": "Las cetonas no poseen H unido al carbonilo y detienen aquí su oxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona 1 (resiste oxidación)"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 580,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona 2 (resiste oxidación)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 508,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 685,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 685,
+              "y": 275
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Propanona (CH₃–CO–CH₃ + CH₃–CO–CH₃)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₃ (Propanona + Propanona)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + KMnO₄ conc., H⁺, Δ ──► 2 CH₃–CO–CH₃",
+        "desc": "Quedan consolidadas dos moléculas de propanona o acetona (CH₃–CO–CH₃ + CH₃–CO–CH₃) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa enérgica completada.",
+          "forming": "En VERDE sólido: cetonas consolidadas con geometría trigonal plana (120°).",
+          "movement": "Síntesis completada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 435,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 585,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 513,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 690,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 690,
+              "y": 275
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "kmno4_23dimetil2penteno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2,3-Dimetil-2-penteno + KMnO₄ conc. / H⁺, Δ",
+        "semiStep": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ / H⁺, Δ",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "desc": "Se observan las moléculas iniciales intactas: el 2,3-dimetil-2-penteno tetrasustituido asimétrico y el KMnO₄ en medio ácido caliente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y permanganato intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ion permanganato (MnO₄⁻) sobre la nube electrónica π del alqueno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2,3-Dimetil-2-penteno"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₂CH₃",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 390,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 50,
+              "highlight": "#38bdf8",
+              "label": "KMnO₄ conc. / H⁺, Δ"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 530,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Éster Manganato Cíclico",
+        "semiStep": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ / H⁺, Δ ──► [Éster manganato cíclico]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "desc": "Cicloadición [3+2] del permanganato sobre el doble enlace C2=C1 para formar el éster manganato cíclico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O con el manganeso.",
+          "movement": "Cicloadición dipolar concertada que genera un anillo de 5 miembros."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₂CH₃",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 58,
+              "highlight": "#38bdf8",
+              "label": "Éster manganato cíclico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 135,
+              "cx": 542,
+              "cy": 170,
+              "x2": 535,
+              "y2": 195,
+              "label": "Forma C1–O"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura Oxidativa Enérgica: Escisión Total del Enlace C–C (en Rojo)",
+        "semiStep": "[Ruptura completa de C=C bajo KMnO₄ concentrado, H⁺ y calor]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "desc": "La ruptura oxidativa escinde el doble enlace generando un fragmento isopropilideno (C2) y un fragmento sec-butilideno (C1).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura total del enlace σ C2–C1 y disociación de O–Mn.",
+          "forming": "En VERDE punteado: formación de los dobles enlaces carbonilo C=O.",
+          "movement": "El calor y el medio ácido fuerte escinden por completo la cadena en el antiguo doble enlace."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 350,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 570,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 240,
+              "y": 135
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 240,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 680,
+              "y": 135
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₂CH₃",
+              "x": 680,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂",
+              "x": 460,
+              "y": 48,
+              "highlight": "#ef4444",
+              "label": "Ruptura C–C (H⁺, Δ)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 420,
+              "cy": 165,
+              "x2": 378,
+              "y2": 148,
+              "label": "Ruptura C2–C1"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 500,
+              "cy": 165,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Evaluación de Estabilidad Oxidativa de los Fragmentos Formados",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "desc": "Ambos fragmentos carecen de hidrógenos vinílicos, por lo que permanecen estables como cetonas.",
+        "legend": {
+          "breaking": "Los enlaces C–H vinílicos (si existen) se oxidan ulteriormente; los enlaces C–C de las cetonas resisten.",
+          "forming": "En VERDE sólido: grupos carbonilo cetónicos estables (y ácido/CO₂ si había H vinílico).",
+          "movement": "Las cetonas no poseen H unido al carbonilo y detienen aquí su oxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona 1 (resiste oxidación)"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 580,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona 2 (resiste oxidación)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 508,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 685,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₂CH₃",
+              "x": 685,
+              "y": 275
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Butanona (CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃ (Propanona + Butanona)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)–CH₂–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–CO–CH₂–CH₃",
+        "desc": "Quedan consolidadas una molécula de propanona (CH₃–CO–CH₃) y una de butanona (CH₃–CO–CH₂–CH₃) en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa enérgica completada.",
+          "forming": "En VERDE sólido: cetonas consolidadas con geometría trigonal plana (120°).",
+          "movement": "Síntesis completada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 435,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 585,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Butanona"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 513,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 690,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₂CH₃",
+              "x": 690,
+              "y": 275
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "kmno4_isobutileno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Metilpropeno (Isobutileno) + KMnO₄ conc. / H⁺, Δ",
+        "semiStep": "(CH₃)₂C=CH₂ + KMnO₄ / H⁺, Δ",
+        "semiGlobal": "(CH₃)₂C=CH₂ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CO₂ + H₂O",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-metilpropeno (isobutileno, con un carbono disustituido C2 y un carbono terminal =CH₂) y KMnO₄.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y permanganato intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ion permanganato (MnO₄⁻) sobre la nube electrónica π del alqueno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2-Metilpropeno (Isobutileno)"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 390,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 50,
+              "highlight": "#38bdf8",
+              "label": "KMnO₄ conc. / H⁺, Δ"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 530,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Éster Manganato Cíclico",
+        "semiStep": "(CH₃)₂C=CH₂ + KMnO₄ / H⁺, Δ ──► [Éster manganato cíclico]",
+        "semiGlobal": "(CH₃)₂C=CH₂ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CO₂ + H₂O",
+        "desc": "El permanganato se adiciona al doble enlace terminal formando el éster manganato cíclico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O con el manganeso.",
+          "movement": "Cicloadición dipolar concertada que genera un anillo de 5 miembros."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 58,
+              "highlight": "#38bdf8",
+              "label": "Éster manganato cíclico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 135,
+              "cx": 542,
+              "cy": 170,
+              "x2": 535,
+              "y2": 195,
+              "label": "Forma C1–O"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura Oxidativa Enérgica: Escisión Total del Enlace C–C (en Rojo)",
+        "semiStep": "[Ruptura completa de C=C bajo KMnO₄ concentrado, H⁺ y calor]",
+        "semiGlobal": "(CH₃)₂C=CH₂ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CO₂ + H₂O",
+        "desc": "El calor y el medio ácido rompen el enlace C2–C1 formando propanona en C2 y formaldehído transitorio en C1.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura total del enlace σ C2–C1 y disociación de O–Mn.",
+          "forming": "En VERDE punteado: formación de los dobles enlaces carbonilo C=O.",
+          "movement": "El calor y el medio ácido fuerte escinden por completo la cadena en el antiguo doble enlace."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 350,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 570,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 240,
+              "y": 135
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 240,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 680,
+              "y": 135
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 680,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂",
+              "x": 460,
+              "y": 48,
+              "highlight": "#ef4444",
+              "label": "Ruptura C–C (H⁺, Δ)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 420,
+              "cy": 165,
+              "x2": 378,
+              "y2": 148,
+              "label": "Ruptura C2–C1"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 500,
+              "cy": 165,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Evaluación de Estabilidad Oxidativa de los Fragmentos Formados",
+        "semiStep": "CH₃–CO–CH₃ + CO₂",
+        "semiGlobal": "(CH₃)₂C=CH₂ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CO₂ + H₂O",
+        "desc": "Mientras la propanona resiste la oxidación, el fragmento =CH₂ (formaldehído) se oxida completamente hasta CO₂ y H₂O.",
+        "legend": {
+          "breaking": "Los enlaces C–H vinílicos (si existen) se oxidan ulteriormente; los enlaces C–C de las cetonas resisten.",
+          "forming": "En VERDE sólido: grupos carbonilo cetónicos estables (y ácido/CO₂ si había H vinílico).",
+          "movement": "Las cetonas no poseen H unido al carbonilo y detienen aquí su oxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 280,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona estable (sin Hα)"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 352,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 175,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 175,
+              "y": 275
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 615,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Oxidación total a CO₂"
+            },
+            {
+              "id": "O_R2",
+              "el": "O",
+              "x": 735,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_R2",
+              "order": 2,
+              "state": "forming-pi"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Dióxido de carbono (CH₃–CO–CH₃ + CO₂)",
+        "semiStep": "CH₃–CO–CH₃ + CO₂ (Propanona + Dióxido de carbono)",
+        "semiGlobal": "(CH₃)₂C=CH₂ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CO₂ + H₂O",
+        "desc": "Quedan consolidados la propanona (CH₃–CO–CH₃) con geometría trigonal plana (120°) y el dióxido de carbono (CO₂).",
+        "legend": {
+          "breaking": "Ruptura oxidativa enérgica completada.",
+          "forming": "En VERDE sólido: cetonas consolidadas con geometría trigonal plana (120°).",
+          "movement": "Síntesis completada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 510,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 625,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Dióxido de carbono"
+            },
+            {
+              "id": "O_R2",
+              "el": "O",
+              "x": 740,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_R2",
+              "order": 2,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "kmno4_2metil2buteno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Metil-2-buteno + KMnO₄ conc. / H⁺, Δ",
+        "semiStep": "(CH₃)₂C=CH–CH₃ + KMnO₄ / H⁺, Δ",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–COOH",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-metil-2-buteno trisustituido y el ion permanganato en medio ácido caliente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y permanganato intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ion permanganato (MnO₄⁻) sobre la nube electrónica π del alqueno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2-Metil-2-buteno"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 390,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 50,
+              "highlight": "#38bdf8",
+              "label": "KMnO₄ conc. / H⁺, Δ"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 530,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Éster Manganato Cíclico",
+        "semiStep": "(CH₃)₂C=CH–CH₃ + KMnO₄ / H⁺, Δ ──► [Éster manganato cíclico]",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–COOH",
+        "desc": "Cicloadición [3+2] del permanganato formando el éster manganato cíclico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O con el manganeso.",
+          "movement": "Cicloadición dipolar concertada que genera un anillo de 5 miembros."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂⁻",
+              "x": 460,
+              "y": 58,
+              "highlight": "#38bdf8",
+              "label": "Éster manganato cíclico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 135,
+              "cx": 542,
+              "cy": 170,
+              "x2": 535,
+              "y2": 195,
+              "label": "Forma C1–O"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura Oxidativa Enérgica: Escisión Total del Enlace C–C (en Rojo)",
+        "semiStep": "[Ruptura completa de C=C bajo KMnO₄ concentrado, H⁺ y calor]",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–COOH",
+        "desc": "Escisión completa del enlace C2–C1 bajo KMnO₄ concentrado y calor.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura total del enlace σ C2–C1 y disociación de O–Mn.",
+          "forming": "En VERDE punteado: formación de los dobles enlaces carbonilo C=O.",
+          "movement": "El calor y el medio ácido fuerte escinden por completo la cadena en el antiguo doble enlace."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 350,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 570,
+              "y": 215,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 240,
+              "y": 135
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 240,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 680,
+              "y": 135
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 680,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Mn_atom",
+              "el": "MnO₂",
+              "x": 460,
+              "y": 48,
+              "highlight": "#ef4444",
+              "label": "Ruptura C–C (H⁺, Δ)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "Mn_atom",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Mn_atom",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 420,
+              "cy": 165,
+              "x2": 378,
+              "y2": 148,
+              "label": "Ruptura C2–C1"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 215,
+              "cx": 500,
+              "cy": 165,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Evaluación de Estabilidad Oxidativa de los Fragmentos Formados",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–COOH",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–COOH",
+        "desc": "El carbono disustituido C2 forma propanona (estable), mientras que el carbono C1 (con un H) se sobreoxida de etanal a ácido etanoico.",
+        "legend": {
+          "breaking": "Los enlaces C–H vinílicos (si existen) se oxidan ulteriormente; los enlaces C–C de las cetonas resisten.",
+          "forming": "En VERDE sólido: grupos carbonilo cetónicos estables (y ácido/CO₂ si había H vinílico).",
+          "movement": "Las cetonas no poseen H unido al carbonilo y detienen aquí su oxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetona estable"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Aldehído → Ácido carboxílico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "OH",
+              "x": 665,
+              "y": 275,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Ácido Etanoico (CH₃–CO–CH₃ + CH₃–COOH)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–COOH (Propanona + Ácido Etanoico)",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–CH₃ + CH₃–COOH",
+        "desc": "Quedan consolidados la propanona (CH₃–CO–CH₃) y el ácido etanoico (CH₃–COOH).",
+        "legend": {
+          "breaking": "Ruptura oxidativa enérgica completada.",
+          "forming": "En VERDE sólido: cetonas consolidadas con geometría trigonal plana (120°).",
+          "movement": "Síntesis completada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 565,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Etanoico"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 493,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 670,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "OH",
+              "x": 670,
+              "y": 275,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "kmno4_1metilciclohexeno": [
+      {
+        "title": "Estado Inicial Desarrollado: 1-Metilciclohexeno + KMnO₄ conc. / H⁺, Δ",
+        "semiStep": "1-Metilciclohexeno + KMnO₄ conc. / H⁺, Δ",
+        "semiGlobal": "1-Metilciclohexeno + KMnO₄ conc., H⁺, Δ ──► HOOC–(CH₂)₄–CO–CH₃",
+        "desc": "Se observa el 1-metilciclohexeno (con doble enlace endocíclico trisustituido entre C1 con metilo y C2 con hidrógeno) frente a KMnO₄ concentrado en medio ácido y caliente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; anillo de ciclohexeno intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del ion permanganato sobre el doble enlace endocíclico C1=C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 380,
+              "y": 145,
+              "label": "1-Metilciclohexeno"
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 520,
+              "y": 145
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 270,
+              "y": 85
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 630,
+              "y": 85
+            },
+            {
+              "id": "C6",
+              "el": "CH₂",
+              "x": 310,
+              "y": 240
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 590,
+              "y": 240
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 380,
+              "y": 325
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 520,
+              "y": 325
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / H⁺, Δ",
+              "x": 450,
+              "y": 50,
+              "highlight": "#38bdf8",
+              "label": "Oxidante enérgico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Apertura Oxidativa del Anillo en el Doble Enlace C1=C2",
+        "semiStep": "Apertura del ciclo en C1=C2 (Formación de C1=O y C2=O)",
+        "semiGlobal": "1-Metilciclohexeno + KMnO₄ conc., H⁺, Δ ──► HOOC–(CH₂)₄–CO–CH₃",
+        "desc": "El permanganato en caliente rompe completamente el doble enlace C1=C2 abriendo el anillo de seis miembros en una cadena lineal.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura total del doble enlace endocíclico C1=C2.",
+          "forming": "En VERDE punteado: incorporación de átomos de oxígeno en C1 y C2.",
+          "movement": "Apertura del cicloalqueno para formar una cadena acíclica dicarbonílica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 360,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 540,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 245,
+              "y": 95
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 655,
+              "y": 95,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 360,
+              "y": 50,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 540,
+              "y": 50,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂",
+              "x": 300,
+              "y": 245
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 600,
+              "y": 245
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 380,
+              "y": 330
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 520,
+              "y": 330
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "Me1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "H2",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C1",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 450,
+              "y1": 145,
+              "cx": 405,
+              "cy": 100,
+              "x2": 375,
+              "y2": 125,
+              "label": "Escisión C1=C2"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Despliegue de la Cadena Abierta: Cetona en C6 y Carboxilo en C1",
+        "semiStep": "CH₃–CO–CH₂–CH₂–CH₂–CH₂–COOH",
+        "semiGlobal": "1-Metilciclohexeno + KMnO₄ conc., H⁺, Δ ──► HOOC–(CH₂)₄–CO–CH₃",
+        "desc": "El carbono C1 (disustituido) se convierte en grupo cetona (CH₃–CO–), mientras que el carbono C2 (con H) se oxida hasta grupo ácido carboxílico (–COOH).",
+        "legend": {
+          "breaking": "Enlace C1=C2 completamente escindido.",
+          "forming": "En VERDE sólido: grupo cetona en un extremo y grupo carboxilo en el otro.",
+          "movement": "Estiramiento conformacional de la cadena abierta de 7 carbonos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 95,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 220,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 220,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 465,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 705,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "COOH",
+              "x": 835,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Estabilización del Cetoácido (La Cetona Resiste Oxidación Ulterior)",
+        "semiStep": "CH₃–CO–CH₂–CH₂–CH₂–CH₂–COOH (Ácido 6-oxoheptanoico)",
+        "semiGlobal": "1-Metilciclohexeno + KMnO₄ conc., H⁺, Δ ──► HOOC–(CH₂)₄–CO–CH₃",
+        "desc": "La función cetona en C6 permanece estable frente al KMnO₄ mientras el extremo carboxílico completa la estructura del cetoácido.",
+        "legend": {
+          "breaking": "Oxidación completada.",
+          "forming": "En VERDE sólido: grupos funcionales cetona y ácido carboxílico en la misma molécula.",
+          "movement": "Producto cetoácido estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 95,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 220,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 220,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 465,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 705,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "COOH",
+              "x": 835,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido 6-Oxoheptanoico (CH₃–CO–CH₂–CH₂–CH₂–CH₂–COOH)",
+        "semiStep": "CH₃–CO–CH₂–CH₂–CH₂–CH₂–COOH (Ácido 6-oxoheptanoico)",
+        "semiGlobal": "1-Metilciclohexeno + KMnO₄ conc., H⁺, Δ ──► CH₃–CO–(CH₂)₄–COOH",
+        "desc": "Queda consolidado el ácido 6-oxoheptanoico (un cetoácido lineal de 7 carbonos) obtenido por apertura oxidativa del 1-metilciclohexeno.",
+        "legend": {
+          "breaking": "Apertura oxidativa del ciclo completada.",
+          "forming": "En VERDE sólido: ácido 6-oxoheptanoico consolidado.",
+          "movement": "Síntesis finalizada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 95,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 220,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido 6-oxoheptanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 220,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C6",
+              "el": "CH₂",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 465,
+              "y": 210
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 585,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 705,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "COOH",
+              "x": 835,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C6",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
         }
       }
     ]
