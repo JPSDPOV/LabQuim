@@ -1,0 +1,1344 @@
+{
+  "category": "reacciones",
+  "title": "12) Condensación con Fenilhidracina (+ C₆H₅–NH–NH₂ ──► Fenilhidrazonas + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + C₆H₅–NH–NH₂ (pH 4–5) ⇄ Fenilhidrazona + H₂O",
+  "deltaH": "ΔH° ≈ −25 a −40 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; precipitados cristalinos muy estables por conjugación aromática)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y la FENILHIDRACINA (C₆H₅–NH–NH₂) o la 2,4-dinitrofenilhidracina (2,4-DNFH, reactivo de Brady) en medio ligeramente ácido (pH ≈ 4.5) para formar una FENILHIDRAZONA (R₂C=N–NH–C₆H₅) con eliminación de agua:\n1) Etapa de adición nucleofílica: el nitrógeno terminal primario (–NH₂, mucho más nucleofílico que el –NH– unido al anillo aromático) ataca al carbono carbonílico electrofílico (δ+) formando una carbinolamina fenilhidrazínica (R₂C(OH)(NH–NH–C₆H₅)).\n2) Etapa de eliminación (deshidratación ácida): la protonación del grupo –OH lo convierte en buen grupo saliente (–OH₂⁺), expulsando H₂O asistido por el par libre del nitrógeno para generar un ion fenilhidrazonio [R₂C=NH⁺–NH–C₆H₅] que tras perder un protón consolida la fenilhidrazona.\n3) Importancia analítica y bioquímica: las fenilhidrazonas y 2,4-dinitrofenilhidrazonas (sólidos cristalinos amarillos, naranjas o rojos de punto de fusión definido) constituyen la prueba cualitativa clásica para identificar aldehídos y cetonas; además, con exceso de fenilhidracina (3 eq.), los α-hidroxialdehídos y α-hidroxicetonas (monosacáridos como glucosa y fructosa) forman OSAZONAS cristalinas.",
+  "meta": {
+    "grupoFuncional": "Fenilhidrazonas (R–CH=N–NH–C₆H₅ o R₂C=N–NH–C₆H₅) y 2,4-Dinitrofenilhidrazonas",
+    "reaccionMecanismo": "Adición nucleofílica del nitrógeno terminal –NH₂ (carbinolamina) seguida de eliminación de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque Ph–NH–NH₂ → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion fenilhidrazonio] → desprotonación [fenilhidrazona]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina fenilhidrazínica e ion fenilhidrazonio; formación de doble enlace C=N–NH–C₆H₅ y H₂O.",
+    "detalleMecanismo": "R–CHO + C₆H₅–NH–NH₂ ⇄ [R–CH(OH)–NH–NH–C₆H₅] ──(H⁺, −H₂O)──► R–CH=N–NH–C₆H₅ + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + Fenilhidracina (C₆H₅NHNH₂ / NaOAc, pH 4–5) o Reactivo de Brady (2,4-dinitrofenilhidracina en MeOH / H₂SO₄).",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Fenilhidracina (ataca por el –NH₂ terminal, cuyo par libre no está deslocalizado en el anillo bencénico).\n• Catalizador ácido suave (pH 4–5): acelera la pérdida de H₂O de la carbinolamina sin protonar totalmente al nucleófilo.",
+    "reglasObs": "• Regioselectividad del ataque: reacciona exclusivamente el –NH₂ terminal, ya que el par electrónico del –NH– interno participa en resonancia con el anillo fenílico.\n• Prueba de 2,4-DNFH (Reactivo de Brady): precipitado amarillo (carbonilo alifático saturado) o naranja-rojizo (carbonilo conjugado α,β-insaturado o aromático).\n• Síntesis de indol de Fischer: las fenilhidrazonas de cetonas enolizables se ciclan en medio ácido fuerte formando indoles."
+  },
+  "substrates": [
+    {
+      "id": "fenh_etanal_phnhnh2",
+      "name": "Etanal + Fenilhidracina (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► Fenilhidrazona del Etanal + H₂O [Aldehído Alifático]",
+      "catalyst": "C₆H₅NHNH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "fenh_propanona_phnhnh2",
+      "name": "Propanona + Fenilhidracina (pH 4.5) ⇄ Fenilhidrazona de la Propanona + H₂O [Cetona Alifática]",
+      "catalyst": "C₆H₅NHNH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "fenh_benzaldehido_phnhnh2",
+      "name": "Benzaldehído + Fenilhidracina (pH 4.5) ⇄ Fenilhidrazona del Benzaldehído + H₂O [Cristalina Conjugada]",
+      "catalyst": "C₆H₅NHNH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "fenh_acetofenona_24dnph",
+      "name": "Acetofenona + 2,4-DNFH (Reactivo de Brady) ──► 2,4-Dinitrofenilhidrazona↓ (Precipitado Rojo-Naranja)",
+      "catalyst": "2,4-DNFH / H₂SO₄ (EtOH)"
+    }
+  ],
+  "catalysts": [
+    "C₆H₅NHNH₂ / H⁺ (pH 4–5)",
+    "2,4-DNFH / H₂SO₄ (EtOH)"
+  ],
+  "stepsBySubstrate": {
+    "fenh_etanal_phnhnh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Fenilhidracina (C₆H₅–NH–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CHO + C₆H₅–NH–NH₂ (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + C₆H₅NHNH₂ ⇄ [CH₃–CH(OH)–NH–NHC₆H₅] ──(−H₂O)──► CH₃–CH=N–NHC₆H₅ + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) y la fenilhidracina (Ph–NH–NH₂), cuyo grupo –NH₂ terminal actúa como nucleófilo frente al carbono carbonílico C1.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y fenilhidracina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno terminal (–NH₂) de la fenilhidracina al carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Fenilhidracina"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_fh",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_fh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación de la Carbinolamina Fenilhidrazínica",
+        "semiStep": "CH₃–CHO + PhNHNH₂ ⇄ CH₃–CH(OH)–NH–NHPh [Carbinolamina]",
+        "semiGlobal": "CH₃–CHO + C₆H₅NHNH₂ ⇄ [CH₃–CH(OH)–NH–NHC₆H₅] ──(−H₂O)──► CH₃–CH=N–NHC₆H₅ + H₂O",
+        "desc": "El nitrógeno terminal forma un enlace covalente C1–N mientras se abre el enlace π C=O y se transfiere un protón hacia el oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del enlace C1–NHNHPh de la carbinolamina.",
+          "movement": "El carbono C1 cambia temporalmente a hibridación sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_fh",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_fh",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque PhNHNH₂"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de C=N–NHPh)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NHNHPh ──► [CH₃–CH=NH⁺NHPh] + H₂O ──► CH₃–CH=N–NHPh + H₃O⁺",
+        "semiGlobal": "CH₃–CHO + C₆H₅NHNH₂ ⇄ [CH₃–CH(OH)–NH–NHC₆H₅] ──(−H₂O)──► CH₃–CH=N–NHC₆H₅ + H₂O",
+        "desc": "La protonación del grupo –OH expulsa H₂O mientras el par libre del nitrógeno forma el doble enlace C=N y pierde el protón restante.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (salida de H₂O) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–NHPh.",
+          "movement": "El carbono C1 recupera hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Fenilhidrazona del Etanal (CH₃–CH=N–NHC₆H₅) + H₂O",
+        "semiStep": "CH₃–CH=N–NHC₆H₅ + H₂O (Fenilhidrazona)",
+        "semiGlobal": "CH₃–CHO + C₆H₅NHNH₂ ⇄ [CH₃–CH(OH)–NH–NHC₆H₅] ──(−H₂O)──► CH₃–CH=N–NHC₆H₅ + H₂O",
+        "desc": "Queda consolidada la fenilhidrazona del etanal junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo fenilhidrazono (–CH=N–NHC₆H₅).",
+          "movement": "Derivado cristalino característico para identificación de aldehídos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Fenilhidrazona Etanal"
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 545,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_fh",
+              "to": "NHPh_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fenh_propanona_phnhnh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Fenilhidracina (C₆H₅–NH–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + C₆H₅–NH–NH₂ (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + C₆H₅NHNH₂ ⇄ (CH₃)₂C=N–NHC₆H₅ + H₂O",
+        "desc": "Se observan la propanona y la fenilhidracina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona y fenilhidracina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del grupo –NH₂ terminal al carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Fenilhidracina"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_fh",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_fh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Deshidratación Ácida",
+        "semiStep": "(CH₃)₂C(OH)–NHNHPh ──(H⁺, −H₂O)──► (CH₃)₂C=N–NHPh",
+        "semiGlobal": "CH₃–CO–CH₃ + C₆H₅NHNH₂ ⇄ (CH₃)₂C=N–NHC₆H₅ + H₂O",
+        "desc": "Tras formarse la carbinolamina, la pérdida de H₂O genera el doble enlace C2=N–NHPh.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=N–NHPh.",
+          "movement": "Retorno del carbono C2 a hibridación sp²."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Fenilhidrazona de la Propanona ((CH₃)₂C=N–NHC₆H₅) + H₂O",
+        "semiStep": "(CH₃)₂C=N–NHC₆H₅ + H₂O",
+        "semiGlobal": "CH₃–CO–CH₃ + C₆H₅NHNH₂ ⇄ (CH₃)₂C=N–NHC₆H₅ + H₂O",
+        "desc": "Queda consolidada la fenilhidrazona de la propanona junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo fenilhidrazono cetónico.",
+          "movement": "Producto fenilhidrazona obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Fenilhidrazona Propanona"
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 545,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_fh",
+              "to": "NHPh_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fenh_benzaldehido_phnhnh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Fenilhidracina (C₆H₅–NH–NH₂, pH 4–5)",
+        "semiStep": "C₆H₅–CHO + C₆H₅–NH–NH₂ (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NHNH₂ ⇄ C₆H₅–CH=N–NHC₆H₅ + H₂O",
+        "desc": "Se observan el benzaldehído y la fenilhidracina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y fenilhidracina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno terminal –NH₂ sobre el grupo formilo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Fenilhidracina"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_fh",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_fh",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Bencílica y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NHNHPh ──(H⁺, −H₂O)──► C₆H₅–CH=N–NHPh",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NHNH₂ ⇄ C₆H₅–CH=N–NHC₆H₅ + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el sistema altamente conjugado Ph–CH=N–NH–Ph.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y pérdida de H⁺.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N–NHPh conjugado.",
+          "movement": "Conjugación extendida entre ambos anillos aromáticos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 250,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NHPh_fh",
+              "to": "N1_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_fh",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Fenilhidrazona del Benzaldehído (C₆H₅–CH=N–NHC₆H₅) + H₂O",
+        "semiStep": "C₆H₅–CH=N–NHC₆H₅ + H₂O (Sólido cristalino)",
+        "semiGlobal": "C₆H₅–CHO + C₆H₅NHNH₂ ⇄ C₆H₅–CH=N–NHC₆H₅ + H₂O",
+        "desc": "Queda consolidada la fenilhidrazona del benzaldehído, sólido cristalino de punto de fusión agudo (158 °C).",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: sistema conjugado Ph–CH=N–NHPh.",
+          "movement": "Producto fenilhidrazona aromática obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Fenilhidrazona Benzaldehído"
+            },
+            {
+              "id": "N1_fh",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NHPh_fh",
+              "el": "NHPh",
+              "x": 545,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_fh",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_fh",
+              "to": "NHPh_fh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fenh_acetofenona_24dnph": [
+      {
+        "title": "Estado Inicial Desarrollado: Acetofenona + 2,4-Dinitrofenilhidracina (Reactivo de Brady)",
+        "semiStep": "C₆H₅–CO–CH₃ + 2,4-(NO₂)₂C₆H₃–NH–NH₂ (H₂SO₄ / EtOH)",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 2,4-DNFH ──(H⁺)──► 2,4-Dinitrofenilhidrazona↓ + H₂O",
+        "desc": "Se observan la acetofenona y la 2,4-dinitrofenilhidracina en medio ácido alcohólico (ensayo diagnóstico de grupos carbonilo).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; acetofenona y 2,4-DNFH intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno terminal –NH₂ sobre el carbonilo de la acetofenona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Acetofenona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_dn",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Reactivo de Brady"
+            },
+            {
+              "id": "Ar_dn",
+              "el": "NHAr(NO₂)₂",
+              "x": 225,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_dn",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar_dn",
+              "to": "N1_dn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_dn",
+              "to": "H_dn",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Deshidratación Ácida",
+        "semiStep": "Carbinolamina ──(H⁺, −H₂O)──► 2,4-Dinitrofenilhidrazona",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 2,4-DNFH ──(H⁺)──► 2,4-Dinitrofenilhidrazona↓ + H₂O",
+        "desc": "La pérdida de agua consolida el sistema π fuertemente conjugado con el anillo dinitrofenilo, responsable del intenso color rojo-anaranjado.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N–NHAr(NO₂)₂.",
+          "movement": "Conjugación cromófora extendida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_dn",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ar_dn",
+              "el": "NHAr(NO₂)₂",
+              "x": 225,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_dn",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ar_dn",
+              "to": "N1_dn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_dn",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2,4-Dinitrofenilhidrazona de Acetofenona↓ (Precipitado Rojo-Naranja)",
+        "semiStep": "2,4-Dinitrofenilhidrazona↓ + H₂O (Prueba Positiva de Carbonilo)",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 2,4-DNFH ──(H⁺)──► 2,4-Dinitrofenilhidrazona↓ + H₂O",
+        "desc": "Precipita un sólido rojo-anaranjado brillante característico de los compuestos carbonílicos conjugados.",
+        "legend": {
+          "breaking": "Ensayo de Brady completado.",
+          "forming": "En VERDE sólido: derivado 2,4-dinitrofenilhidrazona insoluble.",
+          "movement": "El color indica conjugación: amarillo = saturado; naranja/rojo = aromático o α,β-insaturado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2,4-DNFH↓ (Rojo-Naranja)"
+            },
+            {
+              "id": "N1_dn",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ar_dn",
+              "el": "NHAr(NO₂)₂",
+              "x": 565,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_dn",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_dn",
+              "to": "Ar_dn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
