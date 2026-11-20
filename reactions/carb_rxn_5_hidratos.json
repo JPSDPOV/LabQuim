@@ -1,0 +1,1090 @@
+{
+  "category": "reacciones",
+  "title": "5) Adición de Agua a Aldehídos (+ H–OH ──► Hidratos / Gem-dioles; Hidrato de Cloral)",
+  "natureBadge": "Adición Nucleofílica de Agua • Aldehídos / Cetonas + H₂O ⇄ Dioles Geminales (Hidratos)",
+  "deltaH": "ΔH° ≈ −20 a −40 kJ/mol (Reacción en equilibrio; exotérmica para metanal y aldehídos electrodeficientes como el cloral)",
+  "description": "Adición nucleofílica reversible de agua (H₂O) sobre el grupo carbonilo (C=O) para formar un diol geminal o hidrato (R–CH(OH)₂):\n1) El equilibrio depende de factores estéricos y electrónicos: el metanal (HCHO, ~99.9% hidratado) y los aldehídos con grupos fuertemente atractores de electrones (−I) como el cloral (Cl₃C–CHO) forman hidratos estables y aislables.\n2) Las cetonas y aldehídos alquílicos voluminosos tienen el equilibrio desplazado hacia el compuesto carbonílico libre debido al impedimento estérico y el efecto donador (+I) de los grupos alquilo.\n3) Catálisis: la hidratación se acelera tanto en medio ácido (H₃O⁺, protonando primero el oxígeno carbonílico para aumentar la electrofilia) como en medio básico (OH⁻, actuando como nucleófilo fuerte directo).",
+  "meta": {
+    "grupoFuncional": "Dioles Geminales o Hidratos (R–CH(OH)₂ o R₂C(OH)₂)",
+    "reaccionMecanismo": "Adición nucleofílica reversible de agua (catálisis ácida H⁺ o básica OH⁻)",
+    "naturaleza": "Por etapas en equilibrio (en medio ácido: protonación C=O → ataque H₂O → desprotonación; en medio básico: ataque OH⁻ → protonación con H₂O).",
+    "rupturaIntermediarios": "Ruptura de π C=O y O–H del agua; intermediario carbonilo protonado / ion oxonio (catálisis ácida) o alcóxido hidroxilado (catálisis básica).",
+    "detalleMecanismo": "H–CHO + H₂O ⇄ HO–CH₂–OH (99.9%)  |  Cl₃C–CHO + H₂O ──► Cl₃C–CH(OH)₂ (Hidrato de cloral, aislable)",
+    "reactivosCondiciones": "Aldehído (o cetona activada) + H₂O en presencia de trazas de ácido (H₃O⁺) o base (OH⁻).",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (HCHO, Cl₃C–CHO, CH₃CHO) o cetona.\n• Nucleófilo: Molécula de agua (H₂O) o ion hidróxido (OH⁻).\n• Catalizador: H₃O⁺ (activa el C=O) o OH⁻ (aporta nucleófilo fuerte).",
+    "reglasObs": "• Hidrato de cloral (Cl₃C–CH(OH)₂): excepción clásica a la regla de Erlenmeyer (estabilidad de dioles geminales) debido al fuerte efecto inductivo −I de los tres cloros y puentes de hidrógeno intramoleculares.\n• Tendencia de hidratación en agua (25 °C): Cl₃C–CHO (~100%) > HCHO (99.9%) > CH₃CHO (58%) > CH₃COCH₃ (<0.1%)."
+  },
+  "substrates": [
+    {
+      "id": "hid_cloral_h2o",
+      "name": "Cloral (Tricloroetanal) + H₂O ──► Hidrato de Cloral (2,2,2-Tricloroetano-1,1-diol) [Hidrato Estable]",
+      "catalyst": "H₂O (sin catalizador / trazas H⁺)"
+    },
+    {
+      "id": "hid_metanal_h2o",
+      "name": "Metanal (Formaldehído) + H₂O ⇄ Metanodiol (Formalina) [Equilibrio 99.9% Hidrato]",
+      "catalyst": "H₂O / H₃O⁺ (catalítico)"
+    },
+    {
+      "id": "hid_etanal_base",
+      "name": "Etanal + H₂O (cat. OH⁻) ⇄ 1,1-Etanodiol [Catálisis Básica — Equilibrio 58%]",
+      "catalyst": "H₂O / OH⁻ (catalítico)"
+    },
+    {
+      "id": "hid_propanona_control",
+      "name": "Propanona + H₂O ⇄ 2,2-Propanodiol (<0.1%) [Equilibrio Desplazado al Carbonilo]",
+      "catalyst": "H₂O / H₃O⁺ (catalítico)"
+    }
+  ],
+  "catalysts": [
+    "H₂O (sin catalizador / trazas H⁺)",
+    "H₂O / H₃O⁺ (catalítico)",
+    "H₂O / OH⁻ (catalítico)"
+  ],
+  "stepsBySubstrate": {
+    "hid_cloral_h2o": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloral (Cl₃C–CHO) + Agua (H₂O)",
+        "semiStep": "Cl₃C–CHO + H₂O",
+        "semiGlobal": "Cl₃C–CHO + H₂O ──► Cl₃C–CH(OH)₂ (Hidrato de Cloral)",
+        "desc": "Se observan el cloral (2,2,2-tricloroetanal) y una molécula de agua. El grupo –CCl₃ ejerce un fuerte efecto inductivo atractor (−I) que aumenta enormemente la carga positiva (δ+) sobre el carbono carbonílico C1.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cloral y molécula de agua intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico espontáneo del par libre del oxígeno del agua hacia el carbono carbonílico altamente electrofílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "CCl3_L",
+              "el": "Cl₃C",
+              "x": 235,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Efecto −I fuerte"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Cloral (δ+ alto)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Agua (H₂O)"
+            },
+            {
+              "id": "H_w",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "CCl3_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_nuc",
+              "to": "H_w",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Adición Nucleofílica de H₂O y Apertura de π C=O",
+        "semiStep": "Cl₃C–CHO + H₂O ──► Cl₃C–CH(O⁻)(OH₂⁺)",
+        "semiGlobal": "Cl₃C–CHO + H₂O ──► Cl₃C–CH(OH)₂ (Hidrato de Cloral)",
+        "desc": "El agua se adiciona al carbono carbonílico C1 formando un enlace C–O, mientras los electrones π del carbonilo pasan al oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C1–OH₂.",
+          "movement": "El carbono carbonílico cambia de hibridación sp² a sp³ tetraédrica, aliviando la repulsión dipolar."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "CCl3_L",
+              "el": "Cl₃C",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "charge": "−",
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "charge": "+",
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_w",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "CCl3_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_nuc",
+              "to": "H_w",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2: Transferencia Protónica Intramolecular / Mediante Disolvente",
+        "semiStep": "Cl₃C–CH(O⁻)(OH₂⁺) ──► Cl₃C–CH(OH)₂",
+        "semiGlobal": "Cl₃C–CHO + H₂O ──► Cl₃C–CH(OH)₂ (Hidrato de Cloral)",
+        "desc": "El oxígeno alcóxido negativo captura un protón del grupo oxonio recién adicionado (asistido por moléculas de agua del medio), neutralizando ambas cargas.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace O–H del grupo oxonio.",
+          "forming": "En VERDE punteado: formación del segundo enlace O–H hidroxílico.",
+          "movement": "Transferencia rápida de H⁺ que consolida el diol geminal neutro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "CCl3_L",
+              "el": "Cl₃C",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_tr",
+              "el": "H",
+              "x": 515,
+              "y": 150,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "CCl3_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_tr",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_nuc",
+              "to": "H_tr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 418,
+              "y1": 95,
+              "cx": 475,
+              "cy": 95,
+              "x2": 505,
+              "y2": 135,
+              "label": "Transferencia H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hidrato de Cloral (2,2,2-Tricloroetano-1,1-diol)",
+        "semiStep": "Cl₃C–CH(OH)₂ (Sólido cristalino estable)",
+        "semiGlobal": "Cl₃C–CHO + H₂O ──► Cl₃C–CH(OH)₂ (Hidrato de Cloral)",
+        "desc": "Queda consolidado el hidrato de cloral, un diol geminal estable y aislable gracias al efecto atractor −I de los tres átomos de cloro y los puentes de hidrógeno intramoleculares.",
+        "legend": {
+          "breaking": "Hidratación completada al 100%.",
+          "forming": "En VERDE sólido: dos grupos hidroxilo (–OH) unidos al mismo carbono C1 (gem-diol).",
+          "movement": "Excepción estable a la inestabilidad habitual de los dioles geminales."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "CCl3_L",
+              "el": "Cl₃C",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Hidrato de Cloral"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_tr",
+              "el": "H",
+              "x": 500,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "CCl3_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_tr",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hid_metanal_h2o": [
+      {
+        "title": "Estado Inicial Desarrollado: Metanal (H–CHO) + Agua (Catálisis Ácida H₃O⁺)",
+        "semiStep": "H–CHO + H₂O (cat. H₃O⁺)",
+        "semiGlobal": "H–CHO + H₂O ⇄ HO–CH₂–OH (99.9% en solución acuosa)",
+        "desc": "Se observan el metanal (formaldehído), el aldehído más pequeño y menos impedido estéricamente, junto al agua en medio ácido catalítico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; metanal y agua intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del oxígeno carbonílico seguida de ataque nucleofílico del agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Metanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "H₂O / H₃O⁺"
+            },
+            {
+              "id": "H_w",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_nuc",
+              "to": "H_w",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Adición de H₂O al Carbonilo Activado",
+        "semiStep": "H–CH=O⁺H + H₂O ──► HO–CH₂–O⁺H₂",
+        "semiGlobal": "H–CHO + H₂O ⇄ HO–CH₂–OH (99.9% en solución acuosa)",
+        "desc": "Al no tener grupos alquilo voluminosos ni donadores (+I), el metanal sufre ataque rápido de H₂O formando un enlace C–O.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C–O.",
+          "movement": "Desprotonación final por otra molécula de H₂O regenera el catalizador H₃O⁺."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_w",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_nuc",
+              "to": "H_w",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque H₂O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Metanodiol (HO–CH₂–OH — Formalina)",
+        "semiStep": "HO–CH₂–OH (99.9% en equilibrio acuoso)",
+        "semiGlobal": "H–CHO + H₂O ⇄ HO–CH₂–OH (99.9% en solución acuosa)",
+        "desc": "En disolución acuosa (formol o formalina), el metanal existe prácticamente en su totalidad como metanodiol.",
+        "legend": {
+          "breaking": "Equilibrio desplazado 99.9% hacia el hidrato.",
+          "forming": "En VERDE sólido: dos grupos –OH unidos al carbono metilénico.",
+          "movement": "Si se evapora el agua, el equilibrio revierte regenerando metanal gaseoso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_L",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanodiol (99.9%)"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_R",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hid_etanal_base": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Ion Hidróxido (Catálisis Básica OH⁻)",
+        "semiStep": "CH₃–CHO + OH⁻ (en H₂O)",
+        "semiGlobal": "CH₃–CHO + H₂O ⇄ CH₃–CH(OH)₂ (58% hidrato / 42% aldehído)",
+        "desc": "En catálisis básica, el ion hidróxido (OH⁻) actúa directamente como nucleófilo fuerte atacando al carbono carbonílico del etanal.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y nucleófilo OH⁻ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque directo de OH⁻ sobre el carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH⁻",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Catalizador OH⁻"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ataque de OH⁻ y Protonación con H₂O",
+        "semiStep": "CH₃–CH(O⁻)(OH) + H₂O ⇄ CH₃–CH(OH)₂ + OH⁻",
+        "semiGlobal": "CH₃–CHO + H₂O ⇄ CH₃–CH(OH)₂ (58% hidrato / 42% aldehído)",
+        "desc": "Se forma el intermediario alcóxido hidroxilado, que captura un protón del agua regenerando OH⁻.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura H–OH del agua.",
+          "forming": "En VERDE punteado: formación del enlace O–H.",
+          "movement": "El grupo metilo (+I) disminuye ligeramente la proporción de hidrato (58%) frente al metanal (99.9%)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 505,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_solv",
+              "el": "OH⁻",
+              "x": 630,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera OH⁻"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "OH_solv",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "OH_nuc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 488,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto en Equilibrio: 1,1-Etanodiol (CH₃–CH(OH)₂ — 58%)",
+        "semiStep": "CH₃–CH(OH)₂ (Equilibrio dinámico en agua)",
+        "semiGlobal": "CH₃–CHO + H₂O ⇄ CH₃–CH(OH)₂ (58% hidrato / 42% aldehído)",
+        "desc": "El 1,1-etanodiol coexiste en equilibrio con el etanal libre (58% hidrato frente a 42% aldehído a 25 °C).",
+        "legend": {
+          "breaking": "Proceso reversible; no puede aislarse puro sin revertir a etanal + agua.",
+          "forming": "En VERDE sólido: diol geminal en disolución.",
+          "movement": "Intermediario clave en la oxidación acuosa de aldehídos a ácidos carboxílicos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "1,1-Etanodiol (58%)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 500,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH_nuc",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hid_propanona_control": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona (Cetona) + Agua (H₂O)",
+        "semiStep": "CH₃–CO–CH₃ + H₂O",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂O ⇄ (CH₃)₂C(OH)₂ (< 0.1% hidrato — Desfavorable)",
+        "desc": "En las cetonas como la propanona, los dos grupos metilo ceden densidad electrónica (+I) estabilizando el carbonilo y generan repulsión estérica al pasar de ángulos de 120° (sp²) a 109.5° (sp³).",
+        "legend": {
+          "breaking": "Equilibrio muy desplazado hacia los reactivos (>99.9% propanona libre).",
+          "forming": "Formación despreciable de 2,2-propanodiol (<0.1%).",
+          "movement": "Comparación clave: K_hid(HCHO) ≈ 2000 >> K_hid(CH₃CHO) ≈ 1.4 >> K_hid(CH₃COCH₃) ≈ 0.001."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona (>99.9%)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_mol",
+              "el": "H₂O",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Equilibrio desfavorable"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Resultado en Equilibrio: Predomina la Propanona Libre (>99.9%)",
+        "semiStep": "CH₃–CO–CH₃ (Equilibrio desplazado a la izquierda)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂O ⇄ (CH₃)₂C(OH)₂ (< 0.1% hidrato — Desfavorable)",
+        "desc": "Aunque el intercambio isotópico con H₂¹⁸O demuestra que la adición ocurre reversiblemente, la concentración de 2,2-propanodiol en equilibrio es menor al 0.1%.",
+        "legend": {
+          "breaking": "Deshidratación espontánea extremadamente rápida.",
+          "forming": "Sin acumulación apreciable de diol geminal.",
+          "movement": "Criterio de reactividad: Aldehídos se hidratan mucho más que las cetonas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Carbonilo Libre Predominante"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
