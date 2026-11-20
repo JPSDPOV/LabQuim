@@ -1,0 +1,1258 @@
+{
+  "category": "reacciones",
+  "title": "15) Cetolización y Condensación Aldólica Cruzada (2 Cetonas o Aldehído + Cetona con H-α)",
+  "natureBadge": "Condensación Carbonílica • Cetonas / Aldehído + Cetona (H-α) ──(OH⁻ / H⁺)──► β-Hidroxicetona (Cetol) ──(Δ, −H₂O)──► Enona α,β-Insaturada",
+  "deltaH": "ΔH° ≈ −15 a −35 kJ/mol (En cetonas la adición cetólica es reversible desfavorable, pero la deshidratación Δ consolida la enona conjugada)",
+  "description": "Reacción de formación de enlaces carbono-carbono entre dos cetonas con hidrógenos α (cetolización) o entre un aldehído y una cetona (condensación aldólica cruzada o de Claisen-Schmidt):\n1) Cetolización (auto-condensación de cetonas): una cetona con H-α (ej. propanona) forma un ion enolato en presencia de base (OH⁻ o Ba(OH)₂) y ataca al carbonilo de otra cetona generando una β-hidroxicetona (cetol, como la diacetona alcohol), que al deshidratarse produce una cetona α,β-insaturada (ej. óxido de mesitilo).\n2) Condensación aldólica cruzada (Aldehído + Cetona): cuando se mezclan un aldehído sin H-α (como benzaldehído o metanal) y una cetona con H-α (como propanona o acetofenona), la cetona actúa selectivamente como nucleófilo enolizable y ataca al aldehído (más electrofílico y menos impedido).\n3) Regioselectividad en cetonas asimétricas: con bases pequeñas a temperatura ambiente predomina el enolato termodinámico (más sustituido), mientras que con bases voluminosas a −78 °C (LDA/THF) predomina el enolato cinético (menos impedido).",
+  "meta": {
+    "grupoFuncional": "β-Hidroxicetonas (Cetoles: R–CH(OH)–CH₂–CO–R') y Cetonas α,β-Insaturadas (Enonas: R–CH=CH–CO–R')",
+    "reaccionMecanismo": "Enolización α + Adición nucleofílica cetólica/cruzada, seguida de deshidratación E1cb térmica",
+    "naturaleza": "Por etapas (desprotonación H-α → enolato → ataque C=O → protonación [cetol] → deshidratación E1cb [enona α,β-insaturada]).",
+    "rupturaIntermediarios": "Ruptura de C–H α, π C=O y enlace Cβ–OH (en Δ); intermediarios ion enolato y alcóxido cetólico; formación de enlace Cα–Cβ y doble enlace Cα=Cβ.",
+    "detalleMecanismo": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(Δ, −H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+    "reactivosCondiciones": "Cetona con H-α (sola o con aldehído) + NaOH / KOH acuoso o alcohólico (o Ba(OH)₂ en extractor Soxhlet para aislar el cetol).",
+    "rolReactivos": "• Componente nucleofílico (enolizable): Cetona con H-α → ion enolato.\n• Componente electrofílico: Segunda cetona o aldehído aceptor (mayor reactividad electrofílica en aldehídos).\n• Catalizador básico: NaOH / KOH / EtO⁻Na⁺ (promueve tanto la enolización como la deshidratación E1cb).",
+    "reglasObs": "• En la auto-condensación de propanona, el equilibrio de adición hacia el cetol (diacetona alcohol) está desplazado hacia la propanona libre (~95%), pero al deshidratar con ácido o calor se obtiene con alto rendimiento óxido de mesitilo (4-metil-3-penten-2-ona).\n• Para que una condensación aldólica cruzada sea sintéticamente limpia y evite 4 productos mezclados, uno de los dos carbonilos NO debe tener hidrógenos α (ej. benzaldehído o formaldehído) o debe usarse un enolato preformado con LDA."
+  },
+  "substrates": [
+    {
+      "id": "cetol_propanona_auto",
+      "name": "2 Propanona + Ba(OH)₂ / H⁺ ⇄ Diacetona Alcohol (Cetol) ──(−H₂O)──► Óxido de Mesitilo [Cetolización]",
+      "catalyst": "Ba(OH)₂ → H⁺ / Δ (−H₂O)"
+    },
+    {
+      "id": "cetol_cruzada_metanal_propanona",
+      "name": "Metanal (sin H-α) + Propanona (H-α) ──(NaOH, Δ)──► 3-Buten-2-ona (Metil vinil cetona) [Cruzada]",
+      "catalyst": "NaOH diluido / Δ"
+    },
+    {
+      "id": "cetol_cruzada_etanal_propanona",
+      "name": "Etanal + Propanona ──(NaOH, Δ)──► 3-Penten-2-ona + H₂O [Aldólica Cruzada Dirigida]",
+      "catalyst": "NaOH diluido / Δ"
+    },
+    {
+      "id": "cetol_ciclohexanona_auto",
+      "name": "2 Ciclohexanona + NaOH / Δ ──► 2-Ciclohexilidenciclohexanona + H₂O [Cetona Cíclica]",
+      "catalyst": "NaOH / EtOH, Δ"
+    }
+  ],
+  "catalysts": [
+    "Ba(OH)₂ → H⁺ / Δ (−H₂O)",
+    "NaOH diluido / Δ",
+    "NaOH / EtOH, Δ"
+  ],
+  "stepsBySubstrate": {
+    "cetol_propanona_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Propanona + Base (OH⁻)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₃ + OH⁻",
+        "semiGlobal": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(−H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+        "desc": "Se observan dos moléculas de propanona: la primera perderá un protón α del grupo metilo para generar el ion enolato nucleofílico, mientras que la segunda actuará como electrófilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de propanona y la base intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Desprotonación α de la primera propanona por acción de la base."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 165,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Cα nucleofílico"
+            },
+            {
+              "id": "C1_co",
+              "el": "COCH₃",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 165,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "Base"
+            },
+            {
+              "id": "Me_L2",
+              "el": "CH₃",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "2.ª Propanona (δ+)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "Me_R2",
+              "el": "CH₃",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_co",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_L2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Me_R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Enolización y Ataque Nucleofílico Cα–Cβ",
+        "semiStep": "[⁻CH₂–CO–CH₃] + CH₃–CO–CH₃ ⇄ (CH₃)₂C(O⁻)–CH₂–CO–CH₃",
+        "semiGlobal": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(−H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+        "desc": "El enolato de la propanona ataca al carbono carbonílico central de la segunda propanona formando un enlace C–C y abriendo el enlace π C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–H α y apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del enlace Cα–Cβ entre ambas unidades de propanona.",
+          "movement": "El carbono carbonílico atacado cambia de sp² a sp³ cuaternario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H₂O",
+              "x": 165,
+              "y": 150,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1_co",
+              "el": "COCH₃",
+              "x": 285,
+              "y": 325
+            },
+            {
+              "id": "Me_L2",
+              "el": "CH₃",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O2_carb",
+              "el": "O⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Me_R2",
+              "el": "CH₃",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C1_co",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Me_L2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Me_R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 335,
+              "y1": 210,
+              "cx": 415,
+              "cy": 182,
+              "x2": 505,
+              "y2": 205,
+              "label": "Ataque Cα → C=O"
+            },
+            {
+              "type": "full",
+              "x1": 605,
+              "y1": 198,
+              "cx": 635,
+              "cy": 178,
+              "x2": 655,
+              "y2": 195,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2: Intermediario Cetol — Diacetona Alcohol (4-Hidroxi-4-metil-2-pentanona)",
+        "semiStep": "(CH₃)₂C(OH)–CH₂–CO–CH₃ [β-Hidroxicetona / Cetol]",
+        "semiGlobal": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(−H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+        "desc": "Tras protonarse el alcóxido, se forma la diacetona alcohol (cetol de 6 carbonos), con un grupo hidroxilo terciario en posición β.",
+        "legend": {
+          "breaking": "Equilibrio reversible; puede aislarse usando Ba(OH)₂ en extractor continuo.",
+          "forming": "En VERDE sólido: enlace C3–C4 y grupo β-hidroxilo terciario.",
+          "movement": "La deshidratación con trazas de ácido o calor es muy favorable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_L2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Diacetona Alcohol (Cetol)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH",
+              "x": 635,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Me_L2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Me_R2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 3 (Ruptura en Rojo): Deshidratación del Cetol (−H₂O) y Formación de Enona en Verde",
+        "semiStep": "(CH₃)₂C(OH)–CH₂–CO–CH₃ ──(H⁺ / Δ)──► (CH₃)₂C=CH–CO–CH₃ + H₂O",
+        "semiGlobal": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(−H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+        "desc": "Al perder agua, se forma un doble enlace trisustituido conjugado con el grupo cetona (C=C–C=O).",
+        "legend": {
+          "breaking": "En ROJO punteado: salida del grupo –OH β como H₂O.",
+          "forming": "En VERDE punteado: formación del doble enlace C3=C4.",
+          "movement": "La conjugación impulsa completamente el equilibrio hacia la enona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 335,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_L2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 95
+            },
+            {
+              "id": "Me_R2",
+              "el": "CH₃",
+              "x": 495,
+              "y": 325
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH₂⁺",
+              "x": 655,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Me_L2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_R2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 365,
+              "y1": 195,
+              "cx": 415,
+              "cy": 175,
+              "x2": 465,
+              "y2": 195,
+              "label": "Forma π C=C"
+            },
+            {
+              "type": "full",
+              "x1": 555,
+              "y1": 210,
+              "cx": 595,
+              "cy": 188,
+              "x2": 625,
+              "y2": 205,
+              "label": "Salida H₂O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Óxido de Mesitilo (4-Metil-3-penten-2-ona) + H₂O",
+        "semiStep": "(CH₃)₂C=CH–CO–CH₃ + H₂O (Cetona α,β-Insaturada)",
+        "semiGlobal": "2 CH₃–CO–CH₃ ⇄ (CH₃)₂C(OH)–CH₂–CO–CH₃ ──(−H₂O)──► (CH₃)₂C=CH–CO–CH₃",
+        "desc": "Queda consolidado el óxido de mesitilo (4-metil-3-penten-2-ona), disolvente industrial e intermediario sintético clave.",
+        "legend": {
+          "breaking": "Cetolización y deshidratación completadas.",
+          "forming": "En VERDE sólido: cetona α,β-insaturada conjugada.",
+          "movement": "Producto enona obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Óxido de Mesitilo"
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_L2",
+              "el": "CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "Me_R2",
+              "el": "CH₃",
+              "x": 505,
+              "y": 325
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Me_L2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_R2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cetol_cruzada_metanal_propanona": [
+      {
+        "title": "Estado Inicial Desarrollado: Metanal (sin H-α) + Propanona (con H-α)",
+        "semiStep": "H–CHO + CH₃–CO–CH₃ (cat. NaOH)",
+        "semiGlobal": "H–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₂=CH–CO–CH₃ + H₂O",
+        "desc": "El metanal (HCHO) carece de hidrógenos α (solo es electrófilo) y es mucho más reactivo que la propanona, por lo que el enolato de propanona lo ataca selectivamente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; metanal y propanona intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El enolato de la propanona ataca al carbono carbonílico altamente electrofílico del metanal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Enolato Propanona"
+            },
+            {
+              "id": "H_m1",
+              "el": "H",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "label": "Metanal (Aceptor)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 635,
+              "y": 210
+            },
+            {
+              "id": "H_m2",
+              "el": "H",
+              "x": 505,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_m1",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H_m2",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 370,
+              "y1": 210,
+              "cx": 425,
+              "cy": 185,
+              "x2": 475,
+              "y2": 205,
+              "label": "Ataque cruzado"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación del Cetol Cruzado (4-Hidroxi-2-butanona)",
+        "semiStep": "HO–CH₂–CH₂–CO–CH₃ ──(OH⁻, Δ)──► CH₂=CH–CO–CH₃ + H₂O",
+        "semiGlobal": "H–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₂=CH–CO–CH₃ + H₂O",
+        "desc": "El β-hidroxicetona intermedia pierde agua fácilmente generando el doble enlace terminal conjugado.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión del grupo –OH β.",
+          "forming": "En VERDE punteado: formación del doble enlace C3=C4.",
+          "movement": "Síntesis directa de metil vinil cetona (reactivo clave en anelación de Robinson)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH₂",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH (Δ)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Buten-2-ona / Metil Vinil Cetona (CH₂=CH–CO–CH₃) + H₂O",
+        "semiStep": "CH₂=CH–CO–CH₃ + H₂O (Enona Cruzada)",
+        "semiGlobal": "H–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₂=CH–CO–CH₃ + H₂O",
+        "desc": "Queda consolidada la metil vinil cetona (3-buten-2-ona), enona α,β-insaturada de 4 carbonos.",
+        "legend": {
+          "breaking": "Condensación aldólica cruzada completada.",
+          "forming": "En VERDE sólido: sistema vinil cetona conjugado.",
+          "movement": "Producto cruzado único obtenido con excelente selectividad."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 195,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 355,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metil Vinil Cetona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH₂",
+              "x": 515,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "cetol_cruzada_etanal_propanona": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal (Electrófilo Principal) + Propanona (Enolato)",
+        "semiStep": "CH₃–CHO + CH₃–CO–CH₃ (cat. NaOH)",
+        "semiGlobal": "CH₃–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₃–CH=CH–CO–CH₃ + H₂O",
+        "desc": "Dado que el grupo carbonilo del aldehído (etanal) es mucho más electrofílico y menos impedido que el de la cetona (propanona), el enolato de propanona ataca preferentemente al etanal.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y propanona intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del enolato de propanona al carbonilo del etanal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Enolato Propanona"
+            },
+            {
+              "id": "Me_et",
+              "el": "CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "label": "Etanal (δ+ mayor)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 635,
+              "y": 210
+            },
+            {
+              "id": "H_et",
+              "el": "H",
+              "x": 505,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Me_et",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H_et",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 370,
+              "y1": 210,
+              "cx": 425,
+              "cy": 185,
+              "x2": 475,
+              "y2": 205,
+              "label": "Ataque al aldehído"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación de la 4-Hidroxi-2-pentanona",
+        "semiStep": "CH₃–CH(OH)–CH₂–CO–CH₃ ──(OH⁻, Δ)──► CH₃–CH=CH–CO–CH₃ + H₂O",
+        "semiGlobal": "CH₃–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₃–CH=CH–CO–CH₃ + H₂O",
+        "desc": "El cetol cruzado de 5 carbonos elimina agua al calentar para formar el doble enlace conjugado C3=C4.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión del grupo –OH β.",
+          "forming": "En VERDE punteado: formación del doble enlace C3=C4.",
+          "movement": "Conjugación entre el doble enlace alquénico y la cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_et",
+              "el": "CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH (Δ)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Me_et",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Penten-2-ona (CH₃–CH=CH–CO–CH₃) + H₂O",
+        "semiStep": "(E)-3-Penten-2-ona + H₂O (5 Carbonos)",
+        "semiGlobal": "CH₃–CHO + CH₃–CO–CH₃ ──(NaOH, Δ)──► CH₃–CH=CH–CO–CH₃ + H₂O",
+        "desc": "Queda consolidada la (E)-3-penten-2-ona (etilidenacetona), cetona α,β-insaturada de 5 carbonos.",
+        "legend": {
+          "breaking": "Condensación aldólica cruzada completada.",
+          "forming": "En VERDE sólido: sistema α,β-insaturado de 5 carbonos.",
+          "movement": "Producto cruzado obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_co",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "(E)-3-Penten-2-ona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_et",
+              "el": "CH₃",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 655,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_co",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Me_et",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cetol_ciclohexanona_auto": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Ciclohexanona + NaOH / Δ",
+        "semiStep": "2 Ciclohexanona + OH⁻",
+        "semiGlobal": "2 Ciclohexanona ──(NaOH, Δ)──► 2-Ciclohexilidenciclohexanona + H₂O",
+        "desc": "Las cetonas cíclicas como la ciclohexanona enolizan fácilmente en el carbono α (C2) y atacan a una segunda molécula con menor impedimento estérico que las cetonas acíclicas.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas moléculas de ciclohexanona intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del carbono α (C2) del enolato cíclico al carbono carbonílico C1 del segundo anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_1",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210,
+              "label": "Anillo 1 (Enolato)"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 335,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "C2 (α)"
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "label": "C1 (2.º Anillo)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "Ring_2",
+              "el": "C₅H₁₀",
+              "x": 665,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_1",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Ring_2",
+              "order": 2,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 375,
+              "y1": 210,
+              "cx": 425,
+              "cy": 185,
+              "x2": 475,
+              "y2": 205,
+              "label": "Enlace interanular"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación del Cetol Bicíclico",
+        "semiStep": "2-(1-Hidroxiciclohexil)ciclohexanona ──(OH⁻, Δ)──► 2-Ciclohexilidenciclohexanona + H₂O",
+        "semiGlobal": "2 Ciclohexanona ──(NaOH, Δ)──► 2-Ciclohexilidenciclohexanona + H₂O",
+        "desc": "La β-hidroxicetona bicíclica pierde agua formando un doble enlace tetrasustituido exocíclico conjugado con el carbonilo.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión del grupo –OH terciario.",
+          "forming": "En VERDE punteado: formación del doble enlace tetrasustituido C=C.",
+          "movement": "Conjugación máxima entre ambos anillos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_1",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ring_2",
+              "el": "C₅H₁₀",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 505,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Sale –OH (Δ)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_1",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Ring_2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Ciclohexilidenciclohexanona + H₂O",
+        "semiStep": "2-Ciclohexilidenciclohexanona + H₂O (Enona Bicíclica)",
+        "semiGlobal": "2 Ciclohexanona ──(NaOH, Δ)──► 2-Ciclohexilidenciclohexanona + H₂O",
+        "desc": "Queda consolidada la 2-ciclohexilidenciclohexanona, enona α,β-insaturada bicíclica.",
+        "legend": {
+          "breaking": "Cetolización cíclica completada.",
+          "forming": "En VERDE sólido: doble enlace exocíclico conjugado.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_1",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Ciclohexilidenciclohexanona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ring_2",
+              "el": "C₅H₁₀",
+              "x": 665,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_1",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2_carb",
+              "to": "Ring_2",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
