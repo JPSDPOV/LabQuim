@@ -1,0 +1,839 @@
+{
+  "category": "obtencion",
+  "title": "1) Oxidación Fuerte de Alcoholes Primarios, Aldehídos y Dioles (Na₂Cr₂O₇/H₂SO₄, CrO₃ o KMnO₄ → R–COOH)",
+  "natureBadge": "Oxidación Enérgica • Alcohol 1° (R–CH₂OH), Aldehído (R–CHO) o Diol Terminal + [O] Fuerte ──► Ácido / Diácido Carboxílico",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; oxidación hasta el máximo estado de oxidación sin ruptura de cadena C–C)",
+  "description": "Obtención de ácidos monocarboxílicos y dicarboxílicos mediante oxidación enérgica de alcoholes primarios (R–CH₂–OH), aldehídos (R–CHO) o dioles terminales empleando agentes oxidantes fuertes:\n1) Oxidación de alcoholes primarios en dos etapas consecutivas: el alcohol primario se oxida primero a aldehído (R–CHO), el cual en medio acuoso forma un hidrato (gem-diol, R–CH(OH)₂) que es rápidamente sobreoxidado por dicromato de potasio/sodio en medio sulfúrico (K₂Cr₂O₇ / H₂SO₄, Δ), reactivo de Jones (CrO₃ / H₂SO₄ acuoso) o permanganato de potasio (KMnO₄ / OH⁻ Δ seguido de H₃O⁺) hasta el ácido carboxílico (R–COOH).\n2) Oxidación directa de aldehídos: los aldehídos poseen un enlace C–H carbonílico muy lábil que se oxida tanto con oxidantes fuertes como con oxidantes selectivos suaves ([O] débil, Ag₂O/NaOH o Tollens).\n3) Oxidación de dioles y alcoholes quirales (casos clásicos de examen): los dioles con dos grupos –OH primarios terminales (ej. 1,3-propanodiol) generan ácidos dicarboxílicos (ácido malónico), mientras que dioles mixtos como el 1,3-butanodiol (un –OH 1° y un –OH 2°) se oxidan a β-cetoácidos (ácido acetoacético).",
+  "meta": {
+    "grupoFuncional": "Ácidos Monocarboxílicos (R–COOH), Dicarboxílicos (HOOC–R–COOH) y Cetoácidos",
+    "reaccionMecanismo": "Oxidación por eliminación vía éster crómico / manganato sobre el alcohol primario y el hidrato aldehídico",
+    "naturaleza": "Por etapas irreversible (Alcohol 1° → Aldehído → Hidrato gem-diol → Éster crómico → Ácido Carboxílico).",
+    "rupturaIntermediarios": "Ruptura de enlaces O–H y Cα–H (×2 desde alcohol 1°; ×1 desde aldehído); intermediarios aldehído e hidrato gem-diol; formación de C=O y grupo –OH carboxílico.",
+    "detalleMecanismo": "R–CH₂–OH ──([O] fuerte)──► [R–CHO ⇄ R–CH(OH)₂] ──([O] fuerte)──► R–COOH",
+    "reactivosCondiciones": "• Alcoholes 1° y Dioles: K₂Cr₂O₇ o Na₂Cr₂O₇ / H₂SO₄ acuoso (Δ); Reactivo de Jones (CrO₃ / H₂SO₄ ac.); o KMnO₄ / OH⁻ (Δ) + H₃O⁺.\n• Aldehídos: Cualquiera de los anteriores o Ag₂O / NaOH (selectivo).",
+    "rolReactivos": "• Sustrato reductor: Alcohol primario (R–CH₂–OH), Aldehído (R–CHO) o Diol.\n• Agente oxidante fuerte: Cr(VI) (Cr₂O₇²⁻ naranja → Cr³⁺ verde) o Mn(VII) (MnO₄⁻ violeta → MnO₂ marrón / Mn²⁺ incoloro).\n• Agua (H₂O): hidrata el aldehído intermediario (R–CH(OH)₂) permitiendo su oxidación completa a ácido.",
+    "reglasObs": "• Conservación de quiralidad: al oxidar un alcohol primario quiral (ej. 2-metil-1-butanol) con [O] fuerte se obtiene ácido 2-metilbutanoico conservando el centro quiral en C2.\n• Dioles de examen: 1,3-propanodiol + K₂Cr₂O₇/H⁺ ──► Ácido malónico (propanodioico); 1,3-butanodiol + K₂Cr₂O₇/H⁺ ──► Ácido acetoacético (3-oxobutanoico).\n• Para detenerse en el aldehído desde un alcohol 1° debe usarse PCC / CH₂Cl₂ anhidro."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt1_1butanol_k2cr2o7",
+      "name": "1-Butanol + K₂Cr₂O₇ / H₂SO₄ (Δ) ──► Ácido Butanoico [Alcohol 1° → Ácido Carboxílico 4C]",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄ acuoso (Δ)"
+    },
+    {
+      "id": "ac_obt1_2metil_1butanol_quiral",
+      "name": "2-Metil-1-butanol + CrO₃ / H₂SO₄ (Jones) ──► Ácido 2-Metilbutanoico [Conserva Carbono Quiral]",
+      "catalyst": "CrO₃ / H₂SO₄ acuoso (Jones)"
+    },
+    {
+      "id": "ac_obt1_2cloro_3metilbutanal",
+      "name": "2-Cloro-3-metilbutanal + [O] débil (Ag₂O / OH⁻ → H⁺) ──► Ácido 2-Cloro-3-metilbutanoico [Aldehído]",
+      "catalyst": "1) Ag₂O / NaOH  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt1_13_propanodiol_malonico",
+      "name": "1,3-Propanodiol + K₂Cr₂O₇ / H₂SO₄ (Δ) ──► Ácido Malónico (Propanodioico) [Diol 1° → Diácido]",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄ (Exceso, Δ)"
+    },
+    {
+      "id": "ac_obt1_13_butanodiol_acetoacetico",
+      "name": "1,3-Butanodiol + K₂Cr₂O₇ / H₂SO₄ (Δ) ──► Ácido Acetoacético (3-Oxobutanoico) [Diol Mixto]",
+      "catalyst": "K₂Cr₂O₇ / H₂SO₄ (Exceso, Δ)"
+    }
+  ],
+  "catalysts": [
+    "K₂Cr₂O₇ / H₂SO₄ acuoso (Δ)",
+    "CrO₃ / H₂SO₄ acuoso (Jones)",
+    "1) Ag₂O / NaOH  2) H₃O⁺",
+    "K₂Cr₂O₇ / H₂SO₄ (Exceso, Δ)"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt1_1butanol_k2cr2o7": [
+      {
+        "title": "Estado Inicial Desarrollado: 1-Butanol (Alcohol Primario) + K₂Cr₂O₇ / H₂SO₄ Acuoso",
+        "semiStep": "CH₃–CH₂–CH₂–CH₂–OH + Cr₂O₇²⁻ / H⁺ (H₂O)",
+        "semiGlobal": "3 CH₃CH₂CH₂CH₂–OH + 2 Cr₂O₇²⁻ + 16 H⁺ ──(Δ)──► 3 CH₃CH₂CH₂–COOH + 4 Cr³⁺ + 11 H₂O",
+        "desc": "Se observan el 1-butanol con sus dos hidrógenos α en el carbono terminal C1 y el ion dicromato (naranja) en medio ácido acuoso.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; 1-butanol y oxidante Cr(VI) intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación del carbono C1 en dos etapas consecutivas (alcohol 1° → aldehído/hidrato → ácido carboxílico)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr_L",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "C1 Carbinólico"
+            },
+            {
+              "id": "H1a",
+              "el": "H",
+              "x": 375,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H1b",
+              "el": "H",
+              "x": 375,
+              "y": 325,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cr_ox",
+              "el": "Cr₂O₇²⁻ / H⁺",
+              "x": 675,
+              "y": 210,
+              "highlight": "#f97316",
+              "label": "Oxidante Cr(VI)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1a",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1b",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Oxidación Intermedia a Butanal e Hidratación Acuosa",
+        "semiStep": "CH₃CH₂CH₂–CH₂OH ──([O])──► CH₃CH₂CH₂–CHO ⇄ CH₃CH₂CH₂–CH(OH)₂",
+        "semiGlobal": "3 CH₃CH₂CH₂CH₂–OH + 2 Cr₂O₇²⁻ + 16 H⁺ ──(Δ)──► 3 CH₃CH₂CH₂–COOH + 4 Cr³⁺ + 11 H₂O",
+        "desc": "Tras eliminarse el primer hidrógeno α y el protón del –OH, se forma butanal, que en medio acuoso se hidrata al gem-diol para proseguir la oxidación.",
+        "legend": {
+          "breaking": "En ROJO punteado: eliminación del primer enlace C1–H α.",
+          "forming": "En VERDE punteado: doble enlace carbonílico C1=O1.",
+          "movement": "El agua hidrata el carbonilo aldehídico permitiendo el segundo paso oxidativo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr_L",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "Intermediario Butanal"
+            },
+            {
+              "id": "H1a",
+              "el": "H",
+              "x": 375,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "1.er H eliminado"
+            },
+            {
+              "id": "H1b",
+              "el": "H",
+              "x": 525,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_in",
+              "el": "+ H₂O / Cr(VI)",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1a",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H1b",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Sobreoxidación del Hidrato a Grupo Carboxilo (–COOH)",
+        "semiStep": "CH₃CH₂CH₂–CH(OH)₂ + Cr(VI) ──► CH₃CH₂CH₂–COOH + Cr³⁺ (Verde)",
+        "semiGlobal": "3 CH₃CH₂CH₂CH₂–OH + 2 Cr₂O₇²⁻ + 16 H⁺ ──(Δ)──► 3 CH₃CH₂CH₂–COOH + 4 Cr³⁺ + 11 H₂O",
+        "desc": "Se elimina el segundo hidrógeno unido a C1 mientras se consolida el grupo carboxilo y el dicromato naranja se reduce a Cr³⁺ verde.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del segundo enlace C1–H.",
+          "forming": "En VERDE punteado: formación del hidroxilo carboxílico C1–OH.",
+          "movement": "El carbono C1 alcanza el estado de oxidación +3."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr_L",
+              "el": "CH₃CH₂CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1b",
+              "el": "H",
+              "x": 525,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "2.º H eliminado"
+            },
+            {
+              "id": "Cr3_p",
+              "el": "Cr³⁺ (Verde)",
+              "x": 675,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H1b",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Butanoico / Ácido Butírico (CH₃–CH₂–CH₂–COOH)",
+        "semiStep": "CH₃–CH₂–CH₂–COOH (4 Carbonos)",
+        "semiGlobal": "3 CH₃CH₂CH₂CH₂–OH + 2 Cr₂O₇²⁻ + 16 H⁺ ──(Δ)──► 3 CH₃CH₂CH₂–COOH + 4 Cr³⁺ + 11 H₂O",
+        "desc": "Queda consolidado el ácido butanoico con geometría trigonal plana (120°, sp²) en el carbono carboxílico C1.",
+        "legend": {
+          "breaking": "Oxidación enérgica completada.",
+          "forming": "En VERDE sólido: grupo carboxilo terminal (–COOH).",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Pr_L",
+              "el": "CH₃CH₂CH₂",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Butanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Pr_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt1_2metil_1butanol_quiral": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Metil-1-butanol (Alcohol 1° Quiral) + Reactivo de Jones",
+        "semiStep": "CH₃–CH₂–CH*(CH₃)–CH₂–OH + CrO₃ / H₂SO₄ ac.",
+        "semiGlobal": "CH₃–CH₂–CH*(CH₃)–CH₂–OH ──(CrO₃ / H₂SO₄)──► CH₃–CH₂–CH*(CH₃)–COOH",
+        "desc": "El 2-metil-1-butanol posee un centro estereogénico en C2 y un grupo alcohol primario en C1. La oxidación ocurre exclusivamente en C1 sin romper los enlaces del centro quiral C2.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; centro quiral C2 y alcohol primario C1 intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación del grupo –CH₂OH en C1 a –COOH conservando la actividad óptica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2_q",
+              "el": "CH₃CH₂–C*H(CH₃)",
+              "x": 205,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "C2 Quiral intacto"
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Jones",
+              "el": "CrO₃ / H₂SO₄",
+              "x": 395,
+              "y": 325,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2_q",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido 2-Metilbutanoico (Ópticamente Activo)",
+        "semiStep": "CH₃–CH₂–CH*(CH₃)–COOH (Conserva carbono quiral en C2)",
+        "semiGlobal": "CH₃–CH₂–CH*(CH₃)–CH₂–OH ──(CrO₃ / H₂SO₄)──► CH₃–CH₂–CH*(CH₃)–COOH",
+        "desc": "Queda consolidado el ácido 2-metilbutanoico, compuesto ópticamente activo con 4 grupos distintos unidos al carbono C2 (–COOH, –CH₂CH₃, –CH₃ y –H).",
+        "legend": {
+          "breaking": "Oxidación de C1 completada sin racemización.",
+          "forming": "En VERDE sólido: grupo carboxilo en C1.",
+          "movement": "Pregunta clásica de examen: identificar el isómero C₅H₁₂O cuya oxidación genera un ácido quiral."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2_q",
+              "el": "CH₃CH₂–C*H(CH₃)",
+              "x": 205,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ác. 2-Metilbutanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2_q",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt1_2cloro_3metilbutanal": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Cloro-3-metilbutanal + Oxidante Selectivo ([O] débil)",
+        "semiStep": "(CH₃)₂CH–CH(Cl)–CHO + Ag₂O / NaOH",
+        "semiGlobal": "(CH₃)₂CH–CH(Cl)–CHO ──(1. Ag₂O / NaOH  2. H₃O⁺)──► (CH₃)₂CH–CH(Cl)–COOH",
+        "desc": "Los aldehídos se oxidan con facilidad incluso con oxidantes suaves ([O] débil o Ag₂O/OH⁻) porque poseen un hidrógeno unido directamente al grupo carbonilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; aldehído halogenado intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación selectiva del enlace C1–H aldehídico sin hidrolizar el cloro secundario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R_L",
+              "el": "(CH₃)₂CH–CH(Cl)",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 395,
+              "y": 210,
+              "label": "Aldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 545,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox_w",
+              "el": "[O] débil / Ag₂O",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido 2-Cloro-3-metilbutanoico",
+        "semiStep": "(CH₃)₂CH–CH(Cl)–COOH",
+        "semiGlobal": "(CH₃)₂CH–CH(Cl)–CHO ──(1. Ag₂O / NaOH  2. H₃O⁺)──► (CH₃)₂CH–CH(Cl)–COOH",
+        "desc": "Queda consolidado el ácido 2-cloro-3-metilbutanoico.",
+        "legend": {
+          "breaking": "Oxidación del grupo formilo completada.",
+          "forming": "En VERDE sólido: grupo carboxilo.",
+          "movement": "Producto α-haloácido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "R_L",
+              "el": "(CH₃)₂CH–CH(Cl)",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ác. 2-Cloro-3-metilbutanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_new",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "R_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt1_13_propanodiol_malonico": [
+      {
+        "title": "Estado Inicial Desarrollado: 1,3-Propanodiol (Diol Primario Terminal) + K₂Cr₂O₇ / H₂SO₄",
+        "semiStep": "HO–CH₂–CH₂–CH₂–OH + K₂Cr₂O₇ / H₂SO₄ (Exceso, Δ)",
+        "semiGlobal": "HO–CH₂–CH₂–CH₂–OH ──(K₂Cr₂O₇ / H⁺, Δ)──► HOOC–CH₂–COOH (Ácido Malónico)",
+        "desc": "El 1,3-propanodiol posee dos grupos alcohol primario en los extremos C1 y C3. Con exceso de oxidante fuerte, ambos extremos se oxidan completamente a grupos carboxilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos alcoholes primarios listos para oxidarse.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Doble oxidación terminal en C1 y C3."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HO–CH₂ (C1)",
+              "x": 205,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH₂–OH (C3)",
+              "x": 585,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "K₂Cr₂O₇ / H⁺ (Δ)",
+              "x": 395,
+              "y": 325,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Malónico / Ácido Propanodioico (HOOC–CH₂–COOH)",
+        "semiStep": "HOOC–CH₂–COOH (Ácido Dicarboxílico 3C)",
+        "semiGlobal": "HO–CH₂–CH₂–CH₂–OH ──(K₂Cr₂O₇ / H⁺, Δ)──► HOOC–CH₂–COOH (Ácido Malónico)",
+        "desc": "Queda consolidado el ácido malónico (propanodioico), ácido dicarboxílico clave en síntesis orgánica y biosíntesis de ácidos grasos.",
+        "legend": {
+          "breaking": "Doble oxidación completada.",
+          "forming": "En VERDE sólido: dos grupos carboxilo terminales.",
+          "movement": "Producto diácido obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOOC (C1)",
+              "x": 205,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido Malónico"
+            },
+            {
+              "id": "C3",
+              "el": "COOH (C3)",
+              "x": 585,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt1_13_butanodiol_acetoacetico": [
+      {
+        "title": "Estado Inicial Desarrollado: 1,3-Butanodiol (Alcohol 1° en C1 + Alcohol 2° en C3) + K₂Cr₂O₇",
+        "semiStep": "CH₃–CH(OH)–CH₂–CH₂–OH + K₂Cr₂O₇ / H₂SO₄ (Δ)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₂–OH ──(K₂Cr₂O₇ / H⁺, Δ)──► CH₃–CO–CH₂–COOH (Ácido Acetoacético)",
+        "desc": "El 1,3-butanodiol tiene un alcohol primario en C1 (que se oxida hasta ácido carboxílico –COOH) y un alcohol secundario en C3 (que se oxida hasta cetona –CO–).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos grupos hidroxilo listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "C1 (1°) → –COOH y C3 (2°) → C=O cetónico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3_sec",
+              "el": "CH₃–CH(OH)",
+              "x": 205,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Alcohol 2° (→ Cetona)"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "C1_pri",
+              "el": "CH₂–OH",
+              "x": 585,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Alcohol 1° (→ Ácido)"
+            },
+            {
+              "id": "Ox",
+              "el": "K₂Cr₂O₇ / H⁺",
+              "x": 395,
+              "y": 325,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3_sec",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1_pri",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Acetoacético / Ácido 3-Oxobutanoico (CH₃–CO–CH₂–COOH)",
+        "semiStep": "CH₃–CO–CH₂–COOH (β-Cetoácido)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₂–OH ──(K₂Cr₂O₇ / H⁺, Δ)──► CH₃–CO–CH₂–COOH (Ácido Acetoacético)",
+        "desc": "Queda consolidado el ácido acetoacético (3-oxobutanoico), un β-cetoácido (cuerpo cetónico) que al calentarse descarboxila fácilmente a propanona + CO₂.",
+        "legend": {
+          "breaking": "Oxidación diferencial de ambos hidroxilos completada.",
+          "forming": "En VERDE sólido: función ácido carboxílico en C1 y cetona en C3.",
+          "movement": "Pregunta directa de examen de ingreso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3_ket",
+              "el": "CH₃–CO",
+              "x": 205,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido Acetoacético"
+            },
+            {
+              "id": "C1_ac",
+              "el": "COOH",
+              "x": 585,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3_ket",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C1_ac",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
