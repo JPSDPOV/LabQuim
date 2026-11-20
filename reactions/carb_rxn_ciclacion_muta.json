@@ -1,0 +1,1545 @@
+{
+  "category": "reacciones",
+  "title": "18) Ciclación Intramolecular (Hemiacetal → Piranosa | Hemicetal → Furanosa) y Mutarrotación",
+  "natureBadge": "Ciclación Intramolecular de Monosacáridos • Aldosas → Piranosas | Cetosas → Furanosas | Equilibrio α / β",
+  "deltaH": "ΔH° ≈ −15 a −25 kJ/mol (Exotérmica; anillos de 6 y 5 miembros termodinámicamente estables en disolución acuosa)",
+  "description": "Ciclación intramolecular espontánea de los monosacáridos en disolución acuosa mediante adición nucleofílica interna de un grupo hidroxilo (–OH) sobre el carbono carbonílico (C=O), generando anillos heterocíclicos oxigenados y el fenómeno de mutarrotación:\n1) Aldohexosas (ej. D-Glucosa, D-Galactosa): el grupo hidroxilo del C5 ataca al carbono aldehídico C1 formando un HEMIACETAL cíclico de 6 miembros (anillo PIRANOSA: α- y β-D-glucopiranosa).\n2) Cetohexosas (ej. D-Fructosa) y Aldopentosas (ej. D-Ribosa): el grupo hidroxilo del C5 (en fructosa) o C4 (en ribosa) ataca al carbono carbonílico formando un HEMICETAL o HEMIACETAL cíclico de 5 miembros (anillo FURANOSA: α- y β-D-fructofuranosa / ribofuranosa).\n3) Carbono anomérico y Mutarrotación: al cerrarse el anillo, el carbono carbonílico (C1 en aldosas, C2 en cetosas) se convierte en un nuevo centro quiral llamado CARBONO ANOMÉRICO, originando dos estereoisómeros diastereoméricos: anómero α (–OH anomérico trans respecto al –CH₂OH terminal, hacia abajo en Haworth) y anómero β (–OH anomérico cis respecto al –CH₂OH, hacia arriba en Haworth). En disolución acuosa ambos anómeros se interconvierten vía la forma abierta hasta alcanzar el equilibrio (mutarrotación: en D-glucosa 64% β, 36% α y <0.02% cadena abierta).",
+  "meta": {
+    "grupoFuncional": "Hemiacetales Cíclicos (Piranosas de 6 miembros) y Hemicetales Cíclicos (Furanosas de 5 miembros)",
+    "reaccionMecanismo": "Adición nucleofílica intramolecular catalizada por H⁺/OH⁻ seguida de equilibrio dinámico de mutarrotación",
+    "naturaleza": "Por etapas en equilibrio dinámico (plegamiento de cadena → ataque nucleofílico de O5 al carbonilo → transferencia protónica → apertura/cierre reversible entre anómeros α y β).",
+    "rupturaIntermediarios": "Ruptura de π C=O y enlace O5–H; intermediario cadena abierta de Fischer/conformación plegada; formación de enlace endocíclico C1–O5 (o C2–O5) y nuevo grupo –OH anomérico.",
+    "detalleMecanismo": "D-Glucosa (abierta, <0.02%) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%)",
+    "reactivosCondiciones": "Monosacárido (aldosa o cetosa) en disolución acuosa (H₂O, 25 °C); catalizado tanto por trazas de ácido (H₃O⁺) como de base (OH⁻).",
+    "rolReactivos": "• Electrófilo interno: Carbono carbonílico C1 (en aldosas) o C2 (en cetosas).\n• Nucleófilo interno: Grupo hidroxilo –OH del C5 (forma piranosa de 6 miembros en aldohexosas o furanosa de 5 miembros en cetohexosas).\n• Disolvente/catalizador: Agua (H₂O / H₃O⁺ / OH⁻) media las transferencias protónicas durante la mutarrotación.",
+    "reglasObs": "• ¿Por qué predomina β-D-glucopiranosa (64%) frente a α-D-glucopiranosa (36%)? En conformación de silla (⁴C₁), la β-D-glucopiranosa ubica TODOS sus sustituyentes voluminosos (–OH en C1, C2, C3, C4 y –CH₂OH en C5) en posiciones ecuatoriales, minimizando las interacciones 1,3-diaxiales.\n• Regla de Haworth para serie D: el grupo –CH₂OH terminal (C6) se dibuja hacia arriba; el anómero α tiene el –OH anomérico hacia abajo (trans) y el anómero β hacia arriba (cis).\n• La mutarrotación solo ocurre cuando el –OH anomérico está libre (hemiacetal/hemicetal); si se bloquea formando un glicósido (acetal/cetal), el anillo queda fijado y NO mutarrota."
+  },
+  "substrates": [
+    {
+      "id": "ciclo_glucosa_piranosa",
+      "name": "D-Glucosa (Aldohexosa) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%) [Hemiacetal 6M]",
+      "catalyst": "H₂O (Equilibrio de Mutarrotación)"
+    },
+    {
+      "id": "ciclo_fructosa_furanosa",
+      "name": "D-Fructosa (Cetohexosa) ⇄ α-D-Fructofuranosa + β-D-Fructofuranosa [Hemicetal 5M]",
+      "catalyst": "H₂O (Equilibrio Intramolecular)"
+    },
+    {
+      "id": "ciclo_ribosa_furanosa",
+      "name": "D-Ribosa (Aldopentosa) ⇄ α-D-Ribofuranosa + β-D-Ribofuranosa [Anillo Furano ARN/ADN]",
+      "catalyst": "H₂O (Equilibrio Intramolecular)"
+    },
+    {
+      "id": "ciclo_galactosa_mutarrotacion",
+      "name": "D-Galactosa (Epímero C4) ⇄ α-D-Galactopiranosa (30%) + β-D-Galactopiranosa (70%) [Piranosa]",
+      "catalyst": "H₂O (Equilibrio de Mutarrotación)"
+    }
+  ],
+  "catalysts": [
+    "H₂O (Equilibrio de Mutarrotación)",
+    "H₂O (Equilibrio Intramolecular)"
+  ],
+  "stepsBySubstrate": {
+    "ciclo_glucosa_piranosa": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucosa de Cadena Abierta (Conformación Plegada)",
+        "semiStep": "D-Glucosa abierta (< 0.02% en disolución acuosa)",
+        "semiGlobal": "D-Glucosa (abierta) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%)",
+        "desc": "Se observa la D-glucosa en conformación plegada pre-cíclica: el grupo aldehído en C1 (–CHO) queda próximo al grupo hidroxilo del carbono C5 (–OH), preparando el cierre de un anillo de 6 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupo carbonilo C1=O y grupo hidroxilo C5–OH intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación nucleofílica del par libre del oxígeno O5 hacia el carbono carbonílico electrofílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 175,
+              "label": "C1 Aldehído (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 635,
+              "y": 115
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 235
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55
+            },
+            {
+              "id": "O5",
+              "el": "OH",
+              "x": 415,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "O5 nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Ataque Intramolecular de O5 sobre C1 y Apertura de π C=O",
+        "semiStep": "Cierre de anillo piranósico de 6 miembros (Formación del enlace C1–O5)",
+        "semiGlobal": "D-Glucosa (abierta) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%)",
+        "desc": "El oxígeno O5 ataca nucleofílicamente al carbono carbonílico C1 formando el enlace endocíclico C1–O5, mientras el enlace π C=O se abre y se transfiere el protón hacia O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C1=O1.",
+          "forming": "En VERDE punteado: formación del nuevo enlace covalente C1–O5 que cierra el anillo de 6 átomos.",
+          "movement": "El carbono C1 cambia de hibridación sp² (plana) a sp³ (tetraédrica), convirtiéndose en el carbono anomérico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 525,
+              "y": 175,
+              "highlight": "#fbbf24",
+              "label": "C1 Anomérico"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 645,
+              "y": 125,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 645,
+              "y": 235
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 442,
+              "y1": 105,
+              "cx": 485,
+              "cy": 115,
+              "x2": 512,
+              "y2": 152,
+              "label": "Cierre C1–O5"
+            },
+            {
+              "type": "full",
+              "x1": 580,
+              "y1": 145,
+              "cx": 612,
+              "cy": 122,
+              "x2": 625,
+              "y2": 135,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Anómero α-D-Glucopiranosa (36% en Equilibrio — –OH Anomérico Trans / Axial)",
+        "semiStep": "α-D-Glucopiranosa ([α]D = +112.2° → +52.7°)",
+        "semiGlobal": "D-Glucosa (abierta) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%)",
+        "desc": "Cuando el ataque de O5 ocurre por la cara que deja el nuevo grupo –OH anomérico en C1 hacia abajo (trans respecto al –CH₂OH en C5, posición axial en silla), se obtiene la α-D-glucopiranosa.",
+        "legend": {
+          "breaking": "En equilibrio dinámico con la forma abierta y el anómero β.",
+          "forming": "En VERDE sólido: anillo piranosa con –OH anomérico en posición α (abajo).",
+          "movement": "Representa el 36% en el equilibrio acuoso a 25 °C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 525,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "α-D-Glucopiranosa (36%)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 645,
+              "y": 115
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 645,
+              "y": 245,
+              "highlight": "#fbbf24",
+              "label": "–OH α (abajo / axial)"
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Anómero Mayoritario: β-D-Glucopiranosa (64% en Equilibrio — Todo Ecuatorial)",
+        "semiStep": "β-D-Glucopiranosa ([α]D = +18.7° → +52.7°)",
+        "semiGlobal": "D-Glucosa (abierta) ⇄ α-D-Glucopiranosa (36%) + β-D-Glucopiranosa (64%)",
+        "desc": "Cuando el grupo –OH anomérico en C1 queda hacia arriba (cis respecto al –CH₂OH en C5, posición ecuatorial en conformación silla ⁴C₁), se obtiene la β-D-glucopiranosa, el isómero más estable.",
+        "legend": {
+          "breaking": "Mutarrotación estabilizada en [α]D = +52.7°.",
+          "forming": "En VERDE sólido: anillo piranosa con –OH anomérico en posición β (arriba / ecuatorial).",
+          "movement": "Predomina con un 64% porque todos los grupos voluminosos ocupan posiciones ecuatoriales sin repulsión 1,3-diaxial."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 525,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "β-D-Glucopiranosa (64%)"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 645,
+              "y": 115,
+              "highlight": "#10b981",
+              "label": "–OH β (arriba / ecuatorial)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 645,
+              "y": 245
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ciclo_fructosa_furanosa": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Fructosa Abierta (Cetohexosa Plegada)",
+        "semiStep": "D-Fructosa (Grupo cetona en C2 + –OH en C5)",
+        "semiGlobal": "D-Fructosa (abierta) ⇄ α-D-Fructofuranosa + β-D-Fructofuranosa (Hemicetal 5M)",
+        "desc": "En la D-fructosa, el grupo carbonilo es una cetona ubicada en el carbono C2; el ataque del grupo –OH del carbono C5 cierra un anillo de 5 miembros (furanosa).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cetona C2=O y grupo hidroxilo C5–OH intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico intramolecular del oxígeno O5 sobre el carbono cetónico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C2",
+              "x": 515,
+              "y": 185,
+              "label": "C2 Cetona (δ+)"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 635,
+              "y": 115
+            },
+            {
+              "id": "C1",
+              "el": "CH₂OH",
+              "x": 635,
+              "y": 255
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95
+            },
+            {
+              "id": "O5",
+              "el": "OH",
+              "x": 365,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "O5 nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación del Hemicetal Cíclico (Enlace C2–O5)",
+        "semiStep": "Cierre de anillo furanósico de 5 miembros (Apertura de π C2=O)",
+        "semiGlobal": "D-Fructosa (abierta) ⇄ α-D-Fructofuranosa + β-D-Fructofuranosa (Hemicetal 5M)",
+        "desc": "El oxígeno O5 forma un enlace covalente con el carbono C2 mientras el oxígeno carbonílico O2 se protona generando el –OH anomérico en C2.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C2=O2.",
+          "forming": "En VERDE punteado: nuevo enlace endocíclico C2–O5.",
+          "movement": "El carbono C2 se convierte en el carbono anomérico hemicetálico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C2",
+              "x": 515,
+              "y": 185,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O2",
+              "el": "OH",
+              "x": 635,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "CH₂OH",
+              "x": 635,
+              "y": 255
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C2",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 112,
+              "cx": 450,
+              "cy": 130,
+              "x2": 495,
+              "y2": 165,
+              "label": "Cierre C2–O5"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: β-D-Fructofuranosa (Hemicetal Cíclico de 5 Miembros)",
+        "semiStep": "β-D-Fructofuranosa (–OH en C2 cis respecto a –CH₂OH en C5)",
+        "semiGlobal": "D-Fructosa (abierta) ⇄ α-D-Fructofuranosa + β-D-Fructofuranosa (Hemicetal 5M)",
+        "desc": "Queda consolidada la β-D-fructofuranosa (la forma en que la fructosa se integra en la sacarosa y en el ATP/metabolismo celular), con ambos grupos –CH₂OH (C1 abajo, C6 arriba) y el –OH anomérico hacia arriba.",
+        "legend": {
+          "breaking": "Ciclación hemicetálica completada.",
+          "forming": "En VERDE sólido: anillo furanosa de 5 miembros con función hemicetal en C2.",
+          "movement": "En disolución acuosa libre, la D-fructosa también coexiste con β-D-fructopiranosa."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C2",
+              "x": 515,
+              "y": 185,
+              "highlight": "#10b981",
+              "label": "β-D-Fructofuranosa"
+            },
+            {
+              "id": "O2",
+              "el": "OH",
+              "x": 645,
+              "y": 115,
+              "highlight": "#10b981",
+              "label": "–OH β (arriba)"
+            },
+            {
+              "id": "C1",
+              "el": "CH₂OH",
+              "x": 645,
+              "y": 255
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ciclo_ribosa_furanosa": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Ribosa Abierta (Aldopentosa Plegada)",
+        "semiStep": "D-Ribosa (Grupo aldehído C1 + –OH en C4)",
+        "semiGlobal": "D-Ribosa (abierta) ⇄ α-D-Ribofuranosa + β-D-Ribofuranosa (Hemiacetal 5M)",
+        "desc": "En la D-ribosa (aldopentosa de 5 carbonos), el ataque del grupo hidroxilo del C4 sobre el aldehído en C1 genera el anillo furanósico presente en el ARN y el ATP.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; aldehído C1=O y grupo hidroxilo C4–OH intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del oxígeno O4 sobre el carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 515,
+              "y": 185,
+              "label": "C1 Aldehído (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 635,
+              "y": 115
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 255
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95
+            },
+            {
+              "id": "O4",
+              "el": "OH",
+              "x": 365,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "O4 nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1: Cierre Intramolecular C1–O4 (Anillo Ribofuranosa)",
+        "semiStep": "Formación del enlace hemiacetálico C1–O4",
+        "semiGlobal": "D-Ribosa (abierta) ⇄ α-D-Ribofuranosa + β-D-Ribofuranosa (Hemiacetal 5M)",
+        "desc": "El oxígeno O4 se enlaza al carbono C1 abriendo el doble enlace C=O y generando el carbono anomérico C1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C1=O1.",
+          "forming": "En VERDE punteado: formación del enlace C1–O4.",
+          "movement": "Cierre de anillo pentacíclico oxigenado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 515,
+              "y": 185,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 635,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 255
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95
+            },
+            {
+              "id": "O4",
+              "el": "O",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O4",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: β-D-Ribofuranosa (Componente del ARN y ATP)",
+        "semiStep": "β-D-Ribofuranosa (–OH anomérico C1 hacia arriba)",
+        "semiGlobal": "D-Ribosa (abierta) ⇄ α-D-Ribofuranosa + β-D-Ribofuranosa (Hemiacetal 5M)",
+        "desc": "Queda consolidada la β-D-ribofuranosa, base estructural de los ribonucleótidos (ATP, NAD⁺, ARN).",
+        "legend": {
+          "breaking": "Ciclación completada.",
+          "forming": "En VERDE sólido: anillo furanosa de 5 miembros con –OH β en C1.",
+          "movement": "En ácidos nucleicos, el –OH β de C1 es reemplazado por el enlace N-glicosídico a la base nitrogenada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 515,
+              "y": 185,
+              "highlight": "#10b981",
+              "label": "β-D-Ribofuranosa"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 645,
+              "y": 115,
+              "highlight": "#10b981",
+              "label": "–OH β (arriba)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 645,
+              "y": 255
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 295
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 265,
+              "y": 295
+            },
+            {
+              "id": "C4",
+              "el": "CH",
+              "x": 225,
+              "y": 175
+            },
+            {
+              "id": "C5",
+              "el": "CH₂OH",
+              "x": 135,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O4",
+              "el": "O",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O4",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ciclo_galactosa_mutarrotacion": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Galactosa (Epímero en C4 de la D-Glucosa)",
+        "semiStep": "D-Galactosa abierta ⇄ α-D-Galactopiranosa (30%) + β-D-Galactopiranosa (70%)",
+        "semiGlobal": "D-Galactosa (abierta) ⇄ α-D-Galactopiranosa (30%) + β-D-Galactopiranosa (70%)",
+        "desc": "La D-galactosa difiere de la D-glucosa únicamente en la configuración del carbono C4 (cuyo –OH queda hacia arriba en Haworth / axial en silla).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cadena abierta plegada.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de O5 sobre C1 para formar el anillo galactopiranosa."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 525,
+              "y": 175,
+              "label": "C1 Aldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 635,
+              "y": 115
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 635,
+              "y": 235
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175,
+              "highlight": "#fbbf24",
+              "label": "C4 (–OH arriba)"
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55
+            },
+            {
+              "id": "O5",
+              "el": "OH",
+              "x": 415,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: β-D-Galactopiranosa (70% en Equilibrio de Mutarrotación)",
+        "semiStep": "β-D-Galactopiranosa ([α]D = +150.7° → +80.2°)",
+        "semiGlobal": "D-Galactosa (abierta) ⇄ α-D-Galactopiranosa (30%) + β-D-Galactopiranosa (70%)",
+        "desc": "Tras la ciclación y mutarrotación en agua, predomina el anómero β-D-galactopiranosa (70%) con el –OH anomérico ecuatorial.",
+        "legend": {
+          "breaking": "Equilibrio anomérico estabilizado.",
+          "forming": "En VERDE sólido: anillo galactopiranosa con –OH β hacia arriba.",
+          "movement": "Componente principal de la lactosa (unida mediante enlace β-1,4-glicosídico)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 525,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "β-D-Galactopiranosa (70%)"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 645,
+              "y": 115,
+              "highlight": "#10b981",
+              "label": "–OH β (arriba)"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 645,
+              "y": 245
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 435,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH(OH)",
+              "x": 275,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH(OH)",
+              "x": 195,
+              "y": 175,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C5",
+              "el": "CH",
+              "x": 275,
+              "y": 95
+            },
+            {
+              "id": "C6",
+              "el": "CH₂OH",
+              "x": 175,
+              "y": 55,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 415,
+              "y": 95,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "C6",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
