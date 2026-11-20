@@ -2054,12 +2054,13 @@
             if (directLookup) {
                 compoundName = directLookup;
             } else {
-                const parenMatch = txt.match(/^(.*?)\s*\(([^()]+)\)\s*$/);
-                if (parenMatch) {
-                    const inside = parenMatch[2].trim();
-                    if (!/^(OH|CH3|CH2CH3|NH2|NO2|H2O|H\+|Cl|Br|I)$/i.test(normalizeFormulaLookupKey(inside))) {
-                        formula = parenMatch[1].trim();
-                        let cleanInside = inside.split(',')[0].trim();
+                const firstParenIdx = txt.search(/\s+\(/);
+                if (firstParenIdx > 0 && txt.endsWith(')')) {
+                    const candidateFormula = txt.slice(0, firstParenIdx).trim();
+                    const inside = txt.slice(firstParenIdx).trim().replace(/^\(|\)$/g, '').trim();
+                    if (candidateFormula && !/^(OH|CH3|CH2CH3|NH2|NO2|H2O|H\+|Cl|Br|I)$/i.test(normalizeFormulaLookupKey(inside))) {
+                        formula = candidateFormula;
+                        let cleanInside = inside.split(',')[0].split('(')[0].trim();
                         cleanInside = cleanInside.replace(/\s+(?:desarrollado|intacto|en ausencia|en presencia|como|con|sin|mayor|minoritario|mayoritario|principal|secundario|terciario|primario|puro|anhidro|diluido)\b.*$/i, '').trim();
                         if (cleanInside && !/^(arriba|abajo|exceso|calor|luz|hv|hν)$/i.test(cleanInside)) {
                             compoundName = cleanInside.charAt(0).toUpperCase() + cleanInside.slice(1);
@@ -2576,7 +2577,7 @@
                 .replace(/^PRODUCTO OBTENIDO:\s*/i, '')
                 .replace(/\s*──\([^)]+\)──►.*$/, '')
                 .replace(/\s*──►\s*$/, '')
-                .replace(/\s*\((?:Reactivos intactos|Ruptura[^)]*|Enol[^)]*|Tautomería[^)]*)\)\s*$/i, '')
+                .replace(/\s+\([^+]+\)\s*$/, '')
                 .trim();
 
             const sides = clean.split(/──►|→|⇄/);
