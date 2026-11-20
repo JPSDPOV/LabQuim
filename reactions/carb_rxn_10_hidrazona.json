@@ -1,0 +1,1305 @@
+{
+  "category": "reacciones",
+  "title": "10) Condensación con Hidracina (+ H₂N–NH₂ ──► Hidrazonas + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + H₂N–NH₂ (pH 4–5) ⇄ Hidrazona (R₂C=N–NH₂) + H₂O",
+  "deltaH": "ΔH° ≈ −20 a −35 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; favorecida por el efecto alfa de la hidracina)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y la HIDRACINA (H₂N–NH₂) en medio ligeramente ácido (pH ≈ 4.5) para formar una HIDRAZONA (R–CH=N–NH₂ o R₂C=N–NH₂) con eliminación de agua:\n1) Etapa de adición nucleofílica: uno de los nitrógenos de la hidracina (:NH₂–NH₂) ataca al carbono carbonílico electrofílico (δ+) formando una carbinolamina hidrazínica (R₂C(OH)(NH–NH₂)). Su alta nucleofilia se debe al efecto alfa (repulsión electrónica entre los pares solitarios de ambos nitrógenos adyacentes).\n2) Etapa de eliminación (deshidratación ácida): la protonación del grupo –OH lo transforma en buen grupo saliente (–OH₂⁺), expulsando H₂O asistido por el par libre del nitrógeno para generar un ion hidrazonio protonado [R₂C=NH⁺–NH₂] que tras perder un protón consolida la hidrazona.\n3) Importancia sintética (Reducción de Wolff-Kishner): las hidrazonas son los intermediarios clave para reducir completamente un grupo carbonilo (C=O) a grupo metileno (–CH₂–) mediante calentamiento con base fuerte (KOH / etilenglicol, Δ) desprendiendo gas nitrógeno (N₂↑).",
+  "meta": {
+    "grupoFuncional": "Hidrazonas (R–CH=N–NH₂ o R₂C=N–NH₂)",
+    "reaccionMecanismo": "Adición nucleofílica de hidracina (carbinolamina) seguida de eliminación de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque H₂N–NH₂ → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion hidrazonio] → desprotonación [hidrazona]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina hidrazínica e ion hidrazonio [R₂C=NH⁺–NH₂]; formación de doble enlace C=N–NH₂ y H₂O.",
+    "detalleMecanismo": "R–CHO + H₂N–NH₂ ⇄ [R–CH(OH)–NH–NH₂] ──(H⁺, −H₂O)──► R–CH=N–NH₂ + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + Hidracina (H₂N–NH₂ o hidrato de hidracina) en tampón ácido suave (pH 4–5); exceso de hidracina evita la formación de azinas (R₂C=N–N=CR₂).",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Hidracina (H₂N–NH₂, nucleófilo potente por efecto alfa).\n• Catalizador ácido suave (pH 4–5): promueve la deshidratación de la carbinolamina sin protonar completamente la hidracina.",
+    "reglasObs": "• Efecto alfa: la hidracina es más nucleofílica y menos básica (pKa ≈ 8.1) que las aminas alifáticas (pKa ≈ 10.6), lo que facilita su reacción en medio ligeramente ácido.\n• Si se usa exceso de carbonilo respecto a la hidracina, el grupo –NH₂ libre de la hidrazona puede condensar con una segunda molécula formando una AZINA (R₂C=N–N=CR₂).\n• Aplicación sintética: Hidrazona + KOH / HOCH₂CH₂OH, Δ ──► R–CH₂–R' + N₂↑ (Reducción de Wolff-Kishner en medio básico)."
+  },
+  "substrates": [
+    {
+      "id": "hidz_etanal_nh2nh2",
+      "name": "Etanal + Hidracina (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► Hidrazona del Etanal (CH₃–CH=N–NH₂) + H₂O",
+      "catalyst": "H₂N–NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "hidz_propanona_nh2nh2",
+      "name": "Propanona + Hidracina (pH 4.5) ⇄ Hidrazona de la Propanona ((CH₃)₂C=N–NH₂) + H₂O [Cetona Alifática]",
+      "catalyst": "H₂N–NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "hidz_benzaldehido_nh2nh2",
+      "name": "Benzaldehído + Hidracina (pH 4.5) ⇄ Hidrazona del Benzaldehído (C₆H₅–CH=N–NH₂) + H₂O [Conjugada]",
+      "catalyst": "H₂N–NH₂ / H⁺ (pH 4–5)"
+    },
+    {
+      "id": "hidz_ciclohexanona_nh2nh2",
+      "name": "Ciclohexanona + Hidracina (pH 4.5) ⇄ Hidrazona de la Ciclohexanona + H₂O [Precursor Wolff-Kishner]",
+      "catalyst": "H₂N–NH₂ / H⁺ (pH 4–5)"
+    }
+  ],
+  "catalysts": [
+    "H₂N–NH₂ / H⁺ (pH 4–5)"
+  ],
+  "stepsBySubstrate": {
+    "hidz_etanal_nh2nh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Hidracina (H₂N–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CHO + H₂N–NH₂ (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + H₂N–NH₂ ⇄ [CH₃–CH(OH)–NH–NH₂] ──(−H₂O)──► CH₃–CH=N–NH₂ + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) con su grupo carbonilo polarizado y la hidracina (H₂N–NH₂) con alta nucleofilia debido al efecto alfa entre ambos nitrógenos.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal e hidracina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de un nitrógeno de la hidracina al carbono carbonílico electrofílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidracina (H₂N–NH₂)"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hz",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_hz",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación de la Carbinolamina Hidrazínica",
+        "semiStep": "CH₃–CHO + H₂N–NH₂ ⇄ CH₃–CH(OH)–NH–NH₂ [Carbinolamina]",
+        "semiGlobal": "CH₃–CHO + H₂N–NH₂ ⇄ [CH₃–CH(OH)–NH–NH₂] ──(−H₂O)──► CH₃–CH=N–NH₂ + H₂O",
+        "desc": "La hidracina forma un enlace covalente C1–N mientras se abre el enlace π C=O y se transfiere un protón hacia el oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del enlace C1–NHNH₂ de la carbinolamina.",
+          "movement": "El carbono C1 cambia temporalmente a hibridación sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hz",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_hz",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque H₂N–NH₂"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de C=N–NH₂)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NHNH₂ ──► [CH₃–CH=NH⁺NH₂] + H₂O ──► CH₃–CH=N–NH₂ + H₃O⁺",
+        "semiGlobal": "CH₃–CHO + H₂N–NH₂ ⇄ [CH₃–CH(OH)–NH–NH₂] ──(−H₂O)──► CH₃–CH=N–NH₂ + H₂O",
+        "desc": "La protonación del grupo –OH expulsa una molécula de agua mientras el par libre del nitrógeno forma el doble enlace C=N y pierde el protón restante.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (salida de H₂O) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–NH₂.",
+          "movement": "El carbono C1 recupera hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hidrazona del Etanal (CH₃–CH=N–NH₂) + H₂O",
+        "semiStep": "CH₃–CH=N–NH₂ + H₂O (Hidrazona)",
+        "semiGlobal": "CH₃–CHO + H₂N–NH₂ ⇄ [CH₃–CH(OH)–NH–NH₂] ──(−H₂O)──► CH₃–CH=N–NH₂ + H₂O",
+        "desc": "Queda consolidada la hidrazona del etanal (etilidenhidrazina) junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo hidrazono (–CH=N–NH₂).",
+          "movement": "Estabilizada por resonancia entre el par libre del –NH₂ terminal y el doble enlace C=N."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Hidrazona del Etanal"
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_hz",
+              "to": "NH2_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hidz_propanona_nh2nh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Hidracina (H₂N–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + H₂N–NH₂ (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NH₂ ⇄ (CH₃)₂C=N–NH₂ + H₂O",
+        "desc": "Se observan la propanona y la hidracina en medio ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona e hidracina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de la hidracina sobre el carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidracina (H₂N–NH₂)"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hz",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_hz",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Eliminación de H₂O",
+        "semiStep": "(CH₃)₂C(OH)–NHNH₂ ──(H⁺, −H₂O)──► (CH₃)₂C=N–NH₂",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NH₂ ⇄ (CH₃)₂C=N–NH₂ + H₂O",
+        "desc": "Tras formarse la carbinolamina, la deshidratación ácida expulsa H₂O y forma el doble enlace C2=N–NH₂.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del enlace C2=N–NH₂.",
+          "movement": "Retorno del carbono C2 a geometría trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hidrazona de la Propanona ((CH₃)₂C=N–NH₂) + H₂O",
+        "semiStep": "(CH₃)₂C=N–NH₂ + H₂O (Isopropilidenhidrazina)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NH₂ ⇄ (CH₃)₂C=N–NH₂ + H₂O",
+        "desc": "Queda consolidada la hidrazona de la propanona; al calentarla con KOH produce propano (CH₃CH₂CH₃) + N₂↑.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo hidrazono cetónico.",
+          "movement": "Producto hidrazona obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Hidrazona de Propanona"
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_hz",
+              "to": "NH2_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hidz_benzaldehido_nh2nh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Hidracina (H₂N–NH₂, pH 4–5)",
+        "semiStep": "C₆H₅–CHO + H₂N–NH₂ (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NH₂ ⇄ C₆H₅–CH=N–NH₂ + H₂O",
+        "desc": "Se observan el benzaldehído y la hidracina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído e hidracina intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de la hidracina al grupo formilo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidracina (H₂N–NH₂)"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hz",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_hz",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Bencílica y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NHNH₂ ──(H⁺, −H₂O)──► C₆H₅–CH=N–NH₂",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NH₂ ⇄ C₆H₅–CH=N–NH₂ + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace C=N–NH₂ conjugado con el anillo aromático.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y pérdida de H⁺.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N conjugado.",
+          "movement": "Conjugación extendida Ph–CH=N–NH₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hidrazona del Benzaldehído (C₆H₅–CH=N–NH₂) + H₂O",
+        "semiStep": "C₆H₅–CH=N–NH₂ + H₂O (Bencilidenhidrazina)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NH₂ ⇄ C₆H₅–CH=N–NH₂ + H₂O",
+        "desc": "Queda consolidada la hidrazona del benzaldehído junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo hidrazono conjugado al benceno.",
+          "movement": "Producto hidrazona aromática obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Hidrazona Benzaldehído"
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_hz",
+              "to": "NH2_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "hidz_ciclohexanona_nh2nh2": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Hidracina (H₂N–NH₂, pH 4–5)",
+        "semiStep": "Ciclohexanona + H₂N–NH₂ (pH 4.5)",
+        "semiGlobal": "Ciclohexanona + H₂N–NH₂ ⇄ Hidrazona de Ciclohexanona + H₂O",
+        "desc": "Se observan la ciclohexanona y la hidracina en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona e hidracina intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de la hidracina al carbono carbonílico C1 del anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ciclohexanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "N_hz",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Hidracina (H₂N–NH₂)"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hz",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_hz",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Eliminación de H₂O",
+        "semiStep": "1-Hidrazinilciclohexanol ──(H⁺, −H₂O)──► Hidrazona de Ciclohexanona",
+        "semiGlobal": "Ciclohexanona + H₂N–NH₂ ⇄ Hidrazona de Ciclohexanona + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace exocíclico C1=N–NH₂.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y pérdida de H⁺.",
+          "forming": "En VERDE punteado: formación del doble enlace exocíclico C1=N–NH₂.",
+          "movement": "Restauración de la geometría trigonal plana en C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 265,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "NH2_hz",
+              "to": "N_hz",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N_hz",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hidrazona de la Ciclohexanona + H₂O",
+        "semiStep": "Hidrazona de Ciclohexanona + H₂O (Precursor Wolff-Kishner)",
+        "semiGlobal": "Ciclohexanona + H₂N–NH₂ ⇄ Hidrazona de Ciclohexanona + H₂O",
+        "desc": "Queda consolidada la hidrazona de la ciclohexanona; su calentamiento con KOH la transforma en ciclohexano + N₂↑.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace doble C=N–NH₂ sobre el anillo.",
+          "movement": "Producto hidrazona cíclica obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Hidrazona Ciclohexanona"
+            },
+            {
+              "id": "N_hz",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2_hz",
+              "el": "NH₂",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N_hz",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N_hz",
+              "to": "NH2_hz",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
