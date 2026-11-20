@@ -2,46 +2,579 @@
   "category": "obtencion",
   "title": "3) Reducción Débil de Ácidos Carboxílicos (+ DIBAH ──► Aldehído)",
   "natureBadge": "Reducción Controlada • R–COOH + DIBAH ──(-78 °C, luego H₂O)──► R–CHO",
-  "deltaH": "ΔH° < 0 (Exotérmica; se detiene en el aldehído sin reducir hasta alcohol primario)",
-  "description": "Reducción selectiva de ácidos carboxílicos mediante un reductor débil impedido como el DIBAH (hidruro de diisobutilaluminio) a baja temperatura (Diap. 12), convirtiendo el grupo –COOH directamente en aldehído –CHO.",
+  "deltaH": "ΔH° < 0 (Exotérmica; a -78 °C se detiene en el aldehído sin reducir hasta alcohol primario)",
+  "description": "Reducción selectiva de ácidos carboxílicos mediante un reductor débil impedido como el DIBAH (hidruro de diisobutilaluminio) a -78 °C seguido de hidrólisis suave:\n1) El DIBAH transfiere un ion hidruro (H⁻) al carbono carboxílico formando un intermediario tetraédrico coordinado al aluminio, estable a baja temperatura.\n2) Al realizar la hidrólisis suave con H₂O, se elimina el grupo –OH (como complejo de aluminio) y se regenera el doble enlace C=O.\n3) La reacción se detiene selectivamente en el aldehído (R–CHO) sin llegar a alcohol primario y respetando dobles enlaces C=C o anillos aromáticos.",
   "meta": {
     "grupoFuncional": "Aldehídos (R–CHO)",
-    "reaccionMecanismo": "Sustitución nucleofílica acílica por transferencia controlada de hidruro",
-    "naturaleza": "Adición-eliminación controlada en el carbono carboxílico.",
-    "rupturaIntermediarios": "Ruptura del enlace C–OH y formación de C–H.",
-    "detalleMecanismo": "CH₃–COOH + DIBAH ──► CH₃–CHO (etanal)",
-    "reactivosCondiciones": "Ácido carboxílico + DIBAH (-78 °C), seguido de hidrólisis suave.",
-    "rolReactivos": "• Sustrato: Ácido carboxílico (R–COOH).\n• Reductor débil: DIBAH (hidruro de diisobutilaluminio).",
-    "reglasObs": "• Diap. 12: Ácido etanoico + DIBAH → etanal."
+    "reaccionMecanismo": "Sustitución nucleofílica acílica por transferencia controlada de hidruro (DIBAH)",
+    "naturaleza": "Por etapas vía intermediario tetraédrico alcoxialuminio estable a -78 °C.",
+    "rupturaIntermediarios": "1) Transferencia de H⁻ desde H–Al(iBu)₂ → intermediario tetraédrico; 2) Hidrólisis y ruptura C–OH → aldehído R–CHO.",
+    "detalleMecanismo": "R–COOH + DIBAH ──(-78 °C, luego H₂O)──► R–CHO",
+    "reactivosCondiciones": "Ácido carboxílico (R–COOH) + DIBAH (en hexano/tolueno a -78 °C), luego H₂O.",
+    "rolReactivos": "• Sustrato: Ácido carboxílico (R–COOH).\n• Reductor débil selectivo: DIBAH [H–Al(iBu)₂, hidruro de diisobutilaluminio].\n• Medio final: Hidrólisis suave con H₂O.",
+    "reglasObs": "• A diferencia del LiAlH₄ (que reduce hasta alcohol primario R–CH₂OH), el DIBAH a -78 °C detiene la reducción en el aldehído R–CHO.\n• No reduce dobles enlaces aislados ni anillos aromáticos."
   },
   "substrates": [
     {
       "id": "ac_etanoico_dibah",
-      "name": "Diap. 12: Ácido Etanoico + DIBAH ──► Etanal",
-      "catalyst": "DIBAH (Hidruro de diisobutilaluminio)"
+      "name": "Ácido Etanoico (Acético) + DIBAH ──► Etanal",
+      "catalyst": "DIBAH (-78 °C), luego H₂O"
+    },
+    {
+      "id": "ac_propanoico_dibah",
+      "name": "Ácido Propanoico + DIBAH ──► Propanal",
+      "catalyst": "DIBAH (-78 °C), luego H₂O"
+    },
+    {
+      "id": "ac_3metilbutanoico_dibah",
+      "name": "Ácido 3-Metilbutanoico + DIBAH ──► 3-Metilbutanal [Ramificado]",
+      "catalyst": "DIBAH (-78 °C), luego H₂O"
+    },
+    {
+      "id": "ac_benzoico_dibah",
+      "name": "Ácido Benzoico + DIBAH ──► Benzaldehído [Aromático]",
+      "catalyst": "DIBAH (-78 °C), luego H₂O"
+    },
+    {
+      "id": "ac_2butenoico_dibah",
+      "name": "Ácido 2-Butenoico + DIBAH ──► 2-Butenal [Insaturado selectivo]",
+      "catalyst": "DIBAH (-78 °C), luego H₂O"
     }
   ],
   "catalysts": [
-    "DIBAH (Hidruro de diisobutilaluminio)"
+    "DIBAH (-78 °C), luego H₂O"
   ],
   "stepsBySubstrate": {
     "ac_etanoico_dibah": [
       {
-        "title": "Paso 1 — Estado Inicial: Ácido Etanoico + DIBAH",
-        "semiStep": "CH₃–CO–OH  +  DIBAH",
-        "semiGlobal": "CH₃–COOH + DIBAH ──► CH₃–CHO",
-        "desc": "El DIBAH transfiere un hidruro al carbono carboxílico del ácido etanoico.",
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico + DIBAH",
+        "semiStep": "CH₃–COOH + DIBAH",
+        "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el ácido etanoico (CH₃–C(=O)–O–H) con sus enlaces desplegados y el reductor débil DIBAH (H–Al(iBu)₂).",
         "legend": {
-          "breaking": "En ROJO punteado: enlace C–OH.",
-          "forming": "En VERDE punteado: enlace C–H.",
-          "movement": "Transferencia controlada de hidruro."
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del hidruro de diisobutilaluminio (DIBAH) al carbono carboxílico."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Me",
+              "id": "C2",
               "el": "CH₃",
-              "x": 230,
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido Etanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 520,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 620,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 510,
+              "y": 330,
+              "highlight": "#38bdf8",
+              "label": "DIBAH (H–Al(iBu)₂)"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 650,
+              "y": 330,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Transferencia Controlada de Hidruro (H⁻) a -78 °C",
+        "semiStep": "CH₃–COOH + DIBAH (Transferencia de H⁻ desde DIBAH)",
+        "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
+        "desc": "A -78 °C, el DIBAH transfiere de forma controlada un hidruro (H⁻) hacia el carbono carboxílico C1 mientras el aluminio se coordina al oxígeno carbonílico.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace H–Al del DIBAH y enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C–H y coordinación O–Al(iBu)₂.",
+          "movement": "Ataque nucleofílico del hidruro H⁻ al carbono carbonílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 520,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 620,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 450,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 610,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 325,
+              "cx": 460,
+              "cy": 285,
+              "x2": 413,
+              "y2": 230,
+              "label": "Transfiere H⁻"
+            },
+            {
+              "type": "full",
+              "x1": 410,
+              "y1": 152,
+              "cx": 510,
+              "cy": 135,
+              "x2": 595,
+              "y2": 295,
+              "label": "Coordina O–Al"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Tetraédrico Estabilizado a Baja Temperatura (-78 °C)",
+        "semiStep": "[Intermediario alcoxialuminio estable a -78 °C]",
+        "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
+        "desc": "Se forma el intermediario tetraédrico coordinado al aluminio, que permanece estable a -78 °C impidiendo que entre un segundo equivalente de hidruro.",
+        "legend": {
+          "breaking": "Enlace H–Al del DIBAH roto.",
+          "forming": "Enlace C–H formado; el complejo con aluminio impide una segunda reducción.",
+          "movement": "El intermediario permanece estable hasta la hidrólisis controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 550,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 530,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 440,
+              "y": 330,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Suave: Eliminación del Grupo Saliente y Regeneración de C=O",
+        "semiStep": "CH₃–CHO (Eliminación de –OH y formación de C=O)",
+        "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
+        "desc": "Al agregar agua en la hidrólisis suave, se rompe el enlace C1–OH y se regenera el doble enlace carbonilo C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–OH y disociación O–Al.",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonilo C=O.",
+          "movement": "Expulsión del grupo hidroxilo/aluminato durante la hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 620,
+              "y": 82,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 580,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Grupo saliente –OH"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 675,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 540,
+              "y1": 82,
+              "cx": 490,
+              "cy": 125,
+              "x2": 447,
+              "y2": 152,
+              "label": "Regenera C=O"
+            },
+            {
+              "type": "full",
+              "x1": 487,
+              "y1": 210,
+              "cx": 530,
+              "cy": 190,
+              "x2": 563,
+              "y2": 205,
+              "label": "Sale –OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal (Aldehído) (CH₃–CHO)",
+        "semiStep": "CH₃–CHO (Etanal (Aldehído))",
+        "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
+        "desc": "Queda consolidado el etanal (CH₃–CHO) con su grupo aldehído en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Aldehído obtenido sin sobrerreducción a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal (Aldehído)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_propanoico_dibah": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Propanoico + DIBAH",
+        "semiStep": "CH₃–CH₂–COOH + DIBAH",
+        "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el ácido propanoico con cada carbono separado (CH₃–CH₂–C(=O)–O–H) y el DIBAH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del hidruro de diisobutilaluminio (DIBAH) al carbono carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
               "y": 210
             },
             {
@@ -49,32 +582,51 @@
               "el": "C",
               "x": 410,
               "y": 210,
-              "label": "Ácido etanoico"
+              "label": "Ácido Propanoico"
             },
             {
               "id": "O1",
               "el": "O",
               "x": 410,
-              "y": 100
+              "y": 95
             },
             {
-              "id": "OH",
-              "el": "OH",
-              "x": 580,
-              "y": 210,
-              "highlight": "#fbbf24"
+              "id": "O_oh",
+              "el": "O",
+              "x": 535,
+              "y": 210
             },
             {
-              "id": "Reag",
-              "el": "DIBAH",
-              "x": 760,
-              "y": 210,
+              "id": "H_oh",
+              "el": "H",
+              "x": 635,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 525,
+              "y": 330,
+              "highlight": "#38bdf8",
+              "label": "DIBAH (H–Al(iBu)₂)"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 665,
+              "y": 330,
               "highlight": "#38bdf8"
             }
           ],
           "bonds": [
             {
-              "from": "Me",
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
               "to": "C1",
               "order": 1,
               "state": "normal"
@@ -87,57 +639,585 @@
             },
             {
               "from": "C1",
-              "to": "OH",
+              "to": "O_oh",
               "order": 1,
-              "state": "breaking"
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Etanal (CH₃–CHO)",
-        "semiStep": "CH₃–CH=O  (Etanal)",
-        "semiGlobal": "CH₃–COOH + DIBAH ──► CH₃–CHO",
-        "desc": "Se obtiene etanal.",
+        "title": "Ruptura en Rojo: Transferencia Controlada de Hidruro (H⁻) a -78 °C",
+        "semiStep": "CH₃–CH₂–COOH + DIBAH (Transferencia de H⁻ desde DIBAH)",
+        "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
+        "desc": "El DIBAH transfiere un hidruro (H⁻) al carbono carboxílico C1 a baja temperatura (-78 °C).",
         "legend": {
-          "breaking": "Grupo –OH eliminado.",
-          "forming": "En VERDE sólido: etanal.",
-          "movement": "Producto aldehído consolidado."
+          "breaking": "En ROJO punteado: enlace H–Al del DIBAH y enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C–H y coordinación O–Al(iBu)₂.",
+          "movement": "Ataque nucleofílico del hidruro H⁻ al carbono carbonílico."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Me",
+              "id": "C3",
               "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
               "x": 270,
-              "y": 215
+              "y": 210
             },
             {
               "id": "C1",
               "el": "C",
-              "x": 450,
-              "y": 215,
-              "highlight": "#10b981",
-              "label": "Etanal"
+              "x": 410,
+              "y": 210
             },
             {
               "id": "O1",
               "el": "O",
-              "x": 450,
-              "y": 100,
+              "x": 410,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 535,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 635,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 465,
+              "y": 325,
               "highlight": "#10b981"
             },
             {
-              "id": "H1",
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 625,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 545,
+              "y1": 325,
+              "cx": 475,
+              "cy": 285,
+              "x2": 428,
+              "y2": 230,
+              "label": "Transfiere H⁻"
+            },
+            {
+              "type": "full",
+              "x1": 425,
+              "y1": 152,
+              "cx": 525,
+              "cy": 135,
+              "x2": 610,
+              "y2": 295,
+              "label": "Coordina O–Al"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Tetraédrico Estabilizado a Baja Temperatura (-78 °C)",
+        "semiStep": "[Intermediario alcoxialuminio estable a -78 °C]",
+        "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
+        "desc": "Se forma el intermediario tetraédrico alcoxialuminio estable a -78 °C.",
+        "legend": {
+          "breaking": "Enlace H–Al del DIBAH roto.",
+          "forming": "Enlace C–H formado; el complejo con aluminio impide una segunda reducción.",
+          "movement": "El intermediario permanece estable hasta la hidrólisis controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 410,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 565,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
               "el": "H",
-              "x": 630,
-              "y": 215,
+              "x": 645,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 455,
+              "y": 330,
               "highlight": "#10b981"
             }
           ],
           "bonds": [
             {
-              "from": "Me",
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Suave: Eliminación del Grupo Saliente y Regeneración de C=O",
+        "semiStep": "CH₃–CH₂–CHO (Eliminación de –OH y formación de C=O)",
+        "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
+        "desc": "Durante la hidrólisis suave se elimina el grupo –OH y se regenera el doble enlace C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–OH y disociación O–Al.",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonilo C=O.",
+          "movement": "Expulsión del grupo hidroxilo/aluminato durante la hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 482,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 635,
+              "y": 82,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 595,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Grupo saliente –OH"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 690,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 482,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 555,
+              "y1": 82,
+              "cx": 505,
+              "cy": 125,
+              "x2": 462,
+              "y2": 152,
+              "label": "Regenera C=O"
+            },
+            {
+              "type": "full",
+              "x1": 502,
+              "y1": 210,
+              "cx": 545,
+              "cy": 190,
+              "x2": 578,
+              "y2": 205,
+              "label": "Sale –OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propanal (Aldehído) (CH₃–CH₂–CHO)",
+        "semiStep": "CH₃–CH₂–CHO (Propanal (Aldehído))",
+        "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
+        "desc": "Queda consolidado el propanal (CH₃–CH₂–CHO) con geometría trigonal plana (120°) en el carbono aldehídico.",
+        "legend": {
+          "breaking": "Eliminación completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Aldehído obtenido sin sobrerreducción a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C3",
+              "el": "CH₃",
+              "x": 135,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 270,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 410,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanal (Aldehído)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 482,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 482,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_3metilbutanoico_dibah": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 3-Metilbutanoico + DIBAH",
+        "semiStep": "(CH₃)₂CH–CH₂–COOH + DIBAH",
+        "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el ácido 3-metilbutanoico (ácido isovalérico) ramificado y el DIBAH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del hidruro de diisobutilaluminio (DIBAH) al carbono carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 205,
+              "y": 315
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "label": "Ácido 3-Metilbutanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 580,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 680,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 570,
+              "y": 330,
+              "highlight": "#38bdf8",
+              "label": "DIBAH (H–Al(iBu)₂)"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 710,
+              "y": 330,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
               "to": "C1",
               "order": 1,
               "state": "normal"
@@ -150,7 +1230,1723 @@
             },
             {
               "from": "C1",
-              "to": "H1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Transferencia Controlada de Hidruro (H⁻) a -78 °C",
+        "semiStep": "(CH₃)₂CH–CH₂–COOH + DIBAH (Transferencia de H⁻ desde DIBAH)",
+        "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
+        "desc": "El DIBAH transfiere un hidruro (H⁻) selectivamente al carbono carboxílico C1 a -78 °C.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace H–Al del DIBAH y enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C–H y coordinación O–Al(iBu)₂.",
+          "movement": "Ataque nucleofílico del hidruro H⁻ al carbono carbonílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 205,
+              "y": 315
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 455,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 580,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 680,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 510,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 670,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 590,
+              "y1": 325,
+              "cx": 520,
+              "cy": 285,
+              "x2": 473,
+              "y2": 230,
+              "label": "Transfiere H⁻"
+            },
+            {
+              "type": "full",
+              "x1": 470,
+              "y1": 152,
+              "cx": 570,
+              "cy": 135,
+              "x2": 655,
+              "y2": 295,
+              "label": "Coordina O–Al"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Tetraédrico Estabilizado a Baja Temperatura (-78 °C)",
+        "semiStep": "[Intermediario alcoxialuminio estable a -78 °C]",
+        "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
+        "desc": "Se estabiliza el intermediario tetraédrico coordinado al aluminio sin afectar la ramificación isobutilo.",
+        "legend": {
+          "breaking": "Enlace H–Al del DIBAH roto.",
+          "forming": "Enlace C–H formado; el complejo con aluminio impide una segunda reducción.",
+          "movement": "El intermediario permanece estable hasta la hidrólisis controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 205,
+              "y": 315
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 455,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 610,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 590,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 690,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 500,
+              "y": 330,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Suave: Eliminación del Grupo Saliente y Regeneración de C=O",
+        "semiStep": "(CH₃)₂CH–CH₂–CHO (Eliminación de –OH y formación de C=O)",
+        "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
+        "desc": "Por hidrólisis suave se elimina el grupo –OH y se regenera el carbonilo C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–OH y disociación O–Al.",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonilo C=O.",
+          "movement": "Expulsión del grupo hidroxilo/aluminato durante la hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 205,
+              "y": 315
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 527,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 680,
+              "y": 82,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 640,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Grupo saliente –OH"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 735,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 527,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 600,
+              "y1": 82,
+              "cx": 550,
+              "cy": 125,
+              "x2": 507,
+              "y2": 152,
+              "label": "Regenera C=O"
+            },
+            {
+              "type": "full",
+              "x1": 547,
+              "y1": 210,
+              "cx": 590,
+              "cy": 190,
+              "x2": 623,
+              "y2": 205,
+              "label": "Sale –OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 3-Metilbutanal (Aldehído) ((CH₃)₂CH–CH₂–CHO)",
+        "semiStep": "(CH₃)₂CH–CH₂–CHO (3-Metilbutanal (Aldehído))",
+        "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
+        "desc": "Queda consolidado el 3-metilbutanal ((CH₃)₂CH–CH₂–CHO) con el grupo –CHO en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Aldehído obtenido sin sobrerreducción a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_izq",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "Me_abajo",
+              "el": "CH₃",
+              "x": 205,
+              "y": 315
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "3-Metilbutanal (Aldehído)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 527,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 527,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_izq",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "Me_abajo",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_benzoico_dibah": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico + DIBAH",
+        "semiStep": "C₆H₅–COOH + DIBAH",
+        "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el ácido benzoico (C₆H₅–C(=O)–O–H) y el reductor DIBAH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del hidruro de diisobutilaluminio (DIBAH) al carbono carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ácido Benzoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 520,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 620,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 510,
+              "y": 330,
+              "highlight": "#38bdf8",
+              "label": "DIBAH (H–Al(iBu)₂)"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 650,
+              "y": 330,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Transferencia Controlada de Hidruro (H⁻) a -78 °C",
+        "semiStep": "C₆H₅–COOH + DIBAH (Transferencia de H⁻ desde DIBAH)",
+        "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
+        "desc": "El DIBAH transfiere un hidruro (H⁻) al carbono carboxílico unido al anillo aromático a -78 °C.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace H–Al del DIBAH y enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C–H y coordinación O–Al(iBu)₂.",
+          "movement": "Ataque nucleofílico del hidruro H⁻ al carbono carbonílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 520,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 620,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 450,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 610,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 325,
+              "cx": 460,
+              "cy": 285,
+              "x2": 413,
+              "y2": 230,
+              "label": "Transfiere H⁻"
+            },
+            {
+              "type": "full",
+              "x1": 410,
+              "y1": 152,
+              "cx": 510,
+              "cy": 135,
+              "x2": 595,
+              "y2": 295,
+              "label": "Coordina O–Al"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Tetraédrico Estabilizado a Baja Temperatura (-78 °C)",
+        "semiStep": "[Intermediario alcoxialuminio estable a -78 °C]",
+        "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
+        "desc": "Se forma el intermediario tetraédrico bencílico coordinado al aluminio, dejando intacto el anillo de benceno.",
+        "legend": {
+          "breaking": "Enlace H–Al del DIBAH roto.",
+          "forming": "Enlace C–H formado; el complejo con aluminio impide una segunda reducción.",
+          "movement": "El intermediario permanece estable hasta la hidrólisis controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 550,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 530,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 440,
+              "y": 330,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Suave: Eliminación del Grupo Saliente y Regeneración de C=O",
+        "semiStep": "C₆H₅–CHO (Eliminación de –OH y formación de C=O)",
+        "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
+        "desc": "La hidrólisis suave elimina el grupo –OH y regenera el doble enlace carbonilo C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–OH y disociación O–Al.",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonilo C=O.",
+          "movement": "Expulsión del grupo hidroxilo/aluminato durante la hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 620,
+              "y": 82,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 580,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Grupo saliente –OH"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 675,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 540,
+              "y1": 82,
+              "cx": 490,
+              "cy": 125,
+              "x2": 447,
+              "y2": 152,
+              "label": "Regenera C=O"
+            },
+            {
+              "type": "full",
+              "x1": 487,
+              "y1": 210,
+              "cx": 530,
+              "cy": 190,
+              "x2": 563,
+              "y2": 205,
+              "label": "Sale –OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzaldehído (Aldehído Aromático) (C₆H₅–CHO)",
+        "semiStep": "C₆H₅–CHO (Benzaldehído (Aldehído Aromático))",
+        "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
+        "desc": "Queda consolidado el benzaldehído (C₆H₅–CHO) sin sobrerreducción a alcohol bencílico.",
+        "legend": {
+          "breaking": "Eliminación completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Aldehído obtenido sin sobrerreducción a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldehído (Aldehído Aromático)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 467,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 467,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_2butenoico_dibah": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 2-Butenoico + DIBAH",
+        "semiStep": "CH₃–CH=CH–COOH + DIBAH",
+        "semiGlobal": "CH₃–CH=CH–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Se observan las moléculas iniciales intactas: el ácido 2-butenoico (ácido crotónico, con doble enlace C3=C2) y el DIBAH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación del hidruro de diisobutilaluminio (DIBAH) al carbono carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 210,
+              "label": "Ácido 2-Butenoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 465,
+              "y": 95
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 590,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 690,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 580,
+              "y": 330,
+              "highlight": "#38bdf8",
+              "label": "DIBAH (H–Al(iBu)₂)"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 720,
+              "y": 330,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Transferencia Controlada de Hidruro (H⁻) a -78 °C",
+        "semiStep": "CH₃–CH=CH–COOH + DIBAH (Transferencia de H⁻ desde DIBAH)",
+        "semiGlobal": "CH₃–CH=CH–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "El DIBAH ataca selectivamente al carbono carboxílico C1 sin reducir el doble enlace alquénico C3=C2.",
+        "legend": {
+          "breaking": "En ROJO punteado: enlace H–Al del DIBAH y enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C–H y coordinación O–Al(iBu)₂.",
+          "movement": "Ataque nucleofílico del hidruro H⁻ al carbono carbonílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 465,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 590,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 690,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 520,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 680,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_hid",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 600,
+              "y1": 325,
+              "cx": 530,
+              "cy": 285,
+              "x2": 483,
+              "y2": 230,
+              "label": "Transfiere H⁻"
+            },
+            {
+              "type": "full",
+              "x1": 480,
+              "y1": 152,
+              "cx": 580,
+              "cy": 135,
+              "x2": 665,
+              "y2": 295,
+              "label": "Coordina O–Al"
+            }
+          ],
+          "texts": [
+            {
+              "x": 460,
+              "y": 38,
+              "text": "Quimioselectividad: DIBAH reduce –COOH a –CHO sin tocar el doble enlace C=C",
+              "size": 14,
+              "color": "#fbbf24"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Tetraédrico Estabilizado a Baja Temperatura (-78 °C)",
+        "semiStep": "[Intermediario alcoxialuminio estable a -78 °C]",
+        "semiGlobal": "CH₃–CH=CH–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Se forma el intermediario tetraédrico alcoxialuminio conservando intacta la insaturación C3=C2.",
+        "legend": {
+          "breaking": "Enlace H–Al del DIBAH roto.",
+          "forming": "Enlace C–H formado; el complejo con aluminio impide una segunda reducción.",
+          "movement": "El intermediario permanece estable hasta la hidrólisis controlada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 465,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 620,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 600,
+              "y": 210
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 700,
+              "y": 210
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 510,
+              "y": 330,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Suave: Eliminación del Grupo Saliente y Regeneración de C=O",
+        "semiStep": "CH₃–CH=CH–CHO (Eliminación de –OH y formación de C=O)",
+        "semiGlobal": "CH₃–CH=CH–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "La hidrólisis suave elimina el grupo –OH y regenera el carbonilo C1=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–OH y disociación O–Al.",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonilo C=O.",
+          "movement": "Expulsión del grupo hidroxilo/aluminato durante la hidrólisis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 537,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Al_dibah",
+              "el": "Al(iBu)₂",
+              "x": 690,
+              "y": 82,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_oh",
+              "el": "O",
+              "x": 650,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Grupo saliente –OH"
+            },
+            {
+              "id": "H_oh",
+              "el": "H",
+              "x": 745,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 537,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O1",
+              "to": "Al_dibah",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_oh",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_oh",
+              "to": "H_oh",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 610,
+              "y1": 82,
+              "cx": 560,
+              "cy": 125,
+              "x2": 517,
+              "y2": 152,
+              "label": "Regenera C=O"
+            },
+            {
+              "type": "full",
+              "x1": 557,
+              "y1": 210,
+              "cx": 600,
+              "cy": 190,
+              "x2": 633,
+              "y2": 205,
+              "label": "Sale –OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Butenal / Crotonaldehído (CH₃–CH=CH–CHO)",
+        "semiStep": "CH₃–CH=CH–CHO (2-Butenal / Crotonaldehído)",
+        "semiGlobal": "CH₃–CH=CH–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH=CH–CHO",
+        "desc": "Queda consolidado el 2-butenal (crotonaldehído, CH₃–CH=CH–CHO), aldehído α,β-insaturado con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Eliminación completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO con geometría trigonal plana (120°).",
+          "movement": "Aldehído obtenido sin sobrerreducción a alcohol primario."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C4",
+              "el": "CH₃",
+              "x": 85,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "CH",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH",
+              "x": 335,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 465,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Butenal / Crotonaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 537,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hid",
+              "el": "H",
+              "x": 537,
+              "y": 338,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C4",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H_hid",
               "order": 1,
               "state": "new"
             }
