@@ -1959,7 +1959,7 @@
             const subToDigit = { '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '⁰': '0', '⁺': '+' };
             return String(f || '')
                 .replace(/[₀-₉⁰⁺]/g, ch => subToDigit[ch] || ch)
-                .replace(/[—–]/g, '-')
+                .replace(/[\u2013\u2014—–]/g, '-')
                 .replace(/\s+/g, '')
                 .trim();
         }
@@ -2327,7 +2327,7 @@
                 let pendingOrd = 1;
                 for (let i = 0; i < rightRaw.length; i++) {
                     const ch = rightRaw[i];
-                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                    if (ch === '-' || ch === '–' || ch === '—' || ch === '=' || ch === '≡') {
                         if (buf) segTokens.push({ el: buf, order: pendingOrd });
                         pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
                         buf = '';
@@ -2402,7 +2402,7 @@
                 let pendingOrd = 1;
                 for (let i = 0; i < rightRaw.length; i++) {
                     const ch = rightRaw[i];
-                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                    if (ch === '-' || ch === '–' || ch === '—' || ch === '=' || ch === '≡') {
                         if (buf) segTokens.push({ el: buf, order: pendingOrd });
                         pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
                         buf = '';
@@ -2437,13 +2437,13 @@
             }
 
             // Caso lineal con múltiples grupos unidos por enlaces (ej. CH₃—CH₂—C≡CH, CH₃—CH₂—CO—CH₃) -> nodos separados
-            if (!/[()]/.test(f) && /[-—=≡]/.test(f) && !/^(H-OH|H-O-H|H-Cl|H-Br|H-I|H-CN|H-NH2)$/i.test(norm)) {
+            if (!/[()]/.test(f) && /[-–—=≡]/.test(f) && !/^(H-OH|H-O-H|H-Cl|H-Br|H-I|H-CN|H-NH2)$/i.test(norm)) {
                 const segs = [];
                 let buf = '';
                 let pendingOrd = 1;
                 for (let i = 0; i < f.length; i++) {
                     const ch = f[i];
-                    if (ch === '-' || ch === '—' || ch === '=' || ch === '≡') {
+                    if (ch === '-' || ch === '–' || ch === '—' || ch === '=' || ch === '≡') {
                         if (buf) segs.push({ el: buf, order: pendingOrd });
                         pendingOrd = (ch === '≡') ? 3 : ((ch === '=') ? 2 : 1);
                         buf = '';
