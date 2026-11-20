@@ -490,7 +490,7 @@
       },
       {
         "title": "Producto Consolidado: Etanal (Aldehído) (CH₃–CHO)",
-        "semiStep": "CH₃–CHO (Etanal (Aldehído))",
+        "semiStep": "CH₃–CHO (Etanal)",
         "semiGlobal": "CH₃–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CHO",
         "desc": "Queda consolidado el etanal (CH₃–CHO) con su grupo aldehído en disposición trigonal plana (120°).",
         "legend": {
@@ -1045,7 +1045,7 @@
       },
       {
         "title": "Producto Consolidado: Propanal (Aldehído) (CH₃–CH₂–CHO)",
-        "semiStep": "CH₃–CH₂–CHO (Propanal (Aldehído))",
+        "semiStep": "CH₃–CH₂–CHO (Propanal)",
         "semiGlobal": "CH₃–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► CH₃–CH₂–CHO",
         "desc": "Queda consolidado el propanal (CH₃–CH₂–CHO) con geometría trigonal plana (120°) en el carbono aldehídico.",
         "legend": {
@@ -1708,7 +1708,7 @@
       },
       {
         "title": "Producto Consolidado: 3-Metilbutanal (Aldehído) ((CH₃)₂CH–CH₂–CHO)",
-        "semiStep": "(CH₃)₂CH–CH₂–CHO (3-Metilbutanal (Aldehído))",
+        "semiStep": "(CH₃)₂CH–CH₂–CHO (3-Metilbutanal)",
         "semiGlobal": "(CH₃)₂CH–CH₂–COOH + DIBAH ──(-78 °C, H₂O)──► (CH₃)₂CH–CH₂–CHO",
         "desc": "Queda consolidado el 3-metilbutanal ((CH₃)₂CH–CH₂–CHO) con el grupo –CHO en disposición trigonal plana (120°).",
         "legend": {
@@ -2255,7 +2255,7 @@
       },
       {
         "title": "Producto Consolidado: Benzaldehído (Aldehído Aromático) (C₆H₅–CHO)",
-        "semiStep": "C₆H₅–CHO (Benzaldehído (Aldehído Aromático))",
+        "semiStep": "C₆H₅–CHO (Benzaldehído)",
         "semiGlobal": "C₆H₅–COOH + DIBAH ──(-78 °C, H₂O)──► C₆H₅–CHO",
         "desc": "Queda consolidado el benzaldehído (C₆H₅–CHO) sin sobrerreducción a alcohol bencílico.",
         "legend": {
