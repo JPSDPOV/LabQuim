@@ -1,0 +1,569 @@
+{
+  "category": "reacciones",
+  "title": "A.1- Como Ácido (Ruptura O–H): Formación de Sales (NaOH, KOH, NaHCO₃) y Micelas / Jabones",
+  "natureBadge": "Reacción Ácido-Base • R–COOH + Base (NaOH / KOH / NaHCO₃ / Na⁰) ──► Sal Carboxilato (R–COO⁻M⁺) + H₂O / CO₂↑",
+  "deltaH": "ΔH° ≈ −55 a −60 kJ/mol (Neutralización exotérmica e irreversible con bases fuertes y bicarbonato)",
+  "description": "Comportamiento ácido de los ácidos carboxílicos (pKa ≈ 4–5, ~10¹¹ veces más ácidos que los alcoholes) por ruptura heterolítica del enlace O–H y estabilización por resonancia equivalente de la carga negativa entre ambos oxígenos del ion carboxilato (R–COO⁻):\n1) Neutralización con hidróxidos alcalinos (NaOH / KOH): produce la sal carboxilato soluble en agua más H₂O (nomenclatura: terminación -oico → -ato de [metal], ej. ácido benzoico → benzoato de sodio; ácido palmítico → palmitato de sodio / jabón).\n2) Ensayo diagnóstico con bicarbonato de sodio (NaHCO₃): a diferencia de los fenoles (pKa ≈ 10) y alcoholes (pKa ≈ 16), los ácidos carboxílicos desprotonan el ion bicarbonato liberando ácido carbónico inestable que descompone con efervescencia de gas dióxido de carbono (CO₂↑).\n3) Reacción redox con metales activos (Na⁰, K⁰, Mg⁰): desplaza hidrógeno gaseoso (½ H₂↑) formando el carboxilato metálico.\n4) Formación de micelas y jabones: las sales de ácidos grasos de cadena larga (palmitato, estearato, oleato) son anfipáticas (cabeza polar –COO⁻ hidrofílica y cola apolar R hidrofóbica) y forman micelas en agua.",
+  "meta": {
+    "grupoFuncional": "Sales de Ácidos Carboxílicos / Carboxilatos Metálicos (R–COO⁻Na⁺, R–COO⁻K⁺)",
+    "reaccionMecanismo": "Transferencia protónica ácido-base de Brønsted-Lowry (desprotonación del grupo –OH carboxílico)",
+    "naturaleza": "Concertada instantánea (ruptura heterolítica O–H por ataque de OH⁻, HCO₃⁻ o transferencia electrónica con Na⁰).",
+    "rupturaIntermediarios": "Ruptura del enlace polar O–H (y H₂CO₃ → CO₂↑ + H₂O con NaHCO₃); híbrido de resonancia simétrico del ion carboxilato (R–COO⁻).",
+    "detalleMecanismo": "R–COOH + NaOH ──► R–COO⁻Na⁺ + H₂O  |  R–COOH + NaHCO₃ ──► R–COO⁻Na⁺ + CO₂↑ + H₂O",
+    "reactivosCondiciones": "Ácido carboxílico + NaOH acuoso, KOH acuoso, NaHCO₃ acuoso (temperatura ambiente, 25 °C) o Na⁰ metálico.",
+    "rolReactivos": "• Ácido de Brønsted: Ácido carboxílico (R–COOH, pKa ≈ 3.7–5.0).\n• Base: Hidróxido (OH⁻), bicarbonato (HCO₃⁻, base débil suficiente para desprotonar –COOH) o metal activo Na⁰.\n• Disolvente: Agua (solvata eficazmente los iones carboxilato y el catión metálico).",
+    "reglasObs": "• Efecto inductivo en la acidez (preguntas frecuentes de examen): los grupos atractores de electrones (−I: –NO₂, –F, –Cl, –Br) estabilizan el carboxilato y AUMENTAN la acidez (ác. tricloroacético > dicloroacético > cloroacético > acético; o-nitrobenzoico > p-nitrobenzoico > m-nitrobenzoico > benzoico).\n• Diferenciación química en laboratorio: Ácido carboxílico + NaHCO₃ → efervescencia de CO₂↑ (+); Fenol + NaHCO₃ → sin reacción (−) [el fenol solo reacciona con NaOH]."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn1_acetico_naoh",
+      "name": "Ácido Etanoico (Acético) + NaOH ac. ──► Etanoato de Sodio (Acetato de Sodio) + H₂O",
+      "catalyst": "NaOH acuoso (25 °C)"
+    },
+    {
+      "id": "ac_rxn1_benzoico_nahco3",
+      "name": "Ácido Benzoico + NaHCO₃ ac. ──► Benzoato de Sodio + CO₂↑ + H₂O [Ensayo Diagnóstico]",
+      "catalyst": "NaHCO₃ acuoso (Efervescencia CO₂↑)"
+    },
+    {
+      "id": "ac_rxn1_palmitico_jabon",
+      "name": "Ácido Palmítico (C₁₅H₃₁COOH) + NaOH / KOH ──► Palmitato de Sodio (Jabón / Micelas) + H₂O",
+      "catalyst": "NaOH / KOH (Formación de Micelas)"
+    },
+    {
+      "id": "ac_rxn1_propanoico_na",
+      "name": "Ácido Propanoico + Sodio Metálico (Na⁰) ──► Propanoato de Sodio + ½ H₂↑ [Con Metal Activo]",
+      "catalyst": "Na⁰ metálico (25 °C)"
+    }
+  ],
+  "catalysts": [
+    "NaOH acuoso (25 °C)",
+    "NaHCO₃ acuoso (Efervescencia CO₂↑)",
+    "NaOH / KOH (Formación de Micelas)",
+    "Na⁰ metálico (25 °C)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn1_acetico_naoh": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico (CH₃–COOH) + Hidróxido de Sodio (NaOH)",
+        "semiStep": "CH₃–COOH + Na⁺OH⁻",
+        "semiGlobal": "CH₃–COOH + NaOH ──► CH₃–COO⁻Na⁺ + H₂O",
+        "desc": "Se observan el ácido etanoico con su enlace O–H fuertemente polarizado por el carbonilo vecino y el ion hidróxido nucleofílico/básico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace O–H carboxílico intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El par libre del ion OH⁻ abstrae el protón ácido del grupo carboxilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 495,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 605,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "H Ácido"
+            },
+            {
+              "id": "OH",
+              "el": "OH⁻ (Na⁺)",
+              "x": 605,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Base"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O2",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Transferencia Protónica y Deslocalización de Carga",
+        "semiStep": "CH₃–COO–H + OH⁻ ──► [CH₃–COO]⁻ + H–OH",
+        "semiGlobal": "CH₃–COOH + NaOH ──► CH₃–COO⁻Na⁺ + H₂O",
+        "desc": "Se rompe heterolíticamente el enlace O–H quedando el par electrónico sobre el oxígeno, deslocalizado por resonancia equivalente con el oxígeno carbonílico.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace O–H.",
+          "forming": "En VERDE punteado: formación del enlace H–OH (molécula de agua).",
+          "movement": "El anión acetato estabiliza la carga negativa repartida ½ en cada oxígeno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O (δ−½)",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻ (δ−½)",
+              "x": 495,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 605,
+              "y": 265,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 605,
+              "y": 345,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O2",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "H1",
+              "to": "OH",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 605,
+              "y1": 325,
+              "cx": 580,
+              "cy": 295,
+              "x2": 600,
+              "y2": 280,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanoato de Sodio / Acetato de Sodio (CH₃–COO⁻Na⁺) + H₂O",
+        "semiStep": "CH₃–COO⁻Na⁺ + H₂O",
+        "semiGlobal": "CH₃–COOH + NaOH ──► CH₃–COO⁻Na⁺ + H₂O",
+        "desc": "Queda consolidado el acetato de sodio (sal iónica soluble en agua) junto con agua.",
+        "legend": {
+          "breaking": "Neutralización completada.",
+          "forming": "En VERDE sólido: ion carboxilato estabilizado por resonancia + catión Na⁺.",
+          "movement": "Producto salino obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanoato de Sodio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻Na⁺",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn1_benzoico_nahco3": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico + Bicarbonato de Sodio (NaHCO₃)",
+        "semiStep": "C₆H₅–COOH + Na⁺HCO₃⁻",
+        "semiGlobal": "C₆H₅–COOH + NaHCO₃ ──► C₆H₅–COO⁻Na⁺ + CO₂↑ + H₂O",
+        "desc": "El ácido benzoico (pKa = 4.2, insoluble en agua fría) reacciona con bicarbonato de sodio (pKa H₂CO₃ = 6.35) disolviéndose como benzoato de sodio y liberando burbujas de CO₂.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido benzoico sólido y bicarbonato acuoso listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia de H⁺ desde –COOH hacia HCO₃⁻ formando H₂CO₃ inestable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "COOH",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Base",
+              "el": "NaHCO₃ (ac.)",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Benzoato de Sodio (Soluble) + CO₂↑ + H₂O",
+        "semiStep": "C₆H₅–COO⁻Na⁺ + CO₂↑ (efervescencia) + H₂O",
+        "semiGlobal": "C₆H₅–COOH + NaHCO₃ ──► C₆H₅–COO⁻Na⁺ + CO₂↑ + H₂O",
+        "desc": "Queda consolidado el benzoato de sodio soluble con desprendimiento de CO₂ gaseoso (ensayo diagnóstico positivo para ácidos carboxílicos).",
+        "legend": {
+          "breaking": "Descomposición de H₂CO₃ → CO₂↑ + H₂O.",
+          "forming": "En VERDE sólido: benzoato de sodio soluble.",
+          "movement": "Permite separar ácidos carboxílicos de fenoles en mezclas orgánicas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "COO⁻Na⁺",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzoato de Sodio"
+            },
+            {
+              "id": "Gas",
+              "el": "+ CO₂↑ + H₂O",
+              "x": 615,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn1_palmitico_jabon": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Palmítico (C₁₅H₃₁–COOH) + NaOH",
+        "semiStep": "CH₃–(CH₂)₁₄–COOH + NaOH",
+        "semiGlobal": "C₁₅H₃₁–COOH + NaOH ──► C₁₅H₃₁–COO⁻Na⁺ (Jabón) + H₂O",
+        "desc": "El ácido palmítico (16C, ácido graso saturado) tiene una larga cola hidrofóbica insolubilizante; al neutralizarse con NaOH se transforma en una sal anfipática.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido graso y base listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Neutralización del grupo carboxilo terminal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Tail",
+              "el": "CH₃–(CH₂)₁₄ (Apolar)",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Head",
+              "el": "COOH",
+              "x": 435,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "NaOH",
+              "el": "NaOH",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Tail",
+              "to": "Head",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Palmitato de Sodio (Jabón / Formación de Micelas)",
+        "semiStep": "CH₃–(CH₂)₁₄–COO⁻Na⁺ + H₂O",
+        "semiGlobal": "C₁₅H₃₁–COOH + NaOH ──► C₁₅H₃₁–COO⁻Na⁺ (Jabón) + H₂O",
+        "desc": "Queda consolidado el palmitato de sodio (jabón), cuyas moléculas se agrupan en agua formando micelas esféricas (cabezas –COO⁻ hacia el agua, colas hacia el interior).",
+        "legend": {
+          "breaking": "Neutralización completada.",
+          "forming": "En VERDE sólido: sal anfipática emulsificante.",
+          "movement": "Pregunta directa de exámenes (Recopi Preg. 97: Ácido palmítico + NaOH → jabón)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Tail",
+              "el": "CH₃–(CH₂)₁₄ (Hidrofóbica)",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Head",
+              "el": "COO⁻Na⁺ (Hidrofílica)",
+              "x": 465,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Palmitato de Sodio (Jabón)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Tail",
+              "to": "Head",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn1_propanoico_na": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Propanoico + Sodio Metálico (Na⁰)",
+        "semiStep": "CH₃–CH₂–COOH + Na⁰",
+        "semiGlobal": "CH₃–CH₂–COOH + Na⁰ ──► CH₃–CH₂–COO⁻Na⁺ + ½ H₂↑",
+        "desc": "Los metales alcalinos activos (Na⁰, K⁰) reducen el protón ácido del grupo –COOH liberando gas hidrógeno (H₂↑).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido propanoico y Na⁰ listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia de 1 electrón desde Na⁰ al protón ácido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Na",
+              "el": "Na⁰",
+              "x": 565,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanoato de Sodio + ½ H₂↑",
+        "semiStep": "CH₃–CH₂–COO⁻Na⁺ + ½ H₂↑",
+        "semiGlobal": "CH₃–CH₂–COOH + Na⁰ ──► CH₃–CH₂–COO⁻Na⁺ + ½ H₂↑",
+        "desc": "Queda consolidado el propanoato de sodio con desprendimiento de hidrógeno gaseoso.",
+        "legend": {
+          "breaking": "Desplazamiento redox de H₂↑ completado.",
+          "forming": "En VERDE sólido: propanoato de sodio.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Salt",
+              "el": "COO⁻Na⁺",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanoato de Sodio"
+            },
+            {
+              "id": "H2",
+              "el": "+ ½ H₂↑",
+              "x": 595,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "Salt",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
