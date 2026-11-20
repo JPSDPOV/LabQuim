@@ -1,0 +1,1155 @@
+{
+  "category": "reacciones",
+  "title": "16) Condensación Aldólica Dirigida: Benzaldehído (sin H-α) + Cetona ──► Cetona α,β-Insaturada",
+  "natureBadge": "Condensación de Claisen-Schmidt • Aldehído Aromático (sin H-α) + Cetona (con H-α) ──(NaOH / EtOH)──► Enona Conjugada + H₂O",
+  "deltaH": "ΔH° ≈ −30 a −50 kJ/mol (Altamente exotérmica e irreversible; la deshidratación es espontánea por conjugación π extendida)",
+  "description": "Condensación aldólica cruzada dirigida (reacción de Claisen-Schmidt) entre un aldehído aromático sin hidrógenos en posición alfa (como el benzaldehído, C₆H₅–CHO) y una cetona enolizable (con H-α, como acetofenona o propanona) en medio básico hidroalcohólico (NaOH / EtOH):\n1) Control de selectividad (ausencia de H-α en el aldehído): dado que el benzaldehído no posee hidrógenos α, no puede formar un enolato ni auto-condensarse. Únicamente la cetona pierde un protón α por acción de la base formando el ion enolato nucleofílico.\n2) Adición nucleofílica dirigida: el enolato de la cetona ataca exclusivamente al carbono carbonílico del benzaldehído (más electrofílico y menos impedido estéricamente que el de la cetona), formando un alcóxido β-hidroxicetónico bencílico.\n3) Deshidratación espontánea a temperatura ambiente: incluso sin calentamiento fuerte, el intermediario β-hidroxi pierde agua de inmediato para establecer una conjugación π continua entre el anillo aromático, el doble enlace olefínico C=C y el grupo carbonilo C=O (formando chalconas o bencilidenacetonas).",
+  "meta": {
+    "grupoFuncional": "Cetonas α,β-Insaturadas Aromáticas (Chalconas: Ar–CH=CH–CO–Ar' y Bencilidenacetonas: Ar–CH=CH–CO–R)",
+    "reaccionMecanismo": "Enolización α selectiva de la cetona + Adición nucleofílica al aldehído sin H-α + Deshidratación E1cb espontánea",
+    "naturaleza": "Por etapas irreversible (desprotonación H-α de cetona → enolato → ataque al benzaldehído → protonación fugaz → eliminación E1cb espontánea de H₂O).",
+    "rupturaIntermediarios": "Ruptura de C–H α (cetona), π C=O (aldehído) y enlace Cβ–OH bencílico; intermediarios ion enolato y β-hidroxicetona; formación de enlace Cα=Cβ conjugado y H₂O.",
+    "detalleMecanismo": "C₆H₅–CHO + CH₃–CO–C₆H₅ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–C₆H₅ (Chalcona) + H₂O",
+    "reactivosCondiciones": "Aldehído aromático sin H-α (Benzaldehído, furfural, anisaldehído) + Cetona con H-α (Acetofenona, propanona, ciclopentanona) + NaOH o KOH en etanol/agua (20–25 °C).",
+    "rolReactivos": "• Aceptor electrofílico exclusivo (sin H-α): Benzaldehído (C₆H₅–CHO).\n• Donador nucleofílico enolizable (con H-α): Cetona (acetofenona, propanona, etc.).\n• Catalizador básico: NaOH / EtOH-H₂O (genera el enolato y promueve la eliminación E1cb).",
+    "reglasObs": "• Síntesis de Chalconas: Benzaldehído + Acetofenona ──(NaOH / EtOH)──► (E)-1,3-Difenil-2-propen-1-ona (Chalcona, sólido amarillo pálido).\n• Estequiometría 1:1 vs. 2:1 en propanona: con 1 eq. de benzaldehído + exceso de propanona se obtiene BENCILIDENACETONA (C₆H₅–CH=CH–CO–CH₃); con 2 eq. de benzaldehído + 1 eq. de propanona condensan ambos metilos α formando DIBENCILIDENACETONA (C₆H₅–CH=CH–CO–CH=CH–C₆H₅).\n• Estereoselectividad: predomina casi exclusivamente el isómero trans (E) por mínima repulsión estérica entre los grupos voluminosos."
+  },
+  "substrates": [
+    {
+      "id": "cs_benzaldehido_acetofenona",
+      "name": "Benzaldehído + Acetofenona (NaOH / EtOH) ──► Chalcona ((E)-1,3-Difenil-2-propen-1-ona) + H₂O",
+      "catalyst": "NaOH / EtOH–H₂O (25 °C)"
+    },
+    {
+      "id": "cs_benzaldehido_propanona_1a1",
+      "name": "Benzaldehído + Propanona (1:1, NaOH) ──► Bencilidenacetona (4-Fenil-3-buten-2-ona) + H₂O",
+      "catalyst": "NaOH diluido / EtOH (25 °C)"
+    },
+    {
+      "id": "cs_2benzaldehido_propanona_2a1",
+      "name": "2 Benzaldehído + Propanona (2:1, NaOH) ──► Dibencilidenacetona (1,5-Difenil-1,4-pentadien-3-ona) + 2 H₂O",
+      "catalyst": "NaOH / EtOH (25 °C)"
+    },
+    {
+      "id": "cs_benzaldehido_ciclohexanona",
+      "name": "Benzaldehído + Ciclohexanona (1:1, NaOH) ──► 2-Bencilidenciclohexanona + H₂O [Cetona Cíclica]",
+      "catalyst": "NaOH / EtOH–H₂O (25 °C)"
+    }
+  ],
+  "catalysts": [
+    "NaOH / EtOH–H₂O (25 °C)",
+    "NaOH diluido / EtOH (25 °C)",
+    "NaOH / EtOH (25 °C)"
+  ],
+  "stepsBySubstrate": {
+    "cs_benzaldehido_acetofenona": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído (sin H-α) + Acetofenona (con H-α)",
+        "semiStep": "C₆H₅–CHO + CH₃–CO–C₆H₅ + OH⁻ (NaOH / EtOH)",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–C₆H₅ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–C₆H₅ + H₂O",
+        "desc": "Se observan el benzaldehído (sin hidrógenos α, solo electrófilo) y la acetofenona, cuyo grupo metilo α (–CH₃) perderá un protón frente a la base OH⁻ para formar el ion enolato.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído, acetofenona y base intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Desprotonación selectiva del grupo metilo α de la acetofenona por acción de OH⁻."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H",
+              "x": 155,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 275,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Cα Acetofenona"
+            },
+            {
+              "id": "COPh_1",
+              "el": "COPh",
+              "x": 275,
+              "y": 325
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 155,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "NaOH / EtOH"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "Benzaldehído (δ+)"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "COPh_1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Enolización de la Acetofenona y Ataque al Benzaldehído",
+        "semiStep": "[⁻CH₂–CO–C₆H₅] + C₆H₅–CHO ──► C₆H₅–CH(O⁻)–CH₂–CO–C₆H₅",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–C₆H₅ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–C₆H₅ + H₂O",
+        "desc": "El enolato de la acetofenona ataca nucleofílicamente al carbono formilo del benzaldehído formando un enlace C–C y abriendo el enlace π C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–H α (salida de H₂O) y apertura del enlace π C=O del benzaldehído.",
+          "forming": "En VERDE punteado: formación del nuevo enlace carbono-carbono (Cα–Cβ).",
+          "movement": "Formación del alcóxido β-hidroxicetónico bencílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_alpha",
+              "el": "H₂O",
+              "x": 155,
+              "y": 150,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 275,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "COPh_1",
+              "el": "COPh",
+              "x": 275,
+              "y": 325
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "O2_carb",
+              "el": "O⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_alpha",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C_alpha",
+              "to": "COPh_1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 325,
+              "y1": 210,
+              "cx": 410,
+              "cy": 182,
+              "x2": 505,
+              "y2": 205,
+              "label": "Ataque Cα → CHO"
+            },
+            {
+              "type": "full",
+              "x1": 605,
+              "y1": 198,
+              "cx": 635,
+              "cy": 178,
+              "x2": 655,
+              "y2": 195,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Espontánea E1cb Hacia el Sistema Conjugado",
+        "semiStep": "C₆H₅–CH(OH)–CH₂–CO–C₆H₅ ──(OH⁻, espontánea)──► C₆H₅–CH=CH–CO–C₆H₅ + H₂O",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–C₆H₅ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–C₆H₅ + H₂O",
+        "desc": "El intermediario β-hidroxicetónico pierde agua espontáneamente a 25 °C porque el doble enlace C=C resultante conecta en conjugación continua ambos anillos aromáticos y el carbonilo.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace Cβ–OH bencílico (salida de OH⁻ / H₂O).",
+          "forming": "En VERDE punteado: formación del doble enlace trans Cα=Cβ.",
+          "movement": "La extensa deslocalización π hace que la reacción sea irreversible."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "COPh_1",
+              "el": "PhCO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH espontáneo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "COPh_1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            },
+            {
+              "type": "full",
+              "x1": 565,
+              "y1": 210,
+              "cx": 605,
+              "cy": 188,
+              "x2": 635,
+              "y2": 205,
+              "label": "Expulsa OH⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Chalcona ((E)-1,3-Difenil-2-propen-1-ona) + H₂O",
+        "semiStep": "(E)-C₆H₅–CH=CH–CO–C₆H₅ + H₂O (Sólido cristalino amarillo)",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–C₆H₅ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–C₆H₅ + H₂O",
+        "desc": "Queda consolidada la trans-chalcona (1,3-difenil-2-propen-1-ona), precursor biosintético de flavonoides y cromóforo amarillo pálido.",
+        "legend": {
+          "breaking": "Condensación de Claisen-Schmidt completada.",
+          "forming": "En VERDE sólido: sistema conjugado Ar–CH=CH–CO–Ar'.",
+          "movement": "Producto chalcona aislado con excelente rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "COPh_1",
+              "el": "PhCO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "(E)-Chalcona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "COPh_1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cs_benzaldehido_propanona_1a1": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Propanona (Estequiometría 1:1)",
+        "semiStep": "C₆H₅–CHO + CH₃–CO–CH₃ (1:1, NaOH dil.)",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–CH₃ + H₂O",
+        "desc": "Usando un ligero exceso de propanona frente a 1 equivalente de benzaldehído, solo uno de los grupos metilo α de la propanona condensa.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y propanona intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del enolato de la propanona al carbono carbonílico del benzaldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "COCH3_1",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₂",
+              "x": 325,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Enolato Propanona"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 495,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            },
+            {
+              "id": "H2_ald",
+              "el": "H",
+              "x": 545,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "COCH3_1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "H2_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 370,
+              "y1": 210,
+              "cx": 435,
+              "cy": 185,
+              "x2": 505,
+              "y2": 205,
+              "label": "Ataque Cα → CHO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación Espontánea a Bencilidenacetona",
+        "semiStep": "C₆H₅–CH(OH)–CH₂–CO–CH₃ ──(−H₂O)──► C₆H₅–CH=CH–CO–CH₃",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–CH₃ + H₂O",
+        "desc": "La β-hidroxicetona pierde agua espontáneamente generando el doble enlace conjugado Ph–CH=CH–CO–CH₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión del grupo –OH bencílico.",
+          "forming": "En VERDE punteado: formación del doble enlace C3=C4.",
+          "movement": "Conjugación entre el grupo fenilo y la cetona α,β-insaturada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "COCH3_1",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "COCH3_1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 195,
+              "cx": 425,
+              "cy": 175,
+              "x2": 470,
+              "y2": 195,
+              "label": "Forma π C=C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Bencilidenacetona (4-Fenil-3-buten-2-ona) + H₂O",
+        "semiStep": "(E)-C₆H₅–CH=CH–CO–CH₃ + H₂O",
+        "semiGlobal": "C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► C₆H₅–CH=CH–CO–CH₃ + H₂O",
+        "desc": "Queda consolidada la bencilidenacetona, que aún conserva un grupo metilo α (–CO–CH₃) capaz de reaccionar con un segundo equivalente de benzaldehído.",
+        "legend": {
+          "breaking": "Condensación 1:1 completada.",
+          "forming": "En VERDE sólido: sistema conjugado Ph–CH=CH–CO–CH₃.",
+          "movement": "Producto mono-condensado obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "COCH3_1",
+              "el": "CH₃CO",
+              "x": 185,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Bencilidenacetona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "COCH3_1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cs_2benzaldehido_propanona_2a1": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Benzaldehído + Propanona (Estequiometría 2:1)",
+        "semiStep": "2 C₆H₅–CHO + CH₃–CO–CH₃ (2:1, NaOH / EtOH)",
+        "semiGlobal": "2 C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► (C₆H₅–CH=CH)₂C=O + 2 H₂O",
+        "desc": "Al emplear 2 equivalentes de benzaldehído por cada equivalente de propanona, ambos grupos metilo α (C1 y C3) condensan sucesivamente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; bencilidenacetona y 2.º benzaldehído listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Segunda enolización en el metilo α restante y ataque al segundo benzaldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Styryl_L",
+              "el": "PhCH=CH–CO",
+              "x": 205,
+              "y": 210,
+              "label": "Bencilidenacetona"
+            },
+            {
+              "id": "C_alpha2",
+              "el": "CH₂",
+              "x": 365,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "2.º Cα"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 525,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 555,
+              "y": 210,
+              "label": "2.º Benzaldehído"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 675,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Styryl_L",
+              "to": "C_alpha2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 405,
+              "y1": 210,
+              "cx": 460,
+              "cy": 185,
+              "x2": 515,
+              "y2": 205,
+              "label": "2.ª condensación"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Segunda Deshidratación Espontánea",
+        "semiStep": "Ph–CH=CH–CO–CH₂–CH(OH)–Ph ──(−H₂O)──► Ph–CH=CH–CO–CH=CH–Ph",
+        "semiGlobal": "2 C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► (C₆H₅–CH=CH)₂C=O + 2 H₂O",
+        "desc": "La segunda pérdida de agua crea una dienona simétrica totalmente conjugada de extremo a extremo.",
+        "legend": {
+          "breaking": "En ROJO punteado: expulsión de la segunda molécula de agua.",
+          "forming": "En VERDE punteado: formación del segundo doble enlace olefínico conjugado.",
+          "movement": "Conjugación cruzada de 17 átomos de carbono."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Styryl_L",
+              "el": "PhCH=CH–CO",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C_alpha2",
+              "el": "CH",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 525,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 675,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale 2.º –OH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Styryl_L",
+              "to": "C_alpha2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha2",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Dibencilidenacetona (1,5-Difenil-1,4-pentadien-3-ona) + 2 H₂O",
+        "semiStep": "(E,E)-C₆H₅–CH=CH–CO–CH=CH–C₆H₅ + 2 H₂O (Sólido amarillo brillante)",
+        "semiGlobal": "2 C₆H₅–CHO + CH₃–CO–CH₃ ──(NaOH / EtOH)──► (C₆H₅–CH=CH)₂C=O + 2 H₂O",
+        "desc": "Queda consolidada la dibencilidenacetona (dba), compuesto cristalino amarillo usado en filtros solares UV y como ligando en catálisis de paladio [Pd₂(dba)₃].",
+        "legend": {
+          "breaking": "Doble condensación de Claisen-Schmidt completada.",
+          "forming": "En VERDE sólido: sistema dienona conjugado simétrico.",
+          "movement": "Precipita directamente de la solución hidroalcohólica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Styryl_L",
+              "el": "PhCH=CH–CO",
+              "x": 205,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha2",
+              "el": "CH",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Dibencilidenacetona (dba)"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 525,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ 2 H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Styryl_L",
+              "to": "C_alpha2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha2",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cs_benzaldehido_ciclohexanona": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Ciclohexanona (1:1, NaOH / EtOH)",
+        "semiStep": "C₆H₅–CHO + Ciclohexanona (NaOH / EtOH)",
+        "semiGlobal": "C₆H₅–CHO + Ciclohexanona ──(NaOH / EtOH)──► 2-Bencilidenciclohexanona + H₂O",
+        "desc": "El enolato formado en el carbono α (C2) de la ciclohexanona ataca selectivamente al carbonilo del benzaldehído.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y ciclohexanona intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del carbono C2 del anillo ciclohexánico al benzaldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210,
+              "label": "Ciclohexanona (Enolato)"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH",
+              "x": 335,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "C2_carb",
+              "el": "C",
+              "x": 545,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O2_carb",
+              "el": "O",
+              "x": 665,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 2,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 375,
+              "y1": 210,
+              "cx": 435,
+              "cy": 185,
+              "x2": 505,
+              "y2": 205,
+              "label": "Ataque C2 → CHO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Deshidratación Espontánea Exocíclica",
+        "semiStep": "2-(Hidroxifenilmetil)ciclohexanona ──(−H₂O)──► 2-Bencilidenciclohexanona",
+        "semiGlobal": "C₆H₅–CHO + Ciclohexanona ──(NaOH / EtOH)──► 2-Bencilidenciclohexanona + H₂O",
+        "desc": "La pérdida espontánea de agua genera un doble enlace exocíclico trisustituido conjugado con el anillo aromático y la cetona.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida del grupo –OH bencílico.",
+          "forming": "En VERDE punteado: formación del doble enlace exocíclico C2=CHPh.",
+          "movement": "Conjugación cruzada extendida."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "O2_carb",
+              "el": "OH⁻",
+              "x": 665,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale –OH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2_carb",
+              "to": "O2_carb",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: (E)-2-Bencilidenciclohexanona + H₂O",
+        "semiStep": "2-Bencilidenciclohexanona + H₂O",
+        "semiGlobal": "C₆H₅–CHO + Ciclohexanona ──(NaOH / EtOH)──► 2-Bencilidenciclohexanona + H₂O",
+        "desc": "Queda consolidada la (E)-2-bencilidenciclohexanona, enona exocíclica conjugada.",
+        "legend": {
+          "breaking": "Condensación de Claisen-Schmidt completada.",
+          "forming": "En VERDE sólido: doble enlace exocíclico conjugado al fenilo.",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₈O",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C_alpha",
+              "el": "C",
+              "x": 345,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2-Bencilidenciclohexanona"
+            },
+            {
+              "id": "C2_carb",
+              "el": "CH",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph_2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 505,
+              "y": 95
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C_alpha",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_alpha",
+              "to": "C2_carb",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Ph_2",
+              "to": "C2_carb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
