@@ -1,0 +1,356 @@
+{
+  "category": "obtencion",
+  "title": "1) Sustitución Nucleofílica (SN2) de Halogenuros de Alquilo con NH₃ o Aminas (1° → 2° → 3°)",
+  "natureBadge": "Alquilación SN2 de Nitrógeno • R–X + NH₃ / R'NH₂ / R'₂NH ──► Sal de Alquilamonio ──► Etilamina / Dietilamina / Trietilamina",
+  "deltaH": "ΔH° < 0 (Exotérmica; sustitución bimolecular concertada SN2 con inversión de configuración)",
+  "description": "Obtención escalonada de aminas primarias, secundarias y terciarias por ataque nucleofílico SN2 del par libre del amoníaco o de una amina sobre el carbono electrófilo (δ+) de un halogenuro de alquilo primario o metílico (Diap. 1182 de cátedra):\n1) Obtención de Amina Primaria (Etilamina): Cloroetano (CH₃CH₂–Cl) + Amoníaco (:NH₃) ──(SN2)──► Cloruro de etilamonio (CH₃CH₂NH₃⁺Cl⁻) ──► Etilamina (CH₃CH₂–NH₂) + HCl.\n2) Obtención de Amina Secundaria (Dietilamina): Cloroetano + Etilamina (CH₃CH₂NH₂) ──(SN2)──► Dietilamina ((CH₃CH₂)₂NH) + HCl.\n3) Obtención de Amina Terciaria (Trietilamina): Cloroetano + Dietilamina ((CH₃CH₂)₂NH) ──(SN2)──► Trietilamina ((CH₃CH₂)₃N) + HCl.\n4) Control de polialquilación: se emplea un gran exceso de amoníaco para favorecer la monoalquilación hacia la amina primaria.",
+  "meta": {
+    "grupoFuncional": "Aminas Primarias (R–NH₂), Secundarias (R₂NH) y Terciarias (R₃N)",
+    "reaccionMecanismo": "Sustitución nucleofílica bimolecular concertada (SN2) en una etapa vía estado de transición pentacoordinado",
+    "naturaleza": "Concertada (ataque dorsal de :NH₃ / amina sobre el enlace C–X → sal de alquilamonio → desprotonación).",
+    "rupturaIntermediarios": "Ruptura heterolítica del enlace C–Cl (o C–Br / C–I); estado de transición trigonal bipiramidal; formación de enlace C–N.",
+    "detalleMecanismo": "CH₃CH₂–Cl + :NH₃ ──(SN2)──► [CH₃CH₂–NH₃⁺ Cl⁻] ──► CH₃CH₂–NH₂ (Etilamina) + HCl",
+    "reactivosCondiciones": "Halogenuro de alquilo primario o metílico (R–Cl, R–Br, R–I) + NH₃ (en exceso para amina 1°) o amina 1°/2°, calentamiento suave en etanol o medio acuoso.",
+    "rolReactivos": "• Electrófilo: Halogenuro de alquilo primario (orden reactividad: CH₃–X > 1° > 2°; los haluros 3° sufren eliminación E2).\n• Nucleófilo: Amoníaco (:NH₃) o amina primaria/secundaria.\n• Base desprotonante: Exceso de NH₃ o NaOH.",
+    "reglasObs": "• Si no se usa exceso de amoníaco, la amina primaria formada es aún más nucleofílica que el NH₃ y continúa alquilándose hasta dietilamina, trietilamina y sal de amonio cuaternaria.\n• Ejemplo exacto de cátedra (Diap. 1182): Cloroetano + NH₃ → Cloruro de etilamonio → Etilamina + HCl; Etilamina + Cloroetano → Dietilamina + HCl; Dietilamina + Cloroetano → Trietilamina + HCl."
+  },
+  "substrates": [
+    {
+      "id": "ami_obt1_etilamina",
+      "name": "Cloroetano + Amoníaco (NH₃ exceso) ──(SN2)──► Cloruro de Etilamonio ──► Etilamina (Amina 1°) + HCl",
+      "catalyst": "SN2 • EtOH / Δ (Exceso NH₃)"
+    },
+    {
+      "id": "ami_obt1_dietilamina",
+      "name": "Cloroetano + Etilamina ──(SN2)──► Dietilamina (N-Etiletanamina — Amina 2°) + HCl",
+      "catalyst": "SN2 • EtOH / Δ"
+    },
+    {
+      "id": "ami_obt1_trietilamina",
+      "name": "Cloroetano + Dietilamina ──(SN2)──► Trietilamina (N,N-Dietiletanamina — Amina 3°) + HCl",
+      "catalyst": "SN2 • EtOH / Δ"
+    }
+  ],
+  "catalysts": [
+    "SN2 • EtOH / Δ (Exceso NH₃)",
+    "SN2 • EtOH / Δ"
+  ],
+  "stepsBySubstrate": {
+    "ami_obt1_etilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloroetano (CH₃–CH₂–Cl) + Amoníaco (:NH₃)",
+        "semiStep": "CH₃–CH₂–Cl + :NH₃",
+        "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₃⁺Cl⁻ ──► CH₃–CH₂–NH₂ (Etilamina) + HCl",
+        "desc": "Se observan el cloroetano (carbono primario electrófilo δ+) y el amoníaco con su par de electrones libre sobre el nitrógeno.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace polar C1–Cl intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico dorsal SN2 del par libre de :NH₃ sobre el carbono C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂ (δ+)",
+              "x": 365,
+              "y": 210,
+              "label": "Sustrato Primario"
+            },
+            {
+              "id": "Cl",
+              "el": "Cl (δ−)",
+              "x": 525,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "NH3",
+              "el": ":NH₃",
+              "x": 365,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Cl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 365,
+              "y1": 302,
+              "cx": 345,
+              "cy": 265,
+              "x2": 360,
+              "y2": 235,
+              "label": "Ataque SN2"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Sal Cloruro de Etilamonio (CH₃CH₂–NH₃⁺ Cl⁻)",
+        "semiStep": "CH₃–CH₂–Cl + :NH₃ ──► [CH₃–CH₂–NH₃⁺ Cl⁻]",
+        "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₃⁺Cl⁻ ──► CH₃–CH₂–NH₂ (Etilamina) + HCl",
+        "desc": "Se rompe heterolíticamente el enlace C1–Cl mientras se consolida el enlace C1–N, generando el intermediario iónico cloruro de etilamonio.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida del grupo saliente cloruro (Cl⁻).",
+          "forming": "En VERDE punteado: formación del enlace C1–N.",
+          "movement": "La desprotonación posterior libera la amina neutra."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "NH3",
+              "el": "NH₃⁺",
+              "x": 365,
+              "y": 325,
+              "highlight": "#fbbf24",
+              "label": "Cloruro de etilamonio"
+            },
+            {
+              "id": "Cl",
+              "el": "Cl⁻",
+              "x": 545,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NH3",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "Cl",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etilamina / Etanamina (CH₃–CH₂–NH₂) + HCl",
+        "semiStep": "CH₃–CH₂–NH₂ (Etilamina, Amina 1°) + HCl",
+        "semiGlobal": "CH₃–CH₂–Cl + NH₃ ──(SN2)──► CH₃–CH₂–NH₃⁺Cl⁻ ──► CH₃–CH₂–NH₂ (Etilamina) + HCl",
+        "desc": "Queda consolidada la etilamina (amina primaria) junto con cloruro de hidrógeno (capturado como NH₄Cl por el exceso de amoníaco).",
+        "legend": {
+          "breaking": "Sustitución nucleofílica SN2 completada.",
+          "forming": "En VERDE sólido: etilamina (CH₃–CH₂–NH₂).",
+          "movement": "Producto amina primaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 365,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etilamina (Amina 1°)"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_obt1_dietilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloroetano + Etilamina (CH₃CH₂–NH₂)",
+        "semiStep": "CH₃–CH₂–Cl + CH₃–CH₂–NH₂",
+        "semiGlobal": "CH₃CH₂–Cl + CH₃CH₂–NH₂ ──(SN2)──► (CH₃CH₂)₂NH (Dietilamina) + HCl",
+        "desc": "La etilamina actúa como nucleófilo atacando a una segunda molécula de cloroetano.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque SN2 del nitrógeno de la etilamina al carbono C1 del cloroetano."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–Cl",
+              "x": 245,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Nuc",
+              "el": "+ CH₃–CH₂–NH₂",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Dietilamina ((CH₃CH₂)₂NH — Amina 2°) + HCl",
+        "semiStep": "CH₃–CH₂–NH–CH₂–CH₃ (Dietilamina) + HCl",
+        "semiGlobal": "CH₃CH₂–Cl + CH₃CH₂–NH₂ ──(SN2)──► (CH₃CH₂)₂NH (Dietilamina) + HCl",
+        "desc": "Queda consolidada la dietilamina (N-etiletanamina, amina secundaria).",
+        "legend": {
+          "breaking": "Sustitución SN2 completada.",
+          "forming": "En VERDE sólido: dietilamina.",
+          "movement": "Producto amina secundaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃CH₂–NH–CH₂CH₃",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Dietilamina (Amina 2°)"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 575,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_obt1_trietilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloroetano + Dietilamina ((CH₃CH₂)₂NH)",
+        "semiStep": "CH₃–CH₂–Cl + (CH₃CH₂)₂NH",
+        "semiGlobal": "CH₃CH₂–Cl + (CH₃CH₂)₂NH ──(SN2)──► (CH₃CH₂)₃N (Trietilamina) + HCl",
+        "desc": "La dietilamina ataca nucleofílicamente a otro equivalente de cloroetano.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Alquilación SN2 hacia amina terciaria."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–Cl",
+              "x": 245,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Nuc",
+              "el": "+ (CH₃CH₂)₂NH",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Trietilamina ((CH₃CH₂)₃N — Amina 3°) + HCl",
+        "semiStep": "(CH₃CH₂)₃N (Trietilamina) + HCl",
+        "semiGlobal": "CH₃CH₂–Cl + (CH₃CH₂)₂NH ──(SN2)──► (CH₃CH₂)₃N (Trietilamina) + HCl",
+        "desc": "Queda consolidada la trietilamina (N,N-dietiletanamina, amina terciaria).",
+        "legend": {
+          "breaking": "Sustitución SN2 completada.",
+          "forming": "En VERDE sólido: trietilamina.",
+          "movement": "Producto amina terciaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "(CH₃CH₂)₃N",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Trietilamina (Amina 3°)"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 555,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
