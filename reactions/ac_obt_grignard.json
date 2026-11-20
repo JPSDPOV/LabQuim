@@ -1,0 +1,479 @@
+{
+  "category": "obtencion",
+  "title": "6) Carbonatación de Reactivos de Grignard con Dióxido de Carbono (R–MgX + 1° CO₂ / 2° H₃O⁺ → R–COOH)",
+  "natureBadge": "Síntesis Organometálica +1C • Haluro (R–X) ──(Mg/Éter)──► R–MgX ──(1. CO₂  2. H₃O⁺)──► Ácido Carboxílico (R–COOH)",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; alarga la cadena carbonada en +1 carbono formando un enlace fuerte C–C)",
+  "description": "Obtención de ácidos carboxílicos alifáticos o aromáticos mediante la reacción de adición nucleofílica de un reactivo de Grignard (R–MgX o Ar–MgX) sobre dióxido de carbono gaseoso o sólido (CO₂, hielo seco) en éter anhidro, seguida de hidrólisis ácida (H₃O⁺):\n1) Preparación del reactivo de Grignard: el haluro de alquilo o de arilo (R–X, incluso haluros terciarios o aromáticos donde la vía del cianuro SN2 falla) reacciona con magnesio metálico (Mg⁰) en éter dietílico anhidro o THF generando Rδ⁻–MgXδ⁺.\n2) Adición nucleofílica sobre CO₂ (Carbonatación): el carbono carbaniónico nucleofílico del reactivo de Grignard ataca al carbono electrofílico central del CO₂ (O=C=O), abriendo uno de los enlaces π C=O y generando una sal halomagnesio carboxilato (R–COO⁻ ⁺MgX).\n3) Hidrólisis ácida (H₃O⁺ / HCl acuoso): la protonación del carboxilato libera el ácido carboxílico neutro (R–COOH) con un átomo de carbono más (+1C) que el haluro de partida.",
+  "meta": {
+    "grupoFuncional": "Ácidos Carboxílicos Alifáticos (1°, 2°, 3°) y Aromáticos (Ar–COOH) con +1 Carbono",
+    "reaccionMecanismo": "Adición nucleofílica polar de Grignard sobre CO₂ seguida de protonación ácido-base",
+    "naturaleza": "Por etapas irreversible (Etapa 1: R–MgX + O=C=O → R–COO⁻ ⁺MgX | Etapa 2: R–COO⁻ + H₃O⁺ → R–COOH + H₂O).",
+    "rupturaIntermediarios": "Ruptura de C–Mg, enlace π C=O del CO₂ y enlace O–H del ácido acuoso; intermediario sal carboxilato de magnesio; formación de enlaces C–C y O–H.",
+    "detalleMecanismo": "R–MgX + O=C=O ──(Et₂O anhidro)──► R–COO⁻ ⁺MgX ──(H₃O⁺)──► R–COOH",
+    "reactivosCondiciones": "Etapa 1: R–MgX + CO₂ (burbujeo de gas seco o hielo seco) en Et₂O o THF anhidro. Etapa 2: Hidrólisis con HCl acuoso diluido o H₃O⁺.",
+    "rolReactivos": "• Nucleófilo organometálico: Reactivo de Grignard (Rδ⁻–MgXδ⁺ o Arδ⁻–MgXδ⁺).\n• Electrófilo carbonílico: Dióxido de carbono (O=C=O, carbono central sp fuertemente electrofílico δ+).\n• Fuente de protones (2.ª etapa separada): H₃O⁺ / HCl diluido.",
+    "reglasObs": "• Ventaja decisiva frente a la vía del nitrilo (NaCN): la carbonatación de Grignard funciona perfectamente con HALUROS TERCIARIOS (ej. cloruro de terc-butilo → ácido 2,2-dimetilpropanoico) y con HALUROS DE ARILO (ej. bromobenceno → ácido benzoico), donde la sustitución SN2 con CN⁻ es imposible.\n• Al igual que toda reacción de Grignard, exige ausencia total de humedad y grupos protónicos libres (–OH, –NH₂, –COOH) durante la etapa 1."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt6_etmgcl_propanoico",
+      "name": "Cloruro de Etilmagnesio + 1. CO₂  2. H₃O⁺ ──► Ácido Propanoico (+1C) [Ejemplo de Cátedra]",
+      "catalyst": "1) CO₂ / Et₂O anhidro  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt6_phmgbr_benzoico",
+      "name": "Bromuro de Fenilmagnesio (desde Bromobenceno) + 1. CO₂  2. H₃O⁺ ──► Ácido Benzoico [Arilo]",
+      "catalyst": "1) CO₂ / THF anhidro  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt6_terbutil_pivalico",
+      "name": "Cloruro de terc-Butilmagnesio + 1. CO₂  2. H₃O⁺ ──► Ácido 2,2-Dimetilpropanoico [Haluro 3°]",
+      "catalyst": "1) CO₂ / Et₂O anhidro  2) H₃O⁺"
+    }
+  ],
+  "catalysts": [
+    "1) CO₂ / Et₂O anhidro  2) H₃O⁺",
+    "1) CO₂ / THF anhidro  2) H₃O⁺"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt6_etmgcl_propanoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de Etilmagnesio (CH₃CH₂–MgCl) + Dióxido de Carbono (CO₂)",
+        "semiStep": "CH₃–CH₂–MgCl + O=C=O (en Et₂O anhidro)",
+        "semiGlobal": "CH₃CH₂–MgCl + CO₂ ──(1. Et₂O  2. H₃O⁺)──► CH₃CH₂–COOH + Mg(OH)Cl",
+        "desc": "Se observan el cloruro de etilmagnesio fuertemente polarizado (CH₃CH₂δ⁻–MgClδ⁺) y la molécula lineal de dióxido de carbono (O=C=O) cuyo carbono central posee gran densidad positiva δ+.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivo de Grignard y CO₂ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del carbono etílico al carbono central del CO₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 225,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Grignard (δ−)"
+            },
+            {
+              "id": "MgCl",
+              "el": "MgCl",
+              "x": 225,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_top",
+              "el": "O",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C_co2",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "label": "CO₂ (δ+)"
+            },
+            {
+              "id": "O_bot",
+              "el": "O",
+              "x": 455,
+              "y": 325
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "MgCl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_top",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_bot",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación del Enlace C–C y Carboxilato de Magnesio",
+        "semiStep": "CH₃–CH₂–MgCl + O=C=O ──► CH₃–CH₂–COO⁻ ⁺MgCl",
+        "semiGlobal": "CH₃CH₂–MgCl + CO₂ ──(1. Et₂O  2. H₃O⁺)──► CH₃CH₂–COOH + Mg(OH)Cl",
+        "desc": "Se forma el nuevo enlace carbono-carbono (CH₃CH₂–C) mientras uno de los enlaces π C=O del CO₂ se abre hacia el oxígeno coordinado con el magnesio.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C–Mg y apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del enlace C2–C1 (+1 carbono).",
+          "movement": "El carbono C1 cambia de hibridación sp (lineal) a sp² (trigonal plana)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 225,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "MgCl",
+              "el": "MgCl⁺",
+              "x": 225,
+              "y": 325,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "O_top",
+              "el": "O",
+              "x": 455,
+              "y": 95
+            },
+            {
+              "id": "C_co2",
+              "el": "C1",
+              "x": 455,
+              "y": 210
+            },
+            {
+              "id": "O_bot",
+              "el": "O⁻",
+              "x": 605,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "MgCl",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Et",
+              "to": "C_co2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_top",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_bot",
+              "order": 2,
+              "state": "breaking-pi"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 275,
+              "y1": 210,
+              "cx": 345,
+              "cy": 182,
+              "x2": 415,
+              "y2": 205,
+              "label": "Ataque C–C"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Hidrólisis H₃O⁺) y Producto Consolidado: Ácido Propanoico (CH₃–CH₂–COOH)",
+        "semiStep": "CH₃–CH₂–COO⁻ ⁺MgCl + H₃O⁺ ──► CH₃–CH₂–COOH + Mg(OH)Cl + H₂O",
+        "semiGlobal": "CH₃CH₂–MgCl + CO₂ ──(1. Et₂O  2. H₃O⁺)──► CH₃CH₂–COOH + Mg(OH)Cl",
+        "desc": "Tras la hidrólisis ácida en la segunda etapa, queda consolidado el ácido propanoico (3 carbonos a partir del cloruro de etilo de 2 carbonos).",
+        "legend": {
+          "breaking": "Protonación del carboxilato completada.",
+          "forming": "En VERDE sólido: grupo ácido carboxílico (–COOH).",
+          "movement": "Método de obtención 10 de las diapositivas de cátedra."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C_co2",
+              "el": "C1",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Propanoico (+1C)"
+            },
+            {
+              "id": "O_top",
+              "el": "O",
+              "x": 405,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_bot",
+              "el": "OH",
+              "x": 565,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C_co2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_top",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_co2",
+              "to": "O_bot",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt6_phmgbr_benzoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Bromuro de Fenilmagnesio + CO₂ (Hielo Seco)",
+        "semiStep": "C₆H₅–MgBr + O=C=O (THF anhidro)",
+        "semiGlobal": "C₆H₅–MgBr + CO₂ ──(1. THF  2. H₃O⁺)──► C₆H₅–COOH (Ácido Benzoico)",
+        "desc": "Permite introducir directamente un grupo carboxilo en un anillo aromático a partir de bromobenceno.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; C₆H₅MgBr y CO₂ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del carbono aromático ipso sobre el carbono del CO₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "MgBr",
+              "el": "MgBr",
+              "x": 225,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "CO2",
+              "el": "O=C=O",
+              "x": 475,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "MgBr",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Benzoico (C₆H₅–COOH) tras H₃O⁺",
+        "semiStep": "C₆H₅–COOH",
+        "semiGlobal": "C₆H₅–MgBr + CO₂ ──(1. THF  2. H₃O⁺)──► C₆H₅–COOH (Ácido Benzoico)",
+        "desc": "Queda consolidado el ácido benzoico cristalino.",
+        "legend": {
+          "breaking": "Carbonatación e hidrólisis completadas.",
+          "forming": "En VERDE sólido: ácido benzoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Benzoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 405,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 555,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt6_terbutil_pivalico": [
+      {
+        "title": "Estado Inicial Desarrollado: Cloruro de terc-Butilmagnesio + CO₂",
+        "semiStep": "(CH₃)₃C–MgCl + O=C=O",
+        "semiGlobal": "(CH₃)₃C–MgCl + CO₂ ──(1. Et₂O  2. H₃O⁺)──► (CH₃)₃C–COOH (Ácido Piválico)",
+        "desc": "Síntesis de ácidos carboxílicos terciarios impedidos (imposibles de obtener por vía del cianuro SN2).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; Grignard terciario y CO₂ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del carbono terciario al CO₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "tBu",
+              "el": "(CH₃)₃C",
+              "x": 225,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "MgCl",
+              "el": "MgCl",
+              "x": 225,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "CO2",
+              "el": "O=C=O",
+              "x": 475,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "tBu",
+              "to": "MgCl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido 2,2-Dimetilpropanoico / Ácido Piválico ((CH₃)₃C–COOH)",
+        "semiStep": "(CH₃)₃C–COOH",
+        "semiGlobal": "(CH₃)₃C–MgCl + CO₂ ──(1. Et₂O  2. H₃O⁺)──► (CH₃)₃C–COOH (Ácido Piválico)",
+        "desc": "Queda consolidado el ácido 2,2-dimetilpropanoico.",
+        "legend": {
+          "breaking": "Carbonatación completada.",
+          "forming": "En VERDE sólido: grupo carboxilo terciario.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "tBu",
+              "el": "(CH₃)₃C",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ác. 2,2-Dimetilpropanoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 405,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 555,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "tBu",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
