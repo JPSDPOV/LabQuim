@@ -1,0 +1,638 @@
+{
+  "category": "reacciones",
+  "title": "22) Formación de Glicósidos / Enlace O-Glicosídico (Acetalización Anomérica, Disacáridos y Polisacáridos)",
+  "natureBadge": "Glicosilación y Enlaces Glicosídicos • Hemiacetal + R–OH (H⁺) → Glicósido (Acetal) | Disacáridos y Polisacáridos",
+  "deltaH": "ΔH° ≈ −15 a −30 kJ/mol (En laboratorio catalizada por ácido anhidro HCl/H⁺; en sistemas biológicos impulsada por nucleótidos-azúcar UDP-Glc)",
+  "description": "Reacción del grupo hidroxilo anomérico (–OH hemiacetálico o hemicetálico) de un monosacárido cíclico con un alcohol (aglicona R–OH) u otro monosacárido en medio ácido anhidro para formar un GLICÓSIDO (acetal o cetal cíclico) con eliminación de agua:\n1) Mecanismo SN1 vía ion oxocarbenio: el –OH anomérico (y solo el anomérico, no los demás –OH alcohólicos) se protona en medio ácido formando –OH₂⁺ y abandona como H₂O generando un ion oxocarbenio cíclico plano estabilizado por resonancia con el oxígeno endocíclico O5.\n2) Ataque del alcohol / segundo azúcar: el grupo –OH de otra molécula (alcohol simple como CH₃OH o el –OH de C4/C6/C2 de otro monosacárido) ataca por la cara α o β consolidando un enlace O-GLICOSÍDICO (ej. α-1,4 en maltosa/almidón; β-1,4 en lactosa/celulosa; α-1,2-β en sacarosa).\n3) Consecuencias químicas y biológicas: una vez formado el glicósido (acetal), el anillo ya NO puede abrirse en medio básico o neutro, por lo que pierde la capacidad de mutarrotar y deja de ser reductor en ese extremo anomérico; solo se hidroliza en medio ácido acuoso (H₃O⁺ / H₂O) o mediante enzimas específicas (glicosidasas).",
+  "meta": {
+    "grupoFuncional": "Glicósidos (Acetales/Cetales Cíclicos: R–O–R'), Disacáridos (Maltosa, Lactosa, Sacarosa) y Polisacáridos",
+    "reaccionMecanismo": "Sustitución nucleofílica SN1 en el carbono anomérico vía ion oxocarbenio cíclico (acetalización selectiva)",
+    "naturaleza": "Por etapas (protonación selectiva del –OH anomérico → pérdida de H₂O → ion oxocarbenio cíclico → ataque de R–OH → desprotonación).",
+    "rupturaIntermediarios": "Ruptura de C1–OH₂⁺ y O–H del alcohol; intermediario catiónico oxocarbenio cíclico [C1=O5⁺]; formación de enlace O-glicosídico C1–O–R y H₂O.",
+    "detalleMecanismo": "D-Glucopiranosa + CH₃OH ──(HCl seco)──► Metil α-D-glucopiranósido + Metil β-D-glucopiranósido + H₂O",
+    "reactivosCondiciones": "Monosacárido cíclico (hemiacetal/hemicetal) + Alcohol anhidro (MeOH, EtOH) + catalizador ácido seco (HCl gaseoso o p-TsOH); en disacáridos/polisacáridos, catálisis enzimática (glicosiltransferasas).",
+    "rolReactivos": "• Sustrato glicosilante: Hemiacetal o hemicetal cíclico (solo el –OH anomérico en C1/C2 forma el ion oxocarbenio estabilizado).\n• Nucleófilo (aglicona): Alcohol R–OH (metanol) o grupo hidroxilo (C4–OH, C6–OH, C2–OH) de otro monosacárido.\n• Catalizador ácido anhidro: HCl seco / H⁺ (protona el –OH anomérico; en agua ocurre la reacción inversa: hidrólisis).",
+    "reglasObs": "• Efecto anomérico: en la glicosilación con metanol predomina cinética y termodinámicamente el anómero α (metil α-D-glucopiranósido ~66% vs. β ~34%) debido a la estabilización hiperconjugativa del par libre axial de O5 con el orbital antienlazante σ* del enlace axial C1–OCH₃.\n• Propiedades de los glicósidos: NO mutarrotan y NO dan positivo con Fehling/Tollens (acetales estables en medio básico).\n• Hidrólisis ácida vs. enzimática: los enlaces α-1,4 (almidón/glucógeno) son digeridos por la α-amilasa humana, mientras que los enlaces β-1,4 (celulosa) requieren celulasas ausentes en humanos."
+  },
+  "substrates": [
+    {
+      "id": "glic_glucosa_metanol",
+      "name": "D-Glucosa + Metanol (HCl seco) ──► Metil α- y β-D-Glucopiranósido + H₂O [Acetal Anomérico]",
+      "catalyst": "CH₃OH / HCl anhidro (Δ)"
+    },
+    {
+      "id": "glic_maltosa_alfa14",
+      "name": "2 α-D-Glucopiranosa ──► Maltosa [Enlace O-Glicosídico α(1→4)] + H₂O [Disacárido Reductor]",
+      "catalyst": "Catálisis Ácida / Enzimática (−H₂O)"
+    },
+    {
+      "id": "glic_lactosa_beta14",
+      "name": "β-D-Galactopiranosa + D-Glucopiranosa ──► Lactosa [Enlace O-Glicosídico β(1→4)] + H₂O [Disacárido]",
+      "catalyst": "Lactosa Sintasa / H⁺ (−H₂O)"
+    },
+    {
+      "id": "glic_sacarosa_alfa12beta",
+      "name": "α-D-Glucopiranosa + β-D-Fructofuranosa ──► Sacarosa [Enlace α(1↔2)β] + H₂O [Disacárido No Reductor]",
+      "catalyst": "Sacarosa Fosfato Sintasa (−H₂O)"
+    }
+  ],
+  "catalysts": [
+    "CH₃OH / HCl anhidro (Δ)",
+    "Catálisis Ácida / Enzimática (−H₂O)",
+    "Lactosa Sintasa / H⁺ (−H₂O)",
+    "Sacarosa Fosfato Sintasa (−H₂O)"
+  ],
+  "stepsBySubstrate": {
+    "glic_glucosa_metanol": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Glucopiranosa + Metanol en Medio Ácido Anhidro (HCl)",
+        "semiStep": "D-Glucopiranosa + CH₃–OH (cat. HCl seco)",
+        "semiGlobal": "D-Glucosa + CH₃OH ──(HCl seco)──► Metil α/β-D-Glucopiranósido + H₂O",
+        "desc": "Se observan la D-glucopiranosa (con su –OH hemiacetálico en C1) y el metanol anhidro en medio ácido. Solo el –OH anomérico C1 reacciona selectivamente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; piranosa hemiacetálica y metanol intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación selectiva del grupo –OH anomérico en C1 por el ácido HCl."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo Glucopiranosa (C₂–C₅)",
+              "x": 245,
+              "y": 195
+            },
+            {
+              "id": "O5",
+              "el": "O5",
+              "x": 365,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 465,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "C1 Anomérico"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 585,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "MeOH",
+              "el": "CH₃–OH",
+              "x": 585,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo (Aglicona)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Salida de H₂O y Formación del Ion Oxocarbenio Cíclico",
+        "semiStep": "C1–OH₂⁺ ──► [C1=O5⁺] (Ion Oxocarbenio plano) + H₂O",
+        "semiGlobal": "D-Glucosa + CH₃OH ──(HCl seco)──► Metil α/β-D-Glucopiranósido + H₂O",
+        "desc": "Al protonarse el –OH anomérico, sale una molécula de agua asistida por el par libre del oxígeno endocíclico O5, generando un ion oxocarbenio cíclico plano.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–OH₂⁺ (salida de H₂O).",
+          "forming": "En VERDE punteado: carácter de doble enlace resonante C1=O5⁺.",
+          "movement": "El carbono C1 adopta geometría plana (sp²), permitiendo el ataque de CH₃OH por ambas caras (α o β)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Anillo (C₂–C₅)",
+              "x": 245,
+              "y": 195
+            },
+            {
+              "id": "O5",
+              "el": "O5⁺",
+              "x": 365,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 465,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Ion Oxocarbenio"
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 605,
+              "y": 135,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "MeOH",
+              "el": "CH₃–OH",
+              "x": 585,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Ataque α o β"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Ring",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 565,
+              "y1": 292,
+              "cx": 520,
+              "cy": 265,
+              "x2": 485,
+              "y2": 222,
+              "label": "Ataque MeOH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Metil α-D-Glucopiranósido (66%) + Metil β-D-Glucopiranósido (34%)",
+        "semiStep": "Metil α-D-Glucopiranósido (mayoritario por efecto anomérico) + Metil β-D-Glucopiranósido + H₂O",
+        "semiGlobal": "D-Glucosa + CH₃OH ──(HCl seco)──► Metil α/β-D-Glucopiranósido + H₂O",
+        "desc": "Quedan consolidados ambos glicósidos (acetales cíclicos). Al carecer de –OH hemiacetálico libre, no mutarrotan ni reducen Fehling/Tollens.",
+        "legend": {
+          "breaking": "Acetalización anomérica completada.",
+          "forming": "En VERDE sólido: enlace glicosídico C1–OCH₃ (acetal estable en base).",
+          "movement": "Predomina el anómero α (66%) gracias al efecto anomérico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "Glucopiranosa",
+              "x": 235,
+              "y": 195
+            },
+            {
+              "id": "O5",
+              "el": "O5",
+              "x": 355,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 455,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Metil Glucopiranósido (Acetal)"
+            },
+            {
+              "id": "OMe",
+              "el": "OCH₃",
+              "x": 595,
+              "y": 245,
+              "highlight": "#10b981",
+              "label": "Enlace Glicosídico"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 695,
+              "y": 135,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OMe",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "glic_maltosa_alfa14": [
+      {
+        "title": "Estado Inicial Desarrollado: Dos Moléculas de α-D-Glucopiranosa (C1–OH + HO–C4')",
+        "semiStep": "α-D-Glucopiranosa (C1–OH) + D-Glucopiranosa (HO–C4')",
+        "semiGlobal": "2 D-Glucosa ──(−H₂O)──► Maltosa [α-D-Glucopiranosil-(1→4)-D-glucopiranosa]",
+        "desc": "Se observan dos unidades de D-glucopiranosa: el carbono anomérico C1 (en configuración α) de la primera unidad condensará con el grupo hidroxilo del carbono C4' de la segunda unidad.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambas unidades de glucosa listas para condensar.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Eliminación de agua entre C1–OH (α) y HO–C4' para formar el puente glicosídico α(1→4)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc1",
+              "el": "α-D-Glucosa 1",
+              "x": 205,
+              "y": 195
+            },
+            {
+              "id": "C1",
+              "el": "C1–OH (α)",
+              "x": 345,
+              "y": 235,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "HO4",
+              "el": "HO–C4'",
+              "x": 495,
+              "y": 235,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Glc2",
+              "el": "D-Glucosa 2 (C1' libre)",
+              "x": 645,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "HO4",
+              "to": "Glc2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Maltosa [Enlace O-Glicosídico α(1→4)] + H₂O",
+        "semiStep": "α-D-Glucopiranosil-(1→4)-D-glucopiranosa + H₂O (Azúcar de Malta)",
+        "semiGlobal": "2 D-Glucosa ──(−H₂O)──► Maltosa [α-D-Glucopiranosil-(1→4)-D-glucopiranosa]",
+        "desc": "Queda consolidada la maltosa (unidad repetitiva del almidón y glucógeno). El anillo derecho conserva su C1' hemiacetálico libre, por lo que presenta mutarrotación y es un disacárido reductor (+).",
+        "legend": {
+          "breaking": "Condensación glicosídica completada (−H₂O).",
+          "forming": "En VERDE sólido: puente oxígeno α(1→4).",
+          "movement": "Hidrólisis catalizada por la enzima maltasa o ácido diluido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc1",
+              "el": "α-D-Glucosa (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_br",
+              "el": "O [α(1→4)]",
+              "x": 395,
+              "y": 245,
+              "highlight": "#10b981",
+              "label": "Enlace O-Glicosídico α-1,4"
+            },
+            {
+              "id": "Glc2",
+              "el": "D-Glucosa (C4' / C1' libre)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc1",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_br",
+              "to": "Glc2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "glic_lactosa_beta14": [
+      {
+        "title": "Estado Inicial Desarrollado: β-D-Galactopiranosa + D-Glucopiranosa",
+        "semiStep": "β-D-Galactopiranosa (C1–OH β) + D-Glucopiranosa (HO–C4')",
+        "semiGlobal": "β-D-Galactosa + D-Glucosa ──(−H₂O)──► Lactosa [β-D-Galactopiranosil-(1→4)-D-glucopiranosa]",
+        "desc": "La galactosa participa con su carbono anomérico C1 en configuración β (hacia arriba) y la glucosa aporta el grupo –OH de su carbono C4'.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos monosacáridos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Formación del enlace O-glicosídico β(1→4)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Gal1",
+              "el": "β-D-Galactosa",
+              "x": 205,
+              "y": 195
+            },
+            {
+              "id": "C1",
+              "el": "C1–OH (β)",
+              "x": 345,
+              "y": 155,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "HO4",
+              "el": "HO–C4'",
+              "x": 495,
+              "y": 235,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Glc2",
+              "el": "D-Glucosa (C1' libre)",
+              "x": 645,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Gal1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "HO4",
+              "to": "Glc2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Lactosa [Enlace O-Glicosídico β(1→4)] + H₂O",
+        "semiStep": "β-D-Galactopiranosil-(1→4)-D-glucopiranosa + H₂O (Azúcar de la Leche)",
+        "semiGlobal": "β-D-Galactosa + D-Glucosa ──(−H₂O)──► Lactosa [β-D-Galactopiranosil-(1→4)-D-glucopiranosa]",
+        "desc": "Queda consolidada la lactosa. Al conservar libre el carbono anomérico C1' de la glucosa, es un disacárido reductor (+) y presenta mutarrotación.",
+        "legend": {
+          "breaking": "Condensación glicosídica completada (−H₂O).",
+          "forming": "En VERDE sólido: puente oxígeno β(1→4).",
+          "movement": "Hidrolizada en el intestino por la enzima β-galactosidasa (lactasa)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Gal1",
+              "el": "β-D-Galactosa (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_br",
+              "el": "O [β(1→4)]",
+              "x": 395,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Enlace O-Glicosídico β-1,4"
+            },
+            {
+              "id": "Glc2",
+              "el": "D-Glucosa (C4' / C1' libre)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Gal1",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_br",
+              "to": "Glc2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "glic_sacarosa_alfa12beta": [
+      {
+        "title": "Estado Inicial Desarrollado: α-D-Glucopiranosa (C1) + β-D-Fructofuranosa (C2)",
+        "semiStep": "α-D-Glucopiranosa (C1–OH) + β-D-Fructofuranosa (HO–C2')",
+        "semiGlobal": "α-D-Glucosa + β-D-Fructosa ──(−H₂O)──► Sacarosa [Enlace α(1↔2)β]",
+        "desc": "En la formación de la sacarosa participan simultáneamente los carbonos anoméricos de ambos monosacáridos: el C1 (α) de la glucosa y el C2 (β) de la fructosa.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos grupos anoméricos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Condensación entre ambos centros anoméricos formando un enlace dicarbonílico α(1↔2)β."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc1",
+              "el": "α-D-Glucopiranosa",
+              "x": 205,
+              "y": 195
+            },
+            {
+              "id": "C1",
+              "el": "C1–OH (α)",
+              "x": 345,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "HO–C2' (β)",
+              "x": 495,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Fru2",
+              "el": "β-D-Fructofuranosa",
+              "x": 645,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Fru2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Sacarosa [Enlace α(1↔2)β — Disacárido NO Reductor]",
+        "semiStep": "α-D-Glucopiranosil-(1↔2)-β-D-fructofuranósido + H₂O (Azúcar de Mesa)",
+        "semiGlobal": "α-D-Glucosa + β-D-Fructosa ──(−H₂O)──► Sacarosa [Enlace α(1↔2)β]",
+        "desc": "Queda consolidada la sacarosa. Al no quedar ningún carbono anomérico libre, carece de mutarrotación y es un azúcar NO reductor (−). Su hidrólisis con sacarasa/invertasa o ácido produce 'azúcar invertido'.",
+        "legend": {
+          "breaking": "Condensación dicarbonílica completada (−H₂O).",
+          "forming": "En VERDE sólido: puente glicosídico α(1↔2)β entre ambos carbonos anoméricos.",
+          "movement": "Carbohidrato principal de transporte en plantas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc1",
+              "el": "α-D-Glucosa (C1)",
+              "x": 205,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_br",
+              "el": "O [α(1↔2)β]",
+              "x": 395,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Ambos C anoméricos bloqueados"
+            },
+            {
+              "id": "Fru2",
+              "el": "β-D-Fructosa (C2)",
+              "x": 585,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc1",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_br",
+              "to": "Fru2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
