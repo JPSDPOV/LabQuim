@@ -1,0 +1,253 @@
+{
+  "category": "obtencion",
+  "title": "5) Reducción de Amidas Primarias con LiAlH₄ (Propanamida → Propanamina [Amina 1°])",
+  "natureBadge": "Reducción de Amidas 1° • R–CONH₂ ──(1. LiAlH₄  2. H₂O)──► Amina Primaria (R–CH₂–NH₂) + H₂O",
+  "deltaH": "ΔH° < 0 (Exotérmica e irreversible; el oxígeno carbonílico C=O se elimina y se reemplaza por dos hidrógenos –CH₂–)",
+  "description": "Obtención de aminas primarias con conservación exacta del número de átomos de carbono mediante reducción de amidas primarias (R–CONH₂) con hidruro de aluminio y litio (LiAlH₄) en éter anhidro o THF, seguido de hidrólisis acuosa (Diap. 1184 de cátedra):\n1) Ejemplo de cátedra: Propanamida (CH₃CH₂–CONH₂) + 1. LiAlH₄  2. H₂O ──► Propanamina (CH₃CH₂CH₂–NH₂) + H₂O.\n2) Diferencia clave frente a la degradación de Hofmann: mientras que la degradación de Hofmann (Br₂/NaOH) acorta la cadena en −1 carbono, la reducción con LiAlH₄ conserva exactamente los mismos carbonos transformando el grupo –C(=O)–NH₂ en –CH₂–NH₂.",
+  "meta": {
+    "grupoFuncional": "Aminas Primarias (R–CH₂–NH₂)",
+    "reaccionMecanismo": "Adición nucleofílica de hidruro (H⁻) al carbonilo de la amida + eliminación del oxígeno como aluminato + 2.ª adición de H⁻",
+    "naturaleza": "Por etapas irreversible (ataque de H⁻ → intermediario iminio R–CH=NH₂⁺ → segundo ataque de H⁻ → R–CH₂–NH₂).",
+    "rupturaIntermediarios": "Ruptura completa del doble enlace C=O; intermediario ion iminio; formación de dos enlaces C–H en el carbono carbonílico.",
+    "detalleMecanismo": "CH₃CH₂–CONH₂ ──(1. LiAlH₄ / Éter  2. H₂O)──► CH₃CH₂–CH₂–NH₂ (Propanamina) + H₂O",
+    "reactivosCondiciones": "Amida primaria (R–CONH₂) + exceso de LiAlH₄ en Et₂O o THF anhidro (reflujo suave), seguido de hidrólisis controlada con H₂O / NaOH diluido.",
+    "rolReactivos": "• Sustrato: Amida primaria (ej. propanamida).\n• Agente reductor fuerte: Hidruro de aluminio y litio (LiAlH₄; NaBH₄ no reduce amidas).\n• Hidrólisis final: H₂O.",
+    "reglasObs": "• Conserva el mismo número de carbonos que la amida de partida (Propanamida [3C] → Propanamina [3C]).\n• Ejemplo exacto de la diapositiva 1184 de cátedra."
+  },
+  "substrates": [
+    {
+      "id": "ami_obt5_propanamida_propanamina",
+      "name": "Propanamida (CH₃CH₂–CONH₂) + 1. LiAlH₄  2. H₂O ──► Propanamina + H₂O [Ejemplo Diap. 1184]",
+      "catalyst": "1) LiAlH₄ / Éter  2) H₂O"
+    },
+    {
+      "id": "ami_obt5_benzamida_bencilamina",
+      "name": "Benzamida (C₆H₅–CONH₂) + 1. LiAlH₄  2. H₂O ──► Bencilamina + H₂O [Aromática]",
+      "catalyst": "1) LiAlH₄ / THF  2) H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) LiAlH₄ / Éter  2) H₂O",
+    "1) LiAlH₄ / THF  2) H₂O"
+  ],
+  "stepsBySubstrate": {
+    "ami_obt5_propanamida_propanamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanamida (CH₃–CH₂–CONH₂) + LiAlH₄",
+        "semiStep": "CH₃–CH₂–CO–NH₂ + 1. LiAlH₄  2. H₂O",
+        "semiGlobal": "CH₃–CH₂–CONH₂ ──(1. LiAlH₄  2. H₂O)──► CH₃–CH₂–CH₂–NH₂ (Propanamina) + H₂O",
+        "desc": "Se observan la propanamida con su grupo carbonilo C1=O y el reductor fuerte LiAlH₄.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; doble enlace C1=O intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia de hidruros (H⁻) al carbono C1 y coordinación del oxígeno al aluminio."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 365,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 515,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Red",
+              "el": "1) LiAlH₄  2) H₂O",
+              "x": 365,
+              "y": 325,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanamina (CH₃–CH₂–CH₂–NH₂) + H₂O",
+        "semiStep": "CH₃–CH₂–CH₂–NH₂ (Propanamina, Amina 1°) + H₂O",
+        "semiGlobal": "CH₃–CH₂–CONH₂ ──(1. LiAlH₄  2. H₂O)──► CH₃–CH₂–CH₂–NH₂ (Propanamina) + H₂O",
+        "desc": "Queda consolidada la propanamina (el grupo C=O se transformó en –CH₂–).",
+        "legend": {
+          "breaking": "Eliminación del oxígeno carbonílico completada.",
+          "forming": "En VERDE sólido: propanamina (CH₃CH₂CH₂–NH₂).",
+          "movement": "Producto amina primaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanamina (Amina 1°)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "NH2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_obt5_benzamida_bencilamina": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzamida + LiAlH₄",
+        "semiStep": "C₆H₅–CONH₂ + 1. LiAlH₄  2. H₂O",
+        "semiGlobal": "C₆H₅–CONH₂ ──(1. LiAlH₄  2. H₂O)──► C₆H₅–CH₂–NH₂ (Bencilamina) + H₂O",
+        "desc": "Reducción del carbonilo de la benzamida sin alterar el anillo bencénico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzamida intacta.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reducción C=O → –CH₂–."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Am",
+              "el": "CONH₂",
+              "x": 415,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Red",
+              "el": "1) LiAlH₄  2) H₂O",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Am",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Bencilamina (C₆H₅–CH₂–NH₂) + H₂O",
+        "semiStep": "C₆H₅–CH₂–NH₂ + H₂O",
+        "semiGlobal": "C₆H₅–CONH₂ ──(1. LiAlH₄  2. H₂O)──► C₆H₅–CH₂–NH₂ (Bencilamina) + H₂O",
+        "desc": "Queda consolidada la bencilamina.",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: bencilamina.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Prod",
+              "el": "CH₂–NH₂",
+              "x": 425,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Bencilamina"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 615,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Prod",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
