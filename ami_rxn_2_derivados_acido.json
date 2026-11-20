@@ -1,0 +1,299 @@
+{
+  "category": "reacciones",
+  "title": "B.2- Sustitución Nucleofílica de Acilos (Con Cloruros, Ésteres o Anhídridos → N-Etiletanamida / N-Feniletanamida)",
+  "natureBadge": "Reacción 2 (Nucleófilo) • Amina (1° o 2°) + Derivado de Ácido (RCOCl / (RCO)₂O / RCOOR') ──► Amida + HCl / RCOOH / R'OH",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica con cloruros de acilo y anhídridos; conversión irreversible a amida)",
+  "description": "Sustitución nucleofílica acílica (adición-eliminación) en la que el par libre de una amina primaria o secundaria ataca al carbono carbonílico de un derivado de ácido (cloruro de acilo, anhídrido o éster) reemplazando el grupo saliente por el grupo amino para formar una AMIDA (Diap. 1188, 1191 y 1192 de cátedra):\n1) Con Cloruro de Acilo: Etilamina + Cloruro de etanoilo (acetilo) ──► N-Etiletanamida (N-etilacetamida) + HCl.\n2) Con Éster: Etilamina + Etanoato de metilo ──► N-Etiletanamida + Metanol.\n3) Con Anhídrido de Ácido: Metilamina + Anhídrido acético ──► N-Metiletanamida + Ácido acético; Anilina + Anhídrido acético ──► N-Feniletanamida (Acetanilida) + Ácido acético.",
+  "meta": {
+    "grupoFuncional": "Amidas N-Sustituidas (N-Etiletanamida, N-Metiletanamida, N-Feniletanamida / Acetanilida)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica (ataque del N al C=O → intermediario tetraédrico → eliminación de Cl⁻, RCOO⁻ o R'OH)",
+    "naturaleza": "Por etapas irreversible (adición nucleofílica al carbonilo → intermediario tetraédrico → eliminación del grupo saliente).",
+    "rupturaIntermediarios": "Ruptura de enlaces N–H y C–Cl / C–OAc / C–OR'; intermediario tetraédrico; formación de enlace amida C–N.",
+    "detalleMecanismo": "CH₃CH₂–NH₂ + CH₃–COCl ──► CH₃–CO–NH–CH₂CH₃ (N-Etiletanamida) + HCl",
+    "reactivosCondiciones": "Amina primaria o secundaria + Cloruro de acilo (RCOCl), Anhídrido acético ((CH₃CO)₂O) o Éster (RCOOR') a 25 °C (o Δ suave con ésteres).",
+    "rolReactivos": "• Nucleófilo: Amina primaria o secundaria (las aminas terciarias no tienen H–N y no forman amidas estables).\n• Electrófilo acílico: Cloruro de etanoilo, anhídrido acético o etanoato de metilo.\n• Productos: N-Etiletanamida, N-Metiletanamida o N-Feniletanamida (acetanilida).",
+    "reglasObs": "• Incluye todos los ejemplos exactos de las diapositivas 1188, 1191 y 1192 de cátedra."
+  },
+  "substrates": [
+    {
+      "id": "ami_rxn2_cloruro_etanoilo",
+      "name": "Etilamina + Cloruro de Etanoilo ──► N-Etiletanamida + HCl [Diap. 1188]",
+      "catalyst": "Sustitución de Acilos (25 °C)"
+    },
+    {
+      "id": "ami_rxn2_ester_metilo",
+      "name": "Etilamina + Etanoato de Metilo ──► N-Etiletanamida + Metanol [Diap. 1188]",
+      "catalyst": "Aminólisis de Éster"
+    },
+    {
+      "id": "ami_rxn2_metilamina_anhidrido",
+      "name": "Metilamina + Anhídrido Acético ──► N-Metiletanamida + Ácido Acético [Ejercicio Diap. 1191]",
+      "catalyst": "Acilación con Anhídrido"
+    },
+    {
+      "id": "ami_rxn2_anilina_anhidrido",
+      "name": "Anilina + Anhídrido Acético ──► N-Feniletanamida (Acetanilida) + Ácido Acético [Diap. 1192]",
+      "catalyst": "Acilación de Anilina"
+    }
+  ],
+  "catalysts": [
+    "Sustitución de Acilos (25 °C)",
+    "Aminólisis de Éster",
+    "Acilación con Anhídrido",
+    "Acilación de Anilina"
+  ],
+  "stepsBySubstrate": {
+    "ami_rxn2_cloruro_etanoilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina + Cloruro de Etanoilo (CH₃–COCl)",
+        "semiStep": "CH₃–CH₂–NH₂ + Cl–CO–CH₃",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–COCl ──► CH₃–CO–NH–CH₂CH₃ (N-Etiletanamida) + HCl",
+        "desc": "El par libre del nitrógeno de la etilamina ataca al carbono carbonílico del cloruro de etanoilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace C–Cl intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición nucleofílica sobre el carbonilo seguida de expulsión de Cl⁻."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ac",
+              "el": "+ Cl–CO–CH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Etiletanamida (N-Etilacetamida) + HCl",
+        "semiStep": "CH₃–CO–NH–CH₂–CH₃ (N-Etiletanamida) + HCl",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–COCl ──► CH₃–CO–NH–CH₂CH₃ (N-Etiletanamida) + HCl",
+        "desc": "Queda consolidada la N-etiletanamida más HCl.",
+        "legend": {
+          "breaking": "Ruptura C–Cl y N–H completada.",
+          "forming": "En VERDE sólido: N-etiletanamida.",
+          "movement": "Producto amida secundaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CO–NH–CH₂–CH₃",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Etiletanamida"
+            },
+            {
+              "id": "HCl",
+              "el": "+ HCl",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn2_ester_metilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina + Etanoato de Metilo (CH₃–COOCH₃)",
+        "semiStep": "CH₃–CH₂–NH₂ + CH₃–CO–OCH₃",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–COOCH₃ ──► CH₃–CO–NH–CH₂CH₃ (N-Etiletanamida) + CH₃OH",
+        "desc": "Aminólisis del etanoato de metilo con etilamina.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución del grupo –OCH₃ por –NHCH₂CH₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Est",
+              "el": "+ CH₃–CO–OCH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Etiletanamida + Metanol (CH₃–OH)",
+        "semiStep": "CH₃–CO–NH–CH₂–CH₃ (N-Etiletanamida) + CH₃–OH",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–COOCH₃ ──► CH₃–CO–NH–CH₂CH₃ (N-Etiletanamida) + CH₃OH",
+        "desc": "Queda consolidada la N-etiletanamida más metanol.",
+        "legend": {
+          "breaking": "Eliminación de metanol completada.",
+          "forming": "En VERDE sólido: N-etiletanamida.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CO–NH–CH₂–CH₃",
+              "x": 275,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Etiletanamida"
+            },
+            {
+              "id": "MeOH",
+              "el": "+ CH₃–OH (Metanol)",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn2_metilamina_anhidrido": [
+      {
+        "title": "Estado Inicial Desarrollado: Metilamina + Anhídrido Acético",
+        "semiStep": "CH₃–NH₂ + (CH₃–CO)₂O",
+        "semiGlobal": "CH₃–NH₂ + (CH₃CO)₂O ──► CH₃–CO–NH–CH₃ (N-Metiletanamida) + CH₃–COOH",
+        "desc": "Ejercicio de aplicación de la diapositiva 1191: metilamina + anhídrido acético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución nucleofílica de acilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–NH₂ (Metilamina)",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Anh",
+              "el": "+ (CH₃CO)₂O (Anh. Acético)",
+              "x": 555,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Metiletanamida + Ácido Acético (CH₃–COOH)",
+        "semiStep": "CH₃–CO–NH–CH₃ (N-Metiletanamida) + CH₃–COOH",
+        "semiGlobal": "CH₃–NH₂ + (CH₃CO)₂O ──► CH₃–CO–NH–CH₃ (N-Metiletanamida) + CH₃–COOH",
+        "desc": "Queda consolidada la N-metiletanamida más ácido acético.",
+        "legend": {
+          "breaking": "Escisión del anhídrido completada.",
+          "forming": "En VERDE sólido: N-metiletanamida.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CO–NH–CH₃",
+              "x": 265,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Metiletanamida"
+            },
+            {
+              "id": "AcOH",
+              "el": "+ CH₃–COOH (Ác. Acético)",
+              "x": 575,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ami_rxn2_anilina_anhidrido": [
+      {
+        "title": "Estado Inicial Desarrollado: Anilina + Anhídrido Acético",
+        "semiStep": "C₆H₅–NH₂ + (CH₃–CO)₂O",
+        "semiGlobal": "C₆H₅–NH₂ + (CH₃CO)₂O ──► C₆H₅–NH–CO–CH₃ (N-Feniletanamida) + CH₃–COOH",
+        "desc": "Ejercicio de aplicación de la diapositiva 1192: acilación de anilina con anhídrido acético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución nucleofílica de acilo en anilina."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "C₆H₅–NH₂ (Anilina)",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Anh",
+              "el": "+ (CH₃CO)₂O (Anh. Acético)",
+              "x": 555,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Feniletanamida (Acetanilida) + Ácido Acético",
+        "semiStep": "C₆H₅–NH–CO–CH₃ (N-Feniletanamida / Acetanilida) + CH₃–COOH",
+        "semiGlobal": "C₆H₅–NH₂ + (CH₃CO)₂O ──► C₆H₅–NH–CO–CH₃ (N-Feniletanamida) + CH₃–COOH",
+        "desc": "Queda consolidada la N-feniletanamida (acetanilida) más ácido acético.",
+        "legend": {
+          "breaking": "Acilación completada.",
+          "forming": "En VERDE sólido: N-feniletanamida (acetanilida).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "C₆H₅–NH–CO–CH₃",
+              "x": 275,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Feniletanamida"
+            },
+            {
+              "id": "AcOH",
+              "el": "+ CH₃–COOH (Ác. Acético)",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
