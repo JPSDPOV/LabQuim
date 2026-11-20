@@ -1,0 +1,597 @@
+{
+  "category": "reacciones",
+  "title": "B.2- Esterificación Intramolecular de Hidroxiácidos (γ- y δ-Hidroxiácidos + H⁺ → Lactonas + H₂O)",
+  "natureBadge": "Ciclación Intramolecular • γ-Hidroxiácido (C4) ──► γ-Lactona (5M) | δ-Hidroxiácido (C5) ──► δ-Lactona (6M)",
+  "deltaH": "ΔH° ≈ −15 a −25 kJ/mol (Favorable entrópica y entálpicamente para anillos de 5 y 6 miembros sin tensión angular)",
+  "description": "Esterificación intramolecular espontánea o catalizada por trazas de ácido (H⁺ / Δ) que ocurre cuando una misma molécula posee un grupo ácido carboxílico (–COOH) y un grupo hidroxilo (–OH) separados por 3 o 4 carbonos:\n1) γ-Hidroxiácidos (grupo –OH en C4): el oxígeno hidroxílico del C4 ataca intramolecularmente al carbono carboxílico C1 formando un éster cíclico de 5 miembros llamado γ-LACTONA (ej. ácido 4-hidroxibutanoico → γ-butirolactona; ácido 4-hidroxipentanoico → γ-valerolactona).\n2) δ-Hidroxiácidos (grupo –OH en C5): el oxígeno hidroxílico del C5 ataca al carbono carboxílico C1 formando un éster cíclico de 6 miembros llamado δ-LACTONA (ej. ácido 5-hidroxipentanoico → δ-valerolactona; ácido 5-hidroxihexanoico → δ-caprolactona).\n3) α-Hidroxiácidos (–OH en C2, como el ácido láctico): NO forman β-lactonas tensas al calentar; en su lugar, DOS moléculas condensan intermolecularmente formando un diéster cíclico de 6 miembros llamado LACTIDA.",
+  "meta": {
+    "grupoFuncional": "Lactonas / Ésteres Cíclicos (γ-Lactonas de 5 miembros y δ-Lactonas de 6 miembros)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica intramolecular (ataque de –OH en C4/C5 sobre –COOH en C1 + pérdida de H₂O)",
+    "naturaleza": "Por etapas intramolecular (plegamiento de cadena → protonación del carbonilo → ataque interno de O4/O5 sobre C1 → intermediario tetraédrico cíclico → eliminación de H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y O4–H (o O5–H); intermediario tetraédrico bicíclico; formación del enlace endocíclico éster C1–O4 (o C1–O5) y H₂O.",
+    "detalleMecanismo": "HO–CH₂–CH₂–CH₂–COOH ──(H⁺ / Δ)──► γ-Butirolactona (Anillo 5M) + H₂O",
+    "reactivosCondiciones": "γ-Hidroxiácido o δ-Hidroxiácido en presencia de trazas de ácido mineral (H₂SO₄ / H⁺) o calentamiento suave (Δ) con eliminación de agua.",
+    "rolReactivos": "• Electrófilo interno: Grupo carboxilo (–COOH en C1).\n• Nucleófilo interno: Grupo hidroxilo (–OH en C4 [γ] o C5 [δ]).\n• Catalizador: H⁺ / Δ (acelera el cierre del anillo).",
+    "reglasObs": "• Estabilidad de los anillos lactónicos (Pregunta directa de examen Final 2022 A — Recopi Preg. 71): forman lactonas estables los γ-hidroxiácidos (anillo de 5 miembros) y δ-hidroxiácidos (anillo de 6 miembros). En la opción de examen 'ácido 3-hidroxibutanoico' vs 'ácido 4-hidroxibutanoico', los γ- y δ-hidroxiácidos son los que se lactonizan espontáneamente.\n• Ejemplos de importancia biológica (Diap. 747–749): Vitamina C (ácido ascórbico), 6-fosfogluconolactona y cumarina."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn3_gamma_butirolactona",
+      "name": "Ácido 4-Hidroxibutanoico (γ-Hidroxiácido) + H⁺ ──► γ-Butirolactona (Anillo 5M) + H₂O",
+      "catalyst": "H⁺ / Δ (Ciclación 5 Miembros)"
+    },
+    {
+      "id": "ac_rxn3_delta_valerolactona",
+      "name": "Ácido 5-Hidroxipentanoico (δ-Hidroxiácido) + H⁺ ──► δ-Valerolactona (Anillo 6M) + H₂O [Cátedra]",
+      "catalyst": "H⁺ / Δ (Ciclación 6 Miembros)"
+    },
+    {
+      "id": "ac_rxn3_gamma_pentanolactona",
+      "name": "Ácido 4-Hidroxipentanoico + H⁺ ──► γ-Pentanolactona (4-Hidroxipentanolactona) + H₂O [Cátedra]",
+      "catalyst": "H⁺ / Δ (Ejemplo Diap. 859)"
+    },
+    {
+      "id": "ac_rxn3_alfa_lactico_lactida",
+      "name": "2 Ácido Láctico (α-Hidroxiácido) + H⁺ / Δ ──► Lactida (Diéster Cíclico 6M) + 2 H₂O [Caso α]",
+      "catalyst": "H⁺ / Δ (Condensación Bimolecular)"
+    }
+  ],
+  "catalysts": [
+    "H⁺ / Δ (Ciclación 5 Miembros)",
+    "H⁺ / Δ (Ciclación 6 Miembros)",
+    "H⁺ / Δ (Ejemplo Diap. 859)",
+    "H⁺ / Δ (Condensación Bimolecular)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn3_gamma_butirolactona": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 4-Hidroxibutanoico (γ-Hidroxiácido Plegado)",
+        "semiStep": "HO–CH₂–CH₂–CH₂–COOH (cat. H⁺)",
+        "semiGlobal": "HO–CH₂–CH₂–CH₂–COOH ──(H⁺)──► γ-Butirolactona (Anillo 5M) + H₂O",
+        "desc": "Se observa el ácido 4-hidroxibutanoico plegado: el grupo –OH del carbono C4 (γ) queda próximo al grupo carboxilo C1, preparando el cierre de un anillo de 5 átomos.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupos –COOH y –OH en la misma molécula intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico intramolecular del oxígeno O4 sobre el carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175,
+              "label": "C1 Carboxilo (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 585,
+              "y": 105
+            },
+            {
+              "id": "OH_ac",
+              "el": "OH",
+              "x": 595,
+              "y": 245,
+              "highlight": "#ef4444",
+              "label": "Sale como H₂O"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "O4",
+              "el": "OH",
+              "x": 355,
+              "y": 105,
+              "highlight": "#38bdf8",
+              "label": "O4 (γ) nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Cierre del Anillo (Enlace C1–O4) y Salida de Agua",
+        "semiStep": "Formación del enlace éster endocíclico C1–O4 y eliminación de H₂O",
+        "semiGlobal": "HO–CH₂–CH₂–CH₂–COOH ──(H⁺)──► γ-Butirolactona (Anillo 5M) + H₂O",
+        "desc": "El oxígeno O4 forma un enlace covalente con C1 mientras se expulsa el –OH carboxílico protonado como agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–OH (salida de H₂O).",
+          "forming": "En VERDE punteado: nuevo enlace éster endocíclico C1–O4.",
+          "movement": "Se cierra un anillo pentagonal estable de 4 carbonos + 1 oxígeno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 585,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_ac",
+              "el": "OH₂⁺",
+              "x": 605,
+              "y": 245,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "O4",
+              "el": "O",
+              "x": 355,
+              "y": 105,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O4",
+              "to": "C1",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 385,
+              "y1": 115,
+              "cx": 425,
+              "cy": 125,
+              "x2": 455,
+              "y2": 155,
+              "label": "Cierre C1–O4"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: γ-Butirolactona (Anillo de 5 Miembros) + H₂O",
+        "semiStep": "γ-Butirolactona (Oxolan-2-ona) + H₂O",
+        "semiGlobal": "HO–CH₂–CH₂–CH₂–COOH ──(H⁺)──► γ-Butirolactona (Anillo 5M) + H₂O",
+        "desc": "Queda consolidada la γ-butirolactona (éster cíclico de 5 miembros), disolvente industrial e intermediario sintético.",
+        "legend": {
+          "breaking": "Lactonización completada.",
+          "forming": "En VERDE sólido: anillo γ-lactona de 5 miembros.",
+          "movement": "Producto cíclico obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 475,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "γ-Butirolactona (5M)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 595,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 285
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 235,
+              "y": 285
+            },
+            {
+              "id": "C4",
+              "el": "CH₂",
+              "x": 215,
+              "y": 155
+            },
+            {
+              "id": "O4",
+              "el": "O",
+              "x": 355,
+              "y": 105,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 635,
+              "y": 245,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "O4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O4",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn3_delta_valerolactona": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 5-Hidroxipentanoico (δ-Hidroxiácido) + H⁺",
+        "semiStep": "HO–CH₂–CH₂–CH₂–CH₂–COOH (cat. H⁺)",
+        "semiGlobal": "HO–(CH₂)₄–COOH ──(H⁺)──► δ-Valerolactona (Anillo 6M) + H₂O",
+        "desc": "En el ácido δ-hidroxivalérico (5-hidroxipentanoico), el grupo –OH en C5 ataca al carboxilo C1 cerrando un anillo hexagonal de 6 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; δ-hidroxiácido listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque intramolecular de O5 sobre C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O5",
+              "el": "HO (C5)",
+              "x": 225,
+              "y": 145,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Chain",
+              "el": "–CH₂–CH₂–CH₂–CH₂–",
+              "x": 225,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "COOH (C1)",
+              "x": 495,
+              "y": 145,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "O5",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: δ-Valerolactona (Anillo de 6 Miembros) + H₂O",
+        "semiStep": "δ-Valerolactona (Tetrahidro-2H-piran-2-ona) + H₂O",
+        "semiGlobal": "HO–(CH₂)₄–COOH ──(H⁺)──► δ-Valerolactona (Anillo 6M) + H₂O",
+        "desc": "Queda consolidada la δ-valerolactona (anillo de 6 miembros libre de tensión angular). Ejemplo exacto de las diapositivas de cátedra (Diap. 858).",
+        "legend": {
+          "breaking": "Eliminación intramolecular de H₂O completada.",
+          "forming": "En VERDE sólido: anillo δ-lactona de 6 miembros.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 245,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Chain",
+              "el": "–CH₂–CH₂–CH₂–CH₂–",
+              "x": 245,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 465,
+              "y": 145,
+              "highlight": "#10b981",
+              "label": "δ-Valerolactona (6M)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 645,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "O5",
+              "to": "Chain",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Chain",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn3_gamma_pentanolactona": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido 4-Hidroxipentanoico + H⁺",
+        "semiStep": "CH₃–CH(OH)–CH₂–CH₂–COOH (cat. H⁺)",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₂–COOH ──(H⁺)──► 4-Hidroxipentanolactona + H₂O",
+        "desc": "Ejemplo literal de la diapositiva 859 de cátedra: el grupo hidroxilo secundario en C4 cicla sobre el carboxilo C1 dejando un sustituyente metilo en el anillo de 5 miembros.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivo listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ciclación intramolecular C4–O → C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH(OH)–CH₂–CH₂–COOH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: γ-Valerolactona (4-Hidroxipentanolactona) + H₂O",
+        "semiStep": "4-Hidroxipentanolactona (Anillo 5M con metilo en C4) + H₂O",
+        "semiGlobal": "CH₃–CH(OH)–CH₂–CH₂–COOH ──(H⁺)──► 4-Hidroxipentanolactona + H₂O",
+        "desc": "Queda consolidada la lactona sustituida más agua.",
+        "legend": {
+          "breaking": "Lactonización completada.",
+          "forming": "En VERDE sólido: lactona de 5 miembros.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "γ-Valerolactona (5M + CH₃)",
+              "x": 315,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn3_alfa_lactico_lactida": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Moléculas de Ácido α-Láctico (α-Hidroxiácido)",
+        "semiStep": "2 CH₃–CH(OH)–COOH (H⁺ / Δ)",
+        "semiGlobal": "2 CH₃–CH(OH)–COOH ──(H⁺, Δ)──► Lactida (Diéster Cíclico 6M) + 2 H₂O",
+        "desc": "Los α-hidroxiácidos no forman anillos de 3 miembros tensos; en su lugar, dos moléculas sufren doble esterificación cruzada formando un anillo hexagonal con dos grupos éster.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; dos moléculas de ácido láctico enfrentadas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Doble esterificación intermolecular."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "M1",
+              "el": "CH₃–CH(OH)–COOH",
+              "x": 235,
+              "y": 155,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "M2",
+              "el": "HOOC–CH(OH)–CH₃",
+              "x": 515,
+              "y": 265,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Lactida (3,6-Dimetil-1,4-dioxano-2,5-diona) + 2 H₂O",
+        "semiStep": "Lactida (Precursor del polímero biodegradable PLA) + 2 H₂O",
+        "semiGlobal": "2 CH₃–CH(OH)–COOH ──(H⁺, Δ)──► Lactida (Diéster Cíclico 6M) + 2 H₂O",
+        "desc": "Queda consolidada la lactida (diéster cíclico de 6 miembros), monómero del ácido poliláctico (PLA).",
+        "legend": {
+          "breaking": "Doble condensación completada.",
+          "forming": "En VERDE sólido: anillo hexagonal de lactida.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "Lactida (Diéster Cíclico 6M)",
+              "x": 315,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ 2 H₂O",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
