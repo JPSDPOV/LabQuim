@@ -1,0 +1,226 @@
+{
+  "category": "obtencion",
+  "title": "4) Reducción Catalítica de Isonitrilos (Isocianuro de etilo + 2 H₂/Ni → Etilmetilamina [Amina 2°])",
+  "natureBadge": "Hidrogenación de Isonitrilos • R–N≡C + 2 H₂ / Ni (o LiAlH₄) ──► Amina Secundaria N-Metilada (R–NH–CH₃)",
+  "deltaH": "ΔH° < 0 (Exotérmica; conversión directa de isocianuros en aminas secundarias con un grupo metilo)",
+  "description": "Obtención selectiva de AMINAS SECUNDARIAS N-metiladas mediante reducción catalítica de isonitrilos (isocianuros, R–N≡C) con 2 equivalentes de hidrógeno molecular sobre níquel (Ni) o con LiAlH₄ (Diap. 1183 de cátedra):\n1) Ejemplo de cátedra: Isocianuro de etilo (CH₃CH₂–N≡C) + 2 H₂ / Ni ──► Etilmetilamina / N-Metiletanamina (CH₃CH₂–NH–CH₃, amina secundaria).\n2) Diferencia estructural frente a nitrilos: en los isonitrilos el nitrógeno está unido tanto a la cadena R como al carbono terminal isociánico (–N≡C); al saturarse el enlace múltiple con 4 hidrógenos, el carbono terminal se convierte en un grupo metilo (–CH₃) y el nitrógeno conserva un hidrógeno (–NH–), generando siempre una amina secundaria.",
+  "meta": {
+    "grupoFuncional": "Aminas Secundarias N-Metiladas (R–NH–CH₃)",
+    "reaccionMecanismo": "Adición catalítica sucesiva de 2 moles de H₂ sobre el grupo isociano (–N≡C)",
+    "naturaleza": "Por etapas (Isonitrilo R–N≡C + H₂ → Imina R–N=CH₂ + H₂ → Amina Secundaria R–NH–CH₃).",
+    "rupturaIntermediarios": "Saturación de los enlaces múltiples N≡C; formación de un enlace N–H y tres enlaces C–H terminales.",
+    "detalleMecanismo": "CH₃CH₂–N≡C + 2 H₂ ──(Ni)──► CH₃CH₂–NH–CH₃ (Etilmetilamina)",
+    "reactivosCondiciones": "Isonitrilo / Isocianuro (R–N≡C) + 2 H₂ (g) sobre Ni Raney (o LiAlH₄ / Éter seguido de H₂O).",
+    "rolReactivos": "• Sustrato: Isonitrilo (ej. isocianuro de etilo).\n• Agente reductor: 2 H₂ / Ni (o LiAlH₄).\n• Producto: Amina secundaria N-metilada (R–NH–CH₃).",
+    "reglasObs": "• Pregunta clásica de examen: Isocianuro de etilo + 2 H₂ / Ni → Etilmetilamina (amina 2°), mientras que Propanonitrilo + 2 H₂ / Ni → Propilamina (amina 1°)."
+  },
+  "substrates": [
+    {
+      "id": "ami_obt4_isocianuro_etilo",
+      "name": "Isocianuro de Etilo (CH₃CH₂–N≡C) + 2 H₂ / Ni ──► Etilmetilamina (Amina 2°) [Ejemplo Diap. 1183]",
+      "catalyst": "2 H₂ / Ni (Catalítico)"
+    },
+    {
+      "id": "ami_obt4_isocianuro_fenilo",
+      "name": "Isocianuro de Fenilo (C₆H₅–N≡C) + 2 H₂ / Ni ──► N-Metilanilina (Amina 2° Aromática)",
+      "catalyst": "2 H₂ / Ni (Catalítico)"
+    }
+  ],
+  "catalysts": [
+    "2 H₂ / Ni (Catalítico)"
+  ],
+  "stepsBySubstrate": {
+    "ami_obt4_isocianuro_etilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Isocianuro de Etilo (CH₃–CH₂–N≡C) + 2 H₂ / Ni",
+        "semiStep": "CH₃–CH₂–N≡C + 2 H₂ (cat. Ni)",
+        "semiGlobal": "CH₃–CH₂–N≡C + 2 H₂ ──(Ni)──► CH₃–CH₂–NH–CH₃ (Etilmetilamina)",
+        "desc": "Se observan el isocianuro de etilo (con el átomo de nitrógeno intercalado entre el grupo etilo y el carbono terminal) y los 2 moles de hidrógeno sobre níquel.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace múltiple –N≡C intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición de 1 H al nitrógeno y 3 H al carbono terminal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "N1",
+              "el": "N",
+              "x": 375,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 515,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2",
+              "el": "+ 2 H₂ / Ni",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "N1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1",
+              "to": "C1",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etilmetilamina / N-Metiletanamina (CH₃–CH₂–NH–CH₃ — Amina 2°)",
+        "semiStep": "CH₃–CH₂–NH–CH₃ (Etilmetilamina)",
+        "semiGlobal": "CH₃–CH₂–N≡C + 2 H₂ ──(Ni)──► CH₃–CH₂–NH–CH₃ (Etilmetilamina)",
+        "desc": "Queda consolidada la etilmetilamina (amina secundaria).",
+        "legend": {
+          "breaking": "Hidrogenación del grupo isociano completada.",
+          "forming": "En VERDE sólido: etilmetilamina (CH₃CH₂–NH–CH₃).",
+          "movement": "Producto amina secundaria obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et",
+              "el": "CH₃–CH₂",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "NH",
+              "el": "NH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etilmetilamina (Amina 2°)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et",
+              "to": "NH",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "NH",
+              "to": "Me",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_obt4_isocianuro_fenilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Isocianuro de Fenilo (C₆H₅–N≡C) + 2 H₂ / Ni",
+        "semiStep": "C₆H₅–N≡C + 2 H₂ (cat. Ni)",
+        "semiGlobal": "C₆H₅–N≡C + 2 H₂ ──(Ni)──► C₆H₅–NH–CH₃ (N-Metilanilina)",
+        "desc": "Reducción del isocianuro aromático.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Saturación del grupo –N≡C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "NC",
+              "el": "N≡C",
+              "x": 415,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2",
+              "el": "+ 2 H₂ / Ni",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "NC",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: N-Metilanilina (C₆H₅–NH–CH₃ — Amina 2°)",
+        "semiStep": "C₆H₅–NH–CH₃ (N-Metilanilina)",
+        "semiGlobal": "C₆H₅–N≡C + 2 H₂ ──(Ni)──► C₆H₅–NH–CH₃ (N-Metilanilina)",
+        "desc": "Queda consolidada la N-metilanilina.",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: N-metilanilina.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Prod",
+              "el": "NH–CH₃",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Metilanilina (Amina 2°)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Prod",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
