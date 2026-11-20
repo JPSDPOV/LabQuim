@@ -1,0 +1,619 @@
+{
+  "category": "reacciones",
+  "title": "B.4- Formación de Anhídridos Intermoleculares y Cíclicos (Ác. Succínico / o-Ftálico + Δ → Anhídrido)",
+  "natureBadge": "Deshidratación de Ácidos Carboxílicos • 2 R–COOH ──(P₂O₅ / Δ)──► Anhídrido Acíclico | Diácido 1,4/1,5 ──(Δ)──► Anhídrido Cíclico",
+  "deltaH": "ΔH° > 0 (Endotérmica en deshidratación térmica directa; impulsada por agentes deshidratantes P₂O₅ o entropía al cerrar ciclos de 5/6M)",
+  "description": "Obtención de anhídridos de ácido carboxílico (R–CO–O–CO–R') mediante eliminación de una molécula de agua entre dos grupos carboxilo:\n1) Deshidratación intermolecular (Anhídridos acíclicos): dos moléculas de un ácido monocarboxílico (ej. ácido acético) pierden una molécula de agua en presencia de un agente deshidratante enérgico como pentóxido de difósforo (P₂O₅, Δ) o por reacción de un cloruro de acilo con una sal carboxilato (R–COCl + R'–COO⁻Na⁺ → R–CO–O–CO–R' + NaCl, ideal para anhídridos mixtos).\n2) Deshidratación intramolecular térmica (Anhídridos cíclicos de 5 y 6 miembros — Pregunta fija de examen): los ácidos dicarboxílicos 1,4 (butanodioicos) y 1,5 (pentanodioicos), cuyos dos grupos –COOH están espacialmente próximos, se ciclan fácilmente por simple calentamiento (200–300 °C) sin necesidad de P₂O₅, formando anhídridos cíclicos muy estables de 5 o 6 miembros:\n   • Ácido succínico (butanodioico) + Δ ──► Anhídrido succínico (5M) + H₂O\n   • Ácido maleico (cis-butenodioico) + Δ ──► Anhídrido maleico (5M) + H₂O (¡el ácido fumárico trans NO puede ciclarse por impedimento geométrico!)\n   • Ácido o-ftálico (1,2-bencenodicarboxílico) + Δ ──► Anhídrido ftálico (5M) + H₂O (¡el ácido p-ftálico / tereftálico NO puede ciclarse!).",
+  "meta": {
+    "grupoFuncional": "Anhídridos de Ácido Simétricos, Mixtos y Cíclicos (R–CO–O–CO–R')",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica (ataque de un grupo carboxilo/carboxilato sobre otro grupo acilo + eliminación de H₂O o Cl⁻)",
+    "naturaleza": "Por etapas (ataque nucleofílico del oxígeno carboxílico sobre el segundo carbono carbonílico → intermediario tetraédrico → eliminación de H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y O–H del segundo carboxilo; intermediario tetraédrico; formación del puente anhídrido C–O–C y H₂O.",
+    "detalleMecanismo": "2 CH₃–COOH ──(P₂O₅, Δ)──► (CH₃CO)₂O + H₂O  |  Ác. Succínico / o-Ftálico ──(Δ)──► Anhídrido Cíclico + H₂O",
+    "reactivosCondiciones": "• Ácidos monocarboxílicos: Calentamiento con agente deshidratante fuerte P₂O₅ (o vía R–COCl + R'–COO⁻Na⁺).\n• Ácidos dicarboxílicos 1,4 (succínico, maleico, o-ftálico) y 1,5 (glutárico): Calentamiento térmico directo (200–300 °C).",
+    "rolReactivos": "• Sustrato: Dos moléculas de ácido monocarboxílico o un ácido dicarboxílico 1,4 / 1,5.\n• Agente deshidratante / Calor: P₂O₅ (captura irreversibemente el agua como H₃PO₄) o calor Δ (en ciclaciones intramoleculares).",
+    "reglasObs": "• Contraste de isomería en exámenes (Recopi Preg. 72): Para formar anhídrido ftálico se requiere ÁCIDO o-FTÁLICO (grupos –COOH vecinos en 1,2); el ácido p-ftálico (tereftálico, en 1,4) está demasiado alejado para cerrar un anillo. Del mismo modo, el ÁCIDO MALEICO (cis) forma anhídrido maleico, mientras que el ÁCIDO FUMÁRICO (trans) no forma anhídrido sin isomerizarse previamente."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn5_succinico_ciclico",
+      "name": "Ácido Succínico (Butanodioico) + Δ (300 °C) ──► Anhídrido Succínico (Anillo 5M) + H₂O [Diap. 104]",
+      "catalyst": "Calor (Δ, 250–300 °C)"
+    },
+    {
+      "id": "ac_rxn5_oftalico_ciclico",
+      "name": "Ácido o-Ftálico (1,2-Bencenodicarboxílico) + Δ ──► Anhídrido Ftálico + H₂O [Examen Recopi Preg. 72]",
+      "catalyst": "Calor (Δ, 230 °C)"
+    },
+    {
+      "id": "ac_rxn5_maleico_vs_fumarico",
+      "name": "Ácido Maleico (cis-Butenodioico) + Δ ──► Anhídrido Maleico + H₂O [Control Geométrico cis vs. trans]",
+      "catalyst": "Calor (Δ, 160 °C)"
+    },
+    {
+      "id": "ac_rxn5_acetico_intermolecular",
+      "name": "2 Ácido Etanoico (Acético) + P₂O₅ / Δ ──► Anhídrido Etanoico (Acético) + H₂O [Intermolecular]",
+      "catalyst": "P₂O₅ / Δ (Deshidratante)"
+    }
+  ],
+  "catalysts": [
+    "Calor (Δ, 250–300 °C)",
+    "Calor (Δ, 230 °C)",
+    "Calor (Δ, 160 °C)",
+    "P₂O₅ / Δ (Deshidratante)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn5_succinico_ciclico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Succínico / Ácido Butanodioico (Conformación Plegada)",
+        "semiStep": "HOOC–CH₂–CH₂–COOH + Calor (300 °C)",
+        "semiGlobal": "HOOC–CH₂–CH₂–COOH ──(Δ, 300 °C)──► Anhídrido Succínico (Anillo 5M) + H₂O",
+        "desc": "Se observa el ácido succínico (diácido de 4 carbonos, diapositiva 104 de cátedra): los dos grupos carboxilo terminales quedan frente a frente para condensar intramolecularmente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos grupos –COOH intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque intramolecular del –OH de un carboxilo sobre el carbonilo del otro carboxilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 455,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH1",
+              "el": "OH",
+              "x": 585,
+              "y": 145,
+              "highlight": "#ef4444",
+              "label": "Sale como H₂O"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 305,
+              "y": 145
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
+              "y": 275
+            },
+            {
+              "id": "C4",
+              "el": "C4=O",
+              "x": 455,
+              "y": 275,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH4",
+              "el": "OH",
+              "x": 585,
+              "y": 275,
+              "highlight": "#38bdf8",
+              "label": "O nucleofílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "OH1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C4",
+              "to": "OH4",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Cierre del Puente Anhídrido (C1–O–C4) y Salida de H₂O",
+        "semiStep": "Formación del anillo anhídrido de 5 miembros con liberación de H₂O",
+        "semiGlobal": "HOOC–CH₂–CH₂–COOH ──(Δ, 300 °C)──► Anhídrido Succínico (Anillo 5M) + H₂O",
+        "desc": "Se forma el puente oxígeno –CO–O–CO– cerrando un heterociclo pentagonal muy estable y liberando vapor de agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O entre ambos grupos carboxilo.",
+          "forming": "En VERDE punteado: nuevo enlace C1–O–C4.",
+          "movement": "El desprendimiento de vapor de agua a 300 °C impulsa completamente la reacción."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 455,
+              "y": 145
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 305,
+              "y": 145
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
+              "y": 275
+            },
+            {
+              "id": "C4",
+              "el": "C4=O",
+              "x": 455,
+              "y": 275
+            },
+            {
+              "id": "O_br",
+              "el": "O",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "H₂O↑",
+              "x": 675,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_br",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C4",
+              "to": "O_br",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Anhídrido Succínico + H₂O",
+        "semiStep": "Anhídrido Succínico (Oxolano-2,5-diona) + H₂O",
+        "semiGlobal": "HOOC–CH₂–CH₂–COOH ──(Δ, 300 °C)──► Anhídrido Succínico (Anillo 5M) + H₂O",
+        "desc": "Queda consolidado el anhídrido succínico (anillo de 5 miembros), reactivo fundamental para acilaciones de Friedel-Crafts y síntesis de derivados.",
+        "legend": {
+          "breaking": "Deshidratación intramolecular completada.",
+          "forming": "En VERDE sólido: grupo funcional anhídrido cíclico (–CO–O–CO–).",
+          "movement": "Producto cíclico obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 455,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 305,
+              "y": 145
+            },
+            {
+              "id": "C3",
+              "el": "CH₂",
+              "x": 305,
+              "y": 275
+            },
+            {
+              "id": "C4",
+              "el": "C4=O",
+              "x": 455,
+              "y": 275,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_br",
+              "el": "O",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Anhídrido Succínico"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 685,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C4",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn5_oftalico_ciclico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido o-Ftálico (1,2-Bencenodicarboxílico) + Calor (Δ)",
+        "semiStep": "1,2-C₆H₄(COOH)₂ + Δ (230 °C)",
+        "semiGlobal": "Ácido o-Ftálico ──(Δ)──► Anhídrido Ftálico + H₂O",
+        "desc": "Al estar ambos grupos –COOH en posiciones orto (1,2) adyacentes en el anillo bencénico, deshidratan fácilmente con calor formando un anillo de 5 miembros fusionado al benceno.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupos carboxilo en posición orto listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ciclación intramolecular entre C1–COOH y C2–COOH."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ar",
+              "el": "Anillo Benceno (1,2)",
+              "x": 255,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1–COOH",
+              "x": 455,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C2",
+              "el": "C2–COOH",
+              "x": 455,
+              "y": 275,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Heat",
+              "el": "Calor (Δ)",
+              "x": 635,
+              "y": 210,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ar",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Anhídrido Ftálico + H₂O [Pregunta de Examen]",
+        "semiStep": "Anhídrido Ftálico + H₂O",
+        "semiGlobal": "Ácido o-Ftálico ──(Δ)──► Anhídrido Ftálico + H₂O",
+        "desc": "Queda consolidado el anhídrido ftálico. El ácido p-ftálico (tereftálico, 1,4) NO forma anhídrido cíclico porque sus grupos –COOH están en extremos opuestos del anillo.",
+        "legend": {
+          "breaking": "Deshidratación orto completada.",
+          "forming": "En VERDE sólido: anhídrido ftálico bicíclico.",
+          "movement": "Pregunta directa de examen Final 2022 A (Recopi Preg. 72)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ar",
+              "el": "Benceno (1,2)",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C=O",
+              "x": 425,
+              "y": 145,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "C=O",
+              "x": 425,
+              "y": 275,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_br",
+              "el": "O",
+              "x": 515,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Anhídrido Ftálico"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ar",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "O_br",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn5_maleico_vs_fumarico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Maleico (cis-Butenodioico) vs. Ácido Fumárico (trans)",
+        "semiStep": "cis-HOOC–CH=CH–COOH + Δ (160 °C)",
+        "semiGlobal": "Ácido Maleico (cis) ──(Δ)──► Anhídrido Maleico + H₂O",
+        "desc": "En el isómero cis (ácido maleico), ambos grupos –COOH están del mismo lado del doble enlace C=C y ciclan suavemente a 160 °C.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; geometría cis favorable.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ciclación intramolecular del isómero cis."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "CH–COOH",
+              "x": 295,
+              "y": 145,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C3",
+              "el": "CH–COOH",
+              "x": 295,
+              "y": 275,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Heat",
+              "el": "Δ (160 °C)",
+              "x": 525,
+              "y": 210,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Anhídrido Maleico + H₂O",
+        "semiStep": "Anhídrido Maleico (Dienófilo de Diels-Alder) + H₂O",
+        "semiGlobal": "Ácido Maleico (cis) ──(Δ)──► Anhídrido Maleico + H₂O",
+        "desc": "Queda consolidado el anhídrido maleico (excepcional dienófilo para reacciones de Diels-Alder).",
+        "legend": {
+          "breaking": "Deshidratación completada.",
+          "forming": "En VERDE sólido: anhídrido maleico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "Anhídrido Maleico (Anillo insaturado 5M)",
+              "x": 315,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn5_acetico_intermolecular": [
+      {
+        "title": "Estado Inicial Desarrollado: 2 Ácido Etanoico + Pentóxido de Difósforo (P₂O₅ / Δ)",
+        "semiStep": "CH₃–COOH + HOOC–CH₃ ──(P₂O₅, Δ)",
+        "semiGlobal": "2 CH₃–COOH ──(P₂O₅, Δ)──► CH₃–CO–O–CO–CH₃ + H₂O",
+        "desc": "Dos moléculas de ácido acético se deshidratan intermolecularmente usando el agente desecante P₂O₅.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; dos moléculas de ácido acético listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Condensación con eliminación de H₂O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "A1",
+              "el": "CH₃–COOH",
+              "x": 225,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "A2",
+              "el": "+ HOOC–CH₃",
+              "x": 455,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "P2O5",
+              "el": "P₂O₅ / Δ",
+              "x": 665,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Anhídrido Etanoico / Anhídrido Acético + H₂O",
+        "semiStep": "CH₃–CO–O–CO–CH₃ + H₂O",
+        "semiGlobal": "2 CH₃–COOH ──(P₂O₅, Δ)──► CH₃–CO–O–CO–CH₃ + H₂O",
+        "desc": "Queda consolidado el anhídrido acético.",
+        "legend": {
+          "breaking": "Deshidratación completada.",
+          "forming": "En VERDE sólido: anhídrido etanoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac1",
+              "el": "CH₃–CO",
+              "x": 205,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O",
+              "el": "O",
+              "x": 365,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Anhídrido Etanoico"
+            },
+            {
+              "id": "Ac2",
+              "el": "CO–CH₃",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac1",
+              "to": "O",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O",
+              "to": "Ac2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
