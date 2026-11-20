@@ -1,0 +1,1306 @@
+{
+  "category": "reacciones",
+  "title": "13) Condensación con Semicarbazida (+ H₂N–NH–CO–NH₂ ──► Semicarbazonas + H₂O)",
+  "natureBadge": "Adición-Eliminación Nucleofílica • Aldehído / Cetona + H₂N–NH–CO–NH₂ (pH 4–5) ⇄ Semicarbazona + H₂O",
+  "deltaH": "ΔH° ≈ −25 a −40 kJ/mol (Reacción reversible catalizada por ácido suave pH 4–5; precipitados cristalinos blancos muy puros)",
+  "description": "Reacción de adición-eliminación nucleofílica entre un aldehído o cetona y la SEMICARBAZIDA (H₂N–NH–CO–NH₂) en medio ligeramente ácido (pH ≈ 4.5) para formar una SEMICARBAZONA (R₂C=N–NH–CO–NH₂) con eliminación de agua:\n1) Regioselectividad del ataque nucleofílico: la semicarbazida posee tres átomos de nitrógeno, pero ataca EXCLUSIVAMENTE por el grupo –NH₂ terminal tipo hidracina (N1), ya que los pares electrónicos de los otros dos nitrógenos (N2 y N4) están deslocalizados por resonancia con el grupo carbonilo amídico (–C=O).\n2) Etapa de adición y eliminación: el nitrógeno terminal (:NH₂–NH–CO–NH₂) ataca al carbono carbonílico formando una carbinolamina semicarbazídica que, tras protonación del –OH en medio ácido suave, pierde H₂O generando el doble enlace C=N–NH–CO–NH₂.\n3) Utilidad analítica: las semicarbazonas suelen ser sólidos cristalinos incoloros de punto de fusión bien definido, ideales para purificar y caracterizar aldehídos y cetonas, pudiendo regenerarse fácilmente el compuesto carbonílico original por hidrólisis ácida.",
+  "meta": {
+    "grupoFuncional": "Semicarbazonas (R–CH=N–NH–CO–NH₂ o R₂C=N–NH–CO–NH₂)",
+    "reaccionMecanismo": "Adición nucleofílica regioselectiva del nitrógeno hidrazínico N1 (carbinolamina) seguida de eliminación de H₂O catalizada por ácido suave",
+    "naturaleza": "Por etapas en equilibrio (ataque H₂N–NHCONH₂ → transferencia H⁺ [carbinolamina] → protonación –OH → salida H₂O [ion semicarbazonio] → desprotonación [semicarbazona]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, N–H (×2) y C–OH₂⁺; intermediarios carbinolamina semicarbazídica e ion semicarbazonio; formación de doble enlace C=N–NH–CO–NH₂ y H₂O.",
+    "detalleMecanismo": "R–CHO + H₂N–NH–CO–NH₂ ⇄ [R–CH(OH)–NH–NH–CO–NH₂] ──(H⁺, −H₂O)──► R–CH=N–NH–CO–NH₂ + H₂O",
+    "reactivosCondiciones": "Aldehído o Cetona + Clorhidrato de semicarbazida (H₂N–NH–CO–NH₂·HCl) tamponado con acetato de sodio (NaOAc) a pH 4–5.",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona (R–CO–R').\n• Nucleófilo nitrogenado: Semicarbazida (ataca únicamente el –NH₂ hidrazínico libre; los nitrógenos amídicos –NH–CO–NH₂ no son nucleofílicos por resonancia).\n• Tampón ácido suave (pH 4–5): libera la semicarbazida base libre y cataliza la deshidratación de la carbinolamina.",
+    "reglasObs": "• Pregunta clásica de examen: ¿Por qué reacciona el N1 y no el N4 (–CO–NH₂)? Porque el par libre del N4 (y del N2) está comprometido en resonancia con el grupo carbonilo de la urea/amida, mientras que el N1 conserva su par libre disponible y potenciado por el efecto alfa.\n• Regeneración del carbonilo: Semicarbazona + H₃O⁺ / H₂O, Δ ──► Aldehído o Cetona original + H₂N–NH–CO–NH₃⁺."
+  },
+  "substrates": [
+    {
+      "id": "semi_etanal_semicarbazida",
+      "name": "Etanal + Semicarbazida (pH 4.5) ⇄ Carbinolamina ──(−H₂O)──► Semicarbazona del Etanal + H₂O [Aldehído Alifático]",
+      "catalyst": "H₂N–NHCONH₂·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "semi_propanona_semicarbazida",
+      "name": "Propanona + Semicarbazida (pH 4.5) ⇄ Semicarbazona de la Propanona + H₂O [Cetona Alifática]",
+      "catalyst": "H₂N–NHCONH₂·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "semi_benzaldehido_semicarbazida",
+      "name": "Benzaldehído + Semicarbazida (pH 4.5) ⇄ Semicarbazona del Benzaldehído + H₂O [Cristalina Conjugada]",
+      "catalyst": "H₂N–NHCONH₂·HCl / NaOAc (pH 4–5)"
+    },
+    {
+      "id": "semi_ciclohexanona_semicarbazida",
+      "name": "Ciclohexanona + Semicarbazida (pH 4.5) ⇄ Semicarbazona de la Ciclohexanona + H₂O [Derivado Característico]",
+      "catalyst": "H₂N–NHCONH₂·HCl / NaOAc (pH 4–5)"
+    }
+  ],
+  "catalysts": [
+    "H₂N–NHCONH₂·HCl / NaOAc (pH 4–5)"
+  ],
+  "stepsBySubstrate": {
+    "semi_etanal_semicarbazida": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Semicarbazida (H₂N–NH–CO–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CHO + H₂N–NH–CO–NH₂ (tampón pH 4.5)",
+        "semiGlobal": "CH₃–CHO + H₂N–NHCONH₂ ⇄ [CH₃–CH(OH)–NH–NHCONH₂] ──(−H₂O)──► CH₃–CH=N–NHCONH₂ + H₂O",
+        "desc": "Se observan el etanal (CH₃–CHO) y la semicarbazida. El ataque ocurre exclusivamente por el grupo –NH₂ hidrazínico (N1), ya que los nitrógenos amídicos están desactivados por resonancia con el C=O.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal y semicarbazida intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico regioselectivo del nitrógeno N1 (–NH₂) al carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Semicarbazida (N1 activo)"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#fbbf24",
+              "label": "Desactivado por resonancia"
+            },
+            {
+              "id": "H_sc",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_sc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación de la Carbinolamina Semicarbazídica",
+        "semiStep": "CH₃–CHO + H₂N–NHCONH₂ ⇄ CH₃–CH(OH)–NH–NHCONH₂ [Carbinolamina]",
+        "semiGlobal": "CH₃–CHO + H₂N–NHCONH₂ ⇄ [CH₃–CH(OH)–NH–NHCONH₂] ──(−H₂O)──► CH₃–CH=N–NHCONH₂ + H₂O",
+        "desc": "El nitrógeno N1 forma un enlace covalente C1–N mientras se abre el enlace π C=O y se transfiere un protón hacia el oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura de un enlace N–H.",
+          "forming": "En VERDE punteado: formación del enlace C1–NHNHCONH₂ de la carbinolamina.",
+          "movement": "El carbono C1 cambia temporalmente a hibridación sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Carbinolamina"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_sc",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_sc",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque N1"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Deshidratación Ácida (Salida de H₂O y Formación de C=N–NHCONH₂)",
+        "semiStep": "CH₃–CH(OH₂⁺)–NHNHCONH₂ ──► CH₃–CH=N–NHCONH₂ + H₂O + H⁺",
+        "semiGlobal": "CH₃–CHO + H₂N–NHCONH₂ ⇄ [CH₃–CH(OH)–NH–NHCONH₂] ──(−H₂O)──► CH₃–CH=N–NHCONH₂ + H₂O",
+        "desc": "La protonación del grupo –OH expulsa H₂O mientras el par libre del nitrógeno forma el doble enlace C=N y pierde el protón restante.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–OH₂⁺ (salida de H₂O) y pérdida de H⁺ del nitrógeno.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–NHCONH₂.",
+          "movement": "El carbono C1 recupera hibridación sp² trigonal plana."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_elim",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_elim",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            },
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Par N → π C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Semicarbazona del Etanal (CH₃–CH=N–NH–CO–NH₂) + H₂O",
+        "semiStep": "CH₃–CH=N–NH–CO–NH₂ + H₂O (Semicarbazona)",
+        "semiGlobal": "CH₃–CHO + H₂N–NHCONH₂ ⇄ [CH₃–CH(OH)–NH–NHCONH₂] ──(−H₂O)──► CH₃–CH=N–NHCONH₂ + H₂O",
+        "desc": "Queda consolidada la semicarbazona del etanal (sólido cristalino blanco) junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo semicarbazono (–CH=N–NH–CO–NH₂).",
+          "movement": "Derivado cristalino de alto punto de fusión por puentes de hidrógeno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Semicarbazona Etanal"
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 555,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 670,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_sc",
+              "to": "Rest_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "semi_propanona_semicarbazida": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Semicarbazida (H₂N–NH–CO–NH₂, pH 4–5)",
+        "semiStep": "CH₃–CO–CH₃ + H₂N–NH–CO–NH₂ (pH 4.5)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NHCONH₂ ⇄ (CH₃)₂C=N–NHCONH₂ + H₂O",
+        "desc": "Se observan la propanona y la semicarbazida en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona y semicarbazida intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno N1 sobre el carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Semicarbazida (N1)"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_sc",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_sc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina y Eliminación de H₂O",
+        "semiStep": "(CH₃)₂C(OH)–NHNHCONH₂ ──(H⁺, −H₂O)──► (CH₃)₂C=N–NHCONH₂",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NHCONH₂ ⇄ (CH₃)₂C=N–NHCONH₂ + H₂O",
+        "desc": "Tras formarse la carbinolamina, la pérdida de H₂O genera el doble enlace C2=N–NHCONH₂.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C2=N–NHCONH₂.",
+          "movement": "Retorno del carbono C2 a hibridación sp²."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Semicarbazona de la Propanona ((CH₃)₂C=N–NHCONH₂) + H₂O",
+        "semiStep": "(CH₃)₂C=N–NH–CO–NH₂ + H₂O (Cristales blancos, p.f. 187 °C)",
+        "semiGlobal": "CH₃–CO–CH₃ + H₂N–NHCONH₂ ⇄ (CH₃)₂C=N–NHCONH₂ + H₂O",
+        "desc": "Queda consolidada la semicarbazona de la propanona, compuesto cristalino característico.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo semicarbazono cetónico.",
+          "movement": "Producto semicarbazona obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Semicarbazona Propanona"
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 555,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_sc",
+              "to": "Rest_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "semi_benzaldehido_semicarbazida": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Semicarbazida (pH 4–5)",
+        "semiStep": "C₆H₅–CHO + H₂N–NH–CO–NH₂ (pH 4.5)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NHCONH₂ ⇄ C₆H₅–CH=N–NHCONH₂ + H₂O",
+        "desc": "Se observan el benzaldehído y la semicarbazida en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y semicarbazida intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno N1 sobre el grupo formilo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Semicarbazida (N1)"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_sc",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_sc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Bencílica y Eliminación de H₂O",
+        "semiStep": "C₆H₅–CH(OH)–NHNHCONH₂ ──(H⁺, −H₂O)──► C₆H₅–CH=N–NHCONH₂",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NHCONH₂ ⇄ C₆H₅–CH=N–NHCONH₂ + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace C=N–NHCONH₂ conjugado con el anillo aromático.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C=N–NHCONH₂.",
+          "movement": "Conjugación extendida con el anillo bencénico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Semicarbazona del Benzaldehído (C₆H₅–CH=N–NHCONH₂) + H₂O",
+        "semiStep": "C₆H₅–CH=N–NH–CO–NH₂ + H₂O (Cristales blancos, p.f. 222 °C)",
+        "semiGlobal": "C₆H₅–CHO + H₂N–NHCONH₂ ⇄ C₆H₅–CH=N–NHCONH₂ + H₂O",
+        "desc": "Queda consolidada la semicarbazona del benzaldehído junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: grupo semicarbazono conjugado al benceno.",
+          "movement": "Producto semicarbazona aromática obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Semicarbazona Benzaldehído"
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 555,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 670,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_sc",
+              "to": "Rest_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "semi_ciclohexanona_semicarbazida": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Semicarbazida (pH 4–5)",
+        "semiStep": "Ciclohexanona + H₂N–NH–CO–NH₂ (pH 4.5)",
+        "semiGlobal": "Ciclohexanona + H₂N–NHCONH₂ ⇄ Semicarbazona de Ciclohexanona + H₂O",
+        "desc": "Se observan la ciclohexanona y la semicarbazida en medio tamponado ligeramente ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona y semicarbazida intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del nitrógeno N1 al carbono C1 del anillo ciclohexánico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Ciclohexanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "N1_sc",
+              "el": "NH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Semicarbazida (N1)"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_sc",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_sc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina Cíclica y Deshidratación Ácida",
+        "semiStep": "Carbinolamina cíclica ──(H⁺, −H₂O)──► Semicarbazona de Ciclohexanona",
+        "semiGlobal": "Ciclohexanona + H₂N–NHCONH₂ ⇄ Semicarbazona de Ciclohexanona + H₂O",
+        "desc": "La carbinolamina pierde H₂O formando el doble enlace exocíclico C1=N–NHCONH₂.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de H₂O y desprotonación.",
+          "forming": "En VERDE punteado: formación del doble enlace C1=N–NHCONH₂.",
+          "movement": "Restauración de la geometría sp² en C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 230,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_el",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Rest_sc",
+              "to": "N1_sc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "N1_sc",
+              "to": "H_el",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 378,
+              "y1": 308,
+              "cx": 362,
+              "cy": 275,
+              "x2": 382,
+              "y2": 240,
+              "label": "Forma C=N"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Semicarbazona de la Ciclohexanona + H₂O",
+        "semiStep": "Semicarbazona de Ciclohexanona + H₂O (Cristales blancos, p.f. 166 °C)",
+        "semiGlobal": "Ciclohexanona + H₂N–NHCONH₂ ⇄ Semicarbazona de Ciclohexanona + H₂O",
+        "desc": "Queda consolidada la semicarbazona de la ciclohexanona junto con una molécula de agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: enlace doble exocíclico C=N–NHCONH₂.",
+          "movement": "Producto semicarbazona cíclica obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Semicarbazona Ciclohexanona"
+            },
+            {
+              "id": "N1_sc",
+              "el": "N",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest_sc",
+              "el": "NHCONH₂",
+              "x": 555,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 670,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "N1_sc",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "N1_sc",
+              "to": "Rest_sc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
