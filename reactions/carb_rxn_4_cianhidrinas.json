@@ -1,0 +1,1650 @@
+{
+  "category": "reacciones",
+  "title": "4) Formación de Cianhidrinas (+ H–C≡N ──► α-Hidroxinitrilos)",
+  "natureBadge": "Adición Nucleofílica de Cianuro • Aldehídos / Cetonas + HCN → α-Hidroxinitrilos (Cianhidrinas)",
+  "deltaH": "ΔH° < 0 (Exotérmica; formación de un nuevo enlace fuerte C–C y un enlace O–H)",
+  "description": "Adición nucleofílica reversible de cianuro de hidrógeno (HCN) sobre aldehídos y cetonas poco impedidas para obtener α-hidroxinitrilos (cianhidrinas):\n1) El ion cianuro (⁻:C≡N, generado con una cantidad catalítica de base como NaCN o KCN) ataca como nucleófilo al carbono carbonílico electrofílico (δ+).\n2) Se forma un intermediario alcóxido tetraédrico que abstrae un protón del HCN (regenerando el catalizador ⁻CN) para consolidar la cianhidrina (R₂C(OH)–C≡N).\n3) Utilidad sintética: permite alargar la cadena carbonada en un átomo de carbono e introducir dos grupos funcionales versátiles (el –C≡N puede hidrolizarse a ácido carboxílico –COOH o reducirse a amina primaria –CH₂NH₂).",
+  "meta": {
+    "grupoFuncional": "α-Hidroxinitrilos o Cianhidrinas (R–CH(OH)–C≡N o R₂C(OH)–C≡N)",
+    "reaccionMecanismo": "Adición nucleofílica de ion cianuro (⁻CN) seguida de protonación por HCN",
+    "naturaleza": "Por etapas (ataque nucleofílico de ⁻CN al C=O → intermediario alcóxido → transferencia protónica desde HCN).",
+    "rupturaIntermediarios": "Ruptura de π C=O y H–CN; intermediario alcóxido cianado (R₂C(O⁻)–CN); formación de enlaces C–C y O–H.",
+    "detalleMecanismo": "R–CHO + HCN ──(NaCN cat.)──► R–CH(OH)–C≡N  |  R–CO–R' + HCN ──(KCN cat.)──► R–C(OH)(CN)–R'",
+    "reactivosCondiciones": "Aldehído o Cetona + HCN con cantidad catalítica de NaCN o KCN (o NaCN/KCN + H₂SO₄/HCl controlado).",
+    "rolReactivos": "• Sustrato electrofílico: Aldehído (R–CHO) o Cetona no impedida (R–CO–R').\n• Nucleófilo catalítico: Ion cianuro (⁻:C≡N).\n• Fuente de protones: Cianuro de hidrógeno (H–C≡N).",
+    "reglasObs": "• Reactividad: Aldehídos > Cetonas alifáticas > Cetonas impedidas o aromáticas (benzofenona no reacciona por impedimento estérico y resonancia).\n• Si el carbonilo es proquiral (grupos distintos), se obtiene una mezcla racémica (50:50 R/S).\n• Hidrólisis ácida posterior (H₃O⁺, Δ): convierte la cianhidrina en un α-hidroxiácido (R–CH(OH)–COOH)."
+  },
+  "substrates": [
+    {
+      "id": "cian_etanal_hcn",
+      "name": "Etanal + HCN (cat. NaCN) ──► 2-Hidroxipropanonitrilo [Aldehído → Cianhidrina]",
+      "catalyst": "HCN / NaCN (catalítico)"
+    },
+    {
+      "id": "cian_propanona_hcn",
+      "name": "Propanona + HCN (cat. KCN) ──► 2-Hidroxi-2-metilpropanonitrilo [Cetona → Cianhidrina]",
+      "catalyst": "HCN / KCN (catalítico)"
+    },
+    {
+      "id": "cian_benzaldehido_hcn",
+      "name": "Benzaldehído + HCN (cat. NaCN) ──► Mandelonitrile (2-Fenil-2-hidroxietanonitrilo) [Aldehído Aromático]",
+      "catalyst": "HCN / NaCN (catalítico)"
+    },
+    {
+      "id": "cian_butanona_hcn",
+      "name": "Butanona + HCN (cat. KCN) ──► 2-Hidroxi-2-metilbutanonitrilo [Mezcla Racémica ±]",
+      "catalyst": "HCN / KCN (catalítico)"
+    }
+  ],
+  "catalysts": [
+    "HCN / NaCN (catalítico)",
+    "HCN / KCN (catalítico)"
+  ],
+  "stepsBySubstrate": {
+    "cian_etanal_hcn": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Ion Cianuro (⁻:C≡N)",
+        "semiStep": "CH₃–CHO + ⁻:C≡N (catalizador NaCN / HCN)",
+        "semiGlobal": "CH₃–CHO + HCN ──(NaCN cat.)──► CH₃–CH(OH)–C≡N",
+        "desc": "Se observan las moléculas iniciales intactas: el etanal (CH₃–CHO) con su enlace C=O polarizado y el ion nucleofílico cianuro (⁻:C≡N).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; aldehído y nucleófilo cianuro intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El par electrónico libre del carbono del ion cianuro (⁻:C≡N) se aproxima al carbono carbonílico electrofílico (δ+)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "charge": "−",
+              "highlight": "#38bdf8",
+              "label": "Ion Cianuro (⁻CN)"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Ataque Nucleofílico de ⁻:C≡N al Carbonilo",
+        "semiStep": "CH₃–CHO + ⁻:C≡N ──► CH₃–CH(O⁻)–C≡N",
+        "semiGlobal": "CH₃–CHO + HCN ──(NaCN cat.)──► CH₃–CH(OH)–C≡N",
+        "desc": "El ion cianuro forma un nuevo enlace covalente C–C con el carbono carbonílico C1 mientras el par electrónico π del enlace C=O se desplaza hacia el oxígeno.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del nuevo enlace carbono-carbono (C1–CN).",
+          "movement": "El carbono C1 cambia de hibridación sp² (trigonal plana) a sp³ (tetraédrica)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque ⁻CN"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Intermediario Alcóxido Cianado + Molécula de HCN",
+        "semiStep": "[Intermediario alcóxido listo para protonación con HCN]",
+        "semiGlobal": "CH₃–CHO + HCN ──(NaCN cat.)──► CH₃–CH(OH)–C≡N",
+        "desc": "Se obtiene el intermediario alcóxido tetraédrico con carga negativa sobre el oxígeno, listo para capturar un protón de una molécula de HCN.",
+        "legend": {
+          "breaking": "Enlace π C=O ya abierto; oxígeno cargado negativamente.",
+          "forming": "En VERDE sólido: nuevo enlace C–C del grupo nitrilo consolidado.",
+          "movement": "Aproximación de H–C≡N para protonar el oxígeno alcóxido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario alcóxido"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "charge": "−",
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 525,
+              "y": 95,
+              "highlight": "#38bdf8",
+              "label": "H–C≡N"
+            },
+            {
+              "id": "CN_solv",
+              "el": "C≡N",
+              "x": 640,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_prot",
+              "to": "CN_solv",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Protonación del Alcóxido y Regeneración de ⁻CN",
+        "semiStep": "CH₃–CH(O⁻)–C≡N + H–C≡N ──► CH₃–CH(OH)–C≡N + ⁻:C≡N",
+        "semiGlobal": "CH₃–CHO + HCN ──(NaCN cat.)──► CH₃–CH(OH)–C≡N",
+        "desc": "El oxígeno alcóxido abstrae el protón del HCN, formando el grupo –OH y regenerando el ion catalítico ⁻:C≡N para continuar el ciclo.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–CN.",
+          "forming": "En VERDE punteado: formación del enlace O–H de la cianhidrina.",
+          "movement": "Transferencia protónica rápida que regenera el catalizador nucleofílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 505,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CN_solv",
+              "el": "⁻C≡N",
+              "x": 640,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera catalizador"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "CN_solv",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 488,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Hidroxipropanonitrilo (Cianhidrina del Etanal)",
+        "semiStep": "CH₃–CH(OH)–C≡N (2-Hidroxipropanonitrilo)",
+        "semiGlobal": "CH₃–CHO + HCN ──(NaCN cat.)──► CH₃–CH(OH)–C≡N",
+        "desc": "Queda consolidado el 2-hidroxipropanonitrilo (lactonitrilo), una cianhidrina de 3 carbonos.",
+        "legend": {
+          "breaking": "Adición de HCN completada.",
+          "forming": "En VERDE sólido: grupos –OH y –C≡N unidos al mismo carbono (α-hidroxinitrilo).",
+          "movement": "Cadena alargada en +1 carbono; listo para hidrólisis a ácido láctico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cianhidrina (3C)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 500,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cian_propanona_hcn": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Ion Cianuro (⁻:C≡N)",
+        "semiStep": "CH₃–CO–CH₃ + ⁻:C≡N (catalizador KCN / HCN)",
+        "semiGlobal": "CH₃–CO–CH₃ + HCN ──(KCN cat.)──► (CH₃)₂C(OH)–C≡N",
+        "desc": "Se observan la propanona (CH₃–CO–CH₃) y el nucleófilo ⁻:C≡N aproximándose al carbono carbonílico C2.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona y ion cianuro intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de ⁻:C≡N sobre el carbono sp² de la cetona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "charge": "−",
+              "highlight": "#38bdf8",
+              "label": "Ion Cianuro (⁻CN)"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Ataque Nucleofílico de ⁻:C≡N al Carbonilo",
+        "semiStep": "CH₃–CO–CH₃ + ⁻:C≡N ──► (CH₃)₂C(O⁻)–C≡N",
+        "semiGlobal": "CH₃–CO–CH₃ + HCN ──(KCN cat.)──► (CH₃)₂C(OH)–C≡N",
+        "desc": "El par electrónico de ⁻:C≡N forma el enlace C–C con el carbono C2 mientras se abre el enlace π C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C–CN.",
+          "movement": "Geometría cambia de trigonal plana (sp²) a tetraédrica (sp³)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque ⁻CN"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → O⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2: Protonación del Alcóxido con HCN",
+        "semiStep": "(CH₃)₂C(O⁻)–C≡N + H–C≡N ──► (CH₃)₂C(OH)–C≡N + ⁻:C≡N",
+        "semiGlobal": "CH₃–CO–CH₃ + HCN ──(KCN cat.)──► (CH₃)₂C(OH)–C≡N",
+        "desc": "El oxígeno alcóxido captura un protón del HCN, neutralizando la molécula y regenerando ⁻:C≡N.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–CN.",
+          "forming": "En VERDE punteado: formación del enlace O–H.",
+          "movement": "Equilibrio desplazado hacia la cianhidrina de cetona pequeña."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 505,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CN_solv",
+              "el": "⁻C≡N",
+              "x": 640,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera catalizador"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "CN_solv",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 488,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2-Hidroxi-2-metilpropanonitrilo (Acetona Cianhidrina)",
+        "semiStep": "(CH₃)₂C(OH)–C≡N (Acetona Cianhidrina)",
+        "semiGlobal": "CH₃–CO–CH₃ + HCN ──(KCN cat.)──► (CH₃)₂C(OH)–C≡N",
+        "desc": "Queda consolidada la acetona cianhidrina (2-hidroxi-2-metilpropanonitrilo), precursor industrial del metacrilato de metilo.",
+        "legend": {
+          "breaking": "Adición nucleofílica completada.",
+          "forming": "En VERDE sólido: grupos –OH y –C≡N sobre el carbono cuaternario C2.",
+          "movement": "Producto cianhidrina consolidado."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Acetona Cianhidrina"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 500,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cian_benzaldehido_hcn": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzaldehído + Ion Cianuro (⁻:C≡N)",
+        "semiStep": "C₆H₅–CHO + ⁻:C≡N (catalizador NaCN / HCN)",
+        "semiGlobal": "C₆H₅–CHO + HCN ──(NaCN cat.)──► C₆H₅–CH(OH)–C≡N",
+        "desc": "Se observan el benzaldehído (C₆H₅–CHO) y el ion cianuro nucleofílico aproximándose al grupo formilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzaldehído y nucleófilo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico de ⁻:C≡N al carbono carbonílico sin alterar el anillo aromático."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "charge": "−",
+              "highlight": "#38bdf8",
+              "label": "Ion Cianuro (⁻CN)"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ataque de ⁻CN y Protonación con HCN",
+        "semiStep": "C₆H₅–CH(O⁻)–C≡N + H–C≡N ──► C₆H₅–CH(OH)–C≡N + ⁻:C≡N",
+        "semiGlobal": "C₆H₅–CHO + HCN ──(NaCN cat.)──► C₆H₅–CH(OH)–C≡N",
+        "desc": "Tras la adición del cianuro al carbonilo, el alcóxido bencílico se protona rápidamente con HCN.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–CN.",
+          "forming": "En VERDE punteado: formación del enlace O–H.",
+          "movement": "Se genera un nuevo centro estereogénico (mezcla racémica ±)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 505,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CN_solv",
+              "el": "⁻C≡N",
+              "x": 640,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera catalizador"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "CN_solv",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 427,
+              "y1": 88,
+              "cx": 460,
+              "cy": 72,
+              "x2": 488,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Mandelonitrile / Cianhidrina del Benzaldehído",
+        "semiStep": "C₆H₅–CH(OH)–C≡N (2-Fenil-2-hidroxietanonitrilo)",
+        "semiGlobal": "C₆H₅–CHO + HCN ──(NaCN cat.)──► C₆H₅–CH(OH)–C≡N",
+        "desc": "Queda consolidado el mandelonitrile, cuya hidrólisis ácida produce ácido mandélico (C₆H₅–CH(OH)–COOH).",
+        "legend": {
+          "breaking": "Formación de cianhidrina aromática completada.",
+          "forming": "En VERDE sólido: grupos –OH y –C≡N en posición α al anillo aromático.",
+          "movement": "Producto cianhidrina racémico obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Mandelonitrile (±)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 500,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 535,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 545,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H_ald",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cian_butanona_hcn": [
+      {
+        "title": "Estado Inicial Desarrollado: Butanona + Ion Cianuro (⁻:C≡N)",
+        "semiStep": "CH₃–CO–CH₂–CH₃ + ⁻:C≡N (catalizador KCN / HCN)",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + HCN ──(KCN cat.)──► CH₃–C(OH)(CN)–CH₂–CH₃",
+        "desc": "Se observan la butanona (cetona asimétrica proquiral) y el ion nucleofílico cianuro (⁻:C≡N).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; butanona y ion cianuro intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El nucleófilo ⁻:C≡N puede atacar con igual probabilidad por ambas caras del plano sp² del carbonilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "label": "Butanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 385,
+              "y": 325,
+              "charge": "−",
+              "highlight": "#38bdf8",
+              "label": "Ion Cianuro (⁻CN)"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ataque de ⁻CN y Protonación con HCN",
+        "semiStep": "CH₃–C(O⁻)(CN)–CH₂–CH₃ + H–C≡N ──► CH₃–C(OH)(CN)–CH₂–CH₃ + ⁻:C≡N",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + HCN ──(KCN cat.)──► CH₃–C(OH)(CN)–CH₂–CH₃",
+        "desc": "Se forma el enlace C–C y el oxígeno alcóxido se protona mediante HCN.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–CN.",
+          "forming": "En VERDE punteado: formación del enlace O–H.",
+          "movement": "El carbono C2 adquiere cuatro sustituyentes distintos (centro quiral)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 495,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CN_solv",
+              "el": "⁻C≡N",
+              "x": 630,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera catalizador"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 385,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_prot",
+              "to": "CN_solv",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 417,
+              "y1": 88,
+              "cx": 450,
+              "cy": 72,
+              "x2": 478,
+              "y2": 88,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: (±)-2-Hidroxi-2-metilbutanonitrilo",
+        "semiStep": "CH₃–C(OH)(CN)–CH₂–CH₃ (Mezcla Racémica R/S)",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + HCN ──(KCN cat.)──► CH₃–C(OH)(CN)–CH₂–CH₃",
+        "desc": "Queda consolidada la cianhidrina quiral en mezcla racémica (50% R y 50% S).",
+        "legend": {
+          "breaking": "Adición nucleofílica completada.",
+          "forming": "En VERDE sólido: grupos –OH y –C≡N sobre el carbono estereogénico C2.",
+          "movement": "Producto ópticamente inactivo (racemato) obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cianhidrina Quiral (±)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot",
+              "el": "H",
+              "x": 490,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_cn",
+              "el": "C",
+              "x": 385,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N_cn",
+              "el": "N",
+              "x": 525,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O1",
+              "to": "H_prot",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C_cn",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_cn",
+              "to": "N_cn",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
