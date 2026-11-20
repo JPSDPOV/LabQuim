@@ -1,123 +1,2002 @@
 {
   "category": "obtencion",
-  "title": "7) Acilación de Friedel-Crafts (+ R–COCl ó Cl–CHO / AlCl₃ ──► Aldehído o Cetona Aromática)",
-  "natureBadge": "Sustitución Electrofílica Aromática (SEA) • C₆H₆ + R–COCl ──(AlCl₃)──► C₆H₅–CO–R + HCl",
-  "deltaH": "ΔH° < 0 (Exotérmica; sintetiza benzaldehído, benzofenona o acetofenona sin transposiciones)",
-  "description": "Reacción del benceno con un halogenuro de acilo o anhídrido en presencia de cloruro de aluminio anhidro (AlCl₃) (Diap. 14 y 21):\n• Con cloruro de formilo (Cl–CHO / AlCl₃): forma BENZALDEHÍDO.\n• Con cloruro de benzoílo (C₆H₅COCl / AlCl₃): forma BENZOFENONA (difenilcetona).\n• Con cloruro de etanoílo (CH₃COCl / AlCl₃): forma ACETOFENONA.",
+  "title": "7) Acilación de Friedel-Crafts (+ R–COCl ó CO + HCl / AlCl₃ ──► Aldehído o Cetona Aromática)",
+  "natureBadge": "Sustitución Electrofílica Aromática (SEAr) • Ar–H + R–COCl ──(AlCl₃)──► Ar–CO–R + HCl",
+  "deltaH": "ΔH° < 0 (Exotérmica; el grupo acilo desactiva el anillo evitando poliacilación y transposiciones)",
+  "description": "Introducción directa de un grupo acilo (–COR) o formilo (–CHO) en un anillo aromático mediante Sustitución Electrofílica Aromática (SEAr) catalizada por un ácido de Lewis (AlCl₃):\n1) Formación del electrófilo: el AlCl₃ arranca el Cl⁻ del cloruro de acilo formando el ion acilio [R–C≡O]⁺ estabilizado por resonancia (o bien CO + HCl / AlCl₃–CuCl generan el catión formilo [H–C≡O]⁺ en la síntesis de Gattermann-Koch).\n2) Ataque electrofílico: los electrones π del anillo atacan al ion acilio formando el intermediario catiónico complejo sigma (ion arenio).\n3) Rearomatización: la pérdida de H⁺ restablece el anillo aromático, libera HCl y regenera el catalizador AlCl₃.",
   "meta": {
-    "grupoFuncional": "Benzaldehído y Cetonas aromáticas (Benzofenona, Acetofenona)",
-    "reaccionMecanismo": "Sustitución Electrofílica Aromática (SEA — Acilación de Friedel-Crafts)",
-    "naturaleza": "Por etapas vía ion acilio y complejo σ de arenio.",
-    "rupturaIntermediarios": "Ruptura de C–Cl y C(ar)–H; intermedio complejo σ arenio.",
-    "detalleMecanismo": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl | C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
-    "reactivosCondiciones": "Benceno + Halogenuro de acilo (o anhídrido) + AlCl₃ anhidro.",
-    "rolReactivos": "• Sustrato: Benceno (C₆H₆).\n• Reactivos acilantes: Cl–CHO, C₆H₅COCl o CH₃COCl.\n• Catalizador ácido de Lewis: AlCl₃.",
-    "reglasObs": "• Diap. 14: Benceno + Cl–CHO → benzaldehído; Diap. 21 (Ej. 3): Benceno + cloruro de benzoílo → benzofenona."
+    "grupoFuncional": "Cetonas Aromáticas (Ar–CO–R) y Aldehídos Aromáticos (Ar–CHO)",
+    "reaccionMecanismo": "Sustitución Electrofílica Aromática (SEAr): Acilación de Friedel-Crafts y Formilación de Gattermann-Koch",
+    "naturaleza": "Por etapas vía ion acilio [R–C≡O]⁺ e intermediario complejo sigma (ion arenio).",
+    "rupturaIntermediarios": "Ruptura de C–Cl y C_ar–H; intermediarios ion acilio y complejo σ; formación de C_ar–CO y HCl.",
+    "detalleMecanismo": "Ar–H + R–COCl ──(AlCl₃)──► Ar–CO–R + HCl  |  C₆H₆ + CO + HCl ──(AlCl₃/CuCl)──► C₆H₅–CHO + HCl",
+    "reactivosCondiciones": "Compuesto aromático + cloruro de acilo (R–COCl) + AlCl₃ anhidro (o CO + HCl / AlCl₃–CuCl para aldehídos).",
+    "rolReactivos": "• Sustrato nucleofílico: Anillo aromático (Benceno, Tolueno, etc.).\n• Reactivo acilante: Cloruro de acilo (R–COCl) o CO + HCl.\n• Catalizador ácido de Lewis: Tricloruro de aluminio anhidro (AlCl₃).",
+    "reglasObs": "• A diferencia de la alquilación de Friedel-Crafts, la acilación NO sufre transposiciones del carbocatión ni poliacilación (el grupo –COR es desactivante).\n• NO ocurre sobre anillos fuertemente desactivados (como nitrobenceno) ni sobre anilina (forma complejo ácido-base con AlCl₃)."
   },
   "substrates": [
     {
-      "id": "fc_benzaldehido",
-      "name": "Diap. 14: Benceno + Cl–CHO (AlCl₃) ──► Benzaldehído + HCl",
+      "id": "fc_acetofenona",
+      "name": "Benceno + Cloruro de Etanoílo (Acetilo) ──► Acetofenona + HCl",
+      "catalyst": "AlCl₃ anhidro"
+    },
+    {
+      "id": "fc_propiofenona",
+      "name": "Benceno + Cloruro de Propanoílo ──► Propiofenona + HCl",
       "catalyst": "AlCl₃ anhidro"
     },
     {
       "id": "fc_benzofenona",
-      "name": "Ejercicio 3 (Diap. 21): Benceno + Cloruro de Benzoílo (AlCl₃) ──► Benzofenona",
+      "name": "Benceno + Cloruro de Benzoílo ──► Benzofenona + HCl [Diaromática]",
       "catalyst": "AlCl₃ anhidro"
+    },
+    {
+      "id": "fc_p_metilacetofenona",
+      "name": "Tolueno + Cloruro de Etanoílo ──► p-Metilacetofenona + HCl [Orientación para]",
+      "catalyst": "AlCl₃ anhidro"
+    },
+    {
+      "id": "fc_gattermann_koch",
+      "name": "Benceno + CO + HCl (Gattermann-Koch) ──► Benzaldehído + HCl [Aldehído]",
+      "catalyst": "AlCl₃ / CuCl"
     }
   ],
   "catalysts": [
-    "AlCl₃ anhidro"
+    "AlCl₃ anhidro",
+    "AlCl₃ / CuCl"
   ],
   "stepsBySubstrate": {
-    "fc_benzaldehido": [
+    "fc_acetofenona": [
       {
-        "title": "Paso 1 — Estado Inicial: Benceno + Cl–CHO (AlCl₃)",
-        "semiStep": "C₆H₆  +  Cl–CHO  (AlCl₃)",
-        "semiGlobal": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl",
-        "desc": "El anillo aromático ataca al carbono carbonílico formando el complejo σ arenio.",
+        "title": "Estado Inicial Desarrollado: Benceno + Cloruro de Etanoílo + AlCl₃",
+        "semiStep": "C₆H₆ + CH₃–CO–Cl",
+        "semiGlobal": "C₆H₆ + CH₃–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₃ + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el benceno (C₆H₆), el cloruro de etanoílo (CH₃–CO–Cl) y el catalizador ácido de Lewis AlCl₃.",
         "legend": {
-          "breaking": "Enlace C–Cl.",
-          "forming": "Enlace Ar–CHO.",
-          "movement": "Sustitución electrofílica aromática."
+          "breaking": "Ningún enlace roto todavía; anillo aromático y cloruro de acilo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Coordinación del ácido de Lewis (AlCl₃) sobre el átomo de cloro del halogenuro de acilo."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Ph",
-              "el": "Ph",
-              "ring": "phenyl",
-              "x": 300,
-              "y": 195,
-              "label": "Benceno"
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
             },
             {
-              "id": "Reag",
-              "el": "Cl–CHO / AlCl₃",
-              "x": 640,
-              "y": 195,
-              "highlight": "#38bdf8"
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210,
+              "label": "Benceno + Cloruro de Etanoílo"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 515,
+              "y": 95
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 755,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Catalizador Ácido de Lewis"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 385,
+              "y": 210
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 470,
-              "y": 202,
-              "text": "+"
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Benzaldehído + HCl",
-        "semiStep": "C₆H₅–CHO  (Benzaldehído)  +  HCl",
-        "semiGlobal": "C₆H₆ + Cl–CHO ──(AlCl₃)──► C₆H₅–CHO + HCl",
-        "desc": "Se obtiene benzaldehído + HCl.",
+        "title": "Ruptura en Rojo: Formación del Ion Acilio Electrofílico ([R–C≡O]⁺)",
+        "semiStep": "C₆H₆ + CH₃–CO–Cl ──► [Ion Acilio]⁺ + [AlCl₄]⁻",
+        "semiGlobal": "C₆H₆ + CH₃–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₃ + HCl",
+        "desc": "El AlCl₃ arranca el ion cloruro (Cl⁻) formando [AlCl₄]⁻ y generando el electrófilo ion acetilio [CH₃–C≡O]⁺ estabilizado por resonancia.",
         "legend": {
-          "breaking": "Protón del complejo σ eliminado.",
-          "forming": "En VERDE sólido: benzaldehído.",
-          "movement": "Aromaticidad restaurada."
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C–Cl.",
+          "forming": "En VERDE punteado: formación de [AlCl₄]⁻ y del triple enlace resonante del ion acilio.",
+          "movement": "Generación del electrófilo fuerte (ion acilio) estabilizado por resonancia."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Ph",
-              "el": "Ph",
-              "ring": "phenyl",
-              "x": 280,
-              "y": 195,
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 515,
+              "y": 210,
+              "charge": "+",
+              "highlight": "#fbbf24",
+              "label": "Ion Acilio (Electrófilo)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 515,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 650,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 765,
+              "y": 210,
               "highlight": "#10b981"
             },
             {
-              "id": "CHO",
-              "el": "CHO",
-              "x": 450,
-              "y": 195,
-              "highlight": "#10b981",
-              "label": "Benzaldehído"
-            },
-            {
-              "id": "HCl",
-              "el": "HCl",
-              "x": 680,
-              "y": 195,
-              "highlight": "#38bdf8"
+              "id": "R1",
+              "el": "CH₃",
+              "x": 385,
+              "y": 210
             }
           ],
           "bonds": [
             {
-              "from": "Ph",
-              "to": "CHO",
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
               "order": 1,
-              "state": "new"
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 3,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Cl_acyl",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
             }
           ],
-          "texts": [
+          "arrows": [
             {
-              "x": 565,
-              "y": 202,
-              "text": "+"
+              "type": "full",
+              "x1": 570,
+              "y1": 210,
+              "cx": 610,
+              "cy": 185,
+              "x2": 640,
+              "y2": 202,
+              "label": "Arranca Cl⁻"
+            },
+            {
+              "type": "full",
+              "x1": 730,
+              "y1": 210,
+              "cx": 700,
+              "cy": 185,
+              "x2": 667,
+              "y2": 202,
+              "label": "Coordina AlCl₄⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ataque Electrofílico Aromático: Formación del Complejo Sigma (Ion Arenio)",
+        "semiStep": "[Intermediario Complejo σ / Ion Arenio catiónico]",
+        "semiGlobal": "C₆H₆ + CH₃–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₃ + HCl",
+        "desc": "Los electrones π del anillo bencénico atacan al ion acetilio formando un nuevo enlace C–C y el intermediario catiónico complejo sigma (ion arenio).",
+        "legend": {
+          "breaking": "Pérdida temporal de la aromaticidad al usar un par π del anillo.",
+          "forming": "En VERDE sólido: nuevo enlace carbono–carbono entre el anillo y el grupo acilo.",
+          "movement": "Se forma el intermediario catiónico deslocalizado (complejo σ)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "C",
+              "isVertex": false,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 310,
+              "y": 315
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "Complejo σ (Ion Arenio +)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₄⁻",
+              "x": 650,
+              "y": 315,
+              "highlight": "#38bdf8",
+              "label": "Base conjugada"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 265,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desprotonación y Rearomatización: Ruptura C–H en Rojo, Formación HCl en Verde",
+        "semiStep": "C₆H₅–CO–CH₃ + HCl (Recuperación del sistema aromático)",
+        "semiGlobal": "C₆H₆ + CH₃–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₃ + HCl",
+        "desc": "La base [AlCl₄]⁻ abstrae el protón H⁺ del carbono sp³, restableciendo el anillo aromático y liberando HCl y AlCl₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C_ar–H y disociación de Cl⁻ desde [AlCl₄]⁻.",
+          "forming": "En VERDE punteado: regeneración del sexteto π aromático y formación de H–Cl.",
+          "movement": "La pérdida de H⁺ restablece la estabilidad aromática y regenera el catalizador AlCl₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Protón H⁺ eliminado"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 455,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Forma HCl"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 625,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Catalizador regenerado"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 265,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "forming-pi"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Cl_out",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 288,
+              "y1": 268,
+              "cx": 248,
+              "cy": 242,
+              "x2": 225,
+              "y2": 182,
+              "label": "Regenera aromaticidad"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 325,
+              "cx": 390,
+              "cy": 305,
+              "x2": 352,
+              "y2": 322,
+              "label": "Abstrae H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Acetofenona (C₆H₅–CO–CH₃ + HCl)",
+        "semiStep": "C₆H₅–CO–CH₃ + HCl (Acetofenona)",
+        "semiGlobal": "C₆H₆ + CH₃–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₃ + HCl",
+        "desc": "Queda consolidada la acetofenona o fenilmetilcetona (C₆H₅–CO–CH₃) con geometría trigonal plana (120°) en el carbonilo junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución electrofílica aromática completada.",
+          "forming": "En VERDE sólido: grupo acilo unido al anillo aromático en geometría trigonal plana (120°) + HCl.",
+          "movement": "Producto acilado desactivado hacia polisustituciones; reacción detenida en monoacilación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Acetofenona"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 455,
+              "y": 92,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 575,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 640,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 730,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 465,
+              "y": 315
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fc_propiofenona": [
+      {
+        "title": "Estado Inicial Desarrollado: Benceno + Cloruro de Propanoílo + AlCl₃",
+        "semiStep": "C₆H₆ + CH₃–CH₂–CO–Cl",
+        "semiGlobal": "C₆H₆ + CH₃–CH₂–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₂–CH₃ + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el benceno, el cloruro de propanoílo (CH₃–CH₂–CO–Cl) con sus carbonos separados y el AlCl₃.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; anillo aromático y cloruro de acilo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Coordinación del ácido de Lewis (AlCl₃) sobre el átomo de cloro del halogenuro de acilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210,
+              "label": "Benceno + Cloruro de Propanoílo"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 575,
+              "y": 95
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 690,
+              "y": 210
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 815,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Catalizador Ácido de Lewis"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "R1",
+              "el": "CH₂",
+              "x": 455,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R2",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Formación del Ion Acilio Electrofílico ([R–C≡O]⁺)",
+        "semiStep": "C₆H₆ + CH₃–CH₂–CO–Cl ──► [Ion Acilio]⁺ + [AlCl₄]⁻",
+        "semiGlobal": "C₆H₆ + CH₃–CH₂–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₂–CH₃ + HCl",
+        "desc": "El AlCl₃ captura el Cl⁻ formando [AlCl₄]⁻ y generando el ion propanoílo [CH₃–CH₂–C≡O]⁺ sin sufrir transposiciones.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C–Cl.",
+          "forming": "En VERDE punteado: formación de [AlCl₄]⁻ y del triple enlace resonante del ion acilio.",
+          "movement": "Generación del electrófilo fuerte (ion acilio) estabilizado por resonancia."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 575,
+              "y": 210,
+              "charge": "+",
+              "highlight": "#fbbf24",
+              "label": "Ion Acilio (Electrófilo)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 575,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 710,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 825,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "R1",
+              "el": "CH₂",
+              "x": 455,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 3,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Cl_acyl",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "R2",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 630,
+              "y1": 210,
+              "cx": 670,
+              "cy": 185,
+              "x2": 700,
+              "y2": 202,
+              "label": "Arranca Cl⁻"
+            },
+            {
+              "type": "full",
+              "x1": 790,
+              "y1": 210,
+              "cx": 760,
+              "cy": 185,
+              "x2": 727,
+              "y2": 202,
+              "label": "Coordina AlCl₄⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ataque Electrofílico Aromático: Formación del Complejo Sigma (Ion Arenio)",
+        "semiStep": "[Intermediario Complejo σ / Ion Arenio catiónico]",
+        "semiGlobal": "C₆H₆ + CH₃–CH₂–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₂–CH₃ + HCl",
+        "desc": "El anillo bencénico ataca al carbono electrofílico del ion propanoílo formando el intermediario complejo sigma.",
+        "legend": {
+          "breaking": "Pérdida temporal de la aromaticidad al usar un par π del anillo.",
+          "forming": "En VERDE sólido: nuevo enlace carbono–carbono entre el anillo y el grupo acilo.",
+          "movement": "Se forma el intermediario catiónico deslocalizado (complejo σ)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "C",
+              "isVertex": false,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 310,
+              "y": 315
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "Complejo σ (Ion Arenio +)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₄⁻",
+              "x": 650,
+              "y": 315,
+              "highlight": "#38bdf8",
+              "label": "Base conjugada"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 165,
+              "y": 175
+            },
+            {
+              "id": "R1",
+              "el": "CH₂",
+              "x": 275,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "R2",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desprotonación y Rearomatización: Ruptura C–H en Rojo, Formación HCl en Verde",
+        "semiStep": "C₆H₅–CO–CH₂–CH₃ + HCl (Recuperación del sistema aromático)",
+        "semiGlobal": "C₆H₆ + CH₃–CH₂–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₂–CH₃ + HCl",
+        "desc": "La desprotonación del complejo sigma regenera la aromaticidad del anillo bencénico y desprende HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C_ar–H y disociación de Cl⁻ desde [AlCl₄]⁻.",
+          "forming": "En VERDE punteado: regeneración del sexteto π aromático y formación de H–Cl.",
+          "movement": "La pérdida de H⁺ restablece la estabilidad aromática y regenera el catalizador AlCl₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Protón H⁺ eliminado"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 455,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Forma HCl"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 625,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Catalizador regenerado"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 165,
+              "y": 175
+            },
+            {
+              "id": "R1",
+              "el": "CH₂",
+              "x": 275,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "forming-pi"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Cl_out",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "R2",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 288,
+              "y1": 268,
+              "cx": 248,
+              "cy": 242,
+              "x2": 225,
+              "y2": 182,
+              "label": "Regenera aromaticidad"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 325,
+              "cx": 390,
+              "cy": 305,
+              "x2": 352,
+              "y2": 322,
+              "label": "Abstrae H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Propiofenona (C₆H₅–CO–CH₂–CH₃ + HCl)",
+        "semiStep": "C₆H₅–CO–CH₂–CH₃ + HCl (Propiofenona)",
+        "semiGlobal": "C₆H₆ + CH₃–CH₂–CO–Cl ──(AlCl₃)──► C₆H₅–CO–CH₂–CH₃ + HCl",
+        "desc": "Queda consolidada la propiofenona o 1-fenil-1-propanona (C₆H₅–CO–CH₂–CH₃) en geometría trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución electrofílica aromática completada.",
+          "forming": "En VERDE sólido: grupo acilo unido al anillo aromático en geometría trigonal plana (120°) + HCl.",
+          "movement": "Producto acilado desactivado hacia polisustituciones; reacción detenida en monoacilación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propiofenona"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 455,
+              "y": 92,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 685,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 750,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 840,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R2",
+              "el": "CH₃",
+              "x": 465,
+              "y": 315
+            },
+            {
+              "id": "R1",
+              "el": "CH₂",
+              "x": 590,
+              "y": 315
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "R2",
+              "to": "R1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
@@ -125,76 +2004,2867 @@
     ],
     "fc_benzofenona": [
       {
-        "title": "Paso 1 — Estado Inicial: Benceno + Cloruro de Benzoílo (AlCl₃)",
-        "semiStep": "C₆H₆  +  C₆H₅–COCl  (AlCl₃)",
-        "semiGlobal": "C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
-        "desc": "El cloruro de benzoílo forma el ion acilio frente al benceno.",
+        "title": "Estado Inicial Desarrollado: Benceno + Cloruro de Benzoílo + AlCl₃",
+        "semiStep": "C₆H₆ + C₆H₅–CO–Cl",
+        "semiGlobal": "C₆H₆ + C₆H₅–CO–Cl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el benceno (nucleófilo), el cloruro de benzoílo (C₆H₅–CO–Cl) y el AlCl₃.",
         "legend": {
-          "breaking": "Enlace C–Cl.",
-          "forming": "Sin enlaces nuevos aún.",
-          "movement": "Acilación de Friedel-Crafts."
+          "breaking": "Ningún enlace roto todavía; anillo aromático y cloruro de acilo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Coordinación del ácido de Lewis (AlCl₃) sobre el átomo de cloro del halogenuro de acilo."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Ph",
-              "el": "Ph",
-              "ring": "phenyl",
-              "x": 300,
-              "y": 195
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
             },
             {
-              "id": "Reag",
-              "el": "C₆H₅–COCl / AlCl₃",
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210,
+              "label": "Benceno + Cloruro de Benzoílo"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 535,
+              "y": 210
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 535,
+              "y": 95
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
               "x": 650,
-              "y": 195,
-              "highlight": "#38bdf8"
+              "y": 210
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 775,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Catalizador Ácido de Lewis"
+            },
+            {
+              "id": "Ph2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 385,
+              "y": 210
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 470,
-              "y": 202,
-              "text": "+"
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ph2",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Producto Final Consolidado: Benzofenona (Difenilcetona) + HCl",
-        "semiStep": "C₆H₅–CO–C₆H₅  +  HCl",
-        "semiGlobal": "C₆H₆ + C₆H₅–COCl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
-        "desc": "Se obtiene benzofenona (difenilcetona) + HCl.",
+        "title": "Ruptura en Rojo: Formación del Ion Acilio Electrofílico ([R–C≡O]⁺)",
+        "semiStep": "C₆H₆ + C₆H₅–CO–Cl ──► [Ion Acilio]⁺ + [AlCl₄]⁻",
+        "semiGlobal": "C₆H₆ + C₆H₅–CO–Cl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "El AlCl₃ arranca el Cl⁻ del cloruro de benzoílo generando el ion benzoílo [C₆H₅–C≡O]⁺ altamente estabilizado por conjugación.",
         "legend": {
-          "breaking": "Enlace C–Cl roto.",
-          "forming": "En VERDE sólido: benzofenona.",
-          "movement": "Producto final obtenido."
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C–Cl.",
+          "forming": "En VERDE punteado: formación de [AlCl₄]⁻ y del triple enlace resonante del ion acilio.",
+          "movement": "Generación del electrófilo fuerte (ion acilio) estabilizado por resonancia."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Prod",
-              "el": "C₆H₅–CO–C₆H₅",
-              "x": 320,
-              "y": 195,
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 535,
+              "y": 210,
+              "charge": "+",
+              "highlight": "#fbbf24",
+              "label": "Ion Acilio (Electrófilo)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 670,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 785,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 385,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 3,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Cl_acyl",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Ph2",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 590,
+              "y1": 210,
+              "cx": 630,
+              "cy": 185,
+              "x2": 660,
+              "y2": 202,
+              "label": "Arranca Cl⁻"
+            },
+            {
+              "type": "full",
+              "x1": 750,
+              "y1": 210,
+              "cx": 720,
+              "cy": 185,
+              "x2": 687,
+              "y2": 202,
+              "label": "Coordina AlCl₄⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ataque Electrofílico Aromático: Formación del Complejo Sigma (Ion Arenio)",
+        "semiStep": "[Intermediario Complejo σ / Ion Arenio catiónico]",
+        "semiGlobal": "C₆H₆ + C₆H₅–CO–Cl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "El anillo de benceno ataca al ion benzoílo formando el enlace diarilcetónico en el complejo sigma.",
+        "legend": {
+          "breaking": "Pérdida temporal de la aromaticidad al usar un par π del anillo.",
+          "forming": "En VERDE sólido: nuevo enlace carbono–carbono entre el anillo y el grupo acilo.",
+          "movement": "Se forma el intermediario catiónico deslocalizado (complejo σ)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "C",
+              "isVertex": false,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 310,
+              "y": 315
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "Complejo σ (Ion Arenio +)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₄⁻",
+              "x": 650,
+              "y": 315,
+              "highlight": "#38bdf8",
+              "label": "Base conjugada"
+            },
+            {
+              "id": "Ph2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "Ph2",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desprotonación y Rearomatización: Ruptura C–H en Rojo, Formación HCl en Verde",
+        "semiStep": "C₆H₅–CO–C₆H₅ + HCl (Recuperación del sistema aromático)",
+        "semiGlobal": "C₆H₆ + C₆H₅–CO–Cl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "La pérdida de H⁺ restablece la aromaticidad de ambos anillos bencénicos y libera HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C_ar–H y disociación de Cl⁻ desde [AlCl₄]⁻.",
+          "forming": "En VERDE punteado: regeneración del sexteto π aromático y formación de H–Cl.",
+          "movement": "La pérdida de H⁺ restablece la estabilidad aromática y regenera el catalizador AlCl₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Protón H⁺ eliminado"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 455,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Forma HCl"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 625,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Catalizador regenerado"
+            },
+            {
+              "id": "Ph2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "forming-pi"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Cl_out",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Ph2",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 288,
+              "y1": 268,
+              "cx": 248,
+              "cy": 242,
+              "x2": 225,
+              "y2": 182,
+              "label": "Regenera aromaticidad"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 325,
+              "cx": 390,
+              "cy": 305,
+              "x2": 352,
+              "y2": 322,
+              "label": "Abstrae H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzofenona (C₆H₅–CO–C₆H₅ + HCl)",
+        "semiStep": "C₆H₅–CO–C₆H₅ + HCl (Benzofenona)",
+        "semiGlobal": "C₆H₆ + C₆H₅–CO–Cl ──(AlCl₃)──► C₆H₅–CO–C₆H₅ + HCl",
+        "desc": "Queda consolidada la benzofenona o difenilcetona (C₆H₅–CO–C₆H₅) con geometría trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución electrofílica aromática completada.",
+          "forming": "En VERDE sólido: grupo acilo unido al anillo aromático en geometría trigonal plana (120°) + HCl.",
+          "movement": "Producto acilado desactivado hacia polisustituciones; reacción detenida en monoacilación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 210,
               "highlight": "#10b981",
               "label": "Benzofenona"
             },
             {
-              "id": "HCl",
-              "el": "HCl",
-              "x": 670,
-              "y": 195,
+              "id": "O_acyl",
+              "el": "O",
+              "x": 455,
+              "y": 92,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 575,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 640,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 730,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ph2",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 465,
+              "y": 315
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ph2",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fc_p_metilacetofenona": [
+      {
+        "title": "Estado Inicial Desarrollado: Tolueno + Cloruro de Etanoílo + AlCl₃",
+        "semiStep": "C₆H₅–CH₃ + CH₃–CO–Cl",
+        "semiGlobal": "C₆H₅–CH₃ + CH₃–CO–Cl ──(AlCl₃)──► p-CH₃–C₆H₄–CO–CH₃ + HCl",
+        "desc": "Se observan las moléculas iniciales intactas: el tolueno (con grupo metilo activante orto/para-dirigente), el cloruro de etanoílo y AlCl₃.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; anillo aromático y cloruro de acilo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Coordinación del ácido de Lewis (AlCl₃) sobre el átomo de cloro del halogenuro de acilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "Tol_Me",
+              "el": "CH₃",
+              "x": 62,
+              "y": 210
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210,
+              "label": "Tolueno + Cloruro de Etanoílo"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 515,
+              "y": 210
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 515,
+              "y": 95
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 630,
+              "y": 210
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 755,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Catalizador Ácido de Lewis"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 385,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Tol_Me",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Formación del Ion Acilio Electrofílico ([R–C≡O]⁺)",
+        "semiStep": "C₆H₅–CH₃ + CH₃–CO–Cl ──► [Ion Acilio]⁺ + [AlCl₄]⁻",
+        "semiGlobal": "C₆H₅–CH₃ + CH₃–CO–Cl ──(AlCl₃)──► p-CH₃–C₆H₄–CO–CH₃ + HCl",
+        "desc": "El AlCl₃ genera el electrófilo ion acetilio [CH₃–C≡O]⁺ y el contraión [AlCl₄]⁻.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C–Cl.",
+          "forming": "En VERDE punteado: formación de [AlCl₄]⁻ y del triple enlace resonante del ion acilio.",
+          "movement": "Generación del electrófilo fuerte (ion acilio) estabilizado por resonancia."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "Tol_Me",
+              "el": "CH₃",
+              "x": 62,
+              "y": 210
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 515,
+              "y": 210,
+              "charge": "+",
+              "highlight": "#fbbf24",
+              "label": "Ion Acilio (Electrófilo)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 515,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Cl_acyl",
+              "el": "Cl",
+              "x": 650,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 765,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 385,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Tol_Me",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 3,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C_acyl",
+              "to": "Cl_acyl",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "Cl_acyl",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 570,
+              "y1": 210,
+              "cx": 610,
+              "cy": 185,
+              "x2": 640,
+              "y2": 202,
+              "label": "Arranca Cl⁻"
+            },
+            {
+              "type": "full",
+              "x1": 730,
+              "y1": 210,
+              "cx": 700,
+              "cy": 185,
+              "x2": 667,
+              "y2": 202,
+              "label": "Coordina AlCl₄⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ataque Electrofílico Aromático: Formación del Complejo Sigma (Ion Arenio)",
+        "semiStep": "[Intermediario Complejo σ / Ion Arenio catiónico]",
+        "semiGlobal": "C₆H₅–CH₃ + CH₃–CO–Cl ──(AlCl₃)──► p-CH₃–C₆H₄–CO–CH₃ + HCl",
+        "desc": "El grupo –CH₃ orienta el ataque electrofílico mayoritariamente a la posición para (C4) por menor impedimento estérico, formando el complejo sigma.",
+        "legend": {
+          "breaking": "Pérdida temporal de la aromaticidad al usar un par π del anillo.",
+          "forming": "En VERDE sólido: nuevo enlace carbono–carbono entre el anillo y el grupo acilo.",
+          "movement": "Se forma el intermediario catiónico deslocalizado (complejo σ)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "C",
+              "isVertex": false,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "Tol_Me",
+              "el": "CH₃",
+              "x": 62,
+              "y": 210
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 310,
+              "y": 315
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "Complejo σ (Ion Arenio +)"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₄⁻",
+              "x": 650,
+              "y": 315,
+              "highlight": "#38bdf8",
+              "label": "Base conjugada"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 265,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Tol_Me",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desprotonación y Rearomatización: Ruptura C–H en Rojo, Formación HCl en Verde",
+        "semiStep": "p-CH₃–C₆H₄–CO–CH₃ + HCl (Recuperación del sistema aromático)",
+        "semiGlobal": "C₆H₅–CH₃ + CH₃–CO–Cl ──(AlCl₃)──► p-CH₃–C₆H₄–CO–CH₃ + HCl",
+        "desc": "La eliminación del protón en posición para regenera el anillo aromático disustituido y libera HCl.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C_ar–H y disociación de Cl⁻ desde [AlCl₄]⁻.",
+          "forming": "En VERDE punteado: regeneración del sexteto π aromático y formación de H–Cl.",
+          "movement": "La pérdida de H⁺ restablece la estabilidad aromática y regenera el catalizador AlCl₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "Tol_Me",
+              "el": "CH₃",
+              "x": 62,
+              "y": 210
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Protón H⁺ eliminado"
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 175
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 455,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Forma HCl"
+            },
+            {
+              "id": "Cat_al",
+              "el": "AlCl₃",
+              "x": 625,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Catalizador regenerado"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 265,
+              "y": 175
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "forming-pi"
+            },
+            {
+              "from": "Tol_Me",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Cl_out",
+              "to": "Cat_al",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 288,
+              "y1": 268,
+              "cx": 248,
+              "cy": 242,
+              "x2": 225,
+              "y2": 182,
+              "label": "Regenera aromaticidad"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 325,
+              "cx": 390,
+              "cy": 305,
+              "x2": 352,
+              "y2": 322,
+              "label": "Abstrae H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: p-Metilacetofenona (p-CH₃–C₆H₄–CO–CH₃ + HCl)",
+        "semiStep": "p-CH₃–C₆H₄–CO–CH₃ + HCl (p-Metilacetofenona)",
+        "semiGlobal": "C₆H₅–CH₃ + CH₃–CO–Cl ──(AlCl₃)──► p-CH₃–C₆H₄–CO–CH₃ + HCl",
+        "desc": "Queda consolidada la p-metilacetofenona (1-(4-metilfenil)etanona) como producto mayoritario junto a HCl.",
+        "legend": {
+          "breaking": "Sustitución electrofílica aromática completada.",
+          "forming": "En VERDE sólido: grupo acilo unido al anillo aromático en geometría trigonal plana (120°) + HCl.",
+          "movement": "Producto acilado desactivado hacia polisustituciones; reacción detenida en monoacilación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "Tol_Me",
+              "el": "CH₃",
+              "x": 62,
+              "y": 210
+            },
+            {
+              "id": "C_acyl",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "p-Metilacetofenona"
+            },
+            {
+              "id": "O_acyl",
+              "el": "O",
+              "x": 455,
+              "y": 92,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 575,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 640,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl_out",
+              "el": "Cl",
+              "x": 730,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "R1",
+              "el": "CH₃",
+              "x": 465,
+              "y": 315
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Tol_Me",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_acyl",
+              "to": "O_acyl",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_out",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "R1",
+              "to": "C_acyl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "fc_gattermann_koch": [
+      {
+        "title": "Estado Inicial Desarrollado: Benceno + CO + HCl / AlCl₃–CuCl (Gattermann-Koch)",
+        "semiStep": "C₆H₆ + CO + HCl",
+        "semiGlobal": "C₆H₆ + CO + HCl ──(AlCl₃ / CuCl)──► C₆H₅–CHO + HCl",
+        "desc": "Dado que el cloruro de formilo (H–CO–Cl) es inestable a temperatura ambiente, se genera in situ haciendo burbujear monóxido de carbono (CO) y HCl en presencia de AlCl₃ y CuCl.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benceno, CO y HCl intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Protonación del CO por HCl/AlCl₃ para generar el catión formilo [H–C≡O]⁺."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210,
+              "label": "Benceno"
+            },
+            {
+              "id": "C_co",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_co",
+              "el": "O",
+              "x": 455,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hcl",
+              "el": "H",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "CO + HCl / AlCl₃–CuCl"
+            },
+            {
+              "id": "Cl_hcl",
+              "el": "Cl",
+              "x": 690,
+              "y": 210,
               "highlight": "#38bdf8"
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 510,
-              "y": 202,
-              "text": "+"
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "O_co",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "H_hcl",
+              "to": "Cl_hcl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Generación del Electrófilo Catión Formilo ([H–C≡O]⁺)",
+        "semiStep": "CO + HCl + AlCl₃ ──► [H–C≡O]⁺ + [AlCl₄]⁻",
+        "semiGlobal": "C₆H₆ + CO + HCl ──(AlCl₃ / CuCl)──► C₆H₅–CHO + HCl",
+        "desc": "El HCl transfiere un protón al carbono del CO mientras el AlCl₃ captura el Cl⁻, formando el electrófilo catión formilo [H–C≡O]⁺.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace H–Cl.",
+          "forming": "En VERDE punteado: formación del enlace H–C en el catión formilo [H–C≡O]⁺.",
+          "movement": "Activación del CO asistida por CuCl y AlCl₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 318,
+              "y": 210
+            },
+            {
+              "id": "C_co",
+              "el": "C",
+              "x": 455,
+              "y": 210,
+              "charge": "+",
+              "highlight": "#fbbf24",
+              "label": "Catión Formilo"
+            },
+            {
+              "id": "O_co",
+              "el": "O",
+              "x": 455,
+              "y": 95,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H_hcl",
+              "el": "H",
+              "x": 565,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_hcl",
+              "el": "Cl",
+              "x": 685,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Capturado por AlCl₃"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "O_co",
+              "order": 3,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "H_hcl",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "H_hcl",
+              "to": "Cl_hcl",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 495,
+              "y1": 210,
+              "cx": 530,
+              "cy": 185,
+              "x2": 555,
+              "y2": 202,
+              "label": "Protonación de CO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ataque Electrofílico Aromático: Formación del Complejo Sigma (Ion Arenio)",
+        "semiStep": "[Intermediario Complejo σ / Ion Arenio formilado]",
+        "semiGlobal": "C₆H₆ + CO + HCl ──(AlCl₃ / CuCl)──► C₆H₅–CHO + HCl",
+        "desc": "Los electrones π del benceno atacan al carbono del catión formilo formando el nuevo enlace C_ar–CHO en el complejo sigma.",
+        "legend": {
+          "breaking": "Pérdida temporal de la aromaticidad.",
+          "forming": "En VERDE sólido: nuevo enlace carbono–carbono entre el anillo y el grupo formilo.",
+          "movement": "Formación del intermediario ion arenio."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "C",
+              "isVertex": false,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 310,
+              "y": 315
+            },
+            {
+              "id": "C_co",
+              "el": "C",
+              "x": 395,
+              "y": 175,
+              "highlight": "#10b981",
+              "label": "Complejo σ (Ion Arenio +)"
+            },
+            {
+              "id": "O_co",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hcl",
+              "el": "H",
+              "x": 500,
+              "y": 175,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_hcl",
+              "el": "AlCl₄⁻",
+              "x": 650,
+              "y": 315,
+              "highlight": "#38bdf8",
+              "label": "Base conjugada"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_co",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_co",
+              "to": "O_co",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "H_hcl",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Desprotonación y Rearomatización: Ruptura C–H en Rojo, Formación HCl en Verde",
+        "semiStep": "C₆H₅–CHO + HCl (Recuperación del sistema aromático)",
+        "semiGlobal": "C₆H₆ + CO + HCl ──(AlCl₃ / CuCl)──► C₆H₅–CHO + HCl",
+        "desc": "La base [AlCl₄]⁻ abstrae el protón H⁺ del anillo, regenerando la aromaticidad y liberando HCl y AlCl₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C_ar–H.",
+          "forming": "En VERDE punteado: regeneración del anillo aromático y formación de H–Cl.",
+          "movement": "Rearomatización del benzaldehído."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 325,
+              "y": 325,
+              "highlight": "#ef4444",
+              "label": "Protón H⁺ eliminado"
+            },
+            {
+              "id": "C_co",
+              "el": "C",
+              "x": 395,
+              "y": 175
+            },
+            {
+              "id": "O_co",
+              "el": "O",
+              "x": 395,
+              "y": 68,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hcl",
+              "el": "H",
+              "x": 500,
+              "y": 175,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cl_hcl",
+              "el": "Cl",
+              "x": 455,
+              "y": 325,
+              "highlight": "#10b981",
+              "label": "Regenera HCl + AlCl₃"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "forming-pi"
+            },
+            {
+              "from": "V0",
+              "to": "H_ar",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "V0",
+              "to": "C_co",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "O_co",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C_co",
+              "to": "H_hcl",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_hcl",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 288,
+              "y1": 268,
+              "cx": 248,
+              "cy": 242,
+              "x2": 225,
+              "y2": 182,
+              "label": "Regenera aromaticidad"
+            },
+            {
+              "type": "full",
+              "x1": 420,
+              "y1": 325,
+              "cx": 390,
+              "cy": 305,
+              "x2": 352,
+              "y2": 322,
+              "label": "Abstrae H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Benzaldehído (C₆H₅–CHO + HCl)",
+        "semiStep": "C₆H₅–CHO + HCl (Benzaldehído)",
+        "semiGlobal": "C₆H₆ + CO + HCl ──(AlCl₃ / CuCl)──► C₆H₅–CHO + HCl",
+        "desc": "Queda consolidado el benzaldehído (C₆H₅–CHO) con su grupo formilo en disposición trigonal plana (120°) junto a HCl.",
+        "legend": {
+          "breaking": "Formilación de Gattermann-Koch completada.",
+          "forming": "En VERDE sólido: grupo aldehído –CHO en geometría trigonal plana (120°) + HCl.",
+          "movement": "Aldehído aromático obtenido directamente a partir de benceno."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "V0",
+              "el": "",
+              "isVertex": true,
+              "x": 251,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V1",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V2",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 258,
+              "noValenceDots": true
+            },
+            {
+              "id": "V3",
+              "el": "",
+              "isVertex": true,
+              "x": 139,
+              "y": 210,
+              "noValenceDots": true
+            },
+            {
+              "id": "V4",
+              "el": "",
+              "isVertex": true,
+              "x": 167,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "V5",
+              "el": "",
+              "isVertex": true,
+              "x": 223,
+              "y": 162,
+              "noValenceDots": true
+            },
+            {
+              "id": "C_co",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O_co",
+              "el": "O",
+              "x": 465,
+              "y": 88,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_hcl",
+              "el": "H",
+              "x": 465,
+              "y": 332,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "plus_tx",
+              "el": "+",
+              "x": 565,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "H_ar",
+              "el": "H",
+              "x": 630,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Subproducto"
+            },
+            {
+              "id": "Cl_hcl",
+              "el": "Cl",
+              "x": 720,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "V0",
+              "to": "V1",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V1",
+              "to": "V2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V2",
+              "to": "V3",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V3",
+              "to": "V4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V4",
+              "to": "V5",
+              "order": 2,
+              "state": "normal",
+              "inwardCenter": {
+                "x": 195,
+                "y": 210
+              }
+            },
+            {
+              "from": "V5",
+              "to": "V0",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "V0",
+              "to": "C_co",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C_co",
+              "to": "O_co",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C_co",
+              "to": "H_hcl",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "H_ar",
+              "to": "Cl_hcl",
+              "order": 1,
+              "state": "new"
             }
           ]
         }
