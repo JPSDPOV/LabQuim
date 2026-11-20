@@ -1171,7 +1171,7 @@
       "obtencion": [
         {
           "value": "ac_obt_ox_alc_ald",
-          "label": "1) Oxidación Fuerte de Alcoholes Primarios y Aldehídos (Na₂Cr₂O₇/H₂SO₄, CrO₃ o KMnO₄/H⁺ → R–COOH)"
+          "label": "1) Oxidación Fuerte de Alcoholes Primarios, Aldehídos y Dioles (Na₂Cr₂O₇/H₂SO₄, CrO₃ o KMnO₄ → R–COOH)"
         },
         {
           "value": "ac_obt_ox_aril",
@@ -1179,49 +1179,61 @@
         },
         {
           "value": "ac_obt_ox_alquenos",
-          "label": "3) Ruptura Oxidativa Fuerte de Alquenos y Alquinos (KMnO₄ conc. Δ u O₃ / H₂O₂ → Ácidos Carboxílicos)"
+          "label": "3) Ruptura Oxidativa de Alquenos, Cicloalquenos y Alquinos (O₃ / H₂O₂ o KMnO₄ conc. Δ → Ácidos y Diácidos)"
+        },
+        {
+          "value": "ac_obt_hidrolisis_derivados",
+          "label": "4) Hidrólisis de Derivados de Ácido (Ésteres, Lactonas, Amidas, Lactamas, Anhídridos y Haluros → R–COOH)"
         },
         {
           "value": "ac_obt_nitrilos",
-          "label": "4) Hidrólisis Ácida o Básica de Nitrilos (R–C≡N + 2 H₂O / H⁺ Δ → R–COOH + NH₄⁺)"
+          "label": "5) Hidrólisis Ácida o Básica de Nitrilos (R–C≡N) e Isonitrilos (R–N≡C) vía Amidas → R–COOH"
         },
         {
           "value": "ac_obt_grignard",
-          "label": "5) Carboxilación de Reactivos de Grignard con Dióxido de Carbono (R–MgX + 1° CO₂ / 2° H₃O⁺ → R–COOH)"
+          "label": "6) Carbonatación de Reactivos de Grignard con Dióxido de Carbono (R–MgX + 1° CO₂ / 2° H₃O⁺ → R–COOH)"
         }
       ],
       "reacciones": [
         {
           "value": "ac_rxn_acidez",
-          "label": "A.1- Como Ácido (Ruptura O–H): Reacción con NaOH y con Bicarbonato NaHCO₃ (Libera CO₂↑)"
+          "label": "A.1- Como Ácido (Ruptura O–H): Formación de Sales (NaOH, KOH, NaHCO₃) y Micelas / Jabones"
         },
         {
           "value": "ac_rxn_esterificacion",
-          "label": "B.1- Sustitución Nucleofílica Acílica: Esterificación de Fischer con Alcoholes (⇄ Éster + H₂O)"
+          "label": "B.1- Esterificación de Fischer (+ Alcohol ⇄ Éster + H₂O) y Tioesterificación (+ Tiol R–SH → Tioéster)"
+        },
+        {
+          "value": "ac_rxn_lactonas",
+          "label": "B.2- Esterificación Intramolecular de Hidroxiácidos (γ- y δ-Hidroxiácidos + H⁺ → Lactonas + H₂O)"
         },
         {
           "value": "ac_rxn_cloruros",
-          "label": "B.2- Formación de Haluros de Acilo con SOCl₂, PCl₅ o PCl₃ (→ R–COCl + SO₂↑ + HCl↑)"
+          "label": "B.3- Formación de Haluros de Acilo con SOCl₂, PCl₅ o PCl₃ (→ R–COCl + SO₂↑ + HCl↑)"
         },
         {
           "value": "ac_rxn_anhidridos",
-          "label": "B.3- Formación de Anhídridos de Ácido por Deshidratación (2 R–COOH + P₂O₅ / Δ → Anhídrido)"
+          "label": "B.4- Formación de Anhídridos Intermoleculares y Cíclicos (Ác. Succínico / o-Ftálico + Δ → Anhídrido)"
         },
         {
           "value": "ac_rxn_amidas",
-          "label": "B.4- Formación de Amidas con Amoníaco o Aminas (1° Sal de Amonio —(Δ)→ Amida + H₂O)"
+          "label": "B.5- Formación de Amidas con Amoníaco o Aminas (1° Sal de Amonio —(Δ)→ Amida + H₂O)"
+        },
+        {
+          "value": "ac_rxn_lactamas",
+          "label": "B.6- Aminación Intramolecular de Aminoácidos (γ- y δ-Aminoácidos + Δ / H⁺ → Lactamas + H₂O)"
         },
         {
           "value": "ac_rxn_reduccion",
-          "label": "C- Reducción Completa a Alcoholes Primarios con LiAlH₄ o LiBH₄ (→ R–CH₂–OH)"
+          "label": "C- Reducción de Ácidos: Total con LiAlH₄ / LiBH₄ (→ Alcohol 1°) vs. Parcial con DIBAH (→ Aldehído)"
         },
         {
           "value": "ac_rxn_hvz",
           "label": "D.1- Halogenación α de Hell-Volhard-Zelinsky (R–CH₂–COOH + Br₂ / PBr₃ → α-Bromoácido)"
         },
         {
-          "value": "ac_rxn_descarbox",
-          "label": "D.2- Descarboxilación Térmica (Cal Sodada → Alcano | β-Cetoácidos —(Δ)→ Cetona + CO₂↑)"
+          "value": "ac_rxn_descarbox_cadena",
+          "label": "D.2- Descarboxilación (β-Cetoácidos / Malónico / Cal Sodada) y Reacciones de Hidroxiácidos (Málico ⇄ Fumárico)"
         }
       ]
     },
