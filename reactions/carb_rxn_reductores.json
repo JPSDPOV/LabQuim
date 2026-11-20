@@ -1,0 +1,871 @@
+{
+  "category": "reacciones",
+  "title": "19) Poder Reductor (Fehling / Benedict Cu²⁺ → Cu₂O↓ y Tollens Ag⁺ → Ag⁰): Aldosas, Cetosas y Disacáridos",
+  "natureBadge": "Ensayos Redox de Carbohidratos • Aldosas (+), Cetosas (+) por Tautomería Enodiol | Sacarosa (−)",
+  "deltaH": "ΔH° < 0 (Exotérmica; oxidación del grupo aldehído en medio alcalino con reducción de Cu²⁺ a Cu₂O↓ rojo ladrillo o Ag⁺ a Ag⁰↓)",
+  "description": "Capacidad de los carbohidratos con un carbono anomérico libre (grupo hemiacetal o hemicetal capaz de abrirse a la forma carbonílica acíclica en disolución alcalina) para reducir oxidantes metálicos suaves como el reactivo de Fehling/Benedict (Cu²⁺) o el reactivo de Tollens ([Ag(NH₃)₂]⁺):\n1) Aldosas (ej. D-Glucosa, D-Galactosa): en disolución acuosa abren su anillo hemiacetálico exponiendo el grupo aldehído (–CHO), que se oxida a sal de ácido aldónico (gluconato) mientras reduce Cu²⁺ (azul) a óxido cuproso Cu₂O↓ (precipitado rojo ladrillo) o Ag⁺ a Ag⁰↓ (espejo de plata).\n2) Cetosas (ej. D-Fructosa): ¡DAN POSITIVO (+)! Aunque las cetonas simples no se oxidan con Fehling o Tollens, las α-hidroxicetonas en medio alcalino sufren TAUTOMERÍA CETO-ENODIOL (transposición de Lobry de Bruyn–Alberda van Ekenstein), isomerizándose en equilibrio a D-glucosa y D-manosa (aldosas) que sí reducen el reactivo.\n3) Disacáridos: aquellos que conservan al menos un carbono anomérico libre (hemiacetal abierto/cerrado, como MALTOSA y LACTOSA) son azúcares reductores (+). La SACAROSA, al tener ambos carbonos anoméricos (C1 de glucosa y C2 de fructosa) bloqueados en el enlace O-glicosídico α(1→2)β, no puede abrirse y es un azúcar NO REDUCTOR (−).",
+  "meta": {
+    "grupoFuncional": "Carboxilatos Aldónicos (R–COO⁻) + Óxido Cuproso (Cu₂O↓ rojo ladrillo) o Plata Metálica (Ag⁰↓)",
+    "reaccionMecanismo": "Apertura del anillo hemiacetálico + Tautomería enodiol (en cetosas) + Oxidación alcalina del grupo formilo",
+    "naturaleza": "Por etapas en medio alcalino (apertura anillo → [en cetosas: tautomerización vía enodiol a aldosa] → oxidación del –CHO a carboxilato + reducción metálica).",
+    "rupturaIntermediarios": "Ruptura de enlace endocíclico C1–O5 y enlace C1–H aldehídico; intermediarios cadena abierta e intermediario enodiol (para cetosas); formación de carboxilato y Cu₂O↓ / Ag⁰↓.",
+    "detalleMecanismo": "Aldosa/Cetosa + 2 Cu²⁺ (complejo azul) + 5 OH⁻ ──(Δ)──► Aldonato (R–COO⁻) + Cu₂O↓ (rojo ladrillo) + 3 H₂O",
+    "reactivosCondiciones": "Carbohidrato en disolución acuosa + Reactivo de Fehling (CuSO₄ + tartrato de sodio y potasio en NaOH), Benedict (CuSO₄ + citrato de sodio en Na₂CO₃) o Tollens ([Ag(NH₃)₂]⁺OH⁻), calentamiento suave.",
+    "rolReactivos": "• Agente reductor: Monosacárido (aldosa o cetosa) o disacárido con carbono anomérico libre (hemiacetal/hemicetal).\n• Agente oxidante suave: Ion cúprico complejado Cu²⁺ (Fehling/Benedict, azul intenso) o complejo diamminplata(I) [Ag(NH₃)₂]⁺ (Tollens).\n• Medio alcalino (OH⁻ / CO₃²⁻): cataliza la apertura del anillo hemiacetálico y la tautomerización enodiol de cetosas.",
+    "reglasObs": "• TODOS los monosacáridos (aldosas y cetosas) son azúcares reductores (+).\n• Disacáridos reductores (+): Maltosa, Lactosa, Celobiosa (tienen un grupo hemiacetal libre en uno de los anillos).\n• Disacáridos NO reductores (−): Sacarosa y Trehalosa (enlace glicosídico entre ambos carbonos anoméricos).\n• Glucósidos (ej. metil α-D-glucopiranósido): NO reductores (−) porque el acetal es estable en medio básico y no puede abrirse."
+  },
+  "substrates": [
+    {
+      "id": "red_glucosa_fehling",
+      "name": "D-Glucosa (Aldosa) + Fehling / Benedict (Cu²⁺) ──► D-Gluconato + Cu₂O↓ (Rojo Ladrillo) [Reductor +]",
+      "catalyst": "Cu²⁺ / Tartrato / OH⁻ (Δ)"
+    },
+    {
+      "id": "red_fructosa_enodiol",
+      "name": "D-Fructosa (Cetosa) ⇄ Intermediario Enodiol ⇄ D-Glucosa + Cu²⁺ ──► Cu₂O↓ [Positivo por Tautomería]",
+      "catalyst": "OH⁻ / Cu²⁺ (Tautomería Enodiol)"
+    },
+    {
+      "id": "red_maltosa_tollens",
+      "name": "Maltosa (α-1,4 con C1' libre) + Tollens [Ag(NH₃)₂]⁺ ──► Ác. Maltónico + 2 Ag⁰↓ [Disacárido Reductor +]",
+      "catalyst": "[Ag(NH₃)₂]⁺OH⁻ (Tollens)"
+    },
+    {
+      "id": "red_sacarosa_control",
+      "name": "Sacarosa (Enlace α-1,2-β sin C anomérico libre) + Fehling / Tollens ──► Sin Reacción [NO Reductor −]",
+      "catalyst": "Cu²⁺ / OH⁻ (Control Negativo)"
+    }
+  ],
+  "catalysts": [
+    "Cu²⁺ / Tartrato / OH⁻ (Δ)",
+    "OH⁻ / Cu²⁺ (Tautomería Enodiol)",
+    "[Ag(NH₃)₂]⁺OH⁻ (Tollens)",
+    "Cu²⁺ / OH⁻ (Control Negativo)"
+  ],
+  "stepsBySubstrate": {
+    "red_glucosa_fehling": [
+      {
+        "title": "Estado Inicial Desarrollado: β-D-Glucopiranosa + Reactivo de Fehling (Cu²⁺ Azul)",
+        "semiStep": "D-Glucopiranosa (Hemiacetal cíclico) + Cu²⁺ / OH⁻",
+        "semiGlobal": "D-Glucosa + 2 Cu²⁺ + 5 OH⁻ ──(Δ)──► D-Gluconato + Cu₂O↓ (rojo ladrillo) + 3 H₂O",
+        "desc": "Se observan la β-D-glucopiranosa con su grupo –OH hemiacetálico libre en el carbono anomérico C1 y el complejo cúprico azul (Cu²⁺) en medio alcalino.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; anillo piranosa y complejo cúprico intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "La base OH⁻ cataliza la apertura del anillo hemiacetálico para liberar el grupo aldehído –CHO."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 455,
+              "y": 175,
+              "highlight": "#fbbf24",
+              "label": "C1 Hemiacetal libre"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 575,
+              "y": 115,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 575,
+              "y": 245
+            },
+            {
+              "id": "Ring",
+              "el": "C₂–C₅",
+              "x": 275,
+              "y": 225
+            },
+            {
+              "id": "O5",
+              "el": "O",
+              "x": 345,
+              "y": 105
+            },
+            {
+              "id": "Cu2_ox",
+              "el": "2 Cu²⁺ (Azul)",
+              "x": 695,
+              "y": 175,
+              "highlight": "#38bdf8",
+              "label": "Fehling / Benedict"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Ring",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Apertura del Hemiacetal a Cadena Abierta (Grupo –CHO)",
+        "semiStep": "D-Glucopiranosa ⇄ D-Glucosa abierta (R–CHO) + Cu²⁺",
+        "semiGlobal": "D-Glucosa + 2 Cu²⁺ + 5 OH⁻ ──(Δ)──► D-Gluconato + Cu₂O↓ (rojo ladrillo) + 3 H₂O",
+        "desc": "Al romperse el enlace endocíclico C1–O5, se regenera el doble enlace C1=O1 aldehídico (–CHO) susceptible de oxidación.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace hemiacetálico C1–O5.",
+          "forming": "En VERDE punteado: regeneración del doble enlace aldehídico C1=O1.",
+          "movement": "La forma abierta (<0.02%) se consume continuamente desplazando todo el equilibrio hacia la oxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 455,
+              "y": 175,
+              "label": "Grupo Aldehído"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 575,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 575,
+              "y": 245,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ring",
+              "el": "C₂–C₅",
+              "x": 275,
+              "y": 225
+            },
+            {
+              "id": "O5",
+              "el": "OH",
+              "x": 315,
+              "y": 95,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cu2_ox",
+              "el": "2 Cu²⁺",
+              "x": 695,
+              "y": 175,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Ring",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring",
+              "to": "O5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O5",
+              "to": "C1",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 495,
+              "y1": 115,
+              "cx": 525,
+              "cy": 135,
+              "x2": 535,
+              "y2": 155,
+              "label": "Forma C=O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Oxidación del Aldehído y Reducción de Cu²⁺ a Cu₂O↓",
+        "semiStep": "R–CHO + 2 Cu²⁺ + 5 OH⁻ ──► R–COO⁻ + Cu₂O↓ + 3 H₂O",
+        "semiGlobal": "D-Glucosa + 2 Cu²⁺ + 5 OH⁻ ──(Δ)──► D-Gluconato + Cu₂O↓ (rojo ladrillo) + 3 H₂O",
+        "desc": "Se rompe el enlace C1–H aldehídico transfiriendo dos electrones a dos iones Cu²⁺, que precipitan como óxido cuproso (Cu₂O↓).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–H aldehídico.",
+          "forming": "En VERDE punteado: incorporación de oxígeno carboxilato (C1–O⁻).",
+          "movement": "Cambio de color de azul intenso (Cu²⁺) a precipitado rojo ladrillo (Cu₂O↓)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "C₂–C₆",
+              "x": 255,
+              "y": 195
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 425,
+              "y": 195
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 425,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_new",
+              "el": "O⁻",
+              "x": 425,
+              "y": 310,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 565,
+              "y": 195,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cu_red",
+              "el": "Cu₂O↓",
+              "x": 695,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Rojo ladrillo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_new",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 525,
+              "y1": 195,
+              "cx": 595,
+              "cy": 170,
+              "x2": 655,
+              "y2": 190,
+              "label": "2e⁻ → 2 Cu²⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ion D-Gluconato + Precipitado Rojo Ladrillo de Cu₂O↓",
+        "semiStep": "D-Gluconato (HOCH₂–(CHOH)₄–COO⁻) + Cu₂O↓ (Ensayo Positivo +)",
+        "semiGlobal": "D-Glucosa + 2 Cu²⁺ + 5 OH⁻ ──(Δ)──► D-Gluconato + Cu₂O↓ (rojo ladrillo) + 3 H₂O",
+        "desc": "Queda consolidado el ion D-gluconato junto con el precipitado insoluble rojo ladrillo de óxido de cobre(I) (Cu₂O↓).",
+        "legend": {
+          "breaking": "Oxidación del azúcar reductor completada.",
+          "forming": "En VERDE sólido: grupo carboxilato (–COO⁻) en C1 y Cu₂O↓.",
+          "movement": "Ensayo de Fehling/Benedict positivo (+)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring",
+              "el": "HOCH₂–(CHOH)₄",
+              "x": 225,
+              "y": 195
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 425,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "D-Gluconato"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 425,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_new",
+              "el": "O⁻",
+              "x": 555,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Cu_red",
+              "el": "Cu₂O↓",
+              "x": 695,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Precipitado Rojo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_new",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "red_fructosa_enodiol": [
+      {
+        "title": "Estado Inicial Desarrollado: D-Fructosa Abierta (α-Hidroxicetona) en Medio Básico",
+        "semiStep": "HO–CH₂–CO–(CHOH)₃–CH₂OH + OH⁻",
+        "semiGlobal": "D-Fructosa (Cetosa) ⇄ Intermediario Enodiol ⇄ D-Glucosa (Aldosa) + Cu²⁺ ──► Cu₂O↓",
+        "desc": "La D-fructosa tiene un grupo cetona en C2 y un grupo hidroxilo adyacente en C1 (α-hidroxicetona). En medio básico, el protón C1–H es ácido y se abstrae.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; α-hidroxicetona y base OH⁻ intactas.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Desprotonación del carbono C1 por la base OH⁻ para iniciar la tautomería ceto-enodiol."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_c1",
+              "el": "H",
+              "x": 165,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "CH(OH)",
+              "x": 305,
+              "y": 195,
+              "highlight": "#38bdf8",
+              "label": "C1 (–CH₂OH)"
+            },
+            {
+              "id": "C2",
+              "el": "C2",
+              "x": 465,
+              "y": 195,
+              "label": "C2 Cetona"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 465,
+              "y": 85
+            },
+            {
+              "id": "Rest",
+              "el": "(CHOH)₃–CH₂OH",
+              "x": 645,
+              "y": 195
+            },
+            {
+              "id": "OH_b",
+              "el": "OH⁻",
+              "x": 165,
+              "y": 85,
+              "highlight": "#38bdf8",
+              "label": "Base (Fehling)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_c1",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Rest",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Formación del Intermediario 1,2-Enodiol (Transposición de Lobry de Bruyn)",
+        "semiStep": "HO–CH=C(OH)–(CHOH)₃–CH₂OH [Intermediario Enodiol]",
+        "semiGlobal": "D-Fructosa (Cetosa) ⇄ Intermediario Enodiol ⇄ D-Glucosa (Aldosa) + Cu²⁺ ──► Cu₂O↓",
+        "desc": "Se forma un doble enlace C1=C2 con dos grupos hidroxilo (1,2-enodiol), un puente común que permite migrar el carbonilo desde C2 hacia C1.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura C1–H y apertura π C2=O2.",
+          "forming": "En VERDE punteado: doble enlace olefínico C1=C2 del enodiol.",
+          "movement": "El enodiol se tautomeriza hacia el aldehído en C1 (D-glucosa y D-manosa)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH(OH)",
+              "x": 285,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "1,2-Enodiol"
+            },
+            {
+              "id": "C2",
+              "el": "C(OH)",
+              "x": 465,
+              "y": 195,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Rest",
+              "el": "(CHOH)₃–CH₂OH",
+              "x": 655,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "Rest",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Isomerización a Aldosa (D-Glucosa) → Ensayo Positivo Cu₂O↓",
+        "semiStep": "OHC–CH(OH)–(CHOH)₃–CH₂OH + Cu²⁺ ──► Aldonato + Cu₂O↓ (Positivo +)",
+        "semiGlobal": "D-Fructosa (Cetosa) ⇄ Intermediario Enodiol ⇄ D-Glucosa (Aldosa) + Cu²⁺ ──► Cu₂O↓",
+        "desc": "La aldosa formada en equilibrio reduce inmediatamente a Cu²⁺ (Fehling/Benedict) o Ag⁺ (Tollens), explicando por qué TODAS las cetosas son azúcares reductores.",
+        "legend": {
+          "breaking": "Tautomerización y oxidación completadas.",
+          "forming": "En VERDE sólido: grupo aldehído en C1 oxidado a carboxilato + Cu₂O↓.",
+          "movement": "Regla clave: Las cetosas dan positivo en Fehling, Benedict y Tollens por tautomería enodiol."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 255,
+              "y": 85,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 255,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Aldosa Oxidada"
+            },
+            {
+              "id": "O_new",
+              "el": "O⁻",
+              "x": 255,
+              "y": 305,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH(OH)",
+              "x": 425,
+              "y": 195
+            },
+            {
+              "id": "Rest",
+              "el": "(CHOH)₃–CH₂OH",
+              "x": 615,
+              "y": 195
+            },
+            {
+              "id": "Cu_red",
+              "el": "+ Cu₂O↓",
+              "x": 695,
+              "y": 305,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_new",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Rest",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "red_maltosa_tollens": [
+      {
+        "title": "Estado Inicial Desarrollado: Maltosa (Enlace α-1,4) + Reactivo de Tollens",
+        "semiStep": "Glucosa(α1→4)Glucosa (C1' hemiacetálico libre) + [Ag(NH₃)₂]⁺",
+        "semiGlobal": "Maltosa + 2 [Ag(NH₃)₂]⁺ + 3 OH⁻ ──► Ác. Maltónico (sal) + 2 Ag⁰↓ (Espejo de Plata)",
+        "desc": "En la maltosa, el primer anillo tiene su C1 bloqueado en el enlace glicosídico α(1→4), pero el segundo anillo conserva su carbono anomérico C1' como hemiacetal libre.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; disacárido con extremo reductor libre.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Apertura del segundo anillo en C1' para exponer el grupo –CHO frente a Tollens."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring1",
+              "el": "Glc(C1)",
+              "x": 205,
+              "y": 195,
+              "label": "Anillo 1 (Acetal)"
+            },
+            {
+              "id": "O_gly",
+              "el": "O",
+              "x": 335,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "Enlace α(1→4)"
+            },
+            {
+              "id": "Ring2",
+              "el": "Glc(C4'–C5')",
+              "x": 475,
+              "y": 195
+            },
+            {
+              "id": "C1_p",
+              "el": "C1'–OH",
+              "x": 625,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Hemiacetal libre (+)"
+            },
+            {
+              "id": "Tollens",
+              "el": "[Ag(NH₃)₂]⁺",
+              "x": 625,
+              "y": 310,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring1",
+              "to": "O_gly",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_gly",
+              "to": "Ring2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring2",
+              "to": "C1_p",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ion Maltonato + Espejo de Plata (2 Ag⁰↓) [Disacárido Reductor +]",
+        "semiStep": "Maltosa oxidada en C1' (–COO⁻) + 2 Ag⁰↓",
+        "semiGlobal": "Maltosa + 2 [Ag(NH₃)₂]⁺ + 3 OH⁻ ──► Ác. Maltónico (sal) + 2 Ag⁰↓ (Espejo de Plata)",
+        "desc": "El carbono C1' libre se oxida a carboxilato y reduce Ag⁺ a plata metálica (Ag⁰↓), confirmando que la maltosa (al igual que la lactosa) es un disacárido reductor.",
+        "legend": {
+          "breaking": "Oxidación del extremo reductor completada.",
+          "forming": "En VERDE sólido: grupo carboxilato en C1' y depósito de Ag⁰↓.",
+          "movement": "Prueba de Tollens positiva (+)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring1",
+              "el": "Glc(C1)",
+              "x": 195,
+              "y": 195
+            },
+            {
+              "id": "O_gly",
+              "el": "O",
+              "x": 325,
+              "y": 195
+            },
+            {
+              "id": "Ring2",
+              "el": "Glc(C4'–C5')",
+              "x": 465,
+              "y": 195
+            },
+            {
+              "id": "C1_p",
+              "el": "C1'OO⁻",
+              "x": 615,
+              "y": 195,
+              "highlight": "#10b981",
+              "label": "Maltonato"
+            },
+            {
+              "id": "Ag_m",
+              "el": "+ 2 Ag⁰↓",
+              "x": 615,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Espejo de Plata"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring1",
+              "to": "O_gly",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_gly",
+              "to": "Ring2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ring2",
+              "to": "C1_p",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "red_sacarosa_control": [
+      {
+        "title": "Estado Inicial Desarrollado: Sacarosa (Enlace α-1,2-β) + Fehling / Tollens",
+        "semiStep": "α-D-Glucopiranosil-(1↔2)-β-D-fructofuranósido + Cu²⁺ / OH⁻",
+        "semiGlobal": "Sacarosa + Fehling / Tollens ──► SIN REACCIÓN (Azúcar NO Reductor −)",
+        "desc": "En la sacarosa, tanto el carbono anomérico C1 de la glucosa como el carbono anomérico C2 de la fructosa están unidos entre sí formando un doble acetal/cetal glicosídico.",
+        "legend": {
+          "breaking": "Ningún enlace roto; los acetales y cetales son estables en medio alcalino y no pueden abrirse.",
+          "forming": "Ningún enlace formado.",
+          "movement": "Ausencia total de grupo hemiacetal o hemicetal libre."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc_ring",
+              "el": "α-D-Glucosa (C1)",
+              "x": 225,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "O_gly",
+              "el": "O",
+              "x": 395,
+              "y": 195,
+              "highlight": "#ef4444",
+              "label": "Enlace α(1↔2)β bloqueado"
+            },
+            {
+              "id": "Fru_ring",
+              "el": "β-D-Fructosa (C2)",
+              "x": 565,
+              "y": 195,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Fehling",
+              "el": "Cu²⁺ / OH⁻",
+              "x": 395,
+              "y": 310,
+              "highlight": "#38bdf8",
+              "label": "Sin efecto oxidante"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc_ring",
+              "to": "O_gly",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_gly",
+              "to": "Fru_ring",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Resultado Consolidado: Prueba Negativa (−) — La Sacarosa es un Azúcar NO Reductor",
+        "semiStep": "Sacarosa inalterada (Disolución permanece azul / sin espejo de plata)",
+        "semiGlobal": "Sacarosa + Fehling / Tollens ──► SIN REACCIÓN (Azúcar NO Reductor −)",
+        "desc": "La sacarosa no reduce Fehling, Benedict ni Tollens (solo da positivo si previamente se hidroliza con ácido o invertasa a glucosa + fructosa = azúcar invertido).",
+        "legend": {
+          "breaking": "Sin apertura de anillo en medio básico.",
+          "forming": "Sin precipitado de Cu₂O↓ ni Ag⁰↓.",
+          "movement": "Criterio fundamental de examen: Sacarosa = único disacárido común NO reductor."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Glc_ring",
+              "el": "α-D-Glucosa (C1)",
+              "x": 225,
+              "y": 195
+            },
+            {
+              "id": "O_gly",
+              "el": "O",
+              "x": 395,
+              "y": 195,
+              "highlight": "#fbbf24",
+              "label": "NO Reductor (−)"
+            },
+            {
+              "id": "Fru_ring",
+              "el": "β-D-Fructosa (C2)",
+              "x": 565,
+              "y": 195
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Glc_ring",
+              "to": "O_gly",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_gly",
+              "to": "Fru_ring",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
