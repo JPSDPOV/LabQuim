@@ -1,0 +1,239 @@
+{
+  "category": "obtencion",
+  "title": "2) Reducción Catalítica o Química de Compuestos Nitro Aromáticos (p-Nitrotolueno + 3 H₂/Pt → p-Metilanilina)",
+  "natureBadge": "Reducción de Nitrocompuestos • Ar–NO₂ + 3 H₂ / Pt (o Fe/HCl, Sn/HCl) ──► Amina Primaria Aromática (Ar–NH₂) + 2 H₂O",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; método estándar para obtener anilinas sustituidas)",
+  "description": "Reducción del grupo nitro aromático (–NO₂) hasta grupo amino primario (–NH₂) mediante hidrogenación catalítica (3 H₂ con Pt, Pd o Ni) o reducción química con metales en medio ácido (Fe / HCl o Sn / HCl seguido de neutralización con NaOH) (Diap. 1183 de cátedra):\n1) Ejemplo de cátedra: p-Nitrotolueno + 3 H₂ / Pt ──► p-Metilanilina (p-toluidina) + 2 H₂O.\n2) Síntesis de Anilina: Nitrobenceno + 3 H₂ / Pt (o Fe / HCl → NaOH) ──► Anilina (Fenilamina) + 2 H₂O.\n3) Ventaja sintética: dado que el grupo –NH₂ no puede introducirse directamente por nitración, se nitra primero el anillo aromático (HNO₃/H₂SO₄) y luego se reduce el grupo –NO₂ a –NH₂.",
+  "meta": {
+    "grupoFuncional": "Aminas Primarias Aromáticas / Anilinas (Ar–NH₂)",
+    "reaccionMecanismo": "Reducción redox de 6 electrones sobre el átomo de nitrógeno (N⁺³ → N⁻³)",
+    "naturaleza": "Por etapas irreversible (Nitro → Nitroso → Hidroxilamina → Amina primaria aromática + 2 H₂O).",
+    "rupturaIntermediarios": "Ruptura de los enlaces N–O y H–H; intermediarios nitrosoarilo y arilhidroxilamina; formación de dos enlaces N–H y 2 H₂O.",
+    "detalleMecanismo": "p-CH₃–C₆H₄–NO₂ + 3 H₂ ──(Pt)──► p-CH₃–C₆H₄–NH₂ (p-Metilanilina) + 2 H₂O",
+    "reactivosCondiciones": "Nitrocompuesto aromático + 3 H₂ (g) con catalizador metálico (Pt, Pd/C o Ni Raney), o bien Fe / HCl (o Sn / HCl) seguido de NaOH acuoso.",
+    "rolReactivos": "• Sustrato oxidado: Nitrocompuesto aromático (nitrobenceno, p-nitrotolueno).\n• Agente reductor: Hidrógeno molecular (3 H₂) sobre platino (Pt) o metal activo en medio ácido.\n• Producto: Amina primaria aromática (Ar–NH₂) + 2 H₂O.",
+    "reglasObs": "• Conserva la posición del sustituyente en el anillo aromático (orto, meta o para).\n• Ejemplo exacto de cátedra (Diap. 1183): p-nitrotolueno + 3 H₂ / Pt → p-metilanilina + 2 H₂O."
+  },
+  "substrates": [
+    {
+      "id": "ami_obt2_pnitrotolueno",
+      "name": "p-Nitrotolueno + 3 H₂ / Pt ──► p-Metilanilina (p-Toluidina) + 2 H₂O [Ejemplo Exacto Cátedra Diap. 1183]",
+      "catalyst": "3 H₂ / Pt (Catalítico)"
+    },
+    {
+      "id": "ami_obt2_nitrobenceno_anilina",
+      "name": "Nitrobenceno + 3 H₂ / Pt (o Fe / HCl → NaOH) ──► Anilina (Fenilamina) + 2 H₂O",
+      "catalyst": "3 H₂ / Pt  (o 1. Fe/HCl  2. NaOH)"
+    }
+  ],
+  "catalysts": [
+    "3 H₂ / Pt (Catalítico)",
+    "3 H₂ / Pt  (o 1. Fe/HCl  2. NaOH)"
+  ],
+  "stepsBySubstrate": {
+    "ami_obt2_pnitrotolueno": [
+      {
+        "title": "Estado Inicial Desarrollado: p-Nitrotolueno + 3 Hidrógeno Molecular (H₂ / Pt)",
+        "semiStep": "p-CH₃–C₆H₄–NO₂ + 3 H₂ (cat. Pt)",
+        "semiGlobal": "p-CH₃–C₆H₄–NO₂ + 3 H₂ ──(Pt)──► p-CH₃–C₆H₄–NH₂ (p-Metilanilina) + 2 H₂O",
+        "desc": "Se observan el p-nitrotolueno y el hidrógeno molecular activado sobre catalizador de platino.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; grupo nitro (–NO₂) intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reducción de 6 electrones de los átomos de oxígeno del grupo nitro hacia agua."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃ (para)",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "Ar",
+              "el": "C₆H₄",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 505,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H2",
+              "el": "+ 3 H₂ / Pt",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "Ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar",
+              "to": "NO2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: p-Metilanilina (p-Toluidina) + 2 H₂O",
+        "semiStep": "p-CH₃–C₆H₄–NH₂ (p-Metilanilina) + 2 H₂O",
+        "semiGlobal": "p-CH₃–C₆H₄–NO₂ + 3 H₂ ──(Pt)──► p-CH₃–C₆H₄–NH₂ (p-Metilanilina) + 2 H₂O",
+        "desc": "Queda consolidada la p-metilanilina (amina primaria aromática) más dos moléculas de agua.",
+        "legend": {
+          "breaking": "Ruptura de enlaces N–O completada.",
+          "forming": "En VERDE sólido: p-metilanilina (–NH₂ en posición para).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃ (para)",
+              "x": 185,
+              "y": 210
+            },
+            {
+              "id": "Ar",
+              "el": "C₆H₄",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 505,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "p-Metilanilina"
+            },
+            {
+              "id": "H2O",
+              "el": "+ 2 H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "Ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar",
+              "to": "NH2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_obt2_nitrobenceno_anilina": [
+      {
+        "title": "Estado Inicial Desarrollado: Nitrobenceno + 3 H₂ / Pt",
+        "semiStep": "C₆H₅–NO₂ + 3 H₂ (cat. Pt)",
+        "semiGlobal": "C₆H₅–NO₂ + 3 H₂ ──(Pt)──► C₆H₅–NH₂ (Anilina / Fenilamina) + 2 H₂O",
+        "desc": "Reducción directa del nitrobenceno hasta anilina.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; nitrobenceno intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Hidrogenación catalítica del grupo nitro."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "NO2",
+              "el": "NO₂",
+              "x": 415,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "H2",
+              "el": "+ 3 H₂ / Pt",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "NO2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Anilina / Fenilamina (C₆H₅–NH₂) + 2 H₂O",
+        "semiStep": "C₆H₅–NH₂ (Anilina) + 2 H₂O",
+        "semiGlobal": "C₆H₅–NO₂ + 3 H₂ ──(Pt)──► C₆H₅–NH₂ (Anilina / Fenilamina) + 2 H₂O",
+        "desc": "Queda consolidada la anilina (fenilamina).",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: anilina.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "NH2",
+              "el": "NH₂",
+              "x": 415,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Anilina (Fenilamina)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ 2 H₂O",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "NH2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
