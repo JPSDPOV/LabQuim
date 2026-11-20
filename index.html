@@ -2655,6 +2655,15 @@
                 });
             }
 
+            atoms.forEach(a => {
+                delete a.highlight;
+                delete a.border;
+                a.noValenceDots = true;
+                if (a.ring !== 'phenyl') {
+                    a.noShape = true;
+                }
+            });
+
             return { atoms, bonds, texts, arrows, forceCentered: true };
         }
 
@@ -3320,7 +3329,24 @@
                 const prevOrder = existedBefore ? (prevBondMap[key].order || 1) : 0;
                 const targetOrder = b.order || 1;
 
-                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null, null, lightMode);
+                let trim1 = 0, trim2 = 0;
+                if (a1.noShape || a2.noShape) {
+                    const ang = Math.atan2(a2.y - a1.y, a2.x - a1.x);
+                    const cosA = Math.abs(Math.cos(ang));
+                    const sinA = Math.abs(Math.sin(ang));
+                    const charHalf = mobile ? 9.5 : 8.2;
+                    if (a1.noShape) {
+                        const hw1 = Math.max(14, String(a1.el || '').length * charHalf + 6);
+                        const hh1 = mobile ? 19 : 16;
+                        trim1 = Math.min(hw1 / (cosA || 0.01), hh1 / (sinA || 0.01), Math.max(hw1, hh1)) + 4;
+                    }
+                    if (a2.noShape) {
+                        const hw2 = Math.max(14, String(a2.el || '').length * charHalf + 6);
+                        const hh2 = mobile ? 19 : 16;
+                        trim2 = Math.min(hw2 / (cosA || 0.01), hh2 / (sinA || 0.01), Math.max(hw2, hh2)) + 4;
+                    }
+                }
+                svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null, null, lightMode, trim1, trim2);
             });
 
             if (prevScene && prevScene.bonds) {
@@ -3695,8 +3721,8 @@
             }
             let html = `<g transform="translate(${a.x}, ${a.y})" opacity="${a.opacity !== undefined ? a.opacity : 1}">`;
             if (a.noShape) {
-                const fontSz = mobile ? 22 : 19;
-                html += `<text x="0" y="${mobile ? 7.5 : 6.5}" text-anchor="middle" fill="${textCol}" font-size="${fontSz}" font-weight="700" font-family="JetBrains Mono, monospace">${a.el}</text>`;
+                const fontSz = mobile ? 23 : 20;
+                html += `<text x="0" y="${mobile ? 8 : 7}" text-anchor="middle" fill="${textCol}" font-size="${fontSz}" font-weight="800" font-family="JetBrains Mono, monospace">${a.el}</text>`;
             } else if (g.isRing === 'phenyl') {
              const R = g.r;
              const rIn = R * 0.76;
