@@ -12,12 +12,12 @@
     "detalleMecanismo": "R–CHO + K₂Cr₂O₇ / H₂SO₄ ──► R–COOH  |  R–CHO + 2 [Ag(NH₃)₂]⁺ + 3 OH⁻ ──► R–COO⁻ + 2 Ag↓ + 4 NH₃ + 2 H₂O",
     "reactivosCondiciones": "Aldehído + K₂Cr₂O₇/H₂SO₄ (Jones), KMnO₄ (luego H₃O⁺) o Reactivo de Tollens ([Ag(NH₃)₂]⁺OH⁻).",
     "rolReactivos": "• Sustrato reductor: Aldehído alifático o aromático (R–CHO).\n• Agente oxidante: Cr(VI) (K₂Cr₂O₇ / CrO₃), Mn(VII) (KMnO₄) o Ag(I) (Tollens).\n• Nucleófilo auxiliar: H₂O / OH⁻ (forma el hidrato previo a la oxidación).",
-    "reglasObs": "• Aldehído ──► Ácido Carboxílico (ejemplo del programa: Etanal ──► Ácido Etanoico).\n• Cetona + Oxidante suave/moderado ──► Sin reacción (permite diferenciar aldehídos de cetonas en laboratorio).\n• Prueba de Tollens: forma un espejo de plata metálica (Ag⁰) positivo solo para aldehídos."
+    "reglasObs": "• Aldehído ──► Ácido Carboxílico.\n• Cetona + Oxidante suave/moderado ──► Sin reacción (permite diferenciar aldehídos de cetonas en laboratorio).\n• Prueba de Tollens: forma un espejo de plata metálica (Ag⁰) positivo solo para aldehídos."
   },
   "substrates": [
     {
       "id": "ox_etanal_dicromato",
-      "name": "Etanal + K₂Cr₂O₇ / H₂SO₄ ──► Ácido Etanoico [Aldehído Alifático — Ejemplo CPAM]",
+      "name": "Etanal + K₂Cr₂O₇ / H₂SO₄ ──► Ácido Etanoico [Aldehído Alifático]",
       "catalyst": "K₂Cr₂O₇ / H₂SO₄ (acuoso)"
     },
     {
