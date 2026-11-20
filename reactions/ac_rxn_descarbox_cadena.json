@@ -1,0 +1,538 @@
+{
+  "category": "reacciones",
+  "title": "D.2- Descarboxilación (β-Cetoácidos / Malónico / Cal Sodada) y Reacciones de Hidroxiácidos (Málico ⇄ Fumárico)",
+  "natureBadge": "Pérdida de CO₂ y Transformaciones en Cadena • β-Cetoácido / Malónico (Δ) ──► −CO₂↑ | Hidroxiácidos (Deshidratación / Oxidación)",
+  "deltaH": "ΔH° < 0 (Descarboxilación térmicamente favorable por liberación de CO₂ gaseoso y estabilización vía enol)",
+  "description": "Reacciones de pérdida de dióxido de carbono (descarboxilación) y transformaciones características de los hidroxiácidos y diácidos evaluadas en cátedra y exámenes de ingreso:\n1) Descarboxilación térmica suave de β-Cetoácidos y Ácido Malónico (Diap. 864–866): los ácidos que poseen un grupo carbonilo en posición β (como el ácido acetoacético o el ácido oxaloacético) o un segundo grupo carboxilo geminal (ácido malónico, HOOC–CH₂–COOH) pierden CO₂↑ con calentamiento suave (100–150 °C) a través de un estado de transición cíclico concertado de 6 miembros:\n   • Ácido acetoacético (3-oxobutanoico) + Δ ──► Propanona (Acetona) + CO₂↑\n   • Ácido malónico (propanodioico) + Δ ──► Ácido etanoico (Acético) + CO₂↑\n2) Descarboxilación drástica de ácidos simples con Cal Sodada (NaOH / CaO, Δ): las sales de ácidos monocarboxílicos simples (como benzoato o acetato de sodio) pierden CO₂ como Na₂CO₃ generando el hidrocarburo con −1 carbono (ej. Benzoato de sodio + NaOH/CaO, Δ → Benceno + Na₂CO₃).\n3) Reacciones en cadena de Hidroxiácidos y Diácidos (Preguntas estrella de exámenes 2017–2024 — Ciclo de Krebs y LDH):\n   • Deshidratación de β-hidroxiácidos (Ácido málico ──(−H₂O)──► Ácido fumárico / maleico) y reacción inversa de hidratación (Ácido fumárico + H₂O ──► Ácido málico).\n   • Oxidación de α-hidroxiácidos a α-cetoácidos (Ácido α-láctico + [O] / NAD⁺ ──► Ácido pirúvico; Ácido málico + [O] / NAD⁺ ──► Ácido oxaloacético).",
+  "meta": {
+    "grupoFuncional": "Cetonas (desde β-cetoácidos), Ácidos Monocarboxílicos (desde malónico), Hidrocarburos (cal sodada) y α-Cetoácidos / Diácidos Insaturados",
+    "reaccionMecanismo": "Eliminación concertada cíclica de 6 miembros (descarboxilación de β-cetoácidos), deshidratación E1/E2 y oxidación de alcoholes 2° en hidroxiácidos",
+    "naturaleza": "Concertada cíclica en descarboxilación de β-cetoácidos/malónico; por etapas en deshidratación/oxidación de hidroxiácidos.",
+    "rupturaIntermediarios": "Ruptura de enlace C1–C2 (liberando CO₂↑) o enlaces C–OH / C–H en hidroxiácidos; intermediario enol; formación de cetona, ácido acético, ácido fumárico o pirúvico.",
+    "detalleMecanismo": "CH₃–CO–CH₂–COOH ──(Δ)──► CH₃–CO–CH₃ + CO₂↑  |  HOOC–CH₂–COOH ──(Δ)──► CH₃–COOH + CO₂↑",
+    "reactivosCondiciones": "• β-Cetoácidos y Ácido malónico: Calentamiento suave (100–150 °C).\n• Sales carboxilato simples: Cal sodada (NaOH + CaO, fusión 300 °C).\n• Hidroxiácidos: H₂SO₄ / Δ (deshidratación) o CrO₃ / K₂Cr₂O₇ / NAD⁺ (oxidación del –OH a C=O).",
+    "rolReactivos": "• Sustrato: β-Cetoácido (acetoacético), ácido malónico, sal carboxilato o hidroxiácido (málico, láctico).\n• Agente: Calor Δ (descarboxilación / deshidratación) u oxidante [O] / NAD⁺ (oxidación del hidroxilo secundario a cetona).",
+    "reglasObs": "• Preguntas textuales repetidas en exámenes de ingreso (Recopi Preg. 13, 17, 28, 42, 62, 75, 92, 98, 102, 103, 111, 116):\n  1) 'El grupo cetona que se obtendrá por oxidación del hidroxiácido de menor peso molecular (ácido 2-hidroxipropanoico / α-láctico) es...' → Ácido 2-oxopropanoico (Ácido pirúvico).\n  2) 'De la oxidación del alcohol del ácido málico se obtiene...' → Ácido oxaloacético (2-oxobutanodioico).\n  3) 'Secuencia del ciclo de Krebs: ácido succínico → ácido fumárico → ácido málico → oxaloacetato' → Deshidrogenación (oxidación), hidratación (adición) y oxidación."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn10_acetoacetico_descarbox",
+      "name": "Ácido Acetoacético (β-Cetoácido) + Calor (Δ) ──► Propanona (Acetona) + CO₂↑ [Diap. 865–866]",
+      "catalyst": "Calor suave (Δ, 100 °C)"
+    },
+    {
+      "id": "ac_rxn10_malonico_descarbox",
+      "name": "Ácido Malónico (Propanodioico) + Calor (Δ) ──► Ácido Etanoico (Acético) + CO₂↑ [Diap. 864]",
+      "catalyst": "Calor (Δ, 140–150 °C)"
+    },
+    {
+      "id": "ac_rxn10_lactico_ox_piruvico",
+      "name": "Ácido α-Láctico (2-Hidroxipropanoico) + [O] / NAD⁺ ──► Ácido Pirúvico (2-Oxopropanoico) [Examen]",
+      "catalyst": "K₂Cr₂O₇ / H⁺ (ó LDH / NAD⁺)"
+    },
+    {
+      "id": "ac_rxn10_malico_fumarico_oxaloacetico",
+      "name": "Ácido Málico: Deshidratación (−H₂O) ──► Ác. Fumárico | Oxidación (+[O]) ──► Ác. Oxaloacético [Examen]",
+      "catalyst": "H₂SO₄ / Δ (−H₂O)  ó  [O] / NAD⁺"
+    },
+    {
+      "id": "ac_rxn10_benzoato_cal_sodada",
+      "name": "Benzoato de Sodio + Cal Sodada (NaOH / CaO, Δ) ──► Benceno + Na₂CO₃ [Descarboxilación −1C]",
+      "catalyst": "NaOH / CaO (Fusión Δ)"
+    }
+  ],
+  "catalysts": [
+    "Calor suave (Δ, 100 °C)",
+    "Calor (Δ, 140–150 °C)",
+    "K₂Cr₂O₇ / H⁺ (ó LDH / NAD⁺)",
+    "H₂SO₄ / Δ (−H₂O)  ó  [O] / NAD⁺",
+    "NaOH / CaO (Fusión Δ)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn10_acetoacetico_descarbox": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Acetoacético / 3-Oxobutanoico (Estado Cíclico de 6M)",
+        "semiStep": "CH₃–CO–CH₂–COOH + Calor (Δ)",
+        "semiGlobal": "CH₃–CO–CH₂–COOH ──(Δ)──► CH₃–CO–CH₃ (Propanona) + CO₂↑",
+        "desc": "Se observa el ácido acetoacético con el oxígeno carbonílico β (C3) formando un puente de hidrógeno intramolecular con el protón del grupo carboxilo (C1), disponiendo un anillo de 6 átomos.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; enlace C1–C2 listo para escindirse.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reordenamiento electrónico concertado de 6 electrones en anillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 145
+            },
+            {
+              "id": "C3",
+              "el": "C3 (β)",
+              "x": 335,
+              "y": 145
+            },
+            {
+              "id": "O3",
+              "el": "O",
+              "x": 475,
+              "y": 145,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂ (α)",
+              "x": 335,
+              "y": 275
+            },
+            {
+              "id": "C1",
+              "el": "C1=O",
+              "x": 495,
+              "y": 275,
+              "highlight": "#ef4444",
+              "label": "Sale como CO₂↑"
+            },
+            {
+              "id": "OH",
+              "el": "O–H",
+              "x": 585,
+              "y": 195,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "O3",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Escisión C1–C2 → Intermediario Enol + CO₂↑",
+        "semiStep": "[CH₃–C(OH)=CH₂] (Enol) + CO₂↑",
+        "semiGlobal": "CH₃–CO–CH₂–COOH ──(Δ)──► CH₃–CO–CH₃ (Propanona) + CO₂↑",
+        "desc": "Se rompe el enlace C1–C2 expulsando dióxido de carbono gaseoso (CO₂↑) y formando inicialmente el enol de la acetona (2-propen-2-ol).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace carbono-carbono C1–C2.",
+          "forming": "En VERDE punteado: doble enlace enólico C2=C3.",
+          "movement": "El enol tautomeriza instantáneamente a propanona."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 195,
+              "y": 175
+            },
+            {
+              "id": "C3",
+              "el": "C(OH)",
+              "x": 355,
+              "y": 175,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 355,
+              "y": 295,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CO2",
+              "el": "O=C=O↑",
+              "x": 585,
+              "y": 235,
+              "highlight": "#ef4444",
+              "label": "Descarboxilación"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3",
+              "to": "C2",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C2",
+              "to": "CO2",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona / Acetona (CH₃–CO–CH₃) + CO₂↑",
+        "semiStep": "CH₃–CO–CH₃ + CO₂↑ (Descarboxilación no enzimática en cetosis)",
+        "semiGlobal": "CH₃–CO–CH₂–COOH ──(Δ)──► CH₃–CO–CH₃ (Propanona) + CO₂↑",
+        "desc": "Queda consolidada la propanona (acetona) más dióxido de carbono gaseoso. Reacción idéntica a la descarboxilación fisiológica del acetoacetato en sangre (Diap. 865–866).",
+        "legend": {
+          "breaking": "Descarboxilación térmica completada.",
+          "forming": "En VERDE sólido: propanona (cetona con −1 carbono).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me1",
+              "el": "CH₃",
+              "x": 205,
+              "y": 210
+            },
+            {
+              "id": "C_ket",
+              "el": "C=O",
+              "x": 365,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona (Acetona)"
+            },
+            {
+              "id": "Me2",
+              "el": "CH₃",
+              "x": 525,
+              "y": 210
+            },
+            {
+              "id": "CO2",
+              "el": "+ CO₂↑",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me1",
+              "to": "C_ket",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C_ket",
+              "to": "Me2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn10_malonico_descarbox": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Malónico (Propanodioico) + Calor (140 °C)",
+        "semiStep": "HOOC–CH₂–COOH + Calor (Δ)",
+        "semiGlobal": "HOOC–CH₂–COOH ──(Δ, 140 °C)──► CH₃–COOH (Ácido Acético) + CO₂↑",
+        "desc": "El ácido malónico posee dos grupos carboxilo unidos al mismo carbono CH₂ (relación β); al calentarse pierde uno de ellos como CO₂.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido malónico listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Descarboxilación térmica concertada."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOOC",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C2",
+              "el": "CH₂",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "C3",
+              "el": "COOH",
+              "x": 555,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Se pierde como CO₂↑"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "C2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Etanoico (CH₃–COOH) + CO₂↑",
+        "semiStep": "CH₃–COOH + CO₂↑",
+        "semiGlobal": "HOOC–CH₂–COOH ──(Δ, 140 °C)──► CH₃–COOH (Ácido Acético) + CO₂↑",
+        "desc": "Queda consolidado el ácido etanoico (ácido acético) más CO₂.",
+        "legend": {
+          "breaking": "Escisión C2–C3 completada.",
+          "forming": "En VERDE sólido: ácido etanoico.",
+          "movement": "Fundamento de la síntesis malónica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–COOH",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Etanoico"
+            },
+            {
+              "id": "CO2",
+              "el": "+ CO₂↑",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn10_lactico_ox_piruvico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido α-Láctico (2-Hidroxipropanoico) + Oxidante [O]",
+        "semiStep": "CH₃–CH(OH)–COOH + [O] (o NAD⁺ / LDH)",
+        "semiGlobal": "CH₃–CH(OH)–COOH + [O] ──► CH₃–CO–COOH (Ácido Pirúvico) + H₂O",
+        "desc": "El ácido α-láctico es el hidroxiácido quiral de menor peso molecular; su grupo hidroxilo secundario en C2 se oxida a cetona.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alcohol secundario en C2 listo.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Oxidación de alcohol secundario en C2 a grupo cetona C2=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH(OH)–COOH",
+              "x": 265,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Ácido α-Láctico"
+            },
+            {
+              "id": "Ox",
+              "el": "+ [O] / NAD⁺",
+              "x": 545,
+              "y": 210,
+              "highlight": "#f97316"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Pirúvico / 2-Oxopropanoico (CH₃–CO–COOH)",
+        "semiStep": "CH₃–CO–COOH (α-Cetoácido clave del metabolismo)",
+        "semiGlobal": "CH₃–CH(OH)–COOH + [O] ──► CH₃–CO–COOH (Ácido Pirúvico) + H₂O",
+        "desc": "Queda consolidado el ácido pirúvico (2-oxopropanoico). Pregunta repetida en exámenes (Recopi Preg. 62 y 92).",
+        "legend": {
+          "breaking": "Oxidación del hidroxilo C2 completada.",
+          "forming": "En VERDE sólido: grupo α-cetona en C2.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CO–COOH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Pirúvico (2-Oxopropanoico)"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn10_malico_fumarico_oxaloacetico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Málico (Ácido 2-Hidroxibutanodioico)",
+        "semiStep": "HOOC–CH(OH)–CH₂–COOH",
+        "semiGlobal": "Ác. Málico ──(−H₂O)──► Ác. Fumárico  |  Ác. Málico ──(+[O])──► Ác. Oxaloacético",
+        "desc": "El ácido málico es un hidroxidiácido de 4 carbonos que puede sufrir dos reacciones clave de examen: deshidratación (eliminación) hacia ácido fumárico, u oxidación del alcohol 2° hacia ácido oxaloacético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido málico intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Vía 1: Eliminación de H₂O (C2–C3). Vía 2: Oxidación de C2–OH a C2=O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Mal",
+              "el": "HOOC–CH(OH)–CH₂–COOH",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Ácido Málico"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Ácido Fumárico (por −H₂O) y Ácido Oxaloacético (por +[O])",
+        "semiStep": "trans-HOOC–CH=CH–COOH (Fumárico)  |  HOOC–CO–CH₂–COOH (Oxaloacético)",
+        "semiGlobal": "Ác. Málico ──(−H₂O)──► Ác. Fumárico  |  Ác. Málico ──(+[O])──► Ác. Oxaloacético",
+        "desc": "Quedan consolidados ambos productos de examen (Recopi Preg. 13, 17, 28, 42, 75, 103, 111).",
+        "legend": {
+          "breaking": "Reacciones completadas.",
+          "forming": "En VERDE sólido: ácido fumárico (alqueno trans) y ácido oxaloacético (α-cetodiácido).",
+          "movement": "Productos metabólicos y de examen."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "P1",
+              "el": "Ác. Fumárico (−H₂O)",
+              "x": 235,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Sep",
+              "el": "ó",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "P2",
+              "el": "Ác. Oxaloacético (+[O])",
+              "x": 565,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ],
+    "ac_rxn10_benzoato_cal_sodada": [
+      {
+        "title": "Estado Inicial Desarrollado: Benzoato de Sodio + Cal Sodada (NaOH / CaO, Δ)",
+        "semiStep": "C₆H₅–COO⁻Na⁺ + NaOH (CaO, Δ)",
+        "semiGlobal": "C₆H₅–COONa + NaOH ──(CaO, Δ)──► C₆H₆ (Benceno) + Na₂CO₃",
+        "desc": "La fusión alcalina de una sal carboxilato con cal sodada elimina el grupo carboxilato como carbonato de sodio (Na₂CO₃), sustituyéndolo por un hidrógeno.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; benzoato de sodio y NaOH listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ruptura del enlace Ar–COO⁻ con pérdida de Na₂CO₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Salt",
+              "el": "COONa",
+              "x": 405,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Cal",
+              "el": "+ NaOH / CaO (Δ)",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Salt",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Benceno (C₆H₆) + Carbonato de Sodio (Na₂CO₃)",
+        "semiStep": "C₆H₆ + Na₂CO₃",
+        "semiGlobal": "C₆H₅–COONa + NaOH ──(CaO, Δ)──► C₆H₆ (Benceno) + Na₂CO₃",
+        "desc": "Queda consolidado el benceno más carbonato de sodio.",
+        "legend": {
+          "breaking": "Descarboxilación con cal sodada completada.",
+          "forming": "En VERDE sólido: benceno.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Benceno (C₆H₆)",
+              "ring": "phenyl",
+              "x": 275,
+              "y": 210
+            },
+            {
+              "id": "Na2CO3",
+              "el": "+ Na₂CO₃",
+              "x": 525,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
