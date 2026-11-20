@@ -1,0 +1,513 @@
+{
+  "category": "reacciones",
+  "title": "C- Reducción de Ácidos: Total con LiAlH₄ / LiBH₄ (→ Alcohol 1°) vs. Parcial con DIBAH (→ Aldehído)",
+  "natureBadge": "Reducción de Ácidos Carboxílicos • LiAlH₄ / LiBH₄ ──► Alcohol 1° (R–CH₂OH) | DIBAH (−78 °C) ──► Aldehído (R–CHO)",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; la quimioselectividad depende de la fuerza del agente donador de hidruro)",
+  "description": "Reducción del grupo carboxilo (–COOH, estado de oxidación +3) mediante hidruros complejos de aluminio o boro, cuyo producto final depende del poder reductor del reactivo utilizado (Diap. 862–863 de cátedra):\n1) Reducción total hasta Alcohol Primario (R–CH₂–OH): con agentes reductores enérgicos como hidruro de aluminio y litio (LiAlH₄ en éter anhidro seguido de hidrólisis H₃O⁺), borohidruro de litio (LiBH₄, según diapositiva 863 de cátedra) o borano (BH₃ / THF), el ácido carboxílico se reduce completamente pasando por el aldehído intermediario hasta el alcohol primario con el mismo número de carbonos.\n2) Reducción parcial controlada hasta Aldehído (R–CHO): empleando un reductor impedido y moderado como el hidruro de diisobutilaluminio (DIBAH / DIBAL-H a −78 °C en tolueno o hexano, seguido de hidrólisis suave), la reacción se detiene en el intermediario tetraédrico aluminado sin sobre-reducir al alcohol, liberando el ALDEHÍDO (R–CHO) tras la hidrólisis.\n3) Inercia frente a NaBH₄: el borohidruro de sodio (NaBH₄) es demasiado suave y NO reduce ácidos carboxílicos (solo reacciona como base desprotonándolos a carboxilato).",
+  "meta": {
+    "grupoFuncional": "Alcoholes Primarios (R–CH₂–OH con LiAlH₄/LiBH₄) y Aldehídos (R–CHO con DIBAH)",
+    "reaccionMecanismo": "Adición nucleofílica de hidruro (H⁻) al grupo carboxilo activado + eliminación de óxido/aluminato",
+    "naturaleza": "Por etapas irreversible (en LiAlH₄/LiBH₄: 2 transferencias de H⁻ → Alcohol 1°; en DIBAH: 1 transferencia de H⁻ → intermediario estable a −78 °C → Aldehído tras H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces C1–OH y π C1=O (×2 en reducción total); intermediario aldehído / complejo aluminado; formación de enlaces C1–H y O–H.",
+    "detalleMecanismo": "R–COOH ──(1. LiAlH₄ o LiBH₄  2. H₃O⁺)──► R–CH₂–OH  |  R–COOH ──(1. DIBAH, −78 °C  2. H₂O)──► R–CHO",
+    "reactivosCondiciones": "• Hasta Alcohol 1°: LiAlH₄ en Et₂O/THF anhidro (25 °C) o LiBH₄, seguido de hidrólisis ácida suave H₃O⁺.\n• Hasta Aldehído: DIBAH (hidruro de diisobutilaluminio) a −78 °C, seguido de H₂O.",
+    "rolReactivos": "• Sustrato oxidado: Ácido carboxílico (R–COOH, carbono +3).\n• Reductor fuerte (4e⁻): LiAlH₄ o LiBH₄ (transfiere dos equivalentes de hidruro H⁻).\n• Reductor moderado selectivo (2e⁻): DIBAH (transfiere un solo equivalente de hidruro H⁻ a baja temperatura).",
+    "reglasObs": "• Comparativa directa de cátedra (Diap. 863): CH₃–COOH + LiBH₄ ──► CH₃–CH₂–OH (Etanol); CH₃–COOH + DIBAH ──► CH₃–CHO (Etanal).\n• Selectividad en moléculas polifuncionales: BH₃/THF o LiAlH₄ reduce el grupo –COOH respetando anillos aromáticos (ej. ácido benzoico + LiAlH₄ → alcohol bencílico)."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn8_acetico_libh4_etanol",
+      "name": "Ácido Etanoico + 1. LiBH₄ / LiAlH₄  2. H₃O⁺ ──► Etanol [Reducción Total → Alcohol 1° — Diap. 863]",
+      "catalyst": "1) LiBH₄ o LiAlH₄ / Éter  2) H₃O⁺"
+    },
+    {
+      "id": "ac_rxn8_acetico_dibah_etanal",
+      "name": "Ácido Etanoico + 1. DIBAH (−78 °C)  2. H₂O ──► Etanal [Reducción Parcial → Aldehído — Diap. 863]",
+      "catalyst": "1) DIBAH (−78 °C)  2) H₂O"
+    },
+    {
+      "id": "ac_rxn8_benzoico_lialh4_bencilico",
+      "name": "Ácido Benzoico + 1. LiAlH₄ / THF  2. H₃O⁺ ──► Alcohol Bencílico [Aromático → Alcohol 1°]",
+      "catalyst": "1) LiAlH₄ / THF  2) H₃O⁺"
+    },
+    {
+      "id": "ac_rxn8_butanoico_dibah_butanal",
+      "name": "Ácido Butanoico + 1. DIBAH (−78 °C)  2. H₂O ──► Butanal [Cadena 4C → Aldehído]",
+      "catalyst": "1) DIBAH (−78 °C)  2) H₂O"
+    }
+  ],
+  "catalysts": [
+    "1) LiBH₄ o LiAlH₄ / Éter  2) H₃O⁺",
+    "1) DIBAH (−78 °C)  2) H₂O",
+    "1) LiAlH₄ / THF  2) H₃O⁺"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn8_acetico_libh4_etanol": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico (CH₃–COOH) + LiBH₄ / LiAlH₄",
+        "semiStep": "CH₃–COOH + LiBH₄ / LiAlH₄ (en Éter anhidro)",
+        "semiGlobal": "CH₃–COOH ──(1. LiBH₄ / LiAlH₄  2. H₃O⁺)──► CH₃–CH₂–OH (Etanol)",
+        "desc": "Se observan el ácido etanoico (estado de oxidación +3 en C1) y el hidruro complejo fuerte capaz de transferir dos equivalentes de H⁻.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido acético y reductor intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia del 1.er hidruro (H⁻) y eliminación del oxígeno –OH como complejo borato/aluminato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1 (+3)",
+              "x": 365,
+              "y": 210,
+              "label": "Carbono Carboxílico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 365,
+              "y": 95
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 515,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Red",
+              "el": "LiBH₄ / LiAlH₄ (2 H⁻)",
+              "x": 365,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Formación de Etanal y Segunda Adición de Hidruro (H⁻)",
+        "semiStep": "[CH₃–CHO] + H⁻ ──► CH₃–CH₂–O⁻ ──(H₃O⁺)──► CH₃–CH₂–OH",
+        "semiGlobal": "CH₃–COOH ──(1. LiBH₄ / LiAlH₄  2. H₃O⁺)──► CH₃–CH₂–OH (Etanol)",
+        "desc": "El aldehído intermediario (etanal) es aún más reactivo que el ácido de partida y sufre inmediatamente una segunda adición de hidruro sobre C=O.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del segundo enlace π C1=O.",
+          "forming": "En VERDE punteado: incorporación de dos hidrógenos (C1–H₂).",
+          "movement": "El carbono C1 pasa de hibridación sp² a sp³."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O⁻",
+              "x": 375,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H2",
+              "order": 1,
+              "state": "forming"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanol (CH₃–CH₂–OH — Alcohol Primario)",
+        "semiStep": "CH₃–CH₂–OH (Alcohol 1°, estado de oxidación −1 en C1)",
+        "semiGlobal": "CH₃–COOH ──(1. LiBH₄ / LiAlH₄  2. H₃O⁺)──► CH₃–CH₂–OH (Etanol)",
+        "desc": "Queda consolidado el etanol tras la hidrólisis ácida suave. Ejemplo exacto de la diapositiva 863 de cátedra.",
+        "legend": {
+          "breaking": "Reducción de 4 electrones completada.",
+          "forming": "En VERDE sólido: grupo alcohol primario (–CH₂–OH).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "CH₂",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanol (Alcohol 1°)"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn8_acetico_dibah_etanal": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico + DIBAH (−78 °C)",
+        "semiStep": "CH₃–COOH + (i-Bu)₂Al–H (−78 °C)",
+        "semiGlobal": "CH₃–COOH ──(1. DIBAH, −78 °C  2. H₂O)──► CH₃–CHO (Etanal)",
+        "desc": "El hidruro de diisobutilaluminio (DIBAH) es un reductor moderado estéricamente voluminoso que a baja temperatura (−78 °C) detiene la reducción en la primera etapa.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido acético y DIBAH listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Transferencia controlada de un solo hidruro (H⁻) hacia C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "DIBAH",
+              "el": "DIBAH (−78 °C)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Reductor Moderado"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Etanal (CH₃–CHO — Aldehído) tras Hidrólisis Suave",
+        "semiStep": "CH₃–CHO (Etanal, estado de oxidación +1 en C1)",
+        "semiGlobal": "CH₃–COOH ──(1. DIBAH, −78 °C  2. H₂O)──► CH₃–CHO (Etanal)",
+        "desc": "Queda consolidado el etanal sin sobre-reducción a etanol. Ejemplo exacto de la diapositiva 863 de cátedra.",
+        "legend": {
+          "breaking": "Reducción parcial de 2 electrones completada.",
+          "forming": "En VERDE sólido: grupo aldehído (–CHO).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal (Aldehído)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "H1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn8_benzoico_lialh4_bencilico": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico + LiAlH₄ / THF",
+        "semiStep": "C₆H₅–COOH + 1. LiAlH₄ / THF  2. H₃O⁺",
+        "semiGlobal": "C₆H₅–COOH ──(1. LiAlH₄ / THF  2. H₃O⁺)──► C₆H₅–CH₂–OH (Alcohol Bencílico)",
+        "desc": "El LiAlH₄ reduce selectivamente el grupo carboxilo aromático sin alterar la aromaticidad del anillo bencénico.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reducción completa del grupo –COOH a –CH₂OH."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "COOH",
+              "el": "COOH",
+              "x": 405,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Red",
+              "el": "1) LiAlH₄  2) H₃O⁺",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "COOH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Alcohol Bencílico (C₆H₅–CH₂–OH)",
+        "semiStep": "C₆H₅–CH₂–OH",
+        "semiGlobal": "C₆H₅–COOH ──(1. LiAlH₄ / THF  2. H₃O⁺)──► C₆H₅–CH₂–OH (Alcohol Bencílico)",
+        "desc": "Queda consolidado el alcohol bencílico.",
+        "legend": {
+          "breaking": "Reducción completada.",
+          "forming": "En VERDE sólido: alcohol bencílico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "CH2OH",
+              "el": "CH₂–OH",
+              "x": 435,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Alcohol Bencílico"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "CH2OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn8_butanoico_dibah_butanal": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Butanoico + DIBAH (−78 °C)",
+        "semiStep": "CH₃–CH₂–CH₂–COOH + 1. DIBAH (−78 °C)  2. H₂O",
+        "semiGlobal": "CH₃–CH₂–CH₂–COOH ──(1. DIBAH  2. H₂O)──► CH₃–CH₂–CH₂–CHO (Butanal)",
+        "desc": "Reducción controlada de un ácido carboxílico de 4 carbonos hasta aldehído.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Reducción parcial de C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sub",
+              "el": "CH₃–CH₂–CH₂–COOH",
+              "x": 265,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "DIBAH",
+              "el": "1) DIBAH  2) H₂O",
+              "x": 555,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Producto Consolidado: Butanal (CH₃–CH₂–CH₂–CHO)",
+        "semiStep": "CH₃–CH₂–CH₂–CHO (4 Carbonos)",
+        "semiGlobal": "CH₃–CH₂–CH₂–COOH ──(1. DIBAH  2. H₂O)──► CH₃–CH₂–CH₂–CHO (Butanal)",
+        "desc": "Queda consolidado el butanal.",
+        "legend": {
+          "breaking": "Reducción parcial completada.",
+          "forming": "En VERDE sólido: butanal.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "CH₃–CH₂–CH₂–CHO",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Butanal"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
