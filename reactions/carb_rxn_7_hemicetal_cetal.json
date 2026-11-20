@@ -1,0 +1,1353 @@
+{
+  "category": "reacciones",
+  "title": "7) Adición de Alcoholes a Cetonas (+ R–OH ──► Hemicetal ──(+ R–OH)──► Cetal + H₂O)",
+  "natureBadge": "Adición Nucleofílica de Alcoholes • Cetona + 1 R–OH ⇄ Hemicetal | + 2 R–OH (H⁺) ⇄ Cetal + H₂O",
+  "deltaH": "ΔH° ≈ −5 a −15 kJ/mol (Reacción reversible catalizada por ácido anhidro; menos favorable estéricamente que en aldehídos)",
+  "description": "Adición nucleofílica reversible de alcoholes (R''–OH) sobre cetonas (R–CO–R') en medio ácido anhidro (p-TsOH, HCl seco o H₂SO₄) con eliminación de agua:\n1) Primera etapa (1 equivalente de alcohol): el alcohol ataca al grupo carbonilo protonado formando un HEMICETAL (R–C(OH)(OR'')(R')), caracterizado por tener un grupo –OH, un grupo –OR'' y dos grupos alquilo/arilo unidos al mismo carbono.\n2) Segunda etapa (2.º equivalente de alcohol en medio ácido): la protonación del –OH hemicetálico provoca la salida de H₂O generando un ion oxocarbenio terciario estabilizado por resonancia, que al ser atacado por un segundo equivalente de alcohol forma el CETAL (R–C(OR'')₂R') + H₂O.\n3) Importancia sintética y biológica: los cetales cíclicos (con etilenglicol) son el grupo protector estándar de cetonas frente a bases y reactivos de Grignard, mientras que la formación intramolecular de hemicetales explica la ciclación de las cetosas (ej. D-fructosa → fructofuranosa).",
+  "meta": {
+    "grupoFuncional": "Hemicetales (R₂C(OH)(OR'')) y Cetales (R₂C(OR'')₂)",
+    "reaccionMecanismo": "Adición nucleofílica catalizada por ácido (hemicetal) seguida de sustitución SN1 vía ion oxocarbenio (cetal)",
+    "naturaleza": "Por etapas en equilibrio (protonación C=O → ataque R''OH → desprotonación [hemicetal] → protonación –OH → pérdida H₂O → ataque 2.º R''OH → desprotonación [cetal]).",
+    "rupturaIntermediarios": "Ruptura de π C=O, O–H (×2) y C–OH₂⁺; intermediarios hemicetal e ion oxocarbenio [R₂C=O⁺R'']; formación de dos enlaces C–OR'' y H₂O.",
+    "detalleMecanismo": "R–CO–R' + R''–OH ⇄ R–C(OH)(OR'')R'  |  R–C(OH)(OR'')R' + R''–OH ──(H⁺)──► R–C(OR'')₂R' + H₂O",
+    "reactivosCondiciones": "Cetona + 2 equivalentes de alcohol (MeOH, EtOH) o 1 equivalente de 1,2-diol (etilenglicol) + catalizador ácido anhidro (p-TsOH o H₂SO₄) con eliminación azeotrópica de H₂O.",
+    "rolReactivos": "• Sustrato electrofílico: Cetona alifática, cíclica o aromática (R–CO–R').\n• Nucleófilo: Alcohol primario (CH₃OH, CH₃CH₂OH) o diol geminal/vecinal (HO–CH₂CH₂–OH).\n• Catalizador ácido: H⁺ anhidro (p-TsOH / HCl seco); imprescindible para protonar el carbonilo y el –OH saliente.",
+    "reglasObs": "• Reactividad: las cetonas reaccionan más lentamente que los aldehídos por mayor impedimento estérico y efecto inductivo +I; por ello se prefiere etilenglicol (cetal cíclico) para desplazar el equilibrio.\n• Protección selectiva: en una cetoaldehído, el aldehído reacciona selectivamente primero frente a 1 eq. de etilenglicol.\n• Desprotección: los cetales son estables en medio básico, pero se hidrolizan rápidamente a la cetona original con H₃O⁺ / H₂O."
+  },
+  "substrates": [
+    {
+      "id": "cet_propanona_metanol",
+      "name": "Propanona + 2 Metanol (H⁺) ⇄ Hemicetal ⇄ 2,2-Dimetoxipropano (Cetal) + H₂O [Cetona Alifática]",
+      "catalyst": "CH₃OH / p-TsOH (−H₂O)"
+    },
+    {
+      "id": "cet_ciclohexanona_etilenglicol",
+      "name": "Ciclohexanona + Etilenglicol (H⁺) ⇄ Cetal Cíclico (1,4-Dioxaespiro[4.5]decano) + H₂O [Grupo Protector]",
+      "catalyst": "HOCH₂CH₂OH / p-TsOH (−H₂O)"
+    },
+    {
+      "id": "cet_butanona_etanol",
+      "name": "Butanona + 2 Etanol (H⁺) ⇄ 2,2-Dietoxibutano (Cetal Dietílico) + H₂O [Cetona Asimétrica]",
+      "catalyst": "CH₃CH₂OH / H⁺ (anhidro)"
+    },
+    {
+      "id": "cet_intramolecular_hidroxicetona",
+      "name": "5-Hidroxi-2-pentanona (H⁺) ⇄ Hemicetal Cíclico de 5 Miembros (2-Metiltetrahidrofuran-2-ol) [Modelo Cetosa]",
+      "catalyst": "H⁺ (catalítico)"
+    }
+  ],
+  "catalysts": [
+    "CH₃OH / p-TsOH (−H₂O)",
+    "HOCH₂CH₂OH / p-TsOH (−H₂O)",
+    "CH₃CH₂OH / H⁺ (anhidro)",
+    "H⁺ (catalítico)"
+  ],
+  "stepsBySubstrate": {
+    "cet_propanona_metanol": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + Metanol (1.er Equivalente, Catálisis Ácida H⁺)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–OH (cat. p-TsOH)",
+        "semiGlobal": "CH₃–CO–CH₃ + 2 CH₃OH ⇄ (CH₃)₂C(OH)(OCH₃) + CH₃OH ⇄ (CH₃)₂C(OCH₃)₂ + H₂O",
+        "desc": "Se observan la propanona (CH₃–CO–CH₃) protonada en medio ácido anhidro y el primer equivalente de metanol (CH₃–OH) aproximándose al carbono carbonílico C2.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cetona y primer equivalente de alcohol intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del oxígeno del metanol al carbono carbonílico electrofílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona (H⁺)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "O_me1",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "1.er eq. Metanol"
+            },
+            {
+              "id": "H_me1",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_me1",
+              "to": "H_me1",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1 (Ruptura en Rojo): Formación del Hemicetal (2-Metoxipropan-2-ol)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–OH ⇄ (CH₃)₂C(OH)(OCH₃) [Hemicetal]",
+        "semiGlobal": "CH₃–CO–CH₃ + 2 CH₃OH ⇄ (CH₃)₂C(OH)(OCH₃) + CH₃OH ⇄ (CH₃)₂C(OCH₃)₂ + H₂O",
+        "desc": "El metanol forma un enlace C–OCH₃ con el carbono central C2 mientras el enlace π C=O se abre y se protona el oxígeno O1.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O y ruptura O–H del metanol.",
+          "forming": "En VERDE punteado: formación del nuevo enlace C2–OCH₃ del hemicetal.",
+          "movement": "El carbono C2 adquiere hibridación sp³ cuaternaria con dos metilos, un –OH y un –OCH₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Hemicetal"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "O_me1",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_me1",
+              "el": "H",
+              "x": 525,
+              "y": 325,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_me1",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_me1",
+              "to": "H_me1",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque MeOH"
+            },
+            {
+              "type": "full",
+              "x1": 407,
+              "y1": 152,
+              "cx": 427,
+              "cy": 122,
+              "x2": 411,
+              "y2": 108,
+              "label": "Par π → OH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Protonación del –OH Hemicetálico y Pérdida de H₂O",
+        "semiStep": "(CH₃)₂C(OH₂⁺)(OCH₃) ──► [(CH₃)₂C=O⁺CH₃] + H₂O",
+        "semiGlobal": "CH₃–CO–CH₃ + 2 CH₃OH ⇄ (CH₃)₂C(OH)(OCH₃) + CH₃OH ⇄ (CH₃)₂C(OCH₃)₂ + H₂O",
+        "desc": "El medio ácido protona el grupo hidroxilo del hemicetal, expulsando una molécula de agua y generando un ion oxocarbenio terciario estabilizado.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C2–OH₂⁺ (salida de H₂O).",
+          "forming": "En VERDE sólido: grupo metoxi (–OCH₃) unido al carbono C2.",
+          "movement": "Formación del catión oxocarbenio [(CH₃)₂C=O⁺CH₃]."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Ion Oxocarbenio"
+            },
+            {
+              "id": "H2O_leave",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "O_me1",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_leave",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_me1",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 165,
+              "cx": 420,
+              "cy": 135,
+              "x2": 395,
+              "y2": 110,
+              "label": "Pérdida H₂O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 3: Ataque del 2.º Equivalente de Metanol y Desprotonación",
+        "semiStep": "[(CH₃)₂C=O⁺CH₃] + CH₃–OH ──► (CH₃)₂C(OCH₃)₂ + H⁺",
+        "semiGlobal": "CH₃–CO–CH₃ + 2 CH₃OH ⇄ (CH₃)₂C(OH)(OCH₃) + CH₃OH ⇄ (CH₃)₂C(OCH₃)₂ + H₂O",
+        "desc": "La segunda molécula de metanol ataca al ion oxocarbenio y pierde un protón para regenerar el catalizador ácido.",
+        "legend": {
+          "breaking": "En ROJO punteado: desprotonación del segundo metanol.",
+          "forming": "En VERDE punteado: formación del segundo enlace C2–OCH₃.",
+          "movement": "La eliminación continua de agua desplaza el equilibrio hacia el cetal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O_me2",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_prot2",
+              "el": "H",
+              "x": 515,
+              "y": 95,
+              "highlight": "#ef4444",
+              "label": "Regenera H⁺"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "O_me1",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_me2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_me2",
+              "to": "H_prot2",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_me1",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 455,
+              "y1": 95,
+              "cx": 480,
+              "cy": 75,
+              "x2": 500,
+              "y2": 90,
+              "label": "Salida H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2,2-Dimetoxipropano (Cetal Dimetílico) + H₂O",
+        "semiStep": "(CH₃)₂C(OCH₃)₂ + H₂O (Cetal)",
+        "semiGlobal": "CH₃–CO–CH₃ + 2 CH₃OH ⇄ (CH₃)₂C(OH)(OCH₃) + CH₃OH ⇄ (CH₃)₂C(OCH₃)₂ + H₂O",
+        "desc": "Queda consolidado el 2,2-dimetoxipropano (cetal de la propanona), usado también como agente deshidratante químico.",
+        "legend": {
+          "breaking": "Cetalización completada.",
+          "forming": "En VERDE sólido: dos grupos metoxi (–OCH₃) y dos grupos metilo sobre C2.",
+          "movement": "Estable en medio básico; se hidroliza de vuelta a propanona + 2 metanol con H₃O⁺ / H₂O."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetal (2,2-Dimetoxipropano)"
+            },
+            {
+              "id": "O_me2",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_me1",
+              "el": "OCH₃",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210
+            },
+            {
+              "id": "H2O_prod",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_me2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_me1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cet_ciclohexanona_etilenglicol": [
+      {
+        "title": "Estado Inicial Desarrollado: Ciclohexanona + Etilenglicol (cat. p-TsOH)",
+        "semiStep": "Ciclohexanona + HO–CH₂–CH₂–OH (cat. p-TsOH)",
+        "semiGlobal": "Ciclohexanona + HOCH₂CH₂OH ⇄ Cetal Cíclico Espiro + H₂O",
+        "desc": "La ciclohexanona reacciona favorablemente con etilenglicol gracias al alivio de tensión angular al pasar el carbono C1 de sp² (120°) a sp³ (109.5°) y al efecto entrópico del diol.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ciclohexanona y etilenglicol intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque intermolecular del primer –OH seguido de ciclación intramolecular."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210,
+              "label": "Anillo Ciclohexano"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "C1 Carbonilo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "O_g1",
+              "el": "HO",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Etilenglicol"
+            },
+            {
+              "id": "CH2_g",
+              "el": "CH₂CH₂",
+              "x": 530,
+              "y": 325,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_g2",
+              "el": "OH",
+              "x": 665,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_g1",
+              "to": "CH2_g",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "CH2_g",
+              "to": "O_g2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Eliminación de H₂O y Cierre Espiro Cíclico",
+        "semiStep": "Hemicetal hidroxilado ──(H⁺, −H₂O)──► 1,4-Dioxaespiro[4.5]decano",
+        "semiGlobal": "Ciclohexanona + HOCH₂CH₂OH ⇄ Cetal Cíclico Espiro + H₂O",
+        "desc": "Tras formarse el hemicetal y perderse agua, el segundo grupo hidroxilo ataca intramolecularmente cerrando el anillo de 1,3-dioxolano.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida de molécula de agua.",
+          "forming": "En VERDE punteado: cierre del segundo enlace C1–O del anillo protector.",
+          "movement": "Formación de un sistema espiro bicíclico muy estable."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 395,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "O_g1",
+              "el": "O",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CH2_g",
+              "el": "CH₂–CH₂",
+              "x": 545,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_g2",
+              "el": "O",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_g1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_g1",
+              "to": "CH2_g",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "CH2_g",
+              "to": "O_g2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_g2",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 520,
+              "y1": 210,
+              "cx": 475,
+              "cy": 185,
+              "x2": 425,
+              "y2": 205,
+              "label": "Cierre espiro"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Cetal Cíclico (1,4-Dioxaespiro[4.5]decano) + H₂O",
+        "semiStep": "Cetal Cíclico de Ciclohexanona + H₂O",
+        "semiGlobal": "Ciclohexanona + HOCH₂CH₂OH ⇄ Cetal Cíclico Espiro + H₂O",
+        "desc": "Queda consolidado el cetal cíclico protector de la ciclohexanona, resistente a bases fuertes, hidruros y reactivos de Grignard.",
+        "legend": {
+          "breaking": "Protección de la cetona completada.",
+          "forming": "En VERDE sólido: anillo 1,3-dioxolano unido en espiro al ciclohexano.",
+          "movement": "Desprotección cuantitativa mediante H₃O⁺ acuoso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ring_L",
+              "el": "C₅H₁₀",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Cetal Cíclico Protector"
+            },
+            {
+              "id": "O_g1",
+              "el": "O",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CH2_g",
+              "el": "CH₂–CH₂",
+              "x": 545,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_g2",
+              "el": "O",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O_p",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ring_L",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_g1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_g1",
+              "to": "CH2_g",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "CH2_g",
+              "to": "O_g2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_g2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "cet_butanona_etanol": [
+      {
+        "title": "Estado Inicial Desarrollado: Butanona + 2 Etanol (cat. H⁺)",
+        "semiStep": "CH₃–CO–CH₂–CH₃ + 2 CH₃CH₂–OH (cat. H⁺)",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + 2 EtOH ⇄ CH₃–C(OEt)₂–CH₂–CH₃ + H₂O",
+        "desc": "Se observan la butanona (cetona asimétrica) y el etanol anhidro en presencia de catalizador ácido.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; butanona y etanol intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición nucleofílica del primer equivalente de etanol sobre el carbonilo C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "label": "Butanona (H⁺)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            },
+            {
+              "id": "O_et1",
+              "el": "OEt",
+              "x": 385,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "EtOH / H⁺"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Hemicetal Etílico y Sustitución por 2.º Etanol",
+        "semiStep": "CH₃–C(OH)(OEt)–CH₂–CH₃ + EtOH ──(H⁺)──► CH₃–C(OEt)₂–CH₂–CH₃ + H₂O",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + 2 EtOH ⇄ CH₃–C(OEt)₂–CH₂–CH₃ + H₂O",
+        "desc": "Tras formarse el hemicetal, la protonación del –OH expulsa H₂O y permite la entrada del segundo grupo –OEt.",
+        "legend": {
+          "breaking": "En ROJO punteado: salida del grupo saliente H₂O.",
+          "forming": "En VERDE punteado: incorporación del segundo grupo etoxi (–OEt).",
+          "movement": "El carbono C2 pierde su quiralidad transitoria del hemicetal al quedar unido a dos grupos –OEt idénticos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "H2O_l",
+              "el": "H₂O",
+              "x": 385,
+              "y": 85,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            },
+            {
+              "id": "O_et1",
+              "el": "OEt",
+              "x": 385,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_et2",
+              "el": "OEt",
+              "x": 525,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "2.º eq. EtOH"
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O_l",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_et1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_et2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 500,
+              "y1": 308,
+              "cx": 450,
+              "cy": 280,
+              "x2": 405,
+              "y2": 232,
+              "label": "Ataque 2.º EtOH"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: 2,2-Dietoxibutano (Cetal Dietílico) + H₂O",
+        "semiStep": "CH₃–C(OEt)₂–CH₂–CH₃ + H₂O",
+        "semiGlobal": "CH₃–CO–CH₂–CH₃ + 2 EtOH ⇄ CH₃–C(OEt)₂–CH₂–CH₃ + H₂O",
+        "desc": "Queda consolidado el 2,2-dietoxibutano (cetal aquiral de la butanona).",
+        "legend": {
+          "breaking": "Cetalización completada.",
+          "forming": "En VERDE sólido: dos grupos –OEt unidos al carbono C2.",
+          "movement": "Producto cetal obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1_me",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "2,2-Dietoxibutano"
+            },
+            {
+              "id": "O_et2",
+              "el": "OEt",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_et1",
+              "el": "OEt",
+              "x": 385,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C3_ch2",
+              "el": "CH₂",
+              "x": 545,
+              "y": 210
+            },
+            {
+              "id": "C4_me",
+              "el": "CH₃",
+              "x": 695,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1_me",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_et2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O_et1",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "C3_ch2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_ch2",
+              "to": "C4_me",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "cet_intramolecular_hidroxicetona": [
+      {
+        "title": "Estado Inicial Desarrollado: 5-Hidroxi-2-pentanona (γ-Hidroxicetona)",
+        "semiStep": "HO–CH₂–CH₂–CH₂–CO–CH₃ (cat. H⁺)",
+        "semiGlobal": "HO–(CH₂)₃–CO–CH₃ ⇄ Hemicetal Cíclico de 5 Miembros",
+        "desc": "Las γ- y δ-hidroxicetonas sufren ciclación intramolecular espontánea formando hemicetales cíclicos estables de 5 o 6 miembros, exactamente igual que la D-fructosa al formar fructofuranosa.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cadena abierta intacta.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El grupo –OH del C5 ataca intramolecularmente al carbono carbonílico C2."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 395,
+              "y": 150,
+              "label": "C2 Carbonilo"
+            },
+            {
+              "id": "O2",
+              "el": "O",
+              "x": 395,
+              "y": 65
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 535,
+              "y": 150
+            },
+            {
+              "id": "C3_C4",
+              "el": "CH₂–CH₂",
+              "x": 265,
+              "y": 235
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "O_nuc",
+              "el": "OH",
+              "x": 465,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo interno"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3_C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ataque Nucleofílico Intramolecular (Ciclación Furanósica)",
+        "semiStep": "Cierre de anillo oxigenado de 5 miembros (Apertura de π C=O)",
+        "semiGlobal": "HO–(CH₂)₃–CO–CH₃ ⇄ Hemicetal Cíclico de 5 Miembros",
+        "desc": "El oxígeno hidroxílico ataca al carbono cetónico C2 formando el enlace endocíclico C2–O mientras el oxígeno carbonílico se convierte en el –OH anomérico.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C=O.",
+          "forming": "En VERDE punteado: nuevo enlace C2–O del anillo.",
+          "movement": "Modelo estructural de la ciclación de cetohexosas (D-fructosa)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 395,
+              "y": 150
+            },
+            {
+              "id": "O2",
+              "el": "OH",
+              "x": 395,
+              "y": 65,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 535,
+              "y": 150
+            },
+            {
+              "id": "C3_C4",
+              "el": "CH₂–CH₂",
+              "x": 265,
+              "y": 235
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "O_nuc",
+              "el": "O",
+              "x": 465,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3_C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_nuc",
+              "to": "C2",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 298,
+              "cx": 455,
+              "cy": 230,
+              "x2": 412,
+              "y2": 175,
+              "label": "Ciclación"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Hemicetal Cíclico Estable (2-Metiltetrahidrofuran-2-ol)",
+        "semiStep": "Hemicetal Cíclico (Predominante en equilibrio)",
+        "semiGlobal": "HO–(CH₂)₃–CO–CH₃ ⇄ Hemicetal Cíclico de 5 Miembros",
+        "desc": "Queda consolidado el hemicetal cíclico estable de 5 miembros con un grupo –OH, un oxígeno endocíclico, un grupo –CH₃ y una cadena alquílica en el carbono anomérico C2.",
+        "legend": {
+          "breaking": "Ciclación intramolecular completada.",
+          "forming": "En VERDE sólido: anillo heterocíclico de 5 miembros con función hemicetal.",
+          "movement": "Si reacciona con otro alcohol R''OH en medio ácido, forma un cetal (fructósido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 395,
+              "y": 150,
+              "highlight": "#10b981",
+              "label": "Hemicetal Cíclico"
+            },
+            {
+              "id": "O2",
+              "el": "OH",
+              "x": 395,
+              "y": 65,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Me_R",
+              "el": "CH₃",
+              "x": 535,
+              "y": 150
+            },
+            {
+              "id": "C3_C4",
+              "el": "CH₂–CH₂",
+              "x": 265,
+              "y": 235
+            },
+            {
+              "id": "C5",
+              "el": "CH₂",
+              "x": 335,
+              "y": 325
+            },
+            {
+              "id": "O_nuc",
+              "el": "O",
+              "x": 465,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "Me_R",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "C3_C4",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C3_C4",
+              "to": "C5",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C5",
+              "to": "O_nuc",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_nuc",
+              "to": "C2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
