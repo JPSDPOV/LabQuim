@@ -1,0 +1,236 @@
+{
+  "category": "reacciones",
+  "title": "B.7- Condensación con Aldehídos y Cetonas (Etilamina + Etanal → Carbinolamina → Imina / Base de Schiff + H₂O)",
+  "natureBadge": "Reacción 7 (Adición-Eliminación Carbonílica) • R–NH₂ + R'–CHO / R'₂CO ⇄ Carbinolamina ──(−H₂O)──► Imina (Base de Schiff) + H₂O",
+  "deltaH": "ΔH° ≈ −10 a −20 kJ/mol (Reversible en medio ácido suave pH 4–5; formación del doble enlace carbono-nitrógeno C=N)",
+  "description": "Reacción de condensación nucleofílica entre aminas primarias (R–NH₂) y aldehídos o cetonas en medio ácido suave (pH 4–5) para formar IMINAS SECUNDARIAS o BASES DE SCHIFF (R'–CH=N–R) con eliminación de una molécula de agua (Diap. 1190 y 1191 de cátedra):\n1) Etapa 1 — Adición Nucleofílica: el par libre del nitrógeno ataca al carbono carbonílico (δ+) formando un intermediario tetraédrico aminoalcohol llamado CARBINOLAMINA.\n2) Etapa 2 — Deshidratación (−H₂O): la protonación del –OH de la carbinolamina provoca la pérdida de agua y la formación del doble enlace C=N de la Imina (Base de Schiff):\n   • Ejemplo 1 (Diap. 1190): Etilamina + Etanal ──► 1-(Etilamino)etanol (Carbinolamina) ──(−H₂O)──► N-Etiletanimina (Base de Schiff) + H₂O.\n   • Ejemplo 2 (Ejercicio Diap. 1191): Isopropilamina + Propanona ──► 2-(Isopropilamino)-2-propanol ──(−H₂O)──► N-Isopropilpropan-2-imina (Base de Schiff) + H₂O.",
+  "meta": {
+    "grupoFuncional": "Iminas Secundarias / Bases de Schiff (N-Etiletanimina, N-Isopropilpropan-2-imina: R₂C=N–R')",
+    "reaccionMecanismo": "Adición nucleofílica al carbonilo (→ Carbinolamina) seguida de deshidratación catalizada por ácido (→ Base de Schiff)",
+    "naturaleza": "Por etapas en equilibrio (Amina 1° + Carbonilo → Carbinolamina → Deshidratación → Imina + H₂O).",
+    "rupturaIntermediarios": "Ruptura de enlaces π C=O y N–H (×2); intermediario carbinolamina (gem-aminoalcohol); formación de doble enlace C=N y H₂O.",
+    "detalleMecanismo": "CH₃CH₂–NH₂ + CH₃–CHO ⇄ [CH₃–CH(OH)–NHCH₂CH₃] ──(−H₂O)──► CH₃–CH=N–CH₂CH₃ (N-Etiletanimina) + H₂O",
+    "reactivosCondiciones": "Amina primaria (R–NH₂) + Aldehído o Cetona en medio ácido débil tamponado (pH 4–5) con eliminación de agua.",
+    "rolReactivos": "• Nucleófilo: Amina primaria (etilamina, isopropilamina).\n• Electrófilo: Aldehído (etanal) o Cetona (propanona).\n• Productos: Carbinolamina intermediaria → Imina / Base de Schiff (N-etiletanimina, N-isopropilpropan-2-imina) + H₂O.",
+    "reglasObs": "• Si la amina es SECUNDARIA (R₂NH) y el carbonilo tiene hidrógenos α, en lugar de imina se forma una ENAMINA (R₂N–C=C).\n• Las bases de Schiff son fundamentales en bioquímica (unión del piridoxal fosfato PLP a las transaminasas y de la rodopsina en la visión)."
+  },
+  "substrates": [
+    {
+      "id": "ami_rxn7_etilamina_etanal",
+      "name": "Etilamina + Etanal ──► Carbinolamina ──(−H₂O)──► N-Etiletanimina (Base de Schiff) + H₂O [Diap. 1190]",
+      "catalyst": "pH 4–5 / −H₂O (Adición-Eliminación)"
+    },
+    {
+      "id": "ami_rxn7_isopropilamina_propanona",
+      "name": "Isopropilamina + Propanona ──► N-Isopropilpropan-2-imina (Base de Schiff) + H₂O [Ejercicio Diap. 1191]",
+      "catalyst": "pH 4–5 / −H₂O (Adición-Eliminación)"
+    }
+  ],
+  "catalysts": [
+    "pH 4–5 / −H₂O (Adición-Eliminación)"
+  ],
+  "stepsBySubstrate": {
+    "ami_rxn7_etilamina_etanal": [
+      {
+        "title": "Estado Inicial Desarrollado: Etilamina (CH₃CH₂–NH₂) + Etanal (CH₃–CHO)",
+        "semiStep": "CH₃–CH₂–:NH₂ + CH₃–CH=O",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–CHO ⇄ [Carbinolamina] ──► CH₃–CH=N–CH₂CH₃ (N-Etiletanimina) + H₂O",
+        "desc": "Se observan la etilamina nucleofílica y el etanal con su carbono carbonílico electrofílico (δ+).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; doble enlace C=O intacto.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del par libre del nitrógeno al carbono carbonílico C1 del etanal."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "CH₃–CH₂–NH₂",
+              "x": 225,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "C1",
+              "el": "CH₃–CH",
+              "x": 495,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 495,
+              "y": 95,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Carbinolamina [1-(Etilamino)etanol] y Deshidratación (−H₂O)",
+        "semiStep": "CH₃–CH(OH)–NH–CH₂CH₃ (Carbinolamina) ──(−H₂O)──►",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–CHO ⇄ [Carbinolamina] ──► CH₃–CH=N–CH₂CH₃ (N-Etiletanimina) + H₂O",
+        "desc": "Se forma el intermediario tetraédrico carbinolamina que, al protonarse el grupo –OH, expulsa una molécula de agua.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de enlaces C–OH y N–H (sale H₂O).",
+          "forming": "En VERDE punteado: segundo enlace π C=N.",
+          "movement": "Eliminación de H₂O consolidando el doble enlace imínico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃–CH",
+              "x": 255,
+              "y": 210
+            },
+            {
+              "id": "N1",
+              "el": "N–CH₂CH₃",
+              "x": 455,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH₂⁺ (Sale H₂O)",
+              "x": 255,
+              "y": 95,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "OH",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Etiletanimina (Base de Schiff) + H₂O",
+        "semiStep": "CH₃–CH=N–CH₂–CH₃ (N-Etiletanimina / Base de Schiff) + H₂O",
+        "semiGlobal": "CH₃CH₂–NH₂ + CH₃–CHO ⇄ [Carbinolamina] ──► CH₃–CH=N–CH₂CH₃ (N-Etiletanimina) + H₂O",
+        "desc": "Queda consolidada la N-etiletanimina (base de Schiff) más agua.",
+        "legend": {
+          "breaking": "Condensación completada.",
+          "forming": "En VERDE sólido: N-etiletanimina (Base de Schiff, C=N).",
+          "movement": "Producto imina obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "CH₃–CH",
+              "x": 215,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "N1",
+              "el": "N–CH₂–CH₃",
+              "x": 425,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Etiletanimina (Base de Schiff)"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 635,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "N1",
+              "order": 2,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ami_rxn7_isopropilamina_propanona": [
+      {
+        "title": "Estado Inicial Desarrollado: Isopropilamina + Propanona (Acetona)",
+        "semiStep": "(CH₃)₂CH–NH₂ + CH₃–CO–CH₃",
+        "semiGlobal": "(CH₃)₂CH–NH₂ + (CH₃)₂C=O ──(−H₂O)──► (CH₃)₂C=N–CH(CH₃)₂ (N-Isopropilpropan-2-imina) + H₂O",
+        "desc": "Ejercicio de aplicación de la diapositiva 1191: condensación de isopropilamina con propanona.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Adición nucleofílica a la cetona y deshidratación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Am",
+              "el": "(CH₃)₂CH–NH₂",
+              "x": 235,
+              "y": 210,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "Ket",
+              "el": "+ CH₃–CO–CH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: N-Isopropilpropan-2-imina (Base de Schiff) + H₂O",
+        "semiStep": "(CH₃)₂C=N–CH(CH₃)₂ (N-Isopropilpropan-2-imina / Base de Schiff) + H₂O",
+        "semiGlobal": "(CH₃)₂CH–NH₂ + (CH₃)₂C=O ──(−H₂O)──► (CH₃)₂C=N–CH(CH₃)₂ (N-Isopropilpropan-2-imina) + H₂O",
+        "desc": "Queda consolidada la N-isopropilpropan-2-imina (base de Schiff) más agua.",
+        "legend": {
+          "breaking": "Deshidratación de la carbinolamina completada.",
+          "forming": "En VERDE sólido: N-Isopropilpropan-2-imina (Base de Schiff).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "(CH₃)₂C=N–CH(CH₃)₂",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "N-Isopropilpropan-2-imina"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 585,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
