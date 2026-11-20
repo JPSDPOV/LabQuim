@@ -1,0 +1,1056 @@
+{
+  "category": "reacciones",
+  "title": "3) Reacción Haloformica de Metilcetonas o Etanal (+ NaOH / X₂ ──► Sal Carboxilato + Haloformo CHX₃)",
+  "natureBadge": "Halogenación α Exhaustiva y Ruptura • Metilcetonas / Etanal → Carboxilato + CHX₃↓",
+  "deltaH": "ΔH° < 0 (Exotérmica; trihalogenación α seguida de sustitución nucleofílica acílica con salida de ⁻CX₃)",
+  "description": "Reacción característica de las metilcetonas (R–CO–CH₃), el etanal (CH₃–CHO) y alcoholes oxidables a estos (etanol y 2-alcoholes CH₃–CH(OH)–R) frente a halógenos (I₂, Br₂, Cl₂) en medio fuertemente básico (NaOH / KOH):\n1) En medio básico, el grupo metilo α (–CH₃) sufre tres enolizaciones y halogenaciones sucesivas hasta convertirse en un grupo trihalometilo (–CX₃).\n2) El grupo –CX₃ actúa como buen grupo saliente frente al ataque nucleofílico de OH⁻ sobre el carbonilo, rompiéndose el enlace C–CX₃.\n3) Se obtiene una sal carboxilato con un carbono menos (R–COO⁻Na⁺) y un haloformo (CHX₃); con yodo (I₂/NaOH) precipita yodoformo (CHI₃, sólido amarillo característico).",
+  "meta": {
+    "grupoFuncional": "Sal Carboxilato (R–COO⁻Na⁺ → R–COOH tras acidificar) + Haloformo (CHI₃, CHBr₃, CHCl₃)",
+    "reaccionMecanismo": "Enolización y halogenación α triple seguida de adición-eliminación nucleofílica (ruptura haloformica)",
+    "naturaleza": "Por etapas (desprotonación α → enolato → ataque a X₂ [×3] → ataque de OH⁻ al C=O → salida de ⁻CX₃ y protonación).",
+    "rupturaIntermediarios": "Ruptura de C–H α (×3), X–X (×3) y enlace C–CX₃; intermediario trihalometilcetona (R–CO–CX₃) y anión ⁻CX₃.",
+    "detalleMecanismo": "R–CO–CH₃ + 3 I₂ + 4 NaOH ──► R–COO⁻Na⁺ + CHI₃↓ (amarillo) + 3 NaI + 3 H₂O",
+    "reactivosCondiciones": "Metilcetona (R–CO–CH₃) o Etanal (CH₃–CHO) + X₂ (I₂, Br₂ o Cl₂) en exceso + NaOH acuoso (luego H₃O⁺ si se desea el ácido libre).",
+    "rolReactivos": "• Sustrato: Metilcetona (R–CO–CH₃) o Etanal (CH₃–CHO) (único aldehído positivo).\n• Base fuerte: NaOH / KOH (genera el enolato α y ataca al carbonilo trihalogenado).\n• Electrófilo halogenante: I₂, Br₂ o Cl₂.",
+    "reglasObs": "• Prueba del Yodoformo (I₂ / NaOH): precipitado amarillo pálido de CHI₃ (olor antiséptico) identifica grupos CH₃–C=O o CH₃–CH(OH)–.\n• Etanal (CH₃–CHO) da positivo (produce metanoato HCOO⁻ + CHI₃↓); los demás aldehídos dan negativo.\n• El producto carboxilato pierde 1 átomo de carbono respecto al sustrato inicial."
+  },
+  "substrates": [
+    {
+      "id": "halo_propanona_i2",
+      "name": "Propanona + I₂ / NaOH ──► Etanoato de Sodio + Yodoformo (CHI₃↓) [Metilcetona]",
+      "catalyst": "I₂ / NaOH (acuoso)"
+    },
+    {
+      "id": "halo_acetofenona_i2",
+      "name": "Acetofenona + I₂ / NaOH ──► Benzoato de Sodio + Yodoformo (CHI₃↓) [Metilcetona Aromática]",
+      "catalyst": "I₂ / NaOH (luego H₃O⁺)"
+    },
+    {
+      "id": "halo_etanal_br2",
+      "name": "Etanal + Br₂ / NaOH ──► Metanoato de Sodio + Bromoformo (CHBr₃) [Único Aldehído Positivo]",
+      "catalyst": "Br₂ / NaOH (acuoso)"
+    },
+    {
+      "id": "halo_3pentanona_control",
+      "name": "3-Pentanona + I₂ / NaOH ──► Sin Ruptura Haloformica [Control Negativo — No es Metilcetona]",
+      "catalyst": "I₂ / NaOH (acuoso)"
+    }
+  ],
+  "catalysts": [
+    "I₂ / NaOH (acuoso)",
+    "I₂ / NaOH (luego H₃O⁺)",
+    "Br₂ / NaOH (acuoso)"
+  ],
+  "stepsBySubstrate": {
+    "halo_propanona_i2": [
+      {
+        "title": "Estado Inicial Desarrollado: Propanona + NaOH / I₂",
+        "semiStep": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH",
+        "semiGlobal": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH ──► CH₃–COO⁻Na⁺ + CHI₃↓ + 3 NaI + 3 H₂O",
+        "desc": "Se observan la propanona (CH₃–CO–CH₃) con su grupo metilo α (–CH₃) y los reactivos básicos halogenantes (OH⁻ e I₂).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; propanona, base hidróxido y yodo intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "La base OH⁻ abstrae un protón ácido α (C–H) del grupo metilo para generar el ion enolato."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Propanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 555,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "NaOH / I₂"
+            },
+            {
+              "id": "I2_mol",
+              "el": "I₂",
+              "x": 685,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1: Halogenación α Exhaustiva (Formación de 1,1,1-Triyodopropanona)",
+        "semiStep": "CH₃–CO–CH₃ + 3 I₂ + 3 OH⁻ ──► CH₃–CO–CI₃ + 3 I⁻ + 3 H₂O",
+        "semiGlobal": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH ──► CH₃–COO⁻Na⁺ + CHI₃↓ + 3 NaI + 3 H₂O",
+        "desc": "Tras tres ciclos de enolización y ataque a I₂, los tres hidrógenos del grupo metilo α son reemplazados por átomos de yodo formando el grupo –CI₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura de los tres enlaces C–H α y de los enlaces I–I.",
+          "forming": "En VERDE sólido: grupo triyodometilo (–CI₃) altamente atractor de electrones.",
+          "movement": "El efecto inductivo −I de los tres yodos vuelve muy electrofílico al carbono carbonílico C1 y convierte a ⁻CI₃ en un excelente grupo saliente."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Triyodometilcetona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "C_alpha",
+              "el": "CI₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH⁻",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo OH⁻"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "new"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 395,
+              "y1": 302,
+              "cx": 370,
+              "cy": 265,
+              "x2": 388,
+              "y2": 235,
+              "label": "Ataque OH⁻"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Adición de OH⁻ y Expulsión del Anión Triyodometiluro (⁻CI₃)",
+        "semiStep": "CH₃–CO–CI₃ + OH⁻ ──► CH₃–COOH + ⁻CI₃",
+        "semiGlobal": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH ──► CH₃–COO⁻Na⁺ + CHI₃↓ + 3 NaI + 3 H₂O",
+        "desc": "El ion OH⁻ se adiciona al carbonilo formando un intermediario tetraédrico que colapsa regenerando C=O y rompiendo el enlace C1–CI₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura heterolítica del enlace C–CI₃.",
+          "forming": "En VERDE punteado: formación del enlace C–OH carboxílico.",
+          "movement": "El anión ⁻CI₃ es estabilizado por los tres átomos de yodo polarizables y abandona la molécula."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CI₃⁻",
+              "x": 575,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale grupo saliente ⁻CI₃"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 475,
+              "y1": 210,
+              "cx": 510,
+              "cy": 185,
+              "x2": 545,
+              "y2": 205,
+              "label": "Ruptura C–CI₃"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 3: Transferencia Protónica Ácido-Base Irreversible",
+        "semiStep": "CH₃–COOH + ⁻CI₃ ──► CH₃–COO⁻ + CHI₃↓",
+        "semiGlobal": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH ──► CH₃–COO⁻Na⁺ + CHI₃↓ + 3 NaI + 3 H₂O",
+        "desc": "El anión fuertemente básico ⁻CI₃ abstrae rápidamente el protón del ácido etanoico recién formado, impulsando la reacción de forma irreversible.",
+        "legend": {
+          "breaking": "En ROJO punteado: desprotonación del grupo –OH carboxílico.",
+          "forming": "En VERDE punteado: formación del enlace C–H del yodoformo (CHI₃).",
+          "movement": "Transferencia protónica rápida que genera el carboxilato estabilizado por resonancia y el precipitado amarillo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻",
+              "x": 515,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_tr",
+              "el": "H",
+              "x": 605,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CI₃",
+              "x": 700,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O2",
+              "to": "H_tr",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "H_tr",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 672,
+              "y1": 198,
+              "cx": 645,
+              "cy": 178,
+              "x2": 620,
+              "y2": 198,
+              "label": "Captura H⁺"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanoato de Sodio (CH₃–COO⁻Na⁺) + Yodoformo (CHI₃↓)",
+        "semiStep": "CH₃–COO⁻Na⁺ + CHI₃↓ (Precipitado amarillo)",
+        "semiGlobal": "CH₃–CO–CH₃ + 3 I₂ + 4 NaOH ──► CH₃–COO⁻Na⁺ + CHI₃↓ + 3 NaI + 3 H₂O",
+        "desc": "Se obtienen el ion etanoato (2 carbonos) y el precipitado amarillo brillante de yodoformo (CHI₃).",
+        "legend": {
+          "breaking": "Ruptura oxidativa de la metilcetona completada.",
+          "forming": "En VERDE sólido: ion carboxilato (CH₃–COO⁻) y yodoformo (CHI₃↓).",
+          "movement": "Resultado positivo característico para metilcetonas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Me_L",
+              "el": "CH₃",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanoato de Sodio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻Na⁺",
+              "x": 515,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CHI3",
+              "el": "CHI₃↓",
+              "x": 685,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Yodoformo (amarillo)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Me_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "halo_acetofenona_i2": [
+      {
+        "title": "Estado Inicial Desarrollado: Acetofenona + I₂ / NaOH",
+        "semiStep": "C₆H₅–CO–CH₃ + 3 I₂ + 4 NaOH",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 3 I₂ + 4 NaOH ──(H₃O⁺)──► C₆H₅–COOH + CHI₃↓",
+        "desc": "Se observan la acetofenona (metil fenil cetona) y los reactivos I₂ / NaOH. El grupo metilo α es el único con hidrógenos enolizables.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; acetofenona y reactivos intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Yodación α exhaustiva del grupo metilo unido al carbonilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Acetofenona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "I₂ / NaOH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ruptura del Enlace C–CI₃ por Ataque de OH⁻",
+        "semiStep": "C₆H₅–CO–CI₃ + OH⁻ ──► C₆H₅–COO⁻ + CHI₃↓",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 3 I₂ + 4 NaOH ──(H₃O⁺)──► C₆H₅–COOH + CHI₃↓",
+        "desc": "Tras triyodarse el metilo α, el ion hidróxido ataca al carbonilo y desplaza al grupo –CI₃.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–CI₃.",
+          "forming": "En VERDE punteado: formación del enlace C–O carboxílico.",
+          "movement": "El anillo aromático permanece intacto."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CI₃⁻",
+              "x": 575,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale ⁻CI₃"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 475,
+              "y1": 210,
+              "cx": 510,
+              "cy": 185,
+              "x2": 545,
+              "y2": 205,
+              "label": "Ruptura C–CI₃"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Benzoato de Sodio (o Ác. Benzoico) + Yodoformo (CHI₃↓)",
+        "semiStep": "C₆H₅–COO⁻Na⁺ + CHI₃↓",
+        "semiGlobal": "C₆H₅–CO–CH₃ + 3 I₂ + 4 NaOH ──(H₃O⁺)──► C₆H₅–COOH + CHI₃↓",
+        "desc": "Se obtiene benzoato de sodio (que al acidificar precipita como ácido benzoico) junto con el precipitado amarillo de yodoformo.",
+        "legend": {
+          "breaking": "Escisión haloformica completada.",
+          "forming": "En VERDE sólido: grupo carboxilato aromático y CHI₃↓.",
+          "movement": "Método sintético útil para convertir metilcetonas en ácidos carboxílicos con un carbono menos."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph_L",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzoato de Sodio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻Na⁺",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CHI3",
+              "el": "CHI₃↓",
+              "x": 690,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Yodoformo (amarillo)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "halo_etanal_br2": [
+      {
+        "title": "Estado Inicial Desarrollado: Etanal + Br₂ / NaOH",
+        "semiStep": "CH₃–CHO + 3 Br₂ + 4 NaOH",
+        "semiGlobal": "CH₃–CHO + 3 Br₂ + 4 NaOH ──► H–COO⁻Na⁺ + CHBr₃ + 3 NaBr + 3 H₂O",
+        "desc": "El etanal es el único aldehído que posee un grupo metilo unido directamente al carbonilo (CH₃–CHO), por lo que da positiva la reacción haloformica.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; etanal, bromo y base intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Bromación α exhaustiva del grupo metilo para generar bromal (CBr₃–CHO)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "Etanal"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "C_alpha",
+              "el": "CH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH_base",
+              "el": "OH⁻",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Br₂ / NaOH"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_ald",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia: Ruptura del Bromal (H–CO–CBr₃) en Medio Básico",
+        "semiStep": "H–CO–CBr₃ + OH⁻ ──► H–COO⁻ + CHBr₃",
+        "semiGlobal": "CH₃–CHO + 3 Br₂ + 4 NaOH ──► H–COO⁻Na⁺ + CHBr₃ + 3 NaBr + 3 H₂O",
+        "desc": "El bromal intermediario sufre ataque nucleofílico de OH⁻ y expulsa al anión tribromometiluro (⁻CBr₃).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C–CBr₃.",
+          "forming": "En VERDE punteado: formación del enlace C–O del formiato.",
+          "movement": "Protonación rápida de ⁻CBr₃ para generar bromoformo líquido denso (CHBr₃)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH_nuc",
+              "el": "OH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "C_alpha",
+              "el": "CBr₃⁻",
+              "x": 575,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale ⁻CBr₃"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_ald",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_nuc",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "C_alpha",
+              "order": 1,
+              "state": "breaking"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 475,
+              "y1": 210,
+              "cx": 510,
+              "cy": 185,
+              "x2": 545,
+              "y2": 205,
+              "label": "Ruptura C–CBr₃"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Metanoato de Sodio (H–COO⁻Na⁺) + Bromoformo (CHBr₃)",
+        "semiStep": "H–COO⁻Na⁺ + CHBr₃",
+        "semiGlobal": "CH₃–CHO + 3 Br₂ + 4 NaOH ──► H–COO⁻Na⁺ + CHBr₃ + 3 NaBr + 3 H₂O",
+        "desc": "Se obtiene metanoato (formiato) de sodio de 1 carbono y bromoformo (CHBr₃).",
+        "legend": {
+          "breaking": "Reacción haloformica del etanal completada.",
+          "forming": "En VERDE sólido: ion formiato y bromoformo.",
+          "movement": "Único aldehído que produce haloformo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "H_ald",
+              "el": "H",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanoato de Sodio"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻Na⁺",
+              "x": 525,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CHBr3",
+              "el": "CHBr₃",
+              "x": 690,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Bromoformo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "H_ald",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "O2",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "halo_3pentanona_control": [
+      {
+        "title": "Estado Inicial Desarrollado: 3-Pentanona + I₂ / NaOH",
+        "semiStep": "CH₃–CH₂–CO–CH₂–CH₃ + I₂ / NaOH",
+        "semiGlobal": "CH₃–CH₂–CO–CH₂–CH₃ + I₂ / NaOH ──► SIN PRECIPITADO DE CHI₃ (Negativo)",
+        "desc": "La 3-pentanona es una cetona simétrica que carece de grupo metilo unido directamente al carbonilo (tiene dos grupos etilo –CH₂–CH₃).",
+        "legend": {
+          "breaking": "No puede formarse un grupo trihalometilo (–CI₃) saliente.",
+          "forming": "No se forma yodoformo (CHI₃).",
+          "movement": "La ausencia de grupo CH₃–C=O impide la escisión haloformica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et_L",
+              "el": "CH₃CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "label": "3-Pentanona"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Et_R",
+              "el": "CH₂CH₃",
+              "x": 565,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Sin grupo CH₃–C=O"
+            },
+            {
+              "id": "Reag",
+              "el": "I₂ / NaOH",
+              "x": 395,
+              "y": 325,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Et_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Resultado Consolidado: Prueba del Yodoformo Negativa",
+        "semiStep": "Sin formación de CHI₃↓ (Diferenciación 2-pentanona vs 3-pentanona)",
+        "semiGlobal": "CH₃–CH₂–CO–CH₂–CH₃ + I₂ / NaOH ──► SIN PRECIPITADO DE CHI₃ (Negativo)",
+        "desc": "No aparece precipitado amarillo de yodoformo, lo que permite distinguir fácilmente la 3-pentanona (−) de la 2-pentanona (+).",
+        "legend": {
+          "breaking": "Sin ruptura de cadena carbonada.",
+          "forming": "Sin haloformo.",
+          "movement": "Criterio analítico clave para identificar metilcetonas."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Et_L",
+              "el": "CH₃CH₂",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Prueba Negativa (Sin CHI₃)"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95
+            },
+            {
+              "id": "Et_R",
+              "el": "CH₂CH₃",
+              "x": 565,
+              "y": 210
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Et_L",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "Et_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
