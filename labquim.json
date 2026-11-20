@@ -1438,12 +1438,12 @@
           "label": "C- Reducción del Carbonilo a Alditoles / Polioles (D-Glucosa → D-Sorbitol | D-Fructosa → Sorbitol + Manitol)"
         },
         {
-          "value": "carb_rxn_glicosidos_disac",
-          "label": "D- Formación de Glicósidos y Enlace O-Glicosídico: Maltosa/Lactosa (Reductores) vs. Sacarosa (NO Reductor)"
+          "value": "carb_rxn_glicosidos",
+          "label": "D- Formación de Glicósidos / Enlace O-Glicosídico (Acetalización Anomérica, Disacáridos y Polisacáridos)"
         },
         {
-          "value": "carb_rxn_ester_molisch",
-          "label": "E- Esterificación de los Grupos –OH (Pentaacetato / Glucosa-6-P) y Ensayos de Molisch, Seliwanoff y Lugol"
+          "value": "carb_rxn_ester_eter",
+          "label": "E- Esterificación de Grupos Hidroxilo (Anhídrido Acético → Pentaacetatos) y Alquilación (Metilación Exhaustiva)"
         }
       ]
     },
