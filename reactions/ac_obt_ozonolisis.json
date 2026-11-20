@@ -1,102 +1,3590 @@
 {
   "category": "obtencion",
-  "title": "8) Método Complementario: Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn/H₂O ──► Aldehídos y/o Cetonas)",
-  "natureBadge": "Escisión Oxidativa Suave • R₂C=CHR' ──(1. O₃  2. Zn/H₂O)──► R₂C=O (Cetona) + O=CHR' (Aldehído)",
-  "deltaH": "ΔH° < 0 (Exotérmica; rompe completamente el doble enlace C=C sin sobreoxidar los aldehídos a ácidos)",
-  "description": "El ozono (O₃) se adiciona al doble enlace C=C formando un ozónido que, al reducirse con zinc en agua (Zn / H₂O) o sulfuro de dimetilo ((CH₃)₂S), genera aldehídos (si el carbono vinílico tiene H) y/o cetonas (si es disustituido =CR₂).",
+  "title": "8) Método Complementario: Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn / H₂O ──► Aldehídos y/o Cetonas)",
+  "natureBadge": "Ruptura Oxidativa Reductiva • R₂C=CR'₂ + 1. O₃ 2. Zn/H₂O ──► R₂C=O + O=CR'₂",
+  "deltaH": "ΔH° < 0 (Exotérmica; rompe completamente el doble enlace C=C generando dos carbonilos)",
+  "description": "Ruptura selectiva del doble enlace carbono-carbono (C=C) de un alqueno mediante ozono (O₃) a baja temperatura seguida de hidrólisis reductiva con zinc metálico y agua (Zn / H₂O o sulfuro de dimetilo Me₂S):\n1) Cicloadición [3+2]: el ozono se adiciona al doble enlace C=C formando un molozónido primario que rápidamente se reorganiza en un ozónido secundario (1,2,4-trioxolano).\n2) Hidrólisis reductiva con Zn / H₂O: el zinc reduce el enlace peróxido O–O eliminando un átomo de oxígeno como ZnO y escindiendo el anillo en dos fragmentos carbonílicos.\n3) Regla de predicción: cada carbono del doble enlace que posea al menos un hidrógeno (=CHR o =CH₂) produce un ALDEHÍDO (R–CHO o H–CHO), mientras que cada carbono disustituido (=CR₂) produce una CETONA (R–CO–R).",
   "meta": {
-    "grupoFuncional": "Aldehídos (R–CHO) y/o Cetonas (R₂C=O)",
-    "reaccionMecanismo": "Cicloadición 1,3-dipolar de ozono + escisión reductiva del ozónido",
-    "naturaleza": "Por etapas vía molozónido y ozónido cíclico.",
-    "rupturaIntermediarios": "Ruptura total de enlaces σ y π del doble enlace C=C.",
-    "detalleMecanismo": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O (propanona) + CH₃–CHO (etanal)",
-    "reactivosCondiciones": "1) O₃ (-78 °C); 2) Zn / H₂O o (CH₃)₂S.",
-    "rolReactivos": "• Sustrato: Alqueno.\n• Oxidante: Ozono (O₃).\n• Reductor: Zn / H₂O.",
-    "reglasObs": "• Permite obtener simultáneamente cetonas y aldehídos sin que estos últimos pasen a ácidos carboxílicos."
+    "grupoFuncional": "Aldehídos (R–CHO) y/o Cetonas (R–CO–R')",
+    "reaccionMecanismo": "Cicloadición dipolar 1,3 ([3+2]) + transposición a ozónido + hidrólisis reductiva",
+    "naturaleza": "Por etapas (molozónido → ozónido → ruptura reductiva con Zn / H₂O).",
+    "rupturaIntermediarios": "Ruptura total de C=C y O–O; intermediarios molozónido y ozónido (1,2,4-trioxolano); formación de dos C=O.",
+    "detalleMecanismo": "Alqueno + 1) O₃ (-78 °C)  2) Zn / H₂O ──► Aldehído(s) y/o Cetona(s) + ZnO",
+    "reactivosCondiciones": "1) Ozono (O₃) en CH₂Cl₂ a -78 °C;  2) Zinc en polvo y agua (Zn / H₂O) o (CH₃)₂S.",
+    "rolReactivos": "• Sustrato: Alqueno (mono-, di-, tri- o tetrasustituido).\n• Oxidante escisor: Ozono (O₃).\n• Agente reductor suave: Zinc metálico en agua (Zn / H₂O, impide que los aldehídos se oxiden a ácidos carboxílicos).",
+    "reglasObs": "• Si en lugar de Zn/H₂O se usa medio oxidante (H₂O₂), los aldehídos resultantes se oxidan a ácidos carboxílicos (R–COOH).\n• En medio reductivo (Zn / H₂O), los hidrógenos unidos al C=C se conservan intactos dando aldehídos."
   },
   "substrates": [
     {
-      "id": "oz_2metil2buteno",
-      "name": "Complementario: 2-Metil-2-buteno + 1) O₃  2) Zn/H₂O ──► Propanona + Etanal",
-      "catalyst": "1) O₃  2) Zn / H₂O"
+      "id": "ozono_eteno",
+      "name": "Eteno + 1. O₃  2. Zn / H₂O ──► 2 Metanal (Formaldehído)",
+      "catalyst": "1) O₃ (-78 °C)  2) Zn / H₂O"
+    },
+    {
+      "id": "ozono_2buteno",
+      "name": "2-Buteno + 1. O₃  2. Zn / H₂O ──► 2 Etanal [Simétrico]",
+      "catalyst": "1) O₃ (-78 °C)  2) Zn / H₂O"
+    },
+    {
+      "id": "ozono_2metil2buteno",
+      "name": "2-Metil-2-buteno + 1. O₃  2. Zn / H₂O ──► Propanona + Etanal [Mixto]",
+      "catalyst": "1) O₃ (-78 °C)  2) Zn / H₂O"
+    },
+    {
+      "id": "ozono_23dimetil2buteno",
+      "name": "2,3-Dimetil-2-buteno + 1. O₃  2. Zn / H₂O ──► 2 Propanona [2 Cetonas]",
+      "catalyst": "1) O₃ (-78 °C)  2) Zn / H₂O"
+    },
+    {
+      "id": "ozono_estireno",
+      "name": "Estireno (Vinilbenceno) + 1. O₃  2. Zn / H₂O ──► Benzaldehído + Metanal [Aromático]",
+      "catalyst": "1) O₃ (-78 °C)  2) Zn / H₂O"
     }
   ],
   "catalysts": [
-    "1) O₃  2) Zn / H₂O"
+    "1) O₃ (-78 °C)  2) Zn / H₂O"
   ],
   "stepsBySubstrate": {
-    "oz_2metil2buteno": [
+    "ozono_eteno": [
       {
-        "title": "Paso 1 — Estado Inicial: 2-Metil-2-buteno + Ozono (O₃)",
-        "semiStep": "(CH₃)₂C=CH–CH₃  +  O₃  ──►  [Ozónido Cíclico]",
-        "semiGlobal": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O + CH₃–CHO",
-        "desc": "El ozono rompe el doble enlace C2=C3 formando un ozónido intermediario.",
+        "title": "Estado Inicial Desarrollado: Eteno + Ozono (O₃)",
+        "semiStep": "CH₂=CH₂ + O₃",
+        "semiGlobal": "CH₂=CH₂ + 1) O₃  2) Zn / H₂O ──► 2 H–CHO + ZnO",
+        "desc": "Se observan las moléculas iniciales intactas: el eteno (CH₂=CH₂) con sus cuatro hidrógenos desplegados y el ozono dipolar (O₃).",
         "legend": {
-          "breaking": "En ROJO punteado: doble enlace C2=C3.",
-          "forming": "Ozónido cíclico.",
-          "movement": "Cicloadición de O₃."
+          "breaking": "Ningún enlace roto todavía; alqueno y ozono dipolar intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación concertada [3+2] del ozono sobre el doble enlace C=C."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Sub",
-              "el": "(CH₃)₂C=CH–CH₃",
-              "x": 310,
-              "y": 195
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "Eteno"
             },
             {
-              "id": "O3",
-              "el": "1) O₃  2) Zn/H₂O",
-              "x": 640,
-              "y": 195,
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "H",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 82,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 48,
+              "charge": "+",
+              "highlight": "#38bdf8",
+              "label": "Ozono (O₃)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 82,
+              "charge": "−",
               "highlight": "#38bdf8"
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 480,
-              "y": 202,
-              "text": "+"
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
       },
       {
-        "title": "Paso 2 — Productos Finales: Propanona (Cetona) + Etanal (Aldehído)",
-        "semiStep": "(CH₃)₂C=O  +  CH₃–CHO",
-        "semiGlobal": "(CH₃)₂C=CH–CH₃ ──(1. O₃  2. Zn/H₂O)──► (CH₃)₂C=O + CH₃–CHO",
-        "desc": "Se obtiene propanona (cetona) y etanal (aldehído).",
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Molozónido Primario",
+        "semiStep": "CH₂=CH₂ + O₃ ──► [Molozónido primario inestable]",
+        "semiGlobal": "CH₂=CH₂ + 1) O₃  2) Zn / H₂O ──► 2 H–CHO + ZnO",
+        "desc": "El ozono realiza una cicloadición [3+2] concertada sobre el doble enlace C2=C1 formando el molozónido primario.",
         "legend": {
-          "breaking": "Doble enlace escindido.",
-          "forming": "En VERDE sólido: propanona y etanal.",
-          "movement": "Productos carbonílicos consolidados."
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O en anillo de 5 miembros.",
+          "movement": "Cicloadición dipolar 1,3 que forma el molozónido."
         },
         "scene": {
           "atoms": [
             {
-              "id": "Ket",
-              "el": "(CH₃)₂C=O",
-              "x": 300,
-              "y": 195,
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "H",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 65,
+              "highlight": "#38bdf8",
+              "label": "Cicloadición [3+2] (Molozónido)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 135,
+              "cx": 545,
+              "cy": 170,
+              "x2": 538,
+              "y2": 195,
+              "label": "Ataque O⁻ → C1"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Transposición a Ozónido Secundario (1,2,4-Trioxolano)",
+        "semiStep": "[Ozónido secundario (1,2,4-trioxolano) estable a -78 °C]",
+        "semiGlobal": "CH₂=CH₂ + 1) O₃  2) Zn / H₂O ──► 2 H–CHO + ZnO",
+        "desc": "El molozónido se reorganiza rápidamente en el ozónido secundario (1,2,4-trioxolano) más estable.",
+        "legend": {
+          "breaking": "Escisión del enlace C–C del molozónido.",
+          "forming": "En VERDE sólido: puente éter C–O–C y puente peróxido C–O–O–C en el ozónido.",
+          "movement": "Reorganización hacia el ozónido secundario antes de la hidrólisis reductiva."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "H",
+              "x": 270,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 270,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 650,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 650,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 405,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 515,
+              "y": 100,
+              "highlight": "#38bdf8",
+              "label": "Ozónido (1,2,4-trioxolano)"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_M",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Reductiva (Zn / H₂O): Ruptura Peróxido en Rojo, Formación C=O en Verde",
+        "semiStep": "H–CHO + H–CHO + ZnO (Ruptura reductiva con Zn / H₂O)",
+        "semiGlobal": "CH₂=CH₂ + 1) O₃  2) Zn / H₂O ──► 2 H–CHO + ZnO",
+        "desc": "En la hidrólisis reductiva con Zn / H₂O, el zinc captura un oxígeno formando ZnO mientras se rompen los enlaces O–O y C–O.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del puente peróxido O–O y de los enlaces C–O.",
+          "forming": "En VERDE punteado: formación de los dos dobles enlaces carbonilo C=O y ZnO.",
+          "movement": "El zinc metálico captura un oxígeno formando ZnO y evita la sobreoxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "H",
+              "x": 235,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 235,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 685,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 685,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 275,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Zn_reag",
+              "el": "Zn⁰",
+              "x": 460,
+              "y": 355,
+              "highlight": "#10b981",
+              "label": "Agente reductor (Zn / H₂O)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_M",
+              "to": "Zn_reag",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 95,
+              "cx": 405,
+              "cy": 125,
+              "x2": 378,
+              "y2": 148,
+              "label": "Forma C2=O"
+            },
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 95,
+              "cx": 515,
+              "cy": 125,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 330,
+              "cx": 442,
+              "cy": 310,
+              "x2": 460,
+              "y2": 295,
+              "label": "Captura O → ZnO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Metanal + Metanal (H–CHO + H–CHO)",
+        "semiStep": "H–CHO + H–CHO (Metanal + Metanal)",
+        "semiGlobal": "CH₂=CH₂ + 1) O₃  2) Zn / H₂O ──► 2 H–CHO + ZnO",
+        "desc": "Quedan consolidadas dos moléculas de metanal o formaldehído (H–CHO + H–CHO) con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa reductiva del doble enlace C=C completada.",
+          "forming": "En VERDE sólido: compuestos carbonílicos con geometría trigonal plana (120°).",
+          "movement": "Cada carbono sp² del alqueno queda transformado en aldehído (si tenía H) o cetona (si era disustituido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanal"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "H",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanal"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 665,
+              "y": 275
+            },
+            {
+              "id": "plus_end",
+              "el": "+",
+              "x": 755,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "ZnO_out",
+              "el": "ZnO",
+              "x": 830,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ozono_2buteno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Buteno + Ozono (O₃)",
+        "semiStep": "CH₃–CH=CH–CH₃ + O₃",
+        "semiGlobal": "CH₃–CH=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CHO + ZnO",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-buteno simétrico (CH₃–CH=CH–CH₃) y el ozono (O₃).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y ozono dipolar intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación concertada [3+2] del ozono sobre el doble enlace C=C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2-Buteno"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 82,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 48,
+              "charge": "+",
+              "highlight": "#38bdf8",
+              "label": "Ozono (O₃)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 82,
+              "charge": "−",
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Molozónido Primario",
+        "semiStep": "CH₃–CH=CH–CH₃ + O₃ ──► [Molozónido primario inestable]",
+        "semiGlobal": "CH₃–CH=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CHO + ZnO",
+        "desc": "El ozono se adiciona al doble enlace central C2=C1 mediante cicloadición [3+2] formando el molozónido.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O en anillo de 5 miembros.",
+          "movement": "Cicloadición dipolar 1,3 que forma el molozónido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 65,
+              "highlight": "#38bdf8",
+              "label": "Cicloadición [3+2] (Molozónido)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 135,
+              "cx": 545,
+              "cy": 170,
+              "x2": 538,
+              "y2": 195,
+              "label": "Ataque O⁻ → C1"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Transposición a Ozónido Secundario (1,2,4-Trioxolano)",
+        "semiStep": "[Ozónido secundario (1,2,4-trioxolano) estable a -78 °C]",
+        "semiGlobal": "CH₃–CH=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CHO + ZnO",
+        "desc": "Transposición al ozónido secundario (1,2,4-trioxolano) conservando un grupo metilo y un hidrógeno en cada carbono.",
+        "legend": {
+          "breaking": "Escisión del enlace C–C del molozónido.",
+          "forming": "En VERDE sólido: puente éter C–O–C y puente peróxido C–O–O–C en el ozónido.",
+          "movement": "Reorganización hacia el ozónido secundario antes de la hidrólisis reductiva."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 270,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 270,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 650,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 650,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 405,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 515,
+              "y": 100,
+              "highlight": "#38bdf8",
+              "label": "Ozónido (1,2,4-trioxolano)"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_M",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Reductiva (Zn / H₂O): Ruptura Peróxido en Rojo, Formación C=O en Verde",
+        "semiStep": "CH₃–CHO + CH₃–CHO + ZnO (Ruptura reductiva con Zn / H₂O)",
+        "semiGlobal": "CH₃–CH=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CHO + ZnO",
+        "desc": "El tratamiento reductivo con Zn / H₂O escinde el ozónido generando dos grupos aldehído y óxido de zinc (ZnO).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del puente peróxido O–O y de los enlaces C–O.",
+          "forming": "En VERDE punteado: formación de los dos dobles enlaces carbonilo C=O y ZnO.",
+          "movement": "El zinc metálico captura un oxígeno formando ZnO y evita la sobreoxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 235,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 235,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 685,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 685,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 275,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Zn_reag",
+              "el": "Zn⁰",
+              "x": 460,
+              "y": 355,
+              "highlight": "#10b981",
+              "label": "Agente reductor (Zn / H₂O)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_M",
+              "to": "Zn_reag",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 95,
+              "cx": 405,
+              "cy": 125,
+              "x2": 378,
+              "y2": 148,
+              "label": "Forma C2=O"
+            },
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 95,
+              "cx": 515,
+              "cy": 125,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 330,
+              "cx": 442,
+              "cy": 310,
+              "x2": 460,
+              "y2": 295,
+              "label": "Captura O → ZnO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanal + Etanal (CH₃–CHO + CH₃–CHO)",
+        "semiStep": "CH₃–CHO + CH₃–CHO (Etanal + Etanal)",
+        "semiGlobal": "CH₃–CH=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CHO + ZnO",
+        "desc": "Quedan consolidadas dos moléculas idénticas de etanal o acetaldehído (CH₃–CHO + CH₃–CHO) en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa reductiva del doble enlace C=C completada.",
+          "forming": "En VERDE sólido: compuestos carbonílicos con geometría trigonal plana (120°).",
+          "movement": "Cada carbono sp² del alqueno queda transformado en aldehído (si tenía H) o cetona (si era disustituido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanal"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 665,
+              "y": 275
+            },
+            {
+              "id": "plus_end",
+              "el": "+",
+              "x": 755,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "ZnO_out",
+              "el": "ZnO",
+              "x": 830,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ozono_2metil2buteno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2-Metil-2-buteno + Ozono (O₃)",
+        "semiStep": "(CH₃)₂C=CH–CH₃ + O₃",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► CH₃–CO–CH₃ + CH₃–CHO + ZnO",
+        "desc": "Se observan las moléculas iniciales intactas: el 2-metil-2-buteno trisustituido (C2 con dos metilos; C1 con un metilo y un H) y el ozono.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y ozono dipolar intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación concertada [3+2] del ozono sobre el doble enlace C=C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2-Metil-2-buteno"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 82,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 48,
+              "charge": "+",
+              "highlight": "#38bdf8",
+              "label": "Ozono (O₃)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 82,
+              "charge": "−",
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Molozónido Primario",
+        "semiStep": "(CH₃)₂C=CH–CH₃ + O₃ ──► [Molozónido primario inestable]",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► CH₃–CO–CH₃ + CH₃–CHO + ZnO",
+        "desc": "Cicloadición [3+2] del ozono sobre el doble enlace trisustituido para formar el molozónido primario.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O en anillo de 5 miembros.",
+          "movement": "Cicloadición dipolar 1,3 que forma el molozónido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 65,
+              "highlight": "#38bdf8",
+              "label": "Cicloadición [3+2] (Molozónido)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 135,
+              "cx": 545,
+              "cy": 170,
+              "x2": 538,
+              "y2": 195,
+              "label": "Ataque O⁻ → C1"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Transposición a Ozónido Secundario (1,2,4-Trioxolano)",
+        "semiStep": "[Ozónido secundario (1,2,4-trioxolano) estable a -78 °C]",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► CH₃–CO–CH₃ + CH₃–CHO + ZnO",
+        "desc": "Reorganización hacia el ozónido secundario (1,2,4-trioxolano).",
+        "legend": {
+          "breaking": "Escisión del enlace C–C del molozónido.",
+          "forming": "En VERDE sólido: puente éter C–O–C y puente peróxido C–O–O–C en el ozónido.",
+          "movement": "Reorganización hacia el ozónido secundario antes de la hidrólisis reductiva."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 270,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 270,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 650,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 650,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 405,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 515,
+              "y": 100,
+              "highlight": "#38bdf8",
+              "label": "Ozónido (1,2,4-trioxolano)"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_M",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Reductiva (Zn / H₂O): Ruptura Peróxido en Rojo, Formación C=O en Verde",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CHO + ZnO (Ruptura reductiva con Zn / H₂O)",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► CH₃–CO–CH₃ + CH₃–CHO + ZnO",
+        "desc": "La hidrólisis reductiva con Zn / H₂O rompe el ozónido: el carbono disustituido C2 forma una cetona y el monosustituido C1 un aldehído.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del puente peróxido O–O y de los enlaces C–O.",
+          "forming": "En VERDE punteado: formación de los dos dobles enlaces carbonilo C=O y ZnO.",
+          "movement": "El zinc metálico captura un oxígeno formando ZnO y evita la sobreoxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 235,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 235,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 685,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 685,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 275,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Zn_reag",
+              "el": "Zn⁰",
+              "x": 460,
+              "y": 355,
+              "highlight": "#10b981",
+              "label": "Agente reductor (Zn / H₂O)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_M",
+              "to": "Zn_reag",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 95,
+              "cx": 405,
+              "cy": 125,
+              "x2": 378,
+              "y2": 148,
+              "label": "Forma C2=O"
+            },
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 95,
+              "cx": 515,
+              "cy": 125,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 330,
+              "cx": 442,
+              "cy": 310,
+              "x2": 460,
+              "y2": 295,
+              "label": "Captura O → ZnO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Etanal (CH₃–CO–CH₃ + CH₃–CHO)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CHO (Propanona + Etanal)",
+        "semiGlobal": "(CH₃)₂C=CH–CH₃ + 1) O₃  2) Zn / H₂O ──► CH₃–CO–CH₃ + CH₃–CHO + ZnO",
+        "desc": "Quedan consolidadas una molécula de propanona o acetona (CH₃–CO–CH₃) y una de etanal (CH₃–CHO), ambas con geometría trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa reductiva del doble enlace C=C completada.",
+          "forming": "En VERDE sólido: compuestos carbonílicos con geometría trigonal plana (120°).",
+          "movement": "Cada carbono sp² del alqueno queda transformado en aldehído (si tenía H) o cetona (si era disustituido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
               "highlight": "#10b981",
               "label": "Propanona"
             },
             {
-              "id": "Ald",
-              "el": "CH₃–CHO",
-              "x": 630,
-              "y": 195,
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
               "highlight": "#10b981",
               "label": "Etanal"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 665,
+              "y": 275
+            },
+            {
+              "id": "plus_end",
+              "el": "+",
+              "x": 755,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "ZnO_out",
+              "el": "ZnO",
+              "x": 830,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
             }
           ],
-          "bonds": [],
-          "texts": [
+          "bonds": [
             {
-              "x": 465,
-              "y": 202,
-              "text": "+"
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ozono_23dimetil2buteno": [
+      {
+        "title": "Estado Inicial Desarrollado: 2,3-Dimetil-2-buteno + Ozono (O₃)",
+        "semiStep": "(CH₃)₂C=C(CH₃)₂ + O₃",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CO–CH₃ + ZnO",
+        "desc": "Se observan las moléculas iniciales intactas: el 2,3-dimetil-2-buteno tetrasustituido (ambos carbonos sp² sin hidrógenos) y el ozono.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y ozono dipolar intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación concertada [3+2] del ozono sobre el doble enlace C=C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "2,3-Dimetil-2-buteno"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 82,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 48,
+              "charge": "+",
+              "highlight": "#38bdf8",
+              "label": "Ozono (O₃)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 82,
+              "charge": "−",
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Molozónido Primario",
+        "semiStep": "(CH₃)₂C=C(CH₃)₂ + O₃ ──► [Molozónido primario inestable]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CO–CH₃ + ZnO",
+        "desc": "Cicloadición [3+2] del ozono sobre el doble enlace tetrasustituido.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O en anillo de 5 miembros.",
+          "movement": "Cicloadición dipolar 1,3 que forma el molozónido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 65,
+              "highlight": "#38bdf8",
+              "label": "Cicloadición [3+2] (Molozónido)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 135,
+              "cx": 545,
+              "cy": 170,
+              "x2": 538,
+              "y2": 195,
+              "label": "Ataque O⁻ → C1"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Transposición a Ozónido Secundario (1,2,4-Trioxolano)",
+        "semiStep": "[Ozónido secundario (1,2,4-trioxolano) estable a -78 °C]",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CO–CH₃ + ZnO",
+        "desc": "Transposición al ozónido secundario tetrametilado.",
+        "legend": {
+          "breaking": "Escisión del enlace C–C del molozónido.",
+          "forming": "En VERDE sólido: puente éter C–O–C y puente peróxido C–O–O–C en el ozónido.",
+          "movement": "Reorganización hacia el ozónido secundario antes de la hidrólisis reductiva."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 270,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 270,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 650,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 650,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 405,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 515,
+              "y": 100,
+              "highlight": "#38bdf8",
+              "label": "Ozónido (1,2,4-trioxolano)"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_M",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Reductiva (Zn / H₂O): Ruptura Peróxido en Rojo, Formación C=O en Verde",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₃ + ZnO (Ruptura reductiva con Zn / H₂O)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CO–CH₃ + ZnO",
+        "desc": "La reducción con Zn / H₂O escinde el puente peróxido generando exclusivamente cetonas (al no haber hidrógenos vinílicos).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del puente peróxido O–O y de los enlaces C–O.",
+          "forming": "En VERDE punteado: formación de los dos dobles enlaces carbonilo C=O y ZnO.",
+          "movement": "El zinc metálico captura un oxígeno formando ZnO y evita la sobreoxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 235,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 235,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 685,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 685,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 275,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Zn_reag",
+              "el": "Zn⁰",
+              "x": 460,
+              "y": 355,
+              "highlight": "#10b981",
+              "label": "Agente reductor (Zn / H₂O)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_M",
+              "to": "Zn_reag",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 95,
+              "cx": 405,
+              "cy": 125,
+              "x2": 378,
+              "y2": 148,
+              "label": "Forma C2=O"
+            },
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 95,
+              "cx": 515,
+              "cy": 125,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 330,
+              "cx": 442,
+              "cy": 310,
+              "x2": 460,
+              "y2": 295,
+              "label": "Captura O → ZnO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Propanona + Propanona (CH₃–CO–CH₃ + CH₃–CO–CH₃)",
+        "semiStep": "CH₃–CO–CH₃ + CH₃–CO–CH₃ (Propanona + Propanona)",
+        "semiGlobal": "(CH₃)₂C=C(CH₃)₂ + 1) O₃  2) Zn / H₂O ──► 2 CH₃–CO–CH₃ + ZnO",
+        "desc": "Quedan consolidadas dos moléculas de propanona o acetona (CH₃–CO–CH₃ + CH₃–CO–CH₃) en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa reductiva del doble enlace C=C completada.",
+          "forming": "En VERDE sólido: compuestos carbonílicos con geometría trigonal plana (120°).",
+          "movement": "Cada carbono sp² del alqueno queda transformado en aldehído (si tenía H) o cetona (si era disustituido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "CH₃",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "CH₃",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Propanona"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "CH₃",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "CH₃",
+              "x": 665,
+              "y": 275
+            },
+            {
+              "id": "plus_end",
+              "el": "+",
+              "x": 755,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "ZnO_out",
+              "el": "ZnO",
+              "x": 830,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ],
+    "ozono_estireno": [
+      {
+        "title": "Estado Inicial Desarrollado: Estireno (Vinilbenceno) + Ozono (O₃)",
+        "semiStep": "C₆H₅–CH=CH₂ + O₃",
+        "semiGlobal": "C₆H₅–CH=CH₂ + 1) O₃  2) Zn / H₂O ──► C₆H₅–CHO + H–CHO + ZnO",
+        "desc": "Se observan las moléculas iniciales intactas: el estireno (vinilbenceno, con doble enlace exocíclico terminal) y el ozono.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; alqueno y ozono dipolar intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Aproximación concertada [3+2] del ozono sobre el doble enlace C=C."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "label": "Estireno (Vinilbenceno)"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "C₆H₅",
+              "x": 275,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 82,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 48,
+              "charge": "+",
+              "highlight": "#38bdf8",
+              "label": "Ozono (O₃)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 82,
+              "charge": "−",
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Ruptura en Rojo: Cicloadición [3+2] y Formación del Molozónido Primario",
+        "semiStep": "C₆H₅–CH=CH₂ + O₃ ──► [Molozónido primario inestable]",
+        "semiGlobal": "C₆H₅–CH=CH₂ + 1) O₃  2) Zn / H₂O ──► C₆H₅–CHO + H–CHO + ZnO",
+        "desc": "El ozono ataca selectivamente el doble enlace alquénico exocíclico mediante cicloadición [3+2] sin alterar el anillo aromático.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace π C=C del alqueno.",
+          "forming": "En VERDE punteado: formación simultánea de dos enlaces C–O en anillo de 5 miembros.",
+          "movement": "Cicloadición dipolar 1,3 que forma el molozónido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 385,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 535,
+              "y": 225,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "C₆H₅",
+              "x": 275,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 275,
+              "y": 305
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 645,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 645,
+              "y": 305
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 395,
+              "y": 115,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 65,
+              "highlight": "#38bdf8",
+              "label": "Cicloadición [3+2] (Molozónido)"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 525,
+              "y": 115,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "C1",
+              "order": 2,
+              "state": "breaking-pi"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "O_L",
+              "to": "O_M",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_M",
+              "to": "O_R",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 530,
+              "y1": 135,
+              "cx": 545,
+              "cy": 170,
+              "x2": 538,
+              "y2": 195,
+              "label": "Ataque O⁻ → C1"
+            },
+            {
+              "type": "full",
+              "x1": 430,
+              "y1": 210,
+              "cx": 400,
+              "cy": 175,
+              "x2": 392,
+              "y2": 145,
+              "label": "Enlace π → O"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Transposición a Ozónido Secundario (1,2,4-Trioxolano)",
+        "semiStep": "[Ozónido secundario (1,2,4-trioxolano) estable a -78 °C]",
+        "semiGlobal": "C₆H₅–CH=CH₂ + 1) O₃  2) Zn / H₂O ──► C₆H₅–CHO + H–CHO + ZnO",
+        "desc": "Se forma el ozónido secundario conservando intacta la aromaticidad del grupo fenilo.",
+        "legend": {
+          "breaking": "Escisión del enlace C–C del molozónido.",
+          "forming": "En VERDE sólido: puente éter C–O–C y puente peróxido C–O–O–C en el ozónido.",
+          "movement": "Reorganización hacia el ozónido secundario antes de la hidrólisis reductiva."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 380,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 540,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "S2_T",
+              "el": "C₆H₅",
+              "x": 270,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 270,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 650,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 650,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 405,
+              "y": 100,
+              "highlight": "#38bdf8"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 515,
+              "y": 100,
+              "highlight": "#38bdf8",
+              "label": "Ozónido (1,2,4-trioxolano)"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 265,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_R",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "O_M",
+              "to": "C1",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Hidrólisis Reductiva (Zn / H₂O): Ruptura Peróxido en Rojo, Formación C=O en Verde",
+        "semiStep": "C₆H₅–CHO + H–CHO + ZnO (Ruptura reductiva con Zn / H₂O)",
+        "semiGlobal": "C₆H₅–CH=CH₂ + 1) O₃  2) Zn / H₂O ──► C₆H₅–CHO + H–CHO + ZnO",
+        "desc": "La hidrólisis reductiva con Zn / H₂O escinde el ozónido terminal en benzaldehído y formaldehído.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del puente peróxido O–O y de los enlaces C–O.",
+          "forming": "En VERDE punteado: formación de los dos dobles enlaces carbonilo C=O y ZnO.",
+          "movement": "El zinc metálico captura un oxígeno formando ZnO y evita la sobreoxidación."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 345,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 575,
+              "y": 210
+            },
+            {
+              "id": "S2_T",
+              "el": "C₆H₅",
+              "x": 235,
+              "y": 130
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 235,
+              "y": 295
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 685,
+              "y": 130
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 685,
+              "y": 295
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 535,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O_M",
+              "el": "O",
+              "x": 460,
+              "y": 275,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Zn_reag",
+              "el": "Zn⁰",
+              "x": 460,
+              "y": 355,
+              "highlight": "#10b981",
+              "label": "Agente reductor (Zn / H₂O)"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "O_L",
+              "to": "O_R",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "forming-pi"
+            },
+            {
+              "from": "C2",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "C1",
+              "to": "O_M",
+              "order": 1,
+              "state": "breaking"
+            },
+            {
+              "from": "O_M",
+              "to": "Zn_reag",
+              "order": 1,
+              "state": "forming"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 435,
+              "y1": 95,
+              "cx": 405,
+              "cy": 125,
+              "x2": 378,
+              "y2": 148,
+              "label": "Forma C2=O"
+            },
+            {
+              "type": "full",
+              "x1": 485,
+              "y1": 95,
+              "cx": 515,
+              "cy": 125,
+              "x2": 542,
+              "y2": 148,
+              "label": "Forma C1=O"
+            },
+            {
+              "type": "full",
+              "x1": 460,
+              "y1": 330,
+              "cx": 442,
+              "cy": 310,
+              "x2": 460,
+              "y2": 295,
+              "label": "Captura O → ZnO"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Benzaldehído + Metanal (C₆H₅–CHO + H–CHO)",
+        "semiStep": "C₆H₅–CHO + H–CHO (Benzaldehído + Metanal)",
+        "semiGlobal": "C₆H₅–CH=CH₂ + 1) O₃  2) Zn / H₂O ──► C₆H₅–CHO + H–CHO + ZnO",
+        "desc": "Quedan consolidados el benzaldehído (C₆H₅–CHO) y el metanal (H–CHO) en disposición trigonal plana (120°).",
+        "legend": {
+          "breaking": "Ruptura oxidativa reductiva del doble enlace C=C completada.",
+          "forming": "En VERDE sólido: compuestos carbonílicos con geometría trigonal plana (120°).",
+          "movement": "Cada carbono sp² del alqueno queda transformado en aldehído (si tenía H) o cetona (si era disustituido)."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C2",
+              "el": "C",
+              "x": 270,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzaldehído"
+            },
+            {
+              "id": "O_L",
+              "el": "O",
+              "x": 342,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S2_T",
+              "el": "C₆H₅",
+              "x": 165,
+              "y": 145
+            },
+            {
+              "id": "S2_B",
+              "el": "H",
+              "x": 165,
+              "y": 275
+            },
+            {
+              "id": "plus_mid",
+              "el": "+",
+              "x": 430,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "C1",
+              "el": "C",
+              "x": 560,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Metanal"
+            },
+            {
+              "id": "O_R",
+              "el": "O",
+              "x": 488,
+              "y": 82,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "S1_T",
+              "el": "H",
+              "x": 665,
+              "y": 145
+            },
+            {
+              "id": "S1_B",
+              "el": "H",
+              "x": 665,
+              "y": 275
+            },
+            {
+              "id": "plus_end",
+              "el": "+",
+              "x": 755,
+              "y": 210,
+              "noShape": true
+            },
+            {
+              "id": "ZnO_out",
+              "el": "ZnO",
+              "x": 830,
+              "y": 210,
+              "highlight": "#38bdf8",
+              "label": "Subproducto"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C2",
+              "to": "O_L",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C2",
+              "to": "S2_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C2",
+              "to": "S2_B",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O_R",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "S1_T",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "S1_B",
+              "order": 1,
+              "state": "normal"
             }
           ]
         }
