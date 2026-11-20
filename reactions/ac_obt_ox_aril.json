@@ -1,0 +1,666 @@
+{
+  "category": "obtencion",
+  "title": "2) Oxidación de la Cadena Lateral de Alquilbencenos (Tolueno o Propilbenceno + KMnO₄/H⁺ Δ → Ácido Benzoico)",
+  "natureBadge": "Oxidación Bencílica Enérgica • Ar–R (con H bencílico) + KMnO₄ / Na₂Cr₂O₇ (Δ) ──► Ácido Benzoico (Ar–COOH)",
+  "deltaH": "ΔH° < 0 (Fuertemente exotérmica e irreversible; ruptura oxidativa de todos los carbonos laterales excepto el carbono bencílico)",
+  "description": "Obtención de ácidos carboxílicos aromáticos (ácido benzoico y derivados sustituidos) mediante oxidación enérgica de alquilbencenos con permanganato de potasio (KMnO₄ / OH⁻ o H⁺, Δ) o dicromato de sodio/potasio en medio ácido caliente (Na₂Cr₂O₇ / H₂SO₄, Δ):\n1) Regla del carbono bencílico: sin importar la longitud ni la ramificación de la cadena alquílica unida al anillo aromático (metilo, etilo, propilo, isopropilo), toda la cadena lateral se oxida y escinde dejando únicamente un grupo carboxilo (–COOH) unido directamente al anillo bencénico (ácido benzoico), liberando los carbonos restantes como CO₂ y H₂O.\n2) Requisito estructural indispensable: el carbono bencílico (unido directamente al anillo) DEBE poseer al menos un hidrógeno (H bencílico). Los alquilbencenos terciarios sin H bencílico, como el terc-butilbenceno (C₆H₅–C(CH₃)₃), son inertes y NO reaccionan.\n3) Múltiples cadenas laterales: los dimetilbencenos (o-, m- y p-xileno) se oxidan doblemente a ácidos bencenodicarboxílicos (ácido ftálico, isoftálico y tereftálico).",
+  "meta": {
+    "grupoFuncional": "Ácidos Carboxílicos Aromáticos (Ar–COOH) y Ácidos Bencenodicarboxílicos (Ác. Ftálico / Tereftálico)",
+    "reaccionMecanismo": "Oxidación radicalaria / transferencia electrónica iniciada en la posición bencílica seguida de escisión C–C",
+    "naturaleza": "Por etapas irreversible (abstracción de H bencílico → intermediario alcohol/cetona bencílica → escisión oxidativa de cadena lateral → benzoato → acidificación H₃O⁺).",
+    "rupturaIntermediarios": "Ruptura de enlaces C–H bencílicos y enlaces Cα–Cβ de la cadena lateral; intermediario radical/catión bencílico; formación de grupo carboxilo aromático.",
+    "detalleMecanismo": "C₆H₅–CH₂CH₂CH₃ ──(1. KMnO₄, Δ  2. H₃O⁺)──► C₆H₅–COOH + 2 CO₂↑ + 3 H₂O",
+    "reactivosCondiciones": "Alquilbenceno (con H bencílico) + KMnO₄ acuoso (medio neutro, básico OH⁻ o ácido H₂SO₄) a reflujo (Δ), seguido de acidificación con HCl / H₃O⁺ para precipitar el ácido benzoico.",
+    "rolReactivos": "• Sustrato aromático: Alquilbenceno primario o secundario (tolueno, etilbenceno, propilbenceno, cumeno, xilenos).\n• Agente oxidante fuerte: Permanganato de potasio (KMnO₄, violeta → MnO₂↓ marrón) o Na₂Cr₂O₇ / H₂SO₄.\n• Ácido mineral (H₃O⁺): protona el ion benzoato soluble (C₆H₅–COO⁻) precipitando el ácido benzoico cristalino.",
+    "reglasObs": "• El anillo bencénico es extraordinariamente estable frente a KMnO₄ debido a su energía de resonancia (~36 kcal/mol), por lo que se oxida la cadena lateral y NO el anillo.\n• Contraste de examen: Tolueno + KMnO₄ / Δ → Ácido benzoico; mientras que terc-Butilbenceno + KMnO₄ / Δ → Sin reacción (carece de H bencílico).\n• p-Xileno + KMnO₄ / Δ → Ácido tereftálico (monómero del poliéster PET)."
+  },
+  "substrates": [
+    {
+      "id": "ac_obt2_tolueno_benzoico",
+      "name": "Tolueno (Metilbenceno) + 1. KMnO₄ / OH⁻ (Δ)  2. H₃O⁺ ──► Ácido Benzoico + MnO₂↓",
+      "catalyst": "1) KMnO₄ / OH⁻ (Δ)  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt2_propilbenceno_escision",
+      "name": "Propilbenceno (3C laterales) + KMnO₄ / H⁺ (Δ) ──► Ácido Benzoico + 2 CO₂↑ + H₂O [Ruptura Cα–Cβ]",
+      "catalyst": "KMnO₄ / H₂SO₄ (Reflujo Δ)"
+    },
+    {
+      "id": "ac_obt2_pxileno_tereftalico",
+      "name": "p-Xileno (1,4-Dimetilbenceno) + 1. KMnO₄ (Δ)  2. H₃O⁺ ──► Ácido Tereftálico (Ác. 1,4-Bencenodicarboxílico)",
+      "catalyst": "1) KMnO₄ exceso (Δ)  2) H₃O⁺"
+    },
+    {
+      "id": "ac_obt2_terbutilbenceno_control",
+      "name": "terc-Butilbenceno (Sin H bencílico) + KMnO₄ (Δ) ──► Sin Reacción [Control Estructural]",
+      "catalyst": "KMnO₄ / H⁺ (Δ — Sin H bencílico)"
+    }
+  ],
+  "catalysts": [
+    "1) KMnO₄ / OH⁻ (Δ)  2) H₃O⁺",
+    "KMnO₄ / H₂SO₄ (Reflujo Δ)",
+    "1) KMnO₄ exceso (Δ)  2) H₃O⁺",
+    "KMnO₄ / H⁺ (Δ — Sin H bencílico)"
+  ],
+  "stepsBySubstrate": {
+    "ac_obt2_tolueno_benzoico": [
+      {
+        "title": "Estado Inicial Desarrollado: Tolueno (Metilbenceno) + KMnO₄ en Caliente (Δ)",
+        "semiStep": "C₆H₅–CH₃ + MnO₄⁻ / OH⁻ (Δ)",
+        "semiGlobal": "C₆H₅–CH₃ + 2 KMnO₄ ──(Δ, luego H₃O⁺)──► C₆H₅–COOH + 2 MnO₂↓ + 2 KOH",
+        "desc": "Se observan el tolueno con sus tres hidrógenos bencílicos activados por el anillo aromático y el ion permanganato violeta.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; tolueno y KMnO₄ intactos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "El carbono bencílico (unido al anillo) es atacado selectivamente por el oxidante."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "C Bencílico"
+            },
+            {
+              "id": "H1",
+              "el": "H",
+              "x": 385,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H2",
+              "el": "H",
+              "x": 525,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "H3",
+              "el": "H",
+              "x": 385,
+              "y": 325,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / Δ",
+              "x": 675,
+              "y": 210,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "H1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "H2",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "H3",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Sustitución de los 3 H Bencílicos por Enlaces C–O",
+        "semiStep": "C₆H₅–CH₃ ──(KMnO₄, Δ)──► C₆H₅–COO⁻ + MnO₂↓ (Marrón)",
+        "semiGlobal": "C₆H₅–CH₃ + 2 KMnO₄ ──(Δ, luego H₃O⁺)──► C₆H₅–COOH + 2 MnO₂↓ + 2 KOH",
+        "desc": "Se rompen los tres enlaces C–H bencílicos y se introducen dos átomos de oxígeno sobre el carbono bencílico formando ion benzoato.",
+        "legend": {
+          "breaking": "En ROJO punteado: pérdida completa de los hidrógenos bencílicos.",
+          "forming": "En VERDE punteado: enlaces C=O y C–O⁻ del carboxilato.",
+          "movement": "El anillo aromático permanece intacto."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O2",
+              "el": "O⁻",
+              "x": 385,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H_out",
+              "el": "3 H (→ H₂O)",
+              "x": 545,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "MnO2",
+              "el": "MnO₂↓",
+              "x": 685,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Cb",
+              "to": "O2",
+              "order": 1,
+              "state": "forming"
+            },
+            {
+              "from": "Cb",
+              "to": "H_out",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Benzoico (C₆H₅–COOH) tras Acidificación H₃O⁺",
+        "semiStep": "C₆H₅–COOH↓ (Cristales blancos insolubles en agua fría)",
+        "semiGlobal": "C₆H₅–CH₃ + 2 KMnO₄ ──(Δ, luego H₃O⁺)──► C₆H₅–COOH + 2 MnO₂↓ + 2 KOH",
+        "desc": "Queda consolidado el ácido benzoico (ácido bencenocarboxílico).",
+        "legend": {
+          "breaking": "Oxidación bencílica completada.",
+          "forming": "En VERDE sólido: grupo carboxilo aromático.",
+          "movement": "Producto obtenido con alto rendimiento."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 235,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C",
+              "x": 395,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Benzoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 395,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 545,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Cb",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt2_propilbenceno_escision": [
+      {
+        "title": "Estado Inicial Desarrollado: Propilbenceno (Cadena de 3 Carbonos) + KMnO₄ / H⁺ (Δ)",
+        "semiStep": "C₆H₅–CH₂–CH₂–CH₃ + KMnO₄ / H₂SO₄ (Δ)",
+        "semiGlobal": "C₆H₅–CH₂CH₂CH₃ ──(KMnO₄ / H⁺, Δ)──► C₆H₅–COOH + 2 CO₂↑ + 3 H₂O",
+        "desc": "El propilbenceno posee un carbono bencílico con 2 hidrógenos (–CH₂–) unido a un grupo etilo (–CH₂CH₃).",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; cadena propílica intacta.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "La oxidación rompe el enlace Cα–Cβ degradando el resto de la cadena a CO₂."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "CH₂",
+              "x": 375,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "C Bencílico (Permanece)"
+            },
+            {
+              "id": "Et",
+              "el": "CH₂–CH₃",
+              "x": 545,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Se escinde a 2 CO₂"
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / H⁺ (Δ)",
+              "x": 375,
+              "y": 325,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "Et",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa Intermedia (Ruptura en Rojo): Escisión del Enlace Cα–Cβ",
+        "semiStep": "C₆H₅–CH₂–CH₂CH₃ ──([O], Δ)──► C₆H₅–COOH + 2 CO₂↑",
+        "semiGlobal": "C₆H₅–CH₂CH₂CH₃ ──(KMnO₄ / H⁺, Δ)──► C₆H₅–COOH + 2 CO₂↑ + 3 H₂O",
+        "desc": "Se rompe el enlace entre el carbono bencílico y el segundo carbono de la cadena lateral.",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura Cα–Cβ.",
+          "forming": "En VERDE punteado: oxidación de Cα a grupo carboxilo.",
+          "movement": "Los carbonos β y γ se desprenden como CO₂ gaseoso."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C",
+              "x": 375,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Et",
+              "el": "2 CO₂↑",
+              "x": 565,
+              "y": 210,
+              "highlight": "#ef4444"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "Cb",
+              "to": "Et",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Benzoico (C₆H₅–COOH) + 2 CO₂↑",
+        "semiStep": "C₆H₅–COOH + 2 CO₂↑ + 3 H₂O",
+        "semiGlobal": "C₆H₅–CH₂CH₂CH₃ ──(KMnO₄ / H⁺, Δ)──► C₆H₅–COOH + 2 CO₂↑ + 3 H₂O",
+        "desc": "Queda consolidado el ácido benzoico, exactamente el mismo producto que con tolueno o etilbenceno.",
+        "legend": {
+          "breaking": "Degradación lateral completada.",
+          "forming": "En VERDE sólido: ácido benzoico.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Ácido Benzoico"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "CO2",
+              "el": "+ 2 CO₂↑",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Cb",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "Cb",
+              "to": "OH",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt2_pxileno_tereftalico": [
+      {
+        "title": "Estado Inicial Desarrollado: p-Xileno (1,4-Dimetilbenceno) + Exceso KMnO₄",
+        "semiStep": "CH₃–C₆H₄–CH₃ + 4 KMnO₄ (Δ)",
+        "semiGlobal": "p-CH₃–C₆H₄–CH₃ ──(1. KMnO₄, Δ  2. H₃O⁺)──► HOOC–C₆H₄–COOH (Ácido Tereftálico)",
+        "desc": "Ambos grupos metilo en posiciones 1 y 4 poseen hidrógenos bencílicos y se oxidan simultáneamente.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ambos metilos bencílicos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Doble oxidación bencílica."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "M1",
+              "el": "CH₃",
+              "x": 195,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ar",
+              "el": "C₆H₄ (para)",
+              "x": 385,
+              "y": 210
+            },
+            {
+              "id": "M2",
+              "el": "CH₃",
+              "x": 575,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ exceso (Δ)",
+              "x": 385,
+              "y": 325,
+              "highlight": "#a855f7"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "M1",
+              "to": "Ar",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "Ar",
+              "to": "M2",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Producto Consolidado: Ácido Tereftálico (Ácido 1,4-Bencenodicarboxílico)",
+        "semiStep": "HOOC–C₆H₄–COOH (Monómero industrial del poliéster PET)",
+        "semiGlobal": "p-CH₃–C₆H₄–CH₃ ──(1. KMnO₄, Δ  2. H₃O⁺)──► HOOC–C₆H₄–COOH (Ácido Tereftálico)",
+        "desc": "Queda consolidado el ácido tereftálico (diácido aromático simétrico).",
+        "legend": {
+          "breaking": "Doble oxidación completada.",
+          "forming": "En VERDE sólido: dos grupos carboxilo en posiciones 1 y 4.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "C1",
+              "el": "HOOC",
+              "x": 195,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "Ar",
+              "el": "C₆H₄ (1,4)",
+              "x": 385,
+              "y": 210,
+              "label": "Ácido Tereftálico"
+            },
+            {
+              "id": "C4",
+              "el": "COOH",
+              "x": 575,
+              "y": 210,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "C1",
+              "to": "Ar",
+              "order": 1,
+              "state": "new"
+            },
+            {
+              "from": "Ar",
+              "to": "C4",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_obt2_terbutilbenceno_control": [
+      {
+        "title": "Estado Inicial: terc-Butilbenceno (Carbono Bencílico Cuaternario sin H) + KMnO₄",
+        "semiStep": "C₆H₅–C(CH₃)₃ + KMnO₄ / H⁺ (Δ)",
+        "semiGlobal": "C₆H₅–C(CH₃)₃ + KMnO₄ (Δ) ──► SIN REACCIÓN (Carece de H bencílico)",
+        "desc": "El carbono bencílico está unido al anillo aromático y a tres grupos metilo, por lo que no tiene ningún átomo de hidrógeno bencílico para iniciar la oxidación.",
+        "legend": {
+          "breaking": "Ningún enlace roto; ausencia de H bencílico impide la reacción.",
+          "forming": "Ningún enlace formado.",
+          "movement": "El terc-butilbenceno permanece inalterado frente a KMnO₄."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C(CH₃)₃",
+              "x": 415,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "0 Hidrógenos bencílicos"
+            },
+            {
+              "id": "Ox",
+              "el": "KMnO₄ / Δ (Sin efecto)",
+              "x": 625,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Resultado Consolidado: Sin Reacción (Control de Regla Bencílica)",
+        "semiStep": "C₆H₅–C(CH₃)₃ inalterado",
+        "semiGlobal": "C₆H₅–C(CH₃)₃ + KMnO₄ (Δ) ──► SIN REACCIÓN (Carece de H bencílico)",
+        "desc": "Se confirma la regla estructural: se requiere al menos un H en el carbono bencílico para oxidar alquilbencenos a ácido benzoico.",
+        "legend": {
+          "breaking": "Sin ruptura C–C ni oxidación.",
+          "forming": "Sin producto carboxílico.",
+          "movement": "Criterio clave de examen."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 245,
+              "y": 210
+            },
+            {
+              "id": "Cb",
+              "el": "C(CH₃)₃ [Inerte]",
+              "x": 455,
+              "y": 210,
+              "highlight": "#fbbf24"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "Cb",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
