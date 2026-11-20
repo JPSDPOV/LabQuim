@@ -1,0 +1,599 @@
+{
+  "category": "reacciones",
+  "title": "B.1- Esterificación de Fischer (+ Alcohol ⇄ Éster + H₂O) y Tioesterificación (+ Tiol R–SH → Tioéster)",
+  "natureBadge": "Sustitución Nucleofílica Acílica • R–COOH + R'–OH / R'–SH ⇄(H₂SO₄, Δ) R–CO–OR' / R–CO–SR' + H₂O",
+  "deltaH": "ΔH° ≈ −4 a +5 kJ/mol (Termoneutra y reversible; el equilibrio se desplaza con exceso de alcohol o retirando H₂O)",
+  "description": "Sustitución nucleofílica acílica (mecanismo de adición–eliminación catalizado por ácido fuerte H₂SO₄ o HCl) en la que el grupo –OH del ácido carboxílico es reemplazado por un grupo alcoxi (–OR') o alquiltio (–SR'):\n1) Esterificación de Fischer (Ácido + Alcohol ⇄ Éster + H₂O): el catalizador ácido protona el oxígeno carbonílico C=O incrementando la electrofilia del carbono C1; el oxígeno del alcohol ataca formando un intermediario tetraédrico que, tras transferencia protónica, expulsa una molécula de agua (compuesta por el –OH del ácido y el –H del alcohol, demostrado isotópicamente con ¹⁸O).\n2) Tioesterificación (Ácido + Tiol R'–SH ⇄ Tioéster + H₂O — Pregunta directa de examen): el grupo sulfhidrilo –SH de un tiol (ej. etanotiol o Coenzima A) ataca al carbonilo generando un TIOÉSTER (R–CO–SR') más agua (ej. CH₃COOH + CH₃CH₂SH → CH₃COSCH₂CH₃ + H₂O; base bioquímica del Acetil-CoA).\n3) Estrategias para maximizar el rendimiento: al ser una reacción en equilibrio (Keq ≈ 3–4), se emplea un gran exceso de uno de los reactivos (generalmente el alcohol) o se elimina el agua formada (destilación azeotrópica o tamices moleculares).",
+  "meta": {
+    "grupoFuncional": "Ésteres Carboxílicos (R–COOR') y Tioésteres (R–COSR' • Acetil-CoA)",
+    "reaccionMecanismo": "Sustitución nucleofílica acílica catalizada por ácido (protonación C=O → adición de R'OH/R'SH → intermediario tetraédrico → eliminación de H₂O)",
+    "naturaleza": "Por etapas reversible en equilibrio dinámico.",
+    "rupturaIntermediarios": "Ruptura de enlace acilo C1–OH (del ácido) y enlace O–H (del alcohol) o S–H (del tiol); intermediario tetraédrico gem-hidroxi-alcoxi; formación de enlace éster C1–OR' (o tioéster C1–SR') y H₂O.",
+    "detalleMecanismo": "R–COOH + H–OR' ⇄(H₂SO₄, Δ) R–COOR' + H₂O  |  R–COOH + H–SR' ⇄(H⁺) R–COSR' + H₂O",
+    "reactivosCondiciones": "Ácido carboxílico + Alcohol primario o secundario (o Tiol R'–SH) + catalizador ácido fuerte anhidro (H₂SO₄ conc. o HCl gaseoso) a reflujo (Δ).",
+    "rolReactivos": "• Electrófilo acílico: Ácido carboxílico protonado en el oxígeno carbonílico [R–C(=OH⁺)–OH].\n• Nucleófilo: Alcohol (R'–OH, velocidad: MeOH > 1° > 2° >> 3°) o Tiol (R'–SH).\n• Catalizador ácido: H₂SO₄ concentrado (activa el carbonilo y convierte el –OH carboxílico en –OH₂⁺ buen grupo saliente).",
+    "reglasObs": "• Origen del agua formada (Pregunta clásica de mecanismo): el oxígeno del agua eliminada proviene del grupo –OH del ÁCIDO CARBOXÍLICO, mientras que el oxígeno del alcohol (–OR') queda incorporado en el éster.\n• Reactividad estérica: los alcoholes terciarios (como terc-butanol) sufren deshidratación E1 a alqueno en medio ácido en lugar de esterificarse.\n• Tioesterificación en exámenes (Recopi Preg. 4): CH₃COOH + CH₃CH₂SH → CH₃COSCH₂CH₃ (etanotioato de etilo) + H₂O por sustitución nucleofílica de acilos."
+  },
+  "substrates": [
+    {
+      "id": "ac_rxn2_fischer_benzoato_metilo",
+      "name": "Ácido Benzoico + Metanol ⇄(H₂SO₄, Δ) Benzoato de Metilo + H₂O [Mecanismo de Fischer]",
+      "catalyst": "H₂SO₄ conc. (Reflujo Δ)"
+    },
+    {
+      "id": "ac_rxn2_fischer_etanoato_etilo",
+      "name": "Ácido Etanoico + Etanol ⇄(H₂SO₄, Δ) Etanoato de Etilo (Acetato de Etilo) + H₂O [Clásico]",
+      "catalyst": "H₂SO₄ conc. (Exceso EtOH, Δ)"
+    },
+    {
+      "id": "ac_rxn2_tioester_acetico_etiol",
+      "name": "Ácido Etanoico + Etanotiol (CH₃CH₂SH) ⇄(H⁺) Etanotioato de Etilo + H₂O [Tioesterificación — Examen]",
+      "catalyst": "H⁺ / Catálisis Ácida (Tioéster)"
+    },
+    {
+      "id": "ac_rxn2_salicilico_metanol",
+      "name": "Ácido Salicílico + Metanol ⇄(H₂SO₄, Δ) Salicilato de Metilo (Aceite de Gaulteria) + H₂O",
+      "catalyst": "H₂SO₄ conc. (Reflujo Δ)"
+    }
+  ],
+  "catalysts": [
+    "H₂SO₄ conc. (Reflujo Δ)",
+    "H₂SO₄ conc. (Exceso EtOH, Δ)",
+    "H⁺ / Catálisis Ácida (Tioéster)"
+  ],
+  "stepsBySubstrate": {
+    "ac_rxn2_fischer_benzoato_metilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Benzoico Protonado + Metanol (CH₃–OH)",
+        "semiStep": "C₆H₅–C(=OH⁺)–OH + CH₃–OH (cat. H₂SO₄)",
+        "semiGlobal": "C₆H₅–COOH + CH₃–OH ⇄(H₂SO₄, Δ) C₆H₅–COOCH₃ + H₂O",
+        "desc": "Se observan el ácido benzoico (activado por protonación ácida del oxígeno carbonílico) y el metanol actuando como nucleófilo.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido benzoico y metanol listos para la etapa de adición.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque nucleofílico del par libre del oxígeno metanólico al carbono carbonílico C1."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210,
+              "label": "C Carbonilo (δ+)"
+            },
+            {
+              "id": "O1",
+              "el": "OH⁺",
+              "x": 375,
+              "y": 95,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "OH_ac",
+              "el": "OH",
+              "x": 525,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale como H₂O"
+            },
+            {
+              "id": "MeOH",
+              "el": "HO–CH₃",
+              "x": 375,
+              "y": 325,
+              "highlight": "#38bdf8",
+              "label": "Nucleófilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "normal"
+            }
+          ],
+          "arrows": [
+            {
+              "type": "full",
+              "x1": 375,
+              "y1": 302,
+              "cx": 352,
+              "cy": 265,
+              "x2": 368,
+              "y2": 232,
+              "label": "Adición nucleofílica"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 1: Intermediario Tetraédrico (Adición Nucleofílica de Metanol)",
+        "semiStep": "[C₆H₅–C(OH)(OH)–OCH₃] (Intermediario Tetraédrico sp³)",
+        "semiGlobal": "C₆H₅–COOH + CH₃–OH ⇄(H₂SO₄, Δ) C₆H₅–COOCH₃ + H₂O",
+        "desc": "Al unirse el metanol al carbono C1, se abre el doble enlace π C=O y el carbono adopta hibridación sp³ tetraédrica.",
+        "legend": {
+          "breaking": "En ROJO punteado: apertura del enlace π C1=O1.",
+          "forming": "En VERDE sólido: nuevo enlace C1–OCH₃.",
+          "movement": "Transferencia de protón hacia el grupo –OH carboxílico para convertirlo en –OH₂⁺."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1 (sp³)",
+              "x": 375,
+              "y": 210,
+              "highlight": "#fbbf24",
+              "label": "Intermediario Tetraédrico"
+            },
+            {
+              "id": "O1",
+              "el": "OH",
+              "x": 375,
+              "y": 95
+            },
+            {
+              "id": "OH_ac",
+              "el": "OH₂⁺",
+              "x": 545,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "OMe",
+              "el": "OCH₃",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OH_ac",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "OMe",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Etapa 2 (Ruptura en Rojo): Eliminación de Agua (−H₂O) y Regeneración del Carbonilo",
+        "semiStep": "[C₆H₅–C(OH)(OCH₃)–OH₂⁺] ──► C₆H₅–CO–OCH₃ + H₂O + H⁺",
+        "semiGlobal": "C₆H₅–COOH + CH₃–OH ⇄(H₂SO₄, Δ) C₆H₅–COOCH₃ + H₂O",
+        "desc": "Se reconstituye el doble enlace C=O expulsando una molécula de agua (–OH₂⁺).",
+        "legend": {
+          "breaking": "En ROJO punteado: ruptura del enlace C1–OH₂⁺ (salida de H₂O).",
+          "forming": "En VERDE punteado: regeneración del doble enlace carbonílico C1=O1.",
+          "movement": "Retorno a geometría trigonal plana sp²."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 375,
+              "y": 210
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 375,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OMe",
+              "el": "OCH₃",
+              "x": 375,
+              "y": 325,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "H₂O",
+              "x": 555,
+              "y": 210,
+              "highlight": "#ef4444",
+              "label": "Sale H₂O"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "forming"
+            },
+            {
+              "from": "C1",
+              "to": "OMe",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "H2O",
+              "order": 1,
+              "state": "breaking"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Benzoato de Metilo (C₆H₅–COOCH₃) + H₂O",
+        "semiStep": "C₆H₅–COOCH₃ + H₂O",
+        "semiGlobal": "C₆H₅–COOH + CH₃–OH ⇄(H₂SO₄, Δ) C₆H₅–COOCH₃ + H₂O",
+        "desc": "Queda consolidado el benzoato de metilo junto con agua.",
+        "legend": {
+          "breaking": "Sustitución nucleofílica acílica completada.",
+          "forming": "En VERDE sólido: grupo éster (–COOCH₃).",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ph",
+              "el": "Ph",
+              "ring": "phenyl",
+              "x": 215,
+              "y": 210
+            },
+            {
+              "id": "C1",
+              "el": "C1",
+              "x": 385,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Benzoato de Metilo"
+            },
+            {
+              "id": "O1",
+              "el": "O",
+              "x": 385,
+              "y": 95,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OMe",
+              "el": "OCH₃",
+              "x": 535,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 675,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ph",
+              "to": "C1",
+              "order": 1,
+              "state": "normal"
+            },
+            {
+              "from": "C1",
+              "to": "O1",
+              "order": 2,
+              "state": "new"
+            },
+            {
+              "from": "C1",
+              "to": "OMe",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn2_fischer_etanoato_etilo": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico + Etanol (H₂SO₄, Δ)",
+        "semiStep": "CH₃–COOH + HO–CH₂CH₃ ⇄(H₂SO₄, Δ)",
+        "semiGlobal": "CH₃–COOH + CH₃CH₂–OH ⇄(H₂SO₄, Δ) CH₃–COOCH₂CH₃ + H₂O",
+        "desc": "Reacción clásica de esterificación entre ácido acético y etanol.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Ataque del etanol sobre el carbono carboxílico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "CH₃–CO",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 375,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "EtOH",
+              "el": "+ HO–CH₂CH₃",
+              "x": 555,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanoato de Etilo (Acetato de Etilo) + H₂O",
+        "semiStep": "CH₃–COOCH₂CH₃ + H₂O",
+        "semiGlobal": "CH₃–COOH + CH₃CH₂–OH ⇄(H₂SO₄, Δ) CH₃–COOCH₂CH₃ + H₂O",
+        "desc": "Queda consolidado el etanoato de etilo (disolvente orgánico de aroma frutal).",
+        "legend": {
+          "breaking": "Eliminación de agua completada.",
+          "forming": "En VERDE sólido: etanoato de etilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "CH₃–CO",
+              "x": 215,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "OEt",
+              "el": "OCH₂CH₃",
+              "x": 405,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Etanoato de Etilo"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 605,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac",
+              "to": "OEt",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn2_tioester_acetico_etiol": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Etanoico + Etanotiol (CH₃–CH₂–SH)",
+        "semiStep": "CH₃–COOH + HS–CH₂–CH₃",
+        "semiGlobal": "CH₃–COOH + CH₃CH₂–SH ⇄(H⁺) CH₃–CO–S–CH₂CH₃ + H₂O",
+        "desc": "El átomo de azufre del etanotiol posee pares electrónicos libres fuertemente nucleofílicos que atacan al carbonilo del ácido acético.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; ácido acético y etanotiol listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Sustitución nucleofílica acílica del grupo –OH por el grupo –SCH₂CH₃."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "CH₃–CO",
+              "x": 225,
+              "y": 210
+            },
+            {
+              "id": "OH",
+              "el": "OH",
+              "x": 375,
+              "y": 210,
+              "highlight": "#ef4444"
+            },
+            {
+              "id": "Thiol",
+              "el": "+ HS–CH₂CH₃",
+              "x": 565,
+              "y": 210,
+              "highlight": "#facc15",
+              "label": "Tiol Nucleófilo"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac",
+              "to": "OH",
+              "order": 1,
+              "state": "normal"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Productos Consolidados: Etanotioato de Etilo (CH₃–CO–S–CH₂CH₃) + H₂O",
+        "semiStep": "CH₃–CO–S–CH₂–CH₃ + H₂O (Tioéster — Modelo del Acetil-CoA)",
+        "semiGlobal": "CH₃–COOH + CH₃CH₂–SH ⇄(H⁺) CH₃–CO–S–CH₂CH₃ + H₂O",
+        "desc": "Queda consolidado el tioéster (etanotioato de etilo) más agua. Reacción exacta evaluada en el examen final 2016 (Recopi Preg. 4).",
+        "legend": {
+          "breaking": "Sustitución nucleofílica acílica completada.",
+          "forming": "En VERDE sólido: enlace tioéster C–S.",
+          "movement": "Análogo químico del Acetil-CoA metabólico."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Ac",
+              "el": "CH₃–CO",
+              "x": 215,
+              "y": 210,
+              "highlight": "#10b981"
+            },
+            {
+              "id": "SEt",
+              "el": "S–CH₂CH₃",
+              "x": 415,
+              "y": 210,
+              "highlight": "#facc15",
+              "label": "Tioéster"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 615,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": [
+            {
+              "from": "Ac",
+              "to": "SEt",
+              "order": 1,
+              "state": "new"
+            }
+          ]
+        }
+      }
+    ],
+    "ac_rxn2_salicilico_metanol": [
+      {
+        "title": "Estado Inicial Desarrollado: Ácido Salicílico (o-Hidroxibenzoico) + Metanol",
+        "semiStep": "o-HO–C₆H₄–COOH + CH₃–OH (H₂SO₄, Δ)",
+        "semiGlobal": "o-HO–C₆H₄–COOH + CH₃OH ⇄(H₂SO₄, Δ) o-HO–C₆H₄–COOCH₃ + H₂O",
+        "desc": "El ácido salicílico tiene un grupo –COOH y un grupo –OH fenólico; con metanol en medio ácido se esterifica selectivamente el grupo –COOH.",
+        "legend": {
+          "breaking": "Ningún enlace roto todavía; reactivos listos.",
+          "forming": "Ningún enlace formado todavía.",
+          "movement": "Esterificación selectiva del grupo carboxilo."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Sal",
+              "el": "o-HO–C₆H₄–COOH",
+              "x": 255,
+              "y": 210,
+              "highlight": "#fbbf24"
+            },
+            {
+              "id": "MeOH",
+              "el": "+ CH₃–OH (H₂SO₄)",
+              "x": 535,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      },
+      {
+        "title": "Productos Consolidados: Salicilato de Metilo + H₂O",
+        "semiStep": "o-HO–C₆H₄–COOCH₃ + H₂O (Aceite de Gaulteria)",
+        "semiGlobal": "o-HO–C₆H₄–COOH + CH₃OH ⇄(H₂SO₄, Δ) o-HO–C₆H₄–COOCH₃ + H₂O",
+        "desc": "Queda consolidado el salicilato de metilo (principio activo analgésico tópico), conservando libre el –OH fenólico.",
+        "legend": {
+          "breaking": "Esterificación completada.",
+          "forming": "En VERDE sólido: salicilato de metilo.",
+          "movement": "Producto obtenido."
+        },
+        "scene": {
+          "atoms": [
+            {
+              "id": "Prod",
+              "el": "o-HO–C₆H₄–COOCH₃",
+              "x": 285,
+              "y": 210,
+              "highlight": "#10b981",
+              "label": "Salicilato de Metilo"
+            },
+            {
+              "id": "H2O",
+              "el": "+ H₂O",
+              "x": 575,
+              "y": 210,
+              "highlight": "#38bdf8"
+            }
+          ],
+          "bonds": []
+        }
+      }
+    ]
+  }
+}
