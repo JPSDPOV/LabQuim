@@ -913,7 +913,9 @@ export function wrapWithSemidevelopedEndpoints(stepsArray, catalystLabel = '') {
             forming: 'Productos finales expresados en fórmula semidesarrollada.',
             movement: 'Reacción finalizada.'
         },
-        scene: () => buildSemidevelopedBannerScene(outroSemiText, '#10b981', contextHints)
+        scene: () => lastStep.outroScene
+            ? JSON.parse(JSON.stringify(lastStep.outroScene))
+            : buildSemidevelopedBannerScene(outroSemiText, '#10b981', contextHints)
     };
 
     return [introStep, ...middleSteps, outroStep];
