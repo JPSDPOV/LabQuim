@@ -51,20 +51,70 @@
             </div>
 
 
-            <!-- ETAPA 1 DEL ASISTENTE: ELEGIR FUNCIÓN QUÍMICA -->
-            <section id="wizardStep1" class="wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+            <!-- PANTALLA PRINCIPAL (HUB DE 3 TARJETAS PRINCIPALES) -->
+            <section id="wizardHomeHub" class="wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-8 shadow-2xl flex flex-col gap-6">
                 <div class="text-center flex flex-col gap-1.5">
-                    <span class="text-xs font-extrabold uppercase tracking-widest text-violet-400">Paso 1 • Selección de Unidad</span>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-white">Elige la Función Química</h2>
-                    <p class="text-xs sm:text-sm text-slate-400">Selecciona la familia orgánica que deseas estudiar o busca ejercicios de exámenes anteriores</p>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-violet-400">Menú Principal • Laboratorio Virtual</span>
+                    <h2 class="text-xl sm:text-3xl font-extrabold text-white">¿Qué deseas practicar hoy?</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Elige una de las tres modalidades principales de estudio</p>
                 </div>
 
-                <!-- BUSCADOR DINÁMICO DE EXÁMENES DE AÑOS ANTERIORES + FILTRO POR AÑO -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+                    <!-- TARJETA 1: PRACTICAR NOMENCLATURA -->
+                    <button type="button" onclick="openNomenclatureSetup()" class="group text-left p-6 rounded-2xl bg-gradient-to-br from-amber-950/75 via-slate-950 to-slate-950 border-2 border-amber-500/55 hover:border-amber-400 transition-all shadow-lg hover:shadow-amber-500/20 active:scale-[0.99] flex flex-col justify-between gap-6 cursor-pointer">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/45 flex items-center justify-center text-2xl shrink-0">🧠</span>
+                            <span id="hubBadgeNomCount" class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/35 text-amber-200 text-xs font-extrabold">29 grupos</span>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-amber-200 group-hover:text-white transition leading-snug">Practicar Nomenclatura</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Flashcards interactivas por grupo funcional, estereoquímica (R/S, cis/trans, E/Z) y autoevaluación.</p>
+                        </div>
+                    </button>
+
+                    <!-- TARJETA 2: FUNCIONES QUÍMICAS -->
+                    <button type="button" onclick="openFunctionsMenuFromHub()" class="group text-left p-6 rounded-2xl bg-gradient-to-br from-emerald-950/75 via-slate-950 to-slate-950 border-2 border-emerald-500/55 hover:border-emerald-400 transition-all shadow-lg hover:shadow-emerald-500/20 active:scale-[0.99] flex flex-col justify-between gap-6 cursor-pointer">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/45 flex items-center justify-center text-2xl shrink-0">⚗️</span>
+                            <span id="hubBadgeFuncCount" class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/35 text-emerald-200 text-xs font-extrabold">22 unidades</span>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-emerald-200 group-hover:text-white transition leading-snug">Funciones Químicas</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Métodos de obtención, reacciones químicas paso a paso y mecanismos animados por familia orgánica.</p>
+                        </div>
+                    </button>
+
+                    <!-- TARJETA 3: BUSCADOR EXÁMENES DE AÑOS ANTERIORES -->
+                    <button type="button" onclick="openExamSearchHub()" class="group text-left p-6 rounded-2xl bg-gradient-to-br from-rose-950/80 via-slate-950 to-slate-950 border-2 border-rose-500/60 hover:border-rose-400 transition-all shadow-lg hover:shadow-rose-500/20 active:scale-[0.99] flex flex-col justify-between gap-6 cursor-pointer">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-400/45 flex items-center justify-center text-2xl shrink-0">📝</span>
+                            <span id="hubBadgeExamCount" class="px-3 py-1 rounded-full bg-rose-500/20 border border-rose-400/35 text-rose-200 text-xs font-extrabold">Banco oficial</span>
+                        </div>
+                        <div class="flex flex-col gap-1.5">
+                            <h3 class="text-lg sm:text-xl font-extrabold text-rose-200 group-hover:text-white transition leading-snug">Buscador Exámenes de Años Anteriores</h3>
+                            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Ítems reales de ingreso filtrables por año, tema o palabra clave con opción múltiple y explicación animada.</p>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- SECCIÓN DEDICADA: BUSCADOR EXÁMENES DE AÑOS ANTERIORES -->
+            <section id="wizardExamSearchHub" class="hidden wizard-enter bg-slate-900/90 border border-rose-500/40 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-rose-400">Banco de Ingreso y CPAM</span>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Buscador de Exámenes de Años Anteriores</h2>
+                    </div>
+                    <button type="button" onclick="showWizardStage(0)" class="px-3.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition cursor-pointer">
+                        ⬅ Menú Principal
+                    </button>
+                </div>
+
                 <div class="relative p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-rose-950/75 via-slate-950 to-violet-950/75 border-2 border-rose-500/55 shadow-xl shadow-rose-500/10 flex flex-col gap-3">
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <label for="homeExamSearchInput" class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-rose-200 flex items-center gap-2">
                             <span class="text-base">📝</span>
-                            <span>Buscador de Exámenes de Años Anteriores</span>
+                            <span>Filtrar por tema, palabra clave o año</span>
                         </label>
                         <span id="homeExamFilterCountBadge" class="px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-400/40 text-[11px] font-bold text-rose-200">
                             🔍 Buscar o filtrar por año
@@ -111,8 +161,17 @@
                     <!-- Resultados dinámicos de exámenes -->
                     <div
                         id="homeExamResultsList"
-                        class="hidden max-h-72 overflow-y-auto rounded-xl bg-slate-950/95 border border-rose-500/40 divide-y divide-slate-800/80 shadow-inner"
+                        class="hidden max-h-[52vh] overflow-y-auto rounded-xl bg-slate-950/95 border border-rose-500/40 divide-y divide-slate-800/80 shadow-inner"
                     ></div>
+                </div>
+            </section>
+
+            <!-- ETAPA 1 DEL ASISTENTE: ELEGIR FUNCIÓN QUÍMICA -->
+            <section id="wizardStep1" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
+                <div class="text-center flex flex-col gap-1.5">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-emerald-400">Funciones Químicas • Selección de Unidad</span>
+                    <h2 class="text-xl sm:text-2xl font-extrabold text-white">Elige la Función Química</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Selecciona la familia orgánica que deseas estudiar</p>
                 </div>
 
                 <div id="functionCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -295,7 +354,7 @@
                         <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Práctica de Nomenclatura Orgánica</h2>
                     </div>
                     <button type="button" onclick="closeNomenclatureMode()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition">
-                        ⬅ Volver a Reacciones
+                        ⬅ Menú Principal
                     </button>
                 </div>
 
