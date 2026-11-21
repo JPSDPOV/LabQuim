@@ -34,7 +34,7 @@
             "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–O–H)",
             "semiStep": "H–C≡C–H + H–OH",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "Se observan las dos moléculas iniciales intactas: el etino lineal con su triple enlace C≡C y la molécula de agua H–O–H.",
+            "desc": "Se observan las dos moléculas iniciales intactas: el etino lineal con su triple enlace C≡C y la molécula de agua H–OH.",
             "legend": {
               "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
               "forming": "Ningún enlace formado todavía.",
@@ -45,32 +45,32 @@
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 165,
+                  "x": 95,
                   "y": 215
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 295,
+                  "x": 215,
                   "y": 215,
                   "label": "Etino"
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 455,
+                  "x": 365,
                   "y": 215
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 585,
+                  "x": 485,
                   "y": 215
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 690,
+                  "x": 585,
                   "y": 215,
                   "highlight": "#38bdf8",
                   "label": "Agua (H–OH)"
@@ -78,7 +78,7 @@
                 {
                   "id": "OH_grp",
                   "el": "OH",
-                  "x": 805,
+                  "x": 695,
                   "y": 215,
                   "highlight": "#38bdf8"
                 }
@@ -111,9 +111,23 @@
               ],
               "texts": [
                 {
-                  "x": 638,
+                  "x": 535,
                   "y": 222,
                   "text": "+"
+                }
+              ],
+              "arrows": [
+                {
+                  "type": "full",
+                  "solid": true,
+                  "color": "#f97316",
+                  "x1": 745,
+                  "y1": 215,
+                  "cx": 825,
+                  "cy": 215,
+                  "x2": 905,
+                  "y2": 215,
+                  "label": "H₂O / H₂SO₄ / HgSO₄"
                 }
               ]
             },
@@ -122,32 +136,32 @@
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 165,
+                  "x": 150,
                   "y": 215
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 295,
+                  "x": 280,
                   "y": 215,
                   "label": "Etino"
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 455,
+                  "x": 440,
                   "y": 215
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 585,
+                  "x": 570,
                   "y": 215
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 690,
+                  "x": 675,
                   "y": 215,
                   "highlight": "#38bdf8",
                   "label": "Agua (H–OH)"
@@ -155,7 +169,7 @@
                 {
                   "id": "OH_grp",
                   "el": "OH",
-                  "x": 805,
+                  "x": 790,
                   "y": 215,
                   "highlight": "#38bdf8"
                 }
@@ -188,7 +202,7 @@
               ],
               "texts": [
                 {
-                  "x": 638,
+                  "x": 623,
                   "y": 222,
                   "text": "+"
                 }
@@ -244,9 +258,7 @@
                   "el": "OH",
                   "x": 535,
                   "y": 112,
-                  "highlight": "#38bdf8",
-                  "label": "Agua encima del triple enlace",
-                  "labelPos": "top"
+                  "highlight": "#38bdf8"
                 }
               ],
               "bonds": [
@@ -635,53 +647,99 @@
               "forming": "En VERDE sólido: grupo carbonilo C=O y grupo metilo –CH₃ del Etanal (Acetaldehído).",
               "movement": "Producto aldehído estable obtenido."
             },
+            "outroScene": {
+              "atoms": [
+                {
+                  "id": "Semi_0_0",
+                  "el": "CH₃",
+                  "x": 418,
+                  "y": 175,
+                  "noValenceDots": true,
+                  "noShape": true
+                },
+                {
+                  "id": "Semi_0_1",
+                  "el": "CHO",
+                  "x": 502,
+                  "y": 175,
+                  "noValenceDots": true,
+                  "noShape": true
+                },
+                {
+                  "id": "LBL_OUTRO",
+                  "el": "",
+                  "isVertex": true,
+                  "x": 460,
+                  "y": 212,
+                  "noValenceDots": true,
+                  "label": "Etanal\n(Acetaldehído)"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "Semi_0_0",
+                  "to": "Semi_0_1",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ],
+              "forceCentered": true
+            },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
                   "x": 195,
-                  "y": 210
+                  "y": 195
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
                   "x": 350,
-                  "y": 90
+                  "y": 82
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
                   "x": 350,
-                  "y": 330,
+                  "y": 305,
                   "highlight": "#10b981"
                 },
                 {
                   "id": "C1",
                   "el": "C",
                   "x": 350,
-                  "y": 210
+                  "y": 195
                 },
                 {
                   "id": "C2",
                   "el": "C",
                   "x": 525,
-                  "y": 210,
-                  "highlight": "#10b981",
-                  "label": "Etanal\n(Acetaldehído)"
+                  "y": 195,
+                  "highlight": "#10b981"
                 },
                 {
                   "id": "OH_grp",
                   "el": "O",
-                  "x": 605,
-                  "y": 78,
+                  "x": 602,
+                  "y": 72,
                   "highlight": "#10b981"
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 605,
-                  "y": 342
+                  "x": 602,
+                  "y": 315
+                },
+                {
+                  "id": "LBL_PROD",
+                  "el": "",
+                  "isVertex": true,
+                  "x": 445,
+                  "y": 342,
+                  "noValenceDots": true,
+                  "label": "Etanal (Acetaldehído)"
                 }
               ],
               "bonds": [
