@@ -283,22 +283,22 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
         const charHalf = mobile ? 9.5 : 8.2;
         if (!a1.isVertex) {
             if (a1.noShape) {
-                const hw1 = Math.max(14, String(a1.el || '').length * charHalf + 6);
-                const hh1 = mobile ? 19 : 16;
-                trim1 = Math.min(hw1 / (cosA || 0.01), hh1 / (sinA || 0.01), Math.max(hw1, hh1)) + 5;
+                const hw1 = a1.bondTargetX !== undefined ? 10 : Math.max(10, String(a1.el || '').length * charHalf + 4);
+                const hh1 = mobile ? 14 : 11.5;
+                trim1 = Math.min(hw1 / (cosA || 0.01), hh1 / (sinA || 0.01)) + 2.5;
             } else {
                 const g1 = getNodeGeometry(a1);
-                trim1 = Math.min(g1.halfW / (cosA || 0.01), g1.halfH / (sinA || 0.01), Math.max(g1.halfW, g1.halfH)) + 6;
+                trim1 = Math.min(g1.halfW / (cosA || 0.01), g1.halfH / (sinA || 0.01)) + 5;
             }
         }
         if (!a2.isVertex) {
             if (a2.noShape) {
-                const hw2 = Math.max(14, String(a2.el || '').length * charHalf + 6);
-                const hh2 = mobile ? 19 : 16;
-                trim2 = Math.min(hw2 / (cosA || 0.01), hh2 / (sinA || 0.01), Math.max(hw2, hh2)) + 5;
+                const hw2 = a2.bondTargetX !== undefined ? 10 : Math.max(10, String(a2.el || '').length * charHalf + 4);
+                const hh2 = mobile ? 14 : 11.5;
+                trim2 = Math.min(hw2 / (cosA || 0.01), hh2 / (sinA || 0.01)) + 2.5;
             } else {
                 const g2 = getNodeGeometry(a2);
-                trim2 = Math.min(g2.halfW / (cosA || 0.01), g2.halfH / (sinA || 0.01), Math.max(g2.halfW, g2.halfH)) + 6;
+                trim2 = Math.min(g2.halfW / (cosA || 0.01), g2.halfH / (sinA || 0.01)) + 5;
             }
         }
         svgOut += renderAnimatedBond(a1.x, a1.y, a2.x, a2.y, targetOrder, b.state || 'normal', existedBefore, prevOrder, t, Math.min(a1.opacity, a2.opacity), b.stereo || null, null, lightMode, trim1, trim2);
