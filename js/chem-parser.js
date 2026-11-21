@@ -1876,11 +1876,11 @@ export function buildAutoNomenclatureScene(semi) {
         const cx = 460;
 
         if (type === 'ALDOSA') {
-            // C1: O doble enlace arriba, C al centro, H a la derecha
+            // C1: O doble enlace arriba bien separado, C al centro, H a la derecha
             atoms.push(
-                { id: 'FS_O1', el: 'O', x: cx, y: startY - 56, noValenceDots: true },
+                { id: 'FS_O1', el: 'O', x: cx, y: startY - 76, noValenceDots: true },
                 { id: 'FS_C1', el: 'C', x: cx, y: startY, noValenceDots: true },
-                { id: 'FS_H1', el: 'H', x: cx + 76, y: startY, noValenceDots: true }
+                { id: 'FS_H1', el: 'H', x: cx + 80, y: startY, noValenceDots: true }
             );
             bonds.push(
                 { from: 'FS_C1', to: 'FS_O1', order: 2 },
@@ -1889,9 +1889,9 @@ export function buildAutoNomenclatureScene(semi) {
         } else {
             // Cetosa: C1 es CH2OH arriba, C2 es C=O
             atoms.push(
-                { id: 'FS_C1', el: 'CH₂OH', x: cx + 28, y: startY - 56, noValenceDots: true, bondTargetX: cx },
+                { id: 'FS_C1', el: 'CH₂OH', x: cx + 34, y: startY - 68, noValenceDots: true, bondTargetX: cx },
                 { id: 'FS_C2', el: 'C', x: cx, y: startY, noValenceDots: true },
-                { id: 'FS_O2', el: 'O', x: cx + 78, y: startY, noValenceDots: true }
+                { id: 'FS_O2', el: 'O', x: cx + 84, y: startY, noValenceDots: true }
             );
             bonds.push(
                 { from: 'FS_C1', to: 'FS_C2', order: 1 },
@@ -1919,7 +1919,7 @@ export function buildAutoNomenclatureScene(semi) {
 
         const botY = startY + (dirs.length + 1) * stepY;
         const botEl = isDeoxy ? 'CH₃' : 'CH₂OH';
-        const botShift = isDeoxy ? 18 : 28;
+        const botShift = isDeoxy ? 19 : 34;
         atoms.push({ id: 'FS_BOT', el: botEl, x: cx + botShift, y: botY, noValenceDots: true, bondTargetX: cx });
         bonds.push({ from: prevCId, to: 'FS_BOT', order: 1 });
 
@@ -1927,30 +1927,36 @@ export function buildAutoNomenclatureScene(semi) {
     }
 
     if (s === 'HAWORTH-FURANOSA-FRUCTOSA') {
-        // Proyección de Haworth de β-D-Fructofuranosa (anillo de 5 miembros con O arriba)
+        // Proyección de Haworth de β-D-Fructofuranosa (anillo de 5 miembros con O arriba y enlaces limpios sin colisiones)
         atoms.push(
-            { id: 'FR_O', el: 'O', x: 460, y: 115, noValenceDots: true },
-            { id: 'FR_C2', el: 'C2', x: 560, y: 185, noValenceDots: true },
-            { id: 'FR_C3', el: 'C3', x: 515, y: 265, noValenceDots: true },
-            { id: 'FR_C4', el: 'C4', x: 405, y: 265, noValenceDots: true },
-            { id: 'FR_C5', el: 'C5', x: 360, y: 185, noValenceDots: true },
-            { id: 'FR_OH2', el: 'OH', x: 560, y: 110, noValenceDots: true },
-            { id: 'FR_C1', el: 'CH₂OH', x: 645, y: 245, noValenceDots: true },
-            { id: 'FR_OH3', el: 'OH', x: 515, y: 195, noValenceDots: true },
-            { id: 'FR_OH4', el: 'OH', x: 405, y: 335, noValenceDots: true },
-            { id: 'FR_C6', el: 'CH₂OH', x: 360, y: 110, noValenceDots: true }
+            { id: 'FR_O',   el: 'O',     x: 460, y: 98,  noValenceDots: true },
+            { id: 'FR_C2',  el: 'C',     x: 590, y: 185, noValenceDots: true },
+            { id: 'FR_C3',  el: 'C',     x: 535, y: 282, noValenceDots: true },
+            { id: 'FR_C4',  el: 'C',     x: 385, y: 282, noValenceDots: true },
+            { id: 'FR_C5',  el: 'C',     x: 330, y: 185, noValenceDots: true },
+            { id: 'FR_OH2', el: 'OH',    x: 590, y: 115, noValenceDots: true },
+            { id: 'FR_C1',  el: 'CH₂OH', x: 624, y: 255, noValenceDots: true, bondTargetX: 590 },
+            { id: 'FR_OH3', el: 'OH',    x: 535, y: 215, noValenceDots: true },
+            { id: 'FR_H3',  el: 'H',     x: 535, y: 345, noValenceDots: true },
+            { id: 'FR_H4',  el: 'H',     x: 385, y: 215, noValenceDots: true },
+            { id: 'FR_OH4', el: 'OH',    x: 385, y: 345, noValenceDots: true },
+            { id: 'FR_C6',  el: 'CH₂OH', x: 364, y: 115, noValenceDots: true, bondTargetX: 330 },
+            { id: 'FR_H5',  el: 'H',     x: 330, y: 255, noValenceDots: true }
         );
         bonds.push(
-            { from: 'FR_O', to: 'FR_C2', order: 1 },
-            { from: 'FR_C2', to: 'FR_C3', order: 1 },
-            { from: 'FR_C3', to: 'FR_C4', order: 1 },
-            { from: 'FR_C4', to: 'FR_C5', order: 1 },
-            { from: 'FR_C5', to: 'FR_O', order: 1 },
+            { from: 'FR_O',  to: 'FR_C2',  order: 1 },
+            { from: 'FR_C2', to: 'FR_C3',  order: 1 },
+            { from: 'FR_C3', to: 'FR_C4',  order: 1 },
+            { from: 'FR_C4', to: 'FR_C5',  order: 1 },
+            { from: 'FR_C5', to: 'FR_O',   order: 1 },
             { from: 'FR_C2', to: 'FR_OH2', order: 1 },
-            { from: 'FR_C2', to: 'FR_C1', order: 1 },
+            { from: 'FR_C2', to: 'FR_C1',  order: 1 },
             { from: 'FR_C3', to: 'FR_OH3', order: 1 },
+            { from: 'FR_C3', to: 'FR_H3',  order: 1 },
+            { from: 'FR_C4', to: 'FR_H4',  order: 1 },
             { from: 'FR_C4', to: 'FR_OH4', order: 1 },
-            { from: 'FR_C5', to: 'FR_C6', order: 1 }
+            { from: 'FR_C5', to: 'FR_C6',  order: 1 },
+            { from: 'FR_C5', to: 'FR_H5',  order: 1 }
         );
         return { atoms, bonds };
     }
