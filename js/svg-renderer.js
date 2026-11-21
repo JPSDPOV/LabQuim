@@ -506,9 +506,13 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
         }
 
         if (!currentViewBox.initialized) {
-            currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
+            currentViewBox.x = targetVbX;
+            currentViewBox.y = targetVbY;
+            currentViewBox.w = targetVbW;
+            currentViewBox.h = targetVbH;
+            currentViewBox.initialized = true;
         } else {
-            const camEase = clampedRaw >= 0.999 ? 1 : 0.14;
+            const camEase = clampedRaw >= 0.999 ? 1 : Math.max(0.08, t * 0.22);
             currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
             currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
             currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
