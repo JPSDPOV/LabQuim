@@ -4826,7 +4826,7 @@
       "badge": "α-Aminoácido aromático",
       "name": "Ácido 2-amino-3-(4-hidroxifenil)propanoico",
       "synonyms": "Tirosina (Tyr)",
-      "semiFormula": "HO—C₆H₄—CH₂—CH(NH₂)—COOH",
+      "semiFormula": "AROM-1-OH-4-CH2CH(NH2)COOH",
       "explanation": "α-Aminoácido aromático fenólico precursor de catecolaminas (DOPA, dopamina)."
     },
     {
@@ -4834,7 +4834,7 @@
       "badge": "Catecolamina aminoácido",
       "name": "3,4-Dihidroxifenilalanina",
       "synonyms": "L-DOPA / Levodopa",
-      "semiFormula": "C₆H₃(OH)₂—CH₂—CH(NH₂)—COOH",
+      "semiFormula": "AROM-1-CH2CH(NH2)COOH-3,4-OH",
       "explanation": "Intermediario metabólico obtenido por hidroxilación de la tirosina; descarboxila a dopamina."
     },
     {
