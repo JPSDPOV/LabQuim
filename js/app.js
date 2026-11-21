@@ -254,7 +254,7 @@ function returnToWizardHome() {
     state.currentFunction = '';
     state.currentCategory = '';
     state.currentKey = '';
-    exitFullscreenPlayerToWizard(1);
+    exitFullscreenPlayerToWizard(0);
 }
 
 function applyJsonPayload(payload) {
@@ -613,32 +613,81 @@ function renderFunctionCards() {
         ? state.functionCatalog
         : Object.keys(state.functionMenus).map(k => ({ value: k, label: k.toUpperCase() }));
 
+    const hubBadge = document.getElementById('hubBadgeFuncCount');
+    if (hubBadge && list.length > 0) {
+        hubBadge.innerText = `${list.length} unidades`;
+    }
+
     if (list.length === 0) {
         grid.innerHTML = `<div class="col-span-full text-center py-6 text-sm text-rose-300">No se encontraron unidades en labquim.json.</div>`;
         return;
     }
 
-    const nomCardHtml = `
-        <button type="button" onclick="openNomenclatureSetup()" class="col-span-full group text-left p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-violet-600/20 hover:from-amber-500/30 hover:to-violet-600/30 border-2 border-amber-500/60 hover:border-amber-400 transition-all shadow-lg flex items-center justify-between gap-3 active:scale-[0.99] cursor-pointer">
-            <div class="flex items-center gap-3 min-w-0">
-                <span class="w-10 h-10 rounded-xl bg-amber-500/25 border border-amber-400/50 flex items-center justify-center text-xl shrink-0">🧠</span>
-                <div class="min-w-0">
-                    <span class="text-sm sm:text-base font-extrabold text-amber-200 group-hover:text-white transition block">Practicar Nomenclatura Orgánica</span>
-                    <span class="text-xs text-slate-300 block truncate">Flashcards interactivas por grupo funcional, estereoquímica (R/S, cis/trans, E/Z) y autoevaluación</span>
-                </div>
-            </div>
-            <span class="px-3 py-1.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-extrabold shrink-0">Iniciar ➡</span>
-        </button>
-    `;
-
-    const unitsHtml = list.map(f => `
-        <button type="button" onclick="wizardSelectFunction('${f.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/85 hover:bg-violet-950/40 border border-slate-800 hover:border-violet-400 transition-all shadow-md flex items-center justify-between gap-3 active:scale-[0.99]">
-            <span class="text-sm sm:text-base font-extrabold text-slate-100 group-hover:text-violet-200 transition">${f.label}</span>
-            <span class="text-slate-500 group-hover:text-violet-300 text-sm font-bold shrink-0">➡</span>
+    grid.innerHTML = list.map(f => `
+        <button type="button" onclick="wizardSelectFunction('${f.value}')" class="group text-left p-4 rounded-2xl bg-slate-950/85 hover:bg-emerald-950/40 border border-slate-800 hover:border-emerald-400 transition-all shadow-md flex items-center justify-between gap-3 active:scale-[0.99] cursor-pointer">
+            <span class="text-sm sm:text-base font-extrabold text-slate-100 group-hover:text-emerald-200 transition">${f.label}</span>
+            <span class="text-slate-500 group-hover:text-emerald-300 text-sm font-bold shrink-0">➡</span>
         </button>
     `).join('');
+}
 
-    grid.innerHTML = nomCardHtml + unitsHtml;
+function openFunctionsMenuFromHub() {
+    renderFunctionCards();
+    showWizardStage(1);
+}
+
+async function openExamSearchHub() {
+    showWizardStage('exam-search');
+    await loadExternalExamsBank();
+    const totalExams = Object.values(EXAM_QUESTIONS_DB).filter(q => q && q.category !== 'test').length;
+    const hubExamBadge = document.getElementById('hubBadgeExamCount');
+    if (hubExamBadge && totalExams > 0) {
+        hubExamBadge.innerText = `${totalExams} ejercicios`;
+    }
+    const yearEl = document.getElementById('homeExamYearFilter');
+    const inputEl = document.getElementById('homeExamSearchInput');
+    if (yearEl && yearEl.value === 'all' && (!inputEl || !inputEl.value.trim())) {
+        // Mostrar todos los ejercicios disponibles al entrar para exploración inmediata
+        const resultsEl = document.getElementById('homeExamResultsList');
+        const badgeEl = document.getElementById('homeExamFilterCountBadge');
+        const allEntries = [];
+        const seen = new Set();
+        Object.entries(state.functionMenus).forEach(([unitKey, menuObj]) => {
+            const unitLabel = getFunctionLabel(unitKey);
+            (menuObj.examenes || []).forEach(it => {
+                if (!seen.has(it.value)) {
+                    seen.add(it.value);
+                    allEntries.push({ value: it.value, label: it.label, unitKey, unitLabel });
+                }
+            });
+        });
+        Object.entries(EXAM_QUESTIONS_DB).forEach(([qid, qObj]) => {
+            if (!seen.has(qid) && qObj.category !== 'test' && !qid.startsWith('test_')) {
+                seen.add(qid);
+                const uKey = qObj.unit || 'alcanos';
+                allEntries.push({ value: qid, label: qObj.badgeLabel || qObj.shortTitle || qid, unitKey: uKey, unitLabel: getFunctionLabel(uKey) });
+            }
+        });
+        if (badgeEl) badgeEl.innerText = `${allEntries.length} ejercicios disponibles`;
+        if (resultsEl && allEntries.length > 0) {
+            resultsEl.innerHTML = allEntries.slice(0, 60).map(m => `
+                <button
+                    type="button"
+                    onclick="openSearchedExamQuestion('${m.unitKey}', '${m.value}')"
+                    class="w-full text-left px-4 py-3 hover:bg-rose-950/45 transition flex items-center justify-between gap-3 cursor-pointer"
+                >
+                    <div class="min-w-0">
+                        <span class="text-xs sm:text-sm font-extrabold text-slate-100 block truncate">${m.label}</span>
+                        <span class="text-[11px] font-semibold text-violet-300 block truncate">${m.unitLabel}</span>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-200 text-[11px] font-extrabold shrink-0">
+                        Resolver ➡
+                    </span>
+                </button>
+            `).join('');
+            resultsEl.classList.remove('hidden');
+        }
+    }
 }
 
 function showWizardStage(stageNum) {
@@ -646,15 +695,26 @@ function showWizardStage(stageNum) {
     window.scrollTo({ top: 0, behavior: 'instant' });
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
+    const sHub = document.getElementById('wizardHomeHub');
+    const sExamHub = document.getElementById('wizardExamSearchHub');
     const s1 = document.getElementById('wizardStep1');
     const s2 = document.getElementById('wizardStep2');
     const s3 = document.getElementById('wizardStep3');
     const s4 = document.getElementById('wizardStep4');
     const sEx = document.getElementById('wizardExamStage');
+    const nomSetup = document.getElementById('nomenclatureSetupSection');
+    const nomPrac = document.getElementById('nomenclaturePracticeSection');
     const btnBack = document.getElementById('btnWizardBack');
     const breadcrumb = document.getElementById('wizardBreadcrumb');
+    const navBar = breadcrumb?.parentElement;
 
-    [s1, s2, s3, s4, sEx].forEach(el => { if (el) el.classList.add('hidden'); });
+    [sHub, sExamHub, s1, s2, s3, s4, sEx, nomSetup, nomPrac].forEach(el => { if (el) el.classList.add('hidden'); });
+    if (navBar) {
+        navBar.classList.toggle('hidden', stageNum === 0);
+    }
+
+    if (stageNum === 0 && sHub) sHub.classList.remove('hidden');
+    if (stageNum === 'exam-search' && sExamHub) sExamHub.classList.remove('hidden');
     if (stageNum === 1 && s1) s1.classList.remove('hidden');
     if (stageNum === 2 && s2) s2.classList.remove('hidden');
     if (stageNum === 3 && s3) s3.classList.remove('hidden');
@@ -664,7 +724,7 @@ function showWizardStage(stageNum) {
     }
 
     if (btnBack) {
-        btnBack.classList.toggle('hidden', stageNum <= 1);
+        btnBack.classList.toggle('hidden', stageNum === 0);
     }
 
     if (breadcrumb) {
@@ -676,23 +736,24 @@ function showWizardStage(stageNum) {
                 : (state.currentCategory === 'examenes'
                     ? '📝 Exámenes de Años Anteriores'
                     : (state.currentCategory === 'test' ? '🧪 Test' : '')));
-        let parts = [];
+        let parts = [
+            `<button type="button" onclick="showWizardStage(0)" class="text-slate-300 hover:text-white hover:underline font-bold cursor-pointer">🏠 Inicio</button>`
+        ];
 
-        if (stageNum === 1) {
-            parts.push(`<span class="text-violet-300 font-bold">Paso 1 de 4: Función Química</span>`);
-        } else {
-            parts.push(`<button type="button" onclick="showWizardStage(1)" class="text-violet-300 hover:underline font-bold">${fnLabel}</button>`);
-            if (stageNum === 2) {
-                parts.push(`<span class="text-slate-600">›</span> <span class="text-cyan-300 font-bold">Paso 2 de 4</span>`);
-            } else if (stageNum >= 3) {
-                parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(2)" class="text-cyan-300 hover:underline font-bold">${catLabel}</button>`);
-                if (stageNum === 3) {
-                    parts.push(`<span class="text-slate-600">›</span> <span class="text-emerald-300 font-bold">Paso 3 de 4</span>`);
-                } else if (stageNum === 4) {
+        if (stageNum === 'exam-search') {
+            parts.push(`<span class="text-slate-600">›</span> <span class="text-rose-300 font-bold">📝 Buscador de Exámenes</span>`);
+        } else if (stageNum === 1) {
+            parts.push(`<span class="text-slate-600">›</span> <span class="text-emerald-300 font-bold">⚗️ Funciones Químicas</span>`);
+        } else if (typeof stageNum === 'number' && stageNum >= 2) {
+            parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(1)" class="text-emerald-300 hover:underline font-bold cursor-pointer">Funciones Químicas</button>`);
+            parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(2)" class="text-violet-300 hover:underline font-bold cursor-pointer">${fnLabel}</button>`);
+            if (stageNum >= 3) {
+                parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(3)" class="text-cyan-300 hover:underline font-bold cursor-pointer">${catLabel}</button>`);
+                if (stageNum === 4) {
                     const itemTitle = (state.currentCategory === 'examenes' || state.currentCategory === 'test')
-                        ? ((EXAM_QUESTIONS_DB[currentExamId] && EXAM_QUESTIONS_DB[currentExamId].shortTitle) || 'Ejercicio')
+                        ? 'Ejercicio'
                         : ((state.labData[state.currentKey] && state.labData[state.currentKey].title) || state.currentKey);
-                    parts.push(`<span class="text-slate-600">›</span> <button type="button" onclick="showWizardStage(3)" class="text-emerald-300 hover:underline font-bold truncate max-w-[180px] sm:max-w-xs inline-block align-bottom">${itemTitle}</button>`);
+                    parts.push(`<span class="text-slate-600">›</span> <span class="text-amber-300 font-bold truncate max-w-[180px] sm:max-w-xs inline-block align-bottom">${itemTitle}</span>`);
                 }
             }
         }
@@ -701,7 +762,9 @@ function showWizardStage(stageNum) {
 }
 
 function wizardGoBack() {
-    if (state.wizardStage > 1) {
+    if (state.wizardStage === 'exam-search' || state.wizardStage === 1) {
+        showWizardStage(0);
+    } else if (typeof state.wizardStage === 'number' && state.wizardStage > 1) {
         showWizardStage(state.wizardStage - 1);
     }
 }
@@ -1116,6 +1179,8 @@ Object.assign(window, {
     replayCurrentTransition,
     showWizardStage,
     wizardGoBack,
+    openFunctionsMenuFromHub,
+    openExamSearchHub,
     wizardSelectFunction,
     wizardSelectCategory,
     wizardSelectReactionItem,
@@ -1159,7 +1224,11 @@ window.addEventListener('DOMContentLoaded', async () => {
         loadFormulaDictionary()
     ]);
     // Precarga no bloqueante del banco de exámenes en segundo plano
-    loadExternalExamsBank();
+    loadExternalExamsBank().then(() => {
+        const totalExams = Object.values(EXAM_QUESTIONS_DB).filter(q => q && q.category !== 'test').length;
+        const hubExamBadge = document.getElementById('hubBadgeExamCount');
+        if (hubExamBadge && totalExams > 0) hubExamBadge.innerText = `${totalExams} ejercicios`;
+    });
     renderFunctionCards();
-    showWizardStage(1);
+    showWizardStage(0);
 });
