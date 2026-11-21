@@ -1805,12 +1805,12 @@ export function buildAutoNomenclatureScene(semi) {
         const isPentose = (baseSugar === 'XILOSA' || baseSugar === 'ARABINOSA' || baseSugar === 'RIBOSA-PIRANOSA');
 
         const pts = {
-            O:  { x: 535, y: 118, el: 'O' },
-            C1: { x: 615, y: 190, el: 'C' },
-            C2: { x: 535, y: 262, el: 'C' },
-            C3: { x: 385, y: 262, el: 'C' },
-            C4: { x: 305, y: 190, el: 'C' },
-            C5: { x: 385, y: 118, el: 'C' }
+            O:  { x: 545, y: 92,  el: 'O' },
+            C1: { x: 635, y: 190, el: 'C' },
+            C2: { x: 545, y: 288, el: 'C' },
+            C3: { x: 375, y: 288, el: 'C' },
+            C4: { x: 285, y: 190, el: 'C' },
+            C5: { x: 375, y: 92,  el: 'C' }
         };
         Object.entries(pts).forEach(([k, p]) => {
             atoms.push({ id: `HW_${k}`, el: p.el, x: p.x, y: p.y, noValenceDots: true });
@@ -1828,8 +1828,8 @@ export function buildAutoNomenclatureScene(semi) {
             const topShift = (topEl.length > 2 && !topEl.startsWith('H')) ? Math.round((topEl.length - 1) * 9.5) : 0;
             const botShift = (botEl.length > 2 && !botEl.startsWith('H')) ? Math.round((botEl.length - 1) * 9.5) : 0;
             atoms.push(
-                { id: `${cId}_T`, el: topEl, x: cx + topShift, y: cy - 68, noValenceDots: true, bondTargetX: topShift ? cx : undefined },
-                { id: `${cId}_B`, el: botEl, x: cx + botShift, y: cy + 68, noValenceDots: true, bondTargetX: botShift ? cx : undefined }
+                { id: `${cId}_T`, el: topEl, x: cx + topShift, y: cy - 62, noValenceDots: true, bondTargetX: topShift ? cx : undefined },
+                { id: `${cId}_B`, el: botEl, x: cx + botShift, y: cy + 62, noValenceDots: true, bondTargetX: botShift ? cx : undefined }
             );
             bonds.push(
                 { from: cId, to: `${cId}_T`, order: 1 },
@@ -1839,25 +1839,25 @@ export function buildAutoNomenclatureScene(semi) {
 
         // C5: CH2OH arriba y H abajo (excepto L-arabinosa / pentosas sin C6)
         if (isPentose) {
-            addSubstituentsAtC('HW_C5', 385, 118, 'H', 'H');
+            addSubstituentsAtC('HW_C5', 375, 92, 'H', 'H');
         } else {
-            addSubstituentsAtC('HW_C5', 385, 118, 'CH₂OH', 'H');
+            addSubstituentsAtC('HW_C5', 375, 92, 'CH₂OH', 'H');
         }
 
         // C1: alpha (OH abajo, H arriba) vs beta (OH arriba, H abajo)
-        addSubstituentsAtC('HW_C1', 615, 190, isBeta ? 'OH' : 'H', isBeta ? 'H' : 'OH');
+        addSubstituentsAtC('HW_C1', 635, 190, isBeta ? 'OH' : 'H', isBeta ? 'H' : 'OH');
 
         // C2: Manosa / Arabinosa tienen OH arriba; Glucosa / Galactosa / Xilosa tienen OH abajo
         const c2OhUp = (baseSugar === 'MANOSA' || baseSugar === 'ARABINOSA');
-        addSubstituentsAtC('HW_C2', 535, 262, c2OhUp ? 'OH' : 'H', c2OhUp ? 'H' : 'OH');
+        addSubstituentsAtC('HW_C2', 545, 288, c2OhUp ? 'OH' : 'H', c2OhUp ? 'H' : 'OH');
 
         // C3: Glucosa / Galactosa / Manosa / Xilosa / Arabinosa tienen OH arriba; Ribosa tiene OH abajo
         const c3OhUp = (baseSugar !== 'RIBOSA-PIRANOSA');
-        addSubstituentsAtC('HW_C3', 385, 262, c3OhUp ? 'OH' : 'H', c3OhUp ? 'H' : 'OH');
+        addSubstituentsAtC('HW_C3', 375, 288, c3OhUp ? 'OH' : 'H', c3OhUp ? 'H' : 'OH');
 
         // C4: Galactosa / Arabinosa tienen OH arriba; Glucosa / Manosa / Xilosa tienen OH abajo
         const c4OhUp = (baseSugar === 'GALACTOSA' || baseSugar === 'ARABINOSA');
-        addSubstituentsAtC('HW_C4', 305, 190, c4OhUp ? 'OH' : 'H', c4OhUp ? 'H' : 'OH');
+        addSubstituentsAtC('HW_C4', 285, 190, c4OhUp ? 'OH' : 'H', c4OhUp ? 'H' : 'OH');
 
         return { atoms, bonds };
     }
@@ -1865,6 +1865,7 @@ export function buildAutoNomenclatureScene(semi) {
     if (s.startsWith('FISCHER-')) {
         // Proyección de Fischer vertical (cadena abierta con C=O arriba, carbonos quirales H—C—OH / HO—C—H, y CH2OH abajo)
         // Formato: FISCHER-ALDOSA-R-L-R-R  o  FISCHER-CETOSA-L-R-R
+        const isDeoxy = s.endsWith('-DEOXY');
         const cleanFischer = isDeoxy ? s.slice(0, -6) : s;
         const parts = cleanFischer.split('-');
         const type = parts[1]; // ALDOSA o CETOSA
