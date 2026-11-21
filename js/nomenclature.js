@@ -267,9 +267,9 @@ export function renderNomenclatureSceneToSvg(item) {
         if (a.isVertex) return { hw: 0, hh: 0 };
         if (a.ring === 'phenyl') return { hw: 30, hh: 30 };
         const txt = String(a.el || '');
-        const charHalf = isCompactMobile() ? 9.2 : 7.8;
-        const hw = Math.max(15, txt.length * charHalf + 8);
-        const hh = isCompactMobile() ? 21 : 17;
+        const charHalf = isCompactMobile() ? 8.5 : 7.2;
+        const hw = Math.max(10, txt.length * charHalf + 4);
+        const hh = isCompactMobile() ? 14 : 11.5;
         return { hw, hh };
     };
 
@@ -294,10 +294,10 @@ export function renderNomenclatureSceneToSvg(item) {
         const ang = Math.atan2(a2.y - a1.y, p2x - p1x);
         const cosA = Math.abs(Math.cos(ang));
         const sinA = Math.abs(Math.sin(ang));
-        const box1 = a1.bondTargetX !== undefined ? { hw: 14, hh: getNakedTextBox(a1).hh } : getNakedTextBox(a1);
-        const box2 = a2.bondTargetX !== undefined ? { hw: 14, hh: getNakedTextBox(a2).hh } : getNakedTextBox(a2);
-        const trim1 = a1.isVertex ? 0 : (Math.min(box1.hw / (cosA || 0.01), box1.hh / (sinA || 0.01), Math.max(box1.hw, box1.hh)) + 4);
-        const trim2 = a2.isVertex ? 0 : (Math.min(box2.hw / (cosA || 0.01), box2.hh / (sinA || 0.01), Math.max(box2.hw, box2.hh)) + 4);
+        const box1 = a1.bondTargetX !== undefined ? { hw: 10, hh: getNakedTextBox(a1).hh } : getNakedTextBox(a1);
+        const box2 = a2.bondTargetX !== undefined ? { hw: 10, hh: getNakedTextBox(a2).hh } : getNakedTextBox(a2);
+        const trim1 = a1.isVertex ? 0 : (Math.min(box1.hw / (cosA || 0.01), box1.hh / (sinA || 0.01)) + 2);
+        const trim2 = a2.isVertex ? 0 : (Math.min(box2.hw / (cosA || 0.01), box2.hh / (sinA || 0.01)) + 2);
         const mappedCenter = b.inwardCenter ? { x: compactX(b.inwardCenter.x), y: compactY(b.inwardCenter.y) } : null;
         html += renderAnimatedBond(p1x, a1.y, p2x, a2.y, b.order || 1, b.state || 'normal', true, b.order || 1, 1, 1, b.stereo || null, mappedCenter, true, trim1, trim2);
     });
