@@ -31,62 +31,62 @@
       "stepsBySubstrate": {
         "etino_etanal": [
           {
-            "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–OH)",
-            "semiStep": "H–C≡C–H + H–OH",
+            "title": "Estado Inicial Desarrollado: Etino (H–C≡C–H) + Agua (H–O–H)",
+            "semiStep": "H–C≡C–H + H–O–H",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "Se observan las dos moléculas iniciales intactas antes de reaccionar: el etino lineal con su triple enlace C≡C y la molécula de agua H–O–H.",
+            "desc": "Se observan las dos moléculas iniciales intactas: el etino lineal con su triple enlace C≡C y la molécula de agua H–O–H.",
             "legend": {
               "breaking": "Ningún enlace roto todavía; reactivos iniciales intactos.",
               "forming": "Ningún enlace formado todavía.",
-              "movement": "Aproximación de la molécula de agua al triple enlace del etino."
+              "movement": "Las moléculas están separadas antes de que el agua se acerque sobre el triple enlace."
             },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 160,
+                  "x": 150,
                   "y": 215
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 295,
+                  "x": 285,
                   "y": 215,
                   "label": "Etino"
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 455,
+                  "x": 445,
                   "y": 215
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 585,
+                  "x": 580,
                   "y": 215
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 685,
-                  "y": 130,
+                  "x": 675,
+                  "y": 135,
                   "highlight": "#38bdf8",
                   "label": "Agua (H–O–H)"
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 775,
-                  "y": 130,
+                  "x": 770,
+                  "y": 135,
                   "highlight": "#38bdf8"
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
                   "x": 865,
-                  "y": 130,
+                  "y": 135,
                   "highlight": "#38bdf8"
                 }
               ],
@@ -124,67 +124,162 @@
               ],
               "texts": [
                 {
-                  "x": 635,
-                  "y": 175,
+                  "x": 630,
+                  "y": 180,
                   "text": "+"
                 }
               ]
             }
           },
           {
-            "title": "Ruptura en Rojo: Apertura de un Enlace π (C≡C) y Disociación de H–OH",
-            "semiStep": "H–C≡C–H + H–OH (Ruptura de π C≡C y enlace O–H)",
+            "title": "Aproximación: La Molécula de Agua se Coloca Encima del Triple Enlace",
+            "semiStep": "H–C≡C–H  +  H–O–H  (Aproximación sobre el enlace π)",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "Por catálisis de H⁺ y Hg²⁺, el agua se aproxima al triple enlace, rompiéndose un enlace π (C≡C) y un enlace O–H del agua mientras se trazan en verde los nuevos enlaces hacia C1 y C2.",
+            "desc": "La molécula de agua (H–O–H) se desplaza suavemente y se ubica justo encima del triple enlace del etino, orientando un hidrógeno hacia C1 y el oxígeno hacia C2.",
             "legend": {
-              "breaking": "En ROJO punteado: un enlace π del triple enlace y el enlace H–O del agua.",
-              "forming": "En VERDE punteado: formación simultánea de C1–H y C2–O.",
-              "movement": "Desplazamiento suave de H hacia C1 y del grupo –OH hacia C2."
+              "breaking": "Ningún enlace roto todavía; el agua se alinea sobre el triple enlace.",
+              "forming": "Interacción electrostática previa a la apertura del enlace π superior.",
+              "movement": "Desplazamiento de la molécula de agua hasta colocarse encima de C1≡C2."
             },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 175,
-                  "y": 230
+                  "x": 200,
+                  "y": 235
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 310,
-                  "y": 230
+                  "x": 345,
+                  "y": 235,
+                  "label": "Etino"
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 490,
-                  "y": 230
+                  "x": 525,
+                  "y": 235
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 630,
-                  "y": 230
+                  "x": 670,
+                  "y": 235
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 310,
+                  "x": 345,
+                  "y": 110,
+                  "highlight": "#38bdf8"
+                },
+                {
+                  "id": "O_carb",
+                  "el": "O",
+                  "x": 525,
+                  "y": 110,
+                  "highlight": "#38bdf8",
+                  "label": "Agua encima del triple enlace",
+                  "labelPos": "top"
+                },
+                {
+                  "id": "H_mig",
+                  "el": "H",
+                  "x": 635,
+                  "y": 110,
+                  "highlight": "#38bdf8"
+                }
+              ],
+              "bonds": [
+                {
+                  "from": "H_izq",
+                  "to": "C1",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "C1",
+                  "to": "C2",
+                  "order": 3,
+                  "state": "normal"
+                },
+                {
+                  "from": "C2",
+                  "to": "H_der",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "H_agua",
+                  "to": "O_carb",
+                  "order": 1,
+                  "state": "normal"
+                },
+                {
+                  "from": "O_carb",
+                  "to": "H_mig",
+                  "order": 1,
+                  "state": "normal"
+                }
+              ]
+            }
+          },
+          {
+            "title": "Ruptura de 1 Enlace π Superior y 1 Enlace O–H; Formación de C1–H y C2–O",
+            "semiStep": "H–C≡C–H + H–O–H (Ruptura de 1 enlace π superior y O–H)",
+            "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
+            "desc": "Se rompe únicamente el enlace π superior del triple enlace (en rojo punteado, quedando intactos los otros dos enlaces) junto con un enlace H–O del agua, formándose en verde los nuevos enlaces C1–H y C2–O.",
+            "legend": {
+              "breaking": "En ROJO punteado: únicamente 1 enlace π (el superior) del triple enlace y 1 enlace H–O del agua.",
+              "forming": "En VERDE punteado: nuevos enlaces C1–H y C2–O.",
+              "movement": "Adición electrófila y nucleófila simultánea sobre los carbonos del triple enlace."
+            },
+            "scene": {
+              "atoms": [
+                {
+                  "id": "H_izq",
+                  "el": "H",
+                  "x": 200,
+                  "y": 235
+                },
+                {
+                  "id": "C1",
+                  "el": "C",
+                  "x": 345,
+                  "y": 235
+                },
+                {
+                  "id": "C2",
+                  "el": "C",
+                  "x": 525,
+                  "y": 235
+                },
+                {
+                  "id": "H_der",
+                  "el": "H",
+                  "x": 670,
+                  "y": 235
+                },
+                {
+                  "id": "H_agua",
+                  "el": "H",
+                  "x": 345,
                   "y": 110,
                   "highlight": "#fbbf24"
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 490,
+                  "x": 525,
                   "y": 110,
                   "highlight": "#38bdf8"
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
-                  "x": 585,
+                  "x": 635,
                   "y": 110,
                   "highlight": "#38bdf8"
                 }
@@ -236,23 +331,23 @@
               "arrows": [
                 {
                   "type": "full",
-                  "x1": 395,
-                  "y1": 218,
-                  "cx": 335,
-                  "cy": 165,
-                  "x2": 315,
-                  "y2": 128,
-                  "label": "Captura H⁺"
+                  "x1": 435,
+                  "y1": 220,
+                  "cx": 375,
+                  "cy": 168,
+                  "x2": 352,
+                  "y2": 130,
+                  "label": "Par π captura H"
                 },
                 {
                   "type": "full",
-                  "x1": 490,
-                  "y1": 130,
-                  "cx": 518,
-                  "cy": 170,
-                  "x2": 495,
-                  "y2": 210,
-                  "label": "Ataque OH"
+                  "x1": 525,
+                  "y1": 132,
+                  "cx": 552,
+                  "cy": 172,
+                  "x2": 530,
+                  "y2": 212,
+                  "label": "O ataca C2"
                 }
               ]
             }
@@ -261,59 +356,59 @@
             "title": "Intermediario Formado: Enol Inestable (Alcohol Vinílico, CH₂=CH–O–H)",
             "semiStep": "[CH₂=CH–O–H] (Enol inestable / Alcohol vinílico)",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "Se consolida el alcohol vinílico (CH₂=CH–O–H) con geometría trigonal plana (120°). Este enol es inestable y experimentará tautomería ceto-enólica.",
+            "desc": "Se consolida el alcohol vinílico (CH₂=CH–O–H), un enol inestable con doble enlace C1=C2 que experimentará tautomería ceto-enólica.",
             "legend": {
-              "breaking": "Enlace π C≡C y enlace H–OH ya rotos.",
+              "breaking": "Enlace π superior y enlace H–O ya rotos.",
               "forming": "Nuevos enlaces C1–H y C2–O consolidados en el enol.",
-              "movement": "Reacomodo angular del enol antes de iniciar la tautomería."
+              "movement": "Intermediario enólico listo para la tautomería ceto-enólica."
             },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 180,
-                  "y": 230
+                  "x": 200,
+                  "y": 235
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 310,
+                  "x": 345,
                   "y": 110,
                   "highlight": "#fbbf24"
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 310,
-                  "y": 230,
+                  "x": 345,
+                  "y": 235,
                   "highlight": "#fbbf24",
                   "label": "Enol inestable"
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 490,
-                  "y": 230,
+                  "x": 525,
+                  "y": 235,
                   "highlight": "#fbbf24"
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 635,
-                  "y": 230
+                  "x": 670,
+                  "y": 235
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 490,
+                  "x": 525,
                   "y": 110,
                   "highlight": "#38bdf8"
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
-                  "x": 395,
+                  "x": 430,
                   "y": 110,
                   "highlight": "#fbbf24"
                 }
@@ -359,61 +454,62 @@
             }
           },
           {
-            "title": "Ruptura en el Enol: Separación del Enlace O–H y Apertura del Doble Enlace C1=C2",
-            "semiStep": "[CH₂=CH–O···H] (Ruptura O–H y π C=C)",
+            "title": "Separación del Protón H⁺ y Ataque de los Electrones del Doble Enlace C=C",
+            "semiStep": "[CH₂=CH–O⁻  +  H⁺] (Ruptura O–H → protón H⁺ capturado por electrones π C=C)",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "Se rompe en rojo punteado el enlace O–H del hidroxilo y el enlace π de C1=C2, preparando la migración del protón H⁺ hacia el carbono C1.",
+            "desc": "El hidrógeno se separa del oxígeno como protón H⁺ (enlace O–H en rojo). Los electrones del doble enlace C1=C2 (en rojo) atacan y capturan ese protón H⁺, que viajará hasta ubicarse debajo del carbono C1.",
             "legend": {
-              "breaking": "En ROJO punteado: ruptura del enlace O–H y del enlace π C1=C2.",
-              "forming": "Preparación para la migración del protón H⁺ hacia C1.",
-              "movement": "El par electrónico del O–H baja para formar C2=O mientras C1 captura el H⁺."
+              "breaking": "En ROJO punteado: ruptura heterolítica O–H (liberando el protón H⁺) y apertura del enlace π C1=C2.",
+              "forming": "Los electrones π de C1=C2 capturan el protón H⁺ para llevarlo hasta abajo de C1.",
+              "movement": "El par e⁻ de O–H baja hacia C2=O mientras los electrones del doble enlace C=C enlazan al protón H⁺."
             },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 180,
+                  "x": 200,
                   "y": 230
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 310,
+                  "x": 345,
                   "y": 105
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 310,
+                  "x": 345,
                   "y": 230
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 490,
+                  "x": 525,
                   "y": 230
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 635,
+                  "x": 670,
                   "y": 230
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 490,
+                  "x": 525,
                   "y": 105,
                   "highlight": "#ef4444"
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
-                  "x": 365,
-                  "y": 135,
-                  "highlight": "#ef4444",
-                  "label": "Se separa O–H"
+                  "charge": "+",
+                  "x": 415,
+                  "y": 148,
+                  "highlight": "#fbbf24",
+                  "label": "Protón H⁺"
                 }
               ],
               "bonds": [
@@ -457,82 +553,82 @@
               "arrows": [
                 {
                   "type": "full",
-                  "x1": 435,
-                  "y1": 108,
-                  "cx": 460,
-                  "cy": 145,
-                  "x2": 484,
-                  "y2": 175,
-                  "label": "Par e⁻ hacia C=O"
+                  "x1": 475,
+                  "y1": 112,
+                  "cx": 495,
+                  "cy": 148,
+                  "x2": 520,
+                  "y2": 178,
+                  "label": "Par O–H → C=O"
                 },
                 {
                   "type": "full",
-                  "x1": 400,
-                  "y1": 222,
-                  "cx": 370,
-                  "cy": 185,
-                  "x2": 365,
-                  "y2": 152,
-                  "label": "Captura H⁺"
+                  "x1": 435,
+                  "y1": 225,
+                  "cx": 420,
+                  "cy": 195,
+                  "x2": 415,
+                  "y2": 168,
+                  "label": "e⁻ del C=C toman H⁺"
                 }
               ]
             }
           },
           {
-            "title": "Migración del Hidrógeno hacia C1 y Formación del Doble Enlace Carbonilo C2=O",
-            "semiStep": "CH₃–CH=O (Formación de C=O y C1–H)",
+            "title": "El Protón H⁺ Viaja hasta Abajo de C1 Formando C1–H y se Cierra C2=O",
+            "semiStep": "CH₃–CH=O (Formación de C1–H abajo y doble enlace C2=O)",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
-            "desc": "El hidrógeno migra suavemente hasta unirse al carbono C1 (formando el grupo metilo –CH₃), mientras entre C2 y O se forma el doble enlace carbonilo C2=O.",
+            "desc": "El hidrógeno viaja hasta colocarse debajo del carbono C1 formando el nuevo enlace C1–H en verde, mientras entre C2 y O se consolida el doble enlace carbonilo C2=O.",
             "legend": {
               "breaking": "Enlace O–H y enlace π C1=C2 ya separados.",
-              "forming": "En VERDE punteado: nuevo enlace C1–H y doble enlace carbonilo C2=O.",
-              "movement": "Desplazamiento del H hacia C1 y cierre del doble enlace C2=O."
+              "forming": "En VERDE punteado: nuevo enlace C1–H debajo de C1 y doble enlace carbonilo C2=O.",
+              "movement": "Viaje del hidrógeno hasta la posición inferior de C1 y cierre del grupo carbonilo."
             },
             "scene": {
               "atoms": [
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 180,
+                  "x": 200,
                   "y": 210
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 310,
+                  "x": 345,
                   "y": 95
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
-                  "x": 310,
+                  "x": 345,
                   "y": 325,
                   "highlight": "#10b981",
-                  "label": "H unido a C1"
+                  "label": "H unido debajo de C1"
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 310,
+                  "x": 345,
                   "y": 210
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 470,
+                  "x": 515,
                   "y": 210
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 542,
+                  "x": 590,
                   "y": 82,
                   "highlight": "#10b981"
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 542,
+                  "x": 590,
                   "y": 338
                 }
               ],
@@ -577,25 +673,25 @@
               "arrows": [
                 {
                   "type": "full",
-                  "x1": 360,
-                  "y1": 145,
-                  "cx": 335,
-                  "cy": 215,
-                  "x2": 315,
-                  "y2": 300,
-                  "label": "Migra H → C1"
+                  "x1": 405,
+                  "y1": 160,
+                  "cx": 375,
+                  "cy": 235,
+                  "x2": 352,
+                  "y2": 302,
+                  "label": "Viaja H → abajo de C1"
                 }
               ]
             }
           },
           {
-            "title": "Producto Consolidado: Etanal / Acetaldehído (CH₃–CHO)",
-            "semiStep": "CH₃–CHO (Etanal)",
+            "title": "Producto Consolidado: Etanal (Acetaldehído) (CH₃–CHO)",
+            "semiStep": "CH₃–CHO (Etanal / Acetaldehído)",
             "semiGlobal": "HC≡CH + H₂O ──(H₂SO₄/HgSO₄)──► CH₃–CHO",
             "desc": "Queda consolidado el etanal (acetaldehído, CH₃–CHO), único aldehído obtenido por hidratación de un alquino.",
             "legend": {
-              "breaking": "Tautomería completada.",
-              "forming": "En VERDE sólido: grupo carbonilo C=O y grupo metilo CH₃ del etanal.",
+              "breaking": "Tautomería ceto-enólica completada.",
+              "forming": "En VERDE sólido: grupo carbonilo C=O y grupo metilo –CH₃ del Etanal (Acetaldehído).",
               "movement": "Producto aldehído estable obtenido."
             },
             "scene": {
@@ -603,48 +699,48 @@
                 {
                   "id": "H_izq",
                   "el": "H",
-                  "x": 175,
+                  "x": 195,
                   "y": 210
                 },
                 {
                   "id": "H_agua",
                   "el": "H",
-                  "x": 310,
-                  "y": 95
+                  "x": 345,
+                  "y": 92
                 },
                 {
                   "id": "H_mig",
                   "el": "H",
-                  "x": 310,
-                  "y": 325,
+                  "x": 345,
+                  "y": 328,
                   "highlight": "#10b981"
                 },
                 {
                   "id": "C1",
                   "el": "C",
-                  "x": 310,
+                  "x": 345,
                   "y": 210
                 },
                 {
                   "id": "C2",
                   "el": "C",
-                  "x": 470,
+                  "x": 520,
                   "y": 210,
                   "highlight": "#10b981",
-                  "label": "Etanal (Aldehído)"
+                  "label": "Etanal\n(Acetaldehído)"
                 },
                 {
                   "id": "O_carb",
                   "el": "O",
-                  "x": 542,
-                  "y": 82,
+                  "x": 598,
+                  "y": 80,
                   "highlight": "#10b981"
                 },
                 {
                   "id": "H_der",
                   "el": "H",
-                  "x": 542,
-                  "y": 338
+                  "x": 598,
+                  "y": 340
                 }
               ],
               "bonds": [
