@@ -1865,7 +1865,8 @@ export function buildAutoNomenclatureScene(semi) {
     if (s.startsWith('FISCHER-')) {
         // Proyección de Fischer vertical (cadena abierta con C=O arriba, carbonos quirales H—C—OH / HO—C—H, y CH2OH abajo)
         // Formato: FISCHER-ALDOSA-R-L-R-R  o  FISCHER-CETOSA-L-R-R
-        const parts = s.split('-');
+        const cleanFischer = isDeoxy ? s.slice(0, -6) : s;
+        const parts = cleanFischer.split('-');
         const type = parts[1]; // ALDOSA o CETOSA
         const dirs = parts.slice(2); // ['R','L','R','R']
         const stepY = 66;
@@ -1916,7 +1917,6 @@ export function buildAutoNomenclatureScene(semi) {
         });
 
         const botY = startY + (dirs.length + 1) * stepY;
-        const isDeoxy = s.endsWith('-DEOXY');
         const botEl = isDeoxy ? 'CH₃' : 'CH₂OH';
         const botShift = isDeoxy ? 18 : 28;
         atoms.push({ id: 'FS_BOT', el: botEl, x: cx + botShift, y: botY, noValenceDots: true, bondTargetX: cx });
@@ -2039,21 +2039,29 @@ export function buildAutoNomenclatureScene(semi) {
             'HEPARINA':    { u1: 'Ác. Idurónico-2S',  b: 'α(1→4)', u2: 'Glucosamina-N,6-diS', branch: '' }
         };
         const cfgP = poliMap[kind] || poliMap['ALMIDON'];
-        atoms.push(
-            { id: 'P_L', el: '[ — O', x: 140, y: 195, noValenceDots: true },
-            { id: 'P_U1', el: cfgP.u1, x: 315, y: 195, noValenceDots: true },
-            { id: 'P_B', el: cfgP.b, x: 485, y: 195, noValenceDots: true },
-            { id: 'P_U2', el: cfgP.u2, x: 655, y: 195, noValenceDots: true },
-            { id: 'P_R', el: 'O — ]ₙ', x: 825, y: 195, noValenceDots: true }
-        );
-        bonds.push(
-            { from: 'P_L', to: 'P_U1', order: 1 },
-            { from: 'P_U1', to: 'P_B', order: 1 },
-            { from: 'P_B', to: 'P_U2', order: 1 },
-            { from: 'P_U2', to: 'P_R', order: 1 }
-        );
+        const nodesPoli = [
+            { id: 'P_L', el: '[ — O' },
+            { id: 'P_U1', el: cfgP.u1 },
+            { id: 'P_B', el: cfgP.b },
+            { id: 'P_U2', el: cfgP.u2 },
+            { id: 'P_R', el: 'O — ]ₙ' }
+        ];
+        // Ancho real en coordenadas de escenario (compensando COMPACT_K = 0.44 en tarjetas)
+        const halfWidths = nodesPoli.map(nd => Math.max(36, nd.el.length * 16.5 + 18));
+        const xs = [0];
+        for (let i = 1; i < nodesPoli.length; i++) {
+            xs.push(xs[i - 1] + halfWidths[i - 1] + halfWidths[i] + 46);
+        }
+        const shiftP = Math.round(460 - xs[xs.length - 1] / 2);
+        nodesPoli.forEach((nd, i) => {
+            atoms.push({ id: nd.id, el: nd.el, x: xs[i] + shiftP, y: 195, noValenceDots: true });
+            if (i > 0) {
+                bonds.push({ from: nodesPoli[i - 1].id, to: nd.id, order: 1 });
+            }
+        });
         if (cfgP.branch) {
-            atoms.push({ id: 'P_BR', el: cfgP.branch, x: 655, y: 92, noValenceDots: true });
+            const u2X = xs[3] + shiftP;
+            atoms.push({ id: 'P_BR', el: cfgP.branch, x: u2X, y: 80, noValenceDots: true });
             bonds.push({ from: 'P_U2', to: 'P_BR', order: 1 });
         }
         return { atoms, bonds };
@@ -2073,9 +2081,9 @@ export function buildAutoNomenclatureScene(semi) {
                 { id: 'G1', el: 'CH₂', x: 155, y: 80, noValenceDots: true },
                 { id: 'G2', el: 'CH', x: 155, y: 190, noValenceDots: true },
                 { id: 'G3', el: 'CH₂', x: 155, y: 300, noValenceDots: true },
-                { id: 'A1', el: chains[0], x: 575, y: 80, noValenceDots: true },
-                { id: 'A2', el: chains[1], x: 575, y: 190, noValenceDots: true },
-                { id: 'A3', el: chains[2], x: 575, y: 300, noValenceDots: true }
+                { id: 'A1', el: chains[0], x: 640, y: 80, noValenceDots: true },
+                { id: 'A2', el: chains[1], x: 640, y: 190, noValenceDots: true },
+                { id: 'A3', el: chains[2], x: 640, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
@@ -2095,9 +2103,9 @@ export function buildAutoNomenclatureScene(semi) {
                 { id: 'G1', el: 'CH₂', x: 145, y: 80, noValenceDots: true },
                 { id: 'G2', el: 'CH', x: 145, y: 190, noValenceDots: true },
                 { id: 'G3', el: 'CH₂', x: 145, y: 300, noValenceDots: true },
-                { id: 'A1', el: 'O—CO—R₁ (Ác. Graso Sat.)', x: 585, y: 80, noValenceDots: true },
-                { id: 'A2', el: 'O—CO—R₂ (Ác. Graso Insat.)', x: 585, y: 190, noValenceDots: true },
-                { id: 'HD', el: headMap[kind], x: 585, y: 300, noValenceDots: true }
+                { id: 'A1', el: 'O—CO—R₁ (Ác. Graso Sat.)', x: 650, y: 80, noValenceDots: true },
+                { id: 'A2', el: 'O—CO—R₂ (Ác. Graso Insat.)', x: 650, y: 190, noValenceDots: true },
+                { id: 'HD', el: headMap[kind], x: 650, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
@@ -2107,11 +2115,11 @@ export function buildAutoNomenclatureScene(semi) {
         }
         if (kind === 'CERAMIDA' || kind === 'ESFINGOMIELINA') {
             atoms.push(
-                { id: 'E3', el: 'CH₃—(CH₂)₁₂—CH=CH—CH(OH)', x: 255, y: 80, noValenceDots: true },
-                { id: 'E2', el: 'CH', x: 255, y: 190, noValenceDots: true },
-                { id: 'E1', el: 'CH₂', x: 255, y: 300, noValenceDots: true },
-                { id: 'AM', el: 'NH—CO—R (Ácido Graso)', x: 645, y: 190, noValenceDots: true },
-                { id: 'C1G', el: kind === 'ESFINGOMIELINA' ? 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃' : 'OH', x: 645, y: 300, noValenceDots: true }
+                { id: 'E3', el: 'CH₃—(CH₂)₁₂—CH=CH—CH(OH)', x: 210, y: 80, noValenceDots: true },
+                { id: 'E2', el: 'CH', x: 210, y: 190, noValenceDots: true },
+                { id: 'E1', el: 'CH₂', x: 210, y: 300, noValenceDots: true },
+                { id: 'AM', el: 'NH—CO—R (Ácido Graso)', x: 690, y: 190, noValenceDots: true },
+                { id: 'C1G', el: kind === 'ESFINGOMIELINA' ? 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃' : 'OH', x: 690, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'E3', to: 'E2', order: 1 }, { from: 'E2', to: 'E1', order: 1 },
