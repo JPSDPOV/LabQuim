@@ -1283,18 +1283,28 @@ export function buildAutoNomenclatureScene(semi) {
                     { from: sid, to: `S_ISO_S_${sIdx}`, order: 1 }
                 );
             } else {
-                // Si el sustituyente es -OCH3 (anisol) o -OCH2CH3 (fenetol) o -NHCH3, desplegar el enlace O—CH3 verticalmente/radialmente
-                const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃)$/);
+                // Si el sustituyente es -OCH3 (anisol), -OCH2CH3 (fenetol), -SCH3, -NHCH3, etc., desplegar el enlace O—R verticalmente/radialmente alineado al carbono
+                const mEtherSub = grp.match(/^(O|S|NH)(CH₃|CH₂CH₃|CH₂CH₂CH₃|C₆H₅)$/);
                 if (mEtherSub && totalHere === 1) {
                     const heteroEl = mEtherSub[1];
-                    const alkylEl = mEtherSub[2];
-                    atoms.push({ id: sid, el: heteroEl, x: sx, y: sy, noValenceDots: true });
+                    let alkylEl = mEtherSub[2];
+                    const isVert = Math.abs(Math.cos(v.ang)) < 0.35;
+                    if (!isVert && Math.cos(v.ang) < -0.25) {
+                        if (alkylEl === 'CH₃') alkylEl = 'H₃C';
+                        else if (alkylEl === 'CH₂CH₃') alkylEl = 'H₃CH₂C';
+                    }
+                    const nearDist = R + 76;
+                    const farDist = R + 148;
+                    const nearX = Math.round(cx + Math.cos(v.ang) * (nearDist * 0.92));
+                    const nearY = Math.round(cy + Math.sin(v.ang) * nearDist);
+                    atoms.push({ id: sid, el: heteroEl, x: nearX, y: nearY, noValenceDots: true });
                     bonds.push({ from: v.id, to: sid, order: 1 });
 
-                    const sx2 = Math.round(cx + Math.cos(v.ang) * ((baseDist + 66) * 0.92));
-                    const sy2 = Math.round(cy + Math.sin(v.ang) * (baseDist + 66));
+                    const sx2 = Math.round(cx + Math.cos(v.ang) * (farDist * 0.92));
+                    const sy2 = Math.round(cy + Math.sin(v.ang) * farDist);
                     const sid2 = `S2_${sIdx}`;
-                    atoms.push({ id: sid2, el: alkylEl, x: sx2, y: sy2, noValenceDots: true });
+                    const shiftC2 = (isVert && alkylEl.length > 1 && !alkylEl.startsWith('H')) ? Math.round((alkylEl.length - 1) * 9.5) : 0;
+                    atoms.push({ id: sid2, el: alkylEl, x: sx2 + shiftC2, y: sy2, noValenceDots: true, bondTargetX: isVert ? sx2 : undefined });
                     bonds.push({ from: sid, to: sid2, order: 1 });
                 } else {
                     const isVert = Math.abs(Math.cos(v.ang)) < 0.35;
@@ -2335,7 +2345,7 @@ export function buildAutoNomenclatureScene(semi) {
                 const bid = `BR_${uniqueTag}`;
                 const bOrder = rawEl.startsWith('=') ? 2 : 1;
                 const bLabel = rawEl.startsWith('=') ? rawEl.slice(1) : rawEl;
-                const shiftFirstC = (bLabel.length > 1 && bLabel.startsWith('C')) ? Math.round((bLabel.length - 1) * 9.5) : 0;
+                const shiftFirstC = (bLabel.length > 1 && !bLabel.startsWith('H')) ? Math.round((bLabel.length - 1) * 9.5) : 0;
                 atoms.push({
                     id: bid,
                     el: bLabel,
