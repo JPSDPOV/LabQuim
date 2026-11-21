@@ -36,12 +36,21 @@ let NOMENCLATURE_GROUPS = [
 
 let NOMENCLATURE_BANK = [];
 let nomDeck = [];
+let nomCardResults = []; // 'correct' | 'wrong' | null por índice
 let nomCurrentIndex = 0;
 let nomIsFlipped = false;
-let nomCorrectCount = 0;
-let nomWrongCount = 0;
-let nomMissedItems = [];
+let nomReviewingFromSummary = false;
 let nomJsonLoaded = false;
+
+function getNomCounts() {
+    let correct = 0;
+    let wrong = 0;
+    nomCardResults.forEach(r => {
+        if (r === 'correct') correct++;
+        else if (r === 'wrong') wrong++;
+    });
+    return { correct, wrong };
+}
 
 export async function loadExternalNomenclatureBank() {
     if (nomJsonLoaded) return;
@@ -67,8 +76,43 @@ export async function loadExternalNomenclatureBank() {
     }
 }
 
+export function toggleNomDirectSearchPanel(forceState = null) {
+    const panel = document.getElementById('nomDirectSearchPanel');
+    const chevron = document.getElementById('nomDirectSearchChevron');
+    const input = document.getElementById('nomFormulaSearchInput');
+    if (!panel) return;
+
+    const shouldOpen = forceState !== null ? forceState : panel.classList.contains('hidden');
+    panel.classList.toggle('hidden', !shouldOpen);
+    if (chevron) {
+        chevron.innerText = shouldOpen ? 'Cerrar ✕' : 'Abrir 🔍';
+    }
+    if (shouldOpen && input) {
+        input.focus();
+    } else if (!shouldOpen) {
+        clearNomenclatureSearch();
+    }
+}
+
+export function proceedToNomenclatureCountStep() {
+    const selectedGroups = new Set(getSelectedNomenclatureGroups());
+    if (selectedGroups.size === 0) {
+        alert('Selecciona al menos un grupo funcional en el checklist.');
+        return;
+    }
+    updateNomenclatureAvailableCount();
+    document.getElementById('nomStep1GroupsBox')?.classList.add('hidden');
+    document.getElementById('nomStep2CountBox')?.classList.remove('hidden');
+}
+
+export function backToNomenclatureGroupsStep() {
+    document.getElementById('nomStep2CountBox')?.classList.add('hidden');
+    document.getElementById('nomStep1GroupsBox')?.classList.remove('hidden');
+}
+
 export async function openNomenclatureSetup() {
     await loadExternalNomenclatureBank();
+    nomReviewingFromSummary = false;
     const wizSections = ['wizardHomeHub', 'wizardExamSearchHub', 'wizardStep1', 'wizardStep2', 'wizardStep3', 'wizardStep4', 'wizardExamStage', 'nomenclaturePracticeSection'];
     state.wizardStage = 'nomenclature';
     wizSections.forEach(id => {
@@ -77,6 +121,11 @@ export async function openNomenclatureSetup() {
     });
     const bar = document.getElementById('wizardBreadcrumb')?.parentElement;
     if (bar) bar.classList.add('hidden');
+
+    // Restablecer vista inicial de configuración: buscador cerrado, grupos visibles, cantidad oculta
+    toggleNomDirectSearchPanel(false);
+    document.getElementById('nomStep2CountBox')?.classList.add('hidden');
+    document.getElementById('nomStep1GroupsBox')?.classList.remove('hidden');
 
     const setupSec = document.getElementById('nomenclatureSetupSection');
     if (setupSec) setupSec.classList.remove('hidden');
@@ -162,18 +211,35 @@ export function startNomenclatureSession(customItems = null) {
 
     const countVal = document.getElementById('nomQuestionCountSelect')?.value || '10';
     nomDeck = (countVal === 'all' || customItems) ? shuffled : shuffled.slice(0, Number(countVal));
+    nomCardResults = new Array(nomDeck.length).fill(null);
     nomCurrentIndex = 0;
-    nomCorrectCount = 0;
-    nomWrongCount = 0;
-    nomMissedItems = [];
+    nomReviewingFromSummary = false;
 
+    showActiveCardView();
+    renderCurrentNomenclatureCard();
+}
+
+function showActiveCardView() {
     document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
     document.getElementById('nomSummaryBox')?.classList.add('hidden');
     document.getElementById('nomCardOuter')?.classList.remove('hidden');
     document.getElementById('nomCardWrapper')?.classList.remove('hidden');
+    document.getElementById('nomFinishBar')?.classList.remove('hidden');
     document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
 
-    renderCurrentNomenclatureCard();
+    const backLbl = document.getElementById('btnNomPracticeBackLabel');
+    if (backLbl) {
+        backLbl.innerText = nomReviewingFromSummary ? 'Volver a Resultados' : 'Volver';
+    }
+}
+
+export function handleNomenclaturePracticeBack() {
+    if (nomReviewingFromSummary) {
+        nomReviewingFromSummary = false;
+        finishNomenclatureSession();
+    } else {
+        openNomenclatureSetup();
+    }
 }
 
 export function renderNomenclatureSceneToSvg(item) {
@@ -184,7 +250,6 @@ export function renderNomenclatureSceneToSvg(item) {
     let sc = item.scene || buildAutoNomenclatureScene(item.semiFormula);
     if (!sc) sc = { atoms: [], bonds: [] };
 
-    // Compactar distancias de enlace (factor 0.64 alrededor del centro 460, 190) para enlaces cortos y limpios
     const COMPACT_K = 0.44;
     const compactX = (rawX) => mapStageX(460 + (rawX - 460) * COMPACT_K);
     const compactY = (rawY) => mapStageY(190 + (rawY - 190) * COMPACT_K);
@@ -253,7 +318,6 @@ export function renderNomenclatureSceneToSvg(item) {
         const centerY = (minY + maxY) / 2;
         const rawW = (maxX - minX) + 36;
         const rawH = (maxY - minY) + 32;
-        // Mantener la proporción del contenedor de la tarjeta (~2.6:1 en escritorio, ~1.5:1 en móvil) para maximizar el tamaño sin recortes
         const cardEl = document.getElementById('nomSvgCanvas');
         const rect = cardEl ? cardEl.getBoundingClientRect() : null;
         const aspect = (rect && rect.width > 50 && rect.height > 50) ? (rect.width / rect.height) : 2.3;
@@ -274,6 +338,7 @@ export function renderCurrentNomenclatureCard() {
     const item = nomDeck[nomCurrentIndex];
     if (!item) return;
 
+    const { correct, wrong } = getNomCounts();
     nomIsFlipped = false;
     document.getElementById('nomCardInner')?.classList.remove('is-flipped');
     document.getElementById('nomControlsFlipHint')?.classList.remove('hidden');
@@ -283,8 +348,13 @@ export function renderCurrentNomenclatureCard() {
     const grpObj = NOMENCLATURE_GROUPS.find(g => g.id === item.group);
     document.getElementById('nomGroupTag').innerText = grpObj ? grpObj.label : item.group;
     document.getElementById('nomStereoHintBadge').innerText = item.badge || 'Compuesto Orgánico';
-    document.getElementById('nomScoreCorrect').innerText = nomCorrectCount;
-    document.getElementById('nomScoreWrong').innerText = nomWrongCount;
+    document.getElementById('nomScoreCorrect').innerText = correct;
+    document.getElementById('nomScoreWrong').innerText = wrong;
+
+    const backLbl = document.getElementById('btnNomPracticeBackLabel');
+    if (backLbl) {
+        backLbl.innerText = nomReviewingFromSummary ? 'Volver a Resultados' : 'Volver';
+    }
 
     const primaryEl = document.getElementById('nomAnswerPrimary');
     const nameStr = String(item.name || '');
@@ -309,7 +379,6 @@ export function renderCurrentNomenclatureCard() {
         synBox.classList.add('hidden');
     }
 
-    // Limpiar cualquier mención residual a "Ejercicio Unidad 13:"
     const cleanExp = String(item.explanation || '')
         .replace(/^Ejercicio\s+Unidad\s+\d+\s*:\s*/i, '')
         .trim();
@@ -361,7 +430,6 @@ export function initNomenclatureCardGestures() {
         isPointerDown = false;
         const dx = e.clientX - startX;
         const dy = e.clientY - startY;
-        // Deslizamiento horizontal (>= 35px) o toque simple (< 12px) voltea la tarjeta
         if (Math.abs(dx) >= 35 && Math.abs(dx) > Math.abs(dy) * 1.2) {
             flipNomenclatureCard();
         } else if (Math.abs(dx) < 12 && Math.abs(dy) < 12) {
@@ -401,7 +469,7 @@ export function handleNomenclatureDynamicSearch(rawQuery) {
     if (matches.length === 0) {
         dropdown.innerHTML = `
             <div class="px-4 py-3 text-xs text-slate-400 text-center">
-                No se encontraron compuestos que coincidan con "<span class="text-slate-200 font-semibold">${rawQuery}</span>".
+                No se encontraron compuestos que coincidan con "<span class="text-slate-200 font-semibold">${escHtml(rawQuery)}</span>".
             </div>
         `;
         dropdown.classList.remove('hidden');
@@ -412,7 +480,7 @@ export function handleNomenclatureDynamicSearch(rawQuery) {
         const grpObj = NOMENCLATURE_GROUPS.find(g => g.id === item.group);
         const grpLabel = grpObj ? grpObj.label : (item.group || '');
         const synHtml = item.synonyms
-            ? `<span class="text-[11px] text-amber-300/90 block truncate">También: ${item.synonyms}</span>`
+            ? `<span class="text-[11px] text-amber-300/90 block truncate">También: ${escHtml(item.synonyms)}</span>`
             : '';
 
         return `
@@ -422,9 +490,9 @@ export function handleNomenclatureDynamicSearch(rawQuery) {
                 class="w-full text-left px-4 py-2.5 hover:bg-cyan-950/50 transition flex items-center justify-between gap-3 cursor-pointer"
             >
                 <div class="min-w-0">
-                    <span class="text-sm font-bold text-slate-100 block truncate">${item.name}</span>
+                    <span class="text-sm font-bold text-slate-100 block truncate">${escHtml(item.name)}</span>
                     ${synHtml}
-                    <span class="text-[11px] text-slate-400 block truncate">${grpLabel}</span>
+                    <span class="text-[11px] text-slate-400 block truncate">${escHtml(grpLabel)}</span>
                 </div>
                 <span class="px-2.5 py-1 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-[11px] font-bold shrink-0">
                     Ver figura ➡
@@ -445,18 +513,12 @@ export function selectSearchedNomenclatureItem(matchIdx) {
     const dropdown = document.getElementById('nomSearchResultsDropdown');
     if (dropdown) dropdown.classList.add('hidden');
 
-    document.getElementById('nomenclatureSetupSection')?.classList.add('hidden');
-    document.getElementById('nomSummaryBox')?.classList.add('hidden');
-    document.getElementById('nomCardOuter')?.classList.remove('hidden');
-    document.getElementById('nomCardWrapper')?.classList.remove('hidden');
-    document.getElementById('nomenclaturePracticeSection')?.classList.remove('hidden');
-
     nomDeck = [selected];
+    nomCardResults = [null];
     nomCurrentIndex = 0;
-    nomCorrectCount = 0;
-    nomWrongCount = 0;
-    nomIsFlipped = false;
+    nomReviewingFromSummary = false;
 
+    showActiveCardView();
     renderCurrentNomenclatureCard();
 }
 
@@ -493,36 +555,102 @@ export function flipNomenclatureCard() {
 }
 
 export function gradeNomenclatureCard(isCorrect) {
-    const currentItem = nomDeck[nomCurrentIndex];
-    if (isCorrect) {
-        nomCorrectCount++;
-    } else {
-        nomWrongCount++;
-        nomMissedItems.push(currentItem);
-    }
+    nomCardResults[nomCurrentIndex] = isCorrect ? 'correct' : 'wrong';
 
-    document.getElementById('nomScoreCorrect').innerText = nomCorrectCount;
-    document.getElementById('nomScoreWrong').innerText = nomWrongCount;
+    const { correct, wrong } = getNomCounts();
+    document.getElementById('nomScoreCorrect').innerText = correct;
+    document.getElementById('nomScoreWrong').innerText = wrong;
+
+    if (nomReviewingFromSummary) {
+        // Si estaba repasando una tarjeta individual desde el resumen, volver al resumen actualizado
+        nomReviewingFromSummary = false;
+        finishNomenclatureSession();
+        return;
+    }
 
     if (nomCurrentIndex < nomDeck.length - 1) {
         nomCurrentIndex++;
         renderCurrentNomenclatureCard();
     } else {
-        document.getElementById('nomCardOuter')?.classList.add('hidden');
-        document.getElementById('nomCardWrapper')?.classList.add('hidden');
-        document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
-        document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
-        document.getElementById('nomSummaryBox')?.classList.remove('hidden');
-        document.getElementById('nomFinalCorrect').innerText = nomCorrectCount;
-        document.getElementById('nomFinalWrong').innerText = nomWrongCount;
-
-        const retryBtn = document.getElementById('btnRetryMissed');
-        if (retryBtn) retryBtn.classList.toggle('hidden', nomMissedItems.length === 0);
+        finishNomenclatureSession();
     }
 }
 
+export function finishNomenclatureSession() {
+    nomReviewingFromSummary = false;
+    document.getElementById('nomCardOuter')?.classList.add('hidden');
+    document.getElementById('nomCardWrapper')?.classList.add('hidden');
+    document.getElementById('nomControlsFlipHint')?.classList.add('hidden');
+    document.getElementById('nomControlsGradeRow')?.classList.add('hidden');
+    document.getElementById('nomFinishBar')?.classList.add('hidden');
+    document.getElementById('nomSummaryBox')?.classList.remove('hidden');
+
+    const backLbl = document.getElementById('btnNomPracticeBackLabel');
+    if (backLbl) backLbl.innerText = 'Volver';
+
+    const { correct, wrong } = getNomCounts();
+    document.getElementById('nomFinalCorrect').innerText = correct;
+    document.getElementById('nomFinalWrong').innerText = wrong;
+
+    const correctGrid = document.getElementById('nomCorrectSquaresGrid');
+    const wrongGrid = document.getElementById('nomWrongSquaresGrid');
+
+    const correctIndices = [];
+    const wrongIndices = [];
+    nomDeck.forEach((_, idx) => {
+        if (nomCardResults[idx] === 'correct') correctIndices.push(idx);
+        else if (nomCardResults[idx] === 'wrong') wrongIndices.push(idx);
+    });
+
+    if (correctGrid) {
+        if (correctIndices.length === 0) {
+            correctGrid.innerHTML = `<span class="text-xs text-slate-400">Ninguna tarjeta marcada como acertada todavía.</span>`;
+        } else {
+            correctGrid.innerHTML = correctIndices.map(idx => `
+                <button
+                    type="button"
+                    onclick="openCardFromSummary(${idx})"
+                    title="${escHtml(nomDeck[idx]?.name || '')}"
+                    class="w-10 h-10 rounded-xl bg-emerald-600/30 hover:bg-emerald-500/50 border-2 border-emerald-400 text-emerald-100 font-extrabold text-sm flex items-center justify-center shadow-sm transition active:scale-95 cursor-pointer"
+                >
+                    ${idx + 1}
+                </button>
+            `).join('');
+        }
+    }
+
+    if (wrongGrid) {
+        if (wrongIndices.length === 0) {
+            wrongGrid.innerHTML = `<span class="text-xs text-slate-400">¡Excelente! No hay tarjetas falladas.</span>`;
+        } else {
+            wrongGrid.innerHTML = wrongIndices.map(idx => `
+                <button
+                    type="button"
+                    onclick="openCardFromSummary(${idx})"
+                    title="${escHtml(nomDeck[idx]?.name || '')}"
+                    class="w-10 h-10 rounded-xl bg-rose-600/30 hover:bg-rose-500/50 border-2 border-rose-400 text-rose-100 font-extrabold text-sm flex items-center justify-center shadow-sm transition active:scale-95 cursor-pointer"
+                >
+                    ${idx + 1}
+                </button>
+            `).join('');
+        }
+    }
+
+    const retryBtn = document.getElementById('btnRetryMissed');
+    if (retryBtn) retryBtn.classList.toggle('hidden', wrongIndices.length === 0);
+}
+
+export function openCardFromSummary(cardIdx) {
+    if (cardIdx < 0 || cardIdx >= nomDeck.length) return;
+    nomCurrentIndex = cardIdx;
+    nomReviewingFromSummary = true;
+    showActiveCardView();
+    renderCurrentNomenclatureCard();
+}
+
 export function retryMissedNomenclature() {
-    if (nomMissedItems.length > 0) {
-        startNomenclatureSession([...nomMissedItems]);
+    const missedItems = nomDeck.filter((_, idx) => nomCardResults[idx] === 'wrong');
+    if (missedItems.length > 0) {
+        startNomenclatureSession(missedItems);
     }
 }
