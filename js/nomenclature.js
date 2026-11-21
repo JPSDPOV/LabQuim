@@ -69,7 +69,7 @@ export async function loadExternalNomenclatureBank() {
 
 export async function openNomenclatureSetup() {
     await loadExternalNomenclatureBank();
-    const wizSections = ['wizardStep1', 'wizardStep2', 'wizardStep3', 'wizardStep4', 'nomenclaturePracticeSection'];
+    const wizSections = ['wizardHomeHub', 'wizardExamSearchHub', 'wizardStep1', 'wizardStep2', 'wizardStep3', 'wizardStep4', 'wizardExamStage', 'nomenclaturePracticeSection'];
     wizSections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.add('hidden');
@@ -91,7 +91,7 @@ export function closeNomenclatureMode() {
 
     const bar = document.getElementById('wizardBreadcrumb')?.parentElement;
     if (bar) bar.classList.remove('hidden');
-    if (window.showWizardStage) window.showWizardStage(1);
+    if (window.showWizardStage) window.showWizardStage(0);
 }
 
 export function renderNomenclatureChecklist() {
