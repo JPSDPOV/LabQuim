@@ -4858,23 +4858,23 @@
       "badge": "Monosacárido (Aldopentosa)",
       "name": "D-Ribosa",
       "synonyms": "Ribosa",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "semiFormula": "FISCHER-ALDOSA-R-R-R",
       "explanation": "Aldopentosa de 5 carbonos componente estructural del ARN y ATP."
     },
     {
       "group": "carbohidratos",
       "badge": "Monosacárido (Aldohexosa)",
-      "name": "D-Glucosa",
-      "synonyms": "Dextrosa / Glucosa",
-      "semiFormula": "HAWORTH-PIRANOSA-GLUCOSA",
-      "explanation": "Aldohexosa más abundante en la naturaleza; forma anillos de piranosa en solución."
+      "name": "D-Glucosa (Cadena abierta / Fischer)",
+      "synonyms": "Dextrosa / D-Glucosa",
+      "semiFormula": "FISCHER-ALDOSA-R-L-R-R",
+      "explanation": "Aldohexosa más abundante en la naturaleza; configuración D en C5 y OH en C3 orientado a la izquierda."
     },
     {
       "group": "carbohidratos",
       "badge": "Monosacárido (Aldohexosa)",
       "name": "D-Galactosa",
       "synonyms": "Galactosa",
-      "semiFormula": "HAWORTH-PIRANOSA-GALACTOSA",
+      "semiFormula": "HAWORTH-PIRANOSA-ALFA-GALACTOSA",
       "explanation": "Epímero en C4 de la D-glucosa."
     },
     {
@@ -4938,7 +4938,7 @@
       "badge": "Monosacárido (Aldotetrosa)",
       "name": "D-Eritrosa",
       "synonyms": "Eritrosa",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CHO",
+      "semiFormula": "FISCHER-ALDOSA-R-R",
       "explanation": "Aldotetrosa de 4 carbonos intermediaria de la vía de las pentosas fosfato."
     },
     {
@@ -4946,7 +4946,7 @@
       "badge": "Monosacárido (Aldopentosa)",
       "name": "D-Arabinosa",
       "synonyms": "Arabinosa",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "semiFormula": "FISCHER-ALDOSA-L-R-R",
       "explanation": "Aldopentosa epímera en C2 de la D-ribosa."
     },
     {
@@ -4954,7 +4954,7 @@
       "badge": "Monosacárido (Aldopentosa)",
       "name": "D-Xilosa",
       "synonyms": "Xilosa / Azúcar de madera",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH(OH)—CHO",
+      "semiFormula": "FISCHER-ALDOSA-R-L-R",
       "explanation": "Aldopentosa epímera en C3 de la D-ribosa."
     },
     {
@@ -4962,7 +4962,7 @@
       "badge": "Monosacárido (Desoxiazúcar)",
       "name": "2-Desoxi-D-ribosa",
       "synonyms": "Desoxirribosa",
-      "semiFormula": "HO—CH₂—CH(OH)—CH(OH)—CH₂—CHO",
+      "semiFormula": "FISCHER-ALDOSA-R-R-R-DEOXY",
       "explanation": "Pentosa que carece de grupo –OH en C2; componente esencial del ADN."
     },
     {
@@ -4970,7 +4970,7 @@
       "badge": "Monosacárido (Aldohexosa)",
       "name": "D-Manosa",
       "synonyms": "Manosa",
-      "semiFormula": "HAWORTH-PIRANOSA-MANOSA",
+      "semiFormula": "HAWORTH-PIRANOSA-ALFA-MANOSA",
       "explanation": "Aldohexosa epímera en C2 de la D-glucosa."
     },
     {
@@ -5572,6 +5572,150 @@
       "synonyms": "4-Metoxihex-2-ino",
       "semiFormula": "CH₃—C≡C—CH(OCH₃)—CH₂—CH₃",
       "explanation": "El triple enlace (C2) tiene prioridad de numeración sobre el grupo metoxi (C4)."
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldohexosa Cíclica (Anómero α)",
+      "name": "α-D-Glucopiranosa",
+      "synonyms": "α-D-Glucosa (Forma cíclica de Haworth)",
+      "explanation": "Anillo piranósico de 6 miembros donde el grupo –OH del carbono anomérico C1 apunta hacia abajo (trans respecto al –CH₂OH de C5).",
+      "semiFormula": "HAWORTH-PIRANOSA-ALFA-GLUCOSA"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldohexosa Cíclica (Anómero β)",
+      "name": "β-D-Glucopiranosa",
+      "synonyms": "β-D-Glucosa (Forma cíclica de Haworth)",
+      "explanation": "Anillo piranósico de 6 miembros donde el grupo –OH del carbono anomérico C1 apunta hacia arriba (cis respecto al –CH₂OH de C5).",
+      "semiFormula": "HAWORTH-PIRANOSA-BETA-GLUCOSA"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldotriosa (Monosacárido)",
+      "name": "D-Gliceraldehído",
+      "synonyms": "(R)-2,3-Dihidroxipropanal",
+      "explanation": "La aldotriosa más sencilla y molécula de referencia para asignar la serie estereoquímica D/L en carbohidratos.",
+      "semiFormula": "FISCHER-ALDOSA-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetotriosa (Monosacárido)",
+      "name": "Dihidroxiacetona",
+      "synonyms": "1,3-Dihidroxipropanona / Glicerona",
+      "explanation": "Único monosacárido aquiral (sin carbonos asimétricos); intermediario clave de la glucólisis.",
+      "semiFormula": "HO—CH₂—CO—CH₂—OH"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldotetrosa (Monosacárido)",
+      "name": "D-Treosa",
+      "synonyms": "Epímero en C2 de la D-eritrosa",
+      "explanation": "Aldotetrosa de la serie D con el –OH de C2 hacia la izquierda y el –OH de C3 hacia la derecha.",
+      "semiFormula": "FISCHER-ALDOSA-L-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldopentosa (Monosacárido)",
+      "name": "D-Lixosa",
+      "synonyms": "Epímero en C2 de la D-xilosa",
+      "explanation": "Aldopentosa de 5 carbonos con los grupos –OH de C2 y C3 hacia la izquierda y C4 hacia la derecha.",
+      "semiFormula": "FISCHER-ALDOSA-L-L-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetopentosa (Monosacárido)",
+      "name": "D-Ribulosa",
+      "synonyms": "D-Eritro-2-pentulosa",
+      "explanation": "Cetopentosa fundamental en el ciclo de Calvin de la fotosíntesis (ribulosa-1,5-bisfosfato).",
+      "semiFormula": "FISCHER-CETOSA-R-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetopentosa (Monosacárido)",
+      "name": "D-Xilulosa",
+      "synonyms": "D-Treo-2-pentulosa",
+      "explanation": "Cetopentosa intermediaria en la vía de las pentosas fosfato.",
+      "semiFormula": "FISCHER-CETOSA-L-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldohexosa (Monosacárido)",
+      "name": "D-Alosa",
+      "synonyms": "Epímero en C3 de la D-glucosa",
+      "explanation": "Aldohexosa de la serie D con todos sus grupos hidroxilo (C2, C3, C4 y C5) orientados hacia la derecha en Fischer.",
+      "semiFormula": "FISCHER-ALDOSA-R-R-R-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Aldohexosa (Monosacárido)",
+      "name": "D-Talosa",
+      "synonyms": "Epímero en C2 de la D-galactosa",
+      "explanation": "Aldohexosa de la serie D con los –OH de C2, C3 y C4 hacia la izquierda y C5 hacia la derecha.",
+      "semiFormula": "FISCHER-ALDOSA-L-L-L-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetohexosa (Monosacárido)",
+      "name": "D-Fructosa (Cadena abierta / Fischer)",
+      "synonyms": "Levulosa / D-Arabo-2-hexulosa",
+      "explanation": "Cetohexosa natural presente en frutas y miel; tiene grupo cetona en C2 y configuración D en C5.",
+      "semiFormula": "FISCHER-CETOSA-L-R-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetohexosa (Monosacárido)",
+      "name": "D-Sorbosa",
+      "synonyms": "D-Xilo-2-hexulosa",
+      "explanation": "Cetohexosa empleada industrialmente como precursor en la síntesis de vitamina C (ácido ascórbico).",
+      "semiFormula": "FISCHER-CETOSA-L-L-R"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Cetohexosa (Monosacárido)",
+      "name": "D-Tagatosa",
+      "synonyms": "D-Lixo-2-hexulosa",
+      "explanation": "Cetohexosa epímera en C4 de la D-fructosa con bajo índice glucémico.",
+      "semiFormula": "FISCHER-CETOSA-L-L-L"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Desoxiazúcar (Monosacárido)",
+      "name": "L-Fucosa",
+      "synonyms": "6-Desoxi-L-galactosa",
+      "explanation": "Desoxiazúcar de la serie L componente clave de los antígenos de los grupos sanguíneos ABO.",
+      "semiFormula": "FISCHER-ALDOSA-R-R-L-DEOXY"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Homopolisacárido Estructural",
+      "name": "Quitina",
+      "synonyms": "Poli-β-(1→4)-N-acetil-D-glucosamina",
+      "explanation": "Polisacárido lineal formado por unidades de N-acetil-D-glucosamina unidas por enlaces β(1→4); forma el exoesqueleto de artrópodos y pared celular de hongos.",
+      "semiFormula": "POLISACARIDO-QUITINA"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Homopolisacárido de Reserva",
+      "name": "Inulina",
+      "synonyms": "Polifructosano β(2→1)",
+      "explanation": "Polisacárido de reserva vegetal (achicoria, alcachofa) constituido por cadenas lineales de β-D-fructofuranosa con enlaces β(2→1).",
+      "semiFormula": "POLISACARIDO-INULINA"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Heteropolisacárido Vegetal",
+      "name": "Pectina",
+      "synonyms": "Poligalacturonano α(1→4)",
+      "explanation": "Polisacárido ácido de la pared celular vegetal compuesto principalmente por unidades de ácido D-galacturónico unidas en α(1→4).",
+      "semiFormula": "POLISACARIDO-PECTINA"
+    },
+    {
+      "group": "carbohidratos",
+      "badge": "Heteropolisacárido (Glicosaminoglicano)",
+      "name": "Heparina",
+      "synonyms": "Glicosaminoglicano sulfatado anticoagulante",
+      "explanation": "Heteropolisacárido altamente sulfatado formado por ácido L-idurónico/D-glucurónico y D-glucosamina; potente anticoagulante natural.",
+      "semiFormula": "POLISACARIDO-HEPARINA"
     }
   ]
 }
