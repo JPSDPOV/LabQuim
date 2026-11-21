@@ -435,7 +435,8 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
         if (a.label) {
             const isTop = a.labelPos === 'top';
             const rawLy = isTop ? (a.y - geom.halfH - (mobile ? 17 : 12)) : (a.y + geom.halfH + (mobile ? 21 : 15));
-            const lw = a.label.length * lblCharW + 16;
+            const longestLine = Math.max(...String(a.label).split(/\r?\n/).map(s => s.length));
+            const lw = longestLine * lblCharW + 22;
             pendingLabels.push({
                 text: a.label,
                 lx: a.x,
@@ -473,9 +474,9 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
         const lblBg = lightMode ? 'rgba(241, 245, 249, 0.96)' : 'rgba(15, 23, 42, 0.94)';
         const lblStroke = lightMode ? 'rgba(15, 23, 42, 0.35)' : 'rgba(148, 163, 184, 0.4)';
         const lblTxtCol = lightMode ? '#0f172a' : '#e2e8f0';
-        const lines = String(L.text || '').split('\n');
+        const lines = String(L.text || '').split(/\r?\n/);
         const maxLineLen = Math.max(...lines.map(ln => ln.length));
-        const boxW = Math.max(L.lw, maxLineLen * lblCharW + 18);
+        const boxW = maxLineLen * lblCharW + 22;
         const lineStep = mobile ? 20 : 14;
         const boxH = lblBoxH + (lines.length - 1) * lineStep;
         const tspans = lines.map((ln, idx) => `<tspan x="${L.lx}" dy="${idx === 0 ? 0 : lineStep}">${escSvg(ln)}</tspan>`).join('');
