@@ -7,7 +7,7 @@ export const state = {
     atomColors: {
         'C': { bg: '#1e293b', border: '#94a3b8', text: '#f8fafc', r: 19 }
     },
-    animDuration: 3500,
+    animDuration: 4200,
     animFrameId: null,
     lastSceneState: null,
     currentPrevSceneForScrub: null,
