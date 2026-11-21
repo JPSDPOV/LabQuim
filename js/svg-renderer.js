@@ -471,10 +471,16 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
         const lblBg = lightMode ? 'rgba(241, 245, 249, 0.96)' : 'rgba(15, 23, 42, 0.94)';
         const lblStroke = lightMode ? 'rgba(15, 23, 42, 0.35)' : 'rgba(148, 163, 184, 0.4)';
         const lblTxtCol = lightMode ? '#0f172a' : '#e2e8f0';
+        const lines = String(L.text || '').split('\n');
+        const maxLineLen = Math.max(...lines.map(ln => ln.length));
+        const boxW = Math.max(L.lw, maxLineLen * lblCharW + 18);
+        const lineStep = mobile ? 20 : 14;
+        const boxH = lblBoxH + (lines.length - 1) * lineStep;
+        const tspans = lines.map((ln, idx) => `<tspan x="${L.lx}" dy="${idx === 0 ? 0 : lineStep}">${escSvg(ln)}</tspan>`).join('');
         svgOut += `
             <g opacity="${L.opacity}">
-                <rect x="${L.lx - L.lw / 2}" y="${L.ly - lblBoxH * 0.68}" width="${L.lw}" height="${lblBoxH}" rx="5" fill="${lblBg}" stroke="${lblStroke}" stroke-width="1.2"/>
-                <text x="${L.lx}" y="${L.ly + (mobile ? 2.5 : 0.5)}" text-anchor="middle" fill="${lblTxtCol}" font-size="${lblFont}" font-weight="700">${escSvg(L.text)}</text>
+                <rect x="${L.lx - boxW / 2}" y="${L.ly - lblBoxH * 0.68}" width="${boxW}" height="${boxH}" rx="6" fill="${lblBg}" stroke="${lblStroke}" stroke-width="1.3"/>
+                <text x="${L.lx}" y="${L.ly + (mobile ? 2.5 : 0.5)}" text-anchor="middle" fill="${lblTxtCol}" font-size="${lblFont}" font-weight="800">${tspans}</text>
             </g>
         `;
     });
@@ -482,34 +488,33 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
     stageGroup.innerHTML = svgOut;
 
     if (svgEl && isFinite(minX) && isFinite(maxX)) {
-        if (targetScene.forceCentered) {
-            // Centrado geométrico simétrico alrededor del centro del lienzo (520, 185)
-            const halfSpanX = Math.max(260, Math.abs(520 - minX) + 40, Math.abs(maxX - 520) + 40);
-            const vbW = Math.min(1040, halfSpanX * 2);
-            const vbX = Math.max(0, 520 - vbW / 2);
-            const vbH = Math.min(360, Math.max(240, (maxY - minY) + 90));
-            const vbY = Math.max(0, 185 - vbH / 2);
-            currentViewBox = { x: vbX, y: vbY, w: vbW, h: vbH, initialized: true };
-            svgEl.setAttribute('viewBox', `${vbX.toFixed(1)} ${vbY.toFixed(1)} ${vbW.toFixed(1)} ${vbH.toFixed(1)}`);
-        } else {
-            const padX = mobile ? 14 : 26;
-            const padY = mobile ? 14 : 20;
-            const targetVbX = Math.max(0, minX - padX);
-            const targetVbY = Math.max(0, minY - padY);
-            const targetVbW = Math.max(320, Math.min(1040 - targetVbX, (maxX - minX) + padX * 2));
-            const targetVbH = Math.max(190, Math.min(380 - targetVbY, (maxY - minY) + padY * 2));
+        const padX = mobile ? 16 : 28;
+        const padY = mobile ? 14 : 20;
+        let targetVbX, targetVbY, targetVbW, targetVbH;
 
-            if (!currentViewBox.initialized || clampedRaw >= 0.99) {
-                currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
-            } else {
-                const camEase = 0.22;
-                currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
-                currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
-                currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
-                currentViewBox.h = lerp(currentViewBox.h, targetVbH, camEase);
-            }
-            svgEl.setAttribute('viewBox', `${currentViewBox.x.toFixed(1)} ${currentViewBox.y.toFixed(1)} ${currentViewBox.w.toFixed(1)} ${currentViewBox.h.toFixed(1)}`);
+        if (targetScene.forceCentered) {
+            const halfSpanX = Math.max(210, Math.abs(520 - minX) + padX, Math.abs(maxX - 520) + padX);
+            targetVbW = Math.min(1040, halfSpanX * 2);
+            targetVbX = Math.max(0, 520 - targetVbW / 2);
+            targetVbH = Math.min(360, Math.max(185, (maxY - minY) + padY * 2));
+            targetVbY = Math.max(0, 185 - targetVbH / 2);
+        } else {
+            targetVbX = Math.max(0, minX - padX);
+            targetVbY = Math.max(0, minY - padY);
+            targetVbW = Math.max(300, Math.min(1040 - targetVbX, (maxX - minX) + padX * 2));
+            targetVbH = Math.max(180, Math.min(368 - targetVbY, (maxY - minY) + padY * 2));
         }
+
+        if (!currentViewBox.initialized) {
+            currentViewBox = { x: targetVbX, y: targetVbY, w: targetVbW, h: targetVbH, initialized: true };
+        } else {
+            const camEase = clampedRaw >= 0.999 ? 1 : 0.14;
+            currentViewBox.x = lerp(currentViewBox.x, targetVbX, camEase);
+            currentViewBox.y = lerp(currentViewBox.y, targetVbY, camEase);
+            currentViewBox.w = lerp(currentViewBox.w, targetVbW, camEase);
+            currentViewBox.h = lerp(currentViewBox.h, targetVbH, camEase);
+        }
+        svgEl.setAttribute('viewBox', `${currentViewBox.x.toFixed(1)} ${currentViewBox.y.toFixed(1)} ${currentViewBox.w.toFixed(1)} ${currentViewBox.h.toFixed(1)}`);
     }
 }
 
@@ -648,15 +653,19 @@ export function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, 
             <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${w2b}" ${piDash} ${piGlow} stroke-linecap="round"/>
         `;
     } else if (order === 3) {
-        const off = lightTheme ? 5.2 : (mobile ? 8.2 : 6.8);
-        const piStroke = (state === 'breaking-pi' || state === 'breaking') ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : (lightTheme ? '#0f172a' : '#38bdf8'));
-        const piDash = (state === 'breaking-pi' || state === 'breaking') ? 'stroke-dasharray="6,5"' : '';
-        const w3a = lightTheme ? 2.2 : (mobile ? 3.8 : 3.0);
-        const w3b = lightTheme ? 2.1 : (mobile ? 3.5 : 2.8);
+        const off = lightTheme ? 5.4 : (mobile ? 8.4 : 7.0);
+        const baseTripleCol = lightTheme ? '#0f172a' : '#cbd5e1';
+        const isBreakingTopPi = (state === 'breaking-pi' || state === 'breaking');
+        const topPiStroke = isBreakingTopPi ? '#ef4444' : ((state === 'new' || state === 'new-pi') ? '#10b981' : (lightTheme ? '#0f172a' : '#38bdf8'));
+        const topPiDash = isBreakingTopPi ? 'stroke-dasharray="6,5"' : '';
+        const botPiStroke = (state === 'new' || state === 'new-pi') ? '#10b981' : (lightTheme ? '#0f172a' : '#38bdf8');
+        const w3a = lightTheme ? 2.3 : (mobile ? 3.8 : 3.0);
+        const w3b = lightTheme ? 2.2 : (mobile ? 3.6 : 2.9);
+        // En SVG (+Y hacia abajo), -ny*off es el enlace π SUPERIOR (el único que se rompe en rojo) y +ny*off es el enlace π INFERIOR (permanece intacto)
         html += `
-            <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${lightTheme ? '#0f172a' : '#cbd5e1'}" stroke-width="${w3a}" stroke-linecap="round"/>
-            <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${piStroke}" stroke-width="${w3b}" ${piDash} stroke-linecap="round"/>
-            <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${piStroke}" stroke-width="${w3b}" ${piDash} stroke-linecap="round"/>
+            <line x1="${x1}" y1="${y1}" x2="${drawX2}" y2="${drawY2}" stroke="${baseTripleCol}" stroke-width="${w3a}" stroke-linecap="round"/>
+            <line x1="${x1 - nx * off}" y1="${y1 - ny * off}" x2="${drawX2 - nx * off}" y2="${drawY2 - ny * off}" stroke="${topPiStroke}" stroke-width="${w3b}" ${topPiDash} stroke-linecap="round"/>
+            <line x1="${x1 + nx * off}" y1="${y1 + ny * off}" x2="${drawX2 + nx * off}" y2="${drawY2 + ny * off}" stroke="${botPiStroke}" stroke-width="${w3b}" stroke-linecap="round"/>
         `;
     }
 
