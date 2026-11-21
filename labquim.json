@@ -11,432 +11,1344 @@
     "examsBankFile": "reactions/examenes_banco.json"
   },
   "atomColors": {
-    "C": { "bg": "#1e293b", "border": "#94a3b8", "text": "#f8fafc", "r": 19 },
-    "CH3": { "bg": "#1e293b", "border": "#64748b", "text": "#e2e8f0", "r": 21 },
-    "CH2": { "bg": "#1e293b", "border": "#64748b", "text": "#e2e8f0", "r": 21 },
-    "H": { "bg": "#0f172a", "border": "#38bdf8", "text": "#7dd3fc", "r": 14 },
-    "Cl": { "bg": "#064e3b", "border": "#10b981", "text": "#6ee7b7", "r": 20 },
-    "Br": { "bg": "#7c2d12", "border": "#f97316", "text": "#fdba74", "r": 21 },
-    "I": { "bg": "#4c1d95", "border": "#a855f7", "text": "#e9d5ff", "r": 21 },
-    "F": { "bg": "#065f46", "border": "#34d399", "text": "#a7f3d0", "r": 18 },
-    "O": { "bg": "#7f1d1d", "border": "#ef4444", "text": "#fca5a5", "r": 19 },
-    "S": { "bg": "#713f12", "border": "#facc15", "text": "#fef08a", "r": 20 },
-    "N": { "bg": "#1e3a8a", "border": "#3b82f6", "text": "#93c5fd", "r": 19 },
-    "Na": { "bg": "#4c1d95", "border": "#a855f7", "text": "#e9d5ff", "r": 20 },
-    "Mg": { "bg": "#365314", "border": "#84cc16", "text": "#d9f99d", "r": 21 },
-    "Zn": { "bg": "#334155", "border": "#cbd5e1", "text": "#f1f5f9", "r": 21 },
-    "Cu": { "bg": "#7c2d12", "border": "#fb923c", "text": "#fed7aa", "r": 21 },
-    "Fe": { "bg": "#78350f", "border": "#f59e0b", "text": "#fde68a", "r": 21 },
-    "Ag": { "bg": "#1e293b", "border": "#e2e8f0", "text": "#f8fafc", "r": 21 },
-    "Hg": { "bg": "#334155", "border": "#94a3b8", "text": "#f8fafc", "r": 21 },
-    "Pb": { "bg": "#1e293b", "border": "#64748b", "text": "#cbd5e1", "r": 21 },
-    "P": { "bg": "#78350f", "border": "#fbbf24", "text": "#fef3c7", "r": 20 },
-    "K": { "bg": "#4c1d95", "border": "#c084fc", "text": "#f3e8ff", "r": 20 },
-    "Ca": { "bg": "#365314", "border": "#a3e635", "text": "#ecfccb", "r": 21 }
+    "C": {
+      "bg": "#1e293b",
+      "border": "#94a3b8",
+      "text": "#f8fafc",
+      "r": 19
+    },
+    "CH3": {
+      "bg": "#1e293b",
+      "border": "#64748b",
+      "text": "#e2e8f0",
+      "r": 21
+    },
+    "CH2": {
+      "bg": "#1e293b",
+      "border": "#64748b",
+      "text": "#e2e8f0",
+      "r": 21
+    },
+    "H": {
+      "bg": "#0f172a",
+      "border": "#38bdf8",
+      "text": "#7dd3fc",
+      "r": 14
+    },
+    "Cl": {
+      "bg": "#064e3b",
+      "border": "#10b981",
+      "text": "#6ee7b7",
+      "r": 20
+    },
+    "Br": {
+      "bg": "#7c2d12",
+      "border": "#f97316",
+      "text": "#fdba74",
+      "r": 21
+    },
+    "I": {
+      "bg": "#4c1d95",
+      "border": "#a855f7",
+      "text": "#e9d5ff",
+      "r": 21
+    },
+    "F": {
+      "bg": "#065f46",
+      "border": "#34d399",
+      "text": "#a7f3d0",
+      "r": 18
+    },
+    "O": {
+      "bg": "#7f1d1d",
+      "border": "#ef4444",
+      "text": "#fca5a5",
+      "r": 19
+    },
+    "S": {
+      "bg": "#713f12",
+      "border": "#facc15",
+      "text": "#fef08a",
+      "r": 20
+    },
+    "N": {
+      "bg": "#1e3a8a",
+      "border": "#3b82f6",
+      "text": "#93c5fd",
+      "r": 19
+    },
+    "Na": {
+      "bg": "#4c1d95",
+      "border": "#a855f7",
+      "text": "#e9d5ff",
+      "r": 20
+    },
+    "Mg": {
+      "bg": "#365314",
+      "border": "#84cc16",
+      "text": "#d9f99d",
+      "r": 21
+    },
+    "Zn": {
+      "bg": "#334155",
+      "border": "#cbd5e1",
+      "text": "#f1f5f9",
+      "r": 21
+    },
+    "Cu": {
+      "bg": "#7c2d12",
+      "border": "#fb923c",
+      "text": "#fed7aa",
+      "r": 21
+    },
+    "Fe": {
+      "bg": "#78350f",
+      "border": "#f59e0b",
+      "text": "#fde68a",
+      "r": 21
+    },
+    "Ag": {
+      "bg": "#1e293b",
+      "border": "#e2e8f0",
+      "text": "#f8fafc",
+      "r": 21
+    },
+    "Hg": {
+      "bg": "#334155",
+      "border": "#94a3b8",
+      "text": "#f8fafc",
+      "r": 21
+    },
+    "Pb": {
+      "bg": "#1e293b",
+      "border": "#64748b",
+      "text": "#cbd5e1",
+      "r": 21
+    },
+    "P": {
+      "bg": "#78350f",
+      "border": "#fbbf24",
+      "text": "#fef3c7",
+      "r": 20
+    },
+    "K": {
+      "bg": "#4c1d95",
+      "border": "#c084fc",
+      "text": "#f3e8ff",
+      "r": 20
+    },
+    "Ca": {
+      "bg": "#365314",
+      "border": "#a3e635",
+      "text": "#ecfccb",
+      "r": 21
+    }
   },
   "functionCatalog": [
-    { "value": "alcanos", "label": "🔥 Unidad 14.1: Alcanos" },
-    { "value": "cicloalcanos", "label": "📐 Unidad 14.1B: Cicloalcanos" },
-    { "value": "alquenos", "label": "⚡ Unidad 14.2A: Alquenos" },
-    { "value": "alquinos", "label": "🔗 Unidad 14.2B: Alquinos" },
-    { "value": "alcadienos", "label": "🧬 Unidad 14.2C: Alcadienos (Dienos)" },
-    { "value": "aromaticos", "label": "🛡️ Unidad 14.3: Aromáticos y Derivados" },
-    { "value": "haluros", "label": "🎯 Unidad 14.4: Haluros de Alquilo" },
-    { "value": "alcoholes", "label": "🍷 Unidad 15.1: Alcoholes" },
-    { "value": "fenoles", "label": "🌺 Unidad 15.2: Fenoles" },
-    { "value": "eteres", "label": "☁️ Unidad 15.3: Éteres y Epóxidos" },
-    { "value": "tioles", "label": "🧪 Unidad 15.4A: Tioles (Mercaptanos)" },
-    { "value": "tioeteres", "label": "🔶 Unidad 15.4B: Tioéteres (Sulfuros)" },
-    { "value": "aminas", "label": "🧬 Unidad 15.5: Aminas" },
-    { "value": "hetero_no_arom", "label": "🌀 Unidad 15.6A: Heterocíclicos No Aromáticos (O, N, S)" },
-    { "value": "carbonilos", "label": "🧪 Unidad 16.1: Aldehídos y Cetonas" },
-    { "value": "acidos", "label": "🍋 Unidad 16.2: Ácidos Carboxílicos" },
-    { "value": "esteres", "label": "🍍 Unidad 16.3A: Ésteres y Lactonas" },
-    { "value": "amidas", "label": "🧬 Unidad 16.3B: Amidas y Lactamas" },
-    { "value": "anhidridos", "label": "⚡ Unidad 16.3C: Anhídridos de Ácido" },
-    { "value": "haluros_acido", "label": "🧪 Unidad 16.3D: Halogenuros de Ácido (Haluros de Acilo)" },
-    { "value": "carbohidratos", "label": "🍯 Unidad 17.1: Hidratos de Carbono (Glúcidos)" },
-    { "value": "aminoacidos", "label": "🧬 Unidad 17.3: Aminoácidos y Péptidos" }
+    {
+      "value": "alcanos",
+      "label": "🔥 Unidad 14.1: Alcanos"
+    },
+    {
+      "value": "cicloalcanos",
+      "label": "📐 Unidad 14.1B: Cicloalcanos"
+    },
+    {
+      "value": "alquenos",
+      "label": "⚡ Unidad 14.2A: Alquenos"
+    },
+    {
+      "value": "alquinos",
+      "label": "🔗 Unidad 14.2B: Alquinos"
+    },
+    {
+      "value": "alcadienos",
+      "label": "🧬 Unidad 14.2C: Alcadienos (Dienos)"
+    },
+    {
+      "value": "aromaticos",
+      "label": "🛡️ Unidad 14.3: Aromáticos y Derivados"
+    },
+    {
+      "value": "haluros",
+      "label": "🎯 Unidad 14.4: Haluros de Alquilo"
+    },
+    {
+      "value": "alcoholes",
+      "label": "🍷 Unidad 15.1: Alcoholes"
+    },
+    {
+      "value": "fenoles",
+      "label": "🌺 Unidad 15.2: Fenoles"
+    },
+    {
+      "value": "eteres",
+      "label": "☁️ Unidad 15.3: Éteres y Epóxidos"
+    },
+    {
+      "value": "tioles",
+      "label": "🧪 Unidad 15.4A: Tioles (Mercaptanos)"
+    },
+    {
+      "value": "tioeteres",
+      "label": "🔶 Unidad 15.4B: Tioéteres (Sulfuros)"
+    },
+    {
+      "value": "aminas",
+      "label": "🧬 Unidad 15.5: Aminas"
+    },
+    {
+      "value": "hetero_no_arom",
+      "label": "🌀 Unidad 15.6A: Heterocíclicos No Aromáticos (O, N, S)"
+    },
+    {
+      "value": "carbonilos",
+      "label": "🧪 Unidad 16.1: Aldehídos y Cetonas"
+    },
+    {
+      "value": "acidos",
+      "label": "🍋 Unidad 16.2: Ácidos Carboxílicos"
+    },
+    {
+      "value": "esteres",
+      "label": "🍍 Unidad 16.3A: Ésteres y Lactonas"
+    },
+    {
+      "value": "amidas",
+      "label": "🧬 Unidad 16.3B: Amidas y Lactamas"
+    },
+    {
+      "value": "anhidridos",
+      "label": "⚡ Unidad 16.3C: Anhídridos de Ácido"
+    },
+    {
+      "value": "haluros_acido",
+      "label": "🧪 Unidad 16.3D: Halogenuros de Ácido (Haluros de Acilo)"
+    },
+    {
+      "value": "carbohidratos",
+      "label": "🍯 Unidad 17.1: Hidratos de Carbono (Glúcidos)"
+    },
+    {
+      "value": "aminoacidos",
+      "label": "🧬 Unidad 17.3: Aminoácidos y Péptidos"
+    }
   ],
   "unitFiles": {
-    "eteres": "./reactions/eteres_unidad.json"
+    "eteres": "./reactions/eteres_unidad.json",
+    "carbonilos": "./reactions/carbonilos_obtencion.json"
   },
   "functionMenus": {
     "alcanos": {
       "obtencion": [
-        { "value": "cracking", "label": "1) Método de Cracking o Pirólisis" },
-        { "value": "grignard", "label": "2) Hidrólisis de Reactivos de Grignard" },
-        { "value": "hidrogenacion", "label": "3) Hidrogenación Catalítica de Alquenos/Alquinos" },
-        { "value": "wurtz", "label": "4) Síntesis de Wurtz" },
-        { "value": "clemmensen", "label": "5) Reducción de Clemmensen y Wolff-Kishner" }
+        {
+          "value": "cracking",
+          "label": "1) Método de Cracking o Pirólisis"
+        },
+        {
+          "value": "grignard",
+          "label": "2) Hidrólisis de Reactivos de Grignard"
+        },
+        {
+          "value": "hidrogenacion",
+          "label": "3) Hidrogenación Catalítica de Alquenos/Alquinos"
+        },
+        {
+          "value": "wurtz",
+          "label": "4) Síntesis de Wurtz"
+        },
+        {
+          "value": "clemmensen",
+          "label": "5) Reducción de Clemmensen y Wolff-Kishner"
+        }
       ],
       "reacciones": [
-        { "value": "halogenacion", "label": "1) Halogenación Radicalaria" },
-        { "value": "combustion_completa", "label": "2) Combustión Completa" },
-        { "value": "combustion_incompleta", "label": "3) Combustión Incompleta" }
+        {
+          "value": "halogenacion",
+          "label": "1) Halogenación Radicalaria"
+        },
+        {
+          "value": "combustion_completa",
+          "label": "2) Combustión Completa"
+        },
+        {
+          "value": "combustion_incompleta",
+          "label": "3) Combustión Incompleta"
+        }
       ]
     },
     "cicloalcanos": {
       "obtencion": [
-        { "value": "freund", "label": "1) Deshalogenación intramolecular de dihaluros no vecinales (Ciclación de Freund)" },
-        { "value": "hidrog_ciclos", "label": "2) Hidrogenación Catalítica de Compuestos Cíclicos Insaturados" }
+        {
+          "value": "freund",
+          "label": "1) Deshalogenación intramolecular de dihaluros no vecinales (Ciclación de Freund)"
+        },
+        {
+          "value": "hidrog_ciclos",
+          "label": "2) Hidrogenación Catalítica de Compuestos Cíclicos Insaturados"
+        }
       ],
       "reacciones": [
-        { "value": "apertura_halog", "label": "1) Halogenación por Apertura de Anillo" },
-        { "value": "apertura_hidrog", "label": "2) Hidrogenación por Apertura de Anillo" },
-        { "value": "apertura_hidrohalog", "label": "3) Hidrohalogenación por Apertura de Anillo" },
-        { "value": "halog_ciclos_estables", "label": "4) Halogenación Radicalaria en Ciclos Estables" }
+        {
+          "value": "apertura_halog",
+          "label": "1) Halogenación por Apertura de Anillo"
+        },
+        {
+          "value": "apertura_hidrog",
+          "label": "2) Hidrogenación por Apertura de Anillo"
+        },
+        {
+          "value": "apertura_hidrohalog",
+          "label": "3) Hidrohalogenación por Apertura de Anillo"
+        },
+        {
+          "value": "halog_ciclos_estables",
+          "label": "4) Halogenación Radicalaria en Ciclos Estables"
+        }
       ]
     },
     "alquenos": {
       "obtencion": [
-        { "value": "alq_obt_hidrog", "label": "1) Hidrogenación catalítica de Alquinos" },
-        { "value": "alq_obt_deshalog", "label": "2) Deshalogenación con Zinc metálico" },
-        { "value": "alq_obt_deshidrohalog", "label": "3) Deshidrohalogenación con hidróxido de potasio/alcohólico caliente" },
-        { "value": "alq_obt_deshidratacion", "label": "4) Deshidratación en medio ácido sulfúrico" }
+        {
+          "value": "alq_obt_hidrog",
+          "label": "1) Hidrogenación catalítica de Alquinos"
+        },
+        {
+          "value": "alq_obt_deshalog",
+          "label": "2) Deshalogenación con Zinc metálico"
+        },
+        {
+          "value": "alq_obt_deshidrohalog",
+          "label": "3) Deshidrohalogenación con hidróxido de potasio/alcohólico caliente"
+        },
+        {
+          "value": "alq_obt_deshidratacion",
+          "label": "4) Deshidratación en medio ácido sulfúrico"
+        }
       ],
       "reacciones": [
-        { "value": "alq_rxn_hidrog", "label": "A.1- Hidrogenación" },
-        { "value": "alq_rxn_hidratacion", "label": "A.2.1- Adición electrofílica: Hidratación" },
-        { "value": "alq_rxn_hidrohalog", "label": "A.2.2- Adición electrofílica: Hidrohalogenación" },
-        { "value": "alq_rxn_halog", "label": "A.2.3- Adición electrofílica: Halogenación" },
-        { "value": "alq_rxn_halohidrina", "label": "A.2.4- Adición electrofílica: Formación de Halohidrinas" },
-        { "value": "alq_rxn_hbr_rad", "label": "A.3- Adición Radicalaria con HBr" },
-        { "value": "alq_rxn_dihidrox", "label": "B.1- Reacciones de oxidación: Dihidroxilación" },
-        { "value": "alq_rxn_epoxidacion", "label": "B.2- Reacciones de oxidación: Epoxidación" },
-        { "value": "alq_rxn_ozonolisis", "label": "B.3- Reacciones de oxidación: Ozonólisis y Ruptura Oxidativa" },
-        { "value": "alq_rxn_cicloalquenos_ox", "label": "B.4- Casos Especiales: Oxidación de Cicloalquenos" },
-        { "value": "alq_rxn_polimerizacion", "label": "C- Reacciones de polimerización" }
+        {
+          "value": "alq_rxn_hidrog",
+          "label": "A.1- Hidrogenación"
+        },
+        {
+          "value": "alq_rxn_hidratacion",
+          "label": "A.2.1- Adición electrofílica: Hidratación"
+        },
+        {
+          "value": "alq_rxn_hidrohalog",
+          "label": "A.2.2- Adición electrofílica: Hidrohalogenación"
+        },
+        {
+          "value": "alq_rxn_halog",
+          "label": "A.2.3- Adición electrofílica: Halogenación"
+        },
+        {
+          "value": "alq_rxn_halohidrina",
+          "label": "A.2.4- Adición electrofílica: Formación de Halohidrinas"
+        },
+        {
+          "value": "alq_rxn_hbr_rad",
+          "label": "A.3- Adición Radicalaria con HBr"
+        },
+        {
+          "value": "alq_rxn_dihidrox",
+          "label": "B.1- Reacciones de oxidación: Dihidroxilación"
+        },
+        {
+          "value": "alq_rxn_epoxidacion",
+          "label": "B.2- Reacciones de oxidación: Epoxidación"
+        },
+        {
+          "value": "alq_rxn_ozonolisis",
+          "label": "B.3- Reacciones de oxidación: Ozonólisis y Ruptura Oxidativa"
+        },
+        {
+          "value": "alq_rxn_cicloalquenos_ox",
+          "label": "B.4- Casos Especiales: Oxidación de Cicloalquenos"
+        },
+        {
+          "value": "alq_rxn_polimerizacion",
+          "label": "C- Reacciones de polimerización"
+        }
       ]
     },
     "alquinos": {
       "obtencion": [
-        { "value": "alky_obt_carburo", "label": "1) Hidrólisis del Carburo de Calcio (Obtención industrial del Acetileno)" },
-        { "value": "alky_obt_deshidrohalog", "label": "2) Doble Deshidrohalogenación de Dihaluros Vecinales o Geminales" },
-        { "value": "alky_obt_deshalog_tetra", "label": "3) Deshalogenación de Tetrahalogenuros Vecinales con Zinc" },
-        { "value": "alky_obt_alquilacion", "label": "4) Alquilación de Acetiluros con Halogenuros Primarios (SN2)" }
+        {
+          "value": "alky_obt_carburo",
+          "label": "1) Hidrólisis del Carburo de Calcio (Obtención industrial del Acetileno)"
+        },
+        {
+          "value": "alky_obt_deshidrohalog",
+          "label": "2) Doble Deshidrohalogenación de Dihaluros Vecinales o Geminales"
+        },
+        {
+          "value": "alky_obt_deshalog_tetra",
+          "label": "3) Deshalogenación de Tetrahalogenuros Vecinales con Zinc"
+        },
+        {
+          "value": "alky_obt_alquilacion",
+          "label": "4) Alquilación de Acetiluros con Halogenuros Primarios (SN2)"
+        }
       ],
       "reacciones": [
-        { "value": "alky_rxn_hidrog_total", "label": "A.1- Hidrogenación Catalítica Total a Alcanos (Pt, Pd o Ni)" },
-        { "value": "alky_rxn_hidrog_parcial", "label": "A.2- Reducción Parcial a Alquenos (Lindlar → cis Syn | Na/NH₃(l) → trans Anti)" },
-        { "value": "alky_rxn_halog", "label": "A.3- Halogenación (Con 1 eq X₂ → trans-dihaloalqueno | Con 2 eq X₂ → Tetrahaloalcano)" },
-        { "value": "alky_rxn_hidrohalog", "label": "A.4- Hidrohalogenación Markovnikov (Con 1 eq HX → Haloalqueno | Con 2 eq HX → Dihaluro Geminal)" },
-        { "value": "alky_rxn_hidratacion", "label": "A.5- Hidratación de Kucherov (H₂O / H₂SO₄, HgSO₄ → Enol ⇄ Tautomería a Etanal o Cetona)" },
-        { "value": "alky_rxn_acidez", "label": "B- Reacciones de Acidez de Alquinos Terminales (Con Na/NaNH₂, Tollens Ag⁺ y Cu⁺)" },
-        { "value": "alky_rxn_oxidacion", "label": "C- Oxidación y Ozonólisis de Alquinos (Ruptura del C≡C a Ácidos Carboxílicos y/o CO₂)" }
+        {
+          "value": "alky_rxn_hidrog_total",
+          "label": "A.1- Hidrogenación Catalítica Total a Alcanos (Pt, Pd o Ni)"
+        },
+        {
+          "value": "alky_rxn_hidrog_parcial",
+          "label": "A.2- Reducción Parcial a Alquenos (Lindlar → cis Syn | Na/NH₃(l) → trans Anti)"
+        },
+        {
+          "value": "alky_rxn_halog",
+          "label": "A.3- Halogenación (Con 1 eq X₂ → trans-dihaloalqueno | Con 2 eq X₂ → Tetrahaloalcano)"
+        },
+        {
+          "value": "alky_rxn_hidrohalog",
+          "label": "A.4- Hidrohalogenación Markovnikov (Con 1 eq HX → Haloalqueno | Con 2 eq HX → Dihaluro Geminal)"
+        },
+        {
+          "value": "alky_rxn_hidratacion",
+          "label": "A.5- Hidratación de Kucherov (H₂O / H₂SO₄, HgSO₄ → Enol ⇄ Tautomería a Etanal o Cetona)"
+        },
+        {
+          "value": "alky_rxn_acidez",
+          "label": "B- Reacciones de Acidez de Alquinos Terminales (Con Na/NaNH₂, Tollens Ag⁺ y Cu⁺)"
+        },
+        {
+          "value": "alky_rxn_oxidacion",
+          "label": "C- Oxidación y Ozonólisis de Alquinos (Ruptura del C≡C a Ácidos Carboxílicos y/o CO₂)"
+        }
       ]
     },
     "alcadienos": {
       "obtencion": [
-        { "value": "dien_obt_deshidrohalog", "label": "1) Doble Deshidrohalogenación de Dihaluros con KOH alcohólico caliente (E2)" },
-        { "value": "dien_obt_deshidratacion", "label": "2) Doble Deshidratación Ácida de Dioles (Glicoles) con H₂SO₄ / Δ" },
-        { "value": "dien_obt_deshidrogenacion", "label": "3) Deshidrogenación Catalítica Industrial de Butano / Butenos (Cr₂O₃ / Al₂O₃, 600 °C)" }
+        {
+          "value": "dien_obt_deshidrohalog",
+          "label": "1) Doble Deshidrohalogenación de Dihaluros con KOH alcohólico caliente (E2)"
+        },
+        {
+          "value": "dien_obt_deshidratacion",
+          "label": "2) Doble Deshidratación Ácida de Dioles (Glicoles) con H₂SO₄ / Δ"
+        },
+        {
+          "value": "dien_obt_deshidrogenacion",
+          "label": "3) Deshidrogenación Catalítica Industrial de Butano / Butenos (Cr₂O₃ / Al₂O₃, 600 °C)"
+        }
       ],
       "reacciones": [
-        { "value": "dien_rxn_hbr", "label": "A.1- Hidrohalogenación (1 eq HBr): Adición 1,2 (-80 °C, Control Cinético) vs. Adición 1,4 (40 °C, Control Termodinámico)" },
-        { "value": "dien_rxn_br2", "label": "A.2- Halogenación con Br₂ (Con 1 eq: Adición 1,2 vs. 1,4 Mayoritaria | Con 2 eq: 1,2,3,4-tetrabromobutano)" },
-        { "value": "dien_rxn_hidrog", "label": "A.3- Hidrogenación Catalítica Parcial (1 eq H₂ → 1-buteno + 2-buteno) y Total (2 eq H₂ → Butano)" },
-        { "value": "dien_rxn_diels_alder", "label": "B- Reacción de Diels-Alder (Cicloadición Concertada [4+2]: Dieno + Dienófilo → Ciclohexeno)" },
-        { "value": "dien_rxn_polimerizacion", "label": "C- Polimerización 1,4 de Dienos Conjugados (1,3-butadieno → Polibutadieno | Isopreno → Caucho Natural cis-1,4)" }
+        {
+          "value": "dien_rxn_hbr",
+          "label": "A.1- Hidrohalogenación (1 eq HBr): Adición 1,2 (-80 °C, Control Cinético) vs. Adición 1,4 (40 °C, Control Termodinámico)"
+        },
+        {
+          "value": "dien_rxn_br2",
+          "label": "A.2- Halogenación con Br₂ (Con 1 eq: Adición 1,2 vs. 1,4 Mayoritaria | Con 2 eq: 1,2,3,4-tetrabromobutano)"
+        },
+        {
+          "value": "dien_rxn_hidrog",
+          "label": "A.3- Hidrogenación Catalítica Parcial (1 eq H₂ → 1-buteno + 2-buteno) y Total (2 eq H₂ → Butano)"
+        },
+        {
+          "value": "dien_rxn_diels_alder",
+          "label": "B- Reacción de Diels-Alder (Cicloadición Concertada [4+2]: Dieno + Dienófilo → Ciclohexeno)"
+        },
+        {
+          "value": "dien_rxn_polimerizacion",
+          "label": "C- Polimerización 1,4 de Dienos Conjugados (1,3-butadieno → Polibutadieno | Isopreno → Caucho Natural cis-1,4)"
+        }
       ]
     },
     "aromaticos": {
       "obtencion": [
-        { "value": "arom_obt_trimerizacion", "label": "1) Trimerización Cíclica Catalítica de Alquinos (3 Etino → Benceno)" },
-        { "value": "arom_obt_deshidrog", "label": "2) Reformado Catalítico / Deshidrogenación de Ciclohexano y Hexano (Pt / Pd, Δ)" },
-        { "value": "arom_obt_descarbox", "label": "3) Descarboxilación de Benzoato de Sodio con Cal Sodada (NaOH / CaO, Δ)" },
-        { "value": "arom_obt_reduccion_fenol", "label": "4) Reducción de Fenol con Polvo de Zinc en Caliente (C₆H₅–OH + Zn → Benceno + ZnO)" },
-        { "value": "arom_obt_wurtz_fittig", "label": "5) Obtención de Alquilbencenos: Síntesis de Wurtz-Fittig y Alquilación de Friedel-Crafts" }
+        {
+          "value": "arom_obt_trimerizacion",
+          "label": "1) Trimerización Cíclica Catalítica de Alquinos (3 Etino → Benceno)"
+        },
+        {
+          "value": "arom_obt_deshidrog",
+          "label": "2) Reformado Catalítico / Deshidrogenación de Ciclohexano y Hexano (Pt / Pd, Δ)"
+        },
+        {
+          "value": "arom_obt_descarbox",
+          "label": "3) Descarboxilación de Benzoato de Sodio con Cal Sodada (NaOH / CaO, Δ)"
+        },
+        {
+          "value": "arom_obt_reduccion_fenol",
+          "label": "4) Reducción de Fenol con Polvo de Zinc en Caliente (C₆H₅–OH + Zn → Benceno + ZnO)"
+        },
+        {
+          "value": "arom_obt_wurtz_fittig",
+          "label": "5) Obtención de Alquilbencenos: Síntesis de Wurtz-Fittig y Alquilación de Friedel-Crafts"
+        }
       ],
       "reacciones": [
-        { "value": "arom_rxn_halog", "label": "A.1- SEA: Halogenación Aromática (Benceno + Br₂ / FeBr₃ o Cl₂ / AlCl₃ → Halobenceno + HX)" },
-        { "value": "arom_rxn_nitracion", "label": "A.2- SEA: Nitración Aromática con Mezcla Sulfonítrica (HNO₃ / H₂SO₄ → Ion Nitronio NO₂⁺ → Nitrobenceno)" },
-        { "value": "arom_rxn_sulfonacion", "label": "A.3- SEA: Sulfonación Aromática Reversible (SO₃ / H₂SO₄ fumante ⇄ Ácido bencenosulfónico)" },
-        { "value": "arom_rxn_fc_alquilacion", "label": "A.4- SEA: Alquilación de Friedel-Crafts (R–Cl / AlCl₃ → Transposición de Carbocatión a Cumeno Mayoritario)" },
-        { "value": "arom_rxn_fc_acilacion", "label": "A.5- SEA: Acilación de Friedel-Crafts (R–COCl / AlCl₃ → Ion Acilio sin transposición → Cetona Aromática)" },
-        { "value": "arom_rxn_orientacion", "label": "B- Efecto de Sustituyentes en Derivados del Benceno: Orientadores Orto/Para vs. Meta" },
-        { "value": "arom_rxn_ox_cadena", "label": "C.1- Cadena Lateral: Oxidación Fuerte de Alquilbencenos a Ácido Benzoico (KMnO₄ / H⁺ Δ)" },
-        { "value": "arom_rxn_halog_bencilica", "label": "C.2- Cadena Lateral: Halogenación Radicalaria Bencílica (Tolueno + Cl₂ / Luz UV vs. FeCl₃)" },
-        { "value": "arom_rxn_hidrog", "label": "D- Adición al Anillo en Condiciones Drásticas: Hidrogenación Catalítica a Ciclohexano (+ 3 H₂ / Ni, P, Δ)" }
+        {
+          "value": "arom_rxn_halog",
+          "label": "A.1- SEA: Halogenación Aromática (Benceno + Br₂ / FeBr₃ o Cl₂ / AlCl₃ → Halobenceno + HX)"
+        },
+        {
+          "value": "arom_rxn_nitracion",
+          "label": "A.2- SEA: Nitración Aromática con Mezcla Sulfonítrica (HNO₃ / H₂SO₄ → Ion Nitronio NO₂⁺ → Nitrobenceno)"
+        },
+        {
+          "value": "arom_rxn_sulfonacion",
+          "label": "A.3- SEA: Sulfonación Aromática Reversible (SO₃ / H₂SO₄ fumante ⇄ Ácido bencenosulfónico)"
+        },
+        {
+          "value": "arom_rxn_fc_alquilacion",
+          "label": "A.4- SEA: Alquilación de Friedel-Crafts (R–Cl / AlCl₃ → Transposición de Carbocatión a Cumeno Mayoritario)"
+        },
+        {
+          "value": "arom_rxn_fc_acilacion",
+          "label": "A.5- SEA: Acilación de Friedel-Crafts (R–COCl / AlCl₃ → Ion Acilio sin transposición → Cetona Aromática)"
+        },
+        {
+          "value": "arom_rxn_orientacion",
+          "label": "B- Efecto de Sustituyentes en Derivados del Benceno: Orientadores Orto/Para vs. Meta"
+        },
+        {
+          "value": "arom_rxn_ox_cadena",
+          "label": "C.1- Cadena Lateral: Oxidación Fuerte de Alquilbencenos a Ácido Benzoico (KMnO₄ / H⁺ Δ)"
+        },
+        {
+          "value": "arom_rxn_halog_bencilica",
+          "label": "C.2- Cadena Lateral: Halogenación Radicalaria Bencílica (Tolueno + Cl₂ / Luz UV vs. FeCl₃)"
+        },
+        {
+          "value": "arom_rxn_hidrog",
+          "label": "D- Adición al Anillo en Condiciones Drásticas: Hidrogenación Catalítica a Ciclohexano (+ 3 H₂ / Ni, P, Δ)"
+        }
       ]
     },
     "haluros": {
       "obtencion": [
-        { "value": "hal_obt_alcanos", "label": "1) Halogenación Radicalaria de Alcanos (Cl₂ o Br₂ con Luz UV / hν o Δ)" },
-        { "value": "hal_obt_hidrohalog", "label": "2) Hidrohalogenación de Alquenos: Sin Peróxidos (Markovnikov) vs. Con Peróxidos (Anti-Markovnikov)" },
-        { "value": "hal_obt_halog_insat", "label": "3) Halogenación de Alquenos y Alquinos con X₂ / CCl₄ (→ Dihaluros Vecinales y Tetrahaluros)" },
-        { "value": "hal_obt_alcoholes_hx", "label": "4) A partir de Alcoholes con Ácidos Hidrácidos (HI, HBr o HCl / ZnCl₂ — Reactivo de Lucas)" },
-        { "value": "hal_obt_alcoholes_px3", "label": "5) A partir de Alcoholes con Cloruro de Tionilo (SOCl₂) o Haluros de Fósforo (PBr₃, PCl₃, PCl₅)" }
+        {
+          "value": "hal_obt_alcanos",
+          "label": "1) Halogenación Radicalaria de Alcanos (Cl₂ o Br₂ con Luz UV / hν o Δ)"
+        },
+        {
+          "value": "hal_obt_hidrohalog",
+          "label": "2) Hidrohalogenación de Alquenos: Sin Peróxidos (Markovnikov) vs. Con Peróxidos (Anti-Markovnikov)"
+        },
+        {
+          "value": "hal_obt_halog_insat",
+          "label": "3) Halogenación de Alquenos y Alquinos con X₂ / CCl₄ (→ Dihaluros Vecinales y Tetrahaluros)"
+        },
+        {
+          "value": "hal_obt_alcoholes_hx",
+          "label": "4) A partir de Alcoholes con Ácidos Hidrácidos (HI, HBr o HCl / ZnCl₂ — Reactivo de Lucas)"
+        },
+        {
+          "value": "hal_obt_alcoholes_px3",
+          "label": "5) A partir de Alcoholes con Cloruro de Tionilo (SOCl₂) o Haluros de Fósforo (PBr₃, PCl₃, PCl₅)"
+        }
       ],
       "reacciones": [
-        { "value": "hal_rxn_sn2", "label": "A.1- Sustitución Nucleofílica Bimolecular Concertada (SN2): KOH Acuoso, Williamson, Cianuro y Amonólisis" },
-        { "value": "hal_rxn_sn1", "label": "A.2- Sustitución Nucleofílica Unimolecular en Etapas (SN1): Solvólisis en Haluros 3° vía Carbocatión Plano" },
-        { "value": "hal_rxn_e2", "label": "B.1- β-Eliminación Bimolecular Concertada (E2): Con KOH Alcohólico Caliente vs. t-BuOK" },
-        { "value": "hal_rxn_e1", "label": "B.2- β-Eliminación Unimolecular en Etapas (E1): En Haluros 3° con Base Débil y Calor (Regla de Saytzeff)" },
-        { "value": "hal_rxn_competencia", "label": "B.3- Contraste Clásico de Examen: KOH Acuoso (Sustitución → Alcohol) vs. KOH Alcohólico Caliente (E2 → Alqueno)" },
-        { "value": "hal_rxn_metales", "label": "C- Reacción con Metales Activos: Formación de Reactivos de Grignard (Mg / Éter) y Síntesis de Wurtz (2 Na)" }
+        {
+          "value": "hal_rxn_sn2",
+          "label": "A.1- Sustitución Nucleofílica Bimolecular Concertada (SN2): KOH Acuoso, Williamson, Cianuro y Amonólisis"
+        },
+        {
+          "value": "hal_rxn_sn1",
+          "label": "A.2- Sustitución Nucleofílica Unimolecular en Etapas (SN1): Solvólisis en Haluros 3° vía Carbocatión Plano"
+        },
+        {
+          "value": "hal_rxn_e2",
+          "label": "B.1- β-Eliminación Bimolecular Concertada (E2): Con KOH Alcohólico Caliente vs. t-BuOK"
+        },
+        {
+          "value": "hal_rxn_e1",
+          "label": "B.2- β-Eliminación Unimolecular en Etapas (E1): En Haluros 3° con Base Débil y Calor (Regla de Saytzeff)"
+        },
+        {
+          "value": "hal_rxn_competencia",
+          "label": "B.3- Contraste Clásico de Examen: KOH Acuoso (Sustitución → Alcohol) vs. KOH Alcohólico Caliente (E2 → Alqueno)"
+        },
+        {
+          "value": "hal_rxn_metales",
+          "label": "C- Reacción con Metales Activos: Formación de Reactivos de Grignard (Mg / Éter) y Síntesis de Wurtz (2 Na)"
+        }
       ]
     },
     "alcoholes": {
       "obtencion": [
-        { "value": "alc_obt_hidratacion", "label": "1) Hidratación ácida de Alquenos" },
-        { "value": "alc_obt_sustitucion", "label": "2) Sustitución nucleofílica de Halogenuros de Alquilo" },
-        { "value": "alc_obt_reduccion", "label": "3) Reducción de Aldehídos, Cetonas y Ácidos" }
+        {
+          "value": "alc_obt_hidratacion",
+          "label": "1) Hidratación ácida de Alquenos"
+        },
+        {
+          "value": "alc_obt_sustitucion",
+          "label": "2) Sustitución nucleofílica de Halogenuros de Alquilo"
+        },
+        {
+          "value": "alc_obt_reduccion",
+          "label": "3) Reducción de Aldehídos, Cetonas y Ácidos"
+        }
       ],
       "reacciones": [
-        { "value": "alc_rxn_metales", "label": "A.1- Como Ácido (Ruptura O–H): Reacción con Metales Activos" },
-        { "value": "alc_rxn_esterificacion", "label": "A.2- Como Ácido/Nucleófilo: Esterificación con Ácidos Carboxílicos" },
-        { "value": "alc_rxn_hx", "label": "B.1- Como Base (Ruptura C–O): Sustitución con Ácidos Hidrácidos (HX)" },
-        { "value": "alc_rxn_williamson", "label": "B.2- Síntesis de Williamson para obtener Éteres" },
-        { "value": "alc_rxn_desh_intra", "label": "B.3- Deshidratación Intramolecular a Alquenos (Regla de Saytzeff)" },
-        { "value": "alc_rxn_desh_inter", "label": "B.4- Deshidratación Intermolecular a Éteres" },
-        { "value": "alc_rxn_ox_2rio", "label": "C.1- Oxidación de Alcoholes Secundarios a Cetonas" },
-        { "value": "alc_rxn_ox_1rio_ald", "label": "C.2- Oxidación de Alcoholes Primarios a Aldehídos (PCC)" },
-        { "value": "alc_rxn_ox_1rio_ac", "label": "C.3- Oxidación de Alcoholes Primarios a Ácidos Carboxílicos" },
-        { "value": "alc_rxn_ox_3rio", "label": "C.4- Comportamiento de Alcoholes Terciarios frente a Oxidantes" }
+        {
+          "value": "alc_rxn_metales",
+          "label": "A.1- Como Ácido (Ruptura O–H): Reacción con Metales Activos"
+        },
+        {
+          "value": "alc_rxn_esterificacion",
+          "label": "A.2- Como Ácido/Nucleófilo: Esterificación con Ácidos Carboxílicos"
+        },
+        {
+          "value": "alc_rxn_hx",
+          "label": "B.1- Como Base (Ruptura C–O): Sustitución con Ácidos Hidrácidos (HX)"
+        },
+        {
+          "value": "alc_rxn_williamson",
+          "label": "B.2- Síntesis de Williamson para obtener Éteres"
+        },
+        {
+          "value": "alc_rxn_desh_intra",
+          "label": "B.3- Deshidratación Intramolecular a Alquenos (Regla de Saytzeff)"
+        },
+        {
+          "value": "alc_rxn_desh_inter",
+          "label": "B.4- Deshidratación Intermolecular a Éteres"
+        },
+        {
+          "value": "alc_rxn_ox_2rio",
+          "label": "C.1- Oxidación de Alcoholes Secundarios a Cetonas"
+        },
+        {
+          "value": "alc_rxn_ox_1rio_ald",
+          "label": "C.2- Oxidación de Alcoholes Primarios a Aldehídos (PCC)"
+        },
+        {
+          "value": "alc_rxn_ox_1rio_ac",
+          "label": "C.3- Oxidación de Alcoholes Primarios a Ácidos Carboxílicos"
+        },
+        {
+          "value": "alc_rxn_ox_3rio",
+          "label": "C.4- Comportamiento de Alcoholes Terciarios frente a Oxidantes"
+        }
       ]
     },
     "fenoles": {
       "obtencion": [
-        { "value": "fen_obt_fusion", "label": "1) Fusión Alcalina del Ácido Bencenosulfónico (1° NaOH a 300 °C / 2° H⁺ → Fenol)" },
-        { "value": "fen_obt_cumeno", "label": "2) Proceso Industrial del Cumeno (Isopropilbenceno + O₂ → Hidroperóxido → Fenol + Acetona)" },
-        { "value": "fen_obt_diazonio", "label": "3) Hidrólisis de Sales de Diazonio Aromáticas (Cloruro de bencenodiazonio + H₂O / Δ → Fenol + N₂↑)" },
-        { "value": "fen_obt_dow", "label": "4) Hidrólisis Alcalina de Clorobenceno (Proceso Dow: NaOH a 350 °C y alta P / H⁺ → Fenol)" }
+        {
+          "value": "fen_obt_fusion",
+          "label": "1) Fusión Alcalina del Ácido Bencenosulfónico (1° NaOH a 300 °C / 2° H⁺ → Fenol)"
+        },
+        {
+          "value": "fen_obt_cumeno",
+          "label": "2) Proceso Industrial del Cumeno (Isopropilbenceno + O₂ → Hidroperóxido → Fenol + Acetona)"
+        },
+        {
+          "value": "fen_obt_diazonio",
+          "label": "3) Hidrólisis de Sales de Diazonio Aromáticas (Cloruro de bencenodiazonio + H₂O / Δ → Fenol + N₂↑)"
+        },
+        {
+          "value": "fen_obt_dow",
+          "label": "4) Hidrólisis Alcalina de Clorobenceno (Proceso Dow: NaOH a 350 °C y alta P / H⁺ → Fenol)"
+        }
       ],
       "reacciones": [
-        { "value": "fen_rxn_acidez", "label": "A.1- Reacción como Ácido (Ruptura O–H): Con NaOH y con Na⁰ → Ion Fenóxido" },
-        { "value": "fen_rxn_williamson", "label": "A.2- Formación de Éteres Arílicos (Síntesis de Williamson: Fenóxido de sodio + R–X → Anisol / Fenetol)" },
-        { "value": "fen_rxn_esterificacion", "label": "A.3- Esterificación de Fenoles con Cloruros de Acilo o Anhídridos (Fenol → Etanoato de fenilo | Aspirina)" },
-        { "value": "fen_rxn_sea_halog", "label": "B.1- SEA en el Anillo: Bromación en H₂O (→ 2,4,6-tribromofenol↓) vs. en CCl₄ (→ p-bromofenol)" },
-        { "value": "fen_rxn_sea_nitracion", "label": "B.2- SEA en el Anillo: Nitración Suave (HNO₃ dil. → o/p-nitrofenol) vs. Fuerte (→ Ácido Pícrico)" },
-        { "value": "fen_rxn_oxidacion", "label": "C.1- Oxidación de Fenoles y Difenoles a Quinonas (Hidroquinona ⇄ 1,4-benzoquinona • Coenzima Q)" },
-        { "value": "fen_rxn_reduccion_zn", "label": "C.2- Reducción con Polvo de Zinc en Caliente (C₆H₅–OH + Zn → Benceno + ZnO) y Ensayo con FeCl₃" }
+        {
+          "value": "fen_rxn_acidez",
+          "label": "A.1- Reacción como Ácido (Ruptura O–H): Con NaOH y con Na⁰ → Ion Fenóxido"
+        },
+        {
+          "value": "fen_rxn_williamson",
+          "label": "A.2- Formación de Éteres Arílicos (Síntesis de Williamson: Fenóxido de sodio + R–X → Anisol / Fenetol)"
+        },
+        {
+          "value": "fen_rxn_esterificacion",
+          "label": "A.3- Esterificación de Fenoles con Cloruros de Acilo o Anhídridos (Fenol → Etanoato de fenilo | Aspirina)"
+        },
+        {
+          "value": "fen_rxn_sea_halog",
+          "label": "B.1- SEA en el Anillo: Bromación en H₂O (→ 2,4,6-tribromofenol↓) vs. en CCl₄ (→ p-bromofenol)"
+        },
+        {
+          "value": "fen_rxn_sea_nitracion",
+          "label": "B.2- SEA en el Anillo: Nitración Suave (HNO₃ dil. → o/p-nitrofenol) vs. Fuerte (→ Ácido Pícrico)"
+        },
+        {
+          "value": "fen_rxn_oxidacion",
+          "label": "C.1- Oxidación de Fenoles y Difenoles a Quinonas (Hidroquinona ⇄ 1,4-benzoquinona • Coenzima Q)"
+        },
+        {
+          "value": "fen_rxn_reduccion_zn",
+          "label": "C.2- Reducción con Polvo de Zinc en Caliente (C₆H₅–OH + Zn → Benceno + ZnO) y Ensayo con FeCl₃"
+        }
       ]
     },
     "eteres": {
       "obtencion": [
-        { "value": "ete_obt_williamson", "label": "1) Síntesis de Williamson (Alcóxido o Fenóxido R–O⁻Na⁺ + Haluro 1°/Metílico R'–X → Éter)" },
-        { "value": "ete_obt_desh_inter", "label": "2) Deshidratación Intermolecular Bimolecular de Alcoholes Primarios con H₂SO₄ a 140 °C" },
-        { "value": "ete_obt_alcoxialq", "label": "3) Adición de Alcoholes a Alquenos Catalizada por Ácido (2-metilpropeno + CH₃OH / H⁺ → MTBE)" },
-        { "value": "ete_obt_epoxidos", "label": "4) Obtención de Éteres Cíclicos de 3 Miembros (Epóxidos / Oxiranos)" }
+        {
+          "value": "ete_obt_williamson",
+          "label": "1) Síntesis de Williamson (Alcóxido o Fenóxido R–O⁻Na⁺ + Haluro 1°/Metílico R'–X → Éter)"
+        },
+        {
+          "value": "ete_obt_desh_inter",
+          "label": "2) Deshidratación Intermolecular Bimolecular de Alcoholes Primarios con H₂SO₄ a 140 °C"
+        },
+        {
+          "value": "ete_obt_alcoxialq",
+          "label": "3) Adición de Alcoholes a Alquenos Catalizada por Ácido (2-metilpropeno + CH₃OH / H⁺ → MTBE)"
+        },
+        {
+          "value": "ete_obt_epoxidos",
+          "label": "4) Obtención de Éteres Cíclicos de 3 Miembros (Epóxidos / Oxiranos)"
+        }
       ],
       "reacciones": [
-        { "value": "ete_rxn_hcl_oxonio", "label": "A.1- Reacción con HCl Concentrado Frío (→ Sal Cloruro de Dialquiloxonio)" },
-        { "value": "ete_rxn_hbr_hi", "label": "A.2- Escisión Ácida de Éteres con HBr o HI en Caliente (1 eq → Alcohol + Haluro | 2 eq → 2 Haluros)" },
-        { "value": "ete_rxn_eter_arilico_hi", "label": "A.3- Regioselectividad en Éteres Aril-Alquílicos (Anisol + HI → Fenol + Haluro de Alquilo)" },
-        { "value": "ete_rxn_autooxidacion", "label": "B- Reacción con el Oxígeno (O₂): Autooxidación Lenta a Peróxidos y Combustión Total" },
-        { "value": "ete_rxn_apertura_epox", "label": "C.1- Apertura de Epóxidos (Oxiranos) por Tensión Anular (→ trans-1,2-diol)" },
-        { "value": "ete_rxn_corona", "label": "C.2- Éteres Corona (Poliéteres Cíclicos de Pedersen): Reconocimiento Selectivo de Li⁺, Na⁺ y K⁺" }
+        {
+          "value": "ete_rxn_hcl_oxonio",
+          "label": "A.1- Reacción con HCl Concentrado Frío (→ Sal Cloruro de Dialquiloxonio)"
+        },
+        {
+          "value": "ete_rxn_hbr_hi",
+          "label": "A.2- Escisión Ácida de Éteres con HBr o HI en Caliente (1 eq → Alcohol + Haluro | 2 eq → 2 Haluros)"
+        },
+        {
+          "value": "ete_rxn_eter_arilico_hi",
+          "label": "A.3- Regioselectividad en Éteres Aril-Alquílicos (Anisol + HI → Fenol + Haluro de Alquilo)"
+        },
+        {
+          "value": "ete_rxn_autooxidacion",
+          "label": "B- Reacción con el Oxígeno (O₂): Autooxidación Lenta a Peróxidos y Combustión Total"
+        },
+        {
+          "value": "ete_rxn_apertura_epox",
+          "label": "C.1- Apertura de Epóxidos (Oxiranos) por Tensión Anular (→ trans-1,2-diol)"
+        },
+        {
+          "value": "ete_rxn_corona",
+          "label": "C.2- Éteres Corona (Poliéteres Cíclicos de Pedersen): Reconocimiento Selectivo de Li⁺, Na⁺ y K⁺"
+        }
       ]
     },
     "tioles": {
       "obtencion": [
-        { "value": "tio_obt_sn2", "label": "1) Sustitución Nucleofílica Bimolecular (SN2) de Haluros de Alquilo con NaSH / KSH (→ Tiol R–SH)" },
-        { "value": "tio_obt_disulfuro", "label": "2) Reducción de Disulfuros (R–S–S–R + 2 [H] → 2 R–SH; Cistina → 2 Cisteína)" },
-        { "value": "tio_obt_tioeter", "label": "3) Obtención de Tioéteres: Alquilación SN2 de Alcanotiolatos (R–S⁻Na⁺ + R'–X → Tioéter + NaX)" }
+        {
+          "value": "tio_obt_sn2",
+          "label": "1) Sustitución Nucleofílica Bimolecular (SN2) de Haluros de Alquilo con NaSH / KSH (→ Tiol R–SH)"
+        },
+        {
+          "value": "tio_obt_disulfuro",
+          "label": "2) Reducción de Disulfuros (R–S–S–R + 2 [H] → 2 R–SH; Cistina → 2 Cisteína)"
+        },
+        {
+          "value": "tio_obt_tioeter",
+          "label": "3) Obtención de Tioéteres: Alquilación SN2 de Alcanotiolatos (R–S⁻Na⁺ + R'–X → Tioéter + NaX)"
+        }
       ],
       "reacciones": [
-        { "value": "tio_rxn_acidez", "label": "A.1- Reacción como Ácido (Ruptura S–H, pKa ~10–11): Con NaOH acuoso → Alcanotiolato (R–S⁻Na⁺)" },
-        { "value": "tio_rxn_metales", "label": "A.2- Reacción con Metales Pesados (Hg²⁺, Pb²⁺, Ag⁺ → Mercaptidos insolubles)" },
-        { "value": "tio_rxn_ox_suave", "label": "B.1- Oxidación Suave Reversible a Disulfuros (2 R–SH ⇄ R–S–S–R • Cisteína ⇄ Cistina)" },
-        { "value": "tio_rxn_ox_fuerte", "label": "B.2- Oxidación Fuerte de Tioles a Ácidos Sulfónicos (R–SH + HNO₃ / KMnO₄ → R–SO₃H)" },
-        { "value": "tio_rxn_tioester", "label": "C- Formación de Tioésteres (R–SH + Ácido/Cloruro de Acilo → Acetil-CoA)" }
+        {
+          "value": "tio_rxn_acidez",
+          "label": "A.1- Reacción como Ácido (Ruptura S–H, pKa ~10–11): Con NaOH acuoso → Alcanotiolato (R–S⁻Na⁺)"
+        },
+        {
+          "value": "tio_rxn_metales",
+          "label": "A.2- Reacción con Metales Pesados (Hg²⁺, Pb²⁺, Ag⁺ → Mercaptidos insolubles)"
+        },
+        {
+          "value": "tio_rxn_ox_suave",
+          "label": "B.1- Oxidación Suave Reversible a Disulfuros (2 R–SH ⇄ R–S–S–R • Cisteína ⇄ Cistina)"
+        },
+        {
+          "value": "tio_rxn_ox_fuerte",
+          "label": "B.2- Oxidación Fuerte de Tioles a Ácidos Sulfónicos (R–SH + HNO₃ / KMnO₄ → R–SO₃H)"
+        },
+        {
+          "value": "tio_rxn_tioester",
+          "label": "C- Formación de Tioésteres (R–SH + Ácido/Cloruro de Acilo → Acetil-CoA)"
+        }
       ]
     },
     "tioeteres": {
       "obtencion": [
-        { "value": "tiet_obt_williamson", "label": "1) Síntesis de Tioéteres tipo Williamson: Alquilación SN2 de Alcanotiolatos (R–S⁻Na⁺ + R'–X)" },
-        { "value": "tiet_obt_na2s", "label": "2) Sustitución Nucleofílica de 2 Haluros de Alquilo con Sulfuro de Sodio (2 R–X + Na₂S → R–S–R)" },
-        { "value": "tiet_obt_alqueno", "label": "3) Adición de Tioles a Alquenos (Markovnikov o Anti-Markovnikov con ROOR)" }
+        {
+          "value": "tiet_obt_williamson",
+          "label": "1) Síntesis de Tioéteres tipo Williamson: Alquilación SN2 de Alcanotiolatos (R–S⁻Na⁺ + R'–X)"
+        },
+        {
+          "value": "tiet_obt_na2s",
+          "label": "2) Sustitución Nucleofílica de 2 Haluros de Alquilo con Sulfuro de Sodio (2 R–X + Na₂S → R–S–R)"
+        },
+        {
+          "value": "tiet_obt_alqueno",
+          "label": "3) Adición de Tioles a Alquenos (Markovnikov o Anti-Markovnikov con ROOR)"
+        }
       ],
       "reacciones": [
-        { "value": "tiet_rxn_ox_sulfoxido", "label": "A.1- Oxidación Suave de Tioéteres a Sulfóxidos (R–S–R' + 1 eq H₂O₂ → R–S(=O)–R' • DMSO)" },
-        { "value": "tiet_rxn_ox_sulfona", "label": "A.2- Oxidación Fuerte de Tioéteres o Sulfóxidos a Sulfonas (R–S–R' + 2 eq H₂O₂ → R–SO₂–R')" },
-        { "value": "tiet_rxn_sulfonio", "label": "B- Alquilación Nucleofílica en el Azufre: Sales de Trialquilsulfonio (R₂R'S⁺X⁻ • SAM)" },
-        { "value": "tiet_rxn_raney", "label": "C- Hidrogenólisis / Desulfuración Reductiva con Níquel Raney (→ Alcanos + NiS)" }
+        {
+          "value": "tiet_rxn_ox_sulfoxido",
+          "label": "A.1- Oxidación Suave de Tioéteres a Sulfóxidos (R–S–R' + 1 eq H₂O₂ → R–S(=O)–R' • DMSO)"
+        },
+        {
+          "value": "tiet_rxn_ox_sulfona",
+          "label": "A.2- Oxidación Fuerte de Tioéteres o Sulfóxidos a Sulfonas (R–S–R' + 2 eq H₂O₂ → R–SO₂–R')"
+        },
+        {
+          "value": "tiet_rxn_sulfonio",
+          "label": "B- Alquilación Nucleofílica en el Azufre: Sales de Trialquilsulfonio (R₂R'S⁺X⁻ • SAM)"
+        },
+        {
+          "value": "tiet_rxn_raney",
+          "label": "C- Hidrogenólisis / Desulfuración Reductiva con Níquel Raney (→ Alcanos + NiS)"
+        }
       ]
     },
     "aminas": {
       "obtencion": [
-        { "value": "ami_obt_1_alquilacion_sn2", "label": "1) Sustitución SN2 de Halogenuros de Alquilo con NH₃ o Aminas (→ Etilamina, Dietilamina, Trietilamina)" },
-        { "value": "ami_obt_2_nitro_aromaticos", "label": "2) Reducción Catalítica de Compuestos Nitro Aromáticos (p-Nitrotolueno + 3 H₂/Pt → p-Metilanilina)" },
-        { "value": "ami_obt_3_nitrilos", "label": "3) Reducción Catalítica de Nitrilos (Butanonitrilo + 2 H₂/Ni → Butanamina [Amina 1°])" },
-        { "value": "ami_obt_4_isonitrilos", "label": "4) Reducción Catalítica de Isonitrilos (Isocianuro de etilo + 2 H₂/Ni → Etilmetilamina [Amina 2°])" },
-        { "value": "ami_obt_5_amidas_1", "label": "5) Reducción de Amidas Primarias con LiAlH₄ (Propanamida → Propanamina [Amina 1°])" },
-        { "value": "ami_obt_6_amidas_sust", "label": "6) Reducción de Amidas N-Sustituidas con LiAlH₄ (N-Isopropilpropanamida → Isopropilpropilamina [Amina 2°])" }
+        {
+          "value": "ami_obt_1_alquilacion_sn2",
+          "label": "1) Sustitución SN2 de Halogenuros de Alquilo con NH₃ o Aminas (→ Etilamina, Dietilamina, Trietilamina)"
+        },
+        {
+          "value": "ami_obt_2_nitro_aromaticos",
+          "label": "2) Reducción Catalítica de Compuestos Nitro Aromáticos (p-Nitrotolueno + 3 H₂/Pt → p-Metilanilina)"
+        },
+        {
+          "value": "ami_obt_3_nitrilos",
+          "label": "3) Reducción Catalítica de Nitrilos (Butanonitrilo + 2 H₂/Ni → Butanamina [Amina 1°])"
+        },
+        {
+          "value": "ami_obt_4_isonitrilos",
+          "label": "4) Reducción Catalítica de Isonitrilos (Isocianuro de etilo + 2 H₂/Ni → Etilmetilamina [Amina 2°])"
+        },
+        {
+          "value": "ami_obt_5_amidas_1",
+          "label": "5) Reducción de Amidas Primarias con LiAlH₄ (Propanamida → Propanamina [Amina 1°])"
+        },
+        {
+          "value": "ami_obt_6_amidas_sust",
+          "label": "6) Reducción de Amidas N-Sustituidas con LiAlH₄ (N-Isopropilpropanamida → Isopropilpropilamina [Amina 2°])"
+        }
       ],
       "reacciones": [
-        { "value": "ami_rxn_0_base_acidos", "label": "A.1- Como Base frente a Ácidos Inorgánicos (Etilamina + HCl / HI / HNO₃ → Sales de Etilamonio)" },
-        { "value": "ami_rxn_1_alquilacion_sn2", "label": "B.1- Sustitución SN2 con Halogenuros de Alquilo (→ Dietilamina, Trietilamina y Cloruro de Tetrametilamonio)" },
-        { "value": "ami_rxn_2_derivados_acido", "label": "B.2- Sustitución Nucleofílica de Acilos (Con Cloruros, Ésteres o Anhídridos → N-Etiletanamida / N-Feniletanamida)" },
-        { "value": "ami_rxn_3_hno2_1_alif", "label": "B.3- Amina Primaria Alifática + Ácido Nitroso HNO₂ (Etilamina → Etanol + Gas N₂↑ + H₂O)" },
-        { "value": "ami_rxn_4_hno2_2_nitrosamina", "label": "B.4- Amina Secundaria + Ácido Nitroso HNO₂ (Dietilamina → N-Nitrosodietilamina + H₂O)" },
-        { "value": "ami_rxn_5_hno2_3_sal", "label": "B.5- Amina Terciaria + Ácido Nitroso HNO₂ (Trietilamina → Nitrito de Trietilamonio [Reacción Ácido-Base])" },
-        { "value": "ami_rxn_6_hno2_1_arom_diazonio", "label": "B.6- Amina Primaria Aromática + HNO₂ / HCl en Frío 0–5 °C (Anilina → Cloruro de Bencenodiazonio + H₂O)" },
-        { "value": "ami_rxn_7_carbonilos_imina", "label": "B.7- Condensación con Aldehídos y Cetonas (Etilamina + Etanal → Carbinolamina → Imina / Base de Schiff + H₂O)" }
+        {
+          "value": "ami_rxn_0_base_acidos",
+          "label": "A.1- Como Base frente a Ácidos Inorgánicos (Etilamina + HCl / HI / HNO₃ → Sales de Etilamonio)"
+        },
+        {
+          "value": "ami_rxn_1_alquilacion_sn2",
+          "label": "B.1- Sustitución SN2 con Halogenuros de Alquilo (→ Dietilamina, Trietilamina y Cloruro de Tetrametilamonio)"
+        },
+        {
+          "value": "ami_rxn_2_derivados_acido",
+          "label": "B.2- Sustitución Nucleofílica de Acilos (Con Cloruros, Ésteres o Anhídridos → N-Etiletanamida / N-Feniletanamida)"
+        },
+        {
+          "value": "ami_rxn_3_hno2_1_alif",
+          "label": "B.3- Amina Primaria Alifática + Ácido Nitroso HNO₂ (Etilamina → Etanol + Gas N₂↑ + H₂O)"
+        },
+        {
+          "value": "ami_rxn_4_hno2_2_nitrosamina",
+          "label": "B.4- Amina Secundaria + Ácido Nitroso HNO₂ (Dietilamina → N-Nitrosodietilamina + H₂O)"
+        },
+        {
+          "value": "ami_rxn_5_hno2_3_sal",
+          "label": "B.5- Amina Terciaria + Ácido Nitroso HNO₂ (Trietilamina → Nitrito de Trietilamonio [Reacción Ácido-Base])"
+        },
+        {
+          "value": "ami_rxn_6_hno2_1_arom_diazonio",
+          "label": "B.6- Amina Primaria Aromática + HNO₂ / HCl en Frío 0–5 °C (Anilina → Cloruro de Bencenodiazonio + H₂O)"
+        },
+        {
+          "value": "ami_rxn_7_carbonilos_imina",
+          "label": "B.7- Condensación con Aldehídos y Cetonas (Etilamina + Etanal → Carbinolamina → Imina / Base de Schiff + H₂O)"
+        }
       ]
     },
     "hetero_no_arom": {
       "obtencion": [
-        { "value": "hetna_obt_oxigenados", "label": "1) Obtención de Heterociclos Oxigenados No Aromáticos: Deshidratación de Dioles (→ THF, Oxano, 1,4-Dioxano)" },
-        { "value": "hetna_obt_nitrogenados", "label": "2) Obtención de Heterociclos Nitrogenados No Aromáticos: Ciclación SN2 (→ Aziridina, Pirrolidina, Piperidina)" },
-        { "value": "hetna_obt_azufrados", "label": "3) Obtención de Heterociclos Azufrados No Aromáticos: Ciclación con Na₂S a Tetrahidrotiofeno (Tiolano)" },
-        { "value": "hetna_obt_hidrog_arom", "label": "4) Hidrogenación Catalítica Exhaustiva de Heterociclos Aromáticos (Furano → THF | Piridina → Piperidina)" }
+        {
+          "value": "hetna_obt_oxigenados",
+          "label": "1) Obtención de Heterociclos Oxigenados No Aromáticos: Deshidratación de Dioles (→ THF, Oxano, 1,4-Dioxano)"
+        },
+        {
+          "value": "hetna_obt_nitrogenados",
+          "label": "2) Obtención de Heterociclos Nitrogenados No Aromáticos: Ciclación SN2 (→ Aziridina, Pirrolidina, Piperidina)"
+        },
+        {
+          "value": "hetna_obt_azufrados",
+          "label": "3) Obtención de Heterociclos Azufrados No Aromáticos: Ciclación con Na₂S a Tetrahidrotiofeno (Tiolano)"
+        },
+        {
+          "value": "hetna_obt_hidrog_arom",
+          "label": "4) Hidrogenación Catalítica Exhaustiva de Heterociclos Aromáticos (Furano → THF | Piridina → Piperidina)"
+        }
       ],
       "reacciones": [
-        { "value": "hetna_rxn_apertura_3m", "label": "A.1- Apertura Nucleofílica de Heterociclos de 3 Miembros (Oxirano, Aziridina, Tiirano)" },
-        { "value": "hetna_rxn_oxigenados_hx", "label": "A.2- Escisión Ácida de Éteres Cíclicos de 5 y 6 Miembros (THF o Tetrahidropirano + 2 HBr / HI Δ)" },
-        { "value": "hetna_rxn_basicidad_n", "label": "B.1- Basicidad y Salificación de Heterociclos Nitrogenados Saturados (Pirrolidina y Piperidina)" },
-        { "value": "hetna_rxn_n_acil_nitros", "label": "B.2- Reacciones de Amina Secundaria Cíclica en Pirrolidina, Piperidina y Morfolina" },
-        { "value": "hetna_rxn_azufrados_ox", "label": "C- Oxidación del Azufre en Heterociclos Azufrados No Aromáticos (Tetrahidrotiofeno → Sulfolano)" }
+        {
+          "value": "hetna_rxn_apertura_3m",
+          "label": "A.1- Apertura Nucleofílica de Heterociclos de 3 Miembros (Oxirano, Aziridina, Tiirano)"
+        },
+        {
+          "value": "hetna_rxn_oxigenados_hx",
+          "label": "A.2- Escisión Ácida de Éteres Cíclicos de 5 y 6 Miembros (THF o Tetrahidropirano + 2 HBr / HI Δ)"
+        },
+        {
+          "value": "hetna_rxn_basicidad_n",
+          "label": "B.1- Basicidad y Salificación de Heterociclos Nitrogenados Saturados (Pirrolidina y Piperidina)"
+        },
+        {
+          "value": "hetna_rxn_n_acil_nitros",
+          "label": "B.2- Reacciones de Amina Secundaria Cíclica en Pirrolidina, Piperidina y Morfolina"
+        },
+        {
+          "value": "hetna_rxn_azufrados_ox",
+          "label": "C- Oxidación del Azufre en Heterociclos Azufrados No Aromáticos (Tetrahidrotiofeno → Sulfolano)"
+        }
       ]
     },
     "carbonilos": {
       "obtencion": [
-        { "value": "ac_obt_hidratacion_etino", "label": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)" },
-        { "value": "ac_obt_hidratacion_alquinos", "label": "2) Hidratación de Alquinos Terminales e Internos (+ H₂O / H₂SO₄ / HgSO₄ ──► Cetonas)" },
-        { "value": "ac_obt_reduccion_acidos_dibah", "label": "3) Reducción Débil de Ácidos Carboxílicos (+ DIBAH ──► Aldehído)" },
-        { "value": "ac_obt_oxidacion_alcohol1", "label": "4) Oxidación Suave de Alcoholes Primarios (+ [O] débil / PCC ──► Aldehído)" },
-        { "value": "ac_obt_oxidacion_alcohol2", "label": "5) Oxidación de Alcoholes Secundarios (+ [O] / CrO₃ / K₂Cr₂O₇ ──► Cetona)" },
-        { "value": "ac_obt_reduccion_haluros_acilo", "label": "6) Reducción Catalítica de Halogenuros de Ácido (Rosenmund: + H₂ / Pt ──► Aldehído)" },
-        { "value": "ac_obt_friedel_crafts", "label": "7) Acilación de Friedel-Crafts (+ R–COCl ó Cl–CHO / AlCl₃ ──► Aldehído o Cetona Aromática)" },
-        { "value": "ac_obt_ozonolisis", "label": "8) Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn/H₂O ──► Aldehídos y/o Cetonas)" },
-        { "value": "ac_obt_oxidacion_alquenos", "label": "9) Ruptura Oxidativa de Alquenos Disustituidos (+ KMnO₄ conc., H⁺, Δ ──► Cetonas)" }
+        {
+          "value": "ac_obt_hidratacion_etino",
+          "label": "1) Hidratación del Etino / Acetileno (+ H₂O / H₂SO₄ / HgSO₄ ──► Etanal)"
+        },
+        {
+          "value": "ac_obt_hidratacion_alquinos",
+          "label": "2) Hidratación de Alquinos Terminales e Internos (+ H₂O / H₂SO₄ / HgSO₄ ──► Cetonas)"
+        },
+        {
+          "value": "ac_obt_reduccion_acidos_dibah",
+          "label": "3) Reducción Débil de Ácidos Carboxílicos (+ DIBAH ──► Aldehído)"
+        },
+        {
+          "value": "ac_obt_oxidacion_alcohol1",
+          "label": "4) Oxidación Suave de Alcoholes Primarios (+ [O] débil / PCC ──► Aldehído)"
+        },
+        {
+          "value": "ac_obt_oxidacion_alcohol2",
+          "label": "5) Oxidación de Alcoholes Secundarios (+ [O] / CrO₃ / K₂Cr₂O₇ ──► Cetona)"
+        },
+        {
+          "value": "ac_obt_reduccion_haluros_acilo",
+          "label": "6) Reducción Catalítica de Halogenuros de Ácido (Rosenmund: + H₂ / Pt ──► Aldehído)"
+        },
+        {
+          "value": "ac_obt_friedel_crafts",
+          "label": "7) Acilación de Friedel-Crafts (+ R–COCl ó Cl–CHO / AlCl₃ ──► Aldehído o Cetona Aromática)"
+        },
+        {
+          "value": "ac_obt_ozonolisis",
+          "label": "8) Ozonólisis Reductiva de Alquenos (+ 1. O₃  2. Zn/H₂O ──► Aldehídos y/o Cetonas)"
+        },
+        {
+          "value": "ac_obt_oxidacion_alquenos",
+          "label": "9) Ruptura Oxidativa de Alquenos Disustituidos (+ KMnO₄ conc., H⁺, Δ ──► Cetonas)"
+        }
       ],
       "reacciones": [
-        { "value": "carb_rxn_1_reduccion", "label": "1) Reducción de Aldehídos y Cetonas (+ DIBAH / LiBH₄ / NaBH₄ ──► Alcoholes 1° y 2°)" },
-        { "value": "carb_rxn_2_oxidacion_acidos", "label": "2) Oxidación de Aldehídos (+ [O] débil / KMnO₄ / K₂Cr₂O₇ ──► Ácidos Carboxílicos)" },
-        { "value": "carb_rxn_3_haloformica", "label": "3) Reacción Haloformica de Metilcetonas o Etanal (+ NaOH / X₂ ──► Sal Carboxilato + Haloformo CHX₃)" },
-        { "value": "carb_rxn_4_cianhidrinas", "label": "4) Formación de Cianhidrinas (+ H–C≡N ──► α-Hidroxinitrilos)" },
-        { "value": "carb_rxn_5_hidratos", "label": "5) Adición de Agua a Aldehídos (+ H–OH ──► Hidratos / Gem-dioles; Hidrato de Cloral)" },
-        { "value": "carb_rxn_6_hemiacetal_acetal", "label": "6) Adición de Alcoholes a Aldehídos (+ R–OH ──► Hemiacetal ──(+ R–OH)──► Acetal + H₂O)" },
-        { "value": "carb_rxn_7_hemicetal_cetal", "label": "7) Adición de Alcoholes a Cetonas (+ R–OH ──► Hemicetal ──(+ R–OH)──► Cetal + H₂O)" },
-        { "value": "carb_rxn_8_imina_primaria", "label": "8) Condensación con Amoníaco (+ NH₃ ──► Iminas Primarias + H₂O)" },
-        { "value": "carb_rxn_9_imina_secundaria", "label": "9) Condensación con Aminas Primarias (+ R–NH₂ ──► Iminas Secundarias / Bases de Schiff + H₂O)" },
-        { "value": "carb_rxn_10_hidrazona", "label": "10) Condensación con Hidracina (+ H₂N–NH₂ ──► Hidrazonas + H₂O)" },
-        { "value": "carb_rxn_11_oxima", "label": "11) Condensación con Hidroxilamina (+ H₂N–OH ──► Oximas + H₂O)" },
-        { "value": "carb_rxn_12_fenilhidrazona", "label": "12) Condensación con Fenilhidracina (+ C₆H₅–NH–NH₂ ──► Fenilhidrazonas + H₂O)" },
-        { "value": "carb_rxn_13_semicarbazona", "label": "13) Condensación con Semicarbazida (+ H₂N–NH–CO–NH₂ ──► Semicarbazonas + H₂O)" },
-        { "value": "carb_rxn_14_aldolizacion", "label": "14) Reacción de Aldolización (2 Aldehídos con H-α ──► Aldol ──(-H₂O)──► Aldehído α,β-Insaturado)" },
-        { "value": "carb_rxn_15_cetolizacion_cruzada", "label": "15) Cetolización y Condensación Aldólica Cruzada (2 Cetonas o Aldehído + Cetona con H-α)" },
-        { "value": "carb_rxn_16_benzaldehido_cetona", "label": "16) Condensación Aldólica Dirigida: Benzaldehído (sin H-α) + Cetona ──► Cetona α,β-Insaturada" },
-        { "value": "carb_rxn_17_grignard", "label": "17) Adición de Reactivo de Grignard (Metanal → 1° | Aldehídos → 2° | Cetonas → Alcohol 3° + Retrosíntesis)" }
+        {
+          "value": "carb_rxn_1_reduccion",
+          "label": "1) Reducción de Aldehídos y Cetonas (+ DIBAH / LiBH₄ / NaBH₄ ──► Alcoholes 1° y 2°)"
+        },
+        {
+          "value": "carb_rxn_2_oxidacion_acidos",
+          "label": "2) Oxidación de Aldehídos (+ [O] débil / KMnO₄ / K₂Cr₂O₇ ──► Ácidos Carboxílicos)"
+        },
+        {
+          "value": "carb_rxn_3_haloformica",
+          "label": "3) Reacción Haloformica de Metilcetonas o Etanal (+ NaOH / X₂ ──► Sal Carboxilato + Haloformo CHX₃)"
+        },
+        {
+          "value": "carb_rxn_4_cianhidrinas",
+          "label": "4) Formación de Cianhidrinas (+ H–C≡N ──► α-Hidroxinitrilos)"
+        },
+        {
+          "value": "carb_rxn_5_hidratos",
+          "label": "5) Adición de Agua a Aldehídos (+ H–OH ──► Hidratos / Gem-dioles; Hidrato de Cloral)"
+        },
+        {
+          "value": "carb_rxn_6_hemiacetal_acetal",
+          "label": "6) Adición de Alcoholes a Aldehídos (+ R–OH ──► Hemiacetal ──(+ R–OH)──► Acetal + H₂O)"
+        },
+        {
+          "value": "carb_rxn_7_hemicetal_cetal",
+          "label": "7) Adición de Alcoholes a Cetonas (+ R–OH ──► Hemicetal ──(+ R–OH)──► Cetal + H₂O)"
+        },
+        {
+          "value": "carb_rxn_8_imina_primaria",
+          "label": "8) Condensación con Amoníaco (+ NH₃ ──► Iminas Primarias + H₂O)"
+        },
+        {
+          "value": "carb_rxn_9_imina_secundaria",
+          "label": "9) Condensación con Aminas Primarias (+ R–NH₂ ──► Iminas Secundarias / Bases de Schiff + H₂O)"
+        },
+        {
+          "value": "carb_rxn_10_hidrazona",
+          "label": "10) Condensación con Hidracina (+ H₂N–NH₂ ──► Hidrazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_11_oxima",
+          "label": "11) Condensación con Hidroxilamina (+ H₂N–OH ──► Oximas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_12_fenilhidrazona",
+          "label": "12) Condensación con Fenilhidracina (+ C₆H₅–NH–NH₂ ──► Fenilhidrazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_13_semicarbazona",
+          "label": "13) Condensación con Semicarbazida (+ H₂N–NH–CO–NH₂ ──► Semicarbazonas + H₂O)"
+        },
+        {
+          "value": "carb_rxn_14_aldolizacion",
+          "label": "14) Reacción de Aldolización (2 Aldehídos con H-α ──► Aldol ──(-H₂O)──► Aldehído α,β-Insaturado)"
+        },
+        {
+          "value": "carb_rxn_15_cetolizacion_cruzada",
+          "label": "15) Cetolización y Condensación Aldólica Cruzada (2 Cetonas o Aldehído + Cetona con H-α)"
+        },
+        {
+          "value": "carb_rxn_16_benzaldehido_cetona",
+          "label": "16) Condensación Aldólica Dirigida: Benzaldehído (sin H-α) + Cetona ──► Cetona α,β-Insaturada"
+        },
+        {
+          "value": "carb_rxn_17_grignard",
+          "label": "17) Adición de Reactivo de Grignard (Metanal → 1° | Aldehídos → 2° | Cetonas → Alcohol 3° + Retrosíntesis)"
+        }
       ]
     },
     "acidos": {
       "obtencion": [
-        { "value": "ac_obt_ox_alc_ald", "label": "1) Oxidación Fuerte de Alcoholes Primarios, Aldehídos y Dioles (Na₂Cr₂O₇/H₂SO₄, CrO₃ o KMnO₄ → R–COOH)" },
-        { "value": "ac_obt_ox_aril", "label": "2) Oxidación de la Cadena Lateral de Alquilbencenos (Tolueno o Propilbenceno + KMnO₄/H⁺ Δ → Ácido Benzoico)" },
-        { "value": "ac_obt_ox_alquenos", "label": "3) Ruptura Oxidativa de Alquenos, Cicloalquenos y Alquinos (O₃ / H₂O₂ o KMnO₄ conc. Δ → Ácidos y Diácidos)" },
-        { "value": "ac_obt_hidrolisis_derivados", "label": "4) Hidrólisis de Derivados de Ácido (Ésteres, Lactonas, Amidas, Lactamas, Anhídridos y Haluros → R–COOH)" },
-        { "value": "ac_obt_nitrilos", "label": "5) Hidrólisis Ácida o Básica de Nitrilos (R–C≡N) e Isonitrilos (R–N≡C) vía Amidas → R–COOH" },
-        { "value": "ac_obt_grignard", "label": "6) Carbonatación de Reactivos de Grignard con Dióxido de Carbono (R–MgX + 1° CO₂ / 2° H₃O⁺ → R–COOH)" }
+        {
+          "value": "ac_obt_ox_alc_ald",
+          "label": "1) Oxidación Fuerte de Alcoholes Primarios, Aldehídos y Dioles (Na₂Cr₂O₇/H₂SO₄, CrO₃ o KMnO₄ → R–COOH)"
+        },
+        {
+          "value": "ac_obt_ox_aril",
+          "label": "2) Oxidación de la Cadena Lateral de Alquilbencenos (Tolueno o Propilbenceno + KMnO₄/H⁺ Δ → Ácido Benzoico)"
+        },
+        {
+          "value": "ac_obt_ox_alquenos",
+          "label": "3) Ruptura Oxidativa de Alquenos, Cicloalquenos y Alquinos (O₃ / H₂O₂ o KMnO₄ conc. Δ → Ácidos y Diácidos)"
+        },
+        {
+          "value": "ac_obt_hidrolisis_derivados",
+          "label": "4) Hidrólisis de Derivados de Ácido (Ésteres, Lactonas, Amidas, Lactamas, Anhídridos y Haluros → R–COOH)"
+        },
+        {
+          "value": "ac_obt_nitrilos",
+          "label": "5) Hidrólisis Ácida o Básica de Nitrilos (R–C≡N) e Isonitrilos (R–N≡C) vía Amidas → R–COOH"
+        },
+        {
+          "value": "ac_obt_grignard",
+          "label": "6) Carbonatación de Reactivos de Grignard con Dióxido de Carbono (R–MgX + 1° CO₂ / 2° H₃O⁺ → R–COOH)"
+        }
       ],
       "reacciones": [
-        { "value": "ac_rxn_acidez", "label": "A.1- Como Ácido (Ruptura O–H): Formación de Sales (NaOH, KOH, NaHCO₃) y Micelas / Jabones" },
-        { "value": "ac_rxn_esterificacion", "label": "B.1- Esterificación de Fischer (+ Alcohol ⇄ Éster + H₂O) y Tioesterificación (+ Tiol R–SH → Tioéster)" },
-        { "value": "ac_rxn_lactonas", "label": "B.2- Esterificación Intramolecular de Hidroxiácidos (γ- y δ-Hidroxiácidos + H⁺ → Lactonas + H₂O)" },
-        { "value": "ac_rxn_cloruros", "label": "B.3- Formación de Haluros de Acilo con SOCl₂, PCl₅ o PCl₃ (→ R–COCl + SO₂↑ + HCl↑)" },
-        { "value": "ac_rxn_anhidridos", "label": "B.4- Formación de Anhídridos Intermoleculares y Cíclicos (Ác. Succínico / o-Ftálico + Δ → Anhídrido)" },
-        { "value": "ac_rxn_amidas", "label": "B.5- Formación de Amidas con Amoníaco o Aminas (1° Sal de Amonio —(Δ)→ Amida + H₂O)" },
-        { "value": "ac_rxn_lactamas", "label": "B.6- Aminación Intramolecular de Aminoácidos (γ- y δ-Aminoácidos + Δ / H⁺ → Lactamas + H₂O)" },
-        { "value": "ac_rxn_reduccion", "label": "C- Reducción de Ácidos: Total con LiAlH₄ / LiBH₄ (→ Alcohol 1°) vs. Parcial con DIBAH (→ Aldehído)" },
-        { "value": "ac_rxn_hvz", "label": "D.1- Halogenación α de Hell-Volhard-Zelinsky (R–CH₂–COOH + Br₂ / PBr₃ → α-Bromoácido)" },
-        { "value": "ac_rxn_descarbox_cadena", "label": "D.2- Descarboxilación (β-Cetoácidos / Malónico / Cal Sodada) y Reacciones de Hidroxiácidos (Málico ⇄ Fumárico)" }
+        {
+          "value": "ac_rxn_acidez",
+          "label": "A.1- Como Ácido (Ruptura O–H): Formación de Sales (NaOH, KOH, NaHCO₃) y Micelas / Jabones"
+        },
+        {
+          "value": "ac_rxn_esterificacion",
+          "label": "B.1- Esterificación de Fischer (+ Alcohol ⇄ Éster + H₂O) y Tioesterificación (+ Tiol R–SH → Tioéster)"
+        },
+        {
+          "value": "ac_rxn_lactonas",
+          "label": "B.2- Esterificación Intramolecular de Hidroxiácidos (γ- y δ-Hidroxiácidos + H⁺ → Lactonas + H₂O)"
+        },
+        {
+          "value": "ac_rxn_cloruros",
+          "label": "B.3- Formación de Haluros de Acilo con SOCl₂, PCl₅ o PCl₃ (→ R–COCl + SO₂↑ + HCl↑)"
+        },
+        {
+          "value": "ac_rxn_anhidridos",
+          "label": "B.4- Formación de Anhídridos Intermoleculares y Cíclicos (Ác. Succínico / o-Ftálico + Δ → Anhídrido)"
+        },
+        {
+          "value": "ac_rxn_amidas",
+          "label": "B.5- Formación de Amidas con Amoníaco o Aminas (1° Sal de Amonio —(Δ)→ Amida + H₂O)"
+        },
+        {
+          "value": "ac_rxn_lactamas",
+          "label": "B.6- Aminación Intramolecular de Aminoácidos (γ- y δ-Aminoácidos + Δ / H⁺ → Lactamas + H₂O)"
+        },
+        {
+          "value": "ac_rxn_reduccion",
+          "label": "C- Reducción de Ácidos: Total con LiAlH₄ / LiBH₄ (→ Alcohol 1°) vs. Parcial con DIBAH (→ Aldehído)"
+        },
+        {
+          "value": "ac_rxn_hvz",
+          "label": "D.1- Halogenación α de Hell-Volhard-Zelinsky (R–CH₂–COOH + Br₂ / PBr₃ → α-Bromoácido)"
+        },
+        {
+          "value": "ac_rxn_descarbox_cadena",
+          "label": "D.2- Descarboxilación (β-Cetoácidos / Malónico / Cal Sodada) y Reacciones de Hidroxiácidos (Málico ⇄ Fumárico)"
+        }
       ]
     },
     "esteres": {
       "obtencion": [
-        { "value": "est_obt_fischer", "label": "1) Esterificación Directa de Fischer (Ácido Carboxílico + Alcohol ⇄ Éster + H₂O en H₂SO₄ / Δ)" },
-        { "value": "est_obt_acilacion", "label": "2) Acilación de Alcoholes y Fenoles con Cloruros de Acilo o Anhídridos (→ Ésteres y Aspirina)" },
-        { "value": "est_obt_carboxilato_rx", "label": "3) Reacción SN2 de Sales Carboxilato con Halogenuros de Alquilo Primarios (→ R–COOR' + NaX)" },
-        { "value": "est_obt_lactonas", "label": "4) Esterificación Intramolecular de γ- y δ-Hidroxiácidos (→ Lactonas / Ésteres Cíclicos)" }
+        {
+          "value": "est_obt_fischer",
+          "label": "1) Esterificación Directa de Fischer (Ácido Carboxílico + Alcohol ⇄ Éster + H₂O en H₂SO₄ / Δ)"
+        },
+        {
+          "value": "est_obt_acilacion",
+          "label": "2) Acilación de Alcoholes y Fenoles con Cloruros de Acilo o Anhídridos (→ Ésteres y Aspirina)"
+        },
+        {
+          "value": "est_obt_carboxilato_rx",
+          "label": "3) Reacción SN2 de Sales Carboxilato con Halogenuros de Alquilo Primarios (→ R–COOR' + NaX)"
+        },
+        {
+          "value": "est_obt_lactonas",
+          "label": "4) Esterificación Intramolecular de γ- y δ-Hidroxiácidos (→ Lactonas / Ésteres Cíclicos)"
+        }
       ],
       "reacciones": [
-        { "value": "est_rxn_hidrolisis_acida", "label": "A.1- Hidrólisis Ácida de Ésteres (R–COOR' + H₂O / H⁺ Δ ⇄ Ácido Carboxílico + Alcohol • Reversible)" },
-        { "value": "est_rxn_saponificacion", "label": "A.2- Hidrólisis Básica o Saponificación (R–COOR' + NaOH Δ → Sal Carboxilato / Jabón + Alcohol)" },
-        { "value": "est_rxn_amonolisis", "label": "B.1- Amonólisis y Aminólisis de Ésteres (R–COOR' + NH₃ o R''–NH₂ → Amida + Alcohol)" },
-        { "value": "est_rxn_transesterificacion", "label": "B.2- Transesterificación o Alcoholisis (R–COOR' + R''–OH ⇄ Nuevo Éster + Alcohol • Biodiésel)" },
-        { "value": "est_rxn_reduccion", "label": "C.1- Reducción de Ésteres: Con LiAlH₄ (→ 2 Alcoholes) vs. Con DIBAL-H a -78 °C (→ Aldehído)" },
-        { "value": "est_rxn_grignard", "label": "C.2- Reacción con 2 Equivalentes de Reactivo de Grignard (→ Alcohol Terciario 3°)" }
+        {
+          "value": "est_rxn_hidrolisis_acida",
+          "label": "A.1- Hidrólisis Ácida de Ésteres (R–COOR' + H₂O / H⁺ Δ ⇄ Ácido Carboxílico + Alcohol • Reversible)"
+        },
+        {
+          "value": "est_rxn_saponificacion",
+          "label": "A.2- Hidrólisis Básica o Saponificación (R–COOR' + NaOH Δ → Sal Carboxilato / Jabón + Alcohol)"
+        },
+        {
+          "value": "est_rxn_amonolisis",
+          "label": "B.1- Amonólisis y Aminólisis de Ésteres (R–COOR' + NH₃ o R''–NH₂ → Amida + Alcohol)"
+        },
+        {
+          "value": "est_rxn_transesterificacion",
+          "label": "B.2- Transesterificación o Alcoholisis (R–COOR' + R''–OH ⇄ Nuevo Éster + Alcohol • Biodiésel)"
+        },
+        {
+          "value": "est_rxn_reduccion",
+          "label": "C.1- Reducción de Ésteres: Con LiAlH₄ (→ 2 Alcoholes) vs. Con DIBAL-H a -78 °C (→ Aldehído)"
+        },
+        {
+          "value": "est_rxn_grignard",
+          "label": "C.2- Reacción con 2 Equivalentes de Reactivo de Grignard (→ Alcohol Terciario 3°)"
+        }
       ]
     },
     "amidas": {
       "obtencion": [
-        { "value": "amid_obt_cloruros_anh", "label": "1) Acilación de NH₃ o Aminas (1°/2°) con Cloruros de Acilo o Anhídridos (→ Amidas 1°, 2° y 3°)" },
-        { "value": "amid_obt_esteres", "label": "2) Amonólisis y Aminólisis de Ésteres (R–COOR' + NH₃ o R''–NH₂ → Amida + Alcohol)" },
-        { "value": "amid_obt_acidos_calor", "label": "3) A partir de Ácidos Carboxílicos + NH₃ / Aminas: 1° Sal en frío → 2° Pirólisis con Calor (Δ → Amida)" },
-        { "value": "amid_obt_nitrilos_lactamas", "label": "4) Hidratación Parcial Controlada de Nitrilos (→ R–CONH₂) y Ciclación de Aminoácidos a Lactamas" }
+        {
+          "value": "amid_obt_cloruros_anh",
+          "label": "1) Acilación de NH₃ o Aminas (1°/2°) con Cloruros de Acilo o Anhídridos (→ Amidas 1°, 2° y 3°)"
+        },
+        {
+          "value": "amid_obt_esteres",
+          "label": "2) Amonólisis y Aminólisis de Ésteres (R–COOR' + NH₃ o R''–NH₂ → Amida + Alcohol)"
+        },
+        {
+          "value": "amid_obt_acidos_calor",
+          "label": "3) A partir de Ácidos Carboxílicos + NH₃ / Aminas: 1° Sal en frío → 2° Pirólisis con Calor (Δ → Amida)"
+        },
+        {
+          "value": "amid_obt_nitrilos_lactamas",
+          "label": "4) Hidratación Parcial Controlada de Nitrilos (→ R–CONH₂) y Ciclación de Aminoácidos a Lactamas"
+        }
       ],
       "reacciones": [
-        { "value": "amid_rxn_resonancia_neutro", "label": "A- Resonancia del Enlace Amida / Peptídico y Carácter Prácticamente Neutro frente a las Aminas" },
-        { "value": "amid_rxn_hidrolisis_acida", "label": "B.1- Hidrólisis Ácida de Amidas (→ Ácido Carboxílico Libre R–COOH + Sal de Amonio NH₄⁺)" },
-        { "value": "amid_rxn_hidrolisis_basica", "label": "B.2- Hidrólisis Básica de Amidas (→ Sal Carboxilato R–COO⁻Na⁺ + Gas Amoníaco NH₃↑ o Amina)" },
-        { "value": "amid_rxn_deshidratacion", "label": "C.1- Deshidratación de Amidas Primarias a Nitrilos (R–CONH₂ + P₂O₅ o SOCl₂ / Δ → R–C≡N + H₂O)" },
-        { "value": "amid_rxn_reduccion", "label": "C.2- Reducción de Amidas con LiAlH₄ (El grupo C=O se reduce a –CH₂– conservando el N → Amina)" },
-        { "value": "amid_rxn_hofmann_hno2", "label": "D- Degradación de Hofmann (Br₂ / NaOH → Amina 1° con -1 C) y Reacción con HNO₂ (→ R–COOH + N₂↑)" }
+        {
+          "value": "amid_rxn_resonancia_neutro",
+          "label": "A- Resonancia del Enlace Amida / Peptídico y Carácter Prácticamente Neutro frente a las Aminas"
+        },
+        {
+          "value": "amid_rxn_hidrolisis_acida",
+          "label": "B.1- Hidrólisis Ácida de Amidas (→ Ácido Carboxílico Libre R–COOH + Sal de Amonio NH₄⁺)"
+        },
+        {
+          "value": "amid_rxn_hidrolisis_basica",
+          "label": "B.2- Hidrólisis Básica de Amidas (→ Sal Carboxilato R–COO⁻Na⁺ + Gas Amoníaco NH₃↑ o Amina)"
+        },
+        {
+          "value": "amid_rxn_deshidratacion",
+          "label": "C.1- Deshidratación de Amidas Primarias a Nitrilos (R–CONH₂ + P₂O₅ o SOCl₂ / Δ → R–C≡N + H₂O)"
+        },
+        {
+          "value": "amid_rxn_reduccion",
+          "label": "C.2- Reducción de Amidas con LiAlH₄ (El grupo C=O se reduce a –CH₂– conservando el N → Amina)"
+        },
+        {
+          "value": "amid_rxn_hofmann_hno2",
+          "label": "D- Degradación de Hofmann (Br₂ / NaOH → Amina 1° con -1 C) y Reacción con HNO₂ (→ R–COOH + N₂↑)"
+        }
       ]
     },
     "anhidridos": {
       "obtencion": [
-        { "value": "anh_obt_deshidratacion", "label": "1) Deshidratación Intermolecular de 2 Ácidos Carboxílicos con P₂O₅ / Δ (→ Anhídrido Simétrico)" },
-        { "value": "anh_obt_cloruro_sal", "label": "2) Sustitución Nucleofílica Acílica: Cloruro de Acilo + Sal Carboxilato (→ Anhídrido Simétrico o Mixto)" },
-        { "value": "anh_obt_ciclicos", "label": "3) Deshidratación Intramolecular Térmica de Ácidos Dicarboxílicos 1,4 y 1,5 (→ Anhídrido Cíclico)" }
+        {
+          "value": "anh_obt_deshidratacion",
+          "label": "1) Deshidratación Intermolecular de 2 Ácidos Carboxílicos con P₂O₅ / Δ (→ Anhídrido Simétrico)"
+        },
+        {
+          "value": "anh_obt_cloruro_sal",
+          "label": "2) Sustitución Nucleofílica Acílica: Cloruro de Acilo + Sal Carboxilato (→ Anhídrido Simétrico o Mixto)"
+        },
+        {
+          "value": "anh_obt_ciclicos",
+          "label": "3) Deshidratación Intramolecular Térmica de Ácidos Dicarboxílicos 1,4 y 1,5 (→ Anhídrido Cíclico)"
+        }
       ],
       "reacciones": [
-        { "value": "anh_rxn_hidrolisis", "label": "A.1- Hidrólisis de Anhídridos con Agua ((R–CO)₂O + H₂O → 2 Ácidos Carboxílicos R–COOH)" },
-        { "value": "anh_rxn_alcoholisis", "label": "A.2- Alcoholisis y Fenólisis Irreversible (→ 1 Éster + 1 Ácido Carboxílico • Aspirina)" },
-        { "value": "anh_rxn_aminolisis", "label": "B- Amonólisis y Aminólisis (→ 1 Amida + 1 Ácido / Sal • Acetanilida y Paracetamol)" },
-        { "value": "anh_rxn_friedel_crafts", "label": "C.1- Acilación Aromática de Friedel-Crafts con Anhídridos (→ Cetona Aromática + CH₃COOH)" },
-        { "value": "anh_rxn_reduccion", "label": "C.2- Reducción Completa de Anhídridos con LiAlH₄ (→ 2 Alcoholes Primarios R–CH₂–OH)" }
+        {
+          "value": "anh_rxn_hidrolisis",
+          "label": "A.1- Hidrólisis de Anhídridos con Agua ((R–CO)₂O + H₂O → 2 Ácidos Carboxílicos R–COOH)"
+        },
+        {
+          "value": "anh_rxn_alcoholisis",
+          "label": "A.2- Alcoholisis y Fenólisis Irreversible (→ 1 Éster + 1 Ácido Carboxílico • Aspirina)"
+        },
+        {
+          "value": "anh_rxn_aminolisis",
+          "label": "B- Amonólisis y Aminólisis (→ 1 Amida + 1 Ácido / Sal • Acetanilida y Paracetamol)"
+        },
+        {
+          "value": "anh_rxn_friedel_crafts",
+          "label": "C.1- Acilación Aromática de Friedel-Crafts con Anhídridos (→ Cetona Aromática + CH₃COOH)"
+        },
+        {
+          "value": "anh_rxn_reduccion",
+          "label": "C.2- Reducción Completa de Anhídridos con LiAlH₄ (→ 2 Alcoholes Primarios R–CH₂–OH)"
+        }
       ]
     },
     "haluros_acido": {
       "obtencion": [
-        { "value": "halac_obt_socl2", "label": "1) A partir de Ácidos Carboxílicos con Cloruro de Tionilo (R–COOH + SOCl₂ → R–COCl + SO₂↑ + HCl↑)" },
-        { "value": "halac_obt_px", "label": "2) A partir de Ácidos Carboxílicos con Haluros de Fósforo (PCl₅, PCl₃ o PBr₃ → Haluro de Acilo)" },
-        { "value": "halac_obt_oxalilo", "label": "3) A partir de Ácidos o Sales Carboxilato con Cloruro de Oxalilo ((COCl)₂ → R–COCl + CO₂↑ + CO↑)" }
+        {
+          "value": "halac_obt_socl2",
+          "label": "1) A partir de Ácidos Carboxílicos con Cloruro de Tionilo (R–COOH + SOCl₂ → R–COCl + SO₂↑ + HCl↑)"
+        },
+        {
+          "value": "halac_obt_px",
+          "label": "2) A partir de Ácidos Carboxílicos con Haluros de Fósforo (PCl₅, PCl₃ o PBr₃ → Haluro de Acilo)"
+        },
+        {
+          "value": "halac_obt_oxalilo",
+          "label": "3) A partir de Ácidos o Sales Carboxilato con Cloruro de Oxalilo ((COCl)₂ → R–COCl + CO₂↑ + CO↑)"
+        }
       ],
       "reacciones": [
-        { "value": "halac_rxn_hidrolisis", "label": "A.1- Hidrólisis Vigorosa con Agua (R–COCl + H₂O → Ácido Carboxílico R–COOH + HCl)" },
-        { "value": "halac_rxn_alcoholisis", "label": "A.2- Alcoholisis y Fenólisis Irreversible (R–COCl + R'–OH o Ar–OH → Éster R–COOR' + HCl)" },
-        { "value": "halac_rxn_aminolisis", "label": "B.1- Amonólisis y Aminólisis (R–COCl + 2 NH₃ o 2 R'–NH₂ → Amida + Sal de Amonio)" },
-        { "value": "halac_rxn_carboxilato", "label": "B.2- Reacción con Sales Carboxilato (R–COCl + R'–COO⁻Na⁺ → Anhídrido Simétrico o Mixto + NaCl)" },
-        { "value": "halac_rxn_friedel_crafts", "label": "C.1- Acilación Aromática de Friedel-Crafts (Benceno + R–COCl / AlCl₃ → Cetona Aromática + HCl)" },
-        { "value": "halac_rxn_reduccion", "label": "C.2- Reducción: Con LiAlH₄ (→ Alcohol 1°) vs. Reducción de Rosenmund H₂/Pd-BaSO₄ (→ Aldehído)" },
-        { "value": "halac_rxn_organometalicos", "label": "C.3- Con Organometálicos: 2 eq de Grignard (→ Alcohol 3°) vs. Reactivo de Gilman R'₂CuLi (→ Cetona)" }
+        {
+          "value": "halac_rxn_hidrolisis",
+          "label": "A.1- Hidrólisis Vigorosa con Agua (R–COCl + H₂O → Ácido Carboxílico R–COOH + HCl)"
+        },
+        {
+          "value": "halac_rxn_alcoholisis",
+          "label": "A.2- Alcoholisis y Fenólisis Irreversible (R–COCl + R'–OH o Ar–OH → Éster R–COOR' + HCl)"
+        },
+        {
+          "value": "halac_rxn_aminolisis",
+          "label": "B.1- Amonólisis y Aminólisis (R–COCl + 2 NH₃ o 2 R'–NH₂ → Amida + Sal de Amonio)"
+        },
+        {
+          "value": "halac_rxn_carboxilato",
+          "label": "B.2- Reacción con Sales Carboxilato (R–COCl + R'–COO⁻Na⁺ → Anhídrido Simétrico o Mixto + NaCl)"
+        },
+        {
+          "value": "halac_rxn_friedel_crafts",
+          "label": "C.1- Acilación Aromática de Friedel-Crafts (Benceno + R–COCl / AlCl₃ → Cetona Aromática + HCl)"
+        },
+        {
+          "value": "halac_rxn_reduccion",
+          "label": "C.2- Reducción: Con LiAlH₄ (→ Alcohol 1°) vs. Reducción de Rosenmund H₂/Pd-BaSO₄ (→ Aldehído)"
+        },
+        {
+          "value": "halac_rxn_organometalicos",
+          "label": "C.3- Con Organometálicos: 2 eq de Grignard (→ Alcohol 3°) vs. Reactivo de Gilman R'₂CuLi (→ Cetona)"
+        }
       ]
     },
     "carbohidratos": {
       "obtencion": [
-        { "value": "carb_obt_fotosintesis", "label": "1) Biosíntesis Fototrófica (Fotosíntesis: 6 CO₂ + 6 H₂O + hν → D-Glucosa + 6 O₂) y Gluconeogénesis" },
-        { "value": "carb_obt_hidrolisis_disac", "label": "2) Hidrólisis Ácida o Enzimática de Disacáridos (Sacarosa, Lactosa y Maltosa → Monosacáridos)" },
-        { "value": "carb_obt_hidrolisis_polisac", "label": "3) Hidrólisis de Polisacáridos (Almidón, Glucógeno y Celulosa → n D-Glucosa)" },
-        { "value": "carb_obt_kiliani_isom", "label": "4) Alargamiento de Cadena de Kiliani-Fischer (→ Epímeros C2) e Isomerización Aldosa ⇄ Cetosa" }
+        {
+          "value": "carb_obt_fotosintesis",
+          "label": "1) Biosíntesis Fototrófica (Fotosíntesis: 6 CO₂ + 6 H₂O + hν → D-Glucosa + 6 O₂) y Gluconeogénesis"
+        },
+        {
+          "value": "carb_obt_hidrolisis_disac",
+          "label": "2) Hidrólisis Ácida o Enzimática de Disacáridos (Sacarosa, Lactosa y Maltosa → Monosacáridos)"
+        },
+        {
+          "value": "carb_obt_hidrolisis_polisac",
+          "label": "3) Hidrólisis de Polisacáridos (Almidón, Glucógeno y Celulosa → n D-Glucosa)"
+        },
+        {
+          "value": "carb_obt_kiliani_isom",
+          "label": "4) Alargamiento de Cadena de Kiliani-Fischer (→ Epímeros C2) e Isomerización Aldosa ⇄ Cetosa"
+        }
       ],
       "reacciones": [
-        { "value": "carb_rxn_ciclacion_muta", "label": "A.1- Ciclación Intramolecular (Hemiacetal → Piranosa | Hemicetal → Furanosa) y Mutarrotación" },
-        { "value": "carb_rxn_reductores", "label": "B.1- Poder Reductor (Fehling / Benedict Cu²⁺ → Cu₂O↓ y Tollens Ag⁺ → Ag⁰): Aldosas, Cetosas y Disacáridos" },
-        { "value": "carb_rxn_ox_acidos", "label": "B.2- Oxidación Diferencial: Agua de Bromo (→ Ác. Aldónico) | HNO₃ (→ Ác. Aldárico) | C6 (→ Ác. Urónico)" },
-        { "value": "carb_rxn_reduccion_alditol", "label": "C- Reducción del Carbonilo a Alditoles / Polioles (D-Glucosa → D-Sorbitol | D-Fructosa → Sorbitol + Manitol)" },
-        { "value": "carb_rxn_glicosidos", "label": "D- Formación de Glicósidos / Enlace O-Glicosídico (Acetalización Anomérica, Disacáridos y Polisacáridos)" },
-        { "value": "carb_rxn_ester_eter", "label": "E- Esterificación de Grupos Hidroxilo (Anhídrido Acético → Pentaacetatos) y Alquilación (Metilación Exhaustiva)" }
+        {
+          "value": "carb_rxn_ciclacion_muta",
+          "label": "A.1- Ciclación Intramolecular (Hemiacetal → Piranosa | Hemicetal → Furanosa) y Mutarrotación"
+        },
+        {
+          "value": "carb_rxn_reductores",
+          "label": "B.1- Poder Reductor (Fehling / Benedict Cu²⁺ → Cu₂O↓ y Tollens Ag⁺ → Ag⁰): Aldosas, Cetosas y Disacáridos"
+        },
+        {
+          "value": "carb_rxn_ox_acidos",
+          "label": "B.2- Oxidación Diferencial: Agua de Bromo (→ Ác. Aldónico) | HNO₃ (→ Ác. Aldárico) | C6 (→ Ác. Urónico)"
+        },
+        {
+          "value": "carb_rxn_reduccion_alditol",
+          "label": "C- Reducción del Carbonilo a Alditoles / Polioles (D-Glucosa → D-Sorbitol | D-Fructosa → Sorbitol + Manitol)"
+        },
+        {
+          "value": "carb_rxn_glicosidos",
+          "label": "D- Formación de Glicósidos / Enlace O-Glicosídico (Acetalización Anomérica, Disacáridos y Polisacáridos)"
+        },
+        {
+          "value": "carb_rxn_ester_eter",
+          "label": "E- Esterificación de Grupos Hidroxilo (Anhídrido Acético → Pentaacetatos) y Alquilación (Metilación Exhaustiva)"
+        }
       ]
     },
     "aminoacidos": {
       "obtencion": [
-        { "value": "aa_obt_hvz_nh3", "label": "1) Amonólisis SN2 de α-Haloácidos (Vía Hell-Volhard-Zelinsky: R–CH(Br)–COOH + 2 NH₃ → α-Aminoácido)" },
-        { "value": "aa_obt_strecker", "label": "2) Síntesis de Strecker a partir de Aldehídos (1° R–CHO + NH₃ + HCN → α-Aminonitrilo / 2° H₃O⁺ → AA)" },
-        { "value": "aa_obt_aminacion_red", "label": "3) Aminación Reductiva de α-Cetoácidos y Transaminación Biológica (Piruvato → Alanina)" },
-        { "value": "aa_obt_hidrolisis_prot", "label": "4) Hidrólisis Ácida o Enzimática de Proteínas y Péptidos (→ L-α-Aminoácidos libres)" }
+        {
+          "value": "aa_obt_hvz_nh3",
+          "label": "1) Amonólisis SN2 de α-Haloácidos (Vía Hell-Volhard-Zelinsky: R–CH(Br)–COOH + 2 NH₃ → α-Aminoácido)"
+        },
+        {
+          "value": "aa_obt_strecker",
+          "label": "2) Síntesis de Strecker a partir de Aldehídos (1° R–CHO + NH₃ + HCN → α-Aminonitrilo / 2° H₃O⁺ → AA)"
+        },
+        {
+          "value": "aa_obt_aminacion_red",
+          "label": "3) Aminación Reductiva de α-Cetoácidos y Transaminación Biológica (Piruvato → Alanina)"
+        },
+        {
+          "value": "aa_obt_hidrolisis_prot",
+          "label": "4) Hidrólisis Ácida o Enzimática de Proteínas y Péptidos (→ L-α-Aminoácidos libres)"
+        }
       ],
       "reacciones": [
-        { "value": "aa_rxn_zwitterion_ph", "label": "A.1- Equilibrio Ácido-Base, Ion Dipolar (Zwitterión en el pI) y Comportamiento Anfótero según pH" },
-        { "value": "aa_rxn_enlace_peptidico", "label": "B.1- Formación del Enlace Peptídico (Condensación de 2 Aminoácidos → Dipéptido Plano y Rígido + H₂O)" },
-        { "value": "aa_rxn_ester_acil", "label": "B.2- Reacciones del Grupo –COOH (Esterificación) y del Grupo –NH₂ (N-Acilación)" },
-        { "value": "aa_rxn_vanslyke_hno2", "label": "C.1- Desaminación de Van Slyke con Ácido Nitroso (R–CH(NH₂)–COOH + HNO₂ → α-Hidroxiácido + N₂↑)" },
-        { "value": "aa_rxn_descarboxilacion", "label": "C.2- Descarboxilación de α-Aminoácidos a Aminas Biógenas (Histidina → Histamina | Glutamato → GABA)" },
-        { "value": "aa_rxn_cisteina_ensayos", "label": "D- Oxidación de 2 Cisteínas a Cistina (Puente –S–S–) y Ensayos de Ninhidrina (Púrpura) y Biuret (Violeta)" }
+        {
+          "value": "aa_rxn_zwitterion_ph",
+          "label": "A.1- Equilibrio Ácido-Base, Ion Dipolar (Zwitterión en el pI) y Comportamiento Anfótero según pH"
+        },
+        {
+          "value": "aa_rxn_enlace_peptidico",
+          "label": "B.1- Formación del Enlace Peptídico (Condensación de 2 Aminoácidos → Dipéptido Plano y Rígido + H₂O)"
+        },
+        {
+          "value": "aa_rxn_ester_acil",
+          "label": "B.2- Reacciones del Grupo –COOH (Esterificación) y del Grupo –NH₂ (N-Acilación)"
+        },
+        {
+          "value": "aa_rxn_vanslyke_hno2",
+          "label": "C.1- Desaminación de Van Slyke con Ácido Nitroso (R–CH(NH₂)–COOH + HNO₂ → α-Hidroxiácido + N₂↑)"
+        },
+        {
+          "value": "aa_rxn_descarboxilacion",
+          "label": "C.2- Descarboxilación de α-Aminoácidos a Aminas Biógenas (Histidina → Histamina | Glutamato → GABA)"
+        },
+        {
+          "value": "aa_rxn_cisteina_ensayos",
+          "label": "D- Oxidación de 2 Cisteínas a Cistina (Puente –S–S–) y Ensayos de Ninhidrina (Púrpura) y Biuret (Violeta)"
+        }
       ]
     }
   },
