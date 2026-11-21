@@ -979,11 +979,9 @@ function prevStep() {
     stopAutoPlay();
     if (state.currentStepIdx > 0) {
         const steps = getActiveSteps();
+        const fromScene = steps[state.currentStepIdx].scene();
         state.currentStepIdx--;
-        const prevScene = state.currentStepIdx === 0 && steps[0].initialScene
-            ? steps[0].initialScene()
-            : steps[state.currentStepIdx].scene();
-        renderStepStage(prevScene, false);
+        renderStepStage(fromScene, false);
     }
 }
 
