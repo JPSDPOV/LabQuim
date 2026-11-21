@@ -1293,8 +1293,8 @@ export function buildAutoNomenclatureScene(semi) {
                         if (alkylEl === 'CH₃') alkylEl = 'H₃C';
                         else if (alkylEl === 'CH₂CH₃') alkylEl = 'H₃CH₂C';
                     }
-                    const nearDist = R + 76;
-                    const farDist = R + 148;
+                    const nearDist = R + 82;
+                    const farDist = R + 178;
                     const nearX = Math.round(cx + Math.cos(v.ang) * (nearDist * 0.92));
                     const nearY = Math.round(cy + Math.sin(v.ang) * nearDist);
                     atoms.push({ id: sid, el: heteroEl, x: nearX, y: nearY, noValenceDots: true });
