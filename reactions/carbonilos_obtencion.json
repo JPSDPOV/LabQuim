@@ -635,7 +635,19 @@
                   "label": "Viaja H → abajo de C1"
                 }
               ]
-            }
+            },
+            "arrows": [
+              {
+                "type": "full",
+                "x1": 405,
+                "y1": 162,
+                "cx": 455,
+                "cy": 278,
+                "x2": 370,
+                "y2": 318,
+                "label": "Viaja H → abajo de C1"
+              }
+            ]
           },
           {
             "title": "Producto Consolidado: Etanal (Acetaldehído) (CH₃–CHO)",
@@ -652,16 +664,16 @@
                 {
                   "id": "Semi_0_0",
                   "el": "CH₃",
-                  "x": 418,
-                  "y": 175,
+                  "x": 415,
+                  "y": 168,
                   "noValenceDots": true,
                   "noShape": true
                 },
                 {
                   "id": "Semi_0_1",
                   "el": "CHO",
-                  "x": 502,
-                  "y": 175,
+                  "x": 505,
+                  "y": 168,
                   "noValenceDots": true,
                   "noShape": true
                 },
