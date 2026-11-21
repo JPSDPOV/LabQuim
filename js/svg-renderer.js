@@ -3,7 +3,8 @@ import { state, isCompactMobile, escSvg } from './state.js';
 export const currentViewBox = { x: 0, y: 0, w: 1040, h: 360, initialized: false };
 
 export function easeInOutQuint(t) {
-    return t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
+    // Interpolación cúbica suave y continua para transiciones lentas paso a paso
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
 export function easeOutQuart(t) {
@@ -522,7 +523,7 @@ export function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, 
     const nx = -uy;
     const ny = ux;
     if (trim1 > 0 || trim2 > 0) {
-        const minVisibleBond = lightTheme ? 8 : 10;
+        const minVisibleBond = lightTheme ? 13 : 12;
         const avail = Math.max(0, rawLen - minVisibleBond);
         const totalReq = trim1 + trim2;
         const scaleTrim = totalReq > avail && totalReq > 0 ? (avail / totalReq) : 1;
