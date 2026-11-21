@@ -338,9 +338,11 @@ export function renderInterpolatedFrame(prevScene, targetScene, rawT) {
             const cx = mapStageX(arr.cx), cy = mapStageY(arr.cy);
             const x2 = mapStageX(arr.x2), y2 = mapStageY(arr.y2);
             expandBounds(Math.min(x1, cx, x2) - 10, Math.min(y1, cy, y2) - 10, Math.max(x1, cx, x2) + 10, Math.max(y1, cy, y2) + 10);
+            const flowCls = arr.solid ? '' : ' class="arrow-flow"';
+            const strokeW = arr.solid ? (mobile ? 4.0 : 3.2) : (mobile ? 3.2 : 2.5);
             svgOut += `
                 <g opacity="${op}">
-                    <path d="M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}" fill="none" stroke="${col}" stroke-width="${mobile ? 3.2 : 2.5}" marker-end="${marker}" class="arrow-flow"/>
+                    <path d="M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}" fill="none" stroke="${col}" stroke-width="${strokeW}" marker-end="${marker}"${flowCls}/>
                 </g>
             `;
             if (arr.label) {
