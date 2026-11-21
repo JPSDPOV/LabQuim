@@ -913,9 +913,26 @@ export function wrapWithSemidevelopedEndpoints(stepsArray, catalystLabel = '') {
             forming: 'Productos finales expresados en fórmula semidesarrollada.',
             movement: 'Reacción finalizada.'
         },
-        scene: () => lastStep.outroScene
-            ? JSON.parse(JSON.stringify(lastStep.outroScene))
-            : buildSemidevelopedBannerScene(outroSemiText, '#10b981', contextHints)
+        scene: () => {
+            if (lastStep.outroScene) return JSON.parse(JSON.stringify(lastStep.outroScene));
+            const scOut = buildSemidevelopedBannerScene(outroSemiText, '#10b981', contextHints);
+            if (lastStep.outroLabel && Array.isArray(scOut.atoms) && scOut.atoms.length > 0) {
+                const prodAtoms = scOut.atoms.filter(a => a.el && a.el !== '+' && !String(a.el).startsWith('+'));
+                const pxs = (prodAtoms.length > 0 ? prodAtoms : scOut.atoms).map(a => a.x);
+                const cx = Math.round((Math.min(...pxs) + Math.max(...pxs)) / 2);
+                scOut.atoms.forEach(a => { delete a.label; });
+                scOut.atoms.push({
+                    id: 'LBL_OUTRO_AUTO',
+                    el: '',
+                    isVertex: true,
+                    x: cx,
+                    y: 214,
+                    noValenceDots: true,
+                    label: lastStep.outroLabel
+                });
+            }
+            return scOut;
+        }
     };
 
     return [introStep, ...middleSteps, outroStep];
@@ -934,6 +951,9 @@ export function expandStepsToVisualMicroSteps(rawSteps, catalystLabel = '') {
                 forming: 'Formación de nuevos enlaces en el producto.',
                 movement: 'Reorganización molecular.'
             },
+            introScene: st.introScene ? JSON.parse(JSON.stringify(st.introScene)) : undefined,
+            outroScene: st.outroScene ? JSON.parse(JSON.stringify(st.outroScene)) : undefined,
+            outroLabel: st.outroLabel || undefined,
             initialScene: st.initialScene ? () => sanitizeInitialScene(st.initialScene) : undefined,
             scene: () => {
                 const sc = st.scene || { atoms: [], bonds: [] };
@@ -962,6 +982,7 @@ export function expandStepsToVisualMicroSteps(rawSteps, catalystLabel = '') {
             forming: 'Ningún enlace formado todavía.',
             movement: 'Reactivos listos antes de iniciar la reacción.'
         },
+        introScene: first.introScene ? JSON.parse(JSON.stringify(first.introScene)) : undefined,
         scene: () => JSON.parse(JSON.stringify(cleanInitScene))
     });
 
@@ -1058,6 +1079,8 @@ export function expandStepsToVisualMicroSteps(rawSteps, catalystLabel = '') {
             forming: 'Nuevos enlaces consolidados en verde sólido.',
             movement: 'Producto estable obtenido.'
         },
+        outroScene: last.outroScene ? JSON.parse(JSON.stringify(last.outroScene)) : undefined,
+        outroLabel: last.outroLabel || undefined,
         scene: () => JSON.parse(JSON.stringify(finalScene))
     });
 
