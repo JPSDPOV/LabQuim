@@ -522,7 +522,7 @@ export function renderAnimatedBond(x1, y1, x2, y2, order, state, existedBefore, 
     const nx = -uy;
     const ny = ux;
     if (trim1 > 0 || trim2 > 0) {
-        const minVisibleBond = lightTheme ? 13 : 12;
+        const minVisibleBond = lightTheme ? 8 : 10;
         const avail = Math.max(0, rawLen - minVisibleBond);
         const totalReq = trim1 + trim2;
         const scaleTrim = totalReq > avail && totalReq > 0 ? (avail / totalReq) : 1;
