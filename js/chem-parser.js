@@ -1293,8 +1293,8 @@ export function buildAutoNomenclatureScene(semi) {
                         if (alkylEl === 'CH₃') alkylEl = 'H₃C';
                         else if (alkylEl === 'CH₂CH₃') alkylEl = 'H₃CH₂C';
                     }
-                    const nearDist = R + 82;
-                    const farDist = R + 178;
+                    const nearDist = R + 76;
+                    const farDist = R + 148;
                     const nearX = Math.round(cx + Math.cos(v.ang) * (nearDist * 0.92));
                     const nearY = Math.round(cy + Math.sin(v.ang) * nearDist);
                     atoms.push({ id: sid, el: heteroEl, x: nearX, y: nearY, noValenceDots: true });
@@ -1798,15 +1798,19 @@ export function buildAutoNomenclatureScene(semi) {
     }
 
     if (s.startsWith('HAWORTH-PIRANOSA-')) {
-        // Proyección de Haworth de Aldohexosas (Glucosa, Galactosa, Manosa)
+        // Proyección de Haworth completa con C, H y OH explícitos (estilo referencia académica)
         const kind = s.replace('HAWORTH-PIRANOSA-', '');
+        const isBeta = kind.startsWith('BETA-');
+        const baseSugar = kind.replace(/^(?:ALFA|BETA)-/, '');
+        const isPentose = (baseSugar === 'XILOSA' || baseSugar === 'ARABINOSA' || baseSugar === 'RIBOSA-PIRANOSA');
+
         const pts = {
-            O:  { x: 520, y: 125, el: 'O' },
-            C1: { x: 585, y: 190, el: 'C1' },
-            C2: { x: 520, y: 255, el: 'C2' },
-            C3: { x: 400, y: 255, el: 'C3' },
-            C4: { x: 335, y: 190, el: 'C4' },
-            C5: { x: 400, y: 125, el: 'C5' }
+            O:  { x: 535, y: 118, el: 'O' },
+            C1: { x: 615, y: 190, el: 'C' },
+            C2: { x: 535, y: 262, el: 'C' },
+            C3: { x: 385, y: 262, el: 'C' },
+            C4: { x: 305, y: 190, el: 'C' },
+            C5: { x: 385, y: 118, el: 'C' }
         };
         Object.entries(pts).forEach(([k, p]) => {
             atoms.push({ id: `HW_${k}`, el: p.el, x: p.x, y: p.y, noValenceDots: true });
@@ -1819,21 +1823,105 @@ export function buildAutoNomenclatureScene(semi) {
             { from: 'HW_C4', to: 'HW_C5', order: 1 },
             { from: 'HW_C5', to: 'HW_O', order: 1 }
         );
-        // C5-CH2OH arriba
-        atoms.push({ id: 'HW_C6', el: 'CH₂OH', x: 400, y: 55, noValenceDots: true });
-        bonds.push({ from: 'HW_C5', to: 'HW_C6', order: 1 });
-        // C1-OH (abajo alfa)
-        atoms.push({ id: 'HW_OH1', el: 'OH', x: 585, y: 265, noValenceDots: true });
-        bonds.push({ from: 'HW_C1', to: 'HW_OH1', order: 1 });
-        // C2-OH (arriba en Manosa, abajo en Glucosa/Galactosa)
-        atoms.push({ id: 'HW_OH2', el: 'OH', x: 520, y: kind === 'MANOSA' ? 185 : 325, noValenceDots: true });
-        bonds.push({ from: 'HW_C2', to: 'HW_OH2', order: 1 });
-        // C3-OH (arriba)
-        atoms.push({ id: 'HW_OH3', el: 'OH', x: 400, y: 185, noValenceDots: true });
-        bonds.push({ from: 'HW_C3', to: 'HW_OH3', order: 1 });
-        // C4-OH (arriba en Galactosa, abajo en Glucosa/Manosa)
-        atoms.push({ id: 'HW_OH4', el: 'OH', x: 335, y: kind === 'GALACTOSA' ? 115 : 265, noValenceDots: true });
-        bonds.push({ from: 'HW_C4', to: 'HW_OH4', order: 1 });
+
+        const addSubstituentsAtC = (cId, cx, cy, topEl, botEl) => {
+            const topShift = (topEl.length > 2 && !topEl.startsWith('H')) ? Math.round((topEl.length - 1) * 9.5) : 0;
+            const botShift = (botEl.length > 2 && !botEl.startsWith('H')) ? Math.round((botEl.length - 1) * 9.5) : 0;
+            atoms.push(
+                { id: `${cId}_T`, el: topEl, x: cx + topShift, y: cy - 68, noValenceDots: true, bondTargetX: topShift ? cx : undefined },
+                { id: `${cId}_B`, el: botEl, x: cx + botShift, y: cy + 68, noValenceDots: true, bondTargetX: botShift ? cx : undefined }
+            );
+            bonds.push(
+                { from: cId, to: `${cId}_T`, order: 1 },
+                { from: cId, to: `${cId}_B`, order: 1 }
+            );
+        };
+
+        // C5: CH2OH arriba y H abajo (excepto L-arabinosa / pentosas sin C6)
+        if (isPentose) {
+            addSubstituentsAtC('HW_C5', 385, 118, 'H', 'H');
+        } else {
+            addSubstituentsAtC('HW_C5', 385, 118, 'CH₂OH', 'H');
+        }
+
+        // C1: alpha (OH abajo, H arriba) vs beta (OH arriba, H abajo)
+        addSubstituentsAtC('HW_C1', 615, 190, isBeta ? 'OH' : 'H', isBeta ? 'H' : 'OH');
+
+        // C2: Manosa / Arabinosa tienen OH arriba; Glucosa / Galactosa / Xilosa tienen OH abajo
+        const c2OhUp = (baseSugar === 'MANOSA' || baseSugar === 'ARABINOSA');
+        addSubstituentsAtC('HW_C2', 535, 262, c2OhUp ? 'OH' : 'H', c2OhUp ? 'H' : 'OH');
+
+        // C3: Glucosa / Galactosa / Manosa / Xilosa / Arabinosa tienen OH arriba; Ribosa tiene OH abajo
+        const c3OhUp = (baseSugar !== 'RIBOSA-PIRANOSA');
+        addSubstituentsAtC('HW_C3', 385, 262, c3OhUp ? 'OH' : 'H', c3OhUp ? 'H' : 'OH');
+
+        // C4: Galactosa / Arabinosa tienen OH arriba; Glucosa / Manosa / Xilosa tienen OH abajo
+        const c4OhUp = (baseSugar === 'GALACTOSA' || baseSugar === 'ARABINOSA');
+        addSubstituentsAtC('HW_C4', 305, 190, c4OhUp ? 'OH' : 'H', c4OhUp ? 'H' : 'OH');
+
+        return { atoms, bonds };
+    }
+
+    if (s.startsWith('FISCHER-')) {
+        // Proyección de Fischer vertical (cadena abierta con C=O arriba, carbonos quirales H—C—OH / HO—C—H, y CH2OH abajo)
+        // Formato: FISCHER-ALDOSA-R-L-R-R  o  FISCHER-CETOSA-L-R-R
+        const parts = s.split('-');
+        const type = parts[1]; // ALDOSA o CETOSA
+        const dirs = parts.slice(2); // ['R','L','R','R']
+        const stepY = 66;
+        const totalRows = dirs.length + 2;
+        const startY = Math.round(190 - ((totalRows - 1) * stepY) / 2);
+        const cx = 460;
+
+        if (type === 'ALDOSA') {
+            // C1: O doble enlace arriba, C al centro, H a la derecha
+            atoms.push(
+                { id: 'FS_O1', el: 'O', x: cx, y: startY - 56, noValenceDots: true },
+                { id: 'FS_C1', el: 'C', x: cx, y: startY, noValenceDots: true },
+                { id: 'FS_H1', el: 'H', x: cx + 76, y: startY, noValenceDots: true }
+            );
+            bonds.push(
+                { from: 'FS_C1', to: 'FS_O1', order: 2 },
+                { from: 'FS_C1', to: 'FS_H1', order: 1 }
+            );
+        } else {
+            // Cetosa: C1 es CH2OH arriba, C2 es C=O
+            atoms.push(
+                { id: 'FS_C1', el: 'CH₂OH', x: cx + 28, y: startY - 56, noValenceDots: true, bondTargetX: cx },
+                { id: 'FS_C2', el: 'C', x: cx, y: startY, noValenceDots: true },
+                { id: 'FS_O2', el: 'O', x: cx + 78, y: startY, noValenceDots: true }
+            );
+            bonds.push(
+                { from: 'FS_C1', to: 'FS_C2', order: 1 },
+                { from: 'FS_C2', to: 'FS_O2', order: 2 }
+            );
+        }
+
+        let prevCId = type === 'ALDOSA' ? 'FS_C1' : 'FS_C2';
+        dirs.forEach((d, idx) => {
+            const cy = startY + (idx + 1) * stepY;
+            const cid = `FS_K${idx}`;
+            const isRight = (d.toUpperCase() === 'R');
+            atoms.push(
+                { id: cid, el: 'C', x: cx, y: cy, noValenceDots: true },
+                { id: `${cid}_L`, el: isRight ? 'H' : 'HO', x: cx - 80, y: cy, noValenceDots: true },
+                { id: `${cid}_R`, el: isRight ? 'OH' : 'H', x: cx + 80, y: cy, noValenceDots: true }
+            );
+            bonds.push(
+                { from: prevCId, to: cid, order: 1 },
+                { from: cid, to: `${cid}_L`, order: 1 },
+                { from: cid, to: `${cid}_R`, order: 1 }
+            );
+            prevCId = cid;
+        });
+
+        const botY = startY + (dirs.length + 1) * stepY;
+        const isDeoxy = s.endsWith('-DEOXY');
+        const botEl = isDeoxy ? 'CH₃' : 'CH₂OH';
+        const botShift = isDeoxy ? 18 : 28;
+        atoms.push({ id: 'FS_BOT', el: botEl, x: cx + botShift, y: botY, noValenceDots: true, bondTargetX: cx });
+        bonds.push({ from: prevCId, to: 'FS_BOT', order: 1 });
+
         return { atoms, bonds };
     }
 
@@ -1940,15 +2028,23 @@ export function buildAutoNomenclatureScene(semi) {
 
     if (s.startsWith('POLISACARIDO-')) {
         const kind = s.replace('POLISACARIDO-', '');
-        const unitA = kind === 'HIALURONICO' ? 'Ác. D-Glucurónico' : (kind === 'CELULOSA' ? 'β-D-Glucosa' : 'α-D-Glucosa');
-        const bondLbl = kind === 'HIALURONICO' ? 'β(1→3)' : (kind === 'CELULOSA' ? 'β(1→4)' : 'α(1→4)');
-        const unitB = kind === 'HIALURONICO' ? 'GlcNAc' : unitA;
+        const poliMap = {
+            'ALMIDON':     { u1: 'α-D-Glucosa',       b: 'α(1→4)', u2: 'α-D-Glucosa',       branch: 'Ramificación α(1→6) (Amilopectina)' },
+            'GLUCOGENO':   { u1: 'α-D-Glucosa',       b: 'α(1→4)', u2: 'α-D-Glucosa',       branch: 'Ramificación α(1→6) cada 8–12 residuos' },
+            'CELULOSA':    { u1: 'β-D-Glucosa',       b: 'β(1→4)', u2: 'β-D-Glucosa',       branch: '' },
+            'QUITINA':     { u1: 'N-Acetil-D-glucosamina', b: 'β(1→4)', u2: 'N-Acetil-D-glucosamina', branch: '' },
+            'INULINA':     { u1: 'β-D-Fructofuranosa', b: 'β(2→1)', u2: 'β-D-Fructofuranosa', branch: '' },
+            'PECTINA':     { u1: 'Ác. D-Galacturónico', b: 'α(1→4)', u2: 'Ác. D-Galacturónico', branch: '' },
+            'HIALURONICO': { u1: 'Ác. D-Glucurónico', b: 'β(1→3)', u2: 'GlcNAc',            branch: '' },
+            'HEPARINA':    { u1: 'Ác. Idurónico-2S',  b: 'α(1→4)', u2: 'Glucosamina-N,6-diS', branch: '' }
+        };
+        const cfgP = poliMap[kind] || poliMap['ALMIDON'];
         atoms.push(
-            { id: 'P_L', el: '[ — O', x: 165, y: 195, noValenceDots: true },
-            { id: 'P_U1', el: unitA, x: 325, y: 195, noValenceDots: true },
-            { id: 'P_B', el: bondLbl, x: 485, y: 195, noValenceDots: true },
-            { id: 'P_U2', el: unitB, x: 645, y: 195, noValenceDots: true },
-            { id: 'P_R', el: 'O — ]ₙ', x: 800, y: 195, noValenceDots: true }
+            { id: 'P_L', el: '[ — O', x: 140, y: 195, noValenceDots: true },
+            { id: 'P_U1', el: cfgP.u1, x: 315, y: 195, noValenceDots: true },
+            { id: 'P_B', el: cfgP.b, x: 485, y: 195, noValenceDots: true },
+            { id: 'P_U2', el: cfgP.u2, x: 655, y: 195, noValenceDots: true },
+            { id: 'P_R', el: 'O — ]ₙ', x: 825, y: 195, noValenceDots: true }
         );
         bonds.push(
             { from: 'P_L', to: 'P_U1', order: 1 },
@@ -1956,8 +2052,8 @@ export function buildAutoNomenclatureScene(semi) {
             { from: 'P_B', to: 'P_U2', order: 1 },
             { from: 'P_U2', to: 'P_R', order: 1 }
         );
-        if (kind === 'ALMIDON' || kind === 'GLUCOGENO') {
-            atoms.push({ id: 'P_BR', el: 'Ramificación α(1→6)', x: 645, y: 95, noValenceDots: true });
+        if (cfgP.branch) {
+            atoms.push({ id: 'P_BR', el: cfgP.branch, x: 655, y: 92, noValenceDots: true });
             bonds.push({ from: 'P_U2', to: 'P_BR', order: 1 });
         }
         return { atoms, bonds };
@@ -1974,12 +2070,12 @@ export function buildAutoNomenclatureScene(semi) {
                 'TAG-MIXTO-SAT': ['O—CO—(CH₂)₁₄CH₃ (Palmitoil)', 'O—CO—(CH₂)₁₆CH₃ (Estearoil)', 'O—CO—(CH₂)₁₄CH₃ (Palmitoil)']
             }[kind];
             atoms.push(
-                { id: 'G1', el: 'CH₂', x: 260, y: 95, noValenceDots: true },
-                { id: 'G2', el: 'CH', x: 260, y: 190, noValenceDots: true },
-                { id: 'G3', el: 'CH₂', x: 260, y: 285, noValenceDots: true },
-                { id: 'A1', el: chains[0], x: 540, y: 95, noValenceDots: true },
-                { id: 'A2', el: chains[1], x: 540, y: 190, noValenceDots: true },
-                { id: 'A3', el: chains[2], x: 540, y: 285, noValenceDots: true }
+                { id: 'G1', el: 'CH₂', x: 155, y: 80, noValenceDots: true },
+                { id: 'G2', el: 'CH', x: 155, y: 190, noValenceDots: true },
+                { id: 'G3', el: 'CH₂', x: 155, y: 300, noValenceDots: true },
+                { id: 'A1', el: chains[0], x: 575, y: 80, noValenceDots: true },
+                { id: 'A2', el: chains[1], x: 575, y: 190, noValenceDots: true },
+                { id: 'A3', el: chains[2], x: 575, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
@@ -1996,12 +2092,12 @@ export function buildAutoNomenclatureScene(semi) {
                 'CARDIOLIPINA': 'O—PO₂⁻—O—CH₂CH(OH)CH₂—O—PO₂⁻—Fosfatidilo'
             };
             atoms.push(
-                { id: 'G1', el: 'CH₂', x: 240, y: 95, noValenceDots: true },
-                { id: 'G2', el: 'CH', x: 240, y: 190, noValenceDots: true },
-                { id: 'G3', el: 'CH₂', x: 240, y: 285, noValenceDots: true },
-                { id: 'A1', el: 'O—CO—R₁ (Ác. Graso Sat.)', x: 545, y: 95, noValenceDots: true },
-                { id: 'A2', el: 'O—CO—R₂ (Ác. Graso Insat.)', x: 545, y: 190, noValenceDots: true },
-                { id: 'HD', el: headMap[kind], x: 545, y: 285, noValenceDots: true }
+                { id: 'G1', el: 'CH₂', x: 145, y: 80, noValenceDots: true },
+                { id: 'G2', el: 'CH', x: 145, y: 190, noValenceDots: true },
+                { id: 'G3', el: 'CH₂', x: 145, y: 300, noValenceDots: true },
+                { id: 'A1', el: 'O—CO—R₁ (Ác. Graso Sat.)', x: 585, y: 80, noValenceDots: true },
+                { id: 'A2', el: 'O—CO—R₂ (Ác. Graso Insat.)', x: 585, y: 190, noValenceDots: true },
+                { id: 'HD', el: headMap[kind], x: 585, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'G1', to: 'G2', order: 1 }, { from: 'G2', to: 'G3', order: 1 },
@@ -2011,11 +2107,11 @@ export function buildAutoNomenclatureScene(semi) {
         }
         if (kind === 'CERAMIDA' || kind === 'ESFINGOMIELINA') {
             atoms.push(
-                { id: 'E3', el: 'CH₃—(CH₂)₁₂—CH=CH—CH(OH)', x: 270, y: 95, noValenceDots: true },
-                { id: 'E2', el: 'CH', x: 270, y: 190, noValenceDots: true },
-                { id: 'E1', el: 'CH₂', x: 270, y: 285, noValenceDots: true },
-                { id: 'AM', el: 'NH—CO—R (Ácido Graso)', x: 565, y: 190, noValenceDots: true },
-                { id: 'C1G', el: kind === 'ESFINGOMIELINA' ? 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃' : 'OH', x: 565, y: 285, noValenceDots: true }
+                { id: 'E3', el: 'CH₃—(CH₂)₁₂—CH=CH—CH(OH)', x: 255, y: 80, noValenceDots: true },
+                { id: 'E2', el: 'CH', x: 255, y: 190, noValenceDots: true },
+                { id: 'E1', el: 'CH₂', x: 255, y: 300, noValenceDots: true },
+                { id: 'AM', el: 'NH—CO—R (Ácido Graso)', x: 645, y: 190, noValenceDots: true },
+                { id: 'C1G', el: kind === 'ESFINGOMIELINA' ? 'O—PO₂⁻—O—CH₂CH₂N⁺(CH₃)₃' : 'OH', x: 645, y: 300, noValenceDots: true }
             );
             bonds.push(
                 { from: 'E3', to: 'E2', order: 1 }, { from: 'E2', to: 'E1', order: 1 },
