@@ -343,71 +343,95 @@
                     </div>
                 </div>
             </section>
-            <!-- MÓDULO NOMENCLATURA A: CONFIGURACIÓN (CHECKLIST DE GRUPOS + CANTIDAD) -->
+            <!-- MÓDULO NOMENCLATURA A: CONFIGURACIÓN POR PASOS -->
             <section id="nomenclatureSetupSection" class="hidden wizard-enter bg-slate-900/90 border border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl flex flex-col gap-5">
                 <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-4">
                     <div>
                         <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Entrenamiento Interactivo</span>
                         <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-0.5">Práctica de Nomenclatura Orgánica</h2>
                     </div>
-                    <button type="button" onclick="closeNomenclatureMode()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition">
+                    <button type="button" onclick="closeNomenclatureMode()" class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition cursor-pointer">
                         ⬅ Menú Principal
                     </button>
                 </div>
 
-                <!-- BUSCADOR DINÁMICO DESTACADO DE COMPUESTOS -->
-                <div class="relative p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-cyan-950/85 via-slate-900 to-violet-950/75 border-2 border-cyan-400/75 shadow-xl shadow-cyan-500/15">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                        <label for="nomFormulaSearchInput" class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-cyan-200 flex items-center gap-2">
-                            <span class="text-lg">🔎</span>
-                            <span>Buscador Directo de Compuestos (Nombre o Fórmula)</span>
-                        </label>
-                        <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[11px] font-bold text-cyan-200">
-                            ⚡ Acceso instantáneo a la figura
+                <!-- BOTÓN PARA DESPLEGAR EL BUSCADOR DIRECTO DE COMPUESTOS -->
+                <div class="flex flex-col gap-3">
+                    <button
+                        type="button"
+                        id="btnToggleNomDirectSearch"
+                        onclick="toggleNomDirectSearchPanel()"
+                        class="w-full p-4 rounded-2xl bg-gradient-to-r from-cyan-950/90 via-slate-900 to-violet-950/80 hover:from-cyan-900/80 hover:to-violet-900/70 border-2 border-cyan-400/70 hover:border-cyan-300 shadow-lg shadow-cyan-500/15 flex items-center justify-between gap-3 transition active:scale-[0.99] cursor-pointer"
+                    >
+                        <div class="flex items-center gap-3 min-w-0">
+                            <span class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-400/45 flex items-center justify-center text-lg shrink-0">🔎</span>
+                            <div class="text-left min-w-0">
+                                <span class="text-sm sm:text-base font-extrabold text-cyan-200 block">Buscador Directo de Compuestos</span>
+                                <span class="text-xs text-slate-400 block truncate">Toca aquí para buscar cualquier compuesto por nombre o fórmula</span>
+                            </div>
+                        </div>
+                        <span id="nomDirectSearchChevron" class="px-3 py-1.5 rounded-xl bg-cyan-500/20 border border-cyan-400/40 text-cyan-200 text-xs font-extrabold shrink-0">
+                            Abrir 🔍
                         </span>
-                    </div>
+                    </button>
 
-                    <div class="relative">
-                        <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-cyan-300 text-base">
-                            🔍
-                        </span>
-                        <input
-                            type="text"
-                            id="nomFormulaSearchInput"
-                            oninput="handleNomenclatureDynamicSearch(this.value)"
-                            onfocus="handleNomenclatureDynamicSearch(this.value)"
-                            placeholder="Escribe aquí el nombre o sinónimo (ej: ácido pícrico, anisol, 2-penteno, benceno...)"
-                            autocomplete="off"
-                            class="w-full pl-10 pr-10 py-3 rounded-xl bg-slate-950 border-2 border-cyan-500/65 focus:border-amber-400 focus:ring-4 focus:ring-cyan-500/25 text-sm sm:text-base font-semibold text-white placeholder-slate-400 outline-none transition shadow-inner"
-                        />
-                        <button
-                            type="button"
-                            id="nomClearSearchBtn"
-                            onclick="clearNomenclatureSearch()"
-                            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 hover:text-white text-xs font-extrabold px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 cursor-pointer"
-                            title="Limpiar búsqueda"
-                        >✕</button>
-                    </div>
+                    <!-- PANEL OCULTO HASTA PRESIONAR EL BOTÓN DE BUSCADOR DIRECTO -->
+                    <div id="nomDirectSearchPanel" class="hidden relative p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-cyan-950/85 via-slate-900 to-violet-950/75 border-2 border-cyan-400/75 shadow-xl shadow-cyan-500/15">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                            <label for="nomFormulaSearchInput" class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-cyan-200 flex items-center gap-2">
+                                <span class="text-lg">🔎</span>
+                                <span>Escribe el nombre o sinónimo del compuesto</span>
+                            </label>
+                            <span class="px-2.5 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-[11px] font-bold text-cyan-200">
+                                ⚡ Acceso instantáneo a la figura
+                            </span>
+                        </div>
 
-                    <!-- Lista desplegable dinámica de resultados -->
-                    <div
-                        id="nomSearchResultsDropdown"
-                        class="hidden mt-2 max-h-64 overflow-y-auto rounded-xl bg-slate-950 border-2 border-cyan-400/60 shadow-2xl divide-y divide-slate-800 z-50"
-                    ></div>
+                        <div class="relative">
+                            <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-cyan-300 text-base">
+                                🔍
+                            </span>
+                            <input
+                                type="text"
+                                id="nomFormulaSearchInput"
+                                oninput="handleNomenclatureDynamicSearch(this.value)"
+                                onfocus="handleNomenclatureDynamicSearch(this.value)"
+                                placeholder="Ej: ácido pícrico, anisol, 2-penteno, benceno..."
+                                autocomplete="off"
+                                class="w-full pl-10 pr-10 py-3 rounded-xl bg-slate-950 border-2 border-cyan-500/65 focus:border-amber-400 focus:ring-4 focus:ring-cyan-500/25 text-sm sm:text-base font-semibold text-white placeholder-slate-400 outline-none transition shadow-inner"
+                            />
+                            <button
+                                type="button"
+                                id="nomClearSearchBtn"
+                                onclick="clearNomenclatureSearch()"
+                                class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 hover:text-white text-xs font-extrabold px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 cursor-pointer"
+                                title="Limpiar búsqueda"
+                            >✕</button>
+                        </div>
+
+                        <!-- Lista desplegable dinámica de resultados -->
+                        <div
+                            id="nomSearchResultsDropdown"
+                            class="hidden mt-2 max-h-64 overflow-y-auto rounded-xl bg-slate-950 border-2 border-cyan-400/60 shadow-2xl divide-y divide-slate-800 z-50"
+                        ></div>
+                    </div>
                 </div>
 
-                <!-- Checklist de Grupos Funcionales -->
-                <div class="flex flex-col gap-2.5">
-                    <div class="flex flex-wrap items-center justify-between gap-2">
-                        <label class="text-xs font-extrabold uppercase tracking-wider text-slate-300">
-                            1. Selecciona los Grupos Funcionales a practicar:
+                <!-- PASO 1: Checklist de Grupos Funcionales + Botón Continuar al lado -->
+                <div id="nomStep1GroupsBox" class="flex flex-col gap-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2 bg-slate-950/80 border border-slate-800 p-3 rounded-2xl">
+                        <label class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-200">
+                            Selecciona los Grupos Funcionales a practicar:
                         </label>
-                        <div class="flex items-center gap-2">
-                            <button type="button" onclick="toggleAllNomenclatureGroups(true)" class="px-2.5 py-1 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-[11px] font-extrabold text-cyan-200 transition">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <button type="button" onclick="toggleAllNomenclatureGroups(true)" class="px-2.5 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-xs font-extrabold text-cyan-200 transition cursor-pointer">
                                 ✓ Seleccionar Todos
                             </button>
-                            <button type="button" onclick="toggleAllNomenclatureGroups(false)" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-bold text-slate-300 transition">
+                            <button type="button" onclick="toggleAllNomenclatureGroups(false)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-300 transition cursor-pointer">
                                 Limpiar
+                            </button>
+                            <button type="button" onclick="proceedToNomenclatureCountStep()" class="px-4 py-1.5 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white text-xs font-extrabold shadow-md shadow-violet-600/25 flex items-center gap-1 transition active:scale-95 cursor-pointer">
+                                <span>Continuar</span> <span>➡</span>
                             </button>
                         </div>
                     </div>
@@ -415,27 +439,34 @@
                     <div id="nomGroupsChecklist" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 max-h-[46vh] overflow-y-auto pr-1"></div>
                 </div>
 
-                <!-- Selector de Cantidad de Ejercicios -->
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
-                    <div>
-                        <span class="text-xs font-extrabold uppercase tracking-wider text-slate-300 block">
-                            2. Cantidad de compuestos a practicar:
-                        </span>
-                        <span id="nomAvailableCountHint" class="text-xs text-slate-400">0 compuestos disponibles</span>
+                <!-- PASO 2 (OCULTO HASTA APRETAR CONTINUAR): Selector de Cantidad + Botón Iniciar -->
+                <div id="nomStep2CountBox" class="hidden flex flex-col gap-4 bg-slate-950/90 border-2 border-emerald-500/45 p-5 rounded-2xl shadow-xl">
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                        <div>
+                            <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-400 block">
+                                Cantidad de compuestos a practicar:
+                            </span>
+                            <span id="nomAvailableCountHint" class="text-xs text-slate-300 font-semibold">0 compuestos disponibles</span>
+                        </div>
+                        <button type="button" onclick="backToNomenclatureGroupsStep()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition cursor-pointer">
+                            ⬅ Cambiar grupos
+                        </button>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
-                        <select id="nomQuestionCountSelect" class="w-full sm:w-auto bg-slate-900 border border-slate-700 focus:border-amber-400 text-white rounded-xl px-3.5 py-2.5 text-sm font-extrabold outline-none cursor-pointer">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                        <select id="nomQuestionCountSelect" class="flex-1 bg-slate-900 border border-slate-700 focus:border-emerald-400 text-white rounded-xl px-4 py-3 text-sm font-extrabold outline-none cursor-pointer">
                             <option value="5">5 compuestos</option>
                             <option value="10" selected>10 compuestos</option>
                             <option value="15">15 compuestos</option>
                             <option value="20">20 compuestos</option>
                             <option value="30">30 compuestos</option>
+                            <option value="50">50 compuestos</option>
+                            <option value="100">100 compuestos</option>
                             <option value="all">Todos los seleccionados</option>
                         </select>
 
-                        <button type="button" onclick="startNomenclatureSession()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 text-sm font-extrabold shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-1.5 transition active:scale-95 cursor-pointer">
-                            <span>▶</span> <span>Comenzar</span>
+                        <button type="button" onclick="startNomenclatureSession()" class="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 text-sm sm:text-base font-extrabold shadow-lg shadow-emerald-600/25 flex items-center justify-center gap-2 transition active:scale-95 cursor-pointer">
+                            <span>▶</span> <span>Iniciar</span>
                         </button>
                     </div>
                 </div>
@@ -457,8 +488,8 @@
                     <div class="flex items-center gap-3 text-xs font-extrabold">
                         <span class="text-emerald-400">✓ <span id="nomScoreCorrect">0</span></span>
                         <span class="text-rose-400">✗ <span id="nomScoreWrong">0</span></span>
-                        <button type="button" onclick="openNomenclatureSetup()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold flex items-center gap-1 transition active:scale-95 cursor-pointer">
-                            <span>⬅</span> <span>Volver</span>
+                        <button type="button" id="btnNomPracticeBack" onclick="handleNomenclaturePracticeBack()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold flex items-center gap-1 transition active:scale-95 cursor-pointer">
+                            <span>⬅</span> <span id="btnNomPracticeBackLabel">Volver</span>
                         </button>
                     </div>
                 </div>
@@ -538,19 +569,46 @@
                     </button>
                 </div>
 
-                <!-- PANTALLA DE RESULTADOS FINALES -->
-                <div id="nomSummaryBox" class="hidden bg-slate-950 border border-slate-800 rounded-2xl p-5 text-center flex flex-col items-center gap-4">
-                    <div class="text-4xl">🏆</div>
-                    <h3 class="text-xl font-extrabold text-white">¡Sesión de Nomenclatura Completada!</h3>
-                    <div class="flex items-center gap-6 text-base font-extrabold">
-                        <span class="text-emerald-400">✓ Aciertos: <span id="nomFinalCorrect">0</span></span>
-                        <span class="text-rose-400">✗ Fallos: <span id="nomFinalWrong">0</span></span>
+                <!-- BOTÓN FINALIZAR DEBAJO DE LAS TARJETAS -->
+                <div id="nomFinishBar" class="pt-2 border-t border-slate-800/80 flex justify-center">
+                    <button type="button" onclick="finishNomenclatureSession()" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-slate-800 hover:bg-violet-600/85 border border-slate-600 hover:border-violet-400 text-slate-100 hover:text-white text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-md transition active:scale-95 cursor-pointer">
+                        <span>🏁</span> <span>Finalizar</span>
+                    </button>
+                </div>
+
+                <!-- PANTALLA DE RESULTADOS FINALES (CUADRITOS VERDES ACERTADOS Y ROJOS FALLADOS) -->
+                <div id="nomSummaryBox" class="hidden bg-slate-950 border border-slate-800 rounded-2xl p-5 sm:p-6 flex flex-col gap-5">
+                    <div class="text-center flex flex-col items-center gap-1.5">
+                        <div class="text-3xl">🏆</div>
+                        <h3 class="text-xl font-extrabold text-white">Resultados de la Práctica</h3>
+                        <div class="flex items-center gap-6 text-sm sm:text-base font-extrabold mt-1">
+                            <span class="text-emerald-400">✓ Aciertos: <span id="nomFinalCorrect">0</span></span>
+                            <span class="text-rose-400">✗ Fallos: <span id="nomFinalWrong">0</span></span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Toca cualquier número para volver a abrir y repasar esa tarjeta</p>
                     </div>
-                    <div class="flex flex-wrap justify-center gap-2.5 mt-1">
-                        <button type="button" id="btnRetryMissed" onclick="retryMissedNomenclature()" class="hidden px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold transition">
-                            🔁 Repasar las falladas
+
+                    <!-- Cuadritos verdes de acertados -->
+                    <div class="flex flex-col gap-2 bg-emerald-950/25 border border-emerald-500/35 rounded-2xl p-4">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-300">
+                            ✓ Tarjetas Acertadas
+                        </span>
+                        <div id="nomCorrectSquaresGrid" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <!-- Cuadritos rojos de fallados -->
+                    <div class="flex flex-col gap-2 bg-rose-950/25 border border-rose-500/35 rounded-2xl p-4">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-rose-300">
+                            ✗ Tarjetas Falladas
+                        </span>
+                        <div id="nomWrongSquaresGrid" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div class="flex flex-wrap justify-center gap-2.5 pt-2">
+                        <button type="button" id="btnRetryMissed" onclick="retryMissedNomenclature()" class="hidden px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-extrabold transition cursor-pointer">
+                            🔁 Repasar todas las falladas
                         </button>
-                        <button type="button" onclick="openNomenclatureSetup()" class="px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs sm:text-sm font-extrabold transition">
+                        <button type="button" onclick="openNomenclatureSetup()" class="px-4 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-xs sm:text-sm font-extrabold transition cursor-pointer">
                             ⚙ Nueva práctica
                         </button>
                     </div>
