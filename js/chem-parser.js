@@ -1927,21 +1927,21 @@ export function buildAutoNomenclatureScene(semi) {
     }
 
     if (s === 'HAWORTH-FURANOSA-FRUCTOSA') {
-        // Proyección de Haworth de β-D-Fructofuranosa (anillo de 5 miembros con O arriba y enlaces limpios sin colisiones)
+        // Proyección de Haworth de β-D-Fructofuranosa (pentágono amplio con sustituyentes exteriores sin tocar los lados del anillo)
         atoms.push(
-            { id: 'FR_O',   el: 'O',     x: 460, y: 98,  noValenceDots: true },
-            { id: 'FR_C2',  el: 'C',     x: 590, y: 185, noValenceDots: true },
-            { id: 'FR_C3',  el: 'C',     x: 535, y: 282, noValenceDots: true },
-            { id: 'FR_C4',  el: 'C',     x: 385, y: 282, noValenceDots: true },
-            { id: 'FR_C5',  el: 'C',     x: 330, y: 185, noValenceDots: true },
-            { id: 'FR_OH2', el: 'OH',    x: 590, y: 115, noValenceDots: true },
-            { id: 'FR_C1',  el: 'CH₂OH', x: 624, y: 255, noValenceDots: true, bondTargetX: 590 },
-            { id: 'FR_OH3', el: 'OH',    x: 535, y: 215, noValenceDots: true },
-            { id: 'FR_H3',  el: 'H',     x: 535, y: 345, noValenceDots: true },
-            { id: 'FR_H4',  el: 'H',     x: 385, y: 215, noValenceDots: true },
-            { id: 'FR_OH4', el: 'OH',    x: 385, y: 345, noValenceDots: true },
-            { id: 'FR_C6',  el: 'CH₂OH', x: 364, y: 115, noValenceDots: true, bondTargetX: 330 },
-            { id: 'FR_H5',  el: 'H',     x: 330, y: 255, noValenceDots: true }
+            { id: 'FR_O',   el: 'O',     x: 460, y: 78,  noValenceDots: true },
+            { id: 'FR_C2',  el: 'C',     x: 645, y: 185, noValenceDots: true },
+            { id: 'FR_C3',  el: 'C',     x: 565, y: 305, noValenceDots: true },
+            { id: 'FR_C4',  el: 'C',     x: 355, y: 305, noValenceDots: true },
+            { id: 'FR_C5',  el: 'C',     x: 275, y: 185, noValenceDots: true },
+            { id: 'FR_OH2', el: 'OH',    x: 645, y: 108, noValenceDots: true },
+            { id: 'FR_C1',  el: 'CH₂OH', x: 679, y: 262, noValenceDots: true, bondTargetX: 645 },
+            { id: 'FR_OH3', el: 'OH',    x: 565, y: 228, noValenceDots: true },
+            { id: 'FR_H3',  el: 'H',     x: 565, y: 375, noValenceDots: true },
+            { id: 'FR_H4',  el: 'H',     x: 355, y: 228, noValenceDots: true },
+            { id: 'FR_OH4', el: 'OH',    x: 355, y: 375, noValenceDots: true },
+            { id: 'FR_C6',  el: 'HOH₂C', x: 241, y: 108, noValenceDots: true, bondTargetX: 275 },
+            { id: 'FR_H5',  el: 'H',     x: 275, y: 262, noValenceDots: true }
         );
         bonds.push(
             { from: 'FR_O',  to: 'FR_C2',  order: 1 },
