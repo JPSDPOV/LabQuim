@@ -1,0 +1,108 @@
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+.mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+@keyframes dashFlow {
+    to { stroke-dashoffset: -24; }
+}
+@keyframes radicalBlink {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.45); opacity: 0.7; }
+}
+@keyframes flashBurst {
+    0% { r: 4px; opacity: 0.95; stroke-width: 4px; }
+    100% { r: 28px; opacity: 0; stroke-width: 0.5px; }
+}
+@keyframes wizardSlideIn {
+    0% { opacity: 0; transform: translateY(10px) scale(0.99); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes rotatePhoneHint {
+    0%, 100% { transform: rotate(0deg); }
+    45%, 65% { transform: rotate(-90deg); }
+}
+.wizard-enter {
+    animation: wizardSlideIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.rotate-phone-icon {
+    display: inline-block;
+    animation: rotatePhoneHint 2.2s ease-in-out infinite;
+}
+.arrow-flow {
+    stroke-dasharray: 7, 5;
+    animation: dashFlow 0.85s linear infinite;
+}
+.radical-dot {
+    animation: radicalBlink 0.9s infinite ease-in-out;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+.rupture-burst {
+    animation: flashBurst 0.9s ease-out infinite;
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.4); }
+::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* PESTAÑAS LATERALES DESPLEGABLES EN PANTALLA COMPLETA */
+.side-tab-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+.side-tab-left {
+    transform: rotate(180deg);
+}
+
+/* MODO HORIZONTAL OBLIGATORIO EN PANTALLA COMPLETA (INCLUSO SI EL NAVEGADOR NO BLOQUEA ORIENTACIÓN) */
+@media screen and (orientation: portrait) {
+    #fullscreenPlayerScreen.force-landscape-fallback {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 100dvh !important;
+        height: 100vw !important;
+        transform: translate(-50%, -50%) rotate(90deg) !important;
+        transform-origin: center center !important;
+    }
+    #fullscreenPlayerScreen.force-landscape-fallback #drawerLeftParams,
+    #fullscreenPlayerScreen.force-landscape-fallback #drawerRightExplain {
+        position: absolute !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100% !important;
+        max-width: 72dvh !important;
+        width: 72dvh !important;
+    }
+    #fullscreenPlayerScreen.force-landscape-fallback #tabLeftParams,
+    #fullscreenPlayerScreen.force-landscape-fallback #tabRightExplain,
+    #fullscreenPlayerScreen.force-landscape-fallback #drawerBackdrop {
+        position: absolute !important;
+    }
+}
+/* TARJETA FLIP 3D PARA PRÁCTICA DE NOMENCLATURA */
+.flashcard-perspective {
+    perspective: 1400px;
+}
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
+}
+.flashcard-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+.flashcard-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.flashcard-back {
+    transform: rotateY(180deg);
+}
