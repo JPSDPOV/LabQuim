@@ -328,7 +328,7 @@ function applyJsonPayload(payload) {
 }
 
 function setAnimSpeed(ms) {
-    state.animDuration = Number(ms) || 3500;
+    state.animDuration = Number(ms) || 4200;
     const sel = document.getElementById('selectAnimSpeed');
     if (sel && String(sel.value) !== String(state.animDuration)) {
         sel.value = String(state.animDuration);
@@ -548,8 +548,9 @@ async function loadDatabaseFromJson() {
 
 async function ensureReactionLoaded(rxnKey) {
     if (!rxnKey) return false;
-    if (state.loadedReactions.has(rxnKey)) {
-        setJsonStatus('ok', `🟢 reactions/${rxnKey}.json (${state.loadedReactions.size} en caché)`);
+    if (state.labData[rxnKey] || state.loadedReactions.has(rxnKey)) {
+        state.loadedReactions.add(rxnKey);
+        setJsonStatus('ok', `🟢 ${rxnKey} listo en memoria (${state.loadedReactions.size} cargadas)`);
         return true;
     }
 
@@ -997,7 +998,8 @@ function toggleAutoPlay() {
         }
         document.getElementById('playIcon').innerText = '⏸';
         document.getElementById('playText').innerText = 'Pausar';
-        state.autoPlayTimer = setInterval(() => {
+
+        const advanceAutoStep = () => {
             const st = getActiveSteps();
             if (state.currentStepIdx < st.length - 1) {
                 const prevScene = st[state.currentStepIdx].scene();
@@ -1006,7 +1008,14 @@ function toggleAutoPlay() {
             } else {
                 stopAutoPlay();
             }
-        }, state.animDuration + 1800);
+        };
+
+        // Arrancar la primera transición suavemente tras 350ms para respuesta visual inmediata
+        setTimeout(() => {
+            if (state.autoPlayTimer) advanceAutoStep();
+        }, 350);
+
+        state.autoPlayTimer = setInterval(advanceAutoStep, state.animDuration + 1600);
     }
 }
 
