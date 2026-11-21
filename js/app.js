@@ -613,11 +613,6 @@ function renderFunctionCards() {
         ? state.functionCatalog
         : Object.keys(state.functionMenus).map(k => ({ value: k, label: k.toUpperCase() }));
 
-    const hubBadge = document.getElementById('hubBadgeFuncCount');
-    if (hubBadge && list.length > 0) {
-        hubBadge.innerText = `${list.length} unidades`;
-    }
-
     if (list.length === 0) {
         grid.innerHTML = `<div class="col-span-full text-center py-6 text-sm text-rose-300">No se encontraron unidades en labquim.json.</div>`;
         return;
@@ -638,56 +633,10 @@ function openFunctionsMenuFromHub() {
 
 async function openExamSearchHub() {
     showWizardStage('exam-search');
-    await loadExternalExamsBank();
-    const totalExams = Object.values(EXAM_QUESTIONS_DB).filter(q => q && q.category !== 'test').length;
-    const hubExamBadge = document.getElementById('hubBadgeExamCount');
-    if (hubExamBadge && totalExams > 0) {
-        hubExamBadge.innerText = `${totalExams} ejercicios`;
-    }
-    const yearEl = document.getElementById('homeExamYearFilter');
+    clearHomeExamSearch();
     const inputEl = document.getElementById('homeExamSearchInput');
-    if (yearEl && yearEl.value === 'all' && (!inputEl || !inputEl.value.trim())) {
-        // Mostrar todos los ejercicios disponibles al entrar para exploración inmediata
-        const resultsEl = document.getElementById('homeExamResultsList');
-        const badgeEl = document.getElementById('homeExamFilterCountBadge');
-        const allEntries = [];
-        const seen = new Set();
-        Object.entries(state.functionMenus).forEach(([unitKey, menuObj]) => {
-            const unitLabel = getFunctionLabel(unitKey);
-            (menuObj.examenes || []).forEach(it => {
-                if (!seen.has(it.value)) {
-                    seen.add(it.value);
-                    allEntries.push({ value: it.value, label: it.label, unitKey, unitLabel });
-                }
-            });
-        });
-        Object.entries(EXAM_QUESTIONS_DB).forEach(([qid, qObj]) => {
-            if (!seen.has(qid) && qObj.category !== 'test' && !qid.startsWith('test_')) {
-                seen.add(qid);
-                const uKey = qObj.unit || 'alcanos';
-                allEntries.push({ value: qid, label: qObj.badgeLabel || qObj.shortTitle || qid, unitKey: uKey, unitLabel: getFunctionLabel(uKey) });
-            }
-        });
-        if (badgeEl) badgeEl.innerText = `${allEntries.length} ejercicios disponibles`;
-        if (resultsEl && allEntries.length > 0) {
-            resultsEl.innerHTML = allEntries.slice(0, 60).map(m => `
-                <button
-                    type="button"
-                    onclick="openSearchedExamQuestion('${m.unitKey}', '${m.value}')"
-                    class="w-full text-left px-4 py-3 hover:bg-rose-950/45 transition flex items-center justify-between gap-3 cursor-pointer"
-                >
-                    <div class="min-w-0">
-                        <span class="text-xs sm:text-sm font-extrabold text-slate-100 block truncate">${m.label}</span>
-                        <span class="text-[11px] font-semibold text-violet-300 block truncate">${m.unitLabel}</span>
-                    </div>
-                    <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 border border-rose-400/40 text-rose-200 text-[11px] font-extrabold shrink-0">
-                        Resolver ➡
-                    </span>
-                </button>
-            `).join('');
-            resultsEl.classList.remove('hidden');
-        }
-    }
+    if (inputEl) inputEl.focus();
+    await loadExternalExamsBank();
 }
 
 function showWizardStage(stageNum) {
@@ -1224,11 +1173,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         loadFormulaDictionary()
     ]);
     // Precarga no bloqueante del banco de exámenes en segundo plano
-    loadExternalExamsBank().then(() => {
-        const totalExams = Object.values(EXAM_QUESTIONS_DB).filter(q => q && q.category !== 'test').length;
-        const hubExamBadge = document.getElementById('hubBadgeExamCount');
-        if (hubExamBadge && totalExams > 0) hubExamBadge.innerText = `${totalExams} ejercicios`;
-    });
+    loadExternalExamsBank();
     renderFunctionCards();
     showWizardStage(0);
 });
