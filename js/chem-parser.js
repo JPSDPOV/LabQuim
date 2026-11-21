@@ -801,7 +801,9 @@ export function wrapWithSemidevelopedEndpoints(stepsArray, catalystLabel = '') {
             forming: 'Ningún enlace formado todavía.',
             movement: 'En el siguiente paso se despliegan los enlaces desarrollados.'
         },
-        scene: () => buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints, catalystLabel)
+        scene: () => firstStep.introScene
+            ? JSON.parse(JSON.stringify(firstStep.introScene))
+            : buildSemidevelopedBannerScene(introSemiText, '#38bdf8', contextHints, catalystLabel)
     };
 
     const buildCondensedCarbonHydrogensScene = (rawScene) => {
