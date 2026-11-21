@@ -70,6 +70,7 @@ export async function loadExternalNomenclatureBank() {
 export async function openNomenclatureSetup() {
     await loadExternalNomenclatureBank();
     const wizSections = ['wizardHomeHub', 'wizardExamSearchHub', 'wizardStep1', 'wizardStep2', 'wizardStep3', 'wizardStep4', 'wizardExamStage', 'nomenclaturePracticeSection'];
+    state.wizardStage = 'nomenclature';
     wizSections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.add('hidden');
